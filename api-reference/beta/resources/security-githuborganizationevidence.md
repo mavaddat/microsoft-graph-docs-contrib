@@ -1,0 +1,54 @@
+---
+title: "gitHubOrganizationEvidence resource type"
+description: "Represents an organization in GitHub."
+author: "MSLironLevy"
+ms.localizationpriority: medium
+ms.prod: "security"
+doc_type: resourcePageType
+---
+
+# gitHubOrganizationEvidence resource type
+
+Namespace: microsoft.graph.security
+
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+Represents an organization in GitHub.
+
+Inherits from [alertEvidence](../resources/security-alertevidence.md).
+
+## Properties
+
+| Property    | Type   | Description                                                               |
+|:------------|:-------|:--------------------------------------------------------------------------|
+| orgId       | String | The unique and immutable id of the organization.                          |
+| login       | String | The login (aka name) of the organization.                                 |
+| email       | String | The email address of the organization.                                    |
+| displayName | String | The display name of the organization.                                     |
+| company     | String | The name of the company that owns the organization.                       |
+| webUrl      | String | The URL of the organization's web page (e.g., https://github.com/my-org). |
+
+## Relationships
+
+None.
+
+## JSON representation
+
+The following is a JSON representation of the resource.
+<!-- {
+  "blockType": "resource",
+  "@odata.type": "microsoft.graph.security.gitHubOrganizationEvidence"
+}
+-->
+``` json
+{
+  "@odata.type": "#microsoft.graph.security.gitHubOrganizationEvidence",
+  "orgId": "String",
+  "login": "String",
+  "email": "String",
+  "displayName": "String",
+  "company": "String",
+  "webUrl": "String"
+}
+
+```

@@ -50,96 +50,129 @@ This resource is the base type for the following evidence types:
 * [securityGroupEvidence](security-securitygroupevidence.md)
 * [urlEvidence](security-urlevidence.md)
 * [userEvidence](security-userevidence.md)
+* [sasTokenEvidence](security-sastokenevidence.md)
+* [networkConnectionEvidence](security-networkconnectionevidence.md)
+* [submissionMailEvidence](security-submissionmailevidence.md)
+* [gitHubRepoEvidence](security-githubrepoevidence.md)
+* [gitHubUserEvidence](security-gitHubUserEvidence.md)
+* [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
+* [servicePrincipalEvidence](security-serviceprincipalevidence.md)
+* [malwareEvidence](security-malwareevidence.md)
+* [ioTDeviceEvidence](security-iotdeviceevidence.md)
+* [nicEvidence](security-nicevidence.md)
+* [hostLogonSessionEvidence](security-hostlogonsessionevidence.md)
 
 ## Properties
 
-|Property|Type|Description|
-|:---|:---|:---|
-|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. |
-|detailedRoles|String collection|Detailed description of the entity role/s in an alert. Values are free-form.|
-|remediationStatus|[microsoft.graph.security.evidenceRemediationStatus](#evidenceremediationstatus-values)|Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`.|
-|remediationStatusDetails|String|Details about the remediation status.|
-|roles|[microsoft.graph.security.evidenceRole](#evidencerole-values) collection|The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role **Attacker**.|
-|tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.|
-|verdict|[microsoft.graph.security.evidenceVerdict](#evidenceverdict-values)|The decision reached by automated investigation. The possible values are: `unknown`, `suspicious`, `malicious`, `noThreatsFound`, `unknownFutureValue`.|
+| Property                 | Type                                                                                    | Description                                                                                                                                                                                                                                          |
+|:-------------------------|:----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| createdDateTime          | DateTimeOffset                                                                          | The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. |
+| detailedRoles            | String collection                                                                       | Detailed description of the entity role/s in an alert. Values are free-form.                                                                                                                                                                         |
+| remediationStatus        | [microsoft.graph.security.evidenceRemediationStatus](#evidenceremediationstatus-values) | Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`.                                                                                                     |
+| remediationStatusDetails | String                                                                                  | Details about the remediation status.                                                                                                                                                                                                                |
+| roles                    | [microsoft.graph.security.evidenceRole](#evidencerole-values) collection                | The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role **Attacker**.                                                                                        |
+| tags                     | String collection                                                                       | Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.                                                                                                                        |
+| verdict                  | [microsoft.graph.security.evidenceVerdict](#evidenceverdict-values)                     | The decision reached by automated investigation. The possible values are: `unknown`, `suspicious`, `malicious`, `noThreatsFound`, `unknownFutureValue`.                                                                                              |
 
+### detectionSource values
 
-### detectionSource values 
+| Value              | Description                                                                 |
+|:-------------------|:----------------------------------------------------------------------------|
+| detected           | A product of the threat that executed was detected.                         |
+| blocked            | The threat was remediated at run time.                                      |
+| prevented          | The threat was prevented from occurring (running, downloading, and so on.). |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.                            |
 
-| Value                        | Description                                                                |
-| :----------------------------| :--------------------------------------------------------------------------|
-| detected                     | A product of the threat that executed was detected.                        |
-| blocked                      | The threat was remediated at run time.                                     |
-| prevented                    | The threat was prevented from occurring (running, downloading, and so on.).|
-| unknownFutureValue           | Evolvable enumeration sentinel value. Don't use.                          |
+### evidenceRemediationStatus values
 
+| Member             | Description                                      |
+|:-------------------|:-------------------------------------------------|
+| none               | No threats were found.                           |
+| remediated         | Remediation action has completed successfully.   |
+| prevented          | The threat was prevented from executing.         |
+| blocked            | The threat was blocked while executing.          |
+| notFound           | The evidence wasn't found.                       |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use. |
 
-### evidenceRemediationStatus values 
+### evidenceRole values
 
-| Member                     | Description                                    |
-| :--------------------------| :--------------------------------------------- |
-| none                       | No threats were found.                         |
-| remediated                 | Remediation action has completed successfully. |
-| prevented                  | The threat was prevented from executing.       |
-| blocked                    | The threat was blocked while executing.        |
-| notFound                   | The evidence wasn't found.                    |
-| unknownFutureValue         | Evolvable enumeration sentinel value. Don't use.  |
+| Member             | Description                                                                                                                                                                       |
+|:-------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| unknown            | The evidence role is unknown.                                                                                                                                                     |
+| contextual         | An entity that arose likely benign but was reported as a side effect of an attacker's action, for example, the benign services.exe process was used to start a malicious service. |
+| scanned            | An entity identified as a target of discovery scanning or reconnaissance actions, for example, a port scanner was used to scan a network.                                         |
+| source             | The entity the activity originated from, for example, device, user, IP address, etc.                                                                                              |
+| destination        | The entity the activity was sent to, for example, device, user, IP address, etc.                                                                                                  |
+| created            | The entity was created as a result of the actions of an attacker, for example, a user account was created.                                                                        |
+| added              | The entity was added as a result of the actions of an attacker, for example, a user account was added to a permissions group.                                                     |
+| compromised        | The entity was compromised and is under the control of an attacker, for example, a user account was compromised and used to log into a cloud service.                             |
+| edited             | The entity was edited or changed by an attacker, for example, the registry key for a service was edited to point to the location of a new malicious payload.                      |
+| attacked           | The entity was attacked, for example, a device was targeted in a DDoS attack.                                                                                                     |
+| attacker           | The entity represents the attacker, for example, the attacker`s IP address observed logging into a cloud service using a compromised user account.                                |
+| commandAndControl  | The entity is being used for command and control, for example, a C2 (command and control) domain used by malware.                                                                 |
+| loaded             | The entity was loaded by a process under the control of an attacker, for example, a Dll was loaded into an attacker-controlled process.                                           |
+| suspicious         | The entity is suspected of being malicious or controlled by an attacker but hasn't been incriminated.                                                                             |
+| policyViolator     | The entity is a violator of a customer defined policy.                                                                                                                            |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.                                                                                                                                  |
 
+### evidenceRemediationStatus values
 
-### evidenceRole values 
+| Member             | Description                                        |
+|:-------------------|:---------------------------------------------------|
+| unknown            | No verdict was determined for the evidence.        |
+| suspicious         | Recommended remediation actions awaiting approval. |
+| malicious          | The evidence was determined to be malicious.       |
+| clean              | No threat was detected - the evidence is benign.   |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.   |
 
-| Member                     | Description                                                                                                                                                          |
-| :--------------------------| :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| unknown                    | The evidence role is unknown.                                                                                                                                        |
-| contextual                 | An entity that arose likely benign but was reported as a side effect of an attacker's action, for example, the benign services.exe process was used to start a malicious service.|
-| scanned                    | An entity identified as a target of discovery scanning or reconnaissance actions, for example, a port scanner was used to scan a network.                                    |
-| source                     | The entity the activity originated from, for example, device, user, IP address, etc.                                                                                         |
-| destination                | The entity the activity was sent to, for example, device, user, IP address, etc.                                                                                             |
-| created                    | The entity was created as a result of the actions of an attacker, for example, a user account was created.                                                                   |
-| added                      | The entity was added as a result of the actions of an attacker, for example, a user account was added to a permissions group.                                                |
-| compromised                | The entity was compromised and is under the control of an attacker, for example, a user account was compromised and used to log into a cloud service.                        |
-| edited                     | The entity was edited or changed by an attacker, for example, the registry key for a service was edited to point to the location of a new malicious payload.                 |
-| attacked                   | The entity was attacked, for example, a device was targeted in a DDoS attack.                                                                                                |
-| attacker                   | The entity represents the attacker, for example, the attacker`s IP address observed logging into a cloud service using a compromised user account.                           |
-| commandAndControl          | The entity is being used for command and control, for example, a C2 (command and control) domain used by malware.                                                            |
-| loaded                     | The entity was loaded by a process under the control of an attacker, for example, a Dll was loaded into an attacker-controlled process.                                      |
-| suspicious                 | The entity is suspected of being malicious or controlled by an attacker but hasn't been incriminated.                                                               |
-| policyViolator             | The entity is a violator of a customer defined policy.                                                                                                               |
-| unknownFutureValue         | Evolvable enumeration sentinel value. Don't use.  |
+### evidenceVerdict values
 
+| Member             | Description                                        |
+|:-------------------|:---------------------------------------------------|
+| unknown            | No verdict was determined for the evidence.        |
+| suspicious         | Recommended remediation actions awaiting approval. |
+| malicious          | The evidence was determined to be malicious.       |
+| noThreatsFound     | No threat was detected - the evidence is benign.   |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.   |
 
-### evidenceRemediationStatus values 
+### protocolType values
 
-| Member                     | Description                                       |
-| :--------------------------| :------------------------------------------------ |
-| unknown                    | No verdict was determined for the evidence.        |
-| suspicious                 | Recommended remediation actions awaiting approval.|
-| malicious                  | The evidence was determined to be malicious.      |
-| clean                      | No threat was detected - the evidence is benign.  |
-| unknownFutureValue         | Evolvable enumeration sentinel value. Don't use.  |
+| Member | Description                                                                                |
+|:-------|:-------------------------------------------------------------------------------------------|
+| tcp    | Fast, connectionless data transmission, used for tasks like streaming and gaming.          |
+| udp    | Reliable, connection-oriented data transfer, essential for web browsing and file transfer. |
 
+### servicePrincipalType values
 
-### evidenceVerdict values 
+| Member          | Description                                                                                                                                                            |
+|:----------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| unknown         | Unknown service principal type.                                                                                                                                        |
+| application     | This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.           |
+| managedIdentity | This type of service principal is used to represent a managed identity.                                                                                                |
+| legacy          | This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences. |
 
-| Member                     | Description                                       |
-| :--------------------------| :------------------------------------------------ |
-| unknown                    | No verdict was determined for the evidence.|
-| suspicious                 | Recommended remediation actions awaiting approval.|
-| malicious                  | The evidence was determined to be malicious. |
-| noThreatsFound             | No threat was detected - the evidence is benign.  |
-| unknownFutureValue         | Evolvable enumeration sentinel value. Don't use.  |
+#### ioTDeviceImportanceType values
 
+| Member  | Description             |
+|:--------|:------------------------|
+| unknown | Unknown - Default value |
+| low     | Low                     |
+| normal  | Normal                  |
+| high    | High                    |
 
 ## Relationships
+
 None.
 
 ## JSON representation
+
 Here's a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.alertEvidence"
 }
 -->
+
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.alertEvidence",
