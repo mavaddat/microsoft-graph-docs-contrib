@@ -51,12 +51,13 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 #### ioTDeviceImportanceType values
 
-| Member  | Description             |
-|:--------|:------------------------|
-| unknown | Unknown - Default value |
-| low     | Low                     |
-| normal  | Normal                  |
-| high    | High                    |
+| Member             | Description                             |
+|:-------------------|:----------------------------------------|
+| unknown            | Unknown - Default value                 |
+| low                | Low                                     |
+| normal             | Normal                                  |
+| high               | High                                    |
+| unknownFutureValue | Evolvable enumeration value. Don't use. |
 
 ## Relationships
 

@@ -25,14 +25,15 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 | allowedServices      | String collection                                                                     | Set of all services accessible with this SAS.                                           |
 | allowedResourceTypes | String collection                                                                     | Set of all resource types accessible with this SAS.                                     |
 | permissions          | String collection                                                                     | Set of all permissions granted to this SAS.                                             |
-| startTime            | DateTimeOffset                                                                        | SAS activation time - can be null.                                                      |
-| expiryTime           | DateTimeOffset                                                                        | SAS expiration time.                                                                    |
+| startDateTime        | DateTimeOffset                                                                        | SAS activation time - can be null.                                                      |
+| expiryDateTime       | DateTimeOffset                                                                        | SAS expiration time.                                                                    |
 | allowedIpAddresses   | String                                                                                | All IP addresses accessible with this SAS - default value is "Allows all IP addresses". |
 | signedWith           | String                                                                                | The storage key which used to generate the SAS.                                         |
 | protocol             | String                                                                                | Allowed protocol with this SAS.                                                         |
 | storageResource      | [microsoft.graph.security.azureResourceEvidence](./security-azureResourceEvidence.md) | Link to storage resource that this SAS belongs to.                                      |
 
 ## Relationships
+
 None.
 
 ## JSON representation
@@ -43,6 +44,7 @@ The following is a JSON representation of the resource.
   "@odata.type": "microsoft.graph.security.sasTokenEvidence"
 }
 -->
+
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.sasTokenEvidence",
@@ -56,8 +58,8 @@ The following is a JSON representation of the resource.
   "permissions": [
     "String"
   ],
-  "startTime": "String (timestamp)",
-  "expiryTime": "String (timestamp)",
+  "startDateTime": "String (timestamp)",
+  "expiryDateTime": "String (timestamp)",
   "allowedIpAddresses": "String",
   "signedWith": "String",
   "protocol": "String",

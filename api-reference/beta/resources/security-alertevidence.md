@@ -15,12 +15,17 @@ Namespace: microsoft.graph.security
 
 Represents evidence related to an [alert](security-alert.md).
 
-The **alertEvidence** base type and its derived evidence types provide a means to organize and track rich data about each artifact involved in an **alert**. For example, an **alert** about an attacker's IP address signing in to a cloud service using a compromised user account can track the following evidence:
-- [IP evidence](security-ipevidence.md) with the roles of `attacker` and `source`, remediation status of `running`, and verdict of `malicious`.
+The **alertEvidence** base type and its derived evidence types provide a means to organize and track rich data about
+each artifact involved in an **alert**. For example, an **alert** about an attacker's IP address signing in to a cloud
+service using a compromised user account can track the following evidence:
+
+- [IP evidence](security-ipevidence.md) with the roles of `attacker` and `source`, remediation status of `running`, and
+  verdict of `malicious`.
 - [Cloud application evidence](security-cloudapplicationevidence.md) with a role of `contextual`.
 - [Mailbox evidence](security-mailboxevidence.md) for the hacked user account with a role of `compromised`.
 
-This resource is the base type for the following evidence types: 
+This resource is the base type for the following evidence types:
+
 * [amazonResourceEvidence](security-amazonresourceevidence.md)
 * [analyzedMessageEvidence](security-analyzedmessageevidence.md)
 * [azureResourceEvidence](security-azureresourceevidence.md)
@@ -52,7 +57,7 @@ This resource is the base type for the following evidence types:
 * [userEvidence](security-userevidence.md)
 * [sasTokenEvidence](security-sastokenevidence.md)
 * [networkConnectionEvidence](security-networkconnectionevidence.md)
-* [submissionMailEvidence](security-submissionmailevidence.md)
+* [submissionEmailEvidence](security-submissionEmailevidence.md)
 * [gitHubRepoEvidence](security-githubrepoevidence.md)
 * [gitHubUserEvidence](security-gitHubUserEvidence.md)
 * [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
@@ -137,28 +142,31 @@ This resource is the base type for the following evidence types:
 
 ### protocolType values
 
-| Member | Description                                                                                |
-|:-------|:-------------------------------------------------------------------------------------------|
-| tcp    | Fast, connectionless data transmission, used for tasks like streaming and gaming.          |
-| udp    | Reliable, connection-oriented data transfer, essential for web browsing and file transfer. |
+| Member             | Description                                                                                |
+|:-------------------|:-------------------------------------------------------------------------------------------|
+| tcp                | Fast, connectionless data transmission, used for tasks like streaming and gaming.          |
+| udp                | Reliable, connection-oriented data transfer, essential for web browsing and file transfer. |
+| unknownFutureValue | Evolvable enumeration value. Don't use.                                                    |
 
 ### servicePrincipalType values
 
-| Member          | Description                                                                                                                                                            |
-|:----------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| unknown         | Unknown service principal type.                                                                                                                                        |
-| application     | This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.           |
-| managedIdentity | This type of service principal is used to represent a managed identity.                                                                                                |
-| legacy          | This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences. |
+| Member             | Description                                                                                                                                                            |
+|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| unknown            | Unknown service principal type.                                                                                                                                        |
+| application        | This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.           |
+| managedIdentity    | This type of service principal is used to represent a managed identity.                                                                                                |
+| legacy             | This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences. |
+| unknownFutureValue | Evolvable enumeration value. Don't use.                                                                                                                                |
 
 #### ioTDeviceImportanceType values
 
-| Member  | Description             |
-|:--------|:------------------------|
-| unknown | Unknown - Default value |
-| low     | Low                     |
-| normal  | Normal                  |
-| high    | High                    |
+| Member             | Description                             |
+|:-------------------|:----------------------------------------|
+| unknown            | Unknown - Default value                 |
+| low                | Low                                     |
+| normal             | Normal                                  |
+| high               | High                                    |
+| unknownFutureValue | Evolvable enumeration value. Don't use. |
 
 ## Relationships
 

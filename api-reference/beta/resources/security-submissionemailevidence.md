@@ -1,5 +1,5 @@
 ---
-title: "submissionMailEvidence resource type"
+title: "submissionEmailEvidence resource type"
 description: "Represents a user-reported concern over an email, such as reporting an email as Junk/Phish."
 author: "MSLironLevy"
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.prod: "security"
 doc_type: resourcePageType
 ---
 
-# submissionMailEvidence resource type
+# submissionEmailEvidence resource type
 
 Namespace: microsoft.graph.security
 
@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 | Property         | Type           | Description                                                                                |
 |:-----------------|:---------------|:-------------------------------------------------------------------------------------------|
 | submissionId     | String         | The Submission Id.                                                                         |
-| submissionDate   | DateTimeOffset | Reported Date time for this submission.                                                    |
+| submissionDateTime   | DateTimeOffset | Reported Date time for this submission.                                                    |
 | submitter        | String         | The submitter email address.                                                               |
 | networkMessageId | String         | The network message id of email to which submission belongs.                               |
 | recipient        | String         | The recipient of the mail.                                                                 |
@@ -40,14 +40,14 @@ None.
 The following is a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.security.submissionMailEvidence"
+  "@odata.type": "microsoft.graph.security.submissionEmailEvidence"
 }
 -->
 ``` json
 {
-"@odata.type": "#microsoft.graph.security.submissionMailEvidence",
+"@odata.type": "#microsoft.graph.security.submissionEmailEvidence",
 "submissionId": "String",
-"submissionDate": "String (timestamp)",
+"submissionDateTime": "String (timestamp)",
 "submitter": "String",
 "networkMessageId": "String",
 "recipient": "String",

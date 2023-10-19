@@ -29,12 +29,11 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ### protocolType values
 
-| Member  | Description                        |
-|:--------|:-----------------------------------|
-| unknown | An unknown protocol type.          |
-| tcp     | Transmission Control Protocol.     |
-| udp     | User Datagram Protocol.            |
-| icmp    | Internet Control Message Protocol. |
+| Member             | Description                                                                                |
+|:-------------------|:-------------------------------------------------------------------------------------------|
+| tcp                | Fast, connectionless data transmission, used for tasks like streaming and gaming.          |
+| udp                | Reliable, connection-oriented data transfer, essential for web browsing and file transfer. |
+| unknownFutureValue | Evolvable enumeration value. Don't use.                                                    |
 
 ## Relationships
 None.

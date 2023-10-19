@@ -17,13 +17,13 @@ Represents a logon session to a host by an account.
 
 ## Properties
 
-| Property     | Type                                                                    | Description                                                       |
-|:-------------|:------------------------------------------------------------------------|:------------------------------------------------------------------|
-| sessionId    | String                                                                  | The session id for the account reported in the alert, e.g. 0x3e7. |
-| account      | [microsoft.graph.security.userEvidence](./security-userevidence.md)     | The Account associated with the logon session.                    |
-| host         | [microsoft.graph.security.deviceEvidence](./security-deviceevidence.md) | The Host that the account had session on.                         |
-| startTimeUtc | DateTimeOffset                                                          | The session start time, if known.                                 |
-| endTimeUtc   | DateTimeOffset                                                          | The session end time, if known.                                   |
+| Property         | Type                                                                    | Description                                                       |
+|:-----------------|:------------------------------------------------------------------------|:------------------------------------------------------------------|
+| sessionId        | String                                                                  | The session id for the account reported in the alert, e.g. 0x3e7. |
+| account          | [microsoft.graph.security.userEvidence](./security-userevidence.md)     | The Account associated with the logon session.                    |
+| host             | [microsoft.graph.security.deviceEvidence](./security-deviceevidence.md) | The Host that the account had session on.                         |
+| startUtcDateTime | DateTimeOffset                                                          | The session start time, if known.                                 |
+| endUtcDateTime   | DateTimeOffset                                                          | The session end time, if known.                                   |
 
 ## Relationships
 
@@ -48,7 +48,7 @@ The following is a JSON representation of the resource.
   "host": {
     "@odata.type": "microsoft.graph.security.deviceEvidence"
   },
-  "startTimeUtc": "String (timestamp)",
-  "endTimeUtc": "String (timestamp)"
+  "startUtcDateTime": "String (timestamp)",
+  "endUtcDateTime": "String (timestamp)"
 }
 ```

@@ -30,12 +30,13 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ### servicePrincipalType values
 
-| Member          | Description                                                                                                                                                            |
-|:----------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| unknown         | Unknown service principal type.                                                                                                                                        |
-| application     | This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.           |
-| managedIdentity | This type of service principal is used to represent a managed identity.                                                                                                |
-| legacy          | This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences. |
+| Member             | Description                                                                                                                                                            |
+|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| unknown            | Unknown service principal type.                                                                                                                                        |
+| application        | This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.           |
+| managedIdentity    | This type of service principal is used to represent a managed identity.                                                                                                |
+| legacy             | This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences. |
+| unknownFutureValue | Evolvable enumeration value. Don't use.                                                                                                                                |
 
 ## Relationships
 

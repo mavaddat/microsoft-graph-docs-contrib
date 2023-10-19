@@ -19,11 +19,11 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property   | Type                                                                       | Description                    |
-|:-----------|:---------------------------------------------------------------------------|:-------------------------------|
-| macAddress | String                                                                     | The MAC for the NIC.           |
-| ipAddress  | [microsoft.graph.security.ipEvidence](./security-ipevidence.md) Collection | The current IP for the NIC.    |
-| vlans      | String Collection                                                          | The current VLANs for the NIC. |
+| Property   | Type                                                            | Description                    |
+|:-----------|:----------------------------------------------------------------|:-------------------------------|
+| macAddress | String                                                          | The MAC for the NIC.           |
+| ipAddress  | [microsoft.graph.security.ipEvidence](./security-ipevidence.md) | The current IP for the NIC.    |
+| vlans      | String Collection                                               | The current VLANs for the NIC. |
 
 ## Relationships
 
@@ -42,11 +42,9 @@ The following is a JSON representation of the resource.
 {
   "@odata.type": "#microsoft.graph.security.nicEvidence",
   "macAddress": "String",
-  "ipAddress": [
-    {
+  "ipAddress": {
       "@odata.type": "microsoft.graph.security.ipEvidence"
-    }
-  ],
+   },
   "vlans": ["String"]
 }
 ```
