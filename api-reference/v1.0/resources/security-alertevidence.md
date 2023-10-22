@@ -48,6 +48,17 @@ This resource is the base type for the following evidence types:
 * [securityGroupEvidence](security-securitygroupevidence.md)
 * [urlEvidence](security-urlevidence.md)
 * [userEvidence](security-userevidence.md)
+* [sasTokenEvidence](security-sastokenevidence.md)
+* [networkConnectionEvidence](security-networkconnectionevidence.md)
+* [submissionMailEvidence](security-submissionMailevidence.md)
+* [gitHubRepoEvidence](security-githubrepoevidence.md)
+* [gitHubUserEvidence](security-gitHubUserEvidence.md)
+* [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
+* [servicePrincipalEvidence](security-serviceprincipalevidence.md)
+* [malwareEvidence](security-malwareevidence.md)
+* [ioTDeviceEvidence](security-iotdeviceevidence.md)
+* [nicEvidence](security-nicevidence.md)
+* [hostLogonSessionEvidence](security-hostlogonsessionevidence.md)
 
 ## Properties
 
@@ -127,6 +138,33 @@ This resource is the base type for the following evidence types:
 | noThreatsFound             | No threat was detected - the evidence is benign.  |
 | unknownFutureValue         | Evolvable enumeration sentinel value. Don't use.  |
 
+### protocolType values
+
+| Member             | Description                                                                                |
+|:-------------------|:-------------------------------------------------------------------------------------------|
+| tcp                | Fast, connectionless data transmission, used for tasks like streaming and gaming.          |
+| udp                | Reliable, connection-oriented data transfer, essential for web browsing and file transfer. |
+| unknownFutureValue | Evolvable enumeration value. Don't use.                                                    |
+
+### servicePrincipalType values
+
+| Member             | Description                                                                                                                                                            |
+|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| unknown            | Unknown service principal type.                                                                                                                                        |
+| application        | This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.           |
+| managedIdentity    | This type of service principal is used to represent a managed identity.                                                                                                |
+| legacy             | This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences. |
+| unknownFutureValue | Evolvable enumeration value. Don't use.                                                                                                                                |
+
+#### ioTDeviceImportanceType values
+
+| Member             | Description                             |
+|:-------------------|:----------------------------------------|
+| unknown            | Unknown - Default value                 |
+| low                | Low                                     |
+| normal             | Normal                                  |
+| high               | High                                    |
+| unknownFutureValue | Evolvable enumeration value. Don't use. |
 
 ## Relationships
 None.
