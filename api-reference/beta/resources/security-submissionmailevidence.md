@@ -1,5 +1,5 @@
 ---
-title: "submissionEmailEvidence resource type"
+title: "submissionMailEvidence resource type"
 description: "Represents a user-reported concern over an email, such as reporting an email as Junk/Phish."
 author: "MSLironLevy"
 ms.localizationpriority: medium
@@ -7,7 +7,7 @@ ms.prod: "security"
 doc_type: resourcePageType
 ---
 
-# submissionEmailEvidence resource type
+# submissionMailEvidence resource type
 
 Namespace: microsoft.graph.security
 
@@ -40,13 +40,13 @@ None.
 The following is a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.security.submissionEmailEvidence"
+  "@odata.type": "microsoft.graph.security.submissionMailEvidence"
 }
 -->
 
 ``` json
 {
-"@odata.type": "#microsoft.graph.security.submissionEmailEvidence",
+"@odata.type": "#microsoft.graph.security.submissionMailEvidence",
 "submissionId": "String",
 "submissionDateTime": "String (timestamp)",
 "submitter": "String",

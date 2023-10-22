@@ -57,7 +57,7 @@ This resource is the base type for the following evidence types:
 * [userEvidence](security-userevidence.md)
 * [sasTokenEvidence](security-sastokenevidence.md)
 * [networkConnectionEvidence](security-networkconnectionevidence.md)
-* [submissionEmailEvidence](security-submissionEmailevidence.md)
+* [submissionMailEvidence](security-submissionMailevidence.md)
 * [gitHubRepoEvidence](security-githubrepoevidence.md)
 * [gitHubUserEvidence](security-gitHubUserEvidence.md)
 * [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
