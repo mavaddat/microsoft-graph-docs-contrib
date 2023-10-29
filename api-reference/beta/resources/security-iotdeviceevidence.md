@@ -27,7 +27,6 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 | owners             | String Collection                                                                     | The owners for the device.                                                                                                                                 |
 | ioTSecurityAgentId | String                                                                                | The ID of the Azure Security Center for IoT agent running on the device.                                                                                   |
 | deviceType         | String                                                                                | The type of the device ('temperature sensor', 'freezer', 'wind turbine' etc.).                                                                             |
-| deviceTypeId       | String                                                                                | A unique id to identify each device type according to the device type schema, as the device type itself is a display name and not reliable in comparisons. |
 | source             | String                                                                                | The source (microsoft/vendor) of the device entity.                                                                                                        |
 | sourceRef          | [microsoft.graph.security.urlEvidence](./security-urlevidence.md)                     | A URL reference to the source item where the device is managed.                                                                                            |
 | manufacturer       | String                                                                                | The manufacturer of the device.                                                                                                                            |
@@ -83,7 +82,6 @@ The following is a JSON representation of the resource.
   "owners": ["String"],
   "ioTSecurityAgentId": "String",
   "deviceType": "String",
-  "deviceTypeId": "String",
   "source": "String",
   "sourceRef": {
     "@odata.type": "microsoft.graph.security.urlEvidence"
