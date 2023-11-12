@@ -26,7 +26,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 | appId                    | String                                                                        | The unique identifier for the associated application (its appId property).            |
 | appOwnerTenantId         | String                                                                        | Contains the tenant id where the application is registered.                           |
 | tenantId                 | String                                                                        | The AAD tenant id of Service Principal.                                               |
-| servicePrincipalType     | [microsoft.graph.security.servicePrincipalType](#servicePrincipalType-values) | Type of the service principal: 'Unknown', 'Application', 'ManagedIdentity', 'Legacy'. |
+| servicePrincipalType     | [microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values) | Type of the service principal: 'Unknown', 'Application', 'ManagedIdentity', 'Legacy'. |
 
 ### servicePrincipalType values
 
@@ -52,6 +52,7 @@ The following is a JSON representation of the resource.
 -->
 
 ``` json
+{
   "@odata.type": "#microsoft.graph.security.servicePrincipalEvidence",
   "servicePrincipalName": "String",
   "servicePrincipalObjectId": "String",
@@ -59,4 +60,5 @@ The following is a JSON representation of the resource.
   "appOwnerTenantId": "String",
   "tenantId": "String",
   "servicePrincipalType": "String"
+}
 ```

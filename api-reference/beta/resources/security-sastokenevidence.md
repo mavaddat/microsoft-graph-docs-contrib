@@ -19,18 +19,18 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property             | Type                                                                                  | Description                                                                             |
-|:---------------------|:--------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
-| signatureHash        | String                                                                                | The SAS signature hash - unique identifier for each SAS.                                |
-| allowedServices      | String collection                                                                     | Set of all services accessible with this SAS.                                           |
-| allowedResourceTypes | String collection                                                                     | Set of all resource types accessible with this SAS.                                     |
-| permissions          | String collection                                                                     | Set of all permissions granted to this SAS.                                             |
-| startDateTime        | DateTimeOffset                                                                        | SAS activation time - can be null.                                                      |
-| expiryDateTime       | DateTimeOffset                                                                        | SAS expiration time.                                                                    |
-| allowedIpAddresses   | String                                                                                | All IP addresses accessible with this SAS - default value is "Allows all IP addresses". |
-| signedWith           | String                                                                                | The storage key which used to generate the SAS.                                         |
-| protocol             | String                                                                                | Allowed protocol with this SAS.                                                         |
-| storageResource      | [microsoft.graph.security.azureResourceEvidence](./security-azureResourceEvidence.md) | Link to storage resource that this SAS belongs to.                                      |
+| Property             | Type                                                                                | Description                                                                             |
+|:---------------------|:------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
+| signatureHash        | String                                                                              | The SAS signature hash - unique identifier for each SAS.                                |
+| allowedServices      | String collection                                                                   | Set of all services accessible with this SAS.                                           |
+| allowedResourceTypes | String collection                                                                   | Set of all resource types accessible with this SAS.                                     |
+| permissions          | String collection                                                                   | Set of all permissions granted to this SAS.                                             |
+| startDateTime        | DateTimeOffset                                                                      | SAS activation time - can be null.                                                      |
+| expiryDateTime       | DateTimeOffset                                                                      | SAS expiration time.                                                                    |
+| allowedIpAddresses   | String                                                                              | All IP addresses accessible with this SAS - default value is "Allows all IP addresses". |
+| signedWith           | String                                                                              | The storage key which used to generate the SAS.                                         |
+| protocol             | String                                                                              | Allowed protocol with this SAS.                                                         |
+| storageResource      | [microsoft.graph.security.azureResourceEvidence](security-azureresourceevidence.md) | Link to storage resource that this SAS belongs to.                                      |
 
 ## Relationships
 
