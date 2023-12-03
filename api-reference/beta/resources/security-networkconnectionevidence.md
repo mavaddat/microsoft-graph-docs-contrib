@@ -36,11 +36,13 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 | unknownFutureValue | Evolvable enumeration value. Don't use.                                                    |
 
 ## Relationships
+
 None.
 
 ## JSON representation
 
 The following is a JSON representation of the resource.
+
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.networkConnectionEvidence",
