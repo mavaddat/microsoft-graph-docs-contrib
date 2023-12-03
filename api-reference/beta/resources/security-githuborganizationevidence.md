@@ -19,14 +19,14 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property    | Type   | Description                                                               |
-|:------------|:-------|:--------------------------------------------------------------------------|
-| orgId       | String | The unique and immutable id of the organization.                          |
-| login       | String | The login (aka name) of the organization.                                 |
-| email       | String | The email address of the organization.                                    |
-| displayName | String | The display name of the organization.                                     |
-| company     | String | The name of the company that owns the organization.                       |
-| webUrl      | String | The URL of the organization's web page (e.g., https://github.com/my-org). |
+| Property    | Type   | Description                                         |
+|:------------|:-------|:----------------------------------------------------|
+| orgId       | String | The unique and immutable id of the organization.    |
+| login       | String | The login (aka name) of the organization.           |
+| email       | String | The email address of the organization.              |
+| displayName | String | The display name of the organization.               |
+| company     | String | The name of the company that owns the organization. |
+| webUrl      | String | The URL of the organization's web page              |
 
 ## Relationships
 
@@ -51,5 +51,4 @@ The following is a JSON representation of the resource.
   "company": "String",
   "webUrl": "String"
 }
-
 ```
