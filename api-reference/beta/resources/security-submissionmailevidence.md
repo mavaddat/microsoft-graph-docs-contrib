@@ -21,15 +21,15 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 | Property           | Type           | Description                                                                                |
 |:-------------------|:---------------|:-------------------------------------------------------------------------------------------|
-| submissionId       | String         | The Submission Id.                                                                         |
+| submissionId       | String         | The Submission ID.                                                                         |
 | submissionDateTime | DateTimeOffset | Reported Date time for this submission.                                                    |
 | submitter          | String         | The submitter email address.                                                               |
-| networkMessageId   | String         | The network message id of email to which submission belongs.                               |
+| networkMessageId   | String         | The network message ID of email to which submission belongs.                               |
 | recipient          | String         | The recipient of the mail.                                                                 |
 | sender             | String         | The sender of the mail.                                                                    |
 | senderIp           | String         | The sender's IP.                                                                           |
 | subject            | String         | The subject of submission mail.                                                            |
-| reportType         | String         | The submission type for the given instance. This maps to Junk, Phish, Malware, or NotJunk. |
+| reportType         | String         | The submission type for the given instance. That maps to Junk, Phish, Malware, or NotJunk. |
 
 ## Relationships
 
@@ -37,7 +37,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+Here's a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.submissionMailEvidence"

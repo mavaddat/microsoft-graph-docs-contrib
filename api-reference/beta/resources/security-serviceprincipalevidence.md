@@ -24,9 +24,9 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 | servicePrincipalName     | String                                                                        | The display name for the service principal.                                           |
 | servicePrincipalObjectId | String                                                                        | The unique identifier for the service principal.                                      |
 | appId                    | String                                                                        | The unique identifier for the associated application (its appId property).            |
-| appOwnerTenantId         | String                                                                        | Contains the tenant id where the application is registered.                           |
-| tenantId                 | String                                                                        | The AAD tenant id of Service Principal.                                               |
-| servicePrincipalType     | [microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values) | Type of the service principal: 'Unknown', 'Application', 'ManagedIdentity', 'Legacy'. |
+| appOwnerTenantId         | String                                                                        | Contains the tenant ID where the application is registered.                           |
+| tenantId                 | String                                                                        | The AAD tenant ID of Service Principal.                                               |
+| servicePrincipalType     | [microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values) | Type of the service principal: 'Unknown,' 'Application,' 'ManagedIdentity,' 'Legacy'. |
 
 ### servicePrincipalType values
 
@@ -44,7 +44,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+Here's a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.servicePrincipalEvidence"
