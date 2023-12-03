@@ -21,8 +21,8 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 | Property    | Type   | Description                                         |
 |:------------|:-------|:----------------------------------------------------|
-| orgId       | String | The unique and immutable id of the organization.    |
-| login       | String | The login (aka name) of the organization.           |
+| orgId       | String | The unique and immutable ID of the organization.    |
+| login       | String | The login (name) of the organization.               |
 | email       | String | The email address of the organization.              |
 | displayName | String | The display name of the organization.               |
 | company     | String | The name of the company that owns the organization. |
@@ -34,7 +34,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+Here's a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.gitHubOrganizationEvidence"

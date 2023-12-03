@@ -17,14 +17,14 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property    | Type   | Description                                                               |
-|:------------|:-------|:--------------------------------------------------------------------------|
-| orgId       | String | The unique and immutable id of the organization.                          |
-| login       | String | The login (aka name) of the organization.                                 |
-| email       | String | The email address of the organization.                                    |
-| displayName | String | The display name of the organization.                                     |
-| company     | String | The name of the company that owns the organization.                       |
-| webUrl      | String | The URL of the organization's web page (e.g., https://github.com/my-org). |
+| Property    | Type   | Description                                         |
+|:------------|:-------|:----------------------------------------------------|
+| orgId       | String | The unique and immutable ID of the organization.    |
+| login       | String | The login (name) of the organization.               |
+| email       | String | The email address of the organization.              |
+| displayName | String | The display name of the organization.               |
+| company     | String | The name of the company that owns the organization. |
+| webUrl      | String | The URL of the organization's web page              |
 
 ## Relationships
 
@@ -32,7 +32,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+Here's a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.gitHubOrganizationEvidence"
