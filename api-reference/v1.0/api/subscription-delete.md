@@ -24,6 +24,8 @@ Depending on the resource and the permission type (delegated or application) req
 | Supported resource | Delegated (work or school account) | Delegated (personal Microsoft account) | Application |
 |:-----|:-----|:-----|:-----|
 |[callRecord](../resources/callrecords-callrecord.md) | Not supported. | Not supported. | CallRecords.Read.All |
+|[callRecording](../resources/callrecording.md) <br /> `communications/onlineMeetings/getAllRecordings` <br /> All recordings in an organization. | Not supported.  | Not supported.  | OnlineMeetingRecording.Read.All |
+|[callRecording](../resources/callrecording.md) <br /> `communications/onlineMeetings/{onlineMeetingId}/recordings` <br /> All recordings for a specific meeting. | OnlineMeetingRecording.Read.All | Not supported.  | OnlineMeetingRecording.Read.All |
 |[callTranscript](../resources/calltranscript.md) <br /> `communications/onlineMeetings/getAllTranscripts` <br /> All transcripts in an organization. | Not supported.  | Not supported.  | OnlineMeetingTranscript.Read.All |
 |[callTranscript](../resources/calltranscript.md) <br /> `communications/onlineMeetings/{onlineMeetingId}/transcripts` <br /> All transcripts for a specific meeting. | OnlineMeetingTranscript.Read.All | Not supported.  | OnlineMeetingTranscript.Read.All |
 |[channel](../resources/channel.md) (/teams/getAllChannels – all channels in an organization) | Not supported  | Not supported | Channel.ReadBasic.All, ChannelSettings.Read.All |
@@ -92,7 +94,7 @@ DELETE /subscriptions/{subscription-id}
 
 ## Request body
 
-Do not supply a request body for this method.
+Don't supply a request body for this method.
 
 ## Response
 
@@ -152,7 +154,7 @@ DELETE https://graph.microsoft.com/v1.0/subscriptions/7f105c7d-2dc5-4530-97cd-4e
 
 ### Response
 
-The following is an example of the response.
+The following example shows the response.
 
 <!-- {
   "blockType": "response"

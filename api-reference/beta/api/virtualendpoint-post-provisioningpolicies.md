@@ -19,13 +19,10 @@ Create a new [cloudPcProvisioningPolicy](../resources/cloudpcprovisioningpolicy.
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-|Permission type|Permissions (from least to most privileged)|
-|:---|:---|
-|Delegated (work or school account)|CloudPC.ReadWrite.All|
-|Delegated (personal Microsoft account)|Not supported.|
-|Application|CloudPC.ReadWrite.All|
+<!-- { "blockType": "permissions", "name": "virtualendpoint_post_provisioningpolicies" } -->
+[!INCLUDE [permissions-table](../includes/permissions/virtualendpoint-post-provisioningpolicies-permissions.md)]
 
 ## HTTP request
 
@@ -49,7 +46,7 @@ POST /deviceManagement/virtualEndpoint/provisioningPolicies
 
 In the request body, supply a JSON representation of the [cloudPcProvisioningPolicy](../resources/cloudpcprovisioningpolicy.md) object.
 
-The following table shows the properties that are required when you create the [cloudPcProvisioningPolicy](../resources/cloudpcprovisioningpolicy.md).
+The following table lists the properties that are required when you create the [cloudPcProvisioningPolicy](../resources/cloudpcprovisioningpolicy.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -128,6 +125,10 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/go/create-cloudpcprovisioningpolicy-from-cloudpcprovisioningpolicy-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-cloudpcprovisioningpolicy-from-cloudpcprovisioningpolicy-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/create-cloudpcprovisioningpolicy-from-cloudpcprovisioningpolicy-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -148,7 +149,7 @@ Content-Type: application/json
 
 ### Response
 
-The following is an example of the response.
+The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
 <!-- {

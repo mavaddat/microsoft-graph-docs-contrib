@@ -17,13 +17,12 @@ Update the properties of an [organizationalBrandingLocalization](../resources/or
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-| Permission type                        | Permissions (from least to most privileged) |
-|:---------------------------------------|:--------------------------------------------|
-| Delegated (work or school account)     | Organization.ReadWrite.All |
-| Delegated (personal Microsoft account) | Not supported. |
-| Application                            | Organization.ReadWrite.All |
+<!-- { "blockType": "permissions", "name": "organizationalbrandinglocalization_update" } -->
+[!INCLUDE [permissions-table](../includes/permissions/organizationalbrandinglocalization-update-permissions.md)]
+
+[!INCLUDE [rbac-org-branding-apis-write](../includes/rbac-for-apis/rbac-org-branding-apis-write.md)]
 
 ## HTTP request
 
@@ -85,7 +84,7 @@ The following request updates the banner logo for the fr-FR localization.
 
 #### Request
 
-The following is an example of the request.
+The following example shows a request.
 
 
 
@@ -153,7 +152,7 @@ The following request updates the banner logo for the `fr-FR` localization.
 
 #### Request
 
-The following is an example of the request.
+The following example shows a request.
 
 
 # [HTTP](#tab/http)
@@ -223,7 +222,7 @@ HTTP/1.1 204 No Content
 
 #### Request
 
-The following is an example of the request.
+The following example shows a request.
 
 # [HTTP](#tab/http)
 <!-- {

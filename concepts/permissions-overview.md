@@ -6,8 +6,9 @@ ms.author: ombongifaith
 ms.reviewer: jackson.woods
 ms.localizationpriority: high
 ms.prod: "applications"
-ms.date: 07/31/2023
+ms.date: 10/26/2023
 ms.custom: graphiamtop20, scenarios:getting-started
+#Customer-intent: As a developer integrating with Microsoft Graph, I want to learn about using Microsoft Graph permissions, so that I can properly request and manage permissions for my app.
 ---
 
 # Overview of Microsoft Graph permissions
@@ -47,7 +48,7 @@ In a delegated access scenario, an app may allow users to sign in with their per
 When a user signs in to an app they, or, in some cases, an administrator, are given a chance to consent to the delegated permissions. If they grant consent, the app can access resources and APIs within the boundaries of the user's permissions.
 
 > [!NOTE]
-> Permissions granted through [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference?toc=/graph/toc.json) don't limit the app to calling Microsoft Graph APIs only.
+> Permissions granted through [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference?toc=/graph/toc.json) don't limit the app to calling Microsoft Graph APIs only.
 
 ### Application permissions
 
@@ -61,7 +62,7 @@ Apart from being assigned Microsoft Graph application permissions, an app may al
 - When the app is assigned a Microsoft Entra built-in or custom administrative roles.
 
 > [!NOTE]
-> Permissions granted through [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference?toc=/graph/toc.json) don't limit the app to calling Microsoft Graph APIs only.
+> Permissions granted through [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference?toc=/graph/toc.json) don't limit the app to calling Microsoft Graph APIs only.
 
 ### Comparison of delegated and application permissions
 
@@ -107,7 +108,7 @@ This principle is applied to all relationships that are of [directoryObject](/gr
 
 ### Example scenario
 
-A group's members are users, groups, and devices. An app has been granted the Microsoft Graph [User.Read.All](permissions-reference.md#user-permissions) and [Group.Read.All](permissions-reference.md#group-permissions) permissions. The app calls the [list group members](/graph/api/group-list-members) API to retrieve the members of the group.
+A group's members are users, groups, and devices. An app has been granted the Microsoft Graph [User.Read.All](permissions-reference.md#userreadall) and [Group.Read.All](permissions-reference.md#groupreadall) permissions. The app calls the [list group members](/graph/api/group-list-members) API to retrieve the members of the group.
 
 To read the basic properties of a group's members that are users, the app needs at least the *User.Read.All* permission. To read the basic properties of a group's members that are groups, the app needs at least the *Group.Read.All* permission. To read the basic properties of a group's members that are devices, the app needs at least the *Device.Read.All* permission.
 
@@ -217,13 +218,13 @@ Apply the principle of least privilege when assigning and granting Microsoft Gra
 
 ## Retrieve permission IDs through Microsoft Graph
 
-To set permissions using the Azure CLI, PowerShell, or infrastructure as code frameworks, you may need the identifier for the permission that you want to use instead of the name.
-
-To find the IDs for all Microsoft Graph permissions, see [All permissions and IDs](permissions-reference.md#all-permissions-and-ids). Alternatively, you can read information about all Microsoft Graph permissions programmatically through the [Get servicePrincipal](/graph/api/serviceprincipal-get) API in Microsoft Graph. The following is an example of the request.
+To set permissions using the Azure CLI, PowerShell, or infrastructure as code frameworks, you may need the identifier for the permission that you want to use instead of the name. The [permissions reference](permissions-reference.md) lists IDs for all Microsoft Graph permissions. Alternatively, you can read information about all Microsoft Graph permissions programmatically through the [Get servicePrincipal](/graph/api/serviceprincipal-get) API in Microsoft Graph. The following is an example of the request.
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000-c000-000000000000')?$select=id,appId,displayName,appRoles,oauth2PermissionScopes,resourceSpecificApplicationPermissions
 ```
+
+The **appRoles**, **oauth2PermissionScopes**, and **resourceSpecificApplicationPermissions** objects store the application, delegated, and resource-specific consent permissions respectively.
 
 ## See also
 

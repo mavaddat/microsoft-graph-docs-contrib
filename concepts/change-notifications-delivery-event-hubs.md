@@ -6,6 +6,7 @@ ms.prod: "change-notifications"
 ms.localizationpriority: high
 ms.custom: graphiamtop20, devx-track-azurecli
 ms.date: 03/23/2023
+#customer intent: As a developer, I want to receive notifications of changes to specific Microsoft Graph resources through Azure Event Hubs so I can build apps that process the changes according to the business requirements.
 ---
 
 # Receive change notifications through Azure Event Hubs
@@ -138,6 +139,9 @@ The main difference during subscription creation will be the **notificationUrl**
 - `azurekeyvaultname` - The name you gave to the key vault when you created it. Can be found in the DNS name.
 - `secretname` - The name you gave to the secret when you created it. Can be found on the Azure Key Vault **Secrets** page.
 - `domainname` - The name of your tenant; for example, consto.onmicrosoft.com or contoso.com. Because this domain will be used to access the Azure Key Vault, it is important that it matches the domain used by the Azure subscription that holds the Azure Key Vault. To get this information, you can go to the overview page of the Azure Key Vault you created and select the subscription. The domain name is displayed under the **Directory** field.
+
+> [!NOTE]
+> Duplicate subscriptions are not allowed. When a subscription request contains the same values for **changeType** and **resource** that an existing subscription contains, the request fails with an HTTP error code `409 Conflict`, and the error message `Subscription Id <> already exists for the requested combination`.
 
 #### Receiving notifications
 
