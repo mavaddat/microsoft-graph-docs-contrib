@@ -59,6 +59,8 @@ This resource is the base type for the following evidence types:
 * [ioTDeviceEvidence](security-iotdeviceevidence.md)
 * [nicEvidence](security-nicevidence.md)
 * [hostLogonSessionEvidence](security-hostlogonsessionevidence.md)
+* [dnsEvidence](security-dnsevidence.md)
+* [fileHashEvidence](security-filehashevidence.md)
 
 ## Properties
 
