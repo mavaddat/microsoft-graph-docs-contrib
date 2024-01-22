@@ -1577,6 +1577,22 @@
           "ChangeType": "Addition",
           "Description": "Added the [submissionMailEvidence](https://learn.microsoft.com/en-us/graph/api/resources/security-submissionMailEvidence?view=graph-rest-beta) resource type.",
           "Target": "submissionMailEvidence"
+        },
+        {
+          "Id": "c74499c6-2390-435f-9051-0e8e6e12858d",
+          "ApiChange": "Resource",
+          "ChangedApiName": "dnsEvidence",
+          "ChangeType": "Addition",
+          "Description": "Added the [dnsEvidence](https://learn.microsoft.com/en-us/graph/api/resources/security-dnsEvidence?view=graph-rest-beta) resource type.",
+          "Target": "dnsEvidence"
+        },
+        {
+          "Id": "c74499c6-2390-435f-9051-0e8e6e12858d",
+          "ApiChange": "Resource",
+          "ChangedApiName": "fileHashEvidence",
+          "ChangeType": "Addition",
+          "Description": "Added the [fileHashEvidence](https://learn.microsoft.com/en-us/graph/api/resources/security-fileHashEvidence?view=graph-rest-beta) resource type.",
+          "Target": "fileHashEvidence"
         }
       ],
       "Id": "c74499c6-2390-435f-9051-0e8e6e12858d",
@@ -1699,6 +1715,22 @@
           "ChangeType": "Addition",
           "Description": "Added the [submissionMailEvidence](https://learn.microsoft.com/en-us/graph/api/resources/security-submissionMailEvidence?view=graph-rest-1.0) resource type.",
           "Target": "submissionMailEvidence"
+        },
+        {
+          "Id": "e6a554f5-665f-4d7a-812a-dbc68de7e4d5",
+          "ApiChange": "Resource",
+          "ChangedApiName": "dnsEvidence",
+          "ChangeType": "Addition",
+          "Description": "Added the [dnsEvidence](https://learn.microsoft.com/en-us/graph/api/resources/security-dnsEvidence?view=graph-rest-1.0) resource type.",
+          "Target": "dnsEvidence"
+        },
+        {
+          "Id": "e6a554f5-665f-4d7a-812a-dbc68de7e4d5",
+          "ApiChange": "Resource",
+          "ChangedApiName": "fileHashEvidence",
+          "ChangeType": "Addition",
+          "Description": "Added the [fileHashEvidence](https://learn.microsoft.com/en-us/graph/api/resources/security-fileHashEvidence?view=graph-rest-1.0) resource type.",
+          "Target": "fileHashEvidence"
         }
       ],
       "Id": "e66d855d-9635-4fbb-b435-23182467f0ce",
