@@ -1,0 +1,52 @@
+﻿---
+title: "dnsEvidence resource type"
+description: "A dns that is reported in the alert as evidence."
+author: "OfirBelenky"
+ms.localizationpriority: medium
+ms.prod: "security"
+doc_type: resourcePageType
+---
+
+# dnsEvidence resource type
+
+Namespace: microsoft.graph.security
+
+A dns that is reported in the alert as evidence.
+
+Inherits from [alertEvidence](../resources/security-alertevidence.md).
+
+## Properties
+
+| Property    | Type                                                                                                                           | Description                                                                    |
+|:------------|:-------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| domainName       | String                                                                                                                         | The name of the DNS record associated with the alert.                          |
+| ipAddresses       | [microsoft.graph.security.ipEvidence](security-ipevidence.md) collection                                                       | Entities of type ‘ip’ for the resolved IP address.                             |
+| dnsServerIp       | [microsoft.graph.security.ipEvidence](security-ipevidence.md)                                                                  | An entity of type ‘ip’ for the Dns server resolving the request.               |
+| hostIpAddress | [microsoft.graph.security.ipEvidence](security-ipevidence.md)                                                                                                                         | An entity of type ‘ip’ for the Dns request client.                             |
+
+## Relationships
+
+None.
+
+## JSON representation
+
+Here's a JSON representation of the resource.
+<!-- {
+  "blockType": "resource",
+  "@odata.type": "microsoft.graph.security.dnsEvidence"
+}
+-->
+
+``` json
+{
+  "@odata.type": "#microsoft.graph.security.dnsEvidence",
+  "domainName": "String",
+  "ipAddresses": [
+    {
+      "@odata.type": "microsoft.graph.security.ipEvidence"
+    }
+  ],
+  "dnsServerIp": "microsoft.graph.security.ipEvidence",
+  "hostIpAddress": "microsoft.graph.security.ipEvidence",
+}
+```
