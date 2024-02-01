@@ -18,8 +18,8 @@ Represents a logon session to a host by an account.
 | Property         | Type                                                                    | Description                                                               |
 |:-----------------|:------------------------------------------------------------------------|:--------------------------------------------------------------------------|
 | sessionId        | String                                                                  | The session ID for the account reported in the alert, for example, 0x3e7. |
-| account          | [microsoft.graph.security.userEvidence](./security-userevidence.md)     | The Account associated with the logon session.                            |
-| host             | [microsoft.graph.security.deviceEvidence](./security-deviceevidence.md) | The Host that the account had session on.                                 |
+| account          | [microsoft.graph.security.userEvidence](./security-userevidence.md)     | The Account that is associated with the logon session ID.                 |
+| host             | [microsoft.graph.security.deviceEvidence](./security-deviceevidence.md) | The host for the session.                                                 |
 | startUtcDateTime | DateTimeOffset                                                          | The session start time, if known.                                         |
 | endUtcDateTime   | DateTimeOffset                                                          | The session end time, if known.                                           |
 
