@@ -17,12 +17,12 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property    | Type                                                                                                                           | Description                                                                    |
+|Property|Type|Description|
 |:------------|:-------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
-| domainName       | String                                                                                                                         | The name of the DNS record associated with the alert.                          |
-| ipAddresses       | [microsoft.graph.security.ipEvidence](security-ipevidence.md) collection                                                       | Entities of type ‘ip’ for the resolved IP address.                             |
-| dnsServerIp       | [microsoft.graph.security.ipEvidence](security-ipevidence.md)                                                                  | An entity of type ‘ip’ for the Dns server resolving the request.               |
-| hostIpAddress | [microsoft.graph.security.ipEvidence](security-ipevidence.md)                                                                                                                         | An entity of type ‘ip’ for the Dns request client.                             |
+|domainName|String|The name of the DNS record associated with the alert.|
+|ipAddresses|[microsoft.graph.security.ipEvidence](security-ipevidence.md) collection|Entities of type ‘ip’ for the resolved IP address.|
+|dnsServerIp|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type ‘ip’ for the Dns server resolving the request.|
+|hostIpAddress|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type ‘ip’ for the Dns request client.|
 
 ## Relationships
 

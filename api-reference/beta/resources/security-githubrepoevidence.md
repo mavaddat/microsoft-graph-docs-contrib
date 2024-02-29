@@ -1,7 +1,7 @@
 ---
 title: "gitHubRepoEvidence resource type"
 description: "Represents a repository in GitHub."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
@@ -19,13 +19,13 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property  | Type   | Description                                                                 |
+|Property|Type|Description|
 |:----------|:-------|:----------------------------------------------------------------------------|
-| repoId    | String | The unique and immutable ID of the GitHub repository.                       |
-| login     | String | The login (name) of the repository.                                         |
-| owner     | String | The login of the owner of the repository.                                   |
-| ownerType | String | The type of owner of the repository (for example “User” or ‘Organization"). |
-| baseUrl   | String | The base URL of the repository's web page.                                  |
+|repoId|String|The unique and immutable ID of the GitHub repository.|
+|login|String|The login (name) of the repository.|
+|owner|String|The login of the owner of the repository.|
+|ownerType|String|The type of owner of the repository (for example “User” or ‘Organization").|
+|baseUrl|String|The base URL of the repository's web page.|
 
 ## Relationships
 

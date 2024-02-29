@@ -1,7 +1,7 @@
 ---
 title: "servicePrincipalEvidence resource type"
 description: "Represents a ServicePrincipal reported as part of a security detection alert."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
@@ -17,24 +17,24 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property                 | Type                                                                          | Description                                                                           |
+|Property|Type|Description|
 |:-------------------------|:------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
-| servicePrincipalName     | String                                                                        | The display name for the service principal.                                           |
-| servicePrincipalObjectId | String                                                                        | The unique identifier for the service principal.                                      |
-| appId                    | String                                                                        | The unique identifier for the associated application (its appId property).            |
-| appOwnerTenantId         | String                                                                        | Contains the tenant ID where the application is registered.                           |
-| tenantId                 | String                                                                        | The AAD tenant ID of Service Principal.                                               |
-| servicePrincipalType     | [microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values) | Type of the service principal: 'Unknown,' 'Application,' 'ManagedIdentity,' 'Legacy'. |
+|servicePrincipalName|String|The display name for the service principal.|
+|servicePrincipalObjectId|String|The unique identifier for the service principal.|
+|appId|String|The unique identifier for the associated application (its appId property).|
+|appOwnerTenantId|String|Contains the tenant ID where the application is registered.|
+|tenantId|String|The AAD tenant ID of Service Principal.|
+|servicePrincipalType|[microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values)|Type of the service principal: 'Unknown,' 'Application,' 'ManagedIdentity,' 'Legacy'.|
 
 ### servicePrincipalType values
 
-| Member             | Description                                                                                                                                                            |
+|Member|Description|
 |:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| unknown            | Unknown service principal type.                                                                                                                                        |
-| application        | This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.           |
-| managedIdentity    | This type of service principal is used to represent a managed identity.                                                                                                |
-| legacy             | This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences. |
-| unknownFutureValue | Evolvable enumeration value. Don't use.                                                                                                                                |
+|unknown|Unknown service principal type.|
+|application|This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.|
+|managedIdentity|This type of service principal is used to represent a managed identity.|
+|legacy|This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences.|
+|unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ## Relationships
 

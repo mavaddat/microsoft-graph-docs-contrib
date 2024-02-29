@@ -1,7 +1,7 @@
 ---
 title: "sasTokenEvidence resource type"
 description: "Represents a SAS token entity for storage container."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
@@ -17,18 +17,18 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property             | Type                                                                                | Description                                                                             |
+|Property|Type|Description|
 |:---------------------|:------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
-| signatureHash        | String                                                                              | The SAS signature hash - unique identifier for each SAS.                                |
-| allowedServices      | String collection                                                                   | Set of all services accessible with this SAS.                                           |
-| allowedResourceTypes | String collection                                                                   | Set of all resource types accessible with this SAS.                                     |
-| permissions          | String collection                                                                   | Set of all permissions granted to this SAS.                                             |
-| startDateTime        | DateTimeOffset                                                                      | SAS activation time - can be null.                                                      |
-| expiryDateTime       | DateTimeOffset                                                                      | SAS expiration time.                                                                    |
-| allowedIpAddresses   | String                                                                              | All IP addresses accessible with this SAS - default value is "Allows all IP addresses". |
-| signedWith           | String                                                                              | The storage key which used to generate the SAS.                                         |
-| protocol             | String                                                                              | Allowed protocol with this SAS.                                                         |
-| storageResource      | [microsoft.graph.security.azureResourceEvidence](security-azureresourceevidence.md) | Link to storage resource that this SAS belongs to.                                      |
+|signatureHash|String|The SAS signature hash - unique identifier for each SAS.|
+|allowedServices|String collection|Set of all services accessible with this SAS.|
+|allowedResourceTypes|String collection|Set of all resource types accessible with this SAS.|
+|permissions|String collection|Set of all permissions granted to this SAS.|
+|startDateTime|DateTimeOffset|SAS activation time - can be null.|
+|expiryDateTime|DateTimeOffset|SAS expiration time.|
+|allowedIpAddresses|String|All IP addresses accessible with this SAS - default value is "Allows all IP addresses".|
+|signedWith|String|The storage key which used to generate the SAS.|
+|protocol|String|Allowed protocol with this SAS.|
+|storageResource|[microsoft.graph.security.azureResourceEvidence](security-azureresourceevidence.md)|Link to storage resource that this SAS belongs to.|
 
 ## Relationships
 

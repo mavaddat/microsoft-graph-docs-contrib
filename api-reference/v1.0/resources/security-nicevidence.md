@@ -1,7 +1,7 @@
 ---
 title: "nicEvidence resource type"
 description: "Represents a NIC (v2) entity reported as part of a security detection alert."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
@@ -17,11 +17,11 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property   | Type                                                            | Description                    |
+|Property|Type|Description|
 |:-----------|:----------------------------------------------------------------|:-------------------------------|
-| macAddress | String                                                          | The MAC for the NIC.           |
-| ipAddress  | [microsoft.graph.security.ipEvidence](./security-ipevidence.md) | The current IP for the NIC.    |
-| vlans      | String Collection                                               | The current VLANs for the NIC. |
+|macAddress|String|The MAC for the NIC.|
+|ipAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|The current IP for the NIC.|
+|vlans|String Collection|The current VLANs for the NIC.|
 
 ## Relationships
 

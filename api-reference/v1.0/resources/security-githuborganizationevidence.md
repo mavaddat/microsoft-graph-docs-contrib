@@ -1,7 +1,7 @@
 ---
 title: "gitHubOrganizationEvidence resource type"
 description: "Represents an organization in GitHub."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
@@ -17,14 +17,14 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property    | Type   | Description                                         |
+|Property|Type|Description|
 |:------------|:-------|:----------------------------------------------------|
-| orgId       | String | The unique and immutable ID of the organization.    |
-| login       | String | The login (name) of the organization.               |
-| email       | String | The email address of the organization.              |
-| displayName | String | The display name of the organization.               |
-| company     | String | The name of the company that owns the organization. |
-| webUrl      | String | The URL of the organization's web page              |
+|orgId|String|The unique and immutable ID of the organization.|
+|login|String|The login (name) of the organization.|
+|email|String|The email address of the organization.|
+|displayName|String|The display name of the organization.|
+|company|String|The name of the company that owns the organization.|
+|webUrl|String|The URL of the organization's web page|
 
 ## Relationships
 

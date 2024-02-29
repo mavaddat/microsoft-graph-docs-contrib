@@ -1,7 +1,7 @@
 ---
 title: "gitHubUserEvidence resource type"
 description: "Represents a user account in GitHub."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
@@ -17,13 +17,13 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property | Type   | Description                                                                       |
+|Property|Type|Description|
 |:---------|:-------|:----------------------------------------------------------------------------------|
-| userId   | String | The unique and immutable ID of the user account.                                  |
-| login    | String | User's login (GitHub handle).                                                     |
-| email    | String | The email address of the user account.                                            |
-| name     | String | User's name.                                                                      |
-| webUrl   | String | The URL of the user's profile web page (for example https://github.com/my-login). |
+|userId|String|The unique and immutable ID of the user account.|
+|login|String|User's login (GitHub handle).|
+|email|String|The email address of the user account.|
+|name|String|User's name.|
+|webUrl|String|The URL of the user's profile web page (for example https://github.com/my-login).|
 
 ## Relationships
 

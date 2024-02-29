@@ -19,22 +19,22 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property   | Type                                                                    | Description                                                           |
+|Property|Type|Description|
 |:-----------|:------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| algorithm  | [microsoft.graph.security.fileHashAlgorithm](#filehashalgorithm-values) | The hash algorithm type. Possible values are: `unknown`, `md5`, `sha1`, `sha256`, `sha256ac`, `unknownFutureValue`. |
-| value      | String                                                                  | The hash value. |
+|algorithm|[microsoft.graph.security.fileHashAlgorithm](#filehashalgorithm-values)|The hash algorithm type. Possible values are: `unknown`, `md5`, `sha1`, `sha256`, `sha256ac`, `unknownFutureValue`.|
+|value|String|The hash value.|
 
 
 ### fileHashAlgorithm values
 
-| Member                 | Description                                                           |
+|Member|Description|
 |:-----------------------|:----------------------------------------------------------------------|
-| unknown                | Unknown hash algorithm that is used mostly for forward compatibility. |
-| md5                    | MD5 hash type.                                                        |
-| sha1                   | SHA1 hash type.                                                       |
-| sha256                 | SHA256 hash type.                                                     |
-| sha256ac               | SHA256 authenticode hash type.                                        |
-| unknownFutureValue     | Evolvable enumeration sentinel value. Don't use.                     |
+|unknown|Unknown hash algorithm that is used mostly for forward compatibility.|
+|md5|MD5 hash type.|
+|sha1|SHA1 hash type.|
+|sha256|SHA256 hash type.|
+|sha256ac|SHA256 authenticode hash type.|
+|unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
 
 ## Relationships

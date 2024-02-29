@@ -1,7 +1,7 @@
 ---
 title: "submissionMailEvidence resource type"
 description: "Represents a user-reported concern over an email, such as reporting an email as Junk/Phish."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
@@ -19,17 +19,17 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
-| Property           | Type           | Description                                                                                |
+|Property|Type|Description|
 |:-------------------|:---------------|:-------------------------------------------------------------------------------------------|
-| submissionId       | String         | The Submission ID.                                                                         |
-| submissionDateTime | DateTimeOffset | Reported Date time for this submission.                                                    |
-| submitter          | String         | The submitter email address.                                                               |
-| networkMessageId   | String         | The network message ID of email to which submission belongs.                               |
-| recipient          | String         | The recipient of the mail.                                                                 |
-| sender             | String         | The sender of the mail.                                                                    |
-| senderIp           | String         | The sender's IP.                                                                           |
-| subject            | String         | The subject of submission mail.                                                            |
-| reportType         | String         | The submission type for the given instance. That maps to Junk, Phish, Malware, or NotJunk. |
+|submissionId|String|The Submission ID.|
+|submissionDateTime|DateTimeOffset|Reported Date time for this submission.|
+|submitter|String|The submitter email address.|
+|networkMessageId|String|The network message ID of email to which submission belongs.|
+|recipient|String|The recipient of the mail.|
+|sender|String|The sender of the mail.|
+|senderIp|String|The sender's IP.|
+|subject|String|The subject of submission mail.|
+|reportType|String|The submission type for the given instance. That maps to Junk, Phish, Malware, or NotJunk.|
 
 ## Relationships
 
