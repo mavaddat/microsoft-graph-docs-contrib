@@ -25,6 +25,14 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |destinationPort|Int32|The destination port number. For example, 80.|
 |protocol|[microsoft.graph.security.protocolType](#protocoltype-values)|The protocol type. Possible values are 'tcp', 'udp', 'unknownFutureValue'.|
 
+### protocolType values
+
+|Member|Description|
+|:-----|:----------|
+|tcp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
+|udp|Reliable, connection-oriented data transfer, essential for web browsing and file transfer.|
+|unknownFutureValue|Evolvable enumeration value. Don't use.|
+
 ## Relationships
 None.
 
