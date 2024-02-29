@@ -22,9 +22,9 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |Property|Type|Description|
 |:------------|:-------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
 |domainName|String|The name of the DNS record associated with the alert.|
-|ipAddresses|[microsoft.graph.security.ipEvidence](security-ipevidence.md) collection|Entities of type ‘ip’ for the resolved IP address.|
-|dnsServerIp|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type ‘ip’ for the Dns server resolving the request.|
-|hostIpAddress|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type ‘ip’ for the Dns request client.|
+|ipAddresses|[microsoft.graph.security.ipEvidence](security-ipevidence.md) collection|Entities of type 'ip' for the resolved IP address.|
+|dnsServerIp|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the Dns server resolving the request.|
+|hostIpAddress|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the Dns request client.|
 
 ## Relationships
 
@@ -32,7 +32,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.dnsEvidence"

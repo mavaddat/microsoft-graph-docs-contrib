@@ -1,6 +1,6 @@
 ﻿---
 title: "dnsEvidence resource type"
-description: "A dns that is reported in the alert as evidence."
+description: "A DNS that is reported in the alert as evidence."
 author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.prod: "security"
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph.security
 
-A dns that is reported in the alert as evidence.
+A DNS that is reported in the alert as evidence.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
@@ -20,9 +20,9 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |Property|Type|Description|
 |:------------|:-------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
 |domainName|String|The name of the DNS record associated with the alert.|
-|ipAddresses|[microsoft.graph.security.ipEvidence](security-ipevidence.md) collection|Entities of type ‘ip’ for the resolved IP address.|
-|dnsServerIp|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type ‘ip’ for the Dns server resolving the request.|
-|hostIpAddress|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type ‘ip’ for the Dns request client.|
+|ipAddresses|[microsoft.graph.security.ipEvidence](security-ipevidence.md) collection|Entities of type 'ip' for the resolved IP address.|
+|dnsServerIp|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the DNS server resolving the request.|
+|hostIpAddress|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the DNS request client.|
 
 ## Relationships
 
@@ -30,7 +30,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.dnsEvidence"

@@ -72,7 +72,7 @@ This resource is the base type for the following evidence types:
 ## Properties
 
 |Property|Type|Description|
-|:-------------------------|:----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-------|:---|:----------|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 |detailedRoles|String collection|Detailed description of the entity role/s in an alert. Values are free-form.|
 |remediationStatus|[microsoft.graph.security.evidenceRemediationStatus](#evidenceremediationstatus-values)|Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`.|
@@ -84,7 +84,7 @@ This resource is the base type for the following evidence types:
 ### detectionSource values
 
 |Value|Description|
-|:-------------------|:----------------------------------------------------------------------------|
+|:----|:----------|
 |detected|A product of the threat that executed was detected.|
 |blocked|The threat was remediated at run time.|
 |prevented|The threat was prevented from occurring (running, downloading, and so on.).|
@@ -93,7 +93,7 @@ This resource is the base type for the following evidence types:
 ### evidenceRemediationStatus values
 
 |Member|Description|
-|:-------------------|:-------------------------------------------------|
+|:-----|::----------|
 |none|No threats were found.|
 |remediated|Remediation action has completed successfully.|
 |prevented|The threat was prevented from executing.|
@@ -104,7 +104,7 @@ This resource is the base type for the following evidence types:
 ### evidenceRole values
 
 |Member|Description|
-|:-------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-----|::----------|
 |unknown|The evidence role is unknown.|
 |contextual|An entity that arose likely benign but was reported as a side effect of an attacker's action, for example, the benign services.exe process was used to start a malicious service.|
 |scanned|An entity identified as a target of discovery scanning or reconnaissance actions, for example, a port scanner was used to scan a network.|
@@ -125,7 +125,7 @@ This resource is the base type for the following evidence types:
 ### evidenceRemediationStatus values
 
 |Member|Description|
-|:-------------------|:---------------------------------------------------|
+|:-----|:----------|
 |unknown|No verdict was determined for the evidence.|
 |suspicious|Recommended remediation actions awaiting approval.|
 |malicious|The evidence was determined to be malicious.|
@@ -135,7 +135,7 @@ This resource is the base type for the following evidence types:
 ### evidenceVerdict values
 
 |Member|Description|
-|:-------------------|:---------------------------------------------------|
+|:-----|:----------|
 |unknown|No verdict was determined for the evidence.|
 |suspicious|Recommended remediation actions awaiting approval.|
 |malicious|The evidence was determined to be malicious.|
@@ -145,7 +145,7 @@ This resource is the base type for the following evidence types:
 ### protocolType values
 
 |Member|Description|
-|:-------------------|:-------------------------------------------------------------------------------------------|
+|:-----|:----------|
 |tcp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
 |udp|Reliable, connection-oriented data transfer, essential for web browsing and file transfer.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
@@ -153,7 +153,7 @@ This resource is the base type for the following evidence types:
 ### servicePrincipalType values
 
 |Member|Description|
-|:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-----|:----------|
 |unknown|Unknown service principal type.|
 |application|This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.|
 |managedIdentity|This type of service principal is used to represent a managed identity.|
@@ -163,7 +163,7 @@ This resource is the base type for the following evidence types:
 #### ioTDeviceImportanceType values
 
 |Member|Description|
-|:-------------------|:----------------------------------------|
+|:-----|:----------|
 |unknown|Unknown - Default value|
 |low|Low|
 |normal|Normal|
@@ -176,7 +176,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.alertEvidence"

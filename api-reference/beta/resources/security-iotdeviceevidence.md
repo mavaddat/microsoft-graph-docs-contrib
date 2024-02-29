@@ -42,9 +42,9 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |sensor|String|The sensor the device is monitored by.|
 |importance|[microsoft.graph.security.ioTDeviceImportanceType](#iotdeviceimportancetype-values )|The importance of the IoT Device.|
 |purdueLayer|String|The Purdue Layer of the device.|
-|isProgramming|Boolean|Determines whether the device is a programming device.|
-|isAuthorized|Boolean|Determines whether the device is an authorized device.|
-|isScanner|Boolean|Determines whether the device is a scanner device.|
+|isProgramming|Boolean|Whether the device is a programming device.|
+|isAuthorized|Boolean|Whether the device is an authorized device.|
+|isScanner|Boolean|Whether the device is a scanner device.|
 |devicePageLink|String|A URL to the device page in IoT Defender portal.|
 |deviceSubType|String|The name of the device subtype.|
 

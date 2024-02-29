@@ -30,7 +30,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 
 ## Properties
 |Property|Type|Description|
-|:---|:---|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-------|:---|:----------|
 |actorDisplayName|String|The adversary or activity group that is associated with this alert.|
 |additionalData|microsoft.graph.security.dictionary|A collection of other alert properties, including user-defined properties. Any custom details defined in the alert, and any dynamic content in the alert details, are stored here.|
 |alertPolicyId|String|The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.|
@@ -69,7 +69,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 ### alertClassification values 
 
 |Member|Description|
-|:----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|
+|:-----|:----------|
 |unknown|The alert isn't classified yet.|
 |falsePositive|The alert is a false positive and didn't detect malicious activity.|
 |truePositive|The alert is true positive and detects malicious activity.|
@@ -79,12 +79,12 @@ Security providers create an alert in the system when they detect a threat. Micr
 ### alertDetermination values 
 
 |Member|Description|
-|:--------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+|:-----|:----------|
 |unknown|No determination value was set yet.|
 |apt|A true positive alert that detected an advanced persistent threat.|
 |malware|A true positive alert that detects malicious software.|
 |securityPersonnel|A true positive alert that detected valid suspicious activity performed by someone on the customer's security team.|
-|securityTesting|The alert detected valid suspicious activity that was performed as part of a known security testing.|
+|securityTesting|The alert detected valid suspicious activity that was performed in a known security testing.|
 |unwantedSoftware|The alert detected unwanted software.|
 |multiStagedAttack|A true positive alert that detected multiple kill-chain attack stages.|
 |compromisedAccount|A true positive alert that detected that the intended user's credentials were compromised or stolen.|
@@ -100,7 +100,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 ### alertSeverity values 
 
 |Member|Description|
-|:--------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+|:-----|:----------|
 |unknown|Unknown severity.|
 |informational|Alerts that might not be actionable or considered harmful to the network but can drive organizational security awareness on potential security issues.|
 |low|Alerts on threats associated with prevalent malware. For example, hack tools, and nonmalware hack tools, such as running exploration commands and clearing logs, that often don't indicate an advanced threat that targets the organization. It can also come from an isolated security tool that a user in your organization is testing.|
@@ -112,7 +112,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 ### alertStatus values 
 
 |Member|Description|
-|:-------------------|:----------------------------------------------------|
+|:-----|:----------|
 |unknown|Unknown status.|
 |new|New alert.|
 |inProgress|The alert is in mitigation progress.|
@@ -123,7 +123,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 ### serviceSource values 
 
 |Value|Description|
-|:----------------------------|:----------------------------------------------|
+|:----|:----------|
 |unknown|Unknown service source.|
 |microsoftDefenderForEndpoint|Microsoft Defender for Endpoint.|
 |microsoftDefenderForIdentity|Microsoft Defender for Identity.|
@@ -141,7 +141,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 ### detectionSource values 
 
 |Value|Description|
-|:---------------------------------------|:------------------------------------------------------------|
+|:----|:----------|
 |unknown|Unknown detection source.|
 |microsoftDefenderForEndpoint|Microsoft Defender For Endpoint.|
 |antivirus|Antivirus software.|
@@ -183,7 +183,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

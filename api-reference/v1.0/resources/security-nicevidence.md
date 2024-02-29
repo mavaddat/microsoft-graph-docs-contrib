@@ -1,6 +1,6 @@
 ---
 title: "nicEvidence resource type"
-description: "Represents a NIC (v2) entity reported as part of a security detection alert."
+description: "Represents a NIC (v2) entity reported in a security detection alert."
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
@@ -11,14 +11,14 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph.security
 
-Represents a NIC (v2) entity that is reported as part of the security detection alert.
+Represents a NIC (v2) entity that is reported in the security detection alert.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
 |Property|Type|Description|
-|:-----------|:----------------------------------------------------------------|:-------------------------------|
+|:-------|:---|:----------|
 |macAddress|String|The MAC for the NIC.|
 |ipAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|The current IP for the NIC.|
 |vlans|String Collection|The current VLANs for the NIC.|
@@ -29,7 +29,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.nicEvidence"

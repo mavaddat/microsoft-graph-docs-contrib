@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |repoId|String|The unique and immutable ID of the GitHub repository.|
 |login|String|The login (name) of the repository.|
 |owner|String|The login of the owner of the repository.|
-|ownerType|String|The type of owner of the repository (for example “User” or ‘Organization").|
+|ownerType|String|The type of owner of the repository (for example "User" or "Organization").|
 |baseUrl|String|The base URL of the repository's web page.|
 
 ## Relationships
@@ -31,7 +31,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.gitHubRepoEvidence"

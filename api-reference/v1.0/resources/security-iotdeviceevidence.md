@@ -1,6 +1,6 @@
 ---
 title: "ioTDeviceEvidence resource type"
-description: "Represents an IoT Device reported as part of a security detection alert."
+description: "Represents an IoT Device reported in a security detection alert."
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
@@ -11,7 +11,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph.security
 
-Represents an IoT Device that is reported as part of the security detection alert.
+Represents an IoT Device that is reported in the security detection alert.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
@@ -24,7 +24,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |deviceName|String|The friendly name of the device.|
 |owners|String Collection|The owners for the device.|
 |ioTSecurityAgentId|String|The ID of the Azure Security Center for IoT agent running on the device.|
-|deviceType|String|The type of the device ('temperature sensor', 'freezer', 'wind turbine' etc.).|
+|deviceType|String|The type of the device. For example, 'temperature sensor', 'freezer', 'wind turbine',  and so on.|
 |source|String|The source (microsoft/vendor) of the device entity.|
 |sourceRef|[microsoft.graph.security.urlEvidence](./security-urlevidence.md)|A URL reference to the source item where the device is managed.|
 |manufacturer|String|The manufacturer of the device.|
@@ -32,7 +32,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |operatingSystem|String|The operating system the device is running.|
 |ipAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|The current IP address of the device.|
 |macAddress|String|The MAC address of the device.|
-|nics|[microsoft.graph.security.nicEvidence](./security-nicevidence.md)|The current Nics on the device.|
+|nics|[microsoft.graph.security.nicEvidence](./security-nicevidence.md)|The current NICs on the device.|
 |protocols|String Collection|A list of protocols that the device supports.|
 |serialNumber|String|The serial number of the device.|
 |site|String|The site location of the device.|
@@ -40,11 +40,11 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |sensor|String|The sensor the device is monitored by.|
 |importance|[microsoft.graph.security.ioTDeviceImportanceType](#iotdeviceimportancetype-values )|The importance of the IoT Device.|
 |purdueLayer|String|The Purdue Layer of the device.|
-|isProgramming|Boolean|Determines whether the device is classified as a programming device.|
-|isAuthorized|Boolean|Determines whether the device is classified as an authorized device.|
-|isScanner|Boolean|Determines whether the device is classified as a scanner device.|
-|devicePageLink|String|A URL to the device page in IoT Defender portal.|
-|deviceSubType|String|The name of the device sub type.|
+|isProgramming|Boolean|Whether the device is classified as a programming device.|
+|isAuthorized|Boolean|Whether the device is classified as an authorized device.|
+|isScanner|Boolean|Whether the device is classified as a scanner device.|
+|devicePageLink|String|A URL to the device page in the IoT Defender portal.|
+|deviceSubType|String|The name of the device subtype.|
 
 #### ioTDeviceImportanceType values
 
@@ -62,7 +62,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.kubernetesServiceEvidence"

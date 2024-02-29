@@ -18,12 +18,12 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 ## Properties
 
 |Property|Type|Description|
-|:---------|:-------|:----------------------------------------------------------------------------------|
+|:-------|:---|:----------|
 |userId|String|The unique and immutable ID of the user account.|
-|login|String|User's login (GitHub handle).|
+|login|String|The user's login (GitHub handle).|
 |email|String|The email address of the user account.|
-|name|String|User's name.|
-|webUrl|String|The URL of the user's profile web page (for example https://github.com/my-login).|
+|name|String|The user's name.|
+|webUrl|String|The URL of the user's profile web page. For example https://github.com/my-login).|
 
 ## Relationships
 
@@ -31,7 +31,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.gitHubUserEvidence"

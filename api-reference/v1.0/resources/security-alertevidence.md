@@ -70,9 +70,9 @@ This resource is the base type for the following evidence types:
 ## Properties
 
 |Property|Type|Description|
-|:-------------------------|:----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-------|:---|-----------|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
-|detailedRoles|String collection|Detailed description of the entity role/s in an alert. Values are free-form.|
+|detailedRoles|String collection|Detailed description of the entity role in an alert. Values are free-form.|
 |remediationStatus|[microsoft.graph.security.evidenceRemediationStatus](#evidenceremediationstatus-values)|Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`.|
 |remediationStatusDetails|String|Details about the remediation status.|
 |roles|[microsoft.graph.security.evidenceRole](#evidencerole-values) collection|The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role **Attacker**.|
@@ -144,18 +144,18 @@ This resource is the base type for the following evidence types:
 
 |Member|Description|
 |:-------------------|:-------------------------------------------------------------------------------------------|
-|tcp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
-|udp|Reliable, connection-oriented data transfer, essential for web browsing and file transfer.|
+|tcp|Indicates TCP.|
+|udp|Indicates UDP.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ### servicePrincipalType values
 
 |Member|Description|
 |:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|unknown|Unknown service principal type.|
-|application|This type of service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.|
-|managedIdentity|This type of service principal is used to represent a managed identity.|
-|legacy|This type of service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences.|
+|unknown|The service principal type is unknown.|
+|application|The service principal is the local representation, or application instance, of a global application object in a single tenant or directory.|
+|managedIdentity|The service principal is used to represent a managed identity.|
+|legacy|The service principal is a legacy app, which is either an app created before app registrations were introduced or an app created through legacy experiences.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 #### ioTDeviceImportanceType values
@@ -174,7 +174,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.alertEvidence"

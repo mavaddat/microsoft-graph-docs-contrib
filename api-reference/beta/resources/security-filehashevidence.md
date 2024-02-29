@@ -1,6 +1,6 @@
 ﻿---
 title: "fileHashEvidence  resource type"
-description: "Represents a file hash value that is reported as part of a security detection alert, usually in relation to a file entity instance."
+description: "Represents a file hash value that is reported in a security detection alert, usually in relation to a file entity instance."
 author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.prod: "security"
@@ -13,14 +13,14 @@ Namespace: microsoft.graph.security
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a file hash value that is reported as part of a security detection alert, usually in relation to a file entity instance.
+Represents a file hash value that is reported in a security detection alert, usually in relation to a file entity instance.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
 |Property|Type|Description|
-|:-----------|:------------------------------------------------------------------------|:----------------------------------------------------------------------|
+|:-------|:---|:----------|
 |algorithm|[microsoft.graph.security.fileHashAlgorithm](#filehashalgorithm-values)|The hash algorithm type. Possible values are: `unknown`, `md5`, `sha1`, `sha256`, `sha256ac`, `unknownFutureValue`.|
 |value|String|The hash value.|
 
@@ -43,7 +43,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.fileHashEvidence"

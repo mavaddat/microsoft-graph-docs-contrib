@@ -80,7 +80,7 @@ When a security provider detects a threat, it creates an alert in the system. Mi
 |apt|A true positive alert that detected an advanced persistent threat.|
 |malware|A true positive alert that detected malicious software.|
 |securityPersonnel|A true positive alert that detected valid suspicious activity that someone on the customer's security team performed.|
-|securityTesting|The alert detected valid suspicious activity that was performed as part of a known security testing.|
+|securityTesting|The alert detected valid suspicious activity that was performed in a known security testing.|
 |unwantedSoftware|The alert detected unwanted software.|
 |multiStagedAttack|A true positive alert that detected multiple kill-chain attack stages.|
 |compromisedAccount|A true positive alert that detected that the intended user's credentials were compromised or stolen.|
@@ -178,7 +178,7 @@ When a security provider detects a threat, it creates an alert in the system. Mi
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

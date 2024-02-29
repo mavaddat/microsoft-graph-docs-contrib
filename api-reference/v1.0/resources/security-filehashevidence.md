@@ -1,6 +1,6 @@
 ﻿---
 title: "fileHashEvidence resource type"
-description: "Represents a file hash value that is reported as part of a security detection alert, usually in relation to a file entity instance."
+description: "Represents a file hash value that is reported in a security detection alert, usually in relation to a file entity instance."
 author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.prod: "security"
@@ -11,14 +11,14 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph.security
 
-Represents a file hash value that is reported as part of a security detection alert, usually in relation to a file entity instance.
+Represents a file hash value that is reported in a security detection alert, usually in relation to a file entity instance.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 ## Properties
 
 |Property|Type|Description|
-|:-----------|:------------------------------------------------------------------------|:----------------------------------------------------------------------|
+|:-------|:---|:----------|
 |algorithm|[microsoft.graph.security.fileHashAlgorithm](#filehashalgorithm-values)|The hash algorithm type. Possible values are: `unknown`, `md5`, `sha1`, `sha256`, `sha256ac`, `unknownFutureValue`.|
 |value|String|The hash value.|
 
@@ -27,11 +27,11 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Member|Description|
 |:-----------------------|:----------------------------------------------------------------------|
-|unknown|Unknown hash algorithm that is used mostly for forward compatibility.|
-|md5|MD5 hash type.|
-|sha1|SHA1 hash type.|
-|sha256|SHA256 hash type.|
-|sha256ac|SHA256 authenticode hash type.|
+|unknown|An unknown hash algorithm that is used for forward compatibility.|
+|md5|The MD5 hash type.|
+|sha1|The SHA1 hash type.|
+|sha256|The SHA256 hash type.|
+|sha256ac|The SHA256 authenticode hash type.|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
 
@@ -41,7 +41,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.fileHashEvidence"
