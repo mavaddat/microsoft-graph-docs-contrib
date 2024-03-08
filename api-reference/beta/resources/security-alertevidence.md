@@ -93,7 +93,7 @@ This resource is the base type for the following evidence types:
 ### evidenceRemediationStatus values
 
 |Member|Description|
-|:-----|::----------|
+|:-----|:----------|
 |none|No threats were found.|
 |remediated|Remediation action has completed successfully.|
 |prevented|The threat was prevented from executing.|
@@ -104,7 +104,7 @@ This resource is the base type for the following evidence types:
 ### evidenceRole values
 
 |Member|Description|
-|:-----|::----------|
+|:-----|:----------|
 |unknown|The evidence role is unknown.|
 |contextual|An entity that arose likely benign but was reported as a side effect of an attacker's action, for example, the benign services.exe process was used to start a malicious service.|
 |scanned|An entity identified as a target of discovery scanning or reconnaissance actions, for example, a port scanner was used to scan a network.|
