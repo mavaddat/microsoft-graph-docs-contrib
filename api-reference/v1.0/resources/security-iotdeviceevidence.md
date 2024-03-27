@@ -1,7 +1,7 @@
 ---
 title: "ioTDeviceEvidence resource type"
 description: "Represents an IoT Device reported in a security detection alert."
-author: "MSLironLevy"
+author: "Lirlev48"
 ms.localizationpriority: medium
 ms.prod: "security"
 doc_type: resourcePageType
