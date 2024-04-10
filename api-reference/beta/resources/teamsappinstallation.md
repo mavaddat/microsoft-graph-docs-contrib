@@ -44,6 +44,7 @@ Represents a [teamsApp](teamsapp.md) installed in a [team](team.md), a [chat](ch
 |:------------------- |:-------- |:----------- |
 |consentedPermissionSet|[teamsAppPermissionSet](../resources/teamsapppermissionset.md)|The set of resource-specific permissions consented to while installing or upgrading the teamsApp.|
 | id                  | string   | A unique ID (not the team's app ID). |
+|scopeInfo|[teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md)|The details of scope in which the app is installed.|
 
 ## Relationships
 
