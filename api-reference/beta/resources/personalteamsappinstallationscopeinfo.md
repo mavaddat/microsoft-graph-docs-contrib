@@ -21,7 +21,7 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 |Property|Type|Description|
 |:---|:---|:---|
 |scope|teamsAppInstallationScopes|The scope in which Teams app has been installed. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
-|userId|String|The user id of the user for which Teams app has been installed.|
+|userId|String|The user id of the user for which Teams app is installed.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

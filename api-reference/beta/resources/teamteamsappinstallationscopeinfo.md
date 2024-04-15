@@ -20,7 +20,7 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|scope|teamsAppInstallationScopes|The scope in which Teams app has been installed. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
+|scope|teamsAppInstallationScopes|The scope in which Teams app is installed. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
 |teamId|String|The team id of the team in which Teams app has been installed.|
 
 ## Relationships
