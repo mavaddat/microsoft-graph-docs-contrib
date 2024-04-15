@@ -1,9 +1,9 @@
 ---
 title: "teamsAppInstallationScopeInfo resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=Document-APIs/Guidelines/Metadata)**"
+description: "Teams app installation scope details."
+author: "sthapliyal"
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://aka.ms/msgo?pagePath=Document-APIs/Guidelines/Metadata)**"
+ms.subservice: "teams"
 doc_type: resourcePageType
 ---
 
@@ -13,16 +13,13 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+The details about the scope in which the Teams app has been installed.
 This is an abstract type.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|scope|teamsAppInstallationScopes|**TODO: Add Description**.The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
-
-## Relationships
-None.
+|scope|teamsAppInstallationScopes|The scope in which Teams app has been installed.The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
@@ -37,4 +34,3 @@ The following JSON representation shows the resource type.
   "scope": "String"
 }
 ```
-

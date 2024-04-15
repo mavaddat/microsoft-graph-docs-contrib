@@ -3,6 +3,56 @@
     {
       "ChangeList": [
         {
+          "Id": "a64a38fa-ff9f-4d0f-9b62-da917b46f423",
+          "ApiChange": "Resource",
+          "ChangedApiName": "groupChatTeamsAppInstallationScopeInfo",
+          "ChangeType": "Addition",
+          "Description": "Added the [groupChatTeamsAppInstallationScopeInfo](https://learn.microsoft.com/en-us/graph/api/resources/groupChatTeamsAppInstallationScopeInfo?view=graph-rest-beta) resource.",
+          "Target": "groupChatTeamsAppInstallationScopeInfo"
+        },
+        {
+          "Id": "a64a38fa-ff9f-4d0f-9b62-da917b46f423",
+          "ApiChange": "Resource",
+          "ChangedApiName": "personalTeamsAppInstallationScopeInfo",
+          "ChangeType": "Addition",
+          "Description": "Added the [personalTeamsAppInstallationScopeInfo](https://learn.microsoft.com/en-us/graph/api/resources/personalTeamsAppInstallationScopeInfo?view=graph-rest-beta) resource.",
+          "Target": "personalTeamsAppInstallationScopeInfo"
+        },
+        {
+          "Id": "a64a38fa-ff9f-4d0f-9b62-da917b46f423",
+          "ApiChange": "Resource",
+          "ChangedApiName": "teamsAppInstallationScopeInfo",
+          "ChangeType": "Addition",
+          "Description": "Added the [teamsAppInstallationScopeInfo](https://learn.microsoft.com/en-us/graph/api/resources/teamsAppInstallationScopeInfo?view=graph-rest-beta) resource.",
+          "Target": "teamsAppInstallationScopeInfo"
+        },
+        {
+          "Id": "a64a38fa-ff9f-4d0f-9b62-da917b46f423",
+          "ApiChange": "Resource",
+          "ChangedApiName": "teamTeamsAppInstallationScopeInfo",
+          "ChangeType": "Addition",
+          "Description": "Added the [teamTeamsAppInstallationScopeInfo](https://learn.microsoft.com/en-us/graph/api/resources/teamTeamsAppInstallationScopeInfo?view=graph-rest-beta) resource.",
+          "Target": "teamTeamsAppInstallationScopeInfo"
+        },
+        {
+          "Id": "a64a38fa-ff9f-4d0f-9b62-da917b46f423",
+          "ApiChange": "Property",
+          "ChangedApiName": "scopeInfo",
+          "ChangeType": "Addition",
+          "Description": "Added the **scopeInfo** property to the [teamsAppInstallation](https://learn.microsoft.com/en-us/graph/api/resources/teamsAppInstallation?view=graph-rest-beta) resource.",
+          "Target": "teamsAppInstallation"
+        }
+      ],
+      "Id": "a64a38fa-ff9f-4d0f-9b62-da917b46f423",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2024-04-10T17:49:17.4507161Z",
+      "WorkloadArea": "Teamwork",
+      "SubArea": "Microsoft.Teams.Shifts"
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "c691ef0b-866c-4b62-8a12-65dc2109a655",
           "ApiChange": "Parameter",
           "ChangedApiName": "getAllMessages",
