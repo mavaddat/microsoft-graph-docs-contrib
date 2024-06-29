@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 Get a list of [bookingAppointment](../resources/bookingappointment.md) objects for the specified [bookingBusiness](../resources/bookingbusiness.md).
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -155,6 +155,10 @@ Content-type: application/json
                 }
             ],
             "customerTimeZone": "America/Chicago",
+            "customerName": "Bob Kelly",
+            "customerEmailAddress": "bobk@tailspintoys.com",
+            "customerPhone": "213-555-0103",
+            "customerNotes": "This is a test note",
             "smsNotificationsEnabled": true,
             "serviceId": "57da6774-a087-4d69-b0e6-6fb82c339976",
             "serviceName": "Catered bento",

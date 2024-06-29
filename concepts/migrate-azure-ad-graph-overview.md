@@ -3,9 +3,10 @@ title: "Migrate from Azure Active Directory (Azure AD) Graph to Microsoft Graph"
 description: "Learn how to migrate yor apps from Azure Active Directory (Azure AD) Graph to Microsoft Graph before Azure AD Graph is retired."
 author: FaithOmbongi
 ms.author: ombongifaith
-ms.reviewer: dkershaw
+ms.reviewer: krbash
+ms.topic: concept-article
 ms.localizationpriority: medium
-ms.subservice: "entra-applications"
+ms.subservice: entra-applications
 ms.date: 01/30/2024
 #customer intent: As a developer currently using Azure AD Graph, I want to know why I should migrate my applications to Microsoft Graph.
 ---

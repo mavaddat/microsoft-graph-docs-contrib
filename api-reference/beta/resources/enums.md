@@ -11,6 +11,36 @@ author: "MSGraphDocsvTeam"
 
 Namespace: microsoft.graph
 
+### virtualEventRegistrationPredefinedQuestionLabel values
+
+| Member             |
+|:-------------------|
+| street             |
+| city               |
+| state              |
+| postalCode         | 
+| countryOrRegion    |
+| industry           |
+| jobTitle           |
+| organization       |
+| unknownFutureValue |
+
+### fileStorageContainerOwnershipType values
+
+| Member             |
+|:-------------------|
+| tenantOwned        |
+| unknownfuturevalue |
+
+### groupAccessType values
+
+| Member             |
+|:-------------------|
+| none               |
+| private            |
+| secret             |
+| public             |
+
 ### fileStorageContainerStatus values
 
 | Member             |
@@ -18,6 +48,15 @@ Namespace: microsoft.graph
 | inactive           |
 | active             |
 | unknownfuturevalue |
+
+### siteLockState values
+
+| Value         | 
+|:--------------|
+| unlocked      | 
+| lockedReadOnly |
+
+
 
 ### userDefaultAuthenticationMethod values
 
@@ -46,6 +85,26 @@ Namespace: microsoft.graph
 |:-------------------|
 | clientSecret       |
 | certificate        |
+| unknownFutureValue |
+
+### plannerTaskCompletionRequirements values
+
+| Member             |
+|:-------------------|
+| none               |
+| checklistCompletion|
+| unknownFutureValue |
+| formCompletion     |
+| approvalCompletion |
+
+### plannerApprovalStatus values 
+
+| Member             |
+|:-------------------|
+| requested          |
+| approved           |
+| rejected           |
+| cancelled          |
 | unknownFutureValue |
 
 ### applicationKeyOrigin values
@@ -78,9 +137,10 @@ Namespace: microsoft.graph
 
 | Member             |
 | :----------------- |
-| Required           |
-| Recommeded         |
-| UnknownFutureValue |
+| required           |
+| recommeded         |
+| unknownFutureValue |
+| peerRecommeded     |
 
 ### courseStatus values
 
@@ -118,6 +178,18 @@ Namespace: microsoft.graph
 |:---|
 |preview|
 |generallyAvailable|
+|unknownFutureValue|
+
+### requiredLicenses values
+
+|Member|
+|:---|
+|notApplicable|
+|microsoftEntraIdFree|
+|microsoftEntraIdP1|
+|microsoftEntraIdP2|
+|microsoftEntraIdGovernance|
+|microsoftEntraWorkloadId|
 |unknownFutureValue|
 
 ### recommendationCategory values
@@ -477,6 +549,8 @@ Namespace: microsoft.graph
 | saml20             |
 | deviceCode         |
 | unknownFutureValue |
+| authenticationTransfer|
+| nativeAuth         |
 
 ### accessReviewInstanceDecisionItemFilterByCurrentUserOptions values
 
@@ -526,6 +600,14 @@ Namespace: microsoft.graph
 | all                | 1     | The policy applies to all users and groups in the organization. Default value. |
 | selected           | 2     | The policy applies to specific users or groups in the organization.            |
 | unknownFutureValue | 3     | Evolvable enumeration sentinel value. Don't use.                              |
+
+### appManagementRestrictionState values 
+
+|Member|
+|:---|
+|enabled|
+|disabled|
+|unknownFutureValue|
 
 ### appCredentialRestrictionType values
 
@@ -1277,6 +1359,8 @@ Namespace: microsoft.graph
 | gpsLocationCondition                              |
 | riskBasedPolicy                                   |
 | unknownFutureValue                                |
+| scopeBasedAuthRequirementPolicy                   |
+| authenticationStrengths                           |
 
 
 ### riskDetail values
@@ -1452,6 +1536,7 @@ Namespace: microsoft.graph
 |returned|
 |unknownFutureValue|
 |reassigned|
+|excused|
 
 ### educationFeedbackResourceOutcomeStatus values
 
@@ -2631,13 +2716,14 @@ Possible values for user account types (group membership), per Windows definitio
 
 ### stagedFeatureName values
 
-| Member                    | Description                   |
-| :------------------------ | :---------------------------- |
-| passthroughAuthentication | Passthrough Authentication    |
-| seamlessSso               | Seamless Single Sign-on       |
-| passwordHashSync          | Password Hash Synchronization |
-| emailAsAlternateId        | Email as an alternate ID      |
-| unknownFutureValue        | A sentinel member             |
+| Member                    |
+| :------------------------ |
+| passthroughAuthentication |
+| seamlessSso               |
+| passwordHashSync          |
+| emailAsAlternateId        |
+| unknownFutureValue        |
+| certificateBasedAuthentication |
 
 ### tokenIssuerType values
 
@@ -2796,6 +2882,15 @@ Possible values for user account types (group membership), per Windows definitio
 | passwordChange       |
 | unknownFutureValue   |
 
+### perUserMfaState values 
+
+|Member|
+|:---|
+|disabled|
+|enforced|
+|enabled|
+|unknownFutureValue|
+
 ### conditionalAccessRule values
 
 | Member                            |
@@ -2873,6 +2968,23 @@ Possible values for user account types (group membership), per Windows definitio
 |none|
 |bound|
 |unbound|
+|unknownFutureValue|
+
+### conditionalAccessAudienceReason values
+
+| Member |
+| :----- |
+|none|
+|resourcelessRequest|
+|confidentialClientIdToken|
+|confidentialClientNonIdToken|
+|resourceMapping|
+|resourceMappingDefault|
+|scopeMapping|
+|scopeMappingDefault|
+|delegatedScope  |
+|firstPartyResourceDefault|
+|thirdPartyResourceDefault|
 |unknownFutureValue|
 
 ### persistentBrowserSessionMode values
@@ -3059,6 +3171,35 @@ Possible values for user account types (group membership), per Windows definitio
 | approvalStatus     | Content approval status column.                    |
 | unknownFutureValue | unknownFuturevalue                                 |
 
+### contentModelType values 
+
+|Member|
+|:---|
+|teachingMethod|
+|layoutMethod|
+|freeformSelectionMethod|
+|prebuiltContractModel|
+|prebuiltInvoiceModel|
+|prebuiltReceiptModel|
+|unknownFutureValue|
+
+### documentProcessingJobStatus values 
+
+|Member|
+|:---|
+|inProgress|
+|completed|
+|failed|
+|unknownFutureValue|
+
+### documentProcessingJobType values 
+
+|Member|
+|:---|
+|File|
+|Folder|
+|UnknownFutureValue|
+
 ### connectedOrganizationState values
 
 | Member             | Value | Description                                                                                                                                                                                                      |
@@ -3128,6 +3269,14 @@ Possible values for user account types (group membership), per Windows definitio
 | custom  |
 | gallery |
 | unknownFutureValue |
+
+### cloudPcPolicySettingType values 
+
+|Member|
+|:---|
+|region|
+|singleSignOn|
+|unknownFutureValue|
 
 ### chatType values
 
@@ -4666,3 +4815,155 @@ Possible values for user account types (group membership), per Windows definitio
 |deviceCodeFlow|
 |authenticationTransfer|
 |unknownFutureValue|
+
+### claimConditionUserType values
+
+|Member|
+|:---|
+|any|
+|members|
+|allGuests|
+|aadGuests|
+|externalGuests|
+|unknownFutureValue|
+
+### filterType values
+
+|Member|
+|:---|
+|prefix|
+|suffix|
+|contains|
+|unknownFutureValue|
+
+### matchOn values
+
+|Member|
+|:---|
+|displayName|
+|samAccountName|
+|unknownFutureValue|
+
+### samlAttributeNameFormat values
+
+|Member|
+|:---|
+|unspecified|
+|uri|
+|basic|
+|unknownFutureValue|
+
+### samlNameIDFormat values
+
+|Member|
+|:---|
+|default|
+|unspecified|
+|emailAddress|
+|windowsDomainQualifiedName|
+|persistent|
+|unknownFutureValue|
+
+### samlSLOBindingType values
+
+|Member|
+|:---|
+|httpRedirect|
+|httpPost|
+|unknownFutureValue|
+
+### tokenFormat values
+
+|Member|
+|:---|
+|saml|
+|jwt|
+|unknownFutureValue|
+
+### transformationExtractType values
+
+|Member|
+|:---|
+|prefix|
+|suffix|
+|unknownFutureValue|
+
+### transformationTrimType values
+
+|Member|
+|:---|
+|leading|
+|trailing|
+|leadingAndTrailing|
+|unknownFutureValue|
+
+### sharingRole values 
+
+|Member|
+|:---|
+|none|
+|view|
+|edit|
+|manageList|
+|review|
+|restrictedView|
+|submitOnly|
+|unknownFutureValue|
+
+### sharingScope values 
+
+|Member|
+|:---|
+|anyone|
+|organization|
+|specificPeople|
+|anonymous|
+|users|
+|unknownFutureValue|
+
+### sharingVariant values 
+
+|Member|
+|:---|
+|none|
+|requiresAuthentication|
+|passwordProtected|
+|addressBar|
+|embed|
+|unknownFutureValue|
+
+### trustFrameworkKeyStatus values
+
+|Member|
+|:---|
+|enabled|
+|disabled|
+|unknownFutureValue|
+
+### conditionalAccessInsiderRiskLevels values 
+
+|Member|
+|:---|
+|minor|
+|moderate|
+|elevated|
+|unknownFutureValue|
+
+### compliantNetworkType values 
+
+|Member|
+|:---|
+|allTenantCompliantNetworks|
+|unknownFutureValue|
+
+### meetingRequestType values 
+
+|Member|
+|:---|
+|none|
+|newMeetingRequest|
+|fullUpdate|
+|informationalUpdate|
+|silentUpdate|
+|outdated|
+|principalWantsCopy|

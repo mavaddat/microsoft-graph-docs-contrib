@@ -5,6 +5,12 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\Beta\GraphServiceClient;
+use Microsoft\Graph\Beta\Generated\Models\Schedule;
+use Microsoft\Graph\Beta\Generated\Models\OperationStatus;
+use Microsoft\Graph\Beta\Generated\Models\DayOfWeek;
+use Microsoft\Graph\Beta\Generated\Models\TimeClockSettings;
+use Microsoft\Graph\Beta\Generated\Models\GeoCoordinates;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
