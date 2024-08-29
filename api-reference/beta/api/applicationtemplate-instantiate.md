@@ -17,7 +17,7 @@ Add an instance of an application from the [Microsoft Entra application gallery]
 
 The application template with ID `8adf8e6e-67b2-4cf2-a259-e3dc5476c621` can be used to add a [non-gallery app](/azure/active-directory/manage-apps/add-non-gallery-app) that you can configure different single-sign on (SSO) modes like SAML SSO and password-based SSO.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -31,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "ignored" } -->
 
 ```http
-POST /applicationTemplates/{id}/instantiate
+POST /applicationTemplates/{applicationTemplate-id}/instantiate
 ```
 
 To instantiate non-gallery apps, use the `8adf8e6e-67b2-4cf2-a259-e3dc5476c621` for the `{applicationTemplate-id}`.
@@ -40,7 +40,7 @@ To instantiate non-gallery apps, use the `8adf8e6e-67b2-4cf2-a259-e3dc5476c621` 
 
 | Name          | Description   |
 |:--------------|:--------------|
-| Authorization | Bearer {code} |
+| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

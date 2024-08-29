@@ -127,6 +127,7 @@ Content-Type: application/json
     {
       "tenantId": "123f4846-ba00-4fd7-ba43-dac1f8f63013",
       "inboundTrust": null,
+      "isInMultiTenantOrganization": false,
       "automaticUserConsentSettings": {
         "inboundAllowed": null,
         "outboundAllowed": null
@@ -149,6 +150,26 @@ Content-Type: application/json
           "targets": [
             {
               "target": "Office365",
+              "targetType": "application"
+            }
+          ]
+        }
+      },
+      "tenantRestrictions": {
+        "usersAndGroups": {
+          "accessType": "blocked",
+          "targets": [
+            {
+              "target": "AllUsers",
+              "targetType": "user"
+            }
+          ]
+        },
+        "applications": {
+          "accessType": "blocked",
+          "targets": [
+            {
+              "target": "AllApplications",
               "targetType": "application"
             }
           ]

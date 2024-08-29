@@ -2,7 +2,7 @@
 title: "List deviceManagementConfigurationPolicyAssignments"
 description: "List properties and relationships of the deviceManagementConfigurationPolicyAssignment objects."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
 ---
@@ -34,6 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
+GET /deviceManagement/inventoryPolicies/{deviceManagementInventoryPolicyId}/assignments
 GET /deviceManagement/compliancePolicies/{deviceManagementCompliancePolicyId}/assignments
 GET /deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicyId}/assignments
 ```
@@ -55,7 +56,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 Here is an example of the request.
 ``` http
-GET https://graph.microsoft.com/beta/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicyId}/assignments
+GET https://graph.microsoft.com/beta/deviceManagement/inventoryPolicies/{deviceManagementInventoryPolicyId}/assignments
 ```
 
 ### Response

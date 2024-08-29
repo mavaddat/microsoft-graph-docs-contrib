@@ -4,7 +4,7 @@ description: "Represents the change notification sent to the subscriber."
 ms.localizationpriority: medium
 author: "keylimesoda"
 doc_type: resourcePageType
-ms.prod: "change-notifications"
+ms.subservice: change-notifications
 ---
 
 # changeNotification resource type
@@ -42,7 +42,7 @@ None.
 
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.changeNotification"

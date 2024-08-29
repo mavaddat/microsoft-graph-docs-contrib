@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 Get audit activity types by tenant ID.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -36,7 +36,7 @@ GET /deviceManagement/virtualEndpoint/auditEvents/getAuditActivityTypes
 
 | Name          | Description               |
 | :------------ | :------------------------ |
-| Authorization | Bearer {token}. Required. |
+| Authorization |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

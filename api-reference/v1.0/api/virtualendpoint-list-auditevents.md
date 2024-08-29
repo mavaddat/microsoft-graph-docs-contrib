@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 List all the [cloudPcAuditEvent](../resources/cloudpcauditevent.md) objects for the tenant.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -41,7 +41,7 @@ This method supports `$skiptoken`, `$top` and `$filter` OData query parameters t
 
 | Name          | Description               |
 | :------------ | :------------------------ |
-| Authorization | Bearer {token}. Required. |
+| Authorization |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

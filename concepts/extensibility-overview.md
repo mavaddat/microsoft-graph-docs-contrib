@@ -6,7 +6,7 @@ ms.author: ombongifaith
 ms.reviewer: dkershaw
 ms.topic: concept-article
 ms.localizationpriority: high
-ms.prod: extensions
+ms.subservice: extensions
 ms.custom: graphiamtop20
 ms.date: 11/29/2023
 #Customer intent: As a developer, I want to learn how to store lightweight data to Microsoft Graph resources and avoid using an external database system, and use the data to customize authentication and other experiences.
@@ -518,15 +518,15 @@ When creating a schema extension definition, you must provide a unique name for 
 
 The **id** is the name of the complex type that stores your data on the extended resource instance.
 
-Once you register a schema extension, it's available to be used by all applications in the same tenant as the associated owner application (when in the `InDevelopment` state) or by all applications in any tenant (when in the `Available` state). Like directory extensions, authorized apps have the ability to read and write data on any extensions defined on the target object.
+After you register a schema extension, it's available for use by all applications in the same tenant as the associated owner application (when in the `InDevelopment` state) or by all applications in any tenant (when in the `Available` state). Like directory extensions, authorized apps have the ability to read and write data on any extensions defined on the target object.
 
-You manage the [schema extension definitions](/graph/api/resources/schemaextension) and the data in the corresponding schema extension property using separate sets of API operations. To manage the schema extension data on the extended resource instance, use the same REST request that you use to manage the resource instance.
+You manage the [schema extension definitions](/graph/api/resources/schemaextension) and the data in the corresponding schema extension property by using separate sets of API operations. To manage the schema extension data on the extended resource instance, use the same REST request that you use to manage the resource instance.
 
 - Use POST to store data in the schema extension property when you're creating a new user.
 - Use PATCH to either store data in the schema extension property or update or delete the stored data.
     - To delete data from a property, set its value to `null`.
     - To delete data from *all* properties, set every property to `null`. If all properties are `null`, the schema extension object is also deleted.
-    - To update any property, you must specify *all* properties in the request body. Otherwise, Microsoft Graph updates the unspecified properties to `null`.
+    - To update any property, specify only the changed properties in the request body. Omitted properties are not updated and retain their previous value.
 - Use GET to read the schema extension properties for all users or individual users in the tenant.
 
 #### Define a schema extension
@@ -921,7 +921,7 @@ The request returns a `201 Created` response code and an [openTypeExtension](/gr
 
 #### Update an existing open extension
 
-To update an open extension, you must specify all its properties in the request body. Otherwise, the unspecified properties are updated to `null` and deleted from the open extension.
+To update an open extension, you must specify all its properties in the request body. Otherwise, the unspecified properties are deleted from the open extension. You can however explicitly set a property to `null` to retain it in the open extension.
 
 The following request specifies only the **linkedInProfile** and **xboxGamerTag** properties. The value of the **xboxGamerTag** property is being updated while the **linkedInProfile** property remains the same. This request also deletes the unspecified **skypeId** property.
 
@@ -1051,6 +1051,7 @@ The following table compares the extension types, which should help you decide w
 | Create [dynamic membership rules][] using custom extension properties and data | [Yes][DynamicMembership-YES] | [Yes][DynamicMembership-YES] | No | No |
 | Usable for customizing token claims | Yes | Yes ([1][DirectoryExt-CustomClaims-Concept], [2][DirectoryExt-CustomClaims-HowTo]) | No | No |
 | Available in Azure AD B2C | Yes | [Yes][B2CDirectoryExt] | Yes | Yes |
+| Available in Microsoft Entra External ID | Yes | Yes | Yes | Yes |
 | Limits | <li>15 predefined attributes per user or device resource instance | <li>100 extension values per resource instance | <li>Maximum of five definitions per owner app <br/><li> 100 extension values per resource instance (directory objects only) | <li>Two open extensions per creator app per resource instance<sup>2</sup> <br/><li> Max. of 2 Kb per open extension<sup>2</sup><li> For Outlook resources, each open extension is stored in a [MAPI named property][MAPI-named-property]<sup>3</sup> |
 
 > [!NOTE]

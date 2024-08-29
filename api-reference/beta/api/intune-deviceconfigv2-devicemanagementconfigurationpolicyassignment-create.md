@@ -2,7 +2,7 @@
 title: "Create deviceManagementConfigurationPolicyAssignment"
 description: "Create a new deviceManagementConfigurationPolicyAssignment object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
 ---
@@ -34,6 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ``` http
+POST /deviceManagement/inventoryPolicies/{deviceManagementInventoryPolicyId}/assignments
 POST /deviceManagement/compliancePolicies/{deviceManagementCompliancePolicyId}/assignments
 POST /deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicyId}/assignments
 ```
@@ -66,7 +67,7 @@ If successful, this method returns a `201 Created` response code and a [deviceMa
 ### Request
 Here is an example of the request.
 ``` http
-POST https://graph.microsoft.com/beta/deviceManagement/compliancePolicies/{deviceManagementCompliancePolicyId}/assignments
+POST https://graph.microsoft.com/beta/deviceManagement/inventoryPolicies/{deviceManagementInventoryPolicyId}/assignments
 Content-type: application/json
 Content-length: 478
 

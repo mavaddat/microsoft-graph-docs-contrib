@@ -3,7 +3,7 @@ title: "reportRoot: getRelyingPartyDetailedSummary"
 description: "Get a summary of AD FS relying parties information."
 author: "gmcnamara-microsoft"
 ms.localizationpriority: medium
-ms.prod: "identity-and-access-reports"
+ms.subservice: entra-monitoring-health
 doc_type: apiPageType
 ---
 
@@ -13,6 +13,8 @@ Namespace: microsoft.graph
 
 
 Get a summary of AD FS relying parties information.
+
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -37,7 +39,6 @@ GET /reports/getRelyingPartyDetailedSummary(period='parameterValue')
 
 ## Function parameters
 In the request URL, provide the following query parameters with values.
-The following table lists the parameters that are required when you call this function.
 
 ## Optional query parameters
 
@@ -52,7 +53,7 @@ This method supports the `$filter` and `$orderby` OData query parameters to help
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

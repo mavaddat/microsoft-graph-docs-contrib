@@ -3,7 +3,7 @@ title: "Delete appRoleAssignment"
 description: "Delete an appRoleAssignment that has been granted to a user."
 ms.localizationpriority: medium
 doc_type: apiPageType
-ms.prod: "users"
+ms.subservice: entra-users
 author: "psignoret"
 ---
 
@@ -11,7 +11,7 @@ author: "psignoret"
 
 Namespace: microsoft.graph
 
-Delete an [appRoleAssignment](../resources/approleassignment.md) that has been granted to a user.
+Delete an [appRoleAssignment](../resources/approleassignment.md) that has been granted to a [user](../resources/user.md).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 

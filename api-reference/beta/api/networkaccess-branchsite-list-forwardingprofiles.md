@@ -1,5 +1,5 @@
 ---
-title: "List forwardingProfiles (for a branch)"
+title: "List forwardingProfiles (deprecated)"
 description: "Retrieve a list of traffic forwarding profiles associated with a branch."
 author: Moti-ba
 ms.localizationpriority: medium
@@ -7,10 +7,13 @@ ms.subservice: entra-global-secure-access
 doc_type: apiPageType
 ---
 
-# List forwardingProfiles (for a branch)
+# List forwardingProfiles (deprecated)
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!IMPORTANT]
+> Deprecated and to be retired soon. Use the [remoteNetwork resource type](../resources/networkaccess-remotenetwork.md) and its associated methods instead.
 
 Retrieve a list of traffic forwarding profiles associated with a branch.
 
@@ -85,6 +88,10 @@ GET https://graph.microsoft.com/beta/networkAccess/connectivity/branches/{branch
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/list-forwardingprofiles-branchsite-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/list-forwardingprofiles-branchsite-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)

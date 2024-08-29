@@ -4,6 +4,7 @@ description: "Delete a pendingExternalUserProfile object."
 ms.localizationpriority: medium
 doc_type: apiPageType
 author: "jkdouglas"
+ms.reviewer: mapamu
 ms.subservice: "entra-directory-management"
 ---
 
@@ -43,7 +44,7 @@ DELETE /directory/pendingExternalUserProfiles/{id}
 
 |Name|Description|
 |:---------------|:----------|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

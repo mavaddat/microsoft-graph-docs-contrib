@@ -2,6 +2,7 @@
 title: "tenantReference resource type"
 description: "Represents the information used to identify a Microsoft Entra tenant."
 author: "jkdouglas"
+ms.reviewer: mapamu
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
@@ -31,7 +32,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "tenantId",

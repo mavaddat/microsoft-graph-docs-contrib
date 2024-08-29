@@ -14,14 +14,13 @@ Namespace: microsoft.graph
 
 Read the properties and relationships of a [cloudPcBulkAction](../resources/cloudpcbulkaction.md) object.
 
-## Permissions
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
-|Permission type|Permissions (from least to most privileged)|
-|:---|:---|
-|Delegated (work or school account)|CloudPC.Read.All, CloudPC.ReadWrite.All|
-|Delegated (personal Microsoft account)|Not supported.|
-|Application|CloudPC.Read.All, CloudPC.ReadWrite.All|
+## Permissions
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+
+<!-- { "blockType": "permissions", "name": "cloudpcbulkaction_get" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudpcbulkaction-get-permissions.md)]
 
 ## HTTP request
 
@@ -52,14 +51,50 @@ If successful, this method returns a `200 OK` response code and a [cloudPcBulkAc
 
 ### Request
 The following example shows a request.
+
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_cloudpcbulkaction"
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/bulkActions/231ad98f-41b3-872b-dd37-c70bf22cbdac
+GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/bulkActions/0d76d02b-e0a0-4f58-baff-d1718cc2d144
 ```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpcbulkaction-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [CLI](#tab/cli)
+[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpcbulkaction-cli-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/get-cloudpcbulkaction-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/get-cloudpcbulkaction-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-cloudpcbulkaction-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/get-cloudpcbulkaction-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-cloudpcbulkaction-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/get-cloudpcbulkaction-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 The following example shows the response.
@@ -76,22 +111,23 @@ Content-Type: application/json
 
 {
   "value": {
-    "@odata.type": "#microsoft.graph.cloudPcBulkAction",
-    "id": "231ad98f-41b3-872b-dd37-c70bf22cbdac",
-    "displayName": "Bulk Power Off by Andy",
+    "@odata.type": "#microsoft.graph.cloudPcBulkPowerOn",
+    "displayName": "BulkPowerOn on 2024-6-14 17:05:43 GMT-0300 (French Guiana Time)",
+    "id": "0d76d02b-e0a0-4f58-baff-d1718cc2d144",
     "cloudPcIds": [
-      "d6e0b8ee-8836-4b8d-b038-6130a97a3a9d",
-      "85994912-197b-4927-b569-447bd81350ec"
+        "a38fdc98-0861-4de6-9892-0c793dad36d4"
     ],
+    "scheduledDuringMaintenanceWindow": false,
+    "createdDateTime": "2024-06-14T20:05:44.5239567Z",
+    "status": "succeeded",
+    "initiatedByUserPrincipalName": "johnd@contoso.com",
     "actionSummary": {
-      "failedCount": 1,
-      "inProgressCount": 0,
-      "notSupportedCount": 0,
-      "pendingCount": 1,
-      "successfulCount": 0
-    },
-    "scheduledDuringMaintenanceWindow": true,
-    "createdDateTime": "2024-02-05T10:29:57Z"
+        "failedCount": 0,
+        "inProgressCount": 0,
+        "notSupportedCount": 0,
+        "pendingCount": 0,
+        "successfulCount": 1
+    }
   }
 }
 ```

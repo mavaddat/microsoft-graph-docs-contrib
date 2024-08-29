@@ -2,7 +2,7 @@
 title: "List iosManagedAppProtections"
 description: "List properties and relationships of the iosManagedAppProtection objects."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
 ---
@@ -62,7 +62,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 4411
+Content-Length: 4499
 
 {
   "value": [
@@ -135,6 +135,7 @@ Content-Length: 4411
       "minimumRequiredSdkVersion": "Minimum Required Sdk Version value",
       "deployedAppCount": 0,
       "faceIdBlocked": true,
+      "allowWidgetContentSync": true,
       "exemptedAppProtocols": [
         {
           "@odata.type": "microsoft.graph.keyValuePair",
@@ -145,6 +146,7 @@ Content-Length: 4411
       "minimumWipeSdkVersion": "Minimum Wipe Sdk Version value",
       "allowedIosDeviceModels": "Allowed Ios Device Models value",
       "appActionIfIosDeviceModelNotAllowed": "wipe",
+      "appActionIfAccountIsClockedOut": "wipe",
       "thirdPartyKeyboardsBlocked": true,
       "filterOpenInToOnlyManagedApps": true,
       "disableProtectionOfManagedOutboundOpenInData": true,

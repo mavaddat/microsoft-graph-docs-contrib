@@ -1,5 +1,5 @@
 ---
-title: "List branches"
+title: "List branches (deprecated)"
 description: "Retrieve a list of branches within a tenant connected to the Global Secure Access services."
 author: Moti-ba
 ms.localizationpriority: medium
@@ -7,10 +7,13 @@ ms.subservice: entra-global-secure-access
 doc_type: apiPageType
 ---
 
-# List branches
+# List branches (deprecated)
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!IMPORTANT]
+> Deprecated and to be retired soon. Use the [remoteNetwork resource type](../resources/networkaccess-remotenetwork.md) and its associated methods instead.
 
 Retrieve a list of branches within a tenant connected to the Global Secure Access services.
 
@@ -85,6 +88,10 @@ GET https://graph.microsoft.com/beta/networkAccess/connectivity/branches
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/list-branchsite-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/list-branchsite-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)

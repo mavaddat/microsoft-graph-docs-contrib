@@ -18,7 +18,7 @@ Run health checks on the [cloudPcOnPremisesConnection](../resources/cloudpconpre
 It triggers a new health check for the [cloudPcOnPremisesConnection (../resources/cloudpconpremisesconnection.md) object and changes the healthCheckStatus and [healthCheckStatusDetail](../resources/cloudpconpremisesconnectionstatusdetail.md) properties when check finished.
 
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -42,7 +42,7 @@ POST /deviceManagement/virtualEndpoint/onPremisesConnections/{id}/runHealthCheck
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

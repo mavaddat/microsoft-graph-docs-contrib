@@ -17,14 +17,14 @@ Namespace: microsoft.graph
 
 In the Microsoft Entra [access reviews](accessreviews-root.md) feature, the program control type is used when associating a control to a program, to indicate the type of access review the control is for.  
 
-The program control type objects are automatically generated when the global administrator onboards the tenant to use the access reviews feature.  No additional program control types can be created.
+The program control type objects are automatically generated when an authorized administrator onboards the tenant to use the access reviews feature.  No additional program control types can be created.
 
 
 ## Methods
 
 | Method           | Return Type    |Description|
 |:---------------|:--------|:----------|
-|[List programControlTypes](../api/programcontroltype-list.md) | [programControlType](programcontroltype.md) collection| List program control types. |
+|[List](../api/programcontroltype-list.md) | [programControlType](programcontroltype.md) collection| List program control types. |
 
 ## Properties
 | Property       | Type    |Description|

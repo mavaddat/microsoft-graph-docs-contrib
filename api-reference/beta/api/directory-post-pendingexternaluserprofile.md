@@ -4,6 +4,7 @@ description: "Create a new pendingExternalUserProfile object."
 ms.localizationpriority: medium
 doc_type: apiPageType
 author: "jkdouglas"
+ms.reviewer: mapamu
 ms.subservice: "entra-directory-management"
 ---
 
@@ -42,7 +43,7 @@ POST /directory/pendingExternalUserProfiles
 
 |Name|Description|
 |:---------------|:----------|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body

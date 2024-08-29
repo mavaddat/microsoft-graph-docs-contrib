@@ -1,5 +1,5 @@
 ---
-title: "Get branchSite"
+title: "Get branchSite (deprecated)"
 description: "Retrieve information about a specific branch."
 author: Moti-ba
 ms.localizationpriority: medium
@@ -7,10 +7,13 @@ ms.subservice: entra-global-secure-access
 doc_type: apiPageType
 ---
 
-# Get branchSite
+# Get branchSite (deprecated)
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!IMPORTANT]
+> Deprecated and to be retired soon. Use the [remoteNetwork resource type](../resources/networkaccess-remotenetwork.md) and its associated methods instead.
 
 Retrieve information about a specific branch.
 
@@ -88,6 +91,10 @@ GET https://graph.microsoft.com/beta/networkAccess/connectivity/branches/{branch
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/get-branchsite-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-branchsite-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)

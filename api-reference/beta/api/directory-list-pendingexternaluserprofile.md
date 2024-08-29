@@ -4,6 +4,7 @@ description: "List all pendingExternalUserProfile objects."
 ms.localizationpriority: medium
 doc_type: apiPageType
 author: "jkdouglas"
+ms.reviewer: mapamu
 ms.subservice: "entra-directory-management"
 ---
 
@@ -46,7 +47,7 @@ This method supports the `$filter` OData query parameter to help customize the r
 
 |Name|Description|
 |:---------------|:----------|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

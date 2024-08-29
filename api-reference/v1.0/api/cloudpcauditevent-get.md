@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 Read the properties and relationships of a [cloudPcAuditEvent](../resources/cloudpcauditevent.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -37,7 +37,7 @@ GET /deviceManagement/virtualEndpoint/auditEvents/{id}
 
 | Name          | Description               |
 | :------------ | :------------------------ |
-| Authorization | Bearer {token}. Required. |
+| Authorization |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 

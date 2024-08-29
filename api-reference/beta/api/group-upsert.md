@@ -19,7 +19,7 @@ You can create or update the following types of group:
 - Microsoft 365 group (unified group)
 - Security group
 
- By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe [Properties](../resources/group.md#properties) section of the [group](../resources/group.md) resource. To get properties that are _not_ returned by default, do a [GET operation](group-get.md) and specify the properties in a `$select` OData query option.
+ By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see the [Properties](../resources/group.md#properties) section of the [group](../resources/group.md) resource. To get properties that are _not_ returned by default, do a [GET operation](group-get.md) and specify the properties in a `$select` OData query option.
 
 > **Note**: To create a [team](../resources/team.md), first create a group, and then add a team to it. For more information, see [Create team](../api/team-put-teams.md).
 
@@ -27,8 +27,8 @@ You can create or update the following types of group:
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "group_post_groups" } -->
-[!INCLUDE [permissions-table](../includes/permissions/group-post-groups-permissions.md)]
+<!-- { "blockType": "permissions", "name": "group_upsert" } -->
+[!INCLUDE [permissions-table](../includes/permissions/group-upsert-permissions.md)]
 
 In order for an app with Group.Create permission to create a group with owners or members, it must have the privileges to read the object type that it wants to assign as the group owner or member. Therefore:
 
@@ -49,7 +49,7 @@ PATCH /groups/(uniqueName='uniqueName')
 
 | Name          | Description  |
 |:--------------|:---|
-| Authorization | Bearer {token}. Required.|
+| Authorization |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type  | application/json. Required.|
 | Prefer        | `create-if-missing`. Required for upsert behavior, otherwise the request is treated as an update operation. |
 
@@ -84,9 +84,11 @@ Use the **groupTypes** property to control the type of group and its membership,
 
 ## Response
 
-If successful, if the object with the **uniqueName** doesn't exist, this method returns a `201 Created` response code and a new [group](../resources/group.md) object in the response body.
+If an object with the **uniqueName** doesn't exist, this method returns a `201 Created` response code and a new [group](../resources/group.md) object in the response body.
 
-If the object with the **uniqueName** already exists, this method updates the [group](../resources/group.md) object and returns a `204 No Content` response code.
+If an object with **uniqueName** doesn't exist and the `Prefer: create-if-missing` header is *not* specified, this method returns a `404 Not Found` error code.
+
+If an object with the **uniqueName** already exists, this method updates the [group](../resources/group.md) object and returns a `204 No Content` response code.
 
 ## Examples
 

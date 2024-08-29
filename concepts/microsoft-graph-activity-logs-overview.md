@@ -3,14 +3,14 @@ title: "Access Microsoft Graph activity logs"
 description: "Microsoft Graph activity logs are an audit trail of all HTTP requests that the Microsoft Graph service received and processed for a tenant."
 author: FaithOmbongi
 ms.author: ombongifaith
-ms.reviewer: yiheguo
+ms.reviewer: krbash
 ms.topic: concept-article
 ms.localizationpriority: high
 ms.subservice: non-product-specific
 ms.date: 10/24/2023
 ---
 
-# Access Microsoft Graph activity logs (preview)
+# Access Microsoft Graph activity logs
 
 **Microsoft Graph activity logs** are an audit trail of all HTTP requests that the Microsoft Graph service received and processed for a tenant. Tenant administrators can enable the collection and configure downstream destinations for these logs using diagnostic settings in Azure Monitor. The logs are stored in Log Analytics for analysis, and you can export them to Azure Storage for long-term storage, or stream with Azure Event Hubs to external SIEM tools for alerting, analysis, or archival.
 
@@ -18,18 +18,16 @@ All logs for API requests made from line of business applications, API clients, 
 
 This service is available in the following [national cloud deployments](/graph/deployments).
 
-| Global service     | US Government L4 | US Government L5 (DOD) | China operated by 21Vianet |
-|--------------------|------------------|------------------------|----------------------------|
-| :white_check_mark: | :x:              | :x:                    | :x:                        |
+| Global service     | US Government L4   | US Government L5 (DOD) | China operated by 21Vianet |
+|--------------------|--------------------|------------------------|----------------------------|
+| :white_check_mark: | :white_check_mark: | :white_check_mark:     | :x:                        |
 
 ## Prerequisites
 
 To access the Microsoft Graph activity logs, you need the following privileges.
 
 - A Microsoft Entra ID P1 or P2 tenant license in your tenant.
-- An administrator with one of the following [Microsoft Entra administrator roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) listed in the order of least to most privileged role.
-  - Security Administrator – To configure diagnostic settings
-  - Global Administrator – To configure diagnostic settings
+- An administrator with a supported [Microsoft Entra administrator role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json). *Security Administrator* is the only least privileged admin role supported for configuring diagnostic settings.
 - An Azure subscription with one of the following log destinations are configured, and permissions to access data in the corresponding log destinations.
   - An Azure Log Analytics workspace to send logs to Azure Monitor
   - An Azure Storage Account for which you have List Keys permissions

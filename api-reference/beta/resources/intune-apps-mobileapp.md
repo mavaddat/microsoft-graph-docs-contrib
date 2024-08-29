@@ -2,7 +2,7 @@
 title: "mobileApp resource type"
 description: "An abstract class containing the base properties for Intune mobile apps. Note: Listing mobile apps with `$expand=assignments` has been deprecated. Instead get the list of apps without the `$expand` query on `assignments`. Then, perform the expansion on individual applications."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
 ---
@@ -10,10 +10,10 @@ doc_type: resourcePageType
 # mobileApp resource type
 
 Namespace: microsoft.graph
-
 > **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
+
 
 An abstract class containing the base properties for Intune mobile apps. Note: Listing mobile apps with `$expand=assignments` has been deprecated. Instead get the list of apps without the `$expand` query on `assignments`. Then, perform the expansion on individual applications.
 
@@ -24,7 +24,6 @@ An abstract class containing the base properties for Intune mobile apps. Note: L
 |[Get mobileApp](../api/intune-apps-mobileapp-get.md)|[mobileApp](../resources/intune-apps-mobileapp.md)|Read properties and relationships of the [mobileApp](../resources/intune-apps-mobileapp.md) object.|
 |[assign action](../api/intune-apps-mobileapp-assign.md)|None||
 |[validateXml action](../api/intune-apps-mobileapp-validatexml.md)|String||
-|[convertMobileAppCatalogPackageToMobileApp function](../api/intune-apps-mobileapp-convertmobileappcatalogpackagetomobileapp.md)|[mobileApp](../resources/intune-apps-mobileapp.md)||
 |[createCatalogApp action](../api/intune-apps-mobileapp-createcatalogapp.md)|[mobileApp](../resources/intune-apps-mobileapp.md)||
 |[convertFromMobileAppCatalogPackage function](../api/intune-apps-mobileapp-convertfrommobileappcatalogpackage.md)|[mobileApp](../resources/intune-apps-mobileapp.md)||
 |[updateRelationships action](../api/intune-apps-mobileapp-updaterelationships.md)|None||

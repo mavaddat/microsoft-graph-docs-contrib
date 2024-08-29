@@ -2,6 +2,7 @@
 title: "Update pendingExternalUserProfile"
 description: "Update the properties of a pendingExternalUserProfile object."
 author: "jkdouglas"
+ms.reviewer: mapamu
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
@@ -43,7 +44,7 @@ PATCH /directory/pendingExternalUserProfiles/{id}
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
