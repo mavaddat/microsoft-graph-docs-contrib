@@ -18,13 +18,16 @@ The details of the installation scope when Teams app is installed in chat.
 Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).
 
 ## Properties
+
 |Property|Type|Description|
 |:---|:---|:---|
-|chatId|String|Chat Id in of the chat in which Teams app is installed.|
-|scope|teamsAppInstallationScopes|The scope in which Teams app has been installed. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
+|chatId|String|Chat Id of the chat in which Teams app is installed.|
+|scope|teamsAppInstallationScopes|The scope in which Teams app is installed. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md). The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
 
 ## JSON representation
-The following JSON representation shows the resource type.
+
+The following JSON representation shows the resource type:
+
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.groupChatTeamsAppInstallationScopeInfo"
