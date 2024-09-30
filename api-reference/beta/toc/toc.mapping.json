@@ -2759,6 +2759,12 @@
             "teamsAppSettings",
             "teamsTab",
             "resourceSpecificPermissionGrant"
+          ],
+          "complexTypes": [
+            "groupChatTeamsAppInstallationScopeInfo",
+            "personalTeamsAppInstallationScopeInfo",
+            "teamsAppInstallationScopeInfo",
+            "teamTeamsAppInstallationScopeInfo"
           ]
         },
         {
