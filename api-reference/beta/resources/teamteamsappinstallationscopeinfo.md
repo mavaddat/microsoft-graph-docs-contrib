@@ -1,6 +1,6 @@
 ---
 title: "teamTeamsAppInstallationScopeInfo resource type"
-description: "Teams scope installation details for Teams app."
+description: "Represents the installation scope details when the Teams app is installed in a team."
 author: "sthapliyal"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The details of the installation scope when Teams app is installed in a Team.
+Represents the installation scope details when the Teams app is installed in a team.
 
 Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).
 
@@ -21,8 +21,8 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 
 |Property|Type|Description|
 |:---|:---|:---|
-|scope|teamsAppInstallationScopes|The scope in which Teams app is installed. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
-|teamId|String|The team id of the team in which Teams app is installed.|
+|scope|teamsAppInstallationScopes|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
+|teamId|String|The ID of the team where the Teams app is installed.|
 
 ## Relationships
 
@@ -30,7 +30,7 @@ None.
 
 ## JSON representation
 
-The following JSON representation shows the resource type:
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
