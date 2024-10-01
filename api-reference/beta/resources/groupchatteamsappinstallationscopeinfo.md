@@ -26,7 +26,7 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 
 ## JSON representation
 
-The following JSON representation shows the resource type:
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
