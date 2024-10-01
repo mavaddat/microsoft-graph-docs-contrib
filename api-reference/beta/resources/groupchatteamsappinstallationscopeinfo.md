@@ -1,6 +1,6 @@
 ---
 title: "groupChatTeamsAppInstallationScopeInfo resource type"
-description: "Chat installation scope details for Teams app."
+description: "Represents the installation scope details when the Teams app is installed in a chat."
 author: "sthapliyal"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The details of the installation scope when Teams app is installed in chat.
+Represents the installation scope details when the Teams app is installed in a chat.
 
 Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).
 
@@ -21,8 +21,8 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 
 |Property|Type|Description|
 |:---|:---|:---|
-|chatId|String|Chat Id of the chat in which Teams app is installed.|
-|scope|teamsAppInstallationScopes|The scope in which Teams app is installed. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md). The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
+|chatId|String|The ID of the chat where the Teams app is installed.|
+|scope|teamsAppInstallationScopes|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
 
 ## JSON representation
 
@@ -36,7 +36,7 @@ The following JSON representation shows the resource type:
 ``` json
 {
   "@odata.type": "#microsoft.graph.groupChatTeamsAppInstallationScopeInfo",
-  "scope": "String",
-  "chatId": "String"
+  "chatId": "String",
+  "scope": "String"
 }
 ```
