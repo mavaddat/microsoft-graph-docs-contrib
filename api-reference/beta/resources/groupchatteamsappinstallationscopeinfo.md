@@ -5,6 +5,7 @@ author: "sthapliyal"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 12/11/2024
 ---
 
 # groupChatTeamsAppInstallationScopeInfo resource type
