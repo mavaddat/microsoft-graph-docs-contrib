@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the installation scope details when the Teams app is installed in a [chat](../resources/chat.md).
+Represents the installation scope details when the Teams app is installed, updated or deleted from a [chat](../resources/chat.md).
 
 Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).
 
