@@ -16,6 +16,8 @@ Namespace: microsoft.graph
 
 Update the properties of a [copilotAdminLimitedMode](../resources/copilotadminlimitedmode.md) object.
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -25,10 +27,13 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "name": "copilotadminlimitedmode-update-permissions"
 }
 -->
-> **Note:** Global admin or Global reader permission is required to call this API.
 
 <!-- { "blockType": "permissions", "name": "copilotadminlimitedmode_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/copilotadminlimitedmode-update-permissions.md)]
+
+> [!IMPORTANT]
+> 
+> In delegated scenarios with work or school accounts, the signed-in user must be assigned the *Global Administrator* [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
 
 ## HTTP request
 
@@ -111,7 +116,6 @@ Content-Type: application/json
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
-
 
 ### Response
 

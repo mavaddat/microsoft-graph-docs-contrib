@@ -14,7 +14,7 @@ Namespace: microsoft.graph.security
 
 Get the deployment access key for Microsoft Defender for Identity that is required to install sensors associated with the workspace.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -84,6 +84,10 @@ GET https://graph.microsoft.com/v1.0/security/identities/sensors/getDeploymentAc
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/sensorthisgetdeploymentaccesskey-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/sensorthisgetdeploymentaccesskey-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)

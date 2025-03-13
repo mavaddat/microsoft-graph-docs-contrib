@@ -14,7 +14,7 @@ Namespace: microsoft.graph.security
 
 Generate a new deployment access key that can be used to install a [sensor](../resources/security-sensor.md) associated with the workspace.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -84,6 +84,10 @@ POST https://graph.microsoft.com/v1.0/security/identities/sensors/regenerateDepl
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/sensorthisregeneratedeploymentaccesskey-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/sensorthisregeneratedeploymentaccesskey-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
