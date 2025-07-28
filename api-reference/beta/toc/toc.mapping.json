@@ -453,10 +453,18 @@
           "overview": "../../resources/cloud-licensing-api-overview.md",
           "keywords": [
             "Cloud licensing",
-            "Microsoft Cloud Licensing"
+            "Microsoft Cloud Licensing",
+            "licensing",
+            "license assignment",
+            "allotment"
           ],
           "resources": [
-            "microsoft.graph.cloudLicensing.usageRight"
+            "microsoft.graph.cloudLicensing.usageRight",            
+            "microsoft.graph.cloudLicensing.allotment",
+            "microsoft.graph.cloudLicensing.assignment",
+            "microsoft.graph.cloudLicensing.assignmenterror",
+            "microsoft.graph.cloudLicensing.waitingmember",
+            "microsoft.graph.cloudLicensing.service"
           ],
           "complexTypes": [
             "microsoft.graph.cloudLicensing.groupCloudLicensing",
