@@ -38,6 +38,18 @@ Inherits from [entity](../resources/entity.md)
 |skuId|Guid|Unique identifier (GUID) for the service SKU that is equal to the **skuId** property on the related [subscribedSku](subscribedsku.md) object. Read-only. Supports `$filter`. |
 |skuPartNumber|String| Unique SKU display name that is equal to the **skuPartNumber** on the related [subscribedSku](subscribedsku.md) object; for example, `AAD_Premium`. Read-only. |
 
+
+### assigneeTypes values
+
+| Member            | Description                                                            |
+|:------------------|:-----------------------------------------------------------------------|
+| none              | No flags are enabled; this service can't be assigned.                  |
+| user              | If enabled, this service can be assigned directly to users.            |
+| group             | If enabled, this service can be assigned to groups.                    |
+| device            | If enabled, this service can be assigned directly to devices.          |
+| unknownFutureValue| Evolvable enumeration sentinel value. Don't use.                       |
+
+
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
