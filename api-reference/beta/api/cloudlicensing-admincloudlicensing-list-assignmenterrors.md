@@ -55,7 +55,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [assignmentError](../resources/assignmenterror.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects in the response body.
 
 ## Examples
 
