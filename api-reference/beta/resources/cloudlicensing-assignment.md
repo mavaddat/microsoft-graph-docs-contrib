@@ -1,7 +1,7 @@
 ---
 title: "assignment resource type"
 description: "A license assignment, granting a license for the product-SKU contained within an allotment directly to the assigned user or indirectly to each member of the assigned group."
-author: "kunal-chilka"
+author: "kchilka07"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

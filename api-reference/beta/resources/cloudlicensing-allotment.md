@@ -1,7 +1,7 @@
 ---
 title: "allotment resource type"
 description: "An independently manageable pool of licenses backed by a subscription."
-author: "kunal-chilka"
+author: "kchilka07"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

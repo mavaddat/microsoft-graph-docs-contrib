@@ -1,7 +1,7 @@
 ---
 title: "List allotment objects"
 description: "Get a list of the allotment objects and their properties."
-author: "kunal-chilka"
+author: "kchilka07"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

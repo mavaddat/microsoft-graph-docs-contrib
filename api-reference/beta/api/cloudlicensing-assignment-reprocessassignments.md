@@ -1,7 +1,7 @@
 ---
 title: "assignment: reprocessAssignments"
 description: "Reprocess existing license assignments for a user by posting to the user's assignments reprocessAssignments action."
-author: "kunal-chilka"
+author: "kchilka07"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

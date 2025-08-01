@@ -1,7 +1,7 @@
 ---
 title: "Get waitingMember"
 description: "Read the properties and relationships of microsoft.graph.cloudLicensing.waitingMember object."
-author: "kunal-chilka"
+author: "kchilka07"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

@@ -1,7 +1,7 @@
 ---
 title: "Create user assignment"
 description: "Create a new license assignment by posting to a user's assignments collection."
-author: "kunal-chilka"
+author: "kchilka07"
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"
 doc_type: apiPageType

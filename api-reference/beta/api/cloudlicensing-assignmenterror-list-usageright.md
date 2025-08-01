@@ -1,7 +1,7 @@
 ---
 title: "List usageRight objects"
 description: "Get a list of the usageRight objects affected by an assignmentError."
-author: "kunal-chilka"
+author: "kchilka07"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"
