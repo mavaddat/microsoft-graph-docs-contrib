@@ -21,7 +21,6 @@ Inherits from [entity](../resources/entity.md)
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[REMOVETHIS-Get](../api/cloudlicensing-admincloudlicensing-get.md)|[microsoft.graph.cloudLicensing.adminCloudLicensing](../resources/cloudlicensing-admincloudlicensing.md)|Read the properties and relationships of [microsoft.graph.cloudLicensing.adminCloudLicensing](../resources/cloudlicensing-admincloudlicensing.md) object.|
 |[List allotments](../api/cloudlicensing-admincloudlicensing-list-allotments.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|Get a list of allotment objects.|
 |[List assignmentErrors](../api/cloudlicensing-admincloudlicensing-list-assignmenterrors.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|Get a list of assignmentError objects.|
 |[List assignments](../api/cloudlicensing-admincloudlicensing-list-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|	Get a list of assignment objects.|

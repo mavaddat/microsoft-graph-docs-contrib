@@ -1,5 +1,5 @@
 ---
-title: "List allotment"
+title: "Get allotment"
 description: "Get the allotment that is the source of an assignment's licenses."
 author: "kchilka07"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List allotment
+# Get allotment
 
 Namespace: microsoft.graph.cloudLicensing
 

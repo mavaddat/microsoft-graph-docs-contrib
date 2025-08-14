@@ -1,20 +1,20 @@
 ---
-title: "Remove allotment. TODO: Fix the title to say Remove assignment." 
-description: "Remove a microsoft.graph.cloudLicensing.allotment object."
-author: "kchilka07"
+title: "Delete assignment"
+description: "Delete a microsoft.graph.cloudLicensing.assignment object."
+author: "kunal-chilka"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# Remove allotment
+# Delete assignment
 
 Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Remove a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.
+Delete a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.
 
 ## Permissions
 
@@ -22,10 +22,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "cloudlicensing-assignment-delete-allotment-permissions"
+  "name": "cloudlicensing-assignment-delete-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-allotment-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-permissions.md)]
 
 ## HTTP request
 
@@ -34,9 +34,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
+DELETE /admin/cloudLicensing/assignments/{assignmentId}
 DELETE /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
-DELETE /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
-DELETE /users/{userId}/cloudLicensing/assignments/{assignmentId}
+DELETE /groups/{groupId}/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+DELETE /me/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+DELETE /users/{userId}/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 ```
 
 ## Request headers
@@ -44,6 +46,7 @@ DELETE /users/{userId}/cloudLicensing/assignments/{assignmentId}
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
+|Content-Type|application/json. Required.|
 
 ## Request body
 
@@ -60,13 +63,12 @@ If successful, this method returns a `204 No Content` response code.
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "delete_allotment_from_assignment"
+  "name": "update_assignment"
 }
 -->
 ``` http
-DELETE https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/2fceab6d-6f06-486f-888c-f1d656b5c895/assignments/405ee855-dd74-f695-8d7e-be35a6788fe8
+DELETE https://graph.microsoft.com/beta/admin/cloudLicensing/assignments/0b1a424d-3b9b-4446-80b9-6917dd521e03
 ```
-
 
 ### Response
 
@@ -80,4 +82,3 @@ The following example shows the response.
 ``` http
 HTTP/1.1 204 No Content
 ```
-

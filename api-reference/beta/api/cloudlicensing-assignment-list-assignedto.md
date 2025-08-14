@@ -1,5 +1,5 @@
 ---
-title: "List assignedTo"
+title: "Get assignedTo"
 description: "Get the user or group associated with an assignment."
 author: "kchilka07"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List assignedTo
+# Get assignedTo
 
 Namespace: microsoft.graph
 

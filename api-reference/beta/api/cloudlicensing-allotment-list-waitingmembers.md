@@ -90,7 +90,7 @@ Content-Type: application/json
     {
       "@odata.type": "#microsoft.graph.cloudLicensing.waitingMember",
       "id": "49caea1b-ad15-64f1-70c5-5c5e3563d19c",
-      "waitingSinceDateTime": "2024-09-22T17:11:10.6635939+00:00""
+      "waitingSinceDateTime": "2024-09-22T17:11:10.6635939+00:00"
     }
   ]
 }

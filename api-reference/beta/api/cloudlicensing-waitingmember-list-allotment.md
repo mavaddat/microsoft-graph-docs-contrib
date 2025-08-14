@@ -34,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /admin/cloudLicensing/allotments/{allotmentId}/waitingMembers/{waitingMemberId}/allotment
+GET /admin/cloudLicensing/allotments/{allotmentId}/waitingMembers/{waitingMemberId}
 ```
 
 ## Optional query parameters

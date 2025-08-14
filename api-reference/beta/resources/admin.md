@@ -24,6 +24,7 @@ Represents an entity that acts as a container for administrator functionality.
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
+| adminCloudLicensing | [adminCloudLicensing](cloudlicensing-admincloudlicensing.md) | Represents the root of the Cloud Licensing API for the entire organization. Read-only. |
 | edge | [edge](edge.md) | A container for Microsoft Edge resources. Read-only. |
 | entra | [entra](entra.md) | A container for Microsoft Entra resources. Read-only. |
 | exchange | [exchangeAdmin](../resources/exchangeadmin.md) |A container for the Exchange admin functionality. Read-only.|
