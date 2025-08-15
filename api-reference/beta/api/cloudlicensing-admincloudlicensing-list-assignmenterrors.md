@@ -1,7 +1,7 @@
 ---
 title: "List assignmentError objects"
 description: "Get a list of the microsoft.graph.cloudLicensing.assignmentErrors within the organization or affecting a specific user."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

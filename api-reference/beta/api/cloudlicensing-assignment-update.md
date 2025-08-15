@@ -1,7 +1,7 @@
 ---
 title: "Update assignment"
 description: "Update the properties of a assignment object."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

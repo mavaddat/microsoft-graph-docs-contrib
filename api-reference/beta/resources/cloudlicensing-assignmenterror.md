@@ -1,7 +1,7 @@
 ---
 title: "assignmentError resource type"
 description: "Represents an error impacting synchronization of license assignments in the directory."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

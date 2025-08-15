@@ -1,7 +1,7 @@
 ---
 title: "List assignments"
 description: "Get a list of license assignments within the organization."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

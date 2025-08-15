@@ -1,7 +1,7 @@
 ---
 title: "List assignments"
 description: "Get a list of assignments which combine to form this usageRight."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

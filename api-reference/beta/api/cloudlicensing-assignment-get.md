@@ -1,7 +1,7 @@
 ---
 title: "Get assignment"
 description: "Read the properties and relationships of microsoft.graph.cloudLicensing.assignment object."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

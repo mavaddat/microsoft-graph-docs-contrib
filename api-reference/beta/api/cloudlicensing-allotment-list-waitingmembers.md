@@ -1,7 +1,7 @@
 ---
 title: "List waitingMember objects"
 description: "Get a list of over-assigned users who are in the waiting room for this allotment due to license capacity limits."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

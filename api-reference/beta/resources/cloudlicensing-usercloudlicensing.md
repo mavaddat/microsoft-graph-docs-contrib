@@ -1,7 +1,7 @@
 ---
 title: "userCloudLicensing resource type"
 description: "Represents the relationships of a user to cloud licensing resources."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

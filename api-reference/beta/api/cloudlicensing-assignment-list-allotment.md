@@ -1,7 +1,7 @@
 ---
 title: "Get allotment"
 description: "Get the allotment that is the source of an assignment's licenses."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

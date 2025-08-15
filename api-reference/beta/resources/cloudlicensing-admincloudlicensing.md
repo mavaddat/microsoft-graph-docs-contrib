@@ -1,7 +1,7 @@
 ---
 title: "adminCloudLicensing resource type"
 description: "Represents the root of the Cloud Licensing API for the entire organization."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

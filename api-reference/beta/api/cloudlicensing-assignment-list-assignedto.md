@@ -1,7 +1,7 @@
 ---
 title: "Get assignedTo"
 description: "Get the user or group associated with an assignment."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

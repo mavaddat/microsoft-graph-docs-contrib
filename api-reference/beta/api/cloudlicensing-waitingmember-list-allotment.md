@@ -1,7 +1,7 @@
 ---
 title: "List allotment"
 description: "Get waiting members for an allotment by id."
-author: "kchilka07"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"
