@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/userCloudLicensing/assignmentErrors
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignmentErrors
 ```
 
 

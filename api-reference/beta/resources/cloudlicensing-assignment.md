@@ -30,7 +30,7 @@ Inherits from [entity](../resources/entity.md)
 |[Update](../api/cloudlicensing-assignment-update.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Update the properties of a assignment object.|
 |[reprocessAssignments](../api/cloudlicensing-assignment-reprocessassignments.md)|None|Reprocess existing license assignments for a user by posting to the user's assignments reprocessAssignments action.|
 |[List allotment](../api/cloudlicensing-assignment-list-allotment.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|Get a list of allotment objects.|
-|[Remove assignment](../api/cloudlicensing-assignment-delete-allotment.md)|None|Remove a [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) object.|
+|[Remove assignment](../api/cloudlicensing-assignment-delete.md)|None|Remove a [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) object.|
 |[List assignedTo](../api/cloudlicensing-assignment-list-assignedto.md)|[microsoft.graph.directoryObject](../resources/directoryobject.md) collection| Get the list of user or group to which licenses are assigned.|
 
 ## Properties
@@ -42,7 +42,7 @@ Inherits from [entity](../resources/entity.md)
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|allotment|[allotment](../resources/cloudlicensing-allotment.md)|The allotment from which licenses are assigned. Not nullable.|
+|allotment|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md)|The allotment from which licenses are assigned. Not nullable.|
 |assignedTo|[directoryObject](../resources/directoryobject.md)|The user or group to which licenses are assigned. Not nullable.|
 
 ## JSON representation
