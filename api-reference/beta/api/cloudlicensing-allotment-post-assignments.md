@@ -74,7 +74,7 @@ If successful, this method returns a `204 No Content` response code and a [micro
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "create_assignment_from_"
+  "name": "create_assignment_from_allotment"
 }
 -->
 ``` http

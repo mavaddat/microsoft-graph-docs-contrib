@@ -73,7 +73,7 @@ If successful, this method returns a `201 Created` response code and a [microsof
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "create_assignment_from_"
+  "name": "create_cloudlicensing_assignment"
 }
 -->
 ``` http

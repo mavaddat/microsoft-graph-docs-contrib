@@ -63,7 +63,7 @@ If successful, this method returns a `204 No Content` response code.
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "update_assignment"
+  "name": "delete_assignment"
 }
 -->
 ``` http
