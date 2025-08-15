@@ -59,7 +59,7 @@ You can specify the following relationships when creating an **assignment**.
 
 |Relationship|Type|Description|
 |:---|:---|:---|
-|allotment|[allotment](../resources/cloudlicensing-allotment.md)|The allotment from which licenses are assigned. Required. Not nullable.|
+|allotment|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md)|The allotment from which licenses are assigned. Required. Not nullable.|
 |assignedTo|[directoryObject](../resources/directoryobject.md)|The user or group to which licenses are assigned. Required. Not nullable.|
 
 ## Response

@@ -3,6 +3,7 @@ title: "Create group assignment"
 description: "Create a new license assignment by posting to a group's assignments collection."
 author: "patrick-starrin"
 ms.localizationpriority: medium
+ms.date: 07/18/2025
 ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
@@ -59,7 +60,7 @@ You can specify the following relationships when creating an **assignment**.
 
 |Relationship|Type|Description|
 |:---|:---|:---|
-|allotment|[allotment](../resources/cloudlicensing-allotment.md)|The allotment from which licenses are assigned. Required. Not nullable.|
+|allotment|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md)|The allotment from which licenses are assigned. Required. Not nullable.|
 
 ## Response
 
