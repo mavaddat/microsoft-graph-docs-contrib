@@ -65,7 +65,7 @@ You can specify the following relationships when creating an **assignment**.
 
 ## Response
 
-If successful, this method returns a `204 No Content` response code and a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object in the response body.
 
 ## Examples
 
@@ -102,7 +102,7 @@ The following example shows the response.
 }
 -->
 ``` http
-HTTP/1.1 204 No Content
+HTTP/1.1 201 Created
 Content-Type: application/json
 
 {

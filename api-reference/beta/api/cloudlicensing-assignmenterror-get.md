@@ -34,9 +34,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /admin/cloudLicensing/allotments/{allotmentId}/assignmentErrors/{assignmentId}
-GET /me/cloudLicensing/assignmentErrors/{assignmentId}
-GET /users/{userId}/cloudLicensing/assignmentErrors/{assignmentId}
+GET /admin/cloudLicensing/assignmentErrors/{assignmentErrorId}
+GET /me/cloudLicensing/assignmentErrors/{assignmentErrorId}
+GET /users/{userId}/cloudLicensing/assignmentErrors/{assignmentErrorId}
 ```
 
 ## Optional query parameters
@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/userCloudLicensing/assignmentErrors/115bedd6-40d2-45c1-9220-a73c2a8f6226
+GET https://graph.microsoft.com/beta/cloudLicensing/assignmentErrors/115bedd6-40d2-45c1-9220-a73c2a8f6226
 ```
 
 

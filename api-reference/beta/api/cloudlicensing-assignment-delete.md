@@ -36,9 +36,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ``` http
 DELETE /admin/cloudLicensing/assignments/{assignmentId}
 DELETE /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
-DELETE /groups/{groupId}/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
-DELETE /me/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
-DELETE /users/{userId}/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+DELETE /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
+DELETE /me/cloudLicensing/assignments/{assignmentId}
+DELETE /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
 ## Request headers

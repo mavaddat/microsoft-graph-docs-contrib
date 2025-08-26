@@ -37,9 +37,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 GET /admin/cloudLicensing/assignments/{assignmentId}
 GET /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
-GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}/assignments/{assignmentId}
 GET /me/cloudLicensing/assignments/{assignmentId}
-GET /me/cloudLicensing/usageRights/{usageRightId}/assignments/{assignmentId}
 GET /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 

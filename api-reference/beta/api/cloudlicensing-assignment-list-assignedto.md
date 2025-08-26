@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the user or group associated with an assignment.
+Get the assignedTo property for a given assignment.
 
 ## Permissions
 
@@ -85,14 +85,13 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
+  "value":
     {
       "@odata.type": "#microsoft.graph.user",
       "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
       "displayName": "Steve Fred",
       "userPrincipalName": "stevefred@contoso.com"
-    }
-  ]
+    }  
 }
 ```
 

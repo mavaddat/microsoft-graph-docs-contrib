@@ -35,6 +35,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 GET /admin/cloudLicensing/assignments/{assignmentId}/allotment
+GET /users/{userId}/cloudLicensing/assignments/{assignmentId}/allotment
+GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
 ## Optional query parameters
@@ -85,7 +87,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
+  "value":
     {
       "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
       "id": "551f1755-0184-9e51-0bc7-f32bae5a1afb",
@@ -120,8 +122,7 @@ Content-Type: application/json
       ],
       "skuId": "4b9405b0-7788-4568-add1-99614e613b69",
       "skuPartNumber": "EXCHANGESTANDARD"
-    }
-  ]
+    }  
 }
 ```
 

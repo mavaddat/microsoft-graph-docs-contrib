@@ -35,6 +35,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 GET /admin/cloudLicensing/assignments
+GET /users/{userId}/cloudLicensing/assignments
+GET /groups/{groupId}/cloudLicensing/assignments
 ```
 
 ## Optional query parameters
