@@ -97,7 +97,7 @@ Content-Type: application/json
     "consumedUnits": 84,
     "services": [
       {
-        "@odata.type": "microsoft.graph.cloudLicensing.service",
+        "@odata.type": "#microsoft.graph.cloudLicensing.service",
         "assignableTo": "user,group",
         "planId": "f4f2f6de-6830-442b-a433-e92249faebe2",
         "planName": "TeamsEss"

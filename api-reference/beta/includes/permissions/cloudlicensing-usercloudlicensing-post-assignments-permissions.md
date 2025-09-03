@@ -6,6 +6,6 @@ ms.localizationpriority: medium
 
 |Permission type|Least privileged permissions|Higher privileged permissions|
 |:---|:---|:---|
-|Delegated (work or school account)|CloudLicensing.AssignLicenses.Organization|LicenseAssignment.ReadWrite.All, User.ReadWrite.All, Directory.ReadWrite.All|
+|Delegated (work or school account)|User-CloudLicensing.AssignLicenses.Organization|User.ReadWrite.All, Directory.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|Not supported.|
-|Application|CloudLicensing.AssignLicenses.Organization|LicenseAssignment.ReadWrite.All, User.ReadWrite.All, Directory.ReadWrite.All|
+|Application|User-CloudLicensing.AssignLicenses.Organization|User.ReadWrite.All, Directory.ReadWrite.All|

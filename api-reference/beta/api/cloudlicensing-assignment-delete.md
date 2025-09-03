@@ -1,7 +1,7 @@
 ---
 title: "Delete assignment"
 description: "Delete a microsoft.graph.cloudLicensing.assignment object."
-author: "kunal-chilka"
+author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"

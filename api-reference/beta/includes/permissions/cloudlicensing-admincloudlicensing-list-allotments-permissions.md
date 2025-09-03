@@ -9,5 +9,3 @@ ms.localizationpriority: medium
 |Delegated (work or school account)|CloudLicensing.Read|CloudLicensing.Read.All, Directory.Read.All, Directory.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|Not supported.|
 |Application|CloudLicensing.Read.All|Directory.Read.All, Directory.ReadWrite.All|
-
-
