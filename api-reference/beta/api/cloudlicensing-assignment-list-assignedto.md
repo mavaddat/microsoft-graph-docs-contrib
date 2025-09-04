@@ -10,7 +10,7 @@ doc_type: apiPageType
 
 # Get assignedTo
 
-Namespace: microsoft.graph
+Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 

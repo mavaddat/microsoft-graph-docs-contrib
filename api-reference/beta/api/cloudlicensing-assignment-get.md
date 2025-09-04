@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.
+Read the properties and relationships of a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.
 
 ## Permissions
 

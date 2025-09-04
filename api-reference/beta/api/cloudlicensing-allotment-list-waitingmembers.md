@@ -1,6 +1,6 @@
 ---
 title: "List waitingMember objects"
-description: "Get a list of over-assigned users who are in the waiting room for this allotment due to license capacity limits."
+description: "Get a list of over-assigned users who are in the waiting room due to license capacity limits."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of over-assigned users who are in the waiting room for this allotment due to license capacity limits.
+Get a list of over-assigned users who are in the waiting room due to license capacity limits. Use `/admin/cloudLicensing/allotments/{allotmentId}/waitingMembers` to retrieve all waiting members for a specific allotment. Use `/users/{userId}/cloudLicensing/waitingMembers` to retrieve all allotments that a specific user is waiting for.
 
 ## Permissions
 
