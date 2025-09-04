@@ -20,12 +20,41 @@ Read the properties and relationships of [microsoft.graph.cloudLicensing.assignm
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "cloudlicensing-assignment-get-permissions"
-}
--->
+
+Permissions to get an **assignment** for an admin:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+GET /admin/cloudLicensing/assignments/{assignmentId}
+GET /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-permissions.md)]
+
+
+Permissions to get an **assignment** for a user:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+GET /me/cloudLicensing/assignments/{assignmentId}
+GET /users/{userId}/cloudLicensing/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get_user" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-user-permissions.md)]
+
+
+Permissions to get an **assignment** for a group:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get_group" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-group-permissions.md)]
+
 
 ## HTTP request
 

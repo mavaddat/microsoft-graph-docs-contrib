@@ -20,12 +20,38 @@ Delete a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "cloudlicensing-assignment-delete-permissions"
-}
--->
+Permissions to delete an **assignment** for an admin:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+DELETE /admin/cloudLicensing/assignments/{assignmentId}
+DELETE /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_permissions" } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-permissions.md)]
+
+Permissions to delete an **assignment** for a user:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+DELETE /me/cloudLicensing/assignments/{assignmentId}
+DELETE /users/{userId}/cloudLicensing/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_user_permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-user-permissions.md)]
+
+Permissions to delete an **assignment** for a group:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+DELETE /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_group_permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-group-permissions.md)]
+
 
 ## HTTP request
 

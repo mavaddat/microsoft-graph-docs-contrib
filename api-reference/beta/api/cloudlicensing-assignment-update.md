@@ -20,12 +20,41 @@ Update a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "cloudlicensing-assignment-update-permissions"
-}
--->
+
+Permissions to update an **assignment** for an admin:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+PATCH /admin/cloudLicensing/assignments/{assignmentId}
+PATCH /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-update-permissions" } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-permissions.md)]
+
+
+Permissions to update an **assignment** for a user:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+PATCH /me/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+PATCH /users/{userId}/cloudLicensing/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-update-user-permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-user-permissions.md)]
+
+
+Permissions to update an **assignment** for a group:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+PATCH /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-update-group-permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-group-permissions.md)]
+
 
 ## HTTP request
 
