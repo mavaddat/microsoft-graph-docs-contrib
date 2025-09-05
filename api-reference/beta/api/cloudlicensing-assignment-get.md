@@ -90,6 +90,7 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 
 ## Examples
 
+### Example 1: Get an assignment
 ### Request
 
 The following example shows a request.
@@ -128,3 +129,51 @@ Content-Type: application/json
 }
 ```
 
+### Example 2: Get an assignment and its assignee
+### Request
+
+The following example shows a request with Odata expansion
+<!-- {
+  "blockType": "request",
+  "name": "list_admin_assignments"
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments?$expand=assignedTo
+```
+
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.cloudLicensing.assignment"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.cloudLicensing.assignment",
+      "id": "405ee855-dd74-f695-8d7e-be35a6788fe8",
+      "disabledServicePlanIds": [
+        "5e62787c-c316-451f-b873-1d05acd4d12c"
+      ]
+      "assignedTo": {
+        {
+          "@odata.type": "#microsoft.graph.user",
+          "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
+          "displayName": "Steve Fred",
+          "userPrincipalName": "stevefred@contoso.com"
+        }
+      }
+    }
+  ]
+}
+```

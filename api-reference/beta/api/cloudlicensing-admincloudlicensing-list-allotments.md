@@ -57,6 +57,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ## Examples
 
+### Example 1: Get allotments
 ### Request
 
 The following example shows a request.
@@ -125,3 +126,50 @@ Content-Type: application/json
 }
 ```
 
+### Example 2: Get allotments with waitingMembers
+### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "list_admin_assignment_allotment"
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments?$select=id,allottedUnits,consumedUnits,assignableTo&$expand=waitingMembers($select=id,waitingSinceDateTime)
+```
+
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.cloudLicensing.allotment"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
+      "id": "551f1755-0184-9e51-0bc7-f32bae5a1afb",
+      "allottedUnits": "250",
+      "assignableTo": "user,group",
+      "consumedUnits": "224",
+      "waitingMembers": [
+        {
+          "@odata.type": "#microsoft.graph.cloudLicensing.waitingMember",
+          "id": "49caea1b-ad15-64f1-70c5-5c5e3563d19c",
+          "waitingSinceDateTime": "2024-11-22T17:11:10.6635939+00:00"
+        }
+      ]
+    }
+  ]
+}
+```
