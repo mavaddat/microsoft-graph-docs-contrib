@@ -66,7 +66,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/{allotmentId}/waitingMembers/{waitingMemberId}
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi/waitingMembers/1fb53c08-3f20-4b4e-b2f0-7d8fbb6bcaea
 ```
 
 

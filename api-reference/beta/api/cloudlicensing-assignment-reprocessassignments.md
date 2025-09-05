@@ -63,7 +63,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/users/{userId}/cloudLicensing/assignments/reprocessAssignments
+POST https://graph.microsoft.com/beta/users/43fe5b38-7328-40b9-a2f6-85d86ae8c34d/cloudLicensing/assignments/reprocessAssignments
 ```
 
 

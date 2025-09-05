@@ -88,7 +88,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/fde42873-30b6-436b-b361-21af5a6b84ae
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi
 ```
 
 
