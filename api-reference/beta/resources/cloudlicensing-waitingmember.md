@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a user or device that got added to the waiting room for an allotment due to license capacity limits.
+Represents a user or device that was added to the waiting room for an allotment due to license capacity limits.
 
 Inherits from [entity](../resources/entity.md)
 
