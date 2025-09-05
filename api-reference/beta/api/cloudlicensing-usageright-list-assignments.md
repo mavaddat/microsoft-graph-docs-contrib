@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of assignments which combine to form this usageRight. This includes both direct assignments and assignments inherited through group membership.
+Get a list of [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) which combine to form this [usageRight](../resources/cloudlicensing-usageright.md). This includes both direct assignments and assignments inherited through group membership.
 
 ## Permissions
 

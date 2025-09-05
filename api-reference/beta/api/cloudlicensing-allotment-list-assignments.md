@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of license assignments which consume licenses from this allotment.
+Get a list of license [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) which consume licenses from this allotment.
 
 ## Permissions
 

@@ -14,18 +14,44 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of license assignments within the organization.
+Get a list of license [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) within the organization.
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "cloudlicensing-admincloudlicensing-list-assignments-permissions"
-}
--->
+
+Permissions to get a list of **assignments** for an admin:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+GET /admin/cloudLicensing/assignments
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-permissions" } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-list-assignments-permissions.md)]
+
+
+Permissions to get a list of **assignments** for a user:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+GET /users/{userId}/cloudLicensing/assignments
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-user-permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-list-assignments-user-permissions.md)]
+
+
+Permissions to get a list of **assignments** for a group:
+
+<!-- { "blockType": "ignored"} -->
+``` http
+GET /groups/{groupId}/cloudLicensing/assignments
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-group-permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-list-assignments-group-permissions.md)]
 
 ## HTTP request
 

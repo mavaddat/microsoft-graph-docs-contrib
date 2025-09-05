@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the usageRight objects affected by an assignmentError. One will only be returned if there is a preexisting usageRight in effect which is prevented from updating by this assignmentError.
+Get a list of the [usageRight](../resources/cloudlicensing-usageright.md) objects affected by an [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md). One will only be returned if there is a preexisting usageRight in effect which is prevented from updating by this assignmentError.
 
 ## Permissions
 

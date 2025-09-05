@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the allotment that is the source of an assignment's licenses.
+Get the [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) that is the source of an assignment's licenses.
 
 ## Permissions
 
