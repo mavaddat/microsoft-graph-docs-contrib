@@ -57,8 +57,6 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ## Examples
 
-### Example 1: Get a specific waiting member
-
 ### Request
 
 The following example shows a request.
@@ -106,89 +104,5 @@ Content-Type: application/json
       "skuPartNumber": "Teams_Ess"
     }
   ]
-}
-```
-
-
-### Example 2: Get waiting member with assignedTo details
-
-The following example shows how to get a waiting member and include details about who is waiting.
-
-#### Request
-<!-- {
-  "blockType": "request",
-  "name": "get_waitingmember_expanded"
-}
--->
-``` http
-GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi/waitingMembers/1fb53c08-3f20-4b4e-b2f0-7d8fbb6bcaea?$expand=assignedTo($select=id,displayName)
-```
-
-#### Response
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.waitingMember"
-}
--->
-``` http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "@odata.type": "#microsoft.graph.cloudLicensing.waitingMember",
-  "id": "1fb53c08-3f20-4b4e-b2f0-7d8fbb6bcaea",
-  "waitingSinceDateTime": "2024-09-22T17:11:10.6635939+00:00",
-  "assignedTo": {
-    "@odata.type": "#microsoft.graph.user",
-    "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
-    "displayName": "John Waiting"
-  }
-}
-```
-
-### Example 3: Get waiting member with allotment context
-
-The following example shows how to get a waiting member and include information about the allotment they're waiting for.
-
-#### Request
-<!-- {
-  "blockType": "request",
-  "name": "get_waitingmember_with_allotment"
-}
--->
-``` http
-GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi/waitingMembers/1fb53c08-3f20-4b4e-b2f0-7d8fbb6bcaea?$expand=assignedTo($select=id,displayName),allotment($select=id,skuPartNumber,allottedUnits,consumedUnits)
-```
-
-#### Response
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.waitingMember"
-}
--->
-``` http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "@odata.type": "#microsoft.graph.cloudLicensing.waitingMember",
-  "id": "1fb53c08-3f20-4b4e-b2f0-7d8fbb6bcaea",
-  "waitingSinceDateTime": "2024-09-22T17:11:10.6635939+00:00",
-  "assignedTo": {
-    "@odata.type": "#microsoft.graph.user",
-    "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
-    "displayName": "John Waiting"
-  },
-  "allotment": {
-    "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
-    "id": "rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi",
-    "skuPartNumber": "Teams_Ess",
-    "allottedUnits": 100,
-    "consumedUnits": 100
-  }
 }
 ```
