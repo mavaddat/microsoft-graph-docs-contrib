@@ -173,3 +173,54 @@ Content-Type: application/json
   ]
 }
 ```
+
+### Example 3: Get allotments and aggregate allotted units
+### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "list_admin_assignment_allotment"
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments?$apply=groupby((skuId,skuPartNumber), aggregate(allottedUnits with sum as totalAllottedUnits, consumedUnits with sum as totalConsumedUnits))
+```
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.cloudLicensing.allotment"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "skuId": "6fd2c87f-b296-42f0-b197-1e91e994b900",
+      "skuPartNumber": "ENTERPRISEPACK",
+      "totalAllottedUnits": 500,
+      "totalConsumedUnits": 425
+    },
+    {
+      "skuId": "c7df2760-2c81-4ef7-b578-5b5392b571df",
+      "skuPartNumber": "ENTERPRISEPREMIUM",
+      "totalAllottedUnits": 200,
+      "totalConsumedUnits": 150
+    },
+    {
+      "skuId": "a4585165-0533-458a-97e3-c400570268c4",
+      "skuPartNumber": "SHAREPOINTSTANDARD",
+      "totalAllottedUnits": 300,
+      "totalConsumedUnits": 275
+    }
+  ]
+}
+```

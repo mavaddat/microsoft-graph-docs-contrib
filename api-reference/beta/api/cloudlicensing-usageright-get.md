@@ -84,10 +84,9 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 
 The following example shows how to get a usage right for a user.
 
-#### Request
+### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "cloudlicensing-usageright-get-example",
@@ -98,13 +97,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/usageRights/i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3
 ```
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/cloudlicensing-usageright-get-example-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
-#### Response
+### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -138,10 +131,9 @@ Content-Type: application/json
 
 The following example shows how to get a usage right for a group.
 
-#### Request
+### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "cloudlicensing-usageright-get-2-example",
@@ -152,13 +144,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/groups/1003985b-dfc1-4f42-97d4-65f70a335ca8/cloudLicensing/usageRights/j6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby4
 ```
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/cloudlicensing-usageright-get-2-example-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
-#### Response
+### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -183,6 +169,59 @@ Content-Type: application/json
       "assignableTo": "user,group",
       "planId": "fe6c28b3-d468-44ea-bbd0-a10a5167435c",
       "planName": "COPILOT_STUDIO_IN_COPILOT_FOR_M365"
+    }
+  ]
+}
+```
+
+### Example 3: Get a usageRight with assignments
+
+The following example shows how to get a usage right for a user and the assignments.
+
+### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "cloudlicensing-usageright-get-example",
+  "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113","i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/usageRights/i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3?$expand=assignments($select=id)
+```
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.cloudLicensing.usageRight"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.cloudLicensing.usageRight",
+  "id": "i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3",
+  "skuId": "639dec6b-bb19-468b-871c-c5c441c4b0cb",
+  "skuPartNumber": "Microsoft_365_Copilot",
+  "services": [
+    {
+      "@odata.type": "microsoft.graph.cloudLicensing.service",
+      "assignableTo": "user,group",
+      "planId": "fe6c28b3-d468-44ea-bbd0-a10a5167435c",
+      "planName": "COPILOT_STUDIO_IN_COPILOT_FOR_M365"
+    }
+  ],
+  "assignments": [
+    {
+      "@odata.type": "#microsoft.graph.cloudLicensing.assignment",
+      "id": "405ee855-dd74-f695-8d7e-be35a6788fe8"
     }
   ]
 }
