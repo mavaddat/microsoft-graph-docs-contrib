@@ -98,7 +98,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/me/cloudLicensing/usageRights/{usageRightId}/assignments
+GET https://graph.microsoft.com/beta/me/cloudLicensing/usageRights/7e452304-0a58-40d6-8fd2-2afe92d26a3a/assignments
 ```
 
 ### Response

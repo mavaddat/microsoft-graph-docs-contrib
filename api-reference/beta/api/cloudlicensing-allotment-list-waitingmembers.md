@@ -70,7 +70,6 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi/waitingMembers
 ```
 
-
 ### Response
 
 The following example shows the response.
@@ -95,4 +94,3 @@ Content-Type: application/json
   ]
 }
 ```
-

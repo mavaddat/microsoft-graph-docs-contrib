@@ -70,10 +70,9 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following example shows how to get all usage rights granted to a group.
 
-#### Request
+### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "cloudlicensing-groupusageright-list-example-1"
@@ -83,13 +82,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/groups/0003985b-dfc1-4f42-97d4-65f70a335ca8/cloudLicensing/usageRights
 ```
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/cloudlicensing-groupusageright-list-example-1-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
-#### Response
+### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -127,10 +120,9 @@ Content-Type: application/json
 
 The following example shows how to get all usage rights granted to a group for a specific service plan.
 
-#### Request
+### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "cloudlicensing-groupusageright-list-example-2"
@@ -140,13 +132,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/groups/0003985b-dfc1-4f42-97d4-65f70a335ca8/cloudLicensing/usageRights?$filter=services/any(c:c/planId eq 113feb6c-3fe4-4440-bddc-54d774bf0318)
 ```
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/cloudlicensing-groupusageright-list-example-2-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
-#### Response
+### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.

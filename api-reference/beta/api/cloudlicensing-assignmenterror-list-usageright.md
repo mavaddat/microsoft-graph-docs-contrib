@@ -69,7 +69,6 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignmentErrors/405ee855-dd74-f695-8d7e-be35a6788fe8/usageRight
 ```
 
-
 ### Response
 
 The following example shows the response.
@@ -87,16 +86,15 @@ Content-Type: application/json
 {
   "@odata.type": "#microsoft.graph.cloudLicensing.usageRight",
   "id": "j6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby4",
-  "skuId": "639dec6b-bb19-468b-871c-c5c441c4b0cb",
-  "skuPartNumber": "Microsoft_365_Copilot",
+  "skuId": "f48db87f-583c-486e-a6de-096155d8fb8f",
+  "skuPartNumber": "TIME_TRAVEL_BACKUP_RESTORE",
   "services": [
     {
       "@odata.type": "microsoft.graph.cloudLicensing.service",
       "assignableTo": "user,group",
       "planId": "fe6c28b3-d468-44ea-bbd0-a10a5167435c",
-      "planName": "COPILOT_STUDIO_IN_COPILOT_FOR_M365"
+      "planName": "TIME_TRAVEL_BACKUP_RESTORE_PREMIUM"
     }
   ]
 }
 ```
-
