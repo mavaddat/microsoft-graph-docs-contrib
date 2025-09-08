@@ -122,7 +122,17 @@ Content-Type: application/json
       }
     ],
     "skuId": "f245ecc8-75af-4f8e-b61f-27d8114de5f3",
-    "skuPartNumber": "Teams_Ess"
+    "skuPartNumber": "Teams_Ess",
+    "subscriptions:" [
+      {
+        "@odata.type": "#microsoft.graph.cloudLicensing.subscription",
+        "subscriptionId": "f196adf8-75fa-8e4f-c61d-42d8114de4f4",
+        "nextLifecycleDate": "2025-09-30T00:00:00.000Z",
+        "startDate": "2025-07-18T00:00:00.000Z",
+        "state": "active",
+        "tags": "none"
+      }
+    ]
   }
 }
 ```

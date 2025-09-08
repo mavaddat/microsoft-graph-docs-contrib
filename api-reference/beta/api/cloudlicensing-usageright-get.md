@@ -226,3 +226,58 @@ Content-Type: application/json
   ]
 }
 ```
+
+### Example 4: Get a usageRight with allotments
+
+The following example shows how to get a usage right for a user and the assignments.
+
+### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "cloudlicensing-usageright-get-example",
+  "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113","i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/usageRights/i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3?$expand=allotments($select=id,allottedUnits,consumedUnits)
+```
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.cloudLicensing.usageRight"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.cloudLicensing.usageRight",
+  "id": "i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3",
+  "skuId": "639dec6b-bb19-468b-871c-c5c441c4b0cb",
+  "skuPartNumber": "Microsoft_365_Copilot",
+  "services": [
+    {
+      "@odata.type": "microsoft.graph.cloudLicensing.service",
+      "assignableTo": "user,group",
+      "planId": "fe6c28b3-d468-44ea-bbd0-a10a5167435c",
+      "planName": "COPILOT_STUDIO_IN_COPILOT_FOR_M365"
+    }
+  ],
+  "allotments": [
+    {
+      "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
+      "id": "405ee855-dd74-f695-8d7e-be35a6788fe8",
+      "allottedUnits": 100,
+      "consumedUnits": 50
+    }
+  ]
+}
+```

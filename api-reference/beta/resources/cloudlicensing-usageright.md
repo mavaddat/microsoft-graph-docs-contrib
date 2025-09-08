@@ -34,7 +34,10 @@ Inherits from [entity](../resources/entity.md).
 |skuPartNumber|String| Unique SKU display name that is equal to the **skuPartNumber** on the related [subscribedSku](subscribedsku.md) object; for example, `AAD_Premium`. Read-only. |
 
 ## Relationships
-None.
+|Relationship|Type|Description|
+|:---|:---|:---|
+|allotments|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|The set of allotments associated with the assignments that combine to form this usageRight.|
+|assignments|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|The set of assignments which combine to form this usageRight. This includes both direct assignments and assignments inherited through group membership.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
