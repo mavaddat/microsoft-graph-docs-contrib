@@ -1,5 +1,5 @@
 ---
-title: "List allotment"
+title: "Get waiting member"
 description: "Get waiting members for an allotment by id."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List allotment
+# Get waiting member
 
 Namespace: microsoft.graph.cloudLicensing
 
@@ -85,24 +85,16 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
-      "allottedUnits": "100",
-      "assignableTo": "user,group",
-      "consumedUnits": "84",
-      "id": "551f1755-0184-9e51-0bc7-f32bae5a1afb",
-      "services": [
-        {
-          "@odata.type": "microsoft.graph.cloudLicensing.service",
-          "assignableTo": "user,group",
-          "planId": "f4f2f6de-6830-442b-a433-e92249faebe2",
-          "planName": "TeamsEss"
-        }
-      ],
-      "skuId": "f245ecc8-75af-4f8e-b61f-27d8114de5f3",
-      "skuPartNumber": "Teams_Ess"
+  "value": {
+    "@odata.type": "#microsoft.graph.cloudLicensing.waitingMember",
+    "id": "49caea1b-ad15-64f1-70c5-5c5e3563d19c",
+    "waitingSinceDateTime": "2024-11-22T17:11:10.6635939+00:00",
+    "assignedTo": {
+      "@odata.type": "#microsoft.graph.user",
+      "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
+      "displayName": "Steve Fred",
+      "userPrincipalName": "stevefred@contoso.com"
     }
-  ]
+  }
 }
 ```

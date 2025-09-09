@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/waitingMembers/f2c588fc-0a33-4f95-806b-58678112b1a9
+GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/waitingMembers/f2c588fc-0a33-4f95-806b-58678112b1a9?$expand=assignedTo
 ```
 
 
@@ -90,7 +90,13 @@ Content-Type: application/json
   "value": {
     "@odata.type": "#microsoft.graph.cloudLicensing.waitingMember",
     "id": "49caea1b-ad15-64f1-70c5-5c5e3563d19c",
-    "waitingSinceDateTime": "2024-11-22T17:11:10.6635939+00:00"
+    "waitingSinceDateTime": "2024-11-22T17:11:10.6635939+00:00",
+    "assignedTo": {
+      "@odata.type": "#microsoft.graph.user",
+      "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
+      "displayName": "Steve Fred",
+      "userPrincipalName": "stevefred@contoso.com"
+    }
   }
 }
 ```

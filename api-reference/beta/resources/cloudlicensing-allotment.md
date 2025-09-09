@@ -37,7 +37,7 @@ Inherits from [entity](../resources/entity.md)
 |services|[microsoft.graph.cloudLicensing.service](../resources/cloudlicensing-service.md) collection| The list of services which may be enabled or disabled for assignments from this allotment. Not nullable. Read-only.|
 |skuId|Guid|Unique identifier (GUID) for the service SKU that is equal to the **skuId** property on the related [subscribedSku](subscribedsku.md) object. Read-only. Supports `$filter`. |
 |skuPartNumber|String| Unique SKU display name that is equal to the **skuPartNumber** on the related [subscribedSku](subscribedsku.md) object; for example, `AAD_Premium`. Read-only. |
-|subscriptions| [microsoft.graph.cloudLicensing.subscription](../resources/cloudlicensing-subscription.md) collection |Basic information about the subscriptions which backs this allotment. |
+|subscriptions| [microsoft.graph.cloudLicensing.subscription](../resources/cloudlicensing-subscription.md) collection |Basic information about the subscriptions which back this allotment. |
 
 
 ### assigneeTypes values

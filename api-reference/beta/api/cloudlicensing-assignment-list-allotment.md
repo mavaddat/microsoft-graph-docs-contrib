@@ -117,9 +117,9 @@ Content-Type: application/json
     {
       "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
       "id": "551f1755-0184-9e51-0bc7-f32bae5a1afb",
-      "allottedUnits": "250",
+      "allottedUnits": 250,
       "assignableTo": "user,group",
-      "consumedUnits": "224",
+      "consumedUnits": 224,
       "services": [
         {
           "@odata.type": "microsoft.graph.cloudLicensing.service",

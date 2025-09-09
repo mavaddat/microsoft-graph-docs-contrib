@@ -23,7 +23,8 @@ Inherits from [entity](../resources/entity.md)
 |:---|:---|:---|
 |[List](../api/cloudlicensing-allotment-list-waitingmembers.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get a list of the waitingMember objects and their properties.|
 |[Get](../api/cloudlicensing-waitingmember-get.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md)|Read the properties and relationships of [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) object.|
-|[List allotment](../api/cloudlicensing-waitingmember-list-allotment.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|Get waiting members for an allotment by id.|
+|[Get waiting member for allotment](../api/cloudlicensing-waitingmember-list-allotment.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-allotment.md)|Get waiting members for an allotment by id.|
+|[Get waiting member for user](../api/cloudlicensing-usecloudlicensing-list-waitingmember.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-allotment.md) collection|Get waiting members for a specific user.|
 
 ## Properties
 |Property|Type|Description|

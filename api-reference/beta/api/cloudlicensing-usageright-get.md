@@ -241,7 +241,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/usageRights/i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3?$expand=allotments($select=id,allottedUnits,consumedUnits)
+GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/usageRights/i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3?$expand=allotments($select=id,allottedUnits,consumedUnits,subscriptions)
 ```
 
 ### Response
@@ -276,7 +276,17 @@ Content-Type: application/json
       "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
       "id": "405ee855-dd74-f695-8d7e-be35a6788fe8",
       "allottedUnits": 100,
-      "consumedUnits": 50
+      "consumedUnits": 50,
+      "subscriptions": [
+        {
+          "@odata.type": "#microsoft.graph.cloudLicensing.subscription",
+          "subscriptionId": "f196adf8-75fa-8e4f-c61d-42d8114de4f4",
+          "nextLifecycleDate": "2025-09-30T00:00:00.000Z",
+          "startDate": "2025-07-18T00:00:00.000Z",
+          "state": "active",
+          "tags": "none"
+        }
+      ]
     }
   ]
 }

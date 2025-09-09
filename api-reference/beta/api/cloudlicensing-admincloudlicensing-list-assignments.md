@@ -191,3 +191,79 @@ Content-Type: application/json
   ]
 }
 ```
+
+### Example 3: Get assignments filtered by skuId
+### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "list_admin_assignments"
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments?$expand=allotment($filter=skuId in (639dec6b-bb19-468b-871c-c5c441c4b0cb, a403ebcc-fae0-4ca2-8c8c-7a907fd6c235))
+```
+
+
+### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.cloudLicensing.assignment"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.cloudLicensing.assignment",
+      "id": "405ee855-dd74-f695-8d7e-be35a6788fe8",
+      "disabledServicePlanIds": [
+        "5e62787c-c316-451f-b873-1d05acd4d12c"
+      ],
+      "allotment": {
+        "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
+        "id": "551f1755-0184-9e51-0bc7-f32bae5a1afb",
+        "allottedUnits": 250,
+        "assignableTo": "user,group",
+        "consumedUnits": 224,
+        "services": [
+          {
+            "@odata.type": "microsoft.graph.cloudLicensing.service",
+            "assignableTo": "user,group",
+            "planId": "9aaf7827-d63c-4b61-89c3-182f06f82e5c",
+            "planName": "EXCHANGE_S_STANDARD"
+          },
+          {
+            "@odata.type": "microsoft.graph.cloudLicensing.service",
+            "assignableTo": "none",
+            "planId": "6f23d6a9-adbf-481c-8538-b4c095654487",
+            "planName": "M365_LIGHTHOUSE_CUSTOMER_PLAN1"
+          },
+          {
+            "@odata.type": "microsoft.graph.cloudLicensing.service",
+            "assignableTo": "none",
+            "planId": "882e1d05-acd1-4ccb-8708-6ee03664b117",
+            "planName": "INTUNE_O365"
+          },
+          {
+            "@odata.type": "microsoft.graph.cloudLicensing.service",
+            "assignableTo": "user,group",
+            "planId": "5e62787c-c316-451f-b873-1d05acd4d12c",
+            "planName": "BPOS_S_TODO_1"
+          }
+        ],
+        "skuId": "a403ebcc-fae0-4ca2-8c8c-7a907fd6c235",
+        "skuPartNumber": "EXCHANGESTANDARD"
+      }
+    }
+  ]
+}
+```
