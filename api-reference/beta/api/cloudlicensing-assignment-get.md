@@ -1,6 +1,6 @@
 ---
 title: "Get assignment"
-description: "Read the properties and relationships of microsoft.graph.cloudLicensing.assignment object."
+description: "Read the properties and relationships of an assignment object."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.
+Read the properties and relationships of an [assignment](../resources/cloudlicensing-assignment.md) object.
 
 ## Permissions
 
@@ -55,7 +55,6 @@ GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get_group" } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-group-permissions.md)]
 
-
 ## HTTP request
 
 <!-- {
@@ -91,7 +90,10 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 ## Examples
 
 ### Example 1: Get an assignment
-### Request
+
+The following example shows how to get an [assignment](../resources/cloudlicensing-assignment.md) object.
+
+#### Request
 
 The following example shows a request.
 <!-- {
@@ -103,8 +105,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/me/cloudLicensing/assignments/405ee855-dd74-f695-8d7e-be35a6788fe8
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -130,9 +131,12 @@ Content-Type: application/json
 ```
 
 ### Example 2: Get an assignment and its assignee
-### Request
 
-The following example shows a request with Odata expansion
+The following example shows how to get an [assignment](../resources/cloudlicensing-assignment.md) object and its assignee by using the `expand` query parameter.
+
+#### Request
+
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "list_admin_assignments"
@@ -142,8 +146,7 @@ The following example shows a request with Odata expansion
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments?$expand=assignedTo
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
