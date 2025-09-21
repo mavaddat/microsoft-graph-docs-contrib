@@ -1,5 +1,5 @@
 ---
-title: "List allotment objects"
+title: "List allotments"
 description: "Get a list of the allotment objects and their properties."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,13 +8,13 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List allotment objects
+# List allotments
 
 Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) objects and their properties.
+Get a list of the [allotment](../resources/cloudlicensing-allotment.md) objects and their properties.
 
 ## Permissions
 
@@ -53,12 +53,13 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [allotment](../resources/cloudlicensing-allotment.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) objects in the response body.
 
 ## Examples
 
 ### Example 1: Get allotments
-### Request
+The following example shows how to get [allotment](../resources/cloudlicensing-allotment.md) objects.
+#### Request
 
 The following example shows a request.
 <!-- {
@@ -70,15 +71,14 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.allotment"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.allotment)"
 }
 -->
 ``` http
@@ -127,7 +127,8 @@ Content-Type: application/json
 ```
 
 ### Example 2: Get allotments with waitingMembers
-### Request
+The following example shows how to get [allotment](../resources/cloudlicensing-allotment.md) objects, including their **waitingMembers**.
+#### Request
 
 The following example shows a request.
 <!-- {
@@ -139,15 +140,14 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments?$select=id,allottedUnits,consumedUnits,assignableTo&$expand=waitingMembers($select=id,waitingSinceDateTime)
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.allotment"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.allotment)"
 }
 -->
 ``` http
@@ -175,8 +175,10 @@ Content-Type: application/json
 ```
 
 ### Example 3: Get allotments and aggregate allotted units
-### Request
 
+The following example shows how to get [allotment](../resources/cloudlicensing-allotment.md) objects and aggregate allotted units.
+
+#### Request
 The following example shows a request.
 <!-- {
   "blockType": "request",
@@ -187,14 +189,14 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments?$apply=groupby((skuId,skuPartNumber), aggregate(allottedUnits with sum as totalAllottedUnits, consumedUnits with sum as totalConsumedUnits))
 ```
 
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.allotment"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.allotment)"
 }
 -->
 ``` http
