@@ -1,6 +1,6 @@
 ---
 title: "List assignments"
-description: "Get a list of license assignments within the organization."
+description: "Get a list of license assignment objects within an organization."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,12 +14,11 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of license [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) within the organization.
+Get a list of license [assignment](../resources/cloudlicensing-assignment.md) objects within an organization.
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
-
 
 Permissions to get a list of **assignments** for an admin:
 
@@ -86,7 +85,10 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ## Examples
 
 ### Example 1: Get assignments
-### Request
+
+The following example shows how to get a list of [assignment](../resources/cloudlicensing-assignment.md) objects.
+
+#### Request
 
 The following example shows a request.
 <!-- {
@@ -98,15 +100,14 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.assignment"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.assignment)"
 }
 -->
 ``` http
@@ -127,9 +128,12 @@ Content-Type: application/json
 ```
 
 ### Example 2: Get assignments with their allotments
-### Request
 
-The following example shows a request with Odata expansion
+The following example shows how to get a list of [assignment](../resources/cloudlicensing-assignment.md) objects with their allotments using the `expand` query parameter.
+
+#### Request
+
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "list_admin_assignments"
@@ -139,15 +143,14 @@ The following example shows a request with Odata expansion
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments?$expand=assignedTo,allotment
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.assignment"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.assignment)"
 }
 -->
 ``` http
@@ -193,7 +196,10 @@ Content-Type: application/json
 ```
 
 ### Example 3: Get assignments filtered by skuId
-### Request
+
+The following example shows how to get a list of [assignment](../resources/cloudlicensing-assignment.md) objects filtered by the **skuId** property.
+
+#### Request
 
 The following example shows a request.
 <!-- {
@@ -205,15 +211,14 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments?$expand=allotment($filter=skuId in (639dec6b-bb19-468b-871c-c5c441c4b0cb, a403ebcc-fae0-4ca2-8c8c-7a907fd6c235))
 ```
 
-
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.assignment"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.assignment)"
 }
 -->
 ``` http
@@ -266,4 +271,5 @@ Content-Type: application/json
     }
   ]
 }
+
 ```
