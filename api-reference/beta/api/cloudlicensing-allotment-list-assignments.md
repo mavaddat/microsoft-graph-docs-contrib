@@ -1,6 +1,6 @@
 ---
 title: "List assignments"
-description: "Get a list of license assignments which consume licenses from this allotment."
+description: "Get a list of license assignment objects which consume licenses from this allotment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of license [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) which consume licenses from this allotment.
+Get a list of license [assignment](../resources/cloudlicensing-assignment.md) objects which consume licenses from this allotment.
 
 ## Permissions
 
@@ -53,7 +53,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [assignment](../resources/cloudlicensing-assignment.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) objects in the response body.
 
 ## Examples
 
@@ -62,13 +62,13 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "allotment_list_assignments"
+  "name": "allotment_list_assignments",
+  "sampleKeys": ["rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi"]
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi/assignments
 ```
-
 
 ### Response
 
