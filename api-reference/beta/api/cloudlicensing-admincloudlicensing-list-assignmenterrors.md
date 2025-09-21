@@ -1,6 +1,6 @@
 ---
-title: "List assignmentError objects"
-description: "Get a list of the microsoft.graph.cloudLicensing.assignmentErrors within the organization or affecting a specific user."
+title: "List assignmentErrors"
+description: "Get a list of the assignmentError objects within the organization or affecting a specific user."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -8,13 +8,13 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List assignmentError objects
+# List assignmentErrors
 
 Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [microsoft.graph.cloudLicensing.assignmentErrors](../resources/cloudlicensing-assignmenterror.md) within the organization or affecting a specific user.
+Get a list of the [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects within the organization or affecting a specific user.
 
 ## Permissions
 
@@ -55,7 +55,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) objects in the response body.
 
 ## Examples
 
@@ -71,7 +71,6 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignmentErrors
 ```
 
-
 ### Response
 
 The following example shows the response.
@@ -79,7 +78,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.assignmentError"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.assignmentError)"
 }
 -->
 ``` http
