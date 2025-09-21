@@ -1,5 +1,5 @@
 ---
-title: "List waitingMember objects"
+title: "List waitingMembers"
 description: "Get a list of over-assigned users who are in the waiting room due to license capacity limits."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,13 +8,13 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List waitingMember objects
+# List waitingMembers
 
 Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of over-assigned users who are in the waiting room due to license capacity limits. Use `/admin/cloudLicensing/allotments/{allotmentId}/waitingMembers` to retrieve all [microsoft.graph.cloudLicensing.waitingmember](../resources/cloudlicensing-waitingmember.md) for a specific allotment. Use `/users/{userId}/cloudLicensing/waitingMembers` to retrieve all allotments that a specific user is waiting for.
+Get a list of over-assigned [users](../resources/cloudlicensing-waitingmember.md) who are in the waiting room due to license capacity limits. Use `/admin/cloudLicensing/allotments/{allotmentId}/waitingMembers` to retrieve all [waitingMember](../resources/cloudlicensing-waitingmember.md) objects for a specific allotment. Use `/users/{userId}/cloudLicensing/waitingMembers` to retrieve all allotments that a specific user is waiting for.
 
 ## Permissions
 
@@ -54,7 +54,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [waitingMember](../resources/cloudlicensing-waitingmember.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) objects in the response body.
 
 ## Examples
 
@@ -63,7 +63,8 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_waitingmember"
+  "name": "list_waitingmember",
+  "sampleKeys": ["rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi"]
 }
 -->
 ``` http
@@ -77,7 +78,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.waitingMember"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.waitingMember)"
 }
 -->
 ``` http
