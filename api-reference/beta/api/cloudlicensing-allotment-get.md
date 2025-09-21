@@ -1,6 +1,6 @@
 ---
 title: "Get allotment"
-description: "Read the properties and relationships of microsoft.graph.cloudLicensing.allotment object."
+description: "Read the properties and relationships of an allotment object."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) object.
+Read the properties and relationships of an [allotment](../resources/cloudlicensing-allotment.md) object.
 
 ## Permissions
 
@@ -32,7 +32,6 @@ GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_user" } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-allotment-get-user-permissions.md)]
-
 
 Permissions to get an **allotment** for a group:
 
@@ -90,7 +89,6 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/allotments/rkocgef3dgjhnu3gmu2mqhbdbmwcymnf6fk3k6a7zbui5e7gfpmi
 ```
-
 
 ### Response
 
