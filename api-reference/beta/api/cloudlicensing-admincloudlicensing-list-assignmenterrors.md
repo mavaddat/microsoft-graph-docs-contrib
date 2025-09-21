@@ -1,6 +1,6 @@
 ---
 title: "List assignmentErrors"
-description: "Get a list of the assignmentError objects within the organization or affecting a specific user."
+description: "Get a list of the assignmentError objects within an organization or affecting a specific user."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects within the organization or affecting a specific user.
+Get a list of the [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects within an organization or affecting a specific user.
 
 ## Permissions
 
