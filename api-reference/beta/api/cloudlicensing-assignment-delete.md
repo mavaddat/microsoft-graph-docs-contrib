@@ -1,6 +1,6 @@
 ---
 title: "Delete assignment"
-description: "Delete a microsoft.graph.cloudLicensing.assignment object."
+description: "Delete an assignment object."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.
+Delete an [assignment](../resources/cloudlicensing-assignment.md) object.
 
 ## Permissions
 
@@ -99,7 +99,7 @@ DELETE https://graph.microsoft.com/beta/admin/cloudLicensing/assignments/0b1a424
 ### Response
 
 The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
+
 <!-- {
   "blockType": "response",
   "truncated": true
