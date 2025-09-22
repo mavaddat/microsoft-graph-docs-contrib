@@ -1,6 +1,6 @@
 ---
 title: "Get allotment"
-description: "Get the allotment that is the source of an assignment's licenses."
+description: "Get the allotment that is the source of the licenses used in the assignment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) that is the source of an assignment's licenses.
+Get the [allotment](../resources/cloudlicensing-allotment.md) that is the source of the licenses used in the assignment.
 
 ## Permissions
 
@@ -30,7 +30,6 @@ GET /admin/cloudLicensing/assignments/{assignmentId}/allotment
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-list-allotment-permissions" } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-list-allotment-permissions.md)]
-
 
 Permissions to get an **allotment** for a user:
 
@@ -81,7 +80,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [allotment](../resources/cloudlicensing-allotment.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) objects in the response body.
 
 ## Examples
 
@@ -90,13 +89,13 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "get_assignment_allotment"
+  "name": "get_assignment_allotment",
+  "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments/405ee855-dd74-f695-8d7e-be35a6788fe8/allotment
 ```
-
 
 ### Response
 
