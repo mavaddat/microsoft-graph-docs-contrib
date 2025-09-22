@@ -62,7 +62,8 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "get_assignment_assignedto"
+  "name": "get_assignment_assignedto",
+  "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
 }
 -->
 ``` http
