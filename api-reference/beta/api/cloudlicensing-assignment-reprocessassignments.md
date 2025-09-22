@@ -14,8 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Reprocess existing license assignments for a user by posting to the user's assignments reprocessAssignments action. Depending on the steps taken to resolve licensing errors, it might be necessary to manually trigger the processing of a user to update their state. For example, after resolving a dependency violation error for an affected user, you need to trigger reprocessing to apply the changes.
-
+Reprocess existing license [assignments](../resources/cloudlicensing-assignment.md) for a user by posting to the user's assignments **reprocessAssignments** action. Depending on the steps taken to resolve licensing errors, it might be necessary to manually trigger the processing of a user to update their state. For example, after resolving a dependency violation error for an affected user, you need to trigger reprocessing to apply the changes.
 
 ## Permissions
 
@@ -35,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-POST users/{userId}/cloudLicensing/assignments/reprocessAssignments
+POST /users/{userId}/cloudLicensing/assignments/reprocessAssignments
 ```
 
 ## Request headers
@@ -66,11 +65,9 @@ The following example shows a request.
 POST https://graph.microsoft.com/beta/users/43fe5b38-7328-40b9-a2f6-85d86ae8c34d/cloudLicensing/assignments/reprocessAssignments
 ```
 
-
 ### Response
 
 The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true
