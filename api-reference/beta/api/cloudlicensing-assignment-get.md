@@ -98,7 +98,8 @@ The following example shows how to get an [assignment](../resources/cloudlicensi
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "get_assignment"
+  "name": "get_assignment",
+  "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
 }
 -->
 ``` http
