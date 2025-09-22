@@ -62,13 +62,13 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_assignmenterror_assignedto"
+  "name": "list_assignmenterror_assignedto",
+  "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignmentErrors/405ee855-dd74-f695-8d7e-be35a6788fe8/assignedTo
 ```
-
 
 ### Response
 
@@ -77,7 +77,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.directoryObject"
+  "@odata.type": "Collection(microsoft.graph.directoryObject)"
 }
 -->
 ``` http
