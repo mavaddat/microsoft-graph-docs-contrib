@@ -1,5 +1,5 @@
 ---
-title: "List usageRight objects"
+title: "List usageRight"
 description: "Get a list of the usageRight objects affected by an assignmentError."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,13 +8,13 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List usageRight objects
+# List usageRight
 
 Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [usageRight](../resources/cloudlicensing-usageright.md) objects affected by an [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md). One will only be returned if there is a preexisting usageRight in effect which is prevented from updating by this assignmentError.
+Get a list of the [usageRight](../resources/cloudlicensing-usageright.md) objects affected by an [assignmentError](../resources/cloudlicensing-assignmenterror.md). A **usageRight** object is returned only if a preexisting one is in effect and is prevented from updating by this **assignmentError**.
 
 ## Permissions
 
@@ -62,7 +62,8 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_usageright"
+  "name": "list_usageright",
+  "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
 }
 -->
 ``` http
@@ -76,7 +77,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.usageRight"
+  "@odata.type": "Collection(microsoft.graph.cloudLicensing.usageRight)"
 }
 -->
 ``` http
