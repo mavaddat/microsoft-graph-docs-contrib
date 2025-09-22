@@ -1,5 +1,5 @@
 ---
-title: "Get assignedTo"
+title: "List assignedTo"
 description: "Get the assignedTo property for a given assignment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# Get assignedTo
+# List assignedTo
 
 Namespace: microsoft.graph.cloudLicensing
 
@@ -69,7 +69,6 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignments/405ee855-dd74-f695-8d7e-be35a6788fe8/assignedTo
 ```
 
-
 ### Response
 
 The following example shows the response.
@@ -85,13 +84,12 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value":
-    {
-      "@odata.type": "#microsoft.graph.user",
-      "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
-      "displayName": "Steve Fred",
-      "userPrincipalName": "stevefred@contoso.com"
-    }  
+  "value": {
+    "@odata.type": "#microsoft.graph.user",
+    "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
+    "displayName": "Steve Fred",
+    "userPrincipalName": "stevefred@contoso.com"
+  }
 }
 ```
 
