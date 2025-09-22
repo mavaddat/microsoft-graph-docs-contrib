@@ -112,41 +112,40 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value":
-    {
-      "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
-      "id": "551f1755-0184-9e51-0bc7-f32bae5a1afb",
-      "allottedUnits": 250,
-      "assignableTo": "user,group",
-      "consumedUnits": 224,
-      "services": [
-        {
-          "@odata.type": "microsoft.graph.cloudLicensing.service",
-          "assignableTo": "user,group",
-          "planId": "9aaf7827-d63c-4b61-89c3-182f06f82e5c",
-          "planName": "EXCHANGE_S_STANDARD"
-        },
-        {
-          "@odata.type": "microsoft.graph.cloudLicensing.service",
-          "assignableTo": "none",
-          "planId": "6f23d6a9-adbf-481c-8538-b4c095654487",
-          "planName": "M365_LIGHTHOUSE_CUSTOMER_PLAN1"
-        },
-        {
-          "@odata.type": "microsoft.graph.cloudLicensing.service",
-          "assignableTo": "none",
-          "planId": "882e1d05-acd1-4ccb-8708-6ee03664b117",
-          "planName": "INTUNE_O365"
-        },
-        {
-          "@odata.type": "microsoft.graph.cloudLicensing.service",
-          "assignableTo": "user,group",
-          "planId": "5e62787c-c316-451f-b873-1d05acd4d12c",
-          "planName": "BPOS_S_TODO_1"
-        }
-      ],
-      "skuId": "4b9405b0-7788-4568-add1-99614e613b69",
-      "skuPartNumber": "EXCHANGESTANDARD"
-    }  
+  "value": {
+    "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
+    "id": "551f1755-0184-9e51-0bc7-f32bae5a1afb",
+    "allottedUnits": 250,
+    "assignableTo": "user,group",
+    "consumedUnits": 224,
+    "services": [
+      {
+        "@odata.type": "microsoft.graph.cloudLicensing.service",
+        "assignableTo": "user,group",
+        "planId": "9aaf7827-d63c-4b61-89c3-182f06f82e5c",
+        "planName": "EXCHANGE_S_STANDARD"
+      },
+      {
+        "@odata.type": "microsoft.graph.cloudLicensing.service",
+        "assignableTo": "none",
+        "planId": "6f23d6a9-adbf-481c-8538-b4c095654487",
+        "planName": "M365_LIGHTHOUSE_CUSTOMER_PLAN1"
+      },
+      {
+        "@odata.type": "microsoft.graph.cloudLicensing.service",
+        "assignableTo": "none",
+        "planId": "882e1d05-acd1-4ccb-8708-6ee03664b117",
+        "planName": "INTUNE_O365"
+      },
+      {
+        "@odata.type": "microsoft.graph.cloudLicensing.service",
+        "assignableTo": "user,group",
+        "planId": "5e62787c-c316-451f-b873-1d05acd4d12c",
+        "planName": "BPOS_S_TODO_1"
+      }
+    ],
+    "skuId": "4b9405b0-7788-4568-add1-99614e613b69",
+    "skuPartNumber": "EXCHANGESTANDARD"
+  }
 }
 ```
