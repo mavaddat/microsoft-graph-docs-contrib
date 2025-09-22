@@ -1,6 +1,6 @@
 ---
 title: "Get assignmentError"
-description: "Read the properties and relationships of microsoft.graph.cloudLicensing.assignmentError object."
+description: "Read the properties and relationships of an assignmentError object."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) object.
+Read the properties and relationships of an [assignmentError](../resources/cloudlicensing-assignmenterror.md) object.
 
 ## Permissions
 
@@ -64,13 +64,13 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "get_assignmenterror"
+  "name": "get_assignmenterror",
+  "sampleKeys": ["115bedd6-40d2-45c1-9220-a73c2a8f6226"]
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/cloudLicensing/assignmentErrors/115bedd6-40d2-45c1-9220-a73c2a8f6226
 ```
-
 
 ### Response
 
