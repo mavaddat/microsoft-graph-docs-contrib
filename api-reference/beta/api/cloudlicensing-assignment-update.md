@@ -1,6 +1,6 @@
 ---
 title: "Update assignment"
-description: "Update the properties of a assignment object."
+description: "Update an assignment object to enable or disable services."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object to enable or disable services. Any service contained in its allotment which is not listed in the disabledServicePlanIds array is enabled.
+Update an [assignment](../resources/cloudlicensing-assignment.md) object to enable or disable services. Any service contained in its allotment which isn't listed in the **disabledServicePlanIds** array is enabled.
 
 ## Permissions
 
@@ -83,10 +83,7 @@ PATCH /users/{userId}/cloudLicensing/assignments/{assignmentId}
 
 |Property|Type|Description|
 |:---|:---|:---|
-|disabledServicePlanIds|Guid collection|The list of disabled service plans for this assignment. An empty list indicates that all services are enabled. Required. Not nullable.|
-
-
-
+|disabledServicePlanIds|GUID collection|The list of disabled service plans for this assignment. An empty list indicates that all services are enabled. Required.|
 
 ## Response
 
