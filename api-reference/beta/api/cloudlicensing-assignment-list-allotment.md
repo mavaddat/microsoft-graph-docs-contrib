@@ -80,7 +80,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and an [allotment](../resources/cloudlicensing-allotment.md) object in the response body.
 
 ## Examples
 

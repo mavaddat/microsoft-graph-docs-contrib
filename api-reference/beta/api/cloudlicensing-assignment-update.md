@@ -131,7 +131,7 @@ Content-Type: application/json
 {
   "@odata.type": "#microsoft.graph.cloudLicensing.assignment",
   "disabledServicePlanIds": [
-    "Guid"
+    "bed136c6-b799-4462-824d-fc045d3a9d25"
   ],
   "id": "405ee855-dd74-f695-8d7e-be35a6788fe8"
 }

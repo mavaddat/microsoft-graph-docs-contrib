@@ -1,6 +1,6 @@
 ---
 title: "List assignedTo"
-description: "Get the assignedTo property for a given assignmentError."
+description: "Get a user or group object for a given assignmentError to which licenses are assigned."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the assignedTo property for a given [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md).
+Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignmentError](../resources/cloudlicensing-assignmenterror.md) to which licenses are assigned.
 
 ## Permissions
 
