@@ -101,6 +101,240 @@
       "CreatedDateTime": "2024-10-17T15:55:45.1519734Z",
       "WorkloadArea": "Device and app management",
       "SubArea": "Cloud licensing"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Resource",
+          "ChangedApiName": "adminCloudLicensing",
+          "ChangeType": "Addition",
+          "Description": "Added the [adminCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-admincloudlicensing?view=graph-rest-beta) resource type.",
+          "Target": "adminCloudLicensing"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "List allotments",
+          "ChangeType": "Addition",
+          "Description": "Added the [List allotments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-list-allotments?view=graph-rest-beta) method.",
+          "Target": "adminCloudLicensing"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "List assignment errors",
+          "ChangeType": "Addition",
+          "Description": "Added the [List assignment errors](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-list-assignmenterrors?view=graph-rest-beta) method.",
+          "Target": "adminCloudLicensing"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "List assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the [List assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-list-assignments?view=graph-rest-beta) method.",
+          "Target": "adminCloudLicensing"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Create assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-post-assignments?view=graph-rest-beta) method.",
+          "Target": "adminCloudLicensing"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Resource",
+          "ChangedApiName": "allotment",
+          "ChangeType": "Addition",
+          "Description": "Added the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource type.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get allotment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get allotment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-get?view=graph-rest-beta) method.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "List assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the [List assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-list-assignments?view=graph-rest-beta) method to the allotment resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "List waiting members",
+          "ChangeType": "Addition",
+          "Description": "Added the [List waiting members](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-list-waitingmembers?view=graph-rest-beta) method to the allotment resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Create assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-post-assignments?view=graph-rest-beta) method to the allotment resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Resource",
+          "ChangedApiName": "assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [assignment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignment?view=graph-rest-beta) resource type.",
+          "Target": "assignment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Delete assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Delete assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-delete?view=graph-rest-beta) method.",
+          "Target": "assignment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-get?view=graph-rest-beta) method.",
+          "Target": "assignment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get allotment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get allotment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-list-allotment?view=graph-rest-beta) method to the assignment resource.",
+          "Target": "assignment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get assigned to",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get assigned to](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-list-assignedto?view=graph-rest-beta) method to the assignment resource.",
+          "Target": "assignment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Reprocess assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the [Reprocess assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-reprocessassignments?view=graph-rest-beta) method.",
+          "Target": "assignment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Update assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Update assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-update?view=graph-rest-beta) method.",
+          "Target": "assignment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Resource",
+          "ChangedApiName": "assignmentError",
+          "ChangeType": "Addition",
+          "Description": "Added the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource type.",
+          "Target": "assignmentError"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get assignment error",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get assignment error](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignmenterror-get?view=graph-rest-beta) method.",
+          "Target": "assignmentError"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get assigned to",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get assigned to](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignmenterror-list-assignedto?view=graph-rest-beta) method to the assignmentError resource.",
+          "Target": "assignmentError"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get usage right",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get usage right](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignmenterror-list-usageright?view=graph-rest-beta) method to the assignmentError resource.",
+          "Target": "assignmentError"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "List assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the [List assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-usageright-list-assignments?view=graph-rest-beta) method to the usageRight resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Resource",
+          "ChangedApiName": "waitingMember",
+          "ChangeType": "Addition",
+          "Description": "Added the [waitingMember](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-waitingmember?view=graph-rest-beta) resource type.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get waiting member",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get waiting member](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-waitingmember-get?view=graph-rest-beta) method.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get allotment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get allotment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-waitingmember-list-allotment?view=graph-rest-beta) method to the waitingMember resource.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Create assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-groupcloudlicensing-post-assignments?view=graph-rest-beta) method to the groupCloudLicensing resource.",
+          "Target": "groupCloudLicensing"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "List waiting members",
+          "ChangeType": "Addition",
+          "Description": "Added the [List waiting members](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-usercloudlicensing-list-waitingmember?view=graph-rest-beta) method to the userCloudLicensing resource.",
+          "Target": "userCloudLicensing"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Method",
+          "ChangedApiName": "Create assignment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-usercloudlicensing-post-assignments?view=graph-rest-beta) method to the userCloudLicensing resource.",
+          "Target": "userCloudLicensing"
+        }
+      ],
+      "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2025-01-24T15:55:45.1517232Z",
+      "WorkloadArea": "Device and app management",
+      "SubArea": "Cloud licensing"
     }
   ]
 }
