@@ -5119,6 +5119,7 @@ Possible values for user account types (group membership), per Windows definitio
 |standard|
 |bulk|
 |unknownFutureValue|
+|granular|
 
 ### cloudPcPolicyApplyActionStatus values
 
