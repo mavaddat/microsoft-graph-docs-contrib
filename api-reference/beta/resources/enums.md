@@ -5374,3 +5374,43 @@ Possible values for user account types (group membership), per Windows definitio
 |d7|
 |d30|
 |unknownFutureValue|
+
+### browsableResourceType values 
+
+|Member|
+|:---|
+|none|
+|site|
+|documentLibrary|
+|folder|
+|unknownFutureValue|
+
+### browseQueryOrder values 
+
+|Member|
+|:---|
+|pathAsc|
+|pathDsc|
+|nameAsc|
+|nameDsc|
+|unknownFutureValue|
+
+### browseQueryResponseItemType values 
+
+|Member|
+|:---|
+|none|
+|site|
+|documentLibrary|
+|folder|
+|file|
+|unknownFutureValue|
+
+### browseSessionStatus values 
+
+|Member|
+|:---|
+|creating|
+|created|
+|failed|
+|unknownFutureValue|

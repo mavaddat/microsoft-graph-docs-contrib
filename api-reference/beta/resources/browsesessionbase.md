@@ -1,0 +1,71 @@
+---
+title: "browseSessionBase resource type"
+description: "Represents a browse session created on a restore point."
+author: "manikantsinghms"
+ms.date: 09/23/2025
+ms.localizationpriority: medium
+ms.subservice: "m365-backup-storage"
+doc_type: resourcePageType
+toc.title: Browse Session
+---
+
+# browseSessionBase resource type
+
+Namespace: microsoft.graph
+
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+Represents a browse session created on a specific restore point. This is abstract entity for browsse sessions. 
+
+- Browse session can be created only for SharePoint sites or OneDrive for Business drives. 
+- Only `fastRestore` points are supported to create browse session.
+- Browse session is short lived entity and it will be deleted automatically.
+
+Inherits from [entity](../resources/entity.md).
+
+
+## Methods
+|Method|Return type|Description|
+|:---|:---|:---|
+|[List](../api/backuprestoreroot-list-browsesessions.md)|[browseSessionBase](../resources/browsesessionbase.md) collection|Get a list of the browseSessionBase objects and their properties.|
+
+
+## Properties
+|Property|Type|Description|
+|:---|:---|:---|
+|backupSizeInBytes|String|The size of the backup in bytes.|
+|createdDateTime|DateTimeOffset|The time of the creation of the browse session.|
+|error|[publicError](../resources/publicerror.md)|Contains the error details if the browse session creation fails.|
+|expirationDateTime|DateTimeOffset|The time after which browse session will be deleted automatically.|
+|id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
+|restorePointDateTime|DateTimeOffset|The date time of the restore point on which browse session is created.|
+|status|browseSessionStatus|The status of the browse session. The possible values are: `creating`, `created`, `failed`, `unknownFutureValue`.|
+
+## Relationships
+None.
+
+## JSON representation
+The following JSON representation shows the resource type.
+<!-- {
+  "blockType": "resource",
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.browseSessionBase",
+  "baseType": "microsoft.graph.entity",
+  "openType": false
+}
+-->
+``` json
+{
+  "@odata.type": "#microsoft.graph.browseSessionBase",
+  "id": "String (identifier)",
+  "status": "String",
+  "createdDateTime": "String (timestamp)",
+  "expirationDateTime": "String (timestamp)",
+  "restorePointDateTime": "String (timestamp)",
+  "backupSizeInBytes": "String",
+  "error": {
+    "@odata.type": "microsoft.graph.publicError"
+  }
+}
+```
+
