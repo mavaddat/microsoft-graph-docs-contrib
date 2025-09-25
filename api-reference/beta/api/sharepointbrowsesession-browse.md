@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Browse API call let you browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md).
+Browse API call allow client to browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md).
 
 ## Permissions
 

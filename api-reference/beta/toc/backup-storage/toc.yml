@@ -174,6 +174,18 @@ items:
 - name: Restore artifact
   href: ../../resources/restoreartifactbase.md
   items:
+  - name: Granular site restore artifact
+    items:
+    - name: Granular site restore artifact
+      href: ../../resources/granularsiterestoreartifact.md
+    - name: List
+      href: ../../api/sharepointrestoresession-list-granularsiterestoreartifacts.md
+  - name: Granular drive restore artifact
+    items:
+    - name: Granular drive restore artifact
+      href: ../../resources/granulardriverestoreartifact.md
+    - name: List
+      href: ../../api/onedriveforbusinessrestoresession-list-granulardriverestoreartifacts.md
   - name: Granular mailbox restore artifact
     items:
     - name: Granular mailbox restore artifact
@@ -245,6 +257,34 @@ items:
     href: ../../api/backuprestoreroot-list-restorepoints.md
   - name: Search
     href: ../../api/restorepoint-search.md
+- name: Browse session
+  items:
+  - name: Browse session
+    href: ../../resources/browsesessionbase.md
+  - name: List
+    href: ../../api/backuprestoreroot-list-browsesessions.md
+  - name: SharePoint Browse session
+    herf: ../../resources/sharepointbrowsesession.md
+    items:
+    - name: Get
+      href: ../../api/sharepointbrowsesession-get.md
+    - name: Create
+      href: ../../api/backuprestoreroot-post-sharepointbrowsesessions.md
+    - name: List
+      href: ../../api/backuprestoreroot-list-sharepointbrowsesessions.md
+    - name: Browse
+      href: ../../api/sharepointbrowsesession-browse.md
+  - name: OneDriveForBusiness Browse session
+    href: ../../resources/onedriveforbusinessbrowsesession.md
+    items:
+    - name: Get
+      href: ../../api/onedriveforbusinessbrowsesession-get.md
+    - name: Create
+      href: ../../api/backuprestoreroot-post-oneDriveForBusinessBrowseSession.md
+    - name: List
+      href: ../../api/backuprestoreroot-list-onedriveforbusinessbrowsesessions.md
+    - name: Browse
+      href: ../../api/onedriveforbusinessbrowsesession-browse.md
 - name: Restore session
   items:
   - name: Restore session
