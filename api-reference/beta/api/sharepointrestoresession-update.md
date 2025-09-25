@@ -50,6 +50,8 @@ PATCH /solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSessi
 |Property|Type|Description|
 |:---|:---|:---|
 |siteRestoreArtifacts|[siteRestoreArtifact](../resources/siterestoreartifact.md) collection|A collection of [siteRestoreArtifact](../resources/siterestoreartifact.md) objects. Required.|
+|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection| Collection of [granularSiteRestoreArtifacts](../resources/granularsiterestoreartifact.md) objects. Required.|
+
 
 ## Response
 
@@ -59,7 +61,9 @@ For a list of possible error responses, see [Backup Storage API error responses]
 
 ## Examples
 
-### Request
+### Example 1: Update a standard restore session.
+
+#### Request
 
 The following example shows a request.
 
@@ -141,7 +145,7 @@ Content-Type: application/json
 
 ---
 
-### Response
+#### Response
 
 The following example shows the response.
 <!-- {
@@ -205,5 +209,72 @@ HTTP/1.1 200 OK
       "id": "4267e382-71a9-4c07-bef7-bda97e09c0d2"
     }
   ]
+}
+```
+
+### Example 2: Update a granular restore session.
+
+To remove a **granularSiteRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md).
+
+#### Request
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "sharepointrestoresession_granular_update"
+}
+-->
+```http
+PATCH /solutions/backupRestore/sharePointRestoreSessions/23e0638e-3ad7-4c7e-8749-72175d046e30
+Content-Type: application/json
+
+{
+  "granularSiteRestoreArtifacts@delta": [
+    {
+      "browseSessionId": "eJxVjEEKwjAQRfc80xeIleluFd2HRkZCgAIEu9CO3aUv78W4H_q_NgQY2gSJHT8IoOhrl5AzosZGBk6",
+      "itemKey": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
+    },
+    {
+      "@removed": {
+        "reason": "changed"
+      },
+      "id": "b535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
+    }
+  ]
+}
+```
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.sharePointRestoreSession"
+}
+-->
+```http/1.1
+HTTP/1.1 200 OK
+Content-Type: application/json
+```
+
+```json
+{
+  "@context": "#$delta",
+    "id": "23e0638e-3ad7-4c7e-8749-72175d046e30",
+    "granularSiteRestoreArtifacts@delta": [
+        {
+            "browseSesionId": "eJxVjEEKwjAQRfc80xeIleluFd2HRkZCgAIEu9CO3aUv78W4H_q_NgQY2gSJHT8IoOhrl5AzosZGBk6",
+            "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
+            "status": "added",
+            "restorePointDatetime": "2025-06-28T15:05:54.1352557Z"
+        },
+        {
+            "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
+            "@removed": {
+                "reason": "changed"
+            }
+        }
+    ]
 }
 ```
