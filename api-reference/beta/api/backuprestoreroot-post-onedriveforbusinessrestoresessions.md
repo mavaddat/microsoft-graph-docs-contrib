@@ -50,7 +50,7 @@ POST /solutions/backupRestore/oneDriveForBusinessRestoreSessions
 
 In the request body, supply a JSON representation of the [oneDriveForBusinessRestoreSession](../resources/onedriveforbusinessrestoresession.md) object.
 
-You can specify the following properties when you create a **oneDriveForBusinessRestoreSession**.
+You can specify the following properties when you create a **oneDriveForBusinessRestoreSession** object.
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -181,11 +181,11 @@ The following example shows a request to create granular restore session.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "create_granular_onedriveforbusinessrestoresession"
+  "name": "onedriveforbusinessrestoresession_granular_create"
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointRestoreSessions
+POST https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessRestoreSessions
 Content-Type: application/json
 
 {
@@ -224,14 +224,24 @@ Content-Type: application/json
   "createdDateTime": "2025-06-28T15:05:54.1352557Z",
   "lastModifiedDateTime": "2025-06-28T15:05:54.4852234Z",
   "createdBy": {
-      "user": {
-          "identity": "86cb95bd-1e9c-4775-836a-6573a4d24950"
-      }
+    "application": {
+      "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "displayName": "Microsoft Enhanced Restore"
+    },
+    "user": {
+      "id": "845457dc-4bb2-4815-bef3-8628ebd1952e",
+      "displayName": "User1"
+    }
   },
   "lastModifiedBy": {
-      "user": {
-          "identity": "86cb95bd-1e9c-4775-836a-6573a4d24950"
-      }
+    "application": {
+      "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "displayName": "Microsoft Enhanced Restore"
+    },
+    "user": {
+      "id": "845457dc-4bb2-4815-bef3-8628ebd1952e",
+      "displayName": "User2"
+    }
   },
   "restoreSessionArtifactCount": {
       "total": 2,

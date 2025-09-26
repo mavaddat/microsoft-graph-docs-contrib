@@ -45,7 +45,7 @@ POST /solutions/backupRestore/sharePointRestoreSessions
 
 ## Request body
 
-In the request body, supply a JSON representation of the [sharePointRestoreSession](../resources/sharepointrestoresession.md).
+In the request body, supply a JSON representation of the [sharePointRestoreSession](../resources/sharepointrestoresession.md) object.
 
 You can specify the following properties when you create a **sharePointRestoreSession** object.
 
@@ -69,7 +69,7 @@ The following example shows a request to create standard restore session.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "sharepointrestoresession_create"
+  "name": "create_sharepointrestoresession"
 }
 -->
 ``` http
@@ -139,7 +139,7 @@ Content-Type: application/json
   "@odata.id": "/solutions/backupRestore/sharepointRestoreSessions(61633878-8321-4950-bfaf-ed285bdd1461)",
   "@odata.type": "#microsoft.graph.sharepointRestoreSession",
   "id": "61633878-8321-4950-bfaf-ed285bdd1461",
-  "status": "activating",
+  "status": "draft",
   "restoreJobType": "standard",
   "restoreSessionArtifactCount": {
     "total": 2,
@@ -217,7 +217,6 @@ Content-Type: application/json
 
 {
   "@odata.context": "/solutions/backupRestore/$metadata#sharepointRestoreSession/$entity",
-  "@odata.type": "#microsoft.graph.sharepointRestoreSession",
   "id": "23e0638e-3ad7-4c7e-8749-72175d046e30",
   "status": "draft",
   "restoreJobType": "granular",
@@ -252,9 +251,7 @@ Content-Type: application/json
 }
 ```
 
----
 ## Remarks:
 - If no payload is provided while creating the restore session, by default it will create empty standard restore session.
 - To create granular restore session, granular site restore artifacts should be present in the payload.
 - `GranularSiteRestoreArtifact` and `SiteRestoreArtifact` in single create or update request is NOT supported.
----
