@@ -210,11 +210,11 @@ To remove a **granularDriveRestoreArtifact** from a granular restore session, sp
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "sharepointrestoresession_granular_update"
+  "name": "onedriveforbusiness_granular_update"
 }
 -->
 ```http
-PATCH /solutions/backupRestore/sharePointRestoreSessions/23e0638e-3ad7-4c7e-8749-72175d046e30
+PATCH /solutions/backupRestore/oneDriveForBusinessRestoreSession/43e0638e-3ad7-4c7e-8749-72175d046e30
 Content-Type: application/json
 
 {
@@ -251,7 +251,7 @@ Content-Type: application/json
 ```json
 {
   "@context": "#$delta",
-    "id": "23e0638e-3ad7-4c7e-8749-72175d046e30",
+    "id": "43e0638e-3ad7-4c7e-8749-72175d046e30",
     "granularDriveRestoreArtifacts@delta": [
         {
             "browseSesionId": "eJxVjEEKwjAQRfc80xeIleluFd2HRkZCgAIEu9CO3aUv78W4H_q_NgQY2gSJHT8IoOhrl5AzosZGBk6",
