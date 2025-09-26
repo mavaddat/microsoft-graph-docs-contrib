@@ -38,7 +38,7 @@ Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 |id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
 |restorePointDateTime|DateTimeOffset|The date time of the restore point on which browse session is created.|
 |status|browseSessionStatus|The status of the browse session. The possible values are: `creating`, `created`, `failed`, `unknownFutureValue`.|
-|siteId|String|Id of the backed up sharepoint site.|
+|siteId|String|Id of the backed-up sharepoint site.|
 
 ## Relationships
 None.

@@ -1,6 +1,6 @@
 ---
 title: "granularDriveRestoreArtifact resource type"
-description: "Represents the granular artifact of the onedrive."
+description: "Represents the granular artifact of the OneDrive."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Granular drivesite restore artifact is an item that is present within a backed-up drive and can be restored.
+Granular drive restore artifact is an item that's present within a backed-up drive and can be restored.
 
 Inherits from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).
 
