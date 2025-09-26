@@ -1,6 +1,6 @@
 ---
 title: "oneDriveForBusinessBrowseSession resource type"
-description: "Represents a browse session created on a restore point of a OneDriveForBusiness"
+description: "Represents a browse session created on a restore point of a OneDrive"
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a browse session created on a restore point of a backed-up OneDriveForBusiness.
+Represents a browse session created on a restore point of a backed-up OneDrive.
 
 
 Inherits from [browseSessionBase](../resources/browsesessionbase.md).
@@ -38,7 +38,7 @@ Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 |id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
 |restorePointDateTime|DateTimeOffset|The date time of the restore point on which browse session is created.|
 |status|browseSessionStatus|The status of the browse session. The possible values are: `creating`, `created`, `failed`, `unknownFutureValue`.|
-|directoryObjectId|String|Id of the backed up OneDrive.|
+|directoryObjectId|String|Id of the backed-up OneDrive.|
 
 ## Relationships
 None.
