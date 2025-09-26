@@ -26,7 +26,6 @@ Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 |[List](../api/backuprestoreroot-list-onedriveforbusinessbrowsesessions.md)|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) collection|Get a list of the oneDriveForBusinessBrowseSession objects and their properties.|
 |[Create](../api/backuprestoreroot-post-onedriveforbusinessbrowsesessions.md)|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md)|Create a new oneDriveForBusinessBrowseSession object.|
 |[Get](../api/onedriveforbusinessbrowsesession-get.md)|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md)|Read the properties and relationships of [oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) object.|
-|[Update](../api/onedriveforbusinessbrowsesession-update.md)|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md)|Update the properties of an oneDriveForBusinessBrowseSession object.|
 |[browse](../api/onedriveforbusinessbrowsesession-browse.md)|[browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection|Allow client to browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md)|
 
 ## Properties
