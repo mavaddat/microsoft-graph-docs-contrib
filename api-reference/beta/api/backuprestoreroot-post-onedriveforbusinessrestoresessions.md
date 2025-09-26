@@ -67,8 +67,8 @@ For a list of possible error responses, see [Backup Storage API error responses]
 
 ### Example 1: Create a standard restore session.
 
+The following example shows a request to create standard restore session.
 #### Request
-The following example shows a request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
@@ -175,9 +175,9 @@ Content-Type: application/json
 
 ### Example 2: Create a granular restore session.
 
-#### Request
-
 The following example shows a request to create granular restore session.
+
+#### Request
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",

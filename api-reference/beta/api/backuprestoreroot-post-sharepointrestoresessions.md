@@ -64,16 +64,14 @@ For a list of possible error responses, see [Backup Storage API error responses]
 
 ### Example 1: Create a standard restore session.
 
-#### Request
-
 The following example shows a request to create standard restore session.
+#### Request
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "sharepointrestoresession_create"
 }
 -->
-
 ``` http
 POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointRestoreSessions
 Content-Type: application/json
@@ -132,7 +130,6 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.sharePointRestoreSession"
 }
 -->
-
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
@@ -180,14 +177,12 @@ Content-Type: application/json
 The following example shows a request to create granular restore session.
 
 #### Request
-
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "sharepointrestoresession_granular_create"
 }
 -->
-
 ``` http
 POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointRestoreSessions
 Content-Type: application/json
@@ -205,7 +200,6 @@ Content-Type: application/json
   ]
 }
 ```
-
 #### Response
 
 The following example shows the response.
