@@ -174,9 +174,12 @@ Content-Type: application/json
 ---
 ### Example 2: Create a granular restore session.
 
-The following example shows a request to create granular restore session.
+The following example shows how to create a new [sharePointRestoreSession](../resources/sharepointrestoresession.md) with [granularSiteRestoreArtifacts](../resources/granularsiterestoreartifact.md).
 
 #### Request
+
+The following example shows a request to create granular restore session.
+
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
@@ -210,12 +213,13 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.sharePointRestoreSession"
 }
 -->
+
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-  "@odata.context": "/solutions/backupRestore/$metadata#sharepointRestoreSession/$entity",
+  "@odata.context": "/solutions/backupRestore/$metadata#sharePointRestoreSessions/$entity",
   "id": "23e0638e-3ad7-4c7e-8749-72175d046e30",
   "status": "draft",
   "restoreJobType": "granular",
