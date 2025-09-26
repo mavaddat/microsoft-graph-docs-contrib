@@ -210,7 +210,6 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.sharePointRestoreSession"
 }
 -->
-
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
@@ -250,8 +249,9 @@ Content-Type: application/json
   }
 }
 ```
-
+---
 ## Remarks:
 - If no payload is provided while creating the restore session, by default it will create empty standard restore session.
 - To create granular restore session, granular site restore artifacts should be present in the payload.
 - `GranularSiteRestoreArtifact` and `SiteRestoreArtifact` in single create or update request is NOT supported.
+---

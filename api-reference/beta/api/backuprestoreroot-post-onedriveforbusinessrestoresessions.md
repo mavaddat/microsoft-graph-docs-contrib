@@ -172,7 +172,7 @@ Content-Type: application/json
   "lastModifiedDateTime": "2023-03-30T12:01:03.45Z"
 }
 ```
-
+---
 ### Example 2: Create a granular restore session.
 
 The following example shows a request to create granular restore session.
@@ -251,6 +251,7 @@ Content-Type: application/json
   }
 }
 ```
+---
 
 ## Remarks:
 - If no payload is provided while creating the restore session, by default it will create empty standard restore session.
