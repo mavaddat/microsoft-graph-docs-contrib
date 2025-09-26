@@ -171,7 +171,7 @@ Content-Type: application/json
   "lastModifiedDateTime": "2015-06-19T12:01:03.45Z"
 }
 ```
-
+---
 ### Example 2: Create a granular restore session.
 
 The following example shows a request to create granular restore session.
@@ -250,8 +250,8 @@ Content-Type: application/json
 }
 ```
 ---
+
 ## Remarks:
 - If no payload is provided while creating the restore session, by default it will create empty standard restore session.
 - To create granular restore session, granular site restore artifacts should be present in the payload.
 - `GranularSiteRestoreArtifact` and `SiteRestoreArtifact` in single create or update request is NOT supported.
----
