@@ -53,12 +53,22 @@ In the request body, supply a JSON representation of the following parameters.
 |:---|:---|:---|
 |browseLocationItemKey|String|The item key of the location that you want to browse. Optional.|
 |browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. Optional. The possible values are `none`, `site`, `documentLibrary`, `folder` and `unknownFutureValue`. Optional.|
-|filter|String|Contains the [searchExpression](../resources/sharepointbrowsesession-browse.md#searchexpression-examples). Optional.|
+|filter|String|Contains the [searchExpression](../api/sharepointbrowsesession-browse.md#search-expression-examples). Optional.|
 |orderBy|[browseQueryOrder](../resources/enums.md#browsequeryorder-values)|Specifies the order by which response should be ordered. Optional.|
 
 ## Response
 
-If successful, this function returns a `200 OK` response code and a [browseQueryResponseItem](../resources/enums.md#browsequeryresponseitemtype-values) collection in the response body.
+If successful, this function returns a `200 OK` response code and a [browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection in the response body.
+
+### Search expression examples
+
+The following table shows the possible formats for the filter expression.
+Filter is supported only on `name` property.
+
+| Property                                 | Operator                                | Example                                                                  |
+| ------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------- |
+| `name`      | `-contains` |   `(name -contains 'contoso')`  |
+
 
 ## Examples
 

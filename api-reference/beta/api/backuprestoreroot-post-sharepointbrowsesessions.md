@@ -49,6 +49,7 @@ POST /solutions/backupRestore/sharePointBrowseSessions
 In the request body, supply a JSON representation of the [sharePointBrowseSession](../resources/sharepointbrowsesession.md) object.
 
 You can specify the following properties when creating a **sharePointBrowseSession**.
+
 |Property|Type|Description|
 |:---|:---|:---|
 |RestorePointId|String|The id of the [RestorePoint](../resources/restorepoint.md) on which user wants to create a browse session. Required.|
