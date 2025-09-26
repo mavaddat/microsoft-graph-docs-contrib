@@ -73,6 +73,7 @@ The following example shows a request to create standard restore session.
   "name": "sharepointrestoresession_create"
 }
 -->
+
 ``` http
 POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointRestoreSessions
 Content-Type: application/json
@@ -131,6 +132,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.sharePointRestoreSession"
 }
 -->
+
 ``` http
 HTTP/1.1 201 Created
 Content-Type: application/json
@@ -175,15 +177,17 @@ Content-Type: application/json
 
 ### Example 2: Create a granular restore session.
 
+The following example shows a request to create granular restore session.
+
 #### Request
 
-The following example shows a request to create granular restore session.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "sharepointrestoresession_granular_create"
 }
 -->
+
 ``` http
 POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointRestoreSessions
 Content-Type: application/json
@@ -245,7 +249,9 @@ Content-Type: application/json
 }
 ```
 
+---
 ## Remarks:
 - If no payload is provided while creating the restore session, by default it will create empty standard restore session.
 - To create granular restore session, granular site restore artifacts should be present in the payload.
 - `GranularSiteRestoreArtifact` and `SiteRestoreArtifact` in single create or update request is NOT supported.
+---
