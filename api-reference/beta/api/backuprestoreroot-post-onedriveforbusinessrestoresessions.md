@@ -223,7 +223,6 @@ Content-Type: application/json
   "restoreJobType": "granular",
   "createdDateTime": "2025-06-28T15:05:54.1352557Z",
   "lastModifiedDateTime": "2025-06-28T15:05:54.4852234Z",
-  "activationDateTime": "0001-01-01T00:00:00Z",
   "createdBy": {
       "user": {
           "identity": "86cb95bd-1e9c-4775-836a-6573a4d24950"

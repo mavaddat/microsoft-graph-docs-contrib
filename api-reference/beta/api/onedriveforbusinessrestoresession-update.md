@@ -240,15 +240,13 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.sharePointRestoreSession"
+  "@odata.type": "microsoft.graph.oneDriveForBusinessRestoreSession"
 }
 -->
-```http/1.1
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-```
 
-```json
 {
   "@context": "#$delta",
     "id": "43e0638e-3ad7-4c7e-8749-72175d046e30",

@@ -216,30 +216,39 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-    "@odata.context": "/solutions/backupRestore/$metadata#sharepointRestoreSession/$entity",
-    "@odata.type": "#microsoft.graph.sharepointRestoreSession",
-    "id": "23e0638e-3ad7-4c7e-8749-72175d046e30",
-    "status": "draft",
-    "restoreJobType": "granular",
-    "createdDateTime": "2025-06-28T15:05:54.1352557Z",
-    "lastModifiedDateTime": "2025-06-28T15:05:54.4852234Z",
-    "activationDateTime": "0001-01-01T00:00:00Z",
-    "createdBy": {
-        "user": {
-            "identity": "86cb95bd-1e9c-4775-836a-6573a4d24950"
-        }
+  "@odata.context": "/solutions/backupRestore/$metadata#sharepointRestoreSession/$entity",
+  "@odata.type": "#microsoft.graph.sharepointRestoreSession",
+  "id": "23e0638e-3ad7-4c7e-8749-72175d046e30",
+  "status": "draft",
+  "restoreJobType": "granular",
+  "createdDateTime": "2025-06-28T15:05:54.1352557Z",
+  "lastModifiedDateTime": "2025-06-28T15:05:54.4852234Z",
+  "createdBy": {
+    "application": {
+      "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "displayName": "Microsoft Enhanced Restore"
     },
-    "lastModifiedBy": {
-        "user": {
-            "identity": "86cb95bd-1e9c-4775-836a-6573a4d24950"
-        }
-    },
-    "restoreSessionArtifactCount": {
-        "total": 2,
-        "inProgress": 0,
-        "completed": 0,
-        "failed": 0
+    "user": {
+      "id": "845457dc-4bb2-4815-bef3-8628ebd1952e",
+      "displayName": "User1"
     }
+  },
+  "lastModifiedBy": {
+    "application": {
+      "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "displayName": "Microsoft Enhanced Restore"
+    },
+    "user": {
+      "id": "845457dc-4bb2-4815-bef3-8628ebd1952e",
+      "displayName": "User2"
+    }
+  },
+  "restoreSessionArtifactCount": {
+      "total": 2,
+      "inProgress": 0,
+      "completed": 0,
+      "failed": 0
+  }
 }
 ```
 
