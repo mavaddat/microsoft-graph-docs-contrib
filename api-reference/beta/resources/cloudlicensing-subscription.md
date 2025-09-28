@@ -26,7 +26,7 @@ Represents a subscription which backs an allotment.
 |tags|[microsoft.graph.cloudLicensing.subscriptionTags](#tags-values) | A set of flags which provide additional information about the subscription. The possible values are: `none`, `trial`, `unknownFutureValue`.<br/><br/>If new values are added to this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) in the future, you must use the `Prefer: include-unknown-enum-members` request header to get them.<br/><br/>The **tags** property is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Not nullable. Read-only.|
 
 
-### state values
+### subscriptionState values
 
 | Member            | Description                                                            |
 |:------------------|:-----------------------------------------------------------------------|
@@ -38,7 +38,7 @@ Represents a subscription which backs an allotment.
 | unknownFutureValue| Evolvable enumeration sentinel value. Don't use.                       |
 
 
-### tags values
+### subscriptionTags values
 
 | Member            | Description                                                            |
 |:------------------|:-----------------------------------------------------------------------|
@@ -59,11 +59,11 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.cloudLicensing.subscription",
-  "nextLifecycleDate": "2025-09-30T00:00:00.000Z",
-  "startDate": "2025-07-18T00:00:00.000Z",
-  "state": "active",
-  "subscriptionId": "405ee855-dd74-f695-8d7e-be35a6788fe8",
-  "tags": "none"
+  "nextLifecycleDate": "String (date)",
+  "startDate": "String (date)",
+  "state": "String",
+  "subscriptionId": "String",
+  "tags": "String"
 }
 ```
 
