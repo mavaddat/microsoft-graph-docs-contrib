@@ -133,7 +133,7 @@ The following example shows how to get [allotment](../resources/cloudlicensing-a
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_admin_assignment_allotment"
+  "name": "list_admin_assignment_allotment_with_waitingmembers"
 }
 -->
 ``` http
@@ -182,7 +182,7 @@ The following example shows how to get [allotment](../resources/cloudlicensing-a
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_admin_assignment_allotment"
+  "name": "list_admin_assignment_allotment_and_aggregate_allotted_units"
 }
 -->
 ``` http
