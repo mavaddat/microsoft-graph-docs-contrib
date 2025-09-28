@@ -190,27 +190,21 @@ Content-Type: application/json
 
 ### Example 3: Get a usageRight with assignments
 
-The following example shows how to get a usage right for a user and the assignments.
+The following example shows how to get a usage right and its assignments for a user.
 
 #### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
+
 <!-- {
   "blockType": "request",
-  "name": "cloudlicensing-usageright-get-example",
+  "name": "cloudlicensing_usageright_get_with_assignments",
   "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113","i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/usageRights/i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3?$expand=assignments($select=id)
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/cloudlicensing-usageright-get-example-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 #### Response
 
@@ -250,27 +244,21 @@ Content-Type: application/json
 
 ### Example 4: Get a usageRight with allotments
 
-The following example shows how to get a usage right for a user and the assignments.
+The following example shows how to get a usage right and its allotments for a user.
 
 #### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
+
 <!-- {
   "blockType": "request",
-  "name": "cloudlicensing-usageright-get-example",
+  "name": "cloudlicensing_usageright_get_with_allotments",
   "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113","i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/usageRights/i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3?$expand=allotments($select=id,allottedUnits,consumedUnits,subscriptions)
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/cloudlicensing-usageright-get-example-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 #### Response
 
