@@ -52,7 +52,7 @@ The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
-  "@odata.type": "microsoft.graph.cloudLicensing.allotment",
+  "@odata.type": "microsoft.graph.cloudLicensing.subscription",
   "openType": false
 }
 -->
