@@ -136,7 +136,7 @@ The following example shows how to get a list of [assignment](../resources/cloud
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_admin_assignments"
+  "name": "list_admin_assignments_with_allotments"
 }
 -->
 ``` http
@@ -164,14 +164,12 @@ Content-Type: application/json
       "id": "405ee855-dd74-f695-8d7e-be35a6788fe8",
       "disabledServicePlanIds": [
         "5e62787c-c316-451f-b873-1d05acd4d12c"
-      ]
+      ],
       "assignedTo": {
-        {
-          "@odata.type": "#microsoft.graph.user",
-          "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
-          "displayName": "Steve Fred",
-          "userPrincipalName": "stevefred@contoso.com"
-        }
+        "@odata.type": "#microsoft.graph.user",
+        "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
+        "displayName": "Steve Fred",
+        "userPrincipalName": "stevefred@contoso.com"
       },
       "allotment": {
         "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
@@ -204,7 +202,7 @@ The following example shows how to get a list of [assignment](../resources/cloud
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_admin_assignments"
+  "name": "list_admin_assignments_filtered_skudId"
 }
 -->
 ``` http
@@ -271,5 +269,4 @@ Content-Type: application/json
     }
   ]
 }
-
 ```
