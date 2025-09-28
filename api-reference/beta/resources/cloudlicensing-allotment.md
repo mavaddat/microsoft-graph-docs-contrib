@@ -69,17 +69,14 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.cloudLicensing.allotment",
-  "allottedUnits": "Integer",
+  "allottedUnits": "Int32",
   "assignableTo": "String",
-  "consumedUnits": "Integer",
+  "consumedUnits": "Int32",
   "id": "String (identifier)",
-  "services": [
-    {
-      "@odata.type": "microsoft.graph.cloudLicensing.service"
-    }
-  ],
+  "services": [{"@odata.type": "microsoft.graph.cloudLicensing.service"}],
   "skuId": "Guid",
-  "skuPartNumber": "String"
+  "skuPartNumber": "String",
+  "subscriptions": [{"@odata.type": "microsoft.graph.cloudLicensing.subscription"}]
 }
 ```
 
