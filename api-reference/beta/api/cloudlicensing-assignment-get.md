@@ -140,7 +140,7 @@ The following example shows how to get an [assignment](../resources/cloudlicensi
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_admin_assignments"
+  "name": "get_assignment"
 }
 -->
 ``` http
