@@ -37,7 +37,7 @@ Inherits from [entity](../resources/entity.md).
 |Relationship|Type|Description|
 |:---|:---|:---|
 |allotments|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|The set of allotments associated with the assignments that combine to form this usageRight.|
-|assignments|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|The set of assignments which combine to form this usageRight. This includes both direct assignments and assignments inherited through group membership.|
+|assignments|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|The set of assignments that combine to form this **usageRight**, including both direct assignments and assignments inherited through group membership.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
