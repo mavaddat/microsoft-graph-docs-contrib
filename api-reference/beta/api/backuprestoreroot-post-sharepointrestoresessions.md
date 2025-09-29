@@ -174,11 +174,9 @@ Content-Type: application/json
 ---
 ### Example 2: Create a granular restore session.
 
-The following example shows how to create a new [sharePointRestoreSession](../resources/sharepointrestoresession.md) with [granularSiteRestoreArtifacts](../resources/granularsiterestoreartifact.md).
+The following example shows a request to create granular restore session.
 
 #### Request
-
-The following example shows a request to create granular restore session.
 
 # [HTTP](#tab/http)
 <!-- {
