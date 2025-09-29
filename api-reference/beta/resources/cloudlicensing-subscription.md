@@ -1,6 +1,6 @@
 ---
 title: "subscription resource type"
-description: "Represents a subscription which backs an allotment."
+description: "Represents a subscription that backs an allotment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,38 +14,35 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a subscription which backs an allotment.
+Represents a subscription that backs an allotment.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|nextLifecycleDate|DateTime|The date on which the current state will transition to the next state.|
+|nextLifecycleDate|DateTime|The date on which the current state transitions to the next state.|
 |startDate|DateTime|The date when the subscription started.|
-|state|[microsoft.graph.cloudLicensing.subscriptionState](#subscriptionstate-values) | The current lifecycle state of the subscription. The possible values are: `active`, `warning`, `suspended`, `lockedOut`, `deleted`, `unknownFutureValue`.<br/><br/>If new values are added to this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) in the future, you must use the `Prefer: include-unknown-enum-members` request header to get them.<br/><br/>The **state** property is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only.|
+|state|[microsoft.graph.cloudLicensing.subscriptionState](#subscriptionstate-values) | The current lifecycle state of the subscription. The possible values are: `active`, `warning`, `suspended`, `lockedOut`, `deleted`, `unknownFutureValue`. This property is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only.|
 |subscriptionId|String|Identifier for the subscription.|
-|tags|[microsoft.graph.cloudLicensing.subscriptionTags](#subscriptiontags-values) | A set of flags which provide additional information about the subscription. The possible values are: `none`, `trial`, `unknownFutureValue`.<br/><br/>If new values are added to this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations) in the future, you must use the `Prefer: include-unknown-enum-members` request header to get them.<br/><br/>The **tags** property is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only.|
-
+|tags|[microsoft.graph.cloudLicensing.subscriptionTags](#subscriptiontags-values) | A set of flags that provide additional information about the subscription. The possible values are: `none`, `trial`, `unknownFutureValue`. This property is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only.|
 
 ### subscriptionState values
 
 | Member            | Description                                                            |
 |:------------------|:-----------------------------------------------------------------------|
 | active              | The allotment is backed by an active, in-date subscription.                  |
-| warning              | The allotment is backed by a subscription which has expired but is still within the grace period.            |
-| suspended             | The allotment is backed by a subscription which has expired, is not within the grace period, and has been suspended. Licenses assigned from this allotment will cease to provide benefit.                    |
-| lockedOut            | The allotment is backed by a subscription which is in a locked-out / deprovisioned state. Licenses assigned from this allotment will cease to provide benefit.          |
-| deleted           | The allotment and its backing subscription have been deleted. Licenses assigned from this allotment will cease to exist or provide benefit |
+| warning              | The allotment is backed by a subscription that expired but is still within the grace period.            |
+| suspended             | The allotment is backed by a subscription that expired, isn't within the grace period, and is suspended. Licenses assigned from this allotment no longer provide benefits.                    |
+| lockedOut            | The allotment is backed by a subscription that is in a locked-out or deprovisioned state. Licenses assigned from this allotment no longer provide benefits.          |
+| deleted           | The allotment and its backing subscription are deleted. Licenses assigned from this allotment no longer exist or provide benefits. |
 | unknownFutureValue| Evolvable enumeration sentinel value. Don't use.                       |
-
 
 ### subscriptionTags values
 
 | Member            | Description                                                            |
 |:------------------|:-----------------------------------------------------------------------|
-| none              | Indicates no flags are enabled.                  |
+| none              | Indicates that no flags are enabled.                  |
 | trial              | Indicates that the licenses in this allotment are backed by a trial subscription.            |
 | unknownFutureValue| Evolvable enumeration sentinel value. Don't use.                       |
-
 
 ## JSON representation
 The following JSON representation shows the resource type.
@@ -66,4 +63,3 @@ The following JSON representation shows the resource type.
   "tags": "String"
 }
 ```
-
