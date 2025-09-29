@@ -1,6 +1,6 @@
 ---
 title: "allotment resource type"
-description: "An independently manageable pool of licenses backed by a subscription."
+description: "Represents an independently manageable pool of licenses backed by a subscription."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-An independently manageable pool of licenses backed by a subscription.
+Represents an independently manageable pool of licenses backed by a subscription.
 
 Inherits from [entity](../resources/entity.md)
 

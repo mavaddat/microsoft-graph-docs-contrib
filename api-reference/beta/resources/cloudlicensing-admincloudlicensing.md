@@ -27,14 +27,13 @@ Inherits from [entity](../resources/entity.md)
 |[Create assignment](../api/cloudlicensing-admincloudlicensing-post-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Create a new assignment object.|
 
 ## Properties
-|Property|Type|Description|
-|:---|:---|:---|
+None.
 
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|allotments|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|The set of all allotments within the organization. Not nullable. Read-only.|
-|assignmentErrors|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|The set of all asynchronous allotment assignment errors affecting the organization. Not nullable. Read-only.|
+|allotments|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|The set of all allotments within the organization. Read-only.|
+|assignmentErrors|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|The set of all asynchronous allotment assignment errors affecting the organization. Read-only.|
 |assignments|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|The set of all license assignments within the organization. Not nullable.|
 
 ## JSON representation
