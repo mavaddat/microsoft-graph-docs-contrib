@@ -1,6 +1,6 @@
 ---
 title: "assignmentError resource type"
-description: "Represents an error impacting synchronization of license assignments in the directory."
+description: "Represents an error that impacts synchronization of license assignments in the directory."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an error impacting synchronization of license assignments in the directory. This error can prevent the license assignment from taking effect or from being updated.
+Represents an error that impacts synchronization of license assignments in the directory. This error can prevent the license assignment from taking effect or from being updated.
 
 Inherits from [entity](../resources/entity.md)
 
@@ -32,14 +32,14 @@ Inherits from [entity](../resources/entity.md)
 |code|String|The error code associated with the assignment synchronization failure.|
 |id|String|The unique identifier for the **assignmentError** that should be treated as an opaque identifier. Inherited from [entity](../resources/entity.md). Not nullable. Read-only.|
 |message|String|The error message associated with the assignment synchronization failure.|
-|occurrenceDateTime|DateTimeOffset|The date and time at which the error most recently occurred.|
+|occurrenceDateTime|DateTimeOffset|The date and time at which the error most recently occurred. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 |skuId|Guid| Unique identifier (GUID) for the service SKU that is equal to the **skuId** property on the related [subscribedSku](subscribedsku.md) object. Read-only. Supports `$filter`. |
 
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
 |assignedTo|[directoryObject](../resources/directoryobject.md)|The user to whom licenses are assigned. Not nullable. Read-only.|
-|usageRight|[usageRight](../resources/cloudlicensing-usageright.md)|The affected usageRight, if one exists. Read-only.|
+|usageRight|[usageRight](../resources/cloudlicensing-usageright.md)|The affected **usageRight**, if one exists. Read-only.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
@@ -60,4 +60,3 @@ The following JSON representation shows the resource type.
   "skuId": "Guid"
 }
 ```
-
