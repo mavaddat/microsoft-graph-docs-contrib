@@ -1,6 +1,6 @@
 ---
 title: "assignment resource type"
-description: "A license assignment, granting a license for the product-SKU contained within an allotment directly to the assigned user or indirectly to each member of the assigned group."
+description: "Represents a license assignment that grants a license for the product-SKU contained within an allotment directly to the assigned user or indirectly to each member of the assigned group."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A license assignment, granting a license for the product-SKU contained within an allotment directly to the assigned user or indirectly to each member of the assigned group. Each unique user consumes one license from each allotment to which they are directly or indirectly assigned.
+Represents a license assignment that grants a license for the product-SKU contained within an allotment directly to the assigned user or indirectly to each member of the assigned group. Each unique user consumes one license from each allotment to which they're directly or indirectly assigned.
 
 Inherits from [entity](../resources/entity.md)
 
@@ -57,9 +57,7 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.cloudLicensing.assignment",
-  "disabledServicePlanIds": [
-    "Guid"
-  ],
+  "disabledServicePlanIds": ["Guid"],
   "id": "String (identifier)"
 }
 ```
