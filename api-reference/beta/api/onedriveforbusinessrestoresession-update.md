@@ -202,12 +202,11 @@ HTTP/1.1 200 OK
 }
 ```
 
-### Example 2: Update a granular restore session.
+### Example 2: Update a granular restore session
 
 To remove a **granularDriveRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md).
 
 #### Request
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "onedriveforbusiness_granular_update"

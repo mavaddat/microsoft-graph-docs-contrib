@@ -172,12 +172,11 @@ Content-Type: application/json
 }
 ```
 ---
-### Example 2: Create a granular restore session.
+### Example 2: Create a granular restore session
 
 The following example shows a request to create granular restore session.
 
 #### Request
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "sharepointrestoresession_granular_create"

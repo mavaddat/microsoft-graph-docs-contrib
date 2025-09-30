@@ -178,7 +178,6 @@ Content-Type: application/json
 The following example shows a request to create granular restore session.
 
 #### Request
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "onedriveforbusinessrestoresession_granular_create"

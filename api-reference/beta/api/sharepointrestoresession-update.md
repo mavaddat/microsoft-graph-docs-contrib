@@ -218,7 +218,6 @@ To remove a **granularSiteRestoreArtifact** from a granular restore session, spe
 
 #### Request
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "sharepointrestoresession_granular_update"
