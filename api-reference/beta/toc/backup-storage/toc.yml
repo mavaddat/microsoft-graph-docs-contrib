@@ -174,18 +174,6 @@ items:
 - name: Restore artifact
   href: ../../resources/restoreartifactbase.md
   items:
-  - name: Granular site restore artifact
-    items:
-    - name: Granular site restore artifact
-      href: ../../resources/granularsiterestoreartifact.md
-    - name: List
-      href: ../../api/sharepointrestoresession-list-granularsiterestoreartifacts.md
-  - name: Granular drive restore artifact
-    items:
-    - name: Granular drive restore artifact
-      href: ../../resources/granulardriverestoreartifact.md
-    - name: List
-      href: ../../api/onedriveforbusinessrestoresession-list-granulardriverestoreartifacts.md
   - name: Granular mailbox restore artifact
     items:
     - name: Granular mailbox restore artifact
@@ -257,7 +245,6 @@ items:
     href: ../../api/backuprestoreroot-list-restorepoints.md
   - name: Search
     href: ../../api/restorepoint-search.md
-- name: Browse session
   items:
   - name: Browse session
     href: ../../resources/browsesessionbase.md

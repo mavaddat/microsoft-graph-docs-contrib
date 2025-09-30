@@ -1,6 +1,6 @@
 ---
 title: "granularSiteRestoreArtifact resource type"
-description: "Represents the granular artifact of the site"
+description: "Represents the granular artifact of the sharepoint site."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Granular site restore artifact is an item that is present within a backed-up site and can be restored.
+Represents the granular artifact of the sharepoint site that is present within a backed-up site and can be restored.
 
 Inherits from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).
 

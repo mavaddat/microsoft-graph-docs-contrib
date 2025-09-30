@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Granular drive restore artifact is an item that's present within a backed-up drive and can be restored.
+Represents the granular artifact of the OneDrive that is present within a backed-up drive and can be restored.
 
 Inherits from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).
 
