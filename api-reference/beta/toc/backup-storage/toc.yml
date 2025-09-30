@@ -245,8 +245,6 @@ items:
     href: ../../api/backuprestoreroot-list-restorepoints.md
   - name: Search
     href: ../../api/restorepoint-search.md
-  items:
-  - name: Browse session
     href: ../../resources/browsesessionbase.md
   - name: List
     href: ../../api/backuprestoreroot-list-browsesessions.md
