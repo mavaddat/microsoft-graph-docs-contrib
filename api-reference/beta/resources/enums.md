@@ -5,7 +5,7 @@ doc_type: enumPageType
 ms.localizationpriority: medium
 ms.subservice: "non-product-specific"
 author: "MSGraphDocsvTeam"
-ms.date: 07/03/2025
+ms.date: 08/06/2025
 ms.custom: sfi-ropc-nochange
 ---
 
@@ -222,6 +222,31 @@ Namespace: microsoft.graph
 | inactive |
 | active |
 | unknownfuturevalue |
+
+### sharePointMigrationJobErrorLevel values
+
+|Member|
+|:---|
+|important|
+|warning|
+|error|
+|fatalError|
+|unknownFutureValue|
+
+### sharePointMigrationObjectType values
+
+|Member|
+|:---|
+|site|
+|web|
+|folder|
+|list|
+|listItem|
+|file|
+|alert|
+|sharedWithObject|
+|invalid|
+|unknownFutureValue|
 
 ### siteLockState values
 
@@ -1607,6 +1632,22 @@ Namespace: microsoft.graph
 | appPassword |
 | unknownFutureValue |
 | externalAuthMethod |
+| hardwareOneTimePasscode |
+| windowsHelloForBusiness |
+| microsoftAuthenticatorPasswordless |
+| temporaryAccessPass |
+| macOsSecureEnclaveKey |
+| passKeyDeviceBound |
+| passKeyDeviceBoundAuthenticator |
+| passKeyDeviceBoundWindowsHello |
+| softwareOneTimePasscode |
+| microsoftAuthenticatorPush |
+| mobilePhone |
+| sms |
+| alternateMobilePhone |
+| fido2SecurityKey |
+| oneTimePasscode |
+| passKeySynced |
 
 ### authenticationAppAdminConfiguration values
 
@@ -5376,6 +5417,15 @@ Possible values for user account types (group membership), per Windows definitio
 |d30|
 |unknownFutureValue|
 
+### aggregationWindow values 
+
+|Member|
+|:---|
+|h1|
+|h6|
+|d1|
+|unknownFutureValue|
+
 ### browsableResourceType values 
 
 |Member|
@@ -5414,4 +5464,3 @@ Possible values for user account types (group membership), per Windows definitio
 |creating|
 |created|
 |failed|
-|unknownFutureValue|
