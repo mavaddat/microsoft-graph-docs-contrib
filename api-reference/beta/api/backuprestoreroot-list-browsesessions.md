@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the browseSessionBase objects and their properties.
+Get a list of the [browseSessionBase](../resources/browsesessionbase.md) objects and their properties.
 
 ## Permissions
 

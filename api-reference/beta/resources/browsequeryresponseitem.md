@@ -1,6 +1,6 @@
 ---
 title: "browseQueryResponseItem resource type"
-description: "Represents the response of the browse API"
+description: "Represents the response of the browse API."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the response of the [SharePointBrowse Query](../api/sharepointbrowsesession-browse.md) and [OneDriveForBusinessBrowse Query](../api/onedriveforbusinessbrowsesession-browse.md) API.
+Represents the response of the [SharePointBrowse Query](../api/sharepointbrowsesession-browse.md) and [OneDriveForBusinessBrowse Query](../api/onedriveforbusinessbrowsesession-browse.md) APIs.
 
 
 ## Properties
