@@ -17,9 +17,9 @@ Namespace: microsoft.graph
 
 Represents a browse session created on a specific restore point. This is an abstract entity for browse sessions. 
 
-- Browse session can be created only for SharePoint and OneDriveForBusiness. 
-- Only `fastRestore` points are supported to create browse session.
-- Browse session is short lived entity and it will be deleted automatically.
+Browse session can be created only for SharePoint and OneDriveForBusiness. 
+Only `fastRestore` points are supported to create browse session.
+Browse session is short lived entity and it will be deleted automatically.
 
 Inherits from [entity](../resources/entity.md).
 
