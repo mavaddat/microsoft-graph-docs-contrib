@@ -67,7 +67,7 @@ For a list of possible error responses, see [Backup Storage API error responses]
 
 ## Examples
 
-### Example 1: Create a standard restore session.
+### Example 1: Create a standard restore session
 
 The following example shows a request to create standard restore session.
 #### Request
