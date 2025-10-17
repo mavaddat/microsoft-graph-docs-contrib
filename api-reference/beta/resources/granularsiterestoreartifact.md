@@ -1,6 +1,6 @@
 ---
 title: "granularSiteRestoreArtifact resource type"
-description: "Represents the granular artifact of the sharepoint site."
+description: "Represents the granular artifact of the SharePoint site."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium

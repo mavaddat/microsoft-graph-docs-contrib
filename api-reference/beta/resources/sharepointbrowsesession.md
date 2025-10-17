@@ -1,6 +1,6 @@
 ---
 title: "sharePointBrowseSession resource type"
-description: "Represents a browse session created on a restore point of a sharepoint site."
+description: "Represents a browse session created on a restore point of a SharePoint site."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a browse session created on a restore point of a backed-up sharepoint site.
+Represents a browse session created on a restore point of a backed-up SharePoint site.
 
 Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 
@@ -37,7 +37,7 @@ Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 |id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
 |restorePointDateTime|DateTimeOffset|The date time of the restore point on which browse session is created.|
 |status|browseSessionStatus|The status of the browse session. The possible values are: `creating`, `created`, `failed`, `unknownFutureValue`.|
-|siteId|String|Id of the backed-up sharepoint site.|
+|siteId|String|Id of the backed-up SharePoint site.|
 
 ## Relationships
 None.
