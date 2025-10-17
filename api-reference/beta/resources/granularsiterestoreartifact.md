@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the granular artifact of the sharepoint site that is present within a backed-up site and can be restored.
+Represents the granular artifact of the SharePoint site that is present within a backed-up site and can be restored.
 
 Inherits from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).
 

@@ -16,7 +16,6 @@ Namespace: microsoft.graph
 
 Represents a browse session created on a restore point of a backed-up sharepoint site.
 
-
 Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 
 
