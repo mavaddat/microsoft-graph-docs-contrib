@@ -60,6 +60,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 
 The following example shows a request.
+
 <!-- {
   "blockType": "request",
   "name": "list_browsesessionbase"
@@ -68,7 +69,6 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/solutions/backupRestore/browseSessions
 ```
-
 
 ### Response
 
