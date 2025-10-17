@@ -1,6 +1,6 @@
 ---
 title: "sharePointBrowseSession: browse"
-description: "Browse the files and folder within the sharepoint browseSession"
+description: "Browse the files and folders within the sharepointBrowseSession"
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Browse API call allow client to browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md).
+Browse the files and folders within a [BrowseSession](../resources/browsesessionbase.md).
 
 ## Permissions
 
@@ -53,7 +53,7 @@ In the request body, supply a JSON representation of the following parameters.
 |:---|:---|:---|
 |browseLocationItemKey|String|The item key of the location that you want to browse. Optional.|
 |browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. Optional. The possible values are `none`, `site`, `documentLibrary`, `folder` and `unknownFutureValue`. Optional.|
-|filter|String|Contains the [searchExpression](../api/sharepointbrowsesession-browse.md#search-expression-examples). Optional.|
+|filter|String|Contains the search expression. Optional.|
 |orderBy|[browseQueryOrder](../resources/enums.md#browsequeryorder-values)|Specifies the order by which response should be ordered. Optional.|
 
 ## Response
