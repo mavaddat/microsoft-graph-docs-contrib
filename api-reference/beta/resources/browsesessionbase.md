@@ -17,12 +17,10 @@ Namespace: microsoft.graph
 
 Represents a browse session created on a specific restore point. This is an abstract entity for browse sessions. 
 
-Browse session can be created only for SharePoint and OneDriveForBusiness. 
-Only `fastRestore` points are supported to create browse session.
-Browse session is short lived entity and it will be deleted automatically.
+A browse session can be created only for SharePoint and OneDrive for Business. Only `fastRestore` points are supported to create a browse session.
+A browse session is a short-lived entity and is deleted automatically.
 
 Inherits from [entity](../resources/entity.md).
-
 
 ## Methods
 |Method|Return type|Description|
@@ -36,9 +34,9 @@ Inherits from [entity](../resources/entity.md).
 |backupSizeInBytes|String|The size of the backup in bytes.|
 |createdDateTime|DateTimeOffset|The time of the creation of the browse session.|
 |error|[publicError](../resources/publicerror.md)|Contains the error details if the browse session creation fails.|
-|expirationDateTime|DateTimeOffset|The time after which browse session will be deleted automatically.|
+|expirationDateTime|DateTimeOffset|The time after which the browse session is deleted automatically.|
 |id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
-|restorePointDateTime|DateTimeOffset|The date time of the restore point on which browse session is created.|
+|restorePointDateTime|DateTimeOffset|The date time of the restore point on which the browse session is created.|
 |status|browseSessionStatus|The status of the browse session. The possible values are: `creating`, `created`, `failed`, `unknownFutureValue`.|
 
 ## Relationships
