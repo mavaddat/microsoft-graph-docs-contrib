@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Browse the files and folders within a [BrowseSession](../resources/browsesessionbase.md).
+Browse the files and folders within a [browseSession](../resources/browsesessionbase.md).
 
 ## Permissions
 
@@ -45,30 +45,25 @@ POST /solutions/backupRestore/sharePointBrowseSessions/{sharePointBrowseSessionI
 
 ## Request body
 
-Client should make request with empty body to get the list of the top browsable locations.
+Users should make a request with an empty body to get the list of the top browsable locations.
 
 In the request body, supply a JSON representation of the following parameters.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
 |browseLocationItemKey|String|The item key of the location that you want to browse. Optional.|
-|browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. Optional. The possible values are `none`, `site`, `documentLibrary`, `folder` and `unknownFutureValue`. Optional.|
+|browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. Optional. The possible values are `none`, `site`, `documentLibrary`, `folder`, and `unknownFutureValue`. Optional.|
 |filter|String|Contains the search expression. Optional.|
 |orderBy|[browseQueryOrder](../resources/enums.md#browsequeryorder-values)|Specifies the order by which response should be ordered. Optional.|
 
-## Response
-
-If successful, this function returns a `200 OK` response code and a [browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection in the response body.
-
-### Search expression examples
-
-The following table shows the possible formats for the filter expression.
-Filter is supported only on `name` property.
-
+The following table shows examples of possible formats for the filter expression. The filter is supported only on the `name` property.
 | Property                                 | Operator                                | Example                                                                  |
 | ------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------- |
 | `name`      | `-contains` |   `(name -contains 'contoso')`  |
 
+## Response
+
+If successful, this function returns a `200 OK` response code and a [browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection in the response body.
 
 ## Examples
 
