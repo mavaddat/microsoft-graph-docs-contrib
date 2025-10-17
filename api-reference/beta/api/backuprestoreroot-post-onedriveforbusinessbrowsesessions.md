@@ -49,12 +49,11 @@ POST /solutions/backupRestore/oneDriveForBusinessBrowseSessions
 
 In the request body, supply a JSON representation of the [oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) object.
 
-You can specify the following properties when creating an **oneDriveForBusinessBrowseSession**.
+You can specify the following properties when creating a **oneDriveForBusinessBrowseSession**.
 
 |Property|Type|Description|
 |:---|:---|:---|
 |RestorePointId|String|The id of the [RestorePoint](../resources/restorepoint.md) on which user wants to create a browse session. Required.|
-
 
 ## Response
 
@@ -86,7 +85,6 @@ Content-Type: application/json
   "directoryObjectId": "String"
 }
 ```
-
 
 ### Response
 
