@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [oneDriveForBusinessRestoreSession](../resources/onedriveforbusinessrestoresession.md) object. To create a granular restore session, granular drive restore artifacts should be present in the payload. `GranularDriveRestoreArtifact` and `DriveRestoreArtifact` in the same create or update request aren't supported.
+Create a new [oneDriveForBusinessRestoreSession](../resources/onedriveforbusinessrestoresession.md) object. To create a granular restore session, granular drive restore artifacts should be present in the payload. `granularDriveRestoreArtifact` and `driveRestoreArtifact` in the same **create** or **update** request aren't supported.
 
 If no payload is provided while creating the restore session, by default, it creates an empty standard restore session.
 

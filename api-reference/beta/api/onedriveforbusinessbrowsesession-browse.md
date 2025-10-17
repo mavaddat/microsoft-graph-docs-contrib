@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Browse the files and folders within the [BrowseSession](../resources/browsesessionbase.md).
+Browse the files and folders within the [browseSession](../resources/browsesessionbase.md).
 
 ## Permissions
 

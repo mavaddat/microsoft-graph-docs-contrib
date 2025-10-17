@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [sharePointRestoreSession](../resources/sharepointrestoresession.md) object. To create a granular restore session, granular site restore artifacts should be present in the payload. `GranularSiteRestoreArtifact` and `SiteRestoreArtifact` in the same create or update request aren't supported.
+Create a new [sharePointRestoreSession](../resources/sharepointrestoresession.md) object. To create a granular restore session, granular site restore artifacts should be present in the payload. `granularSiteRestoreArtifact` and `siteRestoreArtifact` in the same **create** or **update** request aren't supported.
 
 If no payload is provided while creating the restore session, by default, it creates an empty standard restore session.
 
