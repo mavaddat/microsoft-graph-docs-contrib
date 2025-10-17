@@ -1,6 +1,6 @@
 ---
 title: "oneDriveForBusinessBrowseSession: browse"
-description: "Browse the files and folder within the oneDriveForBusiness browseSession"
+description: "Browse the files and folders within the oneDriveForBusiness browseSession"
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Browse API call let you browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md).
+Browse the files and folders within the [BrowseSession](../resources/browsesessionbase.md).
 
 ## Permissions
 
@@ -44,29 +44,25 @@ POST /solutions/backupRestore/oneDriveForBusinessBrowseSessions/{oneDriveForBusi
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
-
-Client should make request with empty body to get the list of the top browsable locations.
+Users should make a request with an empty body to get the list of the top browsable locations.
 
 In the request body, supply a JSON representation of the following parameters.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
 |browseLocationItemKey|String|The item key of the location that you want to browse. Optional.|
-|browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. Optional. The possible values are `none`, `site`, `documentLibrary`, `folder` and `unknownFutureValue`. Optional.|
+|browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. Optional. The possible values are `none`, `site`, `documentLibrary`, `folder`, and `unknownFutureValue`. Optional.|
 |filter|String|Contains the [searchExpression](../api/onedriveforbusinessbrowsesession-browse.md#search-expression-examples). Optional.|
 |orderBy|[browseQueryOrder](../resources/enums.md#browsequeryorder-values)|Specifies the order by which response should be ordered. Optional.|
+
+The following table shows examples of possible formats for the filter expression. The filter is supported only on the `name` property.
+| Property                                 | Operator                                | Example                                                                  |
+| ------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------- |
+| `name`      | `-contains` |   `(name -contains 'contoso')`  |
 
 ## Response
 
 If successful, this function returns a `200 OK` response code and a [browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection in the response body.
-
-### Search expression examples
-The following table shows the possible formats for the filter expression.
-Filter is supported only on `name` property.
-
-| Property                                 | Operator                                | Example                                                                  |
-| ------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------- |
-| `name`      | `-contains` |   `(name -contains 'contoso')`  |
 
 ## Examples
 
@@ -87,10 +83,10 @@ To be removed
 GET https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessBrowseSessions/{oneDriveForBusinessBrowseSessionId}/browse(nextFetchToken='parameterValue')
  -->
 
-
 ### Response
 
 The following example shows the response.
+
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
