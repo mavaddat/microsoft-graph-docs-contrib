@@ -15,12 +15,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [oneDriveForBusinessRestoreSession](../resources/onedriveforbusinessrestoresession.md) object.
+Create a new [oneDriveForBusinessRestoreSession](../resources/onedriveforbusinessrestoresession.md) object. To create a granular restore session, granular drive restore artifacts should be present in the payload. `GranularDriveRestoreArtifact` and `DriveRestoreArtifact` in the same create or update request aren't supported.
 
-To create granular restore session, granular drive restore artifacts should be present in the payload.
-`GranularDriveRestoreArtifact` and `DriveRestoreArtifact` in same create or update request is NOT supported.
-
-Note that, If no payload is provided while creating the restore session, by default it will create empty standard restore session.
+If no payload is provided while creating the restore session, by default, it creates an empty standard restore session.
 
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
@@ -73,7 +70,8 @@ For a list of possible error responses, see [Backup Storage API error responses]
 
 ### Example 1: Create a standard restore session.
 
-The following example shows a request to create standard restore session.
+The following example shows a request to create a standard restore session.
+
 #### Request
 # [HTTP](#tab/http)
 <!-- {
@@ -181,7 +179,7 @@ Content-Type: application/json
 ---
 ### Example 2: Create a granular restore session.
 
-The following example shows a request to create granular restore session.
+The following example shows a request to create a granular restore session.
 
 #### Request
 <!-- {
