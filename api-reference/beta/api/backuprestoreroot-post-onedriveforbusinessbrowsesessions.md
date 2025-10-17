@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new oneDriveForBusinessBrowseSession object.
+Create a new [oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) object.
 
 ## Permissions
 

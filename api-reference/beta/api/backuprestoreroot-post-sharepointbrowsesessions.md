@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new sharePointBrowseSession object.
+Create a new [sharePointBrowseSession](../resources/sharepointbrowsesession.md) object.
 
 ## Permissions
 

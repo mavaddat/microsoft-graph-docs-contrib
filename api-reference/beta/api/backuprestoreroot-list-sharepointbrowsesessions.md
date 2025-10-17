@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the sharePointBrowseSession objects and their properties.
+Get a list of the [sharePointBrowseSession](../resources/sharepointbrowsesession.md) objects and their properties.
 
 ## Permissions
 
