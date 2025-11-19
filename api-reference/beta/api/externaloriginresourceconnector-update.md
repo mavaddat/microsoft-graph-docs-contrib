@@ -1,10 +1,10 @@
 ---
 title: "Update externalOriginResourceConnector"
 description: "Update the properties of an externalOriginResourceConnector object."
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+author: "vikama-microsoft"
 ms.date: 11/11/2025
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "entra-id-governance"
 doc_type: apiPageType
 ---
 
@@ -49,17 +49,12 @@ PATCH /identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPac
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|**TODO: Add Description** Optional.|
-|description|String|**TODO: Add Description** Optional.|
-|connectorType|connectorType|**TODO: Add Description**. The possible values are: `sapIag`, `sapAc`, `unknownFutureValue`. Required.|
-|connectionInfo|[connectionInfo](../resources/connectioninfo.md)|**TODO: Add Description** Required.|
-|createdBy|String|**TODO: Add Description** Optional.|
-|createdDateTime|DateTimeOffset|**TODO: Add Description** Optional.|
-|modifiedBy|String|**TODO: Add Description** Optional.|
-|modifiedDateTime|DateTimeOffset|**TODO: Add Description** Optional.|
+|displayName|String|The display name of the connector. Optional.|
+|description|String|A description of the connector. Optional.|
+|connectorType|connectorType|The type of connector. The possible values are: `sapIag`, `sapAc`, `unknownFutureValue`. Optional.|
+|connectionInfo|[connectionInfo](../resources/connectioninfo.md)|The connection information used to communicate with the external resource system. Optional.|
 
 
 
@@ -88,9 +83,7 @@ Content-Type: application/json
   "connectorType": "String",
   "connectionInfo": {
     "@odata.type": "microsoft.graph.connectionInfo"
-  },
-  "createdBy": "String",
-  "modifiedBy": "String"
+  }
 }
 ```
 
