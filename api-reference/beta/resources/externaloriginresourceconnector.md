@@ -23,11 +23,9 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/customdataprovidedresource-list-externaloriginresourceconnector.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) collection|Get a list of the externalOriginResourceConnector objects and their properties.|
-|[Create](../api/customdataprovidedresource-post-externaloriginresourceconnector.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Create a new externalOriginResourceConnector object.|
 |[Get](../api/externaloriginresourceconnector-get.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Read the properties and relationships of [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
 |[Update](../api/externaloriginresourceconnector-update.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Update the properties of an externalOriginResourceConnector object.|
-|[Delete](../api/customdataprovidedresource-delete-externaloriginresourceconnector.md)|None|Delete an externalOriginResourceConnector object.|
+
 
 ## Properties
 |Property|Type|Description|
