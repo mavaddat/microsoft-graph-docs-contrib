@@ -1,10 +1,10 @@
 ---
 title: "externalOriginResourceConnector resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+description: "Represents a connector used to communicate with external resource systems."
+author: "vikama-microsoft"
 ms.date: 11/11/2025
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
 ---
 
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+Represents a connector used to communicate with external resource systems in Microsoft Entra ID Governance. The connector facilitates integration with external applications such as SAP systems, enabling access management and governance capabilities.
 
 
 Inherits from [entity](../resources/entity.md).
@@ -32,15 +32,15 @@ Inherits from [entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|connectionInfo|[connectionInfo](../resources/connectioninfo.md)|**TODO: Add Description**|
-|connectorType|connectorType|**TODO: Add Description**. The possible values are: `sapIag`, `sapAc`, `unknownFutureValue`.|
-|createdBy|String|**TODO: Add Description**|
-|createdDateTime|DateTimeOffset|**TODO: Add Description**|
-|description|String|**TODO: Add Description**|
-|displayName|String|**TODO: Add Description**|
-|id|String|**TODO: Add Description** Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
-|modifiedBy|String|**TODO: Add Description**|
-|modifiedDateTime|DateTimeOffset|**TODO: Add Description**|
+|connectionInfo|[connectionInfo](../resources/connectioninfo.md)|The connection information used to communicate with the external resource system.|
+|connectorType|connectorType|The type of connector. The possible values are: `sapIag`, `sapAc`, `unknownFutureValue`.|
+|createdBy|String|The identifier of the user or application that created the connector.|
+|createdDateTime|DateTimeOffset|The date and time when the connector was created.|
+|description|String|A description of the connector.|
+|displayName|String|The display name of the connector.|
+|id|String|The unique identifier of the connector. Inherited from [entity](../resources/entity.md).|
+|modifiedBy|String|The identifier of the user or application that last modified the connector.|
+|modifiedDateTime|DateTimeOffset|The date and time when the connector was last modified.|
 
 ## Relationships
 None.

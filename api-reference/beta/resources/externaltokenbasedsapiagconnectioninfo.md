@@ -1,10 +1,10 @@
 ---
 title: "externalTokenBasedSapIagConnectionInfo resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+description: "Represents connection information for token-based authentication to SAP IAG (Identity and Access Governance) systems."
+author: "vikama-microsoft"
 ms.date: 11/11/2025
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
 ---
 
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+Represents connection information for token-based authentication to SAP IAG (Identity and Access Governance) systems. This resource contains the configuration details required to establish a secure connection with SAP IAG, including token endpoint information and Azure Key Vault references for credential storage.
 
 
 Inherits from [connectionInfo](../resources/connectioninfo.md).
@@ -23,14 +23,14 @@ Inherits from [connectionInfo](../resources/connectioninfo.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|accessTokenUrl|String|**TODO: Add Description**|
-|clientId|String|**TODO: Add Description**|
-|domain|String|**TODO: Add Description**|
-|keyVaultName|String|**TODO: Add Description**|
-|resourceGroup|String|**TODO: Add Description**|
-|secretName|String|**TODO: Add Description**|
-|subscriptionId|String|**TODO: Add Description**|
-|url|String|**TODO: Add Description** Inherited from [connectionInfo](../resources/connectioninfo.md).|
+|accessTokenUrl|String|The URL endpoint used to obtain access tokens for authentication with the SAP IAG system.|
+|clientId|String|The client identifier used for authentication with the SAP IAG system.|
+|domain|String|The domain of the SAP IAG system.|
+|keyVaultName|String|The name of the Azure Key Vault that stores the client secret for authentication.|
+|resourceGroup|String|The Azure resource group that contains the Key Vault.|
+|secretName|String|The name of the secret in Azure Key Vault that contains the client secret.|
+|subscriptionId|String|The Azure subscription ID that contains the Key Vault.|
+|url|String|The endpoint that is used by Entitlement Management to communicate with the SAP IAG system. Inherited from [connectionInfo](../resources/connectioninfo.md).|
 
 ## Relationships
 None.
