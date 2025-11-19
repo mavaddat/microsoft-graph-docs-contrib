@@ -46,6 +46,7 @@ In [Microsoft Entra Entitlement Management](entitlementmanagement-overview.md), 
 |accessPackageResourceEnvironment|[accessPackageResourceEnvironment](../resources/accesspackageresourceenvironment.md)|Contains the environment information for the resource. This environment can be set using either the `@odata.bind` annotation or the environment's *originId*. Supports `$expand`.|
 |accessPackageResourceRoles|[accessPackageResourceRole](accesspackageresourcerole.md) collection| Read-only. Nullable. Supports `$expand`.|
 |accessPackageResourceScopes|[accessPackageResourceScope](accesspackageresourcescope.md) collection| Read-only. Nullable. Supports `$expand`.|
+|externalOriginResourceConnector|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.|
 
 ## JSON representation
 
