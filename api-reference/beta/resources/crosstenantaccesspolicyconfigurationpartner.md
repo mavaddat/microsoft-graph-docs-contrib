@@ -44,7 +44,7 @@ Inherits from [policyDeletableItem](../resources/policydeletableitem.md).
 | b2bCollaborationOutbound | [crossTenantAccessPolicyB2BSetting](../resources/crosstenantaccesspolicyb2bsetting.md) | Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration. |
 | b2bDirectConnectInbound | [crossTenantAccessPolicyB2BSetting](../resources/crosstenantaccesspolicyb2bsetting.md) | Defines your partner-specific configuration for users from other organizations accessing your resources via Azure B2B direct connect. |
 | b2bDirectConnectOutbound | [crossTenantAccessPolicyB2BSetting](../resources/crosstenantaccesspolicyb2bsetting.md) | Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect. |
-| blockServiceProviderOutboundAccess | Boolean | **TODO: Add Description** |
+| blockServiceProviderOutboundAccess | Boolean | Specifies whether granular delegated admin privileges (GDAP) tokens should be issued for users going outbound into another organization. Default value is `false`. |
 |deletedDateTime|DateTimeOffset|Shows the last date and time the policy was deleted.|
 | inboundTrust | [crossTenantAccessPolicyInboundTrust](../resources/crosstenantaccesspolicyinboundtrust.md) | Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations. |
 | isInMultiTenantOrganization | Boolean | Identifies whether a tenant is a member of a multitenant organization. |
