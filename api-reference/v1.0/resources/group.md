@@ -404,6 +404,8 @@ The following JSON representation shows the resource type.
   "photos": [{ "@odata.type": "microsoft.graph.profilePhoto" }],
   "rejectedSenders": [{ "@odata.type": "microsoft.graph.directoryObject" }],
   "renewedDateTime": "String (timestamp)",
+  "resourceBehaviorOptions": ["String"],
+  "resourceProvisioningOptions": ["String"],
   "securityEnabled": "Boolean",
   "securityIdentifier": "String",
   "serviceProvisioningErrors": [
