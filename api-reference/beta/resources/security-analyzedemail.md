@@ -105,6 +105,7 @@ Contains metadata for email messages that are analyzed for security threats.
 |softDelete|
 |moveToDeletedItems|
 |unknownFutureValue|
+|moveToQuarantine|
 
 ## Relationships
 None.
