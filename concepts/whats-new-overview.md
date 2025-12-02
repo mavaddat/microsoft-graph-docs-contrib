@@ -46,7 +46,7 @@ Deleted security groups can now be restored from [deleted items](/graph/api/reso
 
 ### Identity and access | Governance
 
-- Added the [userInactivityTrigger](/graph/api/resources/userinactivitytrigger) resource to support automatic triggering of access reviews based on user inactivity.
+- Added the [userInactivityTrigger](/graph/api/resources/identitygovernance-userinactivitytrigger) resource to support automatic triggering of access reviews based on user inactivity.
 
 ### Identity and access | Identity and sign-in
 
@@ -93,7 +93,7 @@ Added the **riskFactors** and **riskScore** properties to the [applicationTempla
 ### Identity and access | Governance
 
 - Added the [customDataProvidedResource](/graph/api/resources/customdataprovidedresource?view=graph-rest-beta&preserve-view=true) resource to support user-centric access reviews.
-- Added the **administrationScopeTargets** relationship to the [workflowBase](/graph/api/resources/workflowbase?view=graph-rest-beta&preserve-view=true) resource and its derived types to support scoping lifecycle workflows to specific administrative units.
+- Added the **administrationScopeTargets** relationship to the [workflowBase](/graph/api/resources/identitygovernance-workflowbase?view=graph-rest-beta&preserve-view=true) resource and its derived types to support scoping lifecycle workflows to specific administrative units.
 
 ### Identity and access | Identity and sign-in
 
