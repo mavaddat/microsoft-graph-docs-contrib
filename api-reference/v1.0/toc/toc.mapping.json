@@ -655,6 +655,27 @@
         "recycleBin",
         "recycleBinItem",
         "sharedDriveItem"
+      ],
+      "childNodes": [
+        {
+          "name": "SharePoint migration",
+          "overview": "../../resources/sharepointmigration-api-overview.md",
+          "resources": [
+            "sharePointMigrationEvent",
+            "sharePointMigrationFinishManifestFileUploadEvent",
+            "sharePointMigrationJob",
+            "sharePointMigrationJobCancelledEvent",
+            "sharePointMigrationJobDeletedEvent",
+            "sharePointMigrationJobErrorEvent",
+            "sharePointMigrationJobPostponedEvent",
+            "sharePointMigrationJobProgressEvent",
+            "sharePointMigrationJobQueuedEvent",
+            "sharePointMigrationJobStartEvent"
+          ],
+          "complexTypes": [
+            "sharePointMigrationContainerInfo"
+          ]
+        }
       ]
     },
     {
@@ -1003,14 +1024,24 @@
           "resources": [
             "appRoleAssignment",
             "dataPolicyOperation",
-            "oAuth2PermissionGrant",
-            "certificateBasedAuthConfiguration",
-            "webApplicationFirewallProvider",
-            "cloudFlareWebApplicationFirewallProvider",
-            "akamaiWebApplicationFirewallProvider",
-            "webApplicationFirewallVerificationModel"
+            "oAuth2PermissionGrant"
           ],
           "childNodes": [
+            {
+              "name": "Certificate-based authentication (CBA)",
+              "resources": [
+                "certificateBasedAuthConfiguration"
+              ]
+            },
+            {
+              "name": "Web application firewall",
+              "resources": [
+                "webApplicationFirewallProvider",
+                "akamaiWebApplicationFirewallProvider",
+                "cloudFlareWebApplicationFirewallProvider",
+                "webApplicationFirewallVerificationModel"
+              ]
+            },
             {
               "name": "Authentication event listeners",
               "resources": [
