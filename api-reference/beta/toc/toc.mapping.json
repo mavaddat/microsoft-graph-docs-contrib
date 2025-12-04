@@ -1330,7 +1330,8 @@
                 "connectedOrganization",
                 "entitlementManagementSettings",
                 "customAccessPackageWorkflowExtension",
-                "customDataProvidedResourceUploadSession"
+                "customDataProvidedResourceUploadSession",
+                "externalOriginResourceConnector"
               ],
               "complexTypes": [
                 "accessPackageAnswer",
