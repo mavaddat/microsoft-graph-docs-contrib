@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of an externalOriginResourceConnector object.
+Update the properties of an [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.
 
 ## Permissions
 
@@ -53,7 +53,7 @@ PATCH /identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPac
 |:---|:---|:---|
 |displayName|String|The display name of the connector. Optional.|
 |description|String|A description of the connector. Optional.|
-|connectorType|connectorType|The type of connector. The possible values are: `sapIag`, `sapAc`, `unknownFutureValue`. Optional.|
+|connectorType|connectorType|The type of connector. Connector types can be either SAP Cloud Identity Access Governance(sapIag) or SAP Augmented Access Control (sapAc). The possible values are: `sapIag`, `sapAc`, `unknownFutureValue`. Optional.|
 |connectionInfo|[connectionInfo](../resources/connectioninfo.md)|The connection information used to communicate with the external resource system. Optional.|
 
 
