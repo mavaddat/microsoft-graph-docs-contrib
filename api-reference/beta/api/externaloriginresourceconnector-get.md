@@ -94,7 +94,7 @@ Content-Type: application/json
   "description": "SAP Access  Control test",
   "connectorType": "sapAc",
   "connectionInfo": {
-    "@odata.type": "microsoft.graph.connectionInfo"
+    "@odata.type": "microsoft.graph.externalTokenBasedSapIagConnectionInfo"
   },
   "createdBy": "kayat@igaelmdev.com",
   "createdDateTime": "2025-11-29T17:45:40Z",
