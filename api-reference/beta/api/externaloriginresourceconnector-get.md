@@ -27,6 +27,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/externaloriginresourceconnector-get-permissions.md)]
 
+[!INCLUDE [rbac-entitlement-identity-governance-admin-apis-read](../includes/rbac-for-apis/rbac-entitlement-identity-governance-admin-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
