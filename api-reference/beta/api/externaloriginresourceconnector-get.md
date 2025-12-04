@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalogId}/accessPackageResources/{accessPackageResourceId}/externalOriginResourceConnector
+GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageCatalogs/06a6415b-2f20-44ce-b43e-ae9570f26fa2/accessPackageResources/cedee304-3210-4da3-ba5c-2f3adb400efc/externalOriginResourceConnector
 ```
 
 
@@ -87,20 +87,18 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.externalOriginResourceConnector",
-    "id": "9a0f91bb-5937-2801-383e-5946f51c5f46",
-    "displayName": "String",
-    "description": "String",
-    "connectorType": "String",
-    "connectionInfo": {
-      "@odata.type": "microsoft.graph.connectionInfo"
-    },
-    "createdBy": "String",
-    "createdDateTime": "String (timestamp)",
-    "modifiedBy": "String",
-    "modifiedDateTime": "String (timestamp)"
-  }
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#identityGovernance/entitlementManagement/externalOriginResourceConnector/$entity",
+  "@odata.type": "#microsoft.graph.externalOriginResourceConnector",
+  "id": "06a6415b-2f20-44ce-b43e-ae9570f26fa2",
+  "displayName": "SAP Access Control",
+  "description": "SAP Access  Control test",
+  "connectorType": "sapAc",
+  "connectionInfo": {
+    "@odata.type": "microsoft.graph.connectionInfo"
+  },
+  "createdBy": "kayat@igaelmdev.com",
+  "createdDateTime": "2025-11-29T17:45:40Z",
+  "modifiedBy": "kayat@igaelmdev.com",
+  "modifiedDateTime": "2025-12-001T10:23:10Z"
 }
 ```
-

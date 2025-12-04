@@ -75,14 +75,14 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalogId}/accessPackageResources/{accessPackageResourceId}/externalOriginResourceConnector
+PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageCatalogs/8b8f588b-0fc0-42f9-b345-86686de9d9fa/accessPackageResources/5265a889-0b20-4772-b000-21bbb3ff207e/externalOriginResourceConnector
 Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.externalOriginResourceConnector",
-  "displayName": "String",
-  "description": "String",
-  "connectorType": "String",
+  "displayName": "SAP Identity Access Governance Connector Test",
+  "description": "SAP Identity Access Governance Connector test",
+  "connectorType": "sapIag",
   "connectionInfo": {
     "@odata.type": "microsoft.graph.connectionInfo"
   }
@@ -105,18 +105,18 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#identityGovernance/entitlementManagement/externalOriginResourceConnector/$entity",
   "@odata.type": "#microsoft.graph.externalOriginResourceConnector",
-  "id": "9a0f91bb-5937-2801-383e-5946f51c5f46",
-  "displayName": "String",
-  "description": "String",
-  "connectorType": "String",
+  "id": "8b8f588b-0fc0-42f9-b345-86686de9d9fa",
+  "displayName": "SAP Identity Access Governance Connector Test",
+  "description": "SAP Identity Access Governance Connector test",
+  "connectorType": "sapIag",
   "connectionInfo": {
     "@odata.type": "microsoft.graph.connectionInfo"
   },
-  "createdBy": "String",
-  "createdDateTime": "String (timestamp)",
-  "modifiedBy": "String",
-  "modifiedDateTime": "String (timestamp)"
+  "createdBy": "kayat@igaelmdev.com",
+  "createdDateTime": "2025-10-29T09:50:23Z",
+  "modifiedBy": "kayat@igaelmdev.com",
+  "modifiedDateTime": "2025-12-04T01:10:28Z"
 }
 ```
-
