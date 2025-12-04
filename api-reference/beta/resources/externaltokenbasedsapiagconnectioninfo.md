@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents connection information for token-based authentication to SAP IAG (Identity and Access Governance) systems. This resource contains the configuration details required to establish a secure connection with SAP IAG, including token endpoint information and Azure Key Vault references for credential storage.
+Represents connection information for token-based authentication to SAP IAG (Identity and Access Governance) systems. This resource contains the configuration details required to establish a secure connection between an Entitlement Management [accessPackageResource](../resources/accesspackageresource.md)'s **externalOriginResourceConnector** with SAP IAG, including token endpoint information and Azure Key Vault references for credential storage. Used when connectorType in [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)  is `sapIag`.
 
 
 Inherits from [connectionInfo](../resources/connectioninfo.md).
