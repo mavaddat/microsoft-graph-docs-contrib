@@ -8,22 +8,31 @@ doc_type: "resourcePageType"
 ms.date: 12/06/2025
 ---
 
-# acl resource type
+# Principal data type
 
 Namespace: microsoft.graph.externalConnectors
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A complex datatype for people related properties in items indexed by externalConnection.[externalConnection](externalconnectors-externalconnection.md).
+A complex datatype for adding people related properties in items indexed by [externalConnection](externalconnectors-externalconnection.md). You can use Principal or principalCollection data types 
+| Data type       | Description                                        |
+|:---------------|:---------------------------------------------------|
+| principal   | Use this datatype when the property has information about one person. Example : Assignee property for a JIRA ticket where there is only one assignee|
+| principalCollection  |  Use this datatype when the property refers to a list of people. Example : Contributors property for a Github PR where there can be multiple people.|
+
+Using principal or principalCollection type properties instead of a string or string collection for people related properties while ingesting ExternalItems can provide better and more relevant results in Copilot Search or chat.  
 
 ## Properties
 
 | Property       | Type   | Description                                        |
 |:---------------|:-------|:---------------------------------------------------|
-| accessType     | String | The access granted to the identity. The possible values are: `grant`, `deny`. |
-| identitySource | String | The source of identity. Possible values are `azureActiveDirectory` or `external`.           |
-| type           | String | The type of identity. The possible values are: `user`, `group`, `everyone`, `everyoneExceptGuests` if the identitySource is `azureActiveDirectory` and just `group` if the identitySource is `external`. |
-| value          | String | The unique identifer of the identity. For Microsoft Entra identities, `value` is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. For external groups, `value` is set to the ID of the [externalGroup](externalconnectors-externalgroup.md).|
+| externalName     | String | The name associated with the person in the external data source|
+| externalId | String | The Id associated with the person in the external data source. This could also be an email associated with the person on the external source |
+| entraDisplayName   | String | The name of the person as mentioned on Microsoft Entra |
+| entraId          | String |  The ID of the person as mentioned on Microsoft Entra|
+| email     | String |  The email of the person as mentioned on Microsoft Entra|
+| upn | String | The User Principal Name (UPN) of the person as mentioned on Azure Active directory or Microsoft Entra |
+| tenantId     | String | The Id of the tenant where the person belongs. Tenant ID is a unique GUID that identifies your organization’s Azure Active Directory (Entra ID) tenant. |
 
 ## Relationships
 
@@ -31,23 +40,63 @@ None.
 
 ## JSON representation
 
-The following JSON representation shows the resource type.
+The following JSON representation shows the resource type for principal data type. 
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.externalConnectors.acl",
+  "@odata.type": "microsoft.graph.externalConnectors.principal",
   "baseType": null
 }-->
 
 ```json
 {
-  "accessType": "String",
-  "identitySource": "String",
-  "type": "String",
-  "value": "String"
+  "externalName": "String",
+  "externalId": "String",
+  "entraDisplayName": "String",
+  "entraId": "String"
+  "email": "String",
+  "upn": "String",
+  "tenantId": "String"
 }
+```
+
+The following JSON representation shows the resource type for principal collection data type. 
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+
+  ],
+  "@odata.type": "microsoft.graph.externalConnectors.principal",
+  "baseType": null
+}-->
+
+```json
+[
+{
+  "externalName": "String",
+  "externalId": "String",
+  "entraDisplayName": "String",
+  "entraId": "String"
+  "email": "String",
+  "upn": "String",
+  "tenantId": "String"
+},
+{
+  "externalName": "String",
+  "externalId": "String",
+  "entraDisplayName": "String",
+  "entraId": "String"
+  "email": "String",
+  "upn": "String",
+  "tenantId": "String"
+}
+...
+...
+...
+]
+
 ```
 
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
