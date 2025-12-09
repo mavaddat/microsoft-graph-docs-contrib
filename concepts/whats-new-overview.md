@@ -20,6 +20,18 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## December 2025: New in preview only
 
+### Agents
+
+Use the [inheritablePermission](/graph/api/resources/inheritablepermission?view=graph-rest-beta&preserve-view=true) APIs to configure inheritable permissions for agent identity blueprints. Inheritable permissions allow agent identities to automatically inherit delegated permission scopes from their blueprint without triggering additional consent prompts.
+
+### Applications
+
+Added the **isDisabled** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-beta&preserve-view=true) resources that let's you suspend an application or service principal and prevent new token issuance. This suspension is an aternative to permanently deleting the application or service principal. For multitenant apps, while disabling sign-in by setting the **accountEnabled** property to `true` only applies to the tenant, disabling the app using the **isDisabled** property blocks the app and its associated service principals across Microsoft Entra.
+
+### Files
+
+Use the SharePoint cross-tenant migration task APIs in Microsoft Graph to enable organizations to manage the tasks during tenant-to-tenant migrations. For more information, see [sharePointMigrationTask](/graph/api/resources/sharepointmigrationtask?view=graph-rest-beta&preserve-view=true).
+
 ### Identity and access | Governance
 
 - Added the [controlConfiguration](/graph/api/resources/controlconfiguration?view=graph-rest-beta&preserve-view=true) resource and the **controlConfigurations** relationship to the [entitlementManagement](/graph/api/resources/entitlementmanagement?view=graph-rest-beta&preserve-view=true) resource to represent the policies that control lifecycle and access to access packages across the organization.
@@ -30,11 +42,25 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 Added the `microsoftRevokedSessions` value to the [riskDetail](/graph/api/resources/riskdetail?view=graph-rest-beta&preserve-view=true) enumeration to indicate that Microsoft revoked sessions. This enumeration member applies to the following Microsoft Entra Identity Protection resources: [riskDetection](/graph/api/resources/riskdetection?view=graph-rest-beta&preserve-view=true), [riskUserActivity](/graph/api/resources/riskuseractivity?view=graph-rest-beta&preserve-view=true), [riskyUser](/graph/api/resources/riskyuser?view=graph-rest-beta&preserve-view=true), and [signIn](/graph/api/resources/signin?view=graph-rest-beta&preserve-view=true).
 
-## November 2025: New and generally available
+### Teamwork and communications | Calls and online meetings
 
-### Files
+The following endpoints are no longer supported for managing [work location](/graph/resources/userworklocation) for a user:
+- `POST /users/{usersId}/presence/clearAutomaticLocation`
+- `POST /communications/presences/{presenceId}/clearAutomaticLocation`
+- `POST /users/{usersId}/presence/clearLocation`
+- `POST /communications/presences/{presenceId}/clearLocation`
+- `POST /users/{usersId}/presence/setAutomaticLocation`
+- `POST /communications/presences/{presenceId}/setAutomaticLocation`
+- `POST /users/{usersId}/presence/setManualLocation`
+- `POST /communications/presences/{presenceId}/setManualLocation`
 
-Use the SharePoint cross-tenant migration task APIs in Microsoft Graph to enable organizations to manage the tasks during tenant-to-tenant migrations. For more information, see [sharePointMigrationTask](/graph/api/resources/sharepointmigrationtask?view=graph-rest-beta&preserve-view=true).
+### Mail
+
+Use the [userConfiguration](/graph/api/resources/userconfiguration?view=graph-rest-beta&preserve-view=true) resource and its associated methods to manage user-specific settings, metadata, or application data tied to mailbox folders, using XML, binary, or dictionary formats.
+
+### Teamwork and communications | Messaging
+
+[Get](/graph/api/channel-get-allmembers?view=graph-rest-beta&preserve-view=true) a specific member from the channel **allMembers** collection. This API provides unified access to both direct and indirect members across all channel types, including shared channels.
 
 ## November 2025: New and generally available
 
@@ -46,7 +72,7 @@ The [driveItem: restore](/graph/api/driveitem-restore) method was expanded to en
 
 - [Create](/graph/api/place-post), [get descendants](/graph/api/place-descendants), and [delete](/graph/api/place-delete) a [place](/graph/api/resources/place) and its derived objects (for example, [building](/graph/api/resources/building), [desk](/graph/api/resources/desk), [floor](/graph/api/resources/floor), or [section](/graph/api/resources/section)). These APIs enable scalable onboarding and management of the Places directory.
 - The new map APIs in Places enable applications with appropriate read or write permissions to interact with map feature objects. For more information, see [Working with the Places API in Microsoft Graph](/graph/api/resources/places-api-overview#map-feature-types).
-- Use the [checkInClaim](/graph/api/resources/checkinclaim) resource to represent the check-in status of an Outlook calendar [event](/graph/api/resources/event) booked at a place. For more information see, [Create checkInClaim](/graph/api/place-post-checkins) and [Get checkInClaim](/graph/api/checkinclaim).
+- Use the [checkInClaim](/graph/api/resources/checkinclaim) resource to represent the check-in status of an Outlook calendar [event](/graph/api/resources/event) booked at a place. For more information see, [Create checkInClaim](/graph/api/place-post-checkins) and [Get checkInClaim](/graph/api/checkinclaim-get).
 
 ### Files
 
