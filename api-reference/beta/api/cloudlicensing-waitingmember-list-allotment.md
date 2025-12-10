@@ -53,7 +53,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [allotment](../resources/cloudlicensing-allotment.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) object in the response body.
 
 ## Examples
 
@@ -77,7 +77,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.allotment"
+  "@odata.type": "microsoft.graph.cloudLicensing.waitingMember"
 }
 -->
 ``` http

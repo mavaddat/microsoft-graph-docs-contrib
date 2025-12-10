@@ -69,7 +69,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/cloudLicensing/assignmentErrors/115bedd6-40d2-45c1-9220-a73c2a8f6226
+GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignmentErrors/115bedd6-40d2-45c1-9220-a73c2a8f6226
 ```
 
 ### Response

@@ -30,7 +30,7 @@ To get all waiting members for the signed-in user using delegated (`/me`) permis
 <!-- { "blockType": "ignored" }
 -->
 ``` http
-GET /me/cloudLicensing/waitingMember
+GET /me/cloudLicensing/waitingMembers
 ```
 
 To get all waiting members for a specific user using either delegated or application permissions:
@@ -38,7 +38,7 @@ To get all waiting members for a specific user using either delegated or applica
 <!-- { "blockType": "ignored" }
 -->
 ``` http
-GET /users/{userId}/cloudLicensing/waitingMember
+GET /users/{userId}/cloudLicensing/waitingMembers
 ```
 
 ## Optional query parameters

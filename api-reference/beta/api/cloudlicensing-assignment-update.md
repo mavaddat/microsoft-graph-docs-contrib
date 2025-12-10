@@ -100,7 +100,7 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/userCloudLicensing/assignments/0b1a424d-3b9b-4446-80b9-6917dd521e03
+PATCH https://graph.microsoft.com/beta/me/cloudLicensing/assignments/0b1a424d-3b9b-4446-80b9-6917dd521e03
 Content-Type: application/json
 
 {
