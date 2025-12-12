@@ -1023,6 +1023,7 @@
         "microsoft.graph.externalConnectors.itemIdResolver",
         "microsoft.graph.externalConnectors.property",
         "microsoft.graph.externalConnectors.propertyRule",
+        "microsoft.graph.externalConnectors.principal",
         "publicError",
         "publicErrorDetail",
         "publicInnerError",
