@@ -14,14 +14,7 @@ Namespace: microsoft.graph.externalConnectors
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A complex data type used to add people-related properties to items indexed by an [externalConnection](externalconnectors-externalconnection.md). You can use the principal or principalCollection data types.
-
-| Data type      | Description                                        |
-|:---------------|:---------------------------------------------------|
-| principal   | Use this datatype when the property has information about one person. Example: Assignee property for a JIRA ticket where there's only one assignee.|
-| principalCollection  |  Use this datatype when the property refers to a list of people. Example: Contributors property for a GitHub PR where there can be multiple people.|
-
-Using principal or principalCollection type properties instead of a string or string collection for people related properties while ingesting ExternalItems can provide better and more relevant results in Copilot Search or chat.  
+Principal is a complex data type used to add people-related properties to items indexed by an [externalConnection](externalconnectors-externalconnection.md). You can also use the principalCollection data type when there is list of people.
 
 ## Properties
 
@@ -40,6 +33,15 @@ Using principal or principalCollection type properties instead of a string or st
 None.
 
 ## JSON representation
+
+You can use the principal or principalCollection data types.
+
+| Data type      | Description                                        |
+|:---------------|:---------------------------------------------------|
+| principal   | Use this datatype when the property has information about one person. Example: Assignee property for a JIRA ticket where there's only one assignee.|
+| principalCollection  |  Use this datatype when the property refers to a list of people. Example: Contributors property for a GitHub PR where there can be multiple people.|
+
+Using principal or principalCollection type properties instead of a string or string collection for people related properties while ingesting ExternalItems can provide better and more relevant results in Copilot Search or chat.  
 
 The following JSON representation shows the resource type for principal data type. 
 <!-- {
