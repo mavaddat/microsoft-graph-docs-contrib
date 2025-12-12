@@ -20,10 +20,6 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## December 2025: New in preview only
 
-### Search
-
-Added the **principal** and **principalCollection** datatypes to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) used to add people-related properties to items indexed by externalConnection.
-
 ### Agents
 
 Use the [inheritablePermission](/graph/api/resources/inheritablepermission?view=graph-rest-beta&preserve-view=true) APIs to configure inheritable permissions for agent identity blueprints. Inheritable permissions allow agent identities to automatically inherit delegated permission scopes from their blueprint without triggering additional consent prompts.
@@ -31,6 +27,10 @@ Use the [inheritablePermission](/graph/api/resources/inheritablepermission?view=
 ### Applications
 
 Added the **isDisabled** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-beta&preserve-view=true) resources that let's you suspend an application or service principal and prevent new token issuance. This suspension is an aternative to permanently deleting the application or service principal. For multitenant apps, while disabling sign-in by setting the **accountEnabled** property to `true` only applies to the tenant, disabling the app using the **isDisabled** property blocks the app and its associated service principals across Microsoft Entra.
+
+### Search
+
+Added the **principal** and **principalCollection** datatypes to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) used to add people-related properties to items indexed by externalConnection.
 
 ### Files
 
