@@ -1,6 +1,6 @@
 ---
 title: "principal resource type"
-description: "A complex datatype for people related properties in items indexed by externalConnection."
+description: "A complex data type used to add people-related properties to items indexed by externalConnection."
 ms.localizationpriority: medium
 author: "bak"
 ms.subservice: "search"
