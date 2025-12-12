@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 12/14/2025
+ms.date: 12/02/2025
 ms.topic: whats-new
 ---
 
@@ -27,10 +27,6 @@ Use the [inheritablePermission](/graph/api/resources/inheritablepermission?view=
 ### Applications
 
 Added the **isDisabled** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [servicePrincipal](/graph/api/resources/serviceprincipal?view=graph-rest-beta&preserve-view=true) resources that let's you suspend an application or service principal and prevent new token issuance. This suspension is an aternative to permanently deleting the application or service principal. For multitenant apps, while disabling sign-in by setting the **accountEnabled** property to `true` only applies to the tenant, disabling the app using the **isDisabled** property blocks the app and its associated service principals across Microsoft Entra.
-
-### Search
-
-Added the **principal** and **principalCollection** datatypes to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) used to add people-related properties to items indexed by externalConnection.
 
 ### Files
 
