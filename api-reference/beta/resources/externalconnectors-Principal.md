@@ -15,7 +15,8 @@ Namespace: microsoft.graph.externalConnectors
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 A complex datatype for adding people related properties in items indexed by [externalConnection](externalconnectors-externalconnection.md). You can use Principal or principalCollection data types 
-| Data type       | Description                                        |
+
+| Data type      | Description                                        |
 |:---------------|:---------------------------------------------------|
 | principal   | Use this datatype when the property has information about one person. Example: Assignee property for a JIRA ticket where there's only one assignee|
 | principalCollection  |  Use this datatype when the property refers to a list of people. Example: Contributors property for a GitHub PR where there can be multiple people.|
