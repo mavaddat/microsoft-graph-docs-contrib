@@ -17,8 +17,8 @@ Namespace: microsoft.graph.externalConnectors
 A complex datatype for adding people related properties in items indexed by [externalConnection](externalconnectors-externalconnection.md). You can use Principal or principalCollection data types 
 | Data type       | Description                                        |
 |:---------------|:---------------------------------------------------|
-| principal   | Use this datatype when the property has information about one person. Example : Assignee property for a JIRA ticket where there is only one assignee|
-| principalCollection  |  Use this datatype when the property refers to a list of people. Example : Contributors property for a Github PR where there can be multiple people.|
+| principal   | Use this datatype when the property has information about one person. Example: Assignee property for a JIRA ticket where there's only one assignee|
+| principalCollection  |  Use this datatype when the property refers to a list of people. Example: Contributors property for a GitHub PR where there can be multiple people.|
 
 Using principal or principalCollection type properties instead of a string or string collection for people related properties while ingesting ExternalItems can provide better and more relevant results in Copilot Search or chat.  
 
@@ -27,12 +27,12 @@ Using principal or principalCollection type properties instead of a string or st
 | Property       | Type   | Description                                        |
 |:---------------|:-------|:---------------------------------------------------|
 | externalName     | String | The name associated with the person in the external data source|
-| externalId | String | The Id associated with the person in the external data source. This could also be an email associated with the person on the external source |
+| externalId | String | The ID associated with the person in the external data source. This could also be an email associated with the person on the external source |
 | entraDisplayName   | String | The name of the person as mentioned on Microsoft Entra |
 | entraId    | String |  The ID of the person as mentioned on Microsoft Entra|
 | email     | String |  The email of the person as mentioned on Microsoft Entra|
 | upn | String | The User Principal Name (UPN) of the person as mentioned on Azure Active directory or Microsoft Entra |
-| tenantId     | String | The Id of the tenant where the person belongs. Tenant ID is a unique GUID that identifies your organization’s Azure Active Directory (Entra ID) tenant. |
+| tenantId     | String | The ID of the tenant where the person belongs. Tenant ID is a unique GUID that identifies your organization’s Azure Active Directory (Entra ID) tenant. |
 
 ## Relationships
 
