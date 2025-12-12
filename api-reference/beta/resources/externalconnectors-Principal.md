@@ -1,5 +1,5 @@
 ---
-title: "Principal data type"
+title: "principal resource type"
 description: "A complex datatype for people related properties in items indexed by externalConnection."
 ms.localizationpriority: medium
 author: "bak"
