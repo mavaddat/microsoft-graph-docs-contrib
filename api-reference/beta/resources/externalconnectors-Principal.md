@@ -29,7 +29,7 @@ Using principal or principalCollection type properties instead of a string or st
 | externalName     | String | The name associated with the person in the external data source|
 | externalId | String | The Id associated with the person in the external data source. This could also be an email associated with the person on the external source |
 | entraDisplayName   | String | The name of the person as mentioned on Microsoft Entra |
-| entraId          | String |  The ID of the person as mentioned on Microsoft Entra|
+| entraId    | String |  The ID of the person as mentioned on Microsoft Entra|
 | email     | String |  The email of the person as mentioned on Microsoft Entra|
 | upn | String | The User Principal Name (UPN) of the person as mentioned on Azure Active directory or Microsoft Entra |
 | tenantId     | String | The Id of the tenant where the person belongs. Tenant ID is a unique GUID that identifies your organization’s Azure Active Directory (Entra ID) tenant. |
@@ -55,7 +55,7 @@ The following JSON representation shows the resource type for principal data typ
   "externalName": "String",
   "externalId": "String",
   "entraDisplayName": "String",
-  "entraId": "String"
+  "entraId": "String",
   "email": "String",
   "upn": "String",
   "tenantId": "String"
@@ -78,7 +78,7 @@ The following JSON representation shows the resource type for principal collecti
   "externalName": "String",
   "externalId": "String",
   "entraDisplayName": "String",
-  "entraId": "String"
+  "entraId": "String",
   "email": "String",
   "upn": "String",
   "tenantId": "String"
@@ -87,14 +87,11 @@ The following JSON representation shows the resource type for principal collecti
   "externalName": "String",
   "externalId": "String",
   "entraDisplayName": "String",
-  "entraId": "String"
+  "entraId": "String",
   "email": "String",
   "upn": "String",
   "tenantId": "String"
 }
-...
-...
-...
 ]
 
 ```
