@@ -14,7 +14,7 @@ Namespace: microsoft.graph.externalConnectors
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A complex datatype for adding people related properties in items indexed by [externalConnection](externalconnectors-externalconnection.md). You can use Principal or principalCollection data types 
+A complex data type used to add people-related properties to items indexed by an [externalConnection](externalconnectors-externalconnection.md). You can use the principal or principalCollection data types.
 
 | Data type      | Description                                        |
 |:---------------|:---------------------------------------------------|
