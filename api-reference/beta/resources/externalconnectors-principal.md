@@ -74,27 +74,19 @@ The following JSON representation shows the resource type for principal collecti
 }-->
 
 ```json
-[
 {
-  "externalName": "String",
-  "externalId": "String",
-  "entraDisplayName": "String",
-  "entraId": "String",
-  "email": "String",
-  "upn": "String",
-  "tenantId": "String"
-},
-{
-  "externalName": "String",
-  "externalId": "String",
-  "entraDisplayName": "String",
-  "entraId": "String",
-  "email": "String",
-  "upn": "String",
-  "tenantId": "String"
+  "principals": [
+    {
+      "externalName": "String",
+      "externalId": "String",
+      "entraDisplayName": "String",
+      "entraId": "String",
+      "email": "String",
+      "upn": "String",
+      "tenantId": "String"
+    }
+  ]
 }
-]
-
 ```
 
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
