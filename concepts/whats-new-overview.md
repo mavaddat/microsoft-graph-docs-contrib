@@ -20,6 +20,10 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## December 2025: New in preview only
 
+### Search
+
+Added the **principal** and **principalCollection** datatypes to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) used to add people-related properties to items indexed by externalConnection.
+
 ### Agents
 
 Use the [inheritablePermission](/graph/api/resources/inheritablepermission?view=graph-rest-beta&preserve-view=true) APIs to configure inheritable permissions for agent identity blueprints. Inheritable permissions allow agent identities to automatically inherit delegated permission scopes from their blueprint without triggering additional consent prompts.
