@@ -55,6 +55,7 @@ Inherits from [entity](../resources/entity.md)
 |Relationship|Type|Description|
 |:---|:---|:---|
 |assignments|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|The list of license assignments which consume licenses from this allotment. Not nullable.|
+|owner|[microsoft.graph.user](../resources/user.md)|The entity in the directory who owns this allotment. If `managementScope` is `organization`, this is null. If `managementScope` is `individual`, this is the user who purchased the subscription that backs this allotment. Nullable. Read-only.|
 |waitingMembers|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|List of over-assigned users who are in the waiting room for an allotment due to license capacity limits.|
 
 ## JSON representation
