@@ -1,6 +1,6 @@
 ---
 title: "principal resource type"
-description: "A complex data type used to add people-related properties to items indexed by externalConnection."
+description: "Represents a complex data type used to add people-related properties to items indexed by externalConnection."
 ms.localizationpriority: medium
 author: "bak"
 ms.subservice: "search"
@@ -8,13 +8,13 @@ doc_type: "resourcePageType"
 ms.date: 12/06/2025
 ---
 
-# Principal data type
+# principal resource type
 
 Namespace: microsoft.graph.externalConnectors
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Principal is a complex data type used to add people-related properties to items indexed by an [externalConnection](externalconnectors-externalconnection.md). You can also use the principalCollection data type when there is list of people.
+Represents a complex data type used to add people-related properties to items indexed by an [externalConnection](externalconnectors-externalconnection.md). You can also use the principalCollection data type when there is list of people.
 
 ## Properties
 
