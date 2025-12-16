@@ -14,14 +14,14 @@ Namespace: microsoft.graph.externalConnectors
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a complex data type used to add people-related properties to items indexed by an [externalConnection](externalconnectors-externalconnection.md). You can also use the principalCollection data type when there is list of people.
+Represents a complex data type used to add people-related properties to items indexed by an [externalConnection](externalconnectors-externalconnection.md). You can also use the principalCollection data type when there's list of people.
 
 ## Properties
 
 | Property       | Type   | Description                                        |
 |:---------------|:-------|:---------------------------------------------------|
 | externalName     | String | The name associated with the person in the external data source.|
-| externalId | String | The ID associated with the person in the external data source. This could also be an email associated with the person on the external source. |
+| externalId | String | The ID associated with the person in the external data source. It could also be an email associated with the person on the external source. |
 | entraDisplayName   | String | The name of the person as mentioned on Microsoft Entra. |
 | entraId    | String |  The ID of the person as mentioned on Microsoft Entra.|
 | email     | String |  The email of the person as mentioned on Microsoft Entra.|
