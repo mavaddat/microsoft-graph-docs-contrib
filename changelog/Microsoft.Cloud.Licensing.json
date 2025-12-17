@@ -57,6 +57,14 @@
         {
           "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
           "ApiChange": "Relationship",
+          "ChangedApiName": "assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignments** relationship to the [groupCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-groupCloudLicensing?view=graph-rest-beta) resource.",
+          "Target": "groupCloudLicensing"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
           "ChangedApiName": "usageRights",
           "ChangeType": "Addition",
           "Description": "Added the **usageRights** relationship to the [groupCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-groupCloudLicensing?view=graph-rest-beta) resource.",
@@ -72,10 +80,106 @@
         },
         {
           "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "assignableTo",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignableTo** property to the [service](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-service?view=graph-rest-beta) resource.",
+          "Target": "service"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "planId",
+          "ChangeType": "Addition",
+          "Description": "Added the **planId** property to the [service](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-service?view=graph-rest-beta) resource.",
+          "Target": "service"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "planName",
+          "ChangeType": "Addition",
+          "Description": "Added the **planName** property to the [service](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-service?view=graph-rest-beta) resource.",
+          "Target": "service"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Resource",
+          "ChangedApiName": "subscription",
+          "ChangeType": "Addition",
+          "Description": "Added the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-subscription?view=graph-rest-beta) resource type.",
+          "Target": "subscription"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "productCode",
+          "ChangeType": "Addition",
+          "Description": "Added the **productCode** property to the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-subscription?view=graph-rest-beta) resource.",
+          "Target": "subscription"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "subscriptionId",
+          "ChangeType": "Addition",
+          "Description": "Added the **subscriptionId** property to the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-subscription?view=graph-rest-beta) resource.",
+          "Target": "subscription"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "nextLifecycleDate",
+          "ChangeType": "Addition",
+          "Description": "Added the **nextLifecycleDate** property to the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-subscription?view=graph-rest-beta) resource.",
+          "Target": "subscription"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "startDate",
+          "ChangeType": "Addition",
+          "Description": "Added the **startDate** property to the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-subscription?view=graph-rest-beta) resource.",
+          "Target": "subscription"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "state",
+          "ChangeType": "Addition",
+          "Description": "Added the **state** property to the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-subscription?view=graph-rest-beta) resource.",
+          "Target": "subscription"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "tags",
+          "ChangeType": "Addition",
+          "Description": "Added the **tags** property to the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-subscription?view=graph-rest-beta) resource.",
+          "Target": "subscription"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
           "ApiChange": "Resource",
           "ChangedApiName": "userCloudLicensing",
           "ChangeType": "Addition",
           "Description": "Added the [userCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-userCloudLicensing?view=graph-rest-beta) resource type.",
+          "Target": "userCloudLicensing"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignments** relationship to the [userCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-userCloudLicensing?view=graph-rest-beta) resource.",
+          "Target": "userCloudLicensing"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignmentErrors",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignmentErrors** relationship to the [userCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-userCloudLicensing?view=graph-rest-beta) resource.",
           "Target": "userCloudLicensing"
         },
         {
@@ -88,11 +192,155 @@
         },
         {
           "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "waitingMembers",
+          "ChangeType": "Addition",
+          "Description": "Added the **waitingMembers** relationship to the [userCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-userCloudLicensing?view=graph-rest-beta) resource.",
+          "Target": "userCloudLicensing"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
           "ApiChange": "Resource",
           "ChangedApiName": "usageRight",
           "ChangeType": "Addition",
-          "Description": "Added the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource and supported methods.",
+          "Description": "Added the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource type.",
           "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "id",
+          "ChangeType": "Addition",
+          "Description": "Added the **id** property to the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "services",
+          "ChangeType": "Addition",
+          "Description": "Added the **services** property to the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "skuId",
+          "ChangeType": "Addition",
+          "Description": "Added the **skuId** property to the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "skuPartNumber",
+          "ChangeType": "Addition",
+          "Description": "Added the **skuPartNumber** property to the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "state",
+          "ChangeType": "Addition",
+          "Description": "Added the **state** property to the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "allotments",
+          "ChangeType": "Addition",
+          "Description": "Added the **allotments** relationship to the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignments** relationship to the [usageRight](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-usageRight?view=graph-rest-beta) resource.",
+          "Target": "usageRight"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Resource",
+          "ChangedApiName": "waitingMember",
+          "ChangeType": "Addition",
+          "Description": "Added the [waitingMember](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-waitingMember?view=graph-rest-beta) resource type.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "id",
+          "ChangeType": "Addition",
+          "Description": "Added the **id** property to the [waitingMember](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-waitingMember?view=graph-rest-beta) resource.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Property",
+          "ChangedApiName": "waitingSinceDateTime",
+          "ChangeType": "Addition",
+          "Description": "Added the **waitingSinceDateTime** property to the [waitingMember](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-waitingMember?view=graph-rest-beta) resource.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "allotment",
+          "ChangeType": "Addition",
+          "Description": "Added the **allotment** relationship to the [waitingMember](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-waitingMember?view=graph-rest-beta) resource.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignedTo",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignedTo** relationship to the [waitingMember](https://learn.microsoft.com/en-us/graph/api/resources/cloudLicensing-waitingMember?view=graph-rest-beta) resource.",
+          "Target": "waitingMember"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "managementScope",
+          "ChangeType": "Addition",
+          "Description": "Added the **managementScope** enumeration type.",
+          "Target": "managementScope"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "subscriptionState",
+          "ChangeType": "Addition",
+          "Description": "Added the **subscriptionState** enumeration type.",
+          "Target": "subscriptionState"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "subscriptionTags",
+          "ChangeType": "Addition",
+          "Description": "Added the **subscriptionTags** enumeration type.",
+          "Target": "subscriptionTags"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "usageRightState",
+          "ChangeType": "Addition",
+          "Description": "Added the **usageRightState** enumeration type.",
+          "Target": "usageRightState"
+        },
+        {
+          "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
+          "ApiChange": "Action",
+          "ChangedApiName": "reprocessAssignments",
+          "ChangeType": "Addition",
+          "Description": "Added the **reprocessAssignments** action.",
+          "Target": "assignment"
         }
       ],
       "Id": "75cb998b-1ded-4275-abb6-15a38283274c",
@@ -106,6 +354,14 @@
       "ChangeList": [
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "cloudLicensing",
+          "ChangeType": "Addition",
+          "Description": "Added the **cloudLicensing** relationship to the [admin](https://learn.microsoft.com/en-us/graph/api/resources/admin?view=graph-rest-beta) resource.",
+          "Target": "admin"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
           "ApiChange": "Resource",
           "ChangedApiName": "adminCloudLicensing",
           "ChangeType": "Addition",
@@ -114,34 +370,26 @@
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "List allotments",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "allotments",
           "ChangeType": "Addition",
-          "Description": "Added the [List allotments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-list-allotments?view=graph-rest-beta) method.",
+          "Description": "Added the **allotments** relationship to the [adminCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-admincloudlicensing?view=graph-rest-beta) resource.",
           "Target": "adminCloudLicensing"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "List assignment errors",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignments",
           "ChangeType": "Addition",
-          "Description": "Added the [List assignment errors](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-list-assignmenterrors?view=graph-rest-beta) method.",
+          "Description": "Added the **assignments** relationship to the [adminCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-admincloudlicensing?view=graph-rest-beta) resource.",
           "Target": "adminCloudLicensing"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "List assignments",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignmentErrors",
           "ChangeType": "Addition",
-          "Description": "Added the [List assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-list-assignments?view=graph-rest-beta) method.",
-          "Target": "adminCloudLicensing"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Create assignment",
-          "ChangeType": "Addition",
-          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-admincloudlicensing-post-assignments?view=graph-rest-beta) method.",
+          "Description": "Added the **assignmentErrors** relationship to the [adminCloudLicensing](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-admincloudlicensing?view=graph-rest-beta) resource.",
           "Target": "adminCloudLicensing"
         },
         {
@@ -154,34 +402,106 @@
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get allotment",
+          "ApiChange": "Property",
+          "ChangedApiName": "allottedUnits",
           "ChangeType": "Addition",
-          "Description": "Added the [Get allotment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-get?view=graph-rest-beta) method.",
+          "Description": "Added the **allottedUnits** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
           "Target": "allotment"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "List assignments",
+          "ApiChange": "Property",
+          "ChangedApiName": "assignableTo",
           "ChangeType": "Addition",
-          "Description": "Added the [List assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-list-assignments?view=graph-rest-beta) method to the allotment resource.",
+          "Description": "Added the **assignableTo** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
           "Target": "allotment"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "List waiting members",
+          "ApiChange": "Property",
+          "ChangedApiName": "catalogId",
           "ChangeType": "Addition",
-          "Description": "Added the [List waiting members](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-list-waitingmembers?view=graph-rest-beta) method to the allotment resource.",
+          "Description": "Added the **catalogId** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
           "Target": "allotment"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Create assignment",
+          "ApiChange": "Property",
+          "ChangedApiName": "consumedUnits",
           "ChangeType": "Addition",
-          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-allotment-post-assignments?view=graph-rest-beta) method to the allotment resource.",
+          "Description": "Added the **consumedUnits** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "id",
+          "ChangeType": "Addition",
+          "Description": "Added the **id** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "managementScope",
+          "ChangeType": "Addition",
+          "Description": "Added the **managementScope** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "services",
+          "ChangeType": "Addition",
+          "Description": "Added the **services** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "skuId",
+          "ChangeType": "Addition",
+          "Description": "Added the **skuId** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "skuPartNumber",
+          "ChangeType": "Addition",
+          "Description": "Added the **skuPartNumber** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "subscriptions",
+          "ChangeType": "Addition",
+          "Description": "Added the **subscriptions** property to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignments",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignments** relationship to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "owner",
+          "ChangeType": "Addition",
+          "Description": "Added the **owner** relationship to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
+          "Target": "allotment"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "waitingMembers",
+          "ChangeType": "Addition",
+          "Description": "Added the **waitingMembers** relationship to the [allotment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta) resource.",
           "Target": "allotment"
         },
         {
@@ -194,50 +514,34 @@
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Delete assignment",
+          "ApiChange": "Property",
+          "ChangedApiName": "disabledServicePlanIds",
           "ChangeType": "Addition",
-          "Description": "Added the [Delete assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-delete?view=graph-rest-beta) method.",
+          "Description": "Added the **disabledServicePlanIds** property to the [assignment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignment?view=graph-rest-beta) resource.",
           "Target": "assignment"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get assignment",
+          "ApiChange": "Property",
+          "ChangedApiName": "id",
           "ChangeType": "Addition",
-          "Description": "Added the [Get assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-get?view=graph-rest-beta) method.",
+          "Description": "Added the **id** property to the [assignment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignment?view=graph-rest-beta) resource.",
           "Target": "assignment"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get allotment",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "allotment",
           "ChangeType": "Addition",
-          "Description": "Added the [Get allotment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-list-allotment?view=graph-rest-beta) method to the assignment resource.",
+          "Description": "Added the **allotment** relationship to the [assignment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignment?view=graph-rest-beta) resource.",
           "Target": "assignment"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get assigned to",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignedTo",
           "ChangeType": "Addition",
-          "Description": "Added the [Get assigned to](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-list-assignedto?view=graph-rest-beta) method to the assignment resource.",
-          "Target": "assignment"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Reprocess assignments",
-          "ChangeType": "Addition",
-          "Description": "Added the [Reprocess assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-reprocessassignments?view=graph-rest-beta) method.",
-          "Target": "assignment"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Update assignment",
-          "ChangeType": "Addition",
-          "Description": "Added the [Update assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignment-update?view=graph-rest-beta) method.",
+          "Description": "Added the **assignedTo** relationship to the [assignment](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignment?view=graph-rest-beta) resource.",
           "Target": "assignment"
         },
         {
@@ -250,35 +554,59 @@
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get assignment error",
+          "ApiChange": "Property",
+          "ChangedApiName": "code",
           "ChangeType": "Addition",
-          "Description": "Added the [Get assignment error](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignmenterror-get?view=graph-rest-beta) method.",
+          "Description": "Added the **code** property to the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource.",
           "Target": "assignmentError"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get assigned to",
+          "ApiChange": "Property",
+          "ChangedApiName": "id",
           "ChangeType": "Addition",
-          "Description": "Added the [Get assigned to](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignmenterror-list-assignedto?view=graph-rest-beta) method to the assignmentError resource.",
+          "Description": "Added the **id** property to the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource.",
           "Target": "assignmentError"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get usage right",
+          "ApiChange": "Property",
+          "ChangedApiName": "message",
           "ChangeType": "Addition",
-          "Description": "Added the [Get usage right](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-assignmenterror-list-usageright?view=graph-rest-beta) method to the assignmentError resource.",
+          "Description": "Added the **message** property to the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource.",
           "Target": "assignmentError"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "List assignments",
+          "ApiChange": "Property",
+          "ChangedApiName": "occurrenceDateTime",
           "ChangeType": "Addition",
-          "Description": "Added the [List assignments](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-usageright-list-assignments?view=graph-rest-beta) method to the usageRight resource.",
-          "Target": "usageRight"
+          "Description": "Added the **occurrenceDateTime** property to the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource.",
+          "Target": "assignmentError"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Property",
+          "ChangedApiName": "skuId",
+          "ChangeType": "Addition",
+          "Description": "Added the **skuId** property to the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource.",
+          "Target": "assignmentError"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "assignedTo",
+          "ChangeType": "Addition",
+          "Description": "Added the **assignedTo** relationship to the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource.",
+          "Target": "assignmentError"
+        },
+        {
+          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "usageRight",
+          "ChangeType": "Addition",
+          "Description": "Added the **usageRight** relationship to the [assignmentError](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta) resource.",
+          "Target": "assignmentError"
         },
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
@@ -287,46 +615,6 @@
           "ChangeType": "Addition",
           "Description": "Added the [waitingMember](https://learn.microsoft.com/en-us/graph/api/resources/cloudlicensing-waitingmember?view=graph-rest-beta) resource type.",
           "Target": "waitingMember"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get waiting member",
-          "ChangeType": "Addition",
-          "Description": "Added the [Get waiting member](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-waitingmember-get?view=graph-rest-beta) method.",
-          "Target": "waitingMember"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Get allotment",
-          "ChangeType": "Addition",
-          "Description": "Added the [Get allotment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-waitingmember-list-allotment?view=graph-rest-beta) method to the waitingMember resource.",
-          "Target": "waitingMember"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Create assignment",
-          "ChangeType": "Addition",
-          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-groupcloudlicensing-post-assignments?view=graph-rest-beta) method to the groupCloudLicensing resource.",
-          "Target": "groupCloudLicensing"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "List waiting members",
-          "ChangeType": "Addition",
-          "Description": "Added the [List waiting members](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-usercloudlicensing-list-waitingmember?view=graph-rest-beta) method to the userCloudLicensing resource.",
-          "Target": "userCloudLicensing"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Method",
-          "ChangedApiName": "Create assignment",
-          "ChangeType": "Addition",
-          "Description": "Added the [Create assignment](https://learn.microsoft.com/en-us/graph/api/cloudlicensing-usercloudlicensing-post-assignments?view=graph-rest-beta) method to the userCloudLicensing resource.",
-          "Target": "userCloudLicensing"
         }
       ],
       "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
