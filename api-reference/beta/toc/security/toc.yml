@@ -348,6 +348,8 @@ items:
       href: ../../resources/processconversationmetadata.md
     - name: Process file metadata
       href: ../../resources/processfilemetadata.md
+    - name: Content activity metadata
+      href: ../../resources/contentActivityMetadata.md
     - name: Processing error
       href: ../../resources/processingerror.md
     - name: Protected application metadata
