@@ -14,22 +14,24 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents metadata for a content entry of enforcement result status.
+Represents metadata for a content entry of an enforcement result status.
+
+Inherits from [processContentMetadataBase](../resources/processcontentmetadatabase.md).
 
 ## Properties
 
 | Property         | Type                                                                                                     | Description                                                                                                           |
 | :--------------- | :------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| content          | [contentBase](../resources/contentbase.md)  | Represents the actual content, either as text (`textContent`) or binary data (`binaryContent`). Optional if metadata alone is sufficient for policy evaluation. **Do not use for [contentActivities](../api/activitiescontainer-post-contentactivities.md).** Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
+| content          | [contentBase](../resources/contentbase.md)  | Represents the actual content, either as text ([textContent](../resources/textcontent.md)) or binary data ([binaryContent](../resources/binarycontent.md)). Optional if metadata alone is sufficient for policy evaluation. **Do not use for [contentActivities](../api/activitiescontainer-post-contentactivities.md).** Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | correlationId    | String                                                                         | An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | createdDateTime  | DateTimeOffset                                                                 | Required. Timestamp indicating when the original content was created (for example, file creation time, message sent time). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
-| recordType | auditLogRecordType  | The type of audit log record. For content activity, it's set to 328 by default, and 410 for enforcement result |
+| enforcementResultStatus          | String                                                                         | The status of the enforcement result.                                            |
 | identifier       | String                                                                         | Required. A unique identifier for this specific content entry within the context of the calling application or enforcement plane (for example, message ID, file path/URL). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | isTruncated      | Boolean                                                                        | Required. Indicates if the provided `content` has been truncated from its original form (for example, due to size limits). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | length           | Int64                                                                          | The length of the original content in bytes. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | modifiedDateTime | DateTimeOffset                                                                 | Required. Timestamp indicating when the original content was last modified. For ephemeral content like messages, this might be the same as `createdDateTime`. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | name             | String                                                                         | Required. A descriptive name for the content (for example, file name, web page title, `Chat Message`). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
-| enforcementResultStatus          | String                                                                         | The status of the enforcement result.                                            |
+| recordType | auditLogRecordType  | The type of audit log record. For content activity, it's set to 328 by default, and 410 for enforcement result |
 | sequenceNumber   | Int64                                                                          | A sequence number indicating the order in which content was generated or should be processed, required when `correlationId` is used. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).            |
 
 ## Relationships
