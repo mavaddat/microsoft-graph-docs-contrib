@@ -531,7 +531,6 @@ Namespace: microsoft.graph.security
 |filteringDocScan|
 |timeTravelFilteringDocScan|
 |mapgOnboard|
-|complianceDLPEnforcement|
 |unknownFutureValue|
 
 ### auditLogUserType values
