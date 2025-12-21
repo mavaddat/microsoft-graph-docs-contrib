@@ -31,7 +31,7 @@ Inherits from [processContentMetadataBase](../resources/processcontentmetadataba
 | length           | Int64                                                                          | The length of the original content in bytes. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | modifiedDateTime | DateTimeOffset                                                                 | Required. Timestamp indicating when the original content was last modified. For ephemeral content like messages, this might be the same as `createdDateTime`. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | name             | String                                                                         | Required. A descriptive name for the content (for example, file name, web page title, `Chat Message`). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
-| recordType | auditLogRecordType  | The type of audit log record. For content activity, it's set to 328 by default, and 410 for enforcement result |
+| recordType | microsoft.graph.security.auditLogRecordType  | The type of audit log record. For content activity, it's set to 328 by default, and 410 for enforcement result |
 | sequenceNumber   | Int64                                                                          | A sequence number indicating the order in which content was generated or should be processed, required when `correlationId` is used. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).            |
 
 ## Relationships
