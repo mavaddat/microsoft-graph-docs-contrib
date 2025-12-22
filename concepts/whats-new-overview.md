@@ -66,6 +66,12 @@ Use the [userConfiguration](/graph/api/resources/userconfiguration?view=graph-re
 
 Use the **layoutType** property on the [channel](/graph/api/resources/channel?view=graph-rest-beta&preserve-view=true) resource to create channels with different conversation experiences and switch between them at any time. The property supports two values: `post` for traditional post-reply format and `chat` for a chat-like threading experience. You can set the layout type when [creating a channel](/graph/api/channel-post?view=graph-rest-beta&preserve-view=true) and [update it](/graph/api/channel-patch?view=graph-rest-beta&preserve-view=true) later to switch between layouts.
 
+## December 2025: New in preview only
+
+### Security | Data security and compliance
+
+Use the [contentActivityMetadata](/graph/api/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
+
 ## November 2025: New and generally available
 
 ### Calendars | Places
