@@ -70,7 +70,7 @@ Use the **layoutType** property on the [channel](/graph/api/resources/channel?vi
 
 ### Security | Data security and compliance
 
-Use the [contentActivityMetadata](/graph/api/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
+Use the [contentActivityMetadata](/graph/api/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track DLP enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
 
 ## November 2025: New and generally available
 
