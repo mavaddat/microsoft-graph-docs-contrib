@@ -31,6 +31,7 @@ Represents detonation details specific to email attachments and URLs. These deta
 |mitreTechniques|String|The attack techniques, as aligned with the MITRE ATT&CK framework.|
 |staticAnalysis|String|The results of static analysis performed on the file or URL.|
 |submissionSource|String|The source of the submission.|
+|detonationBehaviourDetails (deprecated)|[microsoft.graph.security.detonationBehaviourDetails](../resources/security-detonationbehaviourdetails.md)| Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation. This property is deprecated and still stop returning data in March 2026. Use the **detonationBehaviourDetailsV2** property instead.|
 
 
 ## Relationships
