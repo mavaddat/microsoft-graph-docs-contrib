@@ -658,11 +658,11 @@
       "ChangeList": [
         {
           "Id": "434ab3d3-04a9-4ee4-b70d-31e49940e98d",
-          "ApiChange": "Resource",
+          "ApiChange": "Property",
           "ChangedApiName": "detonationBehaviourDetails",
           "ChangeType": "Deprecation",
           "Description": "Deprecated the [detonationBehaviourDetails](https://learn.microsoft.com/en-us/graph/api/resources/security-detonationBehaviourDetails?view=graph-rest-beta) resource.",
-          "Target": "detonationBehaviourDetails"
+          "Target": "detonationDetails"
         },
         {
           "Id": "434ab3d3-04a9-4ee4-b70d-31e49940e98d",
