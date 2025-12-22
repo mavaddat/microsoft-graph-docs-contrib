@@ -25,7 +25,6 @@ Represents detonation details specific to email attachments and URLs. These deta
 |detonationObservables|[microsoft.graph.security.detonationObservables](../resources/security-detonationobservables.md)|All observables in the detonation tree.|
 |detonationVerdict|String|The verdict of the detonation.|
 |detonationVerdictReason|String|The reason for the verdict of the detonation.|
-|detonationBehaviourDetails|[microsoft.graph.security.detonationBehaviourDetails](../resources/security-detonationbehaviourdetails.md)|(Deprecated) Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation|
 |detonationBehaviourDetailsV2|String|Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation in a JSON format|
 |detonationScreenshotUri|String|Show any screenshots that were captured during detonation. No screenshots are captured if the URL opens into a link that directly downloads a file. However, you see the downloaded file in the detonation chain.|
 |entityMetadata|String|Additional metadata about the entity in JSON format.|
