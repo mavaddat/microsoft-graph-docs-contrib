@@ -703,6 +703,14 @@
           "ChangeType": "Addition",
           "Description": "Added the **submissionSource** property to the [detonationDetails](https://learn.microsoft.com/en-us/graph/api/resources/security-detonationDetails?view=graph-rest-beta) resource.",
           "Target": "detonationDetails"
+        },
+        {
+          "Id": "434ab3d3-04a9-4ee4-b70d-31e49940e98d",
+          "ApiChange": "Property",
+          "ChangedApiName": "moveToQuarantine",
+          "ChangeType": "Addition",
+          "Description": "Added the **moveToQuarantine** enum member to the [remediationAction](https://learn.microsoft.com/en-us/graph/api/resources/enums-security?view=graph-rest-beta) resource.",
+          "Target": "remediationAction"
         }
       ],
       "Id": "434ab3d3-04a9-4ee4-b70d-31e49940e98d",
