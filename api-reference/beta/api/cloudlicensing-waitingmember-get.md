@@ -1,6 +1,6 @@
 ---
 title: "Get waitingMember"
-description: "Read the properties and relationships of microsoft.graph.cloudLicensing.waitingMember object."
+description: "Read the properties and relationships of waitingMember object."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) object.
+Read the properties and relationships of [waitingMember](../resources/cloudlicensing-waitingmember.md) object.
 
 ## Permissions
 

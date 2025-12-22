@@ -49,7 +49,7 @@ POST /users/{userId}/cloudLicensing/assignments
 
 ## Request body
 
-In the request body, supply a JSON representation of the [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.
+In the request body, supply a JSON representation of the [assignment](../resources/cloudlicensing-assignment.md) object.
 
 You can specify the following properties when creating an **assignment**.
 

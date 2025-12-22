@@ -1,6 +1,6 @@
 ---
 title: "Get waiting member"
-description: "Get waiting members for an allotment by id."
+description: "Get waitingMember for an allotment by ID."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) for an allotment by id.
+Get [waitingMember](../resources/cloudlicensing-waitingmember.md) for an allotment by ID.
 
 ## Permissions
 
