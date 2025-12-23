@@ -28,10 +28,10 @@ Inherits from [entity](../resources/entity.md)
 |[Create for group](../api/cloudlicensing-groupcloudlicensing-post-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Create a new [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.|
 |[Get](../api/cloudlicensing-assignment-get.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Read the properties and relationships of [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.|
 |[Update](../api/cloudlicensing-assignment-update.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Update the properties of a assignment object.|
-|[reprocessAssignments](../api/cloudlicensing-assignment-reprocessassignments.md)|None|Reprocess existing license assignments for a user by posting to the user's assignments reprocessAssignments action.|
-|[List allotment](../api/cloudlicensing-assignment-list-allotment.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|Get a list of allotment objects.|
+|[Reprocess assignments](../api/cloudlicensing-assignment-reprocessassignments.md)|None|Reprocess existing license assignments for a user by posting to the user's assignments reprocessAssignments action.|
 |[Remove assignment](../api/cloudlicensing-assignment-delete.md)|None|Remove a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.|
 |[Get assignedTo](../api/cloudlicensing-assignment-get-assignedto.md)|[directoryObject](../resources/directoryobject.md)| Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignment](../resources/cloudlicensing-assignment.md) to which licenses are assigned.|
+|[Get allotment](../api/cloudlicensing-assignment-get-allotment.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md)|Get the [allotment](../resources/cloudlicensing-allotment.md) that is the source of the licenses used in the assignment.|
 
 ## Properties
 |Property|Type|Description|
