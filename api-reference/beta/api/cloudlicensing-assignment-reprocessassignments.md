@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Reprocess existing license [assignments](../resources/cloudlicensing-assignment.md) for a user by posting to the user's assignments **reprocessAssignments** action. Depending on the steps taken to resolve licensing errors, it might be necessary to manually trigger the processing of a user to update their state. For example, after resolving a dependency violation error for an affected user, you need to trigger reprocessing to apply the changes.
+Reprocess existing license [assignments](../resources/cloudlicensing-assignment.md) for a user by calling the **reprocessAssignments** action on a user's assignments. Depending on the steps taken to resolve licensing errors, it might be necessary to manually trigger the processing of a user to update their state. For example, after you resolve a dependency violation error for an affected user, you need to trigger reprocessing to apply the changes.
 
 ## Permissions
 
