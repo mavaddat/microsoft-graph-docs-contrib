@@ -133,7 +133,7 @@ Content-Type: application/json
 
 ### Example 2: Get an assignment and its assignee
 
-The following example shows how to get an [assignment](../resources/cloudlicensing-assignment.md) object and its assignee by using the `expand` query parameter.
+The following example shows how to get an [assignment](../resources/cloudlicensing-assignment.md) object and its assignee by using the `$expand` query parameter.
 
 #### Request
 
