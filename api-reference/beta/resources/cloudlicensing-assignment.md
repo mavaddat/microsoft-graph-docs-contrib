@@ -31,7 +31,7 @@ Inherits from [entity](../resources/entity.md)
 |[reprocessAssignments](../api/cloudlicensing-assignment-reprocessassignments.md)|None|Reprocess existing license assignments for a user by posting to the user's assignments reprocessAssignments action.|
 |[List allotment](../api/cloudlicensing-assignment-list-allotment.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|Get a list of allotment objects.|
 |[Remove assignment](../api/cloudlicensing-assignment-delete.md)|None|Remove a [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) object.|
-|[List assignedTo](../api/cloudlicensing-assignment-list-assignedto.md)|[microsoft.graph.directoryObject](../resources/directoryobject.md) collection| Get the list of user or group to which licenses are assigned.|
+|[Get assignedTo](../api/cloudlicensing-assignment-get-assignedto.md)|[directoryObject](../resources/directoryobject.md)| Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignment](../resources/cloudlicensing-assignment.md) to which licenses are assigned.|
 
 ## Properties
 |Property|Type|Description|
