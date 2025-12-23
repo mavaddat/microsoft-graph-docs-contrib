@@ -12,6 +12,8 @@ ms.date: 11/11/2024
 
 Namespace: microsoft.graph.security
 
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
 ### appCategory values 
 
 |Member|
