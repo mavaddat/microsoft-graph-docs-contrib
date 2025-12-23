@@ -1,5 +1,5 @@
 ---
-title: "List assignedTo"
+title: "Get assignedTo"
 description: "Get a user or group object for a given assignment to which licenses are assigned."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List assignedTo
+# Get assignedTo
 
 Namespace: microsoft.graph.cloudLicensing
 
@@ -22,10 +22,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "cloudlicensing-assignment-list-assignedto-permissions"
+  "name": "cloudlicensing-assignment-get-assignedto-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-list-assignedto-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-assignedto-permissions.md)]
 
 ## HTTP request
 
