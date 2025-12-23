@@ -1,5 +1,5 @@
 ---
-title: "List allotment"
+title: "Get allotment"
 description: "Get the allotment that is the source of the licenses used in the assignment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List allotment
+# Get allotment
 
 Namespace: microsoft.graph.cloudLicensing
 
@@ -28,8 +28,8 @@ Permissions to get an **allotment** for an admin:
 GET /admin/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-list-allotment-permissions" } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-list-allotment-permissions.md)]
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment-permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-permissions.md)]
 
 Permissions to get an **allotment** for a user:
 
@@ -38,8 +38,8 @@ Permissions to get an **allotment** for a user:
 GET /users/{userId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-list-allotment-user-permissions" } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-list-allotment-user-permissions.md)]
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment-user-permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-user-permissions.md)]
 
 
 Permissions to get an **allotment** for a group:
@@ -49,8 +49,8 @@ Permissions to get an **allotment** for a group:
 GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-list-allotment-group-permissions" } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-list-allotment-group-permissions.md)]
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment-group-permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-group-permissions.md)]
 
 ## HTTP request
 
