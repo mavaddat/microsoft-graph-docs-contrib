@@ -1105,6 +1105,20 @@ Namespace: microsoft.graph.security
 |unknown|
 |unknownFutureValue|
 
+### enforcementResultStatus values
+
+|Member|
+|:---|
+|success|
+|missingOrInvalidConfiguration|
+|userOverride|
+|agentFailure|
+|enforcementTimeout|
+|oSOverride|
+|processNonExistent|
+|other|
+|unknownFutureValue
+
 <!--
 {
   "type": "#page.annotation",
