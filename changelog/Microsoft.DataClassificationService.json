@@ -7,8 +7,16 @@
           "ApiChange": "Resource",
           "ChangedApiName": "contentActivityMetadata",
           "ChangeType": "Addition",
-          "Description": "Added the [contentActivityMetadata](https://learn.microsoft.com/en-us/graph/api/resources/contentActivityMetadata?view=graph-rest-1.0) resource.",
+          "Description": "Added the [contentActivityMetadata](https://learn.microsoft.com/en-us/graph/api/resources/contentActivityMetadata?view=graph-rest-beta) resource type.",
           "Target": "contentActivityMetadata"
+        },
+        {
+          "Id": "c6ec8d31-b2e6-463a-a440-1461b2fddf86",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "enforcementResultStatus",
+          "ChangeType": "Addition",
+          "Description": "Added the **enforcementResultStatus** enumeration type.",
+          "Target": "enforcementResultStatus"
         }
       ],
       "Id": "c6ec8d31-b2e6-463a-a440-1461b2fddf86",
