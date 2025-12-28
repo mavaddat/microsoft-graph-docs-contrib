@@ -1,6 +1,6 @@
 ---
 title: "List waitingMembers for user"
-description: "Get a list of the waitingMembers objects for a user."
+description: "Get a list of the waitingMember objects granted to a user."
 author: "patrick-starrin"
 ms.localizationpriority: medium
 ms.subservice: "cloud-licensing"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [waitingMembers](../resources/cloudlicensing-waitingMember.md) objects granted to a user. This API returns details about licenses that are directly assigned to a user and those licenses transitively assigned through membership in licensed groups.
+Get a list of the [waitingMember](../resources/cloudlicensing-waitingmember.md) objects granted to a user. This API returns details about licenses that are directly assigned to a user and those licenses transitively assigned through membership in licensed groups.
 
 ## Permissions
 
@@ -43,17 +43,7 @@ GET /users/{userId}/cloudLicensing/waitingMembers
 
 ## Optional query parameters
 
-This method supports the `$select` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
-
-The following examples show how to get waiting members information for users based on specific filters:
-
-<!-- {
-  "blockType": "ignored"
-}
--->
-``` http
-GET /users/48fbdf70-9e09-40df-9dbe-17af483ab113/cloudLicensing/waitingMembers
-```
+This method supports the `$select` OData query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -67,7 +57,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingMember.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) objects in the response body.
 
 ## Examples
 
