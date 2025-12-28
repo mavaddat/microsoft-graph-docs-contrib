@@ -23,8 +23,8 @@ Inherits from [entity](../resources/entity.md)
 |:---|:---|:---|
 |[List](../api/cloudlicensing-admincloudlicensing-list-assignmenterrors.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|Get a list of the [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) objects and their properties.|
 |[Get](../api/cloudlicensing-assignmenterror-get.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md)|Read the properties and relationships of [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) object.|
-|[List assignedTo](../api/cloudlicensing-assignmenterror-list-assignedto.md)|[microsoft.graph.directoryObject](../resources/directoryobject.md) collection|Get the list of user or group to which licenses are assigned.|
-|[List usageRight](../api/cloudlicensing-assignmenterror-list-usageright.md)|[microsoft.graph.cloudLicensing.usageRight](../resources/cloudlicensing-usageright.md) collection|Get a list of the usageRight objects affected by an assignmentError. A usageRight is only returned if there's a preexisting usageRight in effect, which is prevented from updating by this assignmentError.|
+|[Get assignedTo](../api/cloudlicensing-assignmenterror-get-assignedto.md)|[microsoft.graph.directoryObject](../resources/directoryobject.md)|Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignmentError](../resources/cloudlicensing-assignmenterror.md) to which licenses are assigned.|
+|[Get usageRight](../api/cloudlicensing-assignmenterror-get-usageright.md)|[microsoft.graph.cloudLicensing.usageRight](../resources/cloudlicensing-usageright.md)|Get a [usageRight](../resources/cloudlicensing-usageright.md) object affected by an [assignmentError](../resources/cloudlicensing-assignmenterror.md).|
 
 ## Properties
 |Property|Type|Description|
