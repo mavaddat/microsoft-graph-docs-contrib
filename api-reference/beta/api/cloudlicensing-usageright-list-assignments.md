@@ -1,6 +1,6 @@
 ---
 title: "List assignments"
-description: "Get a list of assignments which combine to form this usageRight."
+description: "Get a list of assignment objects which combine to form this usageRight."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,13 +14,13 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of [microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) which combine to form this [usageRight](../resources/cloudlicensing-usageright.md). This includes both direct assignments and assignments inherited through group membership.
+Get a list of [assignment](../resources/cloudlicensing-assignment.md) objects which combine to form this [usageRight](../resources/cloudlicensing-usageright.md), including both direct assignments and assignments inherited through group membership
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-Permissions to list usageRight assignments for a user:
+Permissions to list **usageRight** assignments for a user:
 
 <!-- { "blockType": "ignored"} -->
 ``` http
@@ -35,7 +35,7 @@ GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}/assignments
 |Delegated (personal Microsoft account)|Not supported.|Not supported.|
 |Application|User-UsageRight.Read.All|Directory.Read.All, Directory.ReadWrite.All, User-CloudLicensing.Read.All, User.Read.All, User.ReadWrite.All|
 
-Permissions to list usageRight assignments for a group:
+Permissions to list **usageRight** assignments for a group:
 
 <!-- { "blockType": "ignored"} -->
 ``` http
@@ -48,7 +48,6 @@ GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}/assignments
 |Delegated (work or school account)|Group-UsageRight.Read.All|Directory.Read.All, Directory.ReadWrite.All, Group-CloudLicensing.Read, Group-CloudLicensing.Read.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|Not supported.|
 |Application|Group-UsageRight.Read.All|Directory.Read.All, Directory.ReadWrite.All, Group-CloudLicensing.Read.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All|
-
 
 <!-- {
   "blockType": "permissions",
