@@ -14,8 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the relationships of a user to cloud licensing resources.
-
+Represents the relationships of a [user](../resources/user.md) to cloud licensing resources.
 
 ## Properties
 None.
