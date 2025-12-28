@@ -22,10 +22,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "cloudlicensing-assignmenterror-list-usageright-permissions"
+  "name": "cloudlicensing-assignmenterror-get-usageright-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignmenterror-list-usageright-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignmenterror-get-usageright-permissions.md)]
 
 ## HTTP request
 
@@ -62,7 +62,7 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_usageright",
+  "name": "get_assignmenterror_usageright",
   "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
 }
 -->
