@@ -188,7 +188,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 3: Get a usageRight with assignments
+### Example 3: Get a usageRight with assignments for a user
 
 The following example shows how to get a usage right and its assignments for a user.
 
@@ -198,8 +198,8 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "cloudlicensing_usageright_get_with_assignments",
-  "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113","i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
+  "name": "cloudlicensing_get_usageright_with_assignments_for_user",
+  "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113", "i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
 }
 -->
 ``` http
@@ -242,7 +242,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 4: Get a usageRight with allotments
+### Example 4: Get a usageRight with allotments for a user
 
 The following example shows how to get a usage right and its allotments for a user.
 
@@ -252,8 +252,8 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "cloudlicensing_usageright_get_with_allotments",
-  "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113","i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
+  "name": "cloudlicensing_get_usageright_with_allotments_for_user",
+  "sampleKeys": ["48fbdf70-9e09-40df-9dbe-17af483ab113", "i6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby3"]
 }
 -->
 ``` http
@@ -307,3 +307,4 @@ Content-Type: application/json
   ]
 }
 ```
+
