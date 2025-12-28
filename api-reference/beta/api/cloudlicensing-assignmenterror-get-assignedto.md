@@ -1,5 +1,5 @@
 ---
-title: "List assignedTo"
+title: "Get assignedTo"
 description: "Get a user or group object for a given assignmentError to which licenses are assigned."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List assignedTo
+# Get assignedTo
 
 Namespace: microsoft.graph.cloudLicensing
 
@@ -22,10 +22,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "cloudlicensing-assignmenterror-list-assignedto-permissions"
+  "name": "cloudlicensing-assignmenterror-get-assignedto-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignmenterror-list-assignedto-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignmenterror-get-assignedto-permissions.md)]
 
 ## HTTP request
 
@@ -53,7 +53,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [directoryObject](../resources/directoryobject.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a [directoryObject](../resources/directoryobject.md) object in the response body.
 
 ## Examples
 
@@ -62,7 +62,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_assignmenterror_assignedto",
+  "name": "get_assignmenterror_assignedto",
   "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
 }
 -->
@@ -77,7 +77,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "Collection(microsoft.graph.directoryObject)"
+  "@odata.type": "microsoft.graph.directoryObject"
 }
 -->
 ``` http
@@ -85,14 +85,12 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.user",
-      "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
-      "displayName": "Steve Fred",
-      "userPrincipalName": "stevefred@contoso.com"
-    }
-  ]
+  "value": {
+    "@odata.type": "#microsoft.graph.user",
+    "id": "a6c034b8-621b-dee3-6abb-52cbce801fe9",
+    "displayName": "Steve Fred",
+    "userPrincipalName": "stevefred@contoso.com"
+  }
 }
 ```
 
