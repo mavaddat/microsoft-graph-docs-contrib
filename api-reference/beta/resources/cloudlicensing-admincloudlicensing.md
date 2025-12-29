@@ -14,15 +14,15 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the root of the Cloud Licensing API for the entire organization.
+Represents the root of the cloud licensing API for the entire organization.
 
-Inherits from [entity](../resources/entity.md)
+Inherits from [entity](../resources/entity.md).
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List allotments](../api/cloudlicensing-admincloudlicensing-list-allotments.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|Get a list of the [allotment](../resources/cloudlicensing-allotment.md) objects and their properties.|
-|[List assignmentErrors](../api/cloudlicensing-admincloudlicensing-list-assignmenterrors.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|Get a list of the [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects within an organization or that affect a specific user.|
+|[List assignmentErrors](../api/cloudlicensing-admincloudlicensing-list-assignmenterrors.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|Get a list of the [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects within an organization or affecting a specific user.|
 |[List assignments](../api/cloudlicensing-admincloudlicensing-list-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|Get a list of license [assignment](../resources/cloudlicensing-assignment.md) objects within an organization.|
 |[Create assignment](../api/cloudlicensing-admincloudlicensing-post-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Create a new license [assignment](../resources/cloudlicensing-assignment.md) by posting to the **assignments** collection of an organization.|
 
