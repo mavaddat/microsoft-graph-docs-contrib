@@ -1,5 +1,5 @@
 ---
-title: "Create assignment"
+title: "Create assignment for allotment"
 description: "Create a new license assignment by posting to the assignments collection of an allotment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# Create assignment
+# Create assignment for allotment
 
 Namespace: microsoft.graph.cloudLicensing
 
