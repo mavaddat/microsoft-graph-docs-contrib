@@ -8,6 +8,25 @@ ms.subservice: "security"
 doc_type: resourcePageType
 ---
 
+# Enforcement Result Status is used when:
+A DLP policy matched, and enforcement is done by another system (browser, network, app), not Purview itself
+
+Tells the admin:
+Was the action actually enforced?
+Did the user override?
+Did enforcement fail?
+Did we never get confirmation?
+
+Typical examples:
+Browser DLP block succeeded or failed
+User clicked Override
+Enforcement timed out or agent failed
+No enforcement confirmation was ever received
+
+So:
+1. RuleMatch = "policy matched"
+2. Enforcement Result Status = "what really happened during enforcement"
+
 # contentActivityMetadata resource type
 
 Namespace: microsoft.graph
@@ -61,5 +80,56 @@ The following JSON representation shows the resource type.
   "name": "String", 
   "recordType": "String",
   "sequenceNumber": "Int64"
+}
+```
+
+Example of request body call to PICS Tier 0 ContentActivity API, 
+``` json
+{
+  "userId": "String",
+  "contentMetadata": {
+    "contentEntries": [
+      {
+        "accessedResources": [
+          "String"
+        ],
+        "plugins": [
+          {
+            "identifier": "String",
+            "name": "String",
+            "version": "String"
+          }
+        ],
+        "identifier": "String",
+        "name": "String",
+        "correlationId": "String",
+        "sequenceNumber": "Int64",
+        "length": "Int64",
+        "isTruncated": "Boolean",
+        "createdDateTime": "String (timestamp)",
+        "modifiedDateTime": "String (timestamp)",
+        "RecordType": { "@odata.type": "microsoft.graph.security.auditLogRecordType" },
+        "EnforcementResultStatus": { "@odata.type": "microsoft.graph.security.enforcementResultStatus" },
+        "@odata.type": "microsoft.graph.contentActivityMetadata"
+      }
+    ],
+    "activityMetadata": {
+      "activity": { "@odata.type": "microsoft.graph.userActivityType" }
+    },
+    "deviceMetadata": {
+      "ipAddress": "String",
+      "operatingSystemSpecifications": {
+        "operatingSystemPlatform": "String",
+        "operatingSystemVersion": "String"
+      }
+    },
+    "protectedAppMetadata": {
+      "version": "String"
+    },
+    "integratedAppMetadata": {
+      "name": "String",
+      "version": "String"
+    }
+  }
 }
 ```
