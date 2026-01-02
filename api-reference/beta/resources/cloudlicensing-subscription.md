@@ -1,6 +1,6 @@
 ---
 title: "subscription resource type"
-description: "Represents a subscription that backs an allotment."
+description: "Represents a subscription that supports an allotment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a subscription that backs an allotment.
+Represents a subscription that supports an [allotment](../resources/cloudlicensing-allotment.md).
 
 ## Properties
 |Property|Type|Description|
@@ -22,7 +22,7 @@ Represents a subscription that backs an allotment.
 |nextLifecycleDate|Date|The date on which the current state transitions to the next state.|
 |startDate|Date|The date when the subscription started.|
 |state|[microsoft.graph.cloudLicensing.subscriptionState](#subscriptionstate-values) | The current lifecycle state of the subscription. The possible values are: `active`, `warning`, `suspended`, `lockedOut`, `deleted`, `unknownFutureValue`. This property is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only.|
-|subscriptionId|String|Identifier for the subscription.|
+|subscriptionId|String|Identifier for the **subscription** object.|
 |tags|[microsoft.graph.cloudLicensing.subscriptionTags](#subscriptiontags-values) | A set of flags that provide additional information about the subscription. The possible values are: `none`, `trial`, `unknownFutureValue`. This property is a multi-valued enumeration and the property can contain multiple values in a comma-separated list. Read-only.|
 
 ### subscriptionState values
