@@ -476,17 +476,17 @@
             "allotment"
           ],
           "resources": [
-            "microsoft.graph.cloudLicensing.usageRight",            
             "microsoft.graph.cloudLicensing.allotment",
             "microsoft.graph.cloudLicensing.assignment",
-            "microsoft.graph.cloudLicensing.assignmenterror",
-            "microsoft.graph.cloudLicensing.waitingmember",
-            "microsoft.graph.cloudLicensing.service"
+            "microsoft.graph.cloudLicensing.assignmentError",
+            "microsoft.graph.cloudLicensing.usageRight",          
+            "microsoft.graph.cloudLicensing.waitingMember"
           ],
           "complexTypes": [
             "microsoft.graph.cloudLicensing.groupCloudLicensing",
-            "microsoft.graph.cloudLicensing.userCloudLicensing",
-            "microsoft.graph.cloudLicensing.service"
+            "microsoft.graph.cloudLicensing.service",
+            "microsoft.graph.cloudLicensing.subscription",
+            "microsoft.graph.cloudLicensing.userCloudLicensing"
           ],
           "childNodes": []
         },
