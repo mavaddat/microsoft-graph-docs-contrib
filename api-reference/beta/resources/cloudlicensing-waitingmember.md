@@ -1,6 +1,6 @@
 ---
 title: "waitingMember resource type"
-description: "List of over-assigned users who are in the waiting room for an allotment due to license capacity limits."
+description: "Represents a user or device that was added to the waiting room for an allotment due to license capacity limits."
 author: "patrick-starrin"
 ms.date: 07/18/2025
 ms.localizationpriority: medium
@@ -16,13 +16,13 @@ Namespace: microsoft.graph.cloudLicensing
 
 Represents a user or device that was added to the waiting room for an allotment due to license capacity limits.
 
-Inherits from [entity](../resources/entity.md)
+Inherits from [entity](../resources/entity.md).
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/cloudlicensing-allotment-list-waitingmembers.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get a list of the waitingMember objects and their properties.|
-|[Get](../api/cloudlicensing-waitingmember-get.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md)|Read the properties and relationships of [microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) object.|
+|[List](../api/cloudlicensing-allotment-list-waitingmembers.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get a list of over-assigned [users](../resources/cloudlicensing-waitingmember.md) who are in the waiting room due to license capacity limits. |
+|[Get](../api/cloudlicensing-waitingmember-get.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md)|Read the properties and relationships of [waitingMember](../resources/cloudlicensing-waitingmember.md) object.|
 |[Get waiting member for allotment](../api/cloudlicensing-waitingmember-list-allotment.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md)|Get waiting members for an allotment by id.|
 |[Get waiting member for user](../api/cloudlicensing-usercloudlicensing-list-waitingmember.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get waiting members for a specific user.|
 
@@ -30,7 +30,7 @@ Inherits from [entity](../resources/entity.md)
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|The unique identifier for the **waitingMember** that should be treated as an opaque identifier. Inherited from [entity](../resources/entity.md). Not nullable. Read-only.|
-|waitingSinceDateTime|DateTimeOffset|Indicates when the user or device first began waiting for this license.|
+|waitingSinceDateTime|DateTimeOffset|Indicates the moment when the user or device first waited for this license. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 
 ## Relationships
 |Relationship|Type|Description|
