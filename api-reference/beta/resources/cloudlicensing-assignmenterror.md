@@ -14,15 +14,15 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an error that impacts synchronization of license assignments in the directory. This error can prevent the license assignment from taking effect or from being updated.
+Represents an error that impacts synchronization of license assignments in the directory. This error can prevent the license assignment from taking effect or from updating.
 
-Inherits from [entity](../resources/entity.md)
+Inherits from [entity](../resources/entity.md).
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/cloudlicensing-admincloudlicensing-list-assignmenterrors.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|Get a list of the [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) objects and their properties.|
-|[Get](../api/cloudlicensing-assignmenterror-get.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md)|Read the properties and relationships of [microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) object.|
+|[List](../api/cloudlicensing-admincloudlicensing-list-assignmenterrors.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|Get a list of the [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects within an organization or affecting a specific user.|
+|[Get](../api/cloudlicensing-assignmenterror-get.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md)|Read the properties and relationships of an [assignmentError](../resources/cloudlicensing-assignmenterror.md) object.|
 |[Get assignedTo](../api/cloudlicensing-assignmenterror-get-assignedto.md)|[microsoft.graph.directoryObject](../resources/directoryobject.md)|Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignmentError](../resources/cloudlicensing-assignmenterror.md) to which licenses are assigned.|
 |[Get usageRight](../api/cloudlicensing-assignmenterror-get-usageright.md)|[microsoft.graph.cloudLicensing.usageRight](../resources/cloudlicensing-usageright.md)|Get a [usageRight](../resources/cloudlicensing-usageright.md) object affected by an [assignmentError](../resources/cloudlicensing-assignmenterror.md).|
 
