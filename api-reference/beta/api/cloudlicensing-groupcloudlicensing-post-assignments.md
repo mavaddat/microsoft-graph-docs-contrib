@@ -16,7 +16,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 Create a new license [assignment](../resources/cloudlicensing-assignment.md) by posting to the **assignments** collection for a [group](../resources/group.md).
 
-An assignment must always have a direct relationship to an allotment and to a user or group. If an assignment is created by posting to the **assignments** collection of a group, located at `/groups/{groupId}/cloudLicensing/assignments`, the **allotment** relationship must be established in the request body. Assignments can also be created by posting to the **assignments** collection of an organization, the **assignments** collection of an allotment, or the **assignments** collection of a group.
+An assignment must always have a direct relationship to an allotment and to a user or group. If an assignment is created by posting to the **assignments** collection of a group, located at `/groups/{groupId}/cloudLicensing/assignments`, the **allotment** relationship must be established in the request body. Assignments can also be created by posting to the **assignments** collection of an organization, the **assignments** collection of an allotment, or the **assignments** collection of a user.
 
 ## Permissions
 
