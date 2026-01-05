@@ -50,7 +50,7 @@ Inherits from [processContentMetadataBase](../resources/processcontentmetadataba
 | length           | Int64                                                                          | The length of the original content in bytes. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | modifiedDateTime | DateTimeOffset                                                                 | Date and time when the original content was last modified. For ephemeral content, such as messages, this property might be the same as **createdDateTime**. Required. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | name             | String                                                                         | A descriptive name for the content; for example, file name, web page title, or `Chat message`. Required. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
-| recordType  | microsoft.graph.security.auditLogRecordType                              | The type of operation indicated by the record. The possible values are: `exchangeAdmin`, `exchangeItem`, `exchangeItemGroup`, `sharePoint`, `syntheticProbe`, `sharePointFileOperation`, `oneDrive`, `azureActiveDirectory`, `azureActiveDirectoryAccountLogon`, `dataCenterSecurityCmdlet`, `complianceDLPSharePoint`, `sway`, `complianceDLPExchange`, `sharePointSharingOperation`, `azureActiveDirectoryStsLogon`, `skypeForBusinessPSTNUsage`, `skypeForBusinessUsersBlocked`, `securityComplianceCenterEOPCmdlet`, `exchangeAggregatedOperation`, `powerBIAudit`, `crm`, `yammer`, `skypeForBusinessCmdlets`, `discovery`, `microsoftTeams`, `threatIntelligence`, `mailSubmission`, `microsoftFlow`, `aeD`, `microsoftStream`, `complianceDLPSharePointClassification`, `threatFinder`, `project`, `sharePointListOperation`, `sharePointCommentOperation`, `dataGovernance`, `kaizala`, `securityComplianceAlerts`, `threatIntelligenceUrl`, `securityComplianceInsights`, `mipLabel`, `workplaceAnalytics`, `powerAppsApp`, `powerAppsPlan`, `threatIntelligenceAtpContent`, `labelContentExplorer`, `teamsHealthcare`, `exchangeItemAggregated`, `hygieneEvent`, `dataInsightsRestApiAudit`, `informationBarrierPolicyApplication`, `sharePointListItemOperation`, `sharePointContentTypeOperation`, `sharePointFieldOperation`, `microsoftTeamsAdmin`, `hrSignal`, `microsoftTeamsDevice`, `microsoftTeamsAnalytics`, `informationWorkerProtection`, `campaign`, `dlpEndpoint`, `airInvestigation`, `quarantine`, `microsoftForms`, `applicationAudit`, `complianceSupervisionExchange`, `customerKeyServiceEncryption`, `officeNative`, `mipAutoLabelSharePointItem`, `mipAutoLabelSharePointPolicyLocation`, `microsoftTeamsShifts`, `secureScore`, `mipAutoLabelExchangeItem`, `cortanaBriefing`, `search`, `wdatpAlerts`, `powerPlatformAdminDlp`, `powerPlatformAdminEnvironment`, `mdatpAudit`, `sensitivityLabelPolicyMatch`, `sensitivityLabelAction`, `sensitivityLabeledFileAction`, `attackSim`, `airManualInvestigation`, `securityComplianceRBAC`, `userTraining`, `airAdminActionInvestigation`, `mstic`, `physicalBadgingSignal`, `teamsEasyApprovals`, `aipDiscover`, `aipSensitivityLabelAction`, `aipProtectionAction`, `aipFileDeleted`, `aipHeartBeat`, `mcasAlerts`, `onPremisesFileShareScannerDlp`, `onPremisesSharePointScannerDlp`, `exchangeSearch`, `sharePointSearch`, `privacyDataMinimization`, `labelAnalyticsAggregate`, `myAnalyticsSettings`, `securityComplianceUserChange`, `complianceDLPExchangeClassification`, `complianceDLPEndpoint`, `mipExactDataMatch`, `msdeResponseActions`, `msdeGeneralSettings`, `msdeIndicatorsSettings`, `ms365DCustomDetection`, `msdeRolesSettings`, `mapgAlerts`, `mapgPolicy`, `mapgRemediation`, `privacyRemediationAction`, `privacyDigestEmail`, `mipAutoLabelSimulationProgress`, `mipAutoLabelSimulationCompletion`, `mipAutoLabelProgressFeedback`, `dlpSensitiveInformationType`, `mipAutoLabelSimulationStatistics`, `largeContentMetadata`, `microsoft365Group`, `cdpMlInferencingResult`, `filteringMailMetadata`, `cdpClassificationMailItem`, `cdpClassificationDocument`, `officeScriptsRunAction`, `filteringPostMailDeliveryAction`, `cdpUnifiedFeedback`, `tenantAllowBlockList`, `consumptionResource`, `healthcareSignal`, `dlpImportResult`, `cdpCompliancePolicyExecution`, `multiStageDisposition`, `privacyDataMatch`, `filteringDocMetadata`, `filteringEmailFeatures`, `powerBIDlp`, `filteringUrlInfo`, `filteringAttachmentInfo`, `coreReportingSettings`, `complianceConnector`, `powerPlatformLockboxResourceAccessRequest`, `powerPlatformLockboxResourceCommand`, `cdpPredictiveCodingLabel`, `cdpCompliancePolicyUserFeedback`, `webpageActivityEndpoint`, `omePortal`, `cmImprovementActionChange`, `filteringUrlClick`, `mipLabelAnalyticsAuditRecord`, `filteringEntityEvent`, `filteringRuleHits`, `filteringMailSubmission`, `labelExplorer`, `microsoftManagedServicePlatform`, `powerPlatformServiceActivity`, `scorePlatformGenericAuditRecord`, `filteringTimeTravelDocMetadata`, `alert`, `alertStatus`, `alertIncident`, `incidentStatus`, `case`, `caseInvestigation`, `recordsManagement`, `privacyRemediation`, `dataShareOperation`, `cdpDlpSensitive`, `ehrConnector`, `filteringMailGradingResult`, `publicFolder`, `privacyTenantAuditHistoryRecord`, `aipScannerDiscoverEvent`, `eduDataLakeDownloadOperation`, `m365ComplianceConnector`, `microsoftGraphDataConnectOperation`, `microsoftPurview`, `filteringEmailContentFeatures`, `powerPagesSite`, `powerAppsResource`, `plannerPlan`, `plannerCopyPlan`, `plannerTask`, `plannerRoster`, `plannerPlanList`, `plannerTaskList`, `plannerTenantSettings`, `projectForTheWebProject`, `projectForTheWebTask`, `projectForTheWebRoadmap`, `projectForTheWebRoadmapItem`, `projectForTheWebProjectSettings`, `projectForTheWebRoadmapSettings`, `quarantineMetadata`, `microsoftTodoAudit`, `timeTravelFilteringDocMetadata`, `teamsQuarantineMetadata`, `sharePointAppPermissionOperation`, `microsoftTeamsSensitivityLabelAction`, `filteringTeamsMetadata`, `filteringTeamsUrlInfo`, `filteringTeamsPostDeliveryAction`, `mdcAssessments`, `mdcRegulatoryComplianceStandards`, `mdcRegulatoryComplianceControls`, `mdcRegulatoryComplianceAssessments`, `mdcSecurityConnectors`, `mdaDataSecuritySignal`, `vivaGoals`, `filteringRuntimeInfo`, `attackSimAdmin`, `microsoftGraphDataConnectConsent`, `filteringAtpDetonationInfo`, `privacyPortal`, `managedTenants`, `unifiedSimulationMatchedItem`, `unifiedSimulationSummary`, `updateQuarantineMetadata`, `ms365DSuppressionRule`, `purviewDataMapOperation`, `filteringUrlPostClickAction`, `irmUserDefinedDetectionSignal`, `teamsUpdates`, `plannerRosterSensitivityLabel`, `ms365DIncident`, `filteringDelistingMetadata`, `complianceDLPSharePointClassificationExtended`, `microsoftDefenderForIdentityAudit`, `supervisoryReviewDayXInsight`, `defenderExpertsforXDRAdmin`, `cdpEdgeBlockedMessage`, `hostedRpa`, `cdpContentExplorerAggregateRecord`, `cdpHygieneAttachmentInfo`, `cdpHygieneSummary`, `cdpPostMailDeliveryAction`, `cdpEmailFeatures`, `cdpHygieneUrlInfo`, `cdpUrlClick`, `cdpPackageManagerHygieneEvent`, `filteringDocScan`, `timeTravelFilteringDocScan`, `mapgOnboard`, `unknownFutureValue`. |
+| recordType       | microsoft.graph.security.auditLogRecordType                                    | The type of operation indicated by the record, currently it's reserved to indicate the ComplianceDLPEnforcement. |
 | sequenceNumber   | Int64                                                                          | A sequence number that indicates the order in which content was generated or should be processed. Required when **correlationId** is used. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).            |
 
 ## Relationships
@@ -83,53 +83,51 @@ The following JSON representation shows the resource type.
 }
 ```
 
-Example of request body call to PICS Tier 0 ContentActivity API, 
+Example of request body call to PICS Tier 0 ContentActivity API,
 ``` json
 {
-  "userId": "String",
-  "contentMetadata": {
-    "contentEntries": [
-      {
-        "accessedResources": [
-          "String"
+    "userId": "2c0dace9-c689-4d01-b5da-e95f10eff879",
+    "contentMetadata": {
+        "contentEntries": [
+            {
+                "accessedResources": [],
+                "plugins": [
+                    {
+                        "identifier": "123123123",
+                        "name": "Test plugin",
+                        "version": "1.0.0"
+                    }
+                ],
+                "identifier": "0",
+                "name": "subject",
+                "correlationId": "03402456-0126-4404-be03-429bfe211a24",
+                "sequenceNumber": 0,
+                "length": 0,
+                "isTruncated": false,
+                "createdDateTime": "2025-07-03T22:02:08.5393995+00:00",
+                "modifiedDateTime": "2025-07-03T22:02:08.5393995+00:00",
+                "RecordType": "ComplianceDLPEnforcement",
+                "EnforcementResultStatus": "Success",
+                "@odata.type": "microsoft.graph.contentActivityMetadata"
+            }
         ],
-        "plugins": [
-          {
-            "identifier": "String",
-            "name": "String",
-            "version": "String"
-          }
-        ],
-        "identifier": "String",
-        "name": "String",
-        "correlationId": "String",
-        "sequenceNumber": "Int64",
-        "length": "Int64",
-        "isTruncated": "Boolean",
-        "createdDateTime": "String (timestamp)",
-        "modifiedDateTime": "String (timestamp)",
-        "RecordType": { "@odata.type": "microsoft.graph.security.auditLogRecordType" },
-        "EnforcementResultStatus": { "@odata.type": "microsoft.graph.security.enforcementResultStatus" },
-        "@odata.type": "microsoft.graph.contentActivityMetadata"
-      }
-    ],
-    "activityMetadata": {
-      "activity": { "@odata.type": "microsoft.graph.userActivityType" }
-    },
-    "deviceMetadata": {
-      "ipAddress": "String",
-      "operatingSystemSpecifications": {
-        "operatingSystemPlatform": "String",
-        "operatingSystemVersion": "String"
-      }
-    },
-    "protectedAppMetadata": {
-      "version": "String"
-    },
-    "integratedAppMetadata": {
-      "name": "String",
-      "version": "String"
+        "activityMetadata": {
+            "activity": "UploadFile"
+        },
+        "deviceMetadata": {
+            "ipAddress": "10.0.0.0",
+            "operatingSystemSpecifications": {
+                "operatingSystemPlatform": "windows",
+                "operatingSystemVersion": "11"
+            }
+        },
+        "protectedAppMetadata": {
+            "version": "1.0"
+        },
+        "integratedAppMetadata": {
+            "name": "integratedApp",
+            "version": "1.0"
+        }
     }
-  }
 }
 ```
