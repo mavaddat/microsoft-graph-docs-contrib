@@ -661,7 +661,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "detonationBehaviourDetails",
           "ChangeType": "Deprecation",
-          "Description": "Deprecated the [detonationBehaviourDetails](https://learn.microsoft.com/en-us/graph/api/resources/security-detonationBehaviourDetails?view=graph-rest-beta) resource.",
+          "Description": "Deprecated the [detonationBehaviourDetails](https://learn.microsoft.com/en-us/graph/api/resources/security-detonationBehaviourDetails?view=graph-rest-beta) resource. Use the **detonationBehaviourDetailsV2** property of the [detonationDetails](https://learn.microsoft.com/en-us/graph/api/resources/security-detonationDetails?view=graph-rest-beta) resource instead.",
           "Target": "detonationBehaviourDetails"
         },
         {
@@ -706,10 +706,10 @@
         },
         {
           "Id": "434ab3d3-04a9-4ee4-b70d-31e49940e98d",
-          "ApiChange": "Property",
+          "ApiChange": "Member",
           "ChangedApiName": "moveToQuarantine",
           "ChangeType": "Addition",
-          "Description": "Added the **moveToQuarantine** enum member to the [remediationAction](https://learn.microsoft.com/en-us/graph/api/resources/enums-security?view=graph-rest-beta) resource.",
+          "Description": "Added the **moveToQuarantine** member to the **remediationAction** enumeration.",
           "Target": "remediationAction"
         }
       ],
