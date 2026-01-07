@@ -22,7 +22,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Security
 
-Enhancements to the [detonationDetails](/graph/api/resources/security-detonationdetails?view=graph-rest-beta&preserve-view=true) resource for analyzing email threats:
+Enhancements to the [detonationDetails](/graph/api/resources/security-detonationdetails?view=graph-rest-beta&preserve-view=true) resource that represents details from analysis of suspicious files and URLs in emails in Microsoft Defender for Office 365:
 
 - Added the following properties to provide more detailed threat analysis:
   - **detonationBehaviourDetailsV2** - Shows events that took place during detonation in JSON format
