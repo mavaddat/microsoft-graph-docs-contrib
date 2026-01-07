@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 12/11/2025
+ms.date: 01/07/2026
 ms.topic: whats-new
 ---
 
@@ -17,6 +17,21 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
+
+## January 2026: New in preview only
+
+### Security
+
+Enhancements to the [detonationDetails](/graph/api/resources/security-detonationdetails?view=graph-rest-beta&preserve-view=true) resource for analyzing email threats:
+
+- Added the following properties to provide more detailed threat analysis:
+  - **detonationBehaviourDetailsV2** - Shows events that took place during detonation in JSON format
+  - **entityMetadata** - Additional metadata about the entity in JSON format
+  - **mitreTechniques** - Attack techniques aligned with the MITRE ATT&CK framework
+  - **staticAnalysis** - Results of static analysis performed on the file or URL
+  - **submissionSource** - The source of the submission
+- The **detonationBehaviourDetails** property is deprecated and will stop returning data in March 2026. Use the **detonationBehaviourDetailsV2** property instead.
+- Added the `moveToQuarantine` member to the [remediationAction](/graph/api/resources/enums-security?view=graph-rest-beta&preserve-view=true#remediationaction-values) enumeration. Use the `Prefer: include-unknown-enum-members` request header to access this evolvable enum member.
 
 ## December 2025: New and generally available
 
