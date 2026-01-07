@@ -184,6 +184,16 @@ Namespace: microsoft.graph.security
 |unknown|
 |unknownFutureValue|
 
+### mailboxConfigurationType values
+
+|Member|
+|:---|
+|mailForwardingRule|
+|owaSettings|
+|ewsSettings|
+|mailDelegation|
+|userInboxRule|
+|unknownFutureValue|
 ### logDataProvider values 
 
 |Member|
@@ -901,6 +911,14 @@ Namespace: microsoft.graph.security
 |  quarantine     |
 |  failed    |
 |  unknownFutureValue  |
+
+### recipientType values
+
+|Member|
+|:---|
+|user|
+|roleGroup|
+|unknownFutureValue|
 
 ### teamsMessageDeliveryAction values
 
