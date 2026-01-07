@@ -31,7 +31,7 @@ Enhancements to the [detonationDetails](/graph/api/resources/security-detonation
   - **staticAnalysis** - Results of static analysis performed on the file or URL
   - **submissionSource** - The source of the submission
 - The **detonationBehaviourDetails** property is deprecated and will stop returning data in March 2026. Use the **detonationBehaviourDetailsV2** property instead.
-- Added the `moveToQuarantine` member to the [remediationAction](/graph/api/resources/enums-security?view=graph-rest-beta&preserve-view=true#remediationaction-values) enumeration. Use the `Prefer: include-unknown-enum-members` request header to access this evolvable enum member.
+- Added the `moveToQuarantine` member to the **remediationAction** enumeration. Use the `Prefer: include-unknown-enum-members` request header to access this evolvable enum member.
 
 ## December 2025: New and generally available
 
