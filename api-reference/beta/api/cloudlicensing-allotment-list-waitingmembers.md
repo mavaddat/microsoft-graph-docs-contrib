@@ -25,7 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "name": "cloudlicensing-allotment-list-waitingmembers-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-waitingmembers-list-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-allotment-list-waitingmembers-permissions.md)]
 
 ## HTTP request
 
@@ -35,7 +35,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 GET /admin/cloudLicensing/allotments/{allotmentId}/waitingMembers
-GET /users/{userId}/cloudLicensing/waitingMembers
 GET /users/{userId}/cloudLicensing/waitingMembers
 ```
 
