@@ -23,8 +23,7 @@ Inherits from [entity](../resources/entity.md).
 |:---|:---|:---|
 |[List](../api/cloudlicensing-allotment-list-waitingmembers.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get a list of over-assigned [users](../resources/cloudlicensing-waitingmember.md) who are in the waiting room due to license capacity limits. |
 |[Get](../api/cloudlicensing-waitingmember-get.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md)|Read the properties and relationships of [waitingMember](../resources/cloudlicensing-waitingmember.md) object.|
-|[Get waiting member for allotment](../api/cloudlicensing-waitingmember-list-allotment.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md)|Get waiting members for an allotment by id.|
-|[Get waiting member for user](../api/cloudlicensing-usercloudlicensing-list-waitingmember.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get waiting members for a specific user.|
+|[List waiting members for user](../api/cloudlicensing-usercloudlicensing-list-waitingmember.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get a list of the [waitingMember](../resources/cloudlicensing-waitingmember.md) objects granted to a user.|
 
 ## Properties
 |Property|Type|Description|
