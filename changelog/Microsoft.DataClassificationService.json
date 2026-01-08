@@ -3,6 +3,24 @@
     {
       "ChangeList": [
         {
+          "Id": "b1bf760c-2956-4fe6-9790-7386b9e957ea",
+          "ApiChange": "Member",
+          "ChangedApiName": "labelNotFoundException",
+          "ChangeType": "Deletion",
+          "Description": "Removed the `labelNotFoundException` member from the **usageRights** enumeration.",
+          "Target": "usageRights"
+        }
+      ],
+      "Id": "b1bf760c-2956-4fe6-9790-7386b9e957ea",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-01-08T05:37:28.9800459Z",
+      "WorkloadArea": "Security",
+      "SubArea": ""
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "e72bfd48-4fdc-4e10-9d29-89785912a3be",
           "ApiChange": "Enumeration",
           "ChangedApiName": "resourceAccessStatus",
