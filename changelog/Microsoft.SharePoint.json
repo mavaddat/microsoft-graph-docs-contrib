@@ -3,6 +3,24 @@
     {
       "ChangeList": [
         {
+          "Id": "b7f3e8a4-2c9d-4d6a-9f8a-1a2b3c4d5e6f",
+          "ApiChange": "Resource",
+          "ChangedApiName": "site",
+          "ChangeType": "Deletion",
+          "Description": "Removed the 'group' option in the enum for allowed site template types when creating new site collections.",
+          "Target": "site"
+        }
+      ],
+      "Id": "b7f3e8a4-2c9d-4d6a-9f8a-1a2b3c4d5e6f",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2025-03-03T15:52:02.6103372Z",
+      "WorkloadArea": "Sites and lists",
+      "SubArea": "Site Creation"
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "9691c063-a19a-4ceb-a004-c00663d25264",
           "ApiChange": "Parameter",
           "ChangedApiName": "listItem",
