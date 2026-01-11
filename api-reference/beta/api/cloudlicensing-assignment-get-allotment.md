@@ -20,7 +20,6 @@ Get the [allotment](../resources/cloudlicensing-allotment.md) that is the source
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-
 Permissions to get an **allotment** for an admin:
 
 <!-- { "blockType": "ignored"} -->
@@ -28,7 +27,7 @@ Permissions to get an **allotment** for an admin:
 GET /admin/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment", "requestUrls": ["GET /admin/cloudLicensing/assignments/{id}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-permissions.md)]
 
 Permissions to get an **allotment** for a user:
@@ -38,7 +37,7 @@ Permissions to get an **allotment** for a user:
 GET /users/{userId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment-user-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment_2", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-user-permissions.md)]
 
 
@@ -49,7 +48,7 @@ Permissions to get an **allotment** for a group:
 GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment-group-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-get-allotment_3", "requestUrls": ["GET /groups/{id}/cloudLicensing/assignments/{id}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-group-permissions.md)]
 
 ## HTTP request
