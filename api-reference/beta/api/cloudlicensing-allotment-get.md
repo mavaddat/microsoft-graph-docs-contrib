@@ -30,7 +30,7 @@ GET /users/{userId}/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
 GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_user" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment", "GET /users/{id}/cloudLicensing/waitingMembers/{id}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-allotment-get-user-permissions.md)]
 
 Permissions to get an **allotment** for a group:
@@ -40,12 +40,23 @@ Permissions to get an **allotment** for a group:
 GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_group" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_2", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-allotment-get-group-permissions.md)]
 
 
 ## HTTP request
 
+To get an allotment for the signed-in user using delegated (`/me`) permissions:
+<!-- {
+  "blockType": "ignored"
+}
+-->
+``` http
+GET /me/cloudLicensing/assignments/{assignmentId}/allotment
+GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
+```
+
+To get an allotment using either delegated or application permissions:
 <!-- {
   "blockType": "ignored"
 }
