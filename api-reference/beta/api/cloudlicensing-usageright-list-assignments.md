@@ -58,13 +58,22 @@ GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}/assignments
 
 ## HTTP request
 
+To list assignments for the signed-in user using delegated (`/me`) permissions:
+<!-- {
+  "blockType": "ignored"
+}
+-->
+``` http
+GET /me/cloudLicensing/usageRights/{usageRightId}/assignments
+```
+
+To list assignments using either delegated or application permissions:
 <!-- {
   "blockType": "ignored"
 }
 -->
 ``` http
 GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}/assignments
-GET /me/cloudLicensing/usageRights/{usageRightId}/assignments
 GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}/assignments
 ```
 
