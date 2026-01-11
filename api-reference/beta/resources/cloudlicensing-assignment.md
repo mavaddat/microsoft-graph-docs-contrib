@@ -31,7 +31,7 @@ Inherits from [entity](../resources/entity.md).
 |[Create for group](../api/cloudlicensing-groupcloudlicensing-post-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Create a new license [assignment](../resources/cloudlicensing-assignment.md) by posting to the **assignments** collection for a [group](../resources/group.md).|
 |[Reprocess assignments](../api/cloudlicensing-assignment-reprocessassignments.md)|None|Reprocess existing license [assignments](../resources/cloudlicensing-assignment.md) for a user by calling the **reprocessAssignments** action on a user's assignments.|
 |[Get assignedTo](../api/cloudlicensing-assignment-get-assignedto.md)|[directoryObject](../resources/directoryobject.md)| Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignment](../resources/cloudlicensing-assignment.md) to which licenses are assigned.|
-|[Get allotment](../api/cloudlicensing-assignment-get-allotment.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md)|Get the [allotment](../resources/cloudlicensing-allotment.md) that is the source of the licenses used in the assignment.|
+|[Get allotment for assignment](../api/cloudlicensing-assignment-get-allotment.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md)|Get the [allotment](../resources/cloudlicensing-allotment.md) that is the source of the licenses used in the assignment.|
 
 ## Properties
 |Property|Type|Description|
