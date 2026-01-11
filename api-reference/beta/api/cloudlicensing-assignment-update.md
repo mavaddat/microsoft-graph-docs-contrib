@@ -54,6 +54,16 @@ PATCH /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 
 ## HTTP request
 
+To update an assignment for the signed-in user using delegated (`/me`) permissions:
+<!-- {
+  "blockType": "ignored"
+}
+-->
+``` http
+PATCH /me/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
+```
+
+To update an assignment using either delegated or application permissions:
 <!-- {
   "blockType": "ignored"
 }
@@ -62,7 +72,6 @@ PATCH /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 PATCH /admin/cloudLicensing/assignments/{assignmentId}
 PATCH /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 PATCH /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
-PATCH /me/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 PATCH /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
