@@ -23,7 +23,8 @@ Inherits from [entity](../resources/entity.md).
 |:---|:---|:---|
 |[List](../api/cloudlicensing-admincloudlicensing-list-assignmenterrors.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md) collection|Get a list of the [assignmentError](../resources/cloudlicensing-assignmenterror.md) objects within an organization or affecting a specific user.|
 |[Get](../api/cloudlicensing-assignmenterror-get.md)|[microsoft.graph.cloudLicensing.assignmentError](../resources/cloudlicensing-assignmenterror.md)|Read the properties and relationships of an [assignmentError](../resources/cloudlicensing-assignmenterror.md) object.|
-|[Get assignedTo](../api/cloudlicensing-assignmenterror-get-assignedto.md)|[microsoft.graph.directoryObject](../resources/directoryobject.md)|Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignmentError](../resources/cloudlicensing-assignmenterror.md) to which licenses are assigned.|
+|[Get assignedTo](../api/cloudlicensing-assignmenterror-get-assignedto.md)|[directoryObject](../resources/directoryobject.md)|Get a [user](../resources/directoryobject.md) or [group](../resources/directoryobject.md) object for a given [assignmentError](../resources/cloudlicensing-assignmenterror.md) to which licenses are assigned.|
+|[Get usageRight](../api/cloudlicensing-assignmenterror-get-usageright.md)|[microsoft.graph.cloudLicensing.usageRight](../resources/cloudlicensing-usageright.md)|Get a [usageRight](../resources/cloudlicensing-usageright.md) object affected by an [assignmentError](../resources/cloudlicensing-assignmenterror.md).|
 
 ## Properties
 |Property|Type|Description|
