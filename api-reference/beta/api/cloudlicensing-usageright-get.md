@@ -26,7 +26,6 @@ Permissions to get a **usageRight** for a user:
 ``` http
 GET /me/cloudLicensing/usageRights/{usageRightId}
 GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}
-GET /admin/cloudLicensing/assignmentErrors/{assignmentErrorId}/usageRight
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_get" } -->
@@ -49,7 +48,7 @@ Permissions to get a **usageRight** for an assignment error:
 GET /admin/cloudLicensing/assignmentErrors/{assignmentErrorId}/usageRight
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_get_2", "requestUrls": ["GET /groups/{id}/cloudLicensing/usageRights/{id}"] } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_get_3", "requestUrls": ["GET /admin/cloudLicensing/assignmentErrors/{id}/usageRight"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignmenterror-get-usageright-permissions.md)]
 
 ## HTTP request
@@ -62,13 +61,14 @@ To get a usage right for the signed-in user using delegated (`/me`) permissions:
 GET /me/cloudLicensing/usageRights/{usageRightId}
 ```
 
-To get a usage right for a specific user or a group using either delegated or application permissions:
+To get a usage right for a specific user, group, or assignment error using either delegated or application permissions:
 
 <!-- { "blockType": "ignored" }
 -->
 ``` http
 GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}
 GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}
+GET /admin/cloudLicensing/assignmentErrors/{assignmentErrorId}/usageRight
 ```
 
 ## Optional query parameters
@@ -321,9 +321,12 @@ Content-Type: application/json
 
 ### Examples 5: Get a usageRight for an assignment error
 
+The following example shows a request for the usage right associated with a specific assignment error.
+
 #### Request
 
-The following example shows a request for the usageRight associated with a specific assignment error.
+The following example shows a request.
+
 <!-- {
   "blockType": "request",
   "name": "get_assignmenterror_usageright",
