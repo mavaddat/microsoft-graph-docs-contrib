@@ -31,12 +31,18 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
+To create an assignment for the signed-in user using delegated (`/me`) permissions:
+
+<!-- { "blockType": "ignored" } -->
 ``` http
 POST /me/cloudLicensing/assignments
+```
+
+To create an assignment for a specific user using either delegated or application permissions:
+
+<!-- { "blockType": "ignored" } -->
+
+``` http
 POST /users/{userId}/cloudLicensing/assignments
 ```
 
