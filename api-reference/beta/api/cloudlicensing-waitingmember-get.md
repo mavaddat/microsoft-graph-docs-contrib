@@ -29,14 +29,19 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
+To get a waiting member for the signed-in user using delegated (`/me`) permissions:
+
+<!-- { "blockType": "ignored" } -->
+``` http
+GET /me/cloudLicensing/waitingMembers/{waitingMemberId}
+```
+
+To get a waiting member using either delegated or application permissions:
+
+<!-- { "blockType": "ignored" } -->
 ``` http
 GET /admin/cloudLicensing/allotments/{allotmentId}/waitingMembers/{waitingMemberId}
 GET /users/{userId}/cloudLicensing/waitingMembers/{waitingMemberId}
-GET /me/cloudLicensing/waitingMembers/{waitingMemberId}
 ```
 
 ## Optional query parameters
