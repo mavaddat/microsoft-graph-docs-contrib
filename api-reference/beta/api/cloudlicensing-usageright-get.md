@@ -14,7 +14,7 @@ Namespace: microsoft.graph.cloudLicensing
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the properties and relationships of a [usageRight](../resources/cloudlicensing-usageright.md) for a [user](../resources/user.md), [group](../resources/group.md), or [assignmentError](../resources/cloudlicensing-assignmenterror.md).
+Get the properties and relationships of a [usageRight](../resources/cloudlicensing-usageright.md) for a [user](../resources/user.md) or [group](../resources/group.md).
 
 ## Permissions
 
@@ -41,16 +41,6 @@ GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}
 <!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_get_2", "requestUrls": ["GET /groups/{id}/cloudLicensing/usageRights/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-get-2-permissions.md)]
 
-Permissions to get a **usageRight** for an assignment error:
-
-<!-- { "blockType": "ignored"} -->
-``` http
-GET /admin/cloudLicensing/assignmentErrors/{assignmentErrorId}/usageRight
-```
-
-<!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_get_3", "requestUrls": ["GET /admin/cloudLicensing/assignmentErrors/{id}/usageRight"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignmenterror-get-usageright-permissions.md)]
-
 ## HTTP request
 
 To get a usage right for the signed-in user using delegated (`/me`) permissions:
@@ -61,19 +51,18 @@ To get a usage right for the signed-in user using delegated (`/me`) permissions:
 GET /me/cloudLicensing/usageRights/{usageRightId}
 ```
 
-To get a usage right for a specific user, group, or assignment error using either delegated or application permissions:
+To get a usage right for a specific user, or group using either delegated or application permissions:
 
 <!-- { "blockType": "ignored" }
 -->
 ``` http
 GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}
 GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}
-GET /admin/cloudLicensing/assignmentErrors/{assignmentErrorId}/usageRight
 ```
 
 ## Optional query parameters
 
-This method supports the `$select` and `$expand` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select` OData query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -314,54 +303,6 @@ Content-Type: application/json
           "tags": "none"
         }
       ]
-    }
-  ]
-}
-```
-
-### Examples 5: Get a usageRight for an assignment error
-
-The following example shows a request for the usage right associated with a specific assignment error.
-
-#### Request
-
-The following example shows a request.
-
-<!-- {
-  "blockType": "request",
-  "name": "get_assignmenterror_usageright",
-  "sampleKeys": ["405ee855-dd74-f695-8d7e-be35a6788fe8"]
-}
--->
-``` http
-GET https://graph.microsoft.com/beta/admin/cloudLicensing/assignmentErrors/405ee855-dd74-f695-8d7e-be35a6788fe8/usageRight
-```
-
-#### Response
-
-The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.cloudLicensing.usageRight"
-}
--->
-``` http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "@odata.type": "#microsoft.graph.cloudLicensing.usageRight",
-  "id": "j6sq63x2vd3esbkifv7m42xdaugc6lfpqf3ozgvdlvk3ttnamby4",
-  "skuId": "f48db87f-583c-486e-a6de-096155d8fb8f",
-  "skuPartNumber": "TIME_TRAVEL_BACKUP_RESTORE",
-  "services": [
-    {
-      "@odata.type": "microsoft.graph.cloudLicensing.service",
-      "assignableTo": "user,group",
-      "planId": "fe6c28b3-d468-44ea-bbd0-a10a5167435c",
-      "planName": "TIME_TRAVEL_BACKUP_RESTORE_PREMIUM"
     }
   ]
 }
