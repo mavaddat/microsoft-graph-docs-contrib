@@ -28,7 +28,7 @@ DELETE /admin/cloudLicensing/assignments/{assignmentId}
 DELETE /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete", "requestUrls": ["DELETE /admin/cloudLicensing/assignments/{id}", "DELETE /admin/cloudLicensing/allotments/{id}/assignments/{id}"] } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_admin", "requestUrls": ["DELETE /admin/cloudLicensing/assignments/{id}", "DELETE /admin/cloudLicensing/allotments/{id}/assignments/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-permissions.md)]
 
 Permissions to delete an **assignment** for a user:
@@ -39,7 +39,7 @@ DELETE /me/cloudLicensing/assignments/{assignmentId}
 DELETE /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_2", "requestUrls": ["DELETE /me/cloudLicensing/assignments/{id}", "DELETE /users/{id}/cloudLicensing/assignments/{id}"] } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_user", "requestUrls": ["DELETE /me/cloudLicensing/assignments/{id}", "DELETE /users/{id}/cloudLicensing/assignments/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-user-permissions.md)]
 
 Permissions to delete an **assignment** for a group:
@@ -49,11 +49,21 @@ Permissions to delete an **assignment** for a group:
 DELETE /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_3", "requestUrls": ["DELETE /groups/{id}/cloudLicensing/assignments/{id}"] } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_group", "requestUrls": ["DELETE /groups/{id}/cloudLicensing/assignments/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-group-permissions.md)]
 
 ## HTTP request
 
+To delete an assignment for the signed-in user using delegated (`/me`) permissions:
+<!-- {
+  "blockType": "ignored"
+}
+-->
+``` http
+DELETE /me/cloudLicensing/assignments/{assignmentId}
+```
+
+To delete an assignment using either delegated or application permissions:
 <!-- {
   "blockType": "ignored"
 }
@@ -62,7 +72,6 @@ DELETE /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 DELETE /admin/cloudLicensing/assignments/{assignmentId}
 DELETE /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 DELETE /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
-DELETE /me/cloudLicensing/assignments/{assignmentId}
 DELETE /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
