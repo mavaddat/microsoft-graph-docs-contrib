@@ -51,7 +51,7 @@ To get a usage right for the signed-in user using delegated (`/me`) permissions:
 GET /me/cloudLicensing/usageRights/{usageRightId}
 ```
 
-To get a usage right for a specific user, or group using either delegated or application permissions:
+To get a usage right for a specific user or group using either delegated or application permissions:
 
 <!-- { "blockType": "ignored" }
 -->
@@ -62,7 +62,7 @@ GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}
 
 ## Optional query parameters
 
-This method supports the `$select` OData query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select` and `$expand` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
