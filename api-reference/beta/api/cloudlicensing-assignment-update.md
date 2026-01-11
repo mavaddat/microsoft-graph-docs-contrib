@@ -20,7 +20,6 @@ Update an [assignment](../resources/cloudlicensing-assignment.md) object to enab
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-
 Permissions to update an **assignment** for an admin:
 
 <!-- { "blockType": "ignored"} -->
@@ -29,9 +28,8 @@ PATCH /admin/cloudLicensing/assignments/{assignmentId}
 PATCH /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-update-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_update", "requestUrls": ["PATCH /admin/cloudLicensing/assignments/{id}", "PATCH /admin/cloudLicensing/allotments/{allotmentId}/assignments/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-permissions.md)]
-
 
 Permissions to update an **assignment** for a user:
 
@@ -41,9 +39,8 @@ PATCH /me/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 PATCH /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-update-user-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_update_user", "requestUrls": ["PATCH /me/cloudLicensing/allotments/{id}/assignments/{id}", "PATCH /users/{id}/cloudLicensing/assignments/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-user-permissions.md)]
-
 
 Permissions to update an **assignment** for a group:
 
@@ -52,9 +49,8 @@ Permissions to update an **assignment** for a group:
 PATCH /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-assignment-update-group-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_update_group", "requestUrls": ["PATCH /groups/{id}/cloudLicensing/assignments/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-group-permissions.md)]
-
 
 ## HTTP request
 
