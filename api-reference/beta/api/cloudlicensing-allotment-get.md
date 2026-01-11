@@ -30,7 +30,7 @@ GET /users/{userId}/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
 GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment", "GET /users/{id}/cloudLicensing/waitingMembers/{id}/allotment"] } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment", "GET /users/{id}/cloudLicensing/waitingMembers/{id}/allotment", "GET /me/cloudLicensing/assignments/{assignmentId}/allotment", "GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-allotment-get-user-permissions.md)]
 
 Permissions to get an **allotment** for a group:
