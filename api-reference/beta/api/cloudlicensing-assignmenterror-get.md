@@ -29,13 +29,22 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+To get an assignment error for the signed-in user using delegated (`/me`) permissions:
+<!-- {
+  "blockType": "ignored"
+}
+-->
+``` http
+GET /me/cloudLicensing/assignmentErrors/{assignmentErrorId}
+```
+
+To get an assignment error using either delegated or application permissions:
 <!-- {
   "blockType": "ignored"
 }
 -->
 ``` http
 GET /admin/cloudLicensing/assignmentErrors/{assignmentErrorId}
-GET /me/cloudLicensing/assignmentErrors/{assignmentErrorId}
 GET /users/{userId}/cloudLicensing/assignmentErrors/{assignmentErrorId}
 ```
 
