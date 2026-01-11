@@ -211,14 +211,6 @@
         {
           "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
           "ApiChange": "Enumeration",
-          "ChangedApiName": "subscriptionState",
-          "ChangeType": "Addition",
-          "Description": "Added the **subscriptionState** enumeration type.",
-          "Target": "subscriptionState"
-        },
-        {
-          "Id": "d4e5f6a7-8b9c-4d5e-9f12-3a4b5c6d7e8f",
-          "ApiChange": "Enumeration",
           "ChangedApiName": "subscriptionTags",
           "ChangeType": "Addition",
           "Description": "Added the **subscriptionTags** enumeration type.",
