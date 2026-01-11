@@ -23,8 +23,8 @@ Inherits from [entity](../resources/entity.md).
 |:---|:---|:---|
 |[List](../api/cloudlicensing-admincloudlicensing-list-allotments.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md) collection|Get a list of the [allotment](../resources/cloudlicensing-allotment.md) objects and their properties.|
 |[Get](../api/cloudlicensing-allotment-get.md)|[microsoft.graph.cloudLicensing.allotment](../resources/cloudlicensing-allotment.md)|Read the properties and relationships of an [allotment](../resources/cloudlicensing-allotment.md) object.|
-|[List assignments](../api/cloudlicensing-allotment-list-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|Get a list of license [assignment](../resources/cloudlicensing-assignment.md) objects within an organization.|
-|[Create assignment](../api/cloudlicensing-allotment-post-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Create a new license [assignment](../resources/cloudlicensing-assignment.md) by posting to the **assignments** collection of an organization.|
+|[List assignments for allotment](../api/cloudlicensing-allotment-list-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md) collection|Get a list of license [assignment](../resources/cloudlicensing-assignment.md) objects within an organization.|
+|[Create assignment for allotment](../api/cloudlicensing-allotment-post-assignments.md)|[microsoft.graph.cloudLicensing.assignment](../resources/cloudlicensing-assignment.md)|Create a new license [assignment](../resources/cloudlicensing-assignment.md) by posting to the **assignments** collection of an organization.|
 |[List waiting members](../api/cloudlicensing-allotment-list-waitingmembers.md)|[microsoft.graph.cloudLicensing.waitingMember](../resources/cloudlicensing-waitingmember.md) collection|Get a list of over-assigned users who are in the waiting room for this allotment due to license capacity limits.|
 
 ## Properties
