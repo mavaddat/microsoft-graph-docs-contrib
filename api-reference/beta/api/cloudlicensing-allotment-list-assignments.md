@@ -1,5 +1,5 @@
 ---
-title: "List assignments"
+title: "List assignments for allotment"
 description: "Get a list of license assignment objects which consume licenses from this allotment."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List assignments
+# List assignments for allotment
 
 Namespace: microsoft.graph.cloudLicensing
 
