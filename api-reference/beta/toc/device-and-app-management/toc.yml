@@ -94,7 +94,7 @@ items:
       href: ../../api/cloudlicensing-assignment-get.md
     - name: Update
       href: ../../api/cloudlicensing-assignment-update.md
-    - name: Delete assignment
+    - name: Delete
       href: ../../api/cloudlicensing-assignment-delete.md
     - name: Create for allotment
       href: ../../api/cloudlicensing-allotment-post-assignments.md
@@ -118,6 +118,8 @@ items:
       href: ../../api/cloudlicensing-assignmenterror-get.md
     - name: Get assignedTo
       href: ../../api/cloudlicensing-assignmenterror-get-assignedto.md
+    - name: Get usageRight
+      href: ../../api/cloudlicensing-assignmenterror-get-usageright.md
   - name: Usage right
     items:
     - name: Usage right
