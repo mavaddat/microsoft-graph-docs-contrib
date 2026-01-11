@@ -1,5 +1,5 @@
 ---
-title: "List assignments"
+title: "List assignments for usageRight"
 description: "Get a list of assignment objects which combine to form this usageRight."
 author: "patrick-starrin"
 ms.date: 07/18/2025
@@ -8,7 +8,7 @@ ms.subservice: "cloud-licensing"
 doc_type: apiPageType
 ---
 
-# List assignments
+# List assignments for usageRight
 
 Namespace: microsoft.graph.cloudLicensing
 
