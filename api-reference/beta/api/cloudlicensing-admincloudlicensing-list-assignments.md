@@ -27,9 +27,8 @@ Permissions to get a list of **assignments** for an admin:
 GET /admin/cloudLicensing/assignments
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-user-permissions", "requestUrls": ["GET /admin/cloudLicensing/assignments"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-list-assignments-permissions.md)]
-
 
 Permissions to get a list of **assignments** for a user:
 
@@ -38,9 +37,8 @@ Permissions to get a list of **assignments** for a user:
 GET /users/{userId}/cloudLicensing/assignments
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-user-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-user-permissions_2", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-list-assignments-user-permissions.md)]
-
 
 Permissions to get a list of **assignments** for a group:
 
@@ -49,7 +47,7 @@ Permissions to get a list of **assignments** for a group:
 GET /groups/{groupId}/cloudLicensing/assignments
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-group-permissions" } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing-admincloudlicensing-list-assignments-user-permissions_3", "requestUrls": ["GET /groups/{id}/cloudLicensing/assignments"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-list-assignments-group-permissions.md)]
 
 ## HTTP request
