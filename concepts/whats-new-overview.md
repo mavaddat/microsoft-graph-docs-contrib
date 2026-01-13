@@ -18,6 +18,22 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## January 2026: New in preview only
+
+### Cloud licensing
+
+- Added a set of preview APIs under the `cloudLicensing` namespace to manage tenant, user, and group licensing data for Microsoft 365 services. These APIs provide programmatic access to allotments, assignments, subscription lifecycles, and waiting members.
+- Key resources and surfaces:
+  - Use the [allotment](/graph/api/resources/cloudlicensing-allotment?view=graph-rest-beta&preserve-view=true) resource to manage license allotment details such as SKU, services, and subscriptions.
+  - Use the [assignment](/graph/api/resources/cloudlicensing-assignment?view=graph-rest-beta&preserve-view=true) resource to view and manage assignment objects that combine into usage rights.
+  - Use the [assignmentError](/graph/api/resources/cloudlicensing-assignmenterror?view=graph-rest-beta&preserve-view=true) resource to inspect errors that occur during assignment processing.
+  - Use the [subscription](/graph/api/resources/cloudlicensing-subscription?view=graph-rest-beta&preserve-view=true) resource to track subscription lifecycle dates. Note: `Edm.Date` properties (for example, `startDate` and `nextLifecycleDate`) are represented as date-only strings in JSON.
+  - Use the [waitingMember](/graph/api/resources/cloudlicensing-waitingmember?view=graph-rest-beta&preserve-view=true) resource to manage pending members for assignments.  
+- API behavior and docs highlights:
+  - List endpoints support `$select`, `$expand`, and `$filter` query parameters; individual GET endpoints support `$select` and `$expand`.
+  - Permission tables for these APIs are provided as include fragments to keep permissions documentation centralized and consistent.
+
+
 ## September 2025: New and generally available
 
 ### Applications

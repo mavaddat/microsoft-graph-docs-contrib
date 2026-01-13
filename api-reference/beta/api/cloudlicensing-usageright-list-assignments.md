@@ -28,33 +28,21 @@ GET /me/cloudLicensing/usageRights/{usageRightId}/assignments
 GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}/assignments
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_list_assignments_user", "requestUrls": ["GET /me/cloudLicensing/usageRights/{id}/assignments", "GET /users/{id}/cloudLicensing/usageRights/{id}/assignments"] } -->
-|Permission type|Least privileged permissions|Higher privileged permissions|
-|:---|:---|:---|
-|Delegated (work or school account)|User-UsageRight.Read|Directory.Read.All, Directory.ReadWrite.All, User-CloudLicensing.Read, User-CloudLicensing.Read.All, User-UsageRight.Read.All, User.Read, User.Read.All, User.ReadWrite, User.ReadWrite.All|
-|Delegated (personal Microsoft account)|Not supported.|Not supported.|
-|Application|User-UsageRight.Read.All|Directory.Read.All, Directory.ReadWrite.All, User-CloudLicensing.Read.All, User.Read.All, User.ReadWrite.All|
+<!-- {
+  "blockType": "permissions",
+  "name": "cloudlicensing-usageright-list-assignments-permissions-user"
+}
+-->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-list-assignments-permissions-user.md)]
 
 Permissions to list **usageRight** assignments for a group:
 
-<!-- { "blockType": "ignored"} -->
-``` http
-GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}/assignments
-```
-
-<!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_list_assignments_user", "requestUrls": ["GET /groups/{id}/cloudLicensing/usageRights/{id}/assignments"] } -->
-|Permission type|Least privileged permissions|Higher privileged permissions|
-|:---|:---|:---|
-|Delegated (work or school account)|Group-UsageRight.Read.All|Directory.Read.All, Directory.ReadWrite.All, Group-CloudLicensing.Read, Group-CloudLicensing.Read.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All|
-|Delegated (personal Microsoft account)|Not supported.|Not supported.|
-|Application|Group-UsageRight.Read.All|Directory.Read.All, Directory.ReadWrite.All, Group-CloudLicensing.Read.All, Group.Read.All, Group.ReadWrite.All, User.Read.All, User.ReadWrite.All|
-
 <!-- {
   "blockType": "permissions",
-  "name": "cloudlicensing-usageright-list-assignments-permissions"
+  "name": "cloudlicensing-usageright-list-assignments-permissions-group"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-list-assignments-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-list-assignments-permissions-group.md)]
 
 ## HTTP request
 
