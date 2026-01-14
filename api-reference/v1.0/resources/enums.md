@@ -3812,3 +3812,22 @@ Possible values for user account types (group membership), per Windows definitio
 |remote|
 |timeOff|
 |unknownFutureValue|
+
+### resourceAccessStatus values
+
+|Member|
+|:---|
+|none|
+|failure|
+|success|
+|unknownFutureValue|
+
+### resourceAccessType values
+
+|Member|
+|:---|
+|none|
+|read|
+|write|
+|create|
+|unknownFutureValue|
