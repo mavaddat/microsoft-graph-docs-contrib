@@ -8,9 +8,12 @@ doc_type: apiPageType
 ms.date: 04/04/2024
 ---
 
-# List used
+# List used (deprecated)
 
 Namespace: microsoft.graph
+
+> [!CAUTION]
+> The **/insights/used** API is deprecated and will operate in a degraded state until November, 2026, after which it will stop returning data.
 
 Calculate and list the documents that a user has viewed or modified. 
 

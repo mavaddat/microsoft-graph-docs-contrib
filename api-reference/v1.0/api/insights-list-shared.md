@@ -8,9 +8,12 @@ doc_type: apiPageType
 ms.date: 04/04/2024
 ---
 
-# List shared
+# List shared (deprecated)
 
 Namespace: microsoft.graph
+
+> [!CAUTION]
+> The **/insights/shared** API is deprecated and will operate in a degraded state until November, 2026, after which it will stop returning data.
 
 Calculated insight that includes the list of documents shared with a user.
 
