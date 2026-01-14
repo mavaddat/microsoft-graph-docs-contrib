@@ -28,20 +28,17 @@ GET /me/cloudLicensing/usageRights/{usageRightId}/assignments
 GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}/assignments
 ```
 
-<!-- {
-  "blockType": "permissions",
-  "name": "cloudlicensing-usageright-list-assignments-permissions-user"
-}
--->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_list_assignments_permissions_user", "requestUrls": ["GET /me/cloudLicensing/usageRights/{id}/assignments", "GET /users/{id}/cloudLicensing/usageRights/{id}/assignments"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-list-assignments-permissions-user.md)]
 
 Permissions to list **usageRight** assignments for a group:
 
-<!-- {
-  "blockType": "permissions",
-  "name": "cloudlicensing-usageright-list-assignments-permissions-group"
-}
--->
+<!-- { "blockType": "ignored"} -->
+``` http
+GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}/assignments
+```
+
+<!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_list_assignments_permissions_group", "requestUrls": ["GET /groups/{id}/cloudLicensing/usageRights/{id}/assignments"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-list-assignments-permissions-group.md)]
 
 ## HTTP request
