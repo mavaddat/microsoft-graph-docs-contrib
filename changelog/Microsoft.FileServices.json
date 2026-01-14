@@ -1,6 +1,6 @@
 {
   "changelog": [
-        {
+    {
       "ChangeList": [
         {
           "Id": "ea058a7b-020c-4e4a-b87d-2376b1818c16",
@@ -17,7 +17,7 @@
           "ChangeType": "Deprecation",
           "Description": "Deprecated the [insights/used](https://learn.microsoft.com/en-us/graph/api/insights-list-used?view=graph-rest-beta) method. This API is deprecated and will stop returning data after November, 2026.",
           "Target": "drive"
-        },
+        }
       ],
       "Id": "ea058a7b-020c-4e4a-b87d-2376b1818c16",
       "Cloud": "Prod",
@@ -43,7 +43,7 @@
           "ChangeType": "Deprecation",
           "Description": "Deprecated the [insights/used](https://learn.microsoft.com/en-us/graph/api/insights-list-used?view=graph-rest-1.0) method. This API is deprecated and will stop returning data after November, 2026.",
           "Target": "drive"
-        },
+        }
       ],
       "Id": "0572614f-7d68-45c7-8dd1-15b9082e21f2",
       "Cloud": "Prod",
@@ -5044,7 +5044,7 @@
       "WorkloadArea": "Files",
       "SubArea": ""
     },
-     {
+    {
       "ChangeList": [
         {
           "Id": "c81e7d2b-df4a-42db-a19e-c85713782820",
