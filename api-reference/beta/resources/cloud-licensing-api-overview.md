@@ -30,7 +30,6 @@ The following table lists common use cases for the cloud licensing API.
 | List and get allotments     | [allotment](../resources/cloudlicensing-allotment.md) |
 | Create and manage assignments | [assignment](../resources/cloudlicensing-assignment.md) |
 | Troubleshoot assignment synchronization errors | [assignmentError](../resources/cloudlicensing-assignmenterror.md) |
-| View subscriptions that back allotments | [subscription](../resources/cloudlicensing-subscription.md) |
 | List and inspect waiting members | [waitingMember](../resources/cloudlicensing-waitingmember.md) |
 
 ## API design details
