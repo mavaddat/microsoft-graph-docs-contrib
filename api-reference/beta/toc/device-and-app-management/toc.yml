@@ -76,9 +76,9 @@ items:
       href: ../../api/cloudlicensing-admincloudlicensing-list-allotments.md
     - name: Get
       href: ../../api/cloudlicensing-allotment-get.md
-    - name: List assignments
+    - name: List assignments for allotment
       href: ../../api/cloudlicensing-allotment-list-assignments.md
-    - name: Create assignment
+    - name: Create assignment for allotment
       href: ../../api/cloudlicensing-allotment-post-assignments.md
     - name: List waiting members
       href: ../../api/cloudlicensing-allotment-list-waitingmembers.md
@@ -106,7 +106,7 @@ items:
       href: ../../api/cloudlicensing-assignment-reprocessassignments.md
     - name: Get assignedTo
       href: ../../api/cloudlicensing-assignment-get-assignedto.md
-    - name: Get allotment
+    - name: Get allotment for assignment
       href: ../../api/cloudlicensing-assignment-get-allotment.md
   - name: Assignment error
     items:
