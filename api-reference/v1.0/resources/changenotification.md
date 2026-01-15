@@ -21,6 +21,7 @@ For details, see [Use Microsoft Graph to get change notifications](change-notifi
 None.
 
 ## Properties
+
 > **Note:**  
 > The **changeType** property is required and only present in change notifications. The **lifecycleEvent** property is required and only present in lifecycle notifications. These two properties are mutually exclusive; a notification will include only one of them.
 
