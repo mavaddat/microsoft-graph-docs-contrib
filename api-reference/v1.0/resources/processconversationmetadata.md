@@ -2,7 +2,7 @@
 title: "processConversationMetadata resource type"
 description: "Represents metadata for a content entry that is part of a conversation."
 author: "kylemar"
-ms.date: 04/08/2025
+ms.date: 01/16/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
@@ -20,10 +20,10 @@ Inherits from [processContentMetadataBase](../resources/processcontentmetadataba
 
 |Property|Type|Description|
 |:---|:---|:---|
-|accessedResources_v2|[resourceAccessDetail](../resources/resourceaccessdetail.md) collection| Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.|
+|accessedResources_v2|[resourceAccessDetail](../resources/resourceaccessdetail.md) collection| Lists details about the resources accessed by AI agents, such as identifiers, access type, and status. |
 |agents|[aiAgentInfo](../resources/aiagentinfo.md) collection| Indicates the information about an AI agent that participated in the preparation of the message.|
-|content| [contentBase](../resources/contentbase.md)| Represents the actual content, either as text ([textContent](../resources/textcontent.md)) or binary data ([binaryContent](../resources/binarycontent.md)). Optional if metadata alone is sufficient for policy evaluation. **Do not use for [contentActivities](../api/activitiescontainer-post-contentactivities.md)**. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
-|correlationId|String|An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
+|content| [contentBase](../resources/contentbase.md)| Represents the actual content, either as text ([textContent](../resources/textcontent.md)) or binary data ([binaryContent](../resources/binarycontent.md)). This property is Optional if metadata alone is sufficient for policy evaluation. **Do not use for [contentActivities](../api/activitiescontainer-post-contentactivities.md)**. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
+|correlationId|String|An identifier used to group multiple related content entries (for example, different parts of the same file upload, or related messages in a conversation). Must be used with sequenceNumber (described below). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 |createdDateTime|DateTimeOffset|Required. Timestamp when the original content was created (for example, file creation time, message sent time). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 |identifier|String|Required. A unique identifier for this specific content entry within the context of the calling application or enforcement plane (for example, message ID, file path/URL). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 |isTruncated|Boolean|Required. Indicates if the provided **content** has been truncated from its original form (for example, due to size limits). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|

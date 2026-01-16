@@ -1,8 +1,8 @@
 ---
 title: "aiInteractionPlugin resource type"
-description: "Represents a plugin or extension invoked during an interaction with an AI or bot service."
+description: "This is a plugin or extension used in an interaction with an AI or bot service."
 author: "PatilAishwarya95"
-ms.date: 10/05/2025
+ms.date: 01/16/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
@@ -12,7 +12,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-This is a plugin or extension used in an interaction with an AI or bot service.
+Represents a plugin or extension invoked during an interaction with an AI or bot service.
 
 Inherits from [aiInteractionEntity](../resources/aiinteractionentity.md).
 

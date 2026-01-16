@@ -2,7 +2,7 @@
 title: "aiAgentInfo resource type"
 description: "Represents information about an AI agent that participated in the preparation of the message."
 author: "PatilAishwarya95"
-ms.date: 10/05/2025
+ms.date: 01/16/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
@@ -23,7 +23,7 @@ Inherits from [aiInteractionEntity](../resources/aiinteractionentity.md).
 | blueprintId | String | Identifier of the parent agent that defines the identity and configuration of the agent. |
 | identifier  | String | The unique identifier of this AI agent. Inherited from [aiInteractionEntity](../resources/aiinteractionentity.md). |
 | name        | String | The display name of the AI agent. Inherited from [aiInteractionEntity](../resources/aiinteractionentity.md).      |
-| version     | String | The version number  of the AI agent used. Inherited from [aiInteractionEntity](../resources/aiinteractionentity.md).      |
+| version     | String | The version number  of Itthe AI agent used. Inherited from [aiInteractionEntity](../resources/aiinteractionentity.md).      |
 
 ## Relationships
 

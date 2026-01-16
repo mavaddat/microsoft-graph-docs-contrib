@@ -2,7 +2,7 @@
 title: "resourceAccessDetail resource type"
 description: "Represents details about resources accessed by AI agents, including identifiers, access type, and status."
 author: "PatilAishwarya95"
-ms.date: 10/03/2025
+ms.date: 01/16/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
