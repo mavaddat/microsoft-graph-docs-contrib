@@ -41,7 +41,7 @@ Made the following updates to APIs for managing Microsoft Defender for Identity 
 
 ### Security | eDiscovery
 
-- Use the **reportFileMetadata** property on [ediscoveryPurgeDataOperation](/graph/api/resources/security-ediscoveryPurgeDataOperation) to get the purge job report file metadata.
+Use the **reportFileMetadata** property on [ediscoveryPurgeDataOperation](/graph/api/resources/security-ediscoverypurgedataoperation) to get the purge job report file metadata.
 
 ### Teamwork and communications | Apps
 
@@ -54,6 +54,10 @@ The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged app
 - Deprecated the **accessedResources** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) in favor of the **accessedResources_v2** property.
 - Use the **accessedResources_v2** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) to get detailed information about resources accessed during the conversation, including identifiers, access type, and status.
 - Use the **agents** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) to get information about AI agents that participated in the preparation of the message.
+
+### Security | eDiscovery
+
+Use the **reportFileMetadata** property on [ediscoveryPurgeDataOperation](/graph/api/resources/security-ediscoverypurgedataoperation?view=graph-rest-beta&preserve-view=true) to get the purge job report file metadata.
 
 ### Teamwork and communications | Apps
 
