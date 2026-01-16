@@ -51,7 +51,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.onPasswordSubmitCustomExtension",
   "baseType": "microsoft.graph.customAuthenticationExtension",
-  "openType": "id"
+  "openType": false
 }
 -->
 ``` json
