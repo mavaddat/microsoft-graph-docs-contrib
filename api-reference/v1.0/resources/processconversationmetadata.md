@@ -20,7 +20,7 @@ Inherits from [processContentMetadataBase](../resources/processcontentmetadataba
 
 |Property|Type|Description|
 |:---|:---|:---|
-|accessedResources_v2|[resourceAccessDetail](../resources/resourceaccessdetail.md) collection| Indicates the details about resources accessed by AI agents, including identifiers, access type, and status.|
+|accessedResources_v2|[resourceAccessDetail](../resources/resourceaccessdetail.md) collection| Lists details about the resources accessed by AI agents, such as identifiers, access type, and status.|
 |agents|[aiAgentInfo](../resources/aiagentinfo.md) collection| Indicates the information about an AI agent that participated in the preparation of the message.|
 |content| [contentBase](../resources/contentbase.md)| Represents the actual content, either as text ([textContent](../resources/textcontent.md)) or binary data ([binaryContent](../resources/binarycontent.md)). Optional if metadata alone is sufficient for policy evaluation. **Do not use for [contentActivities](../api/activitiescontainer-post-contentactivities.md)**. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 |correlationId|String|An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation). Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
@@ -74,9 +74,6 @@ The following JSON representation shows the resource type.
   "createdDateTime": "String (timestamp)",
   "modifiedDateTime": "String (timestamp)",
   "parentMessageId": "String",
-  "accessedResources": [
-    "String"
-  ],
   "plugins": [
     {
       "@odata.type": "microsoft.graph.aiInteractionPlugin"

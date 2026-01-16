@@ -12,9 +12,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
-Represents a plugin or extension invoked during an interaction with an AI or bot service.
+This is a plugin or extension used in an interaction with an AI or bot service.
 
 Inherits from [aiInteractionEntity](../resources/aiinteractionentity.md).
 
