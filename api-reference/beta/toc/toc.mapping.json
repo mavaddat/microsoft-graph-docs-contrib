@@ -2924,6 +2924,7 @@
           "complexTypes": [
             "microsoft.graph.security.ediscoveryAddToReviewSetOperation",
             "microsoft.graph.security.ediscoveryEstimateOperation",
+            "microsoft.graph.security.ediscoveryPurgeDataOperation",
             "microsoft.graph.security.reportFileMetadata"
           ]
         },
