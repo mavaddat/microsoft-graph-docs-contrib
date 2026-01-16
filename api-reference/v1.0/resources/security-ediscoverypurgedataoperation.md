@@ -63,18 +63,14 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.ediscoveryPurgeDataOperation",
-  "id": "String (identifier)",
-  "createdDateTime": "String (timestamp)",
-  "completedDateTime": "String (timestamp)",
   "action": "String",
-  "createdBy": {
-    "@odata.type": "microsoft.graph.identitySet"
-  },
-  "percentProgress": "Integer",
+  "completedDateTime": "String (timestamp)",
+  "createdBy": {"@odata.type": "microsoft.graph.identitySet"},
+  "createdDateTime": "String (timestamp)",
+  "id": "String (identifier)",
+  "percentProgress": "Int32",
   "reportFileMetadata": [{"@odata.type": "microsoft.graph.reportFileMetadata"}],
-  "status": "String",
-  "resultInfo": {
-    "@odata.type": "microsoft.graph.resultInfo"
-  }
+  "resultInfo": {"@odata.type": "microsoft.graph.resultInfo"},
+  "status": "String"
 }
 ```
