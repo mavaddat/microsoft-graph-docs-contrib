@@ -1895,8 +1895,8 @@
       "Cloud": "Prod",
       "Version": "beta",
       "CreatedDateTime": "2026-01-13T17:53:31.6863095Z",
-      "WorkloadArea": "Compliance",
-      "SubArea": ""
+      "WorkloadArea": "Security",
+      "SubArea": "eDiscovery"
     },
     {
       "ChangeList": [
@@ -1913,8 +1913,8 @@
       "Cloud": "Prod",
       "Version": "v1.0",
       "CreatedDateTime": "2026-01-13T17:53:31.6867669Z",
-      "WorkloadArea": "Compliance",
-      "SubArea": ""
+      "WorkloadArea": "Security",
+      "SubArea": "eDiscovery"
     }
   ]
 }
