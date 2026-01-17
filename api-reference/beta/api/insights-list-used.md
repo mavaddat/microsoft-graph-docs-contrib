@@ -1,5 +1,5 @@
 ---
-title: "List used"
+title: "List used (deprecated)"
 description: "Calculate and list the documents the user has viewed or modified."
 author: "simonhult"
 ms.localizationpriority: medium
@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 > [!CAUTION]
-> The **/insights/used** API is deprecated and will operate in a degraded state until November, 2026, after which it will stop returning data.
+> The `/insights/used` API is deprecated and will stop returning data after November, 2026.
 
 Calculate and list the documents that a user has viewed or modified. 
 
