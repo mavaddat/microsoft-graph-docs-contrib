@@ -46,7 +46,7 @@ items:
     items:
     - name: Shared insight
       href: ../../resources/insights-shared.md
-    - name: List shared (deprecated)
+    - name: List shared
       href: ../../api/insights-list-shared.md
   - name: Trending
     items:
@@ -58,7 +58,7 @@ items:
     items:
     - name: Used insight
       href: ../../resources/insights-used.md
-    - name: List used (deprecated)
+    - name: List used
       href: ../../api/insights-list-used.md
   - name: Complex types
     items:
