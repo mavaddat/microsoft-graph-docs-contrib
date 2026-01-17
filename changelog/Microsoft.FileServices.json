@@ -5,10 +5,10 @@
         {
           "Id": "ea058a7b-020c-4e4a-b87d-2376b1818c16",
           "ApiChange": "Method",
-          "ChangedApiName": "insights/shared",
+          "ChangedApiName": "sharedInsight",
           "ChangeType": "Deprecation",
-          "Description": "Deprecated the [insights/shared](https://learn.microsoft.com/en-us/graph/api/insights-list-shared?view=graph-rest-beta) method. This API is deprecated and will stop returning data after November, 2026.",
-          "Target": "drive"
+          "Description": "Deprecated the [List shared](https://learn.microsoft.com/en-us/graph/api/insights-list-shared?view=graph-rest-beta) method of the [sharedInsight](https://learn.microsoft.com/en-us/graph/api/resources/sharedInsight?view=graph-rest-beta) resource. This API is deprecated and will stop returning data after November, 2026.",
+          "Target": "sharedInsight"
         },
         {
           "Id": "ea058a7b-020c-4e4a-b87d-2376b1818c16",
