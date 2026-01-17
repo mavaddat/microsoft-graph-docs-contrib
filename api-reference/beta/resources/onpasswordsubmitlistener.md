@@ -48,7 +48,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.onPasswordSubmitListener",
   "baseType": "microsoft.graph.authenticationEventListener",
-  "openType": "id"
+  "openType": false
 }
 -->
 ``` json
