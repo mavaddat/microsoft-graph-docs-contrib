@@ -20,6 +20,11 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## January 2026: New and generally available
 
+### People and workplace intelligence | Insights
+
+- Deprecated the [List shared](/graph/api/insights-list-shared) method on [sharedInsight](/graph/api/resources/sharedinsight) resource.
+- Deprecated the [List used](/graph/api/insights-list-used) method on [usedInsight](/graph/api/resources/usedinsight) resource.
+
 ### Reports | Identity and access reports
 
 - Added `qrCode` as a new supported value for the **usageAuthMethod** enumeration which is the type for the **authMethod** property on [credentialUsageSummary](/graph/api/resources/credentialusagesummary?view=graph-rest-beta&preserve-view=true), [userCredentialUsageDetails](/graph/api/resources/usercredentialusagedetails?view=graph-rest-beta&preserve-view=true), [userEventsSummary](/graph/api/resources/usereventssummary?view=graph-rest-beta&preserve-view=true), and [userRegistrationActivitySummary](/graph/api/resources/userregistrationactivitysummary?view=graph-rest-beta&preserve-view=true) resources. This value represents the use of the [QR code](/graph/api/resources/qrcodepinauthenticationmethod?view=graph-rest-beta&preserve-view=true) as an authentication method.
@@ -38,11 +43,20 @@ Made the following updates to APIs for managing Microsoft Defender for Identity 
 - Added the **domainName** property to the [sensorCandidate](/graph/api/resources/security-sensorcandidate) resource to specify the domain name of the sensor.
 - Added the **serviceStatus** property to the [sensor](/graph/api/resources/security-sensor) resource to indicate the service status. The possible values are: `stopped`, `starting`, `running`, `disabled`, `onboarding`, `unknown`, `unknownFutureValue`.
 
+### Sites and lists
+
+Removed `group` as a supported value for the **template** property on [site](/graph/api/resources/site) when creating SharePoint site collections.
+
 ### Teamwork and communications | Apps
 
 The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged application permission required to install or upgrade a Teams app that requires consent to [resource-specific consent (RSC)](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions when using the [teamsAppInstallation in a team: upgrade](/graph/api/team-teamsappinstallation-upgrade) API.
 
 ## January 2026: New in preview only
+
+### People and workplace intelligence | Insights
+
+- Deprecated the [List shared](/graph/api/insights-list-shared?view=graph-rest-beta&preserve-view=true) method on [sharedInsight](/graph/api/resources/sharedinsight?view=graph-rest-beta&preserve-view=true) resource.
+- Deprecated the [List used](/graph/api/insights-list-used?view=graph-rest-beta&preserve-view=true) method on [usedInsight](/graph/api/resources/usedinsight?view=graph-rest-beta&preserve-view=true) resource.
 
 ### Security | Data security and compliance
 
