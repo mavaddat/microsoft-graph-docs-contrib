@@ -10,6 +10,33 @@ items:
     href: ../../api/backuprestoreroot-get.md
   - name: Enable
     href: ../../api/backuprestoreroot-enable.md
+items:
+  - name: Browse session
+    href: ../../resources/browsesessionbase.md
+  - name: List
+    href: ../../api/backuprestoreroot-list-browsesessions.md
+  - name: SharePoint Browse session
+    herf: ../../resources/sharepointbrowsesession.md
+    items:
+    - name: Get
+      href: ../../api/sharepointbrowsesession-get.md
+    - name: Create
+      href: ../../api/backuprestoreroot-post-sharepointbrowsesessions.md
+    - name: List
+      href: ../../api/backuprestoreroot-list-sharepointbrowsesessions.md
+    - name: Browse
+      href: ../../api/sharepointbrowsesession-browse.md
+  - name: OneDriveForBusiness Browse session
+    href: ../../resources/onedriveforbusinessbrowsesession.md
+    items:
+    - name: Get
+      href: ../../api/onedriveforbusinessbrowsesession-get.md
+    - name: Create
+      href: ../../api/backuprestoreroot-post-oneDriveForBusinessBrowseSessions.md
+    - name: List
+      href: ../../api/backuprestoreroot-list-onedriveforbusinessbrowsesessions.md
+    - name: Browse
+      href: ../../api/onedriveforbusinessbrowsesession-browse.md
 - name: Email notifications setting
   items:
   - name: Email notifications setting

@@ -56,9 +56,10 @@ In the request body, supply a JSON representation of the following parameters.
 |orderBy|[browseQueryOrder](../resources/enums.md#browsequeryorder-values)|Specifies the order by which response should be ordered. Optional.|
 
 The following table shows examples of possible formats for the filter expression. The filter is supported only on the `name` property.
-| Property                                 | Operator                                | Example                                                                  |
-| ------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------- |
-| `name`      | `-contains` |   `(name -contains 'contoso')`  |
+
+|Property| Operator| Example|
+|:---|:---|:---|
+| `name`|`-contains`|`(name -contains 'contoso')`|
 
 ## Response
 
