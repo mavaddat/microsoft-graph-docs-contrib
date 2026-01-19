@@ -276,7 +276,7 @@ The following example shows how to get a townhall registration by registration I
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "get_virtualEventRegistration_sessions",
+  "name": "get_virtualEventRegistration_sessions_townhall",
   "sampleKeys": ["a4393b5f-6628-49de-b49c-38ac0757be36@a1a56d21", "b9c59a99-226d-484b-9ee0-aa98af6485ea"]
 }
 -->

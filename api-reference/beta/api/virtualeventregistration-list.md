@@ -421,13 +421,41 @@ The following example shows a request for a townhall
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "list_virtualEventRegistrations",
+  "name": "list_virtualEventRegistrations_townhall",
   "sampleKeys": ["41a3c9e0-1c20-4de3-ac3e-bdda88886221@c1bc66a8-9554-4700-9441-dd9b1d29bdf8"]
 }
 -->
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/solutions/virtualEvents/townhalls/41a3c9e0-1c20-4de3-ac3e-bdda88886221@c1bc66a8-9554-4700-9441-dd9b1d29bdf8/registrations
 ```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/list-virtualeventregistrations-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/list-virtualeventregistrations-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/list-virtualeventregistrations-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/list-virtualeventregistrations-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/list-virtualeventregistrations-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/list-virtualeventregistrations-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/list-virtualeventregistrations-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
