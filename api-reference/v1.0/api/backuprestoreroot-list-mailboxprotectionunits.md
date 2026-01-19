@@ -30,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /solutions/backupRestore/protectionUnits/microsoft.graph.mailboxProtectionUnit
 GET /solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicyId}/mailboxProtectionUnits/
 ```
@@ -69,7 +69,7 @@ The following example shows a request.
   "name": "list_all_mailboxprotectionunit"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/solutions/backupRestore/protectionUnits/microsoft.graph.mailboxProtectionUnit
 ```
 
@@ -113,7 +113,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 
 {
@@ -127,6 +127,7 @@ HTTP/1.1 200 OK
       "displayName": "Emily Braun", // Newly Added
       "email": "emilyb@contoso.com", // Newly Added
       "status": "unprotectRequested",
+      "protectionSources": "none",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -162,6 +163,7 @@ HTTP/1.1 200 OK
       "displayName": "Alex Wilber", // Newly Added
       "email": "alexw@contoso.com", // Newly Added
       "status": "unprotected",
+      "protectionSources": "none",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -197,6 +199,7 @@ HTTP/1.1 200 OK
       "displayName": "Shaun Wong", // Newly Added
       "email": "shaunw@contoso.com", // Newly Added
       "status": "protectRequested",
+      "protectionSources": "manual",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -232,6 +235,7 @@ HTTP/1.1 200 OK
       "displayName": "Janet Green", // Newly Added
       "email": "janetg@contoso.com", // Newly Added
       "status": "protected",
+      "protectionSources": "dynamicRule",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -266,6 +270,7 @@ HTTP/1.1 200 OK
       "displayName": "Eddie Brock ", // Newly Added
       "email": "eddyb@contoso.com", // Newly Added
       "status": "unprotected",
+      "protectionSources": "none",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -307,7 +312,7 @@ The following example shows a request.
   "name": "mailboxprotectionunit_list"
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/v1.0/solutions/solutions/backupRestore/exchangeProtectionPolicies/845457dc-4bb2-4815-bef3-8628ebd1952e/mailboxProtectionUnits
 ```
 
@@ -320,7 +325,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.mailboxProtectionUnit)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 
 {

@@ -298,6 +298,32 @@ items:
               href: ../../api/serviceactivity-getmetricsforconditionalaccesscompliantdevicessigninsuccess.md
             - name: Get SAML sign-in metrics
               href: ../../api/serviceactivity-getmetricsforsamlsigninsuccess.md
+            - name: Get network access internet app policy blocked users metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyblockedusers.md
+            - name: Get network access internet app policy blocked apps metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyblockedapps.md
+            - name: Get network access internet app policy allowed users metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyallowedusers.md
+            - name: Get network access internet app policy allowed apps metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyallowedapps.md
+            - name: Get network access private app users blocked by connector metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappusersblockedbyconnector.md
+            - name: Get network access private apps blocked by connector metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappsblockedbyconnector.md
+            - name: Get network access private app users allowed by connector metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappusersallowedbyconnector.md
+            - name: Get network access private apps allowed by connector metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappsallowedbyconnector.md
+            - name: Get network access remote network branches alive metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchesalive.md
+            - name: Get network access remote network branches tunnel disconnected metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchestunneldisconnected.md
+            - name: Get network access remote network branches tunnel connected metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchestunnelconnected.md
+            - name: Get network access remote network branches BGP disconnected metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchesbgpdisconnected.md
+            - name: Get network access remote network branches BGP connected metrics
+              href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchesbgpconnected.md
       - name: Health monitoring
         items:
         - name: Overview
@@ -330,7 +356,7 @@ items:
         href: ../../api/reportroot-list-serviceprincipalsigninactivities.md
       - name: Get
         href: ../../api/serviceprincipalsigninactivity-get.md
-  - name: Microsoft Entra audit logs
+  - name: Microsoft Entra logs
     items:
     - name: Overview
       href: ../../resources/azure-ad-auditlog-overview.md
@@ -370,20 +396,6 @@ items:
         href: ../../api/auditlogroot-list-signups.md
       - name: Get
         href: ../../api/selfservicesignup-get.md
-    - name: Sign in
-      items:
-      - name: Sign in
-        href: ../../resources/signin.md
-      - name: List
-        href: ../../api/signin-list.md
-      - name: Get
-        href: ../../api/signin-get.md
-      - name: Confirm compromised
-        href: ../../api/signin-confirmcompromised.md
-      - name: Confirm safe
-        href: ../../api/signin-confirmsafe.md
-      - name: Dismiss
-        href: ../../api/signin-dismiss.md
     - name: Sign in events activity
       items:
       - name: Sign in events activity
@@ -396,6 +408,20 @@ items:
         href: ../../resources/signineventsappactivity.md
       - name: List
         href: ../../api/auditlogroot-list-signineventsappsummary.md
+    - name: Sign-in
+      items:
+      - name: Sign-in
+        href: ../../resources/signin.md
+      - name: List
+        href: ../../api/signin-list.md
+      - name: Get
+        href: ../../api/signin-get.md
+      - name: Confirm compromised
+        href: ../../api/signin-confirmcompromised.md
+      - name: Confirm safe
+        href: ../../api/signin-confirmsafe.md
+      - name: Dismiss
+        href: ../../api/signin-dismiss.md
     - name: Summarized sign in
       items:
       - name: Summarized sign in
@@ -472,6 +498,32 @@ items:
         href: ../../api/serviceactivity-getmetricsforconditionalaccesscompliantdevicessigninsuccess.md
       - name: Get SAML sign-in metrics
         href: ../../api/serviceactivity-getmetricsforsamlsigninsuccess.md
+      - name: Get network access internet app policy blocked users metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyblockedusers.md
+      - name: Get network access internet app policy blocked apps metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyblockedapps.md
+      - name: Get network access internet app policy allowed users metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyallowedusers.md
+      - name: Get network access internet app policy allowed apps metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessinternetapppolicyallowedapps.md
+      - name: Get network access private app users blocked by connector metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappusersblockedbyconnector.md
+      - name: Get network access private apps blocked by connector metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappsblockedbyconnector.md
+      - name: Get network access private app users allowed by connector metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappusersallowedbyconnector.md
+      - name: Get network access private apps allowed by connector metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessprivateappsallowedbyconnector.md
+      - name: Get network access remote network branches alive metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchesalive.md
+      - name: Get network access remote network branches tunnel disconnected metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchestunneldisconnected.md
+      - name: Get network access remote network branches tunnel connected metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchestunnelconnected.md
+      - name: Get network access remote network branches BGP disconnected metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchesbgpdisconnected.md
+      - name: Get network access remote network branches BGP connected metrics
+        href: ../../api/serviceactivity-getmetricsfornetworkaccessremotenetworkbranchesbgpconnected.md
 - name: Microsoft 365 usage reports
   items:
   - name: Overview

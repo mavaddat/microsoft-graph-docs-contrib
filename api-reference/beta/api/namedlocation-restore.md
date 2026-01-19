@@ -29,13 +29,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/namedlocation-restore-permissions.md)]
 
+[!INCLUDE [rbac-conditionalaccess-apis-write](../includes/rbac-for-apis/rbac-conditionalaccess-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /identity/conditionalAccess/deletedItems/namedLocations/{namedLocationId}/restore
 ```
 
@@ -64,7 +66,7 @@ The following example shows a request.
   "name": "namedlocationthis.restore"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/conditionalAccess/deletedItems/namedLocations/1a4c0633-332f-4691-a27a-fd8334938a62/restore
 ```
 
@@ -104,7 +106,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.namedLocation"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
