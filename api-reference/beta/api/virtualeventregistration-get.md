@@ -37,6 +37,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ```http
 GET /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}
+
+GET /solutions/virtualEvents/townhalls/{townhallId}/registrations/{registrationId}
 ```
 
 ## Optional query parameters
@@ -232,6 +234,102 @@ Content-Type: application/json
       "startDateTime": "2025-01-08T12:30:00Z",
       "endDateTime": "2025-01-09T22:00:00Z",
       "videoOnDemandWebUrl": "https://df.events.teams.microsoft.com/webinars/webinarId/sessions/session1",
+      "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDVjNzk3OWEtYjc2NS00NTA1LTkyMzQtYTYzMGI5YmFmMjM5%40thread.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22%3a%221cd068e4-5b08-4e75-a7f9-7b4e067a0820%22%7d",
+      "subject": "Session one",
+      "participants": {
+        "@odata.type": "microsoft.graph.meetingParticipants"
+      },
+      "isBroadcast": null,
+      "broadcastSettings": null,
+      "capabilities": [],
+      "audioConferencing": null,
+      "chatInfo": {
+        "threadId": "19:meeting_ZDVjNzk3OWEtYjc2NS00NTA1LTkyMzQtYTYzMGI5YmFmMjM5@thread.v2",
+        "messageId": "0",
+        "replyChainMessageId": null
+      },
+      "videoTeleconferenceId": null,
+      "externalId": null,
+      "joinMeetingIdSettings": null,
+      "lobbyBypassSettings": null,
+      "isEntryExitAnnounced": null,
+      "allowedPresenters": null,
+      "allowAttendeeToEnableMic": null,
+      "allowAttendeeToEnableCamera": null,
+      "allowMeetingChat": null,
+      "shareMeetingChatHistoryDefault": null,
+      "allowTeamworkReactions": null,
+      "recordAutomatically": null,
+      "watermarkProtection": null,
+      "allowParticipantsToChangeName": null
+    }
+  ]
+}
+```
+
+### Example 3: Get a townhall registration by ID and include sessions
+
+The following example shows how to get a townhall registration by registration ID and use `$expand` to include **sessions**.
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "get_virtualEventRegistration_sessions",
+  "sampleKeys": ["a4393b5f-6628-49de-b49c-38ac0757be36@a1a56d21", "b9c59a99-226d-484b-9ee0-aa98af6485ea"]
+}
+-->
+```http
+GET https://graph.microsoft.com/beta/solutions/virtualEvent/townhalls/a4393b5f-6628-49de-b49c-38ac0757be36@a1a56d21/registrations/b9c59a99-226d-484b-9ee0-aa98af6485ea?$expand=sessions
+```
+
+#### Response
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.virtualEventRegistration"
+}
+-->
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.virtualEventRegistration",
+  "id": "1b9c59a99-226d-484b-9ee0-aa98af6485ea",
+  "userId": "String",
+  "firstName": "John",
+  "lastName": "Gomez",
+  "email": "John.Gomez@contoso.com",
+  "externalRegistrationInformation": {
+    "referrer": "Fabrikam",
+    "registrationId": "myExternalRegistrationId"
+  },
+  "status": "registered",
+  "registrationDateTime": "2026-01-16T22:04:17",
+  "cancelationDateTime": null,
+  "registrationQuestionAnswers": [
+    {
+      "questionId": "95320781-96b3-4b8f-8cf8-e6561d23447a",
+      "displayName": "Which technology do you currently work in?",
+      "value": null,
+      "booleanValue": null,
+      "multiChoiceValues": [
+        "Seattle"
+      ]
+    }
+  ],
+  "sessions@odata.navigationLink": "/townhalls/a4393b5f-6628-49de-b49c-38ac0757be36@a1a56d21/registrations/b9c59a99-226d-484b-9ee0-aa98af6485ea/sessions",
+  "sessions": [
+    {
+      "@odata.type": "#microsoft.graph.virtualEventSession",
+      "id": "8d62dd52-4dff-4c75-96a9-f905cc3ff942",
+      "startDateTime": "2025-01-08T12:30:00Z",
+      "endDateTime": "2025-01-09T22:00:00Z",
+      "videoOnDemandWebUrl": "https://df.events.teams.microsoft.com/townhalls/towhnhallId/sessions/session1",
       "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDVjNzk3OWEtYjc2NS00NTA1LTkyMzQtYTYzMGI5YmFmMjM5%40thread.v2/0?context=%7b%22Tid%22%3a%2272f988bf-86f1-41af-91ab-2d7cd011db47%22%2c%22Oid%22%3a%221cd068e4-5b08-4e75-a7f9-7b4e067a0820%22%7d",
       "subject": "Session one",
       "participants": {

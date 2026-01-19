@@ -58,6 +58,10 @@ Added support for managing *zones* in Microsoft Defender for Cloud, enabling org
 
 The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged application permission required to install or upgrade a Teams app that requires consent to [resource-specific consent (RSC)](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions when using the [teamsAppInstallation in a team: upgrade](/graph/api/team-teamsappinstallation-upgrade?view=graph-rest-beta&preserve-view=true) API.
 
+### Teamwork and communications | Calls and online meetings
+
+ Add [registration](/graph/api/resources/virtualeventregistration), registration information and questions, and [registration configuration](/graph/api/resources/virtualEventRegistrationConfiguration) functionality to [virtualEventTownhall](/graph/api/resources/virtualeventtownhall).
+
 ## December 2025: New and generally available
 
 ### Calendars | Places

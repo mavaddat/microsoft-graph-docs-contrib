@@ -1,6 +1,6 @@
 ---
 title: "List virtualEventRegistrations"
-description: "Get a list of all registration records of a webinar."
+description: "Get a list of all registration records of a virtual event."
 author: "halleclottey-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of all [registration records](../resources/virtualeventregistration.md) of a [webinar](../resources/virtualeventwebinar.md).
+Get a list of all [registration records](../resources/virtualeventregistration.md) of a [webinar](../resources/virtualeventwebinar.md) or a [townhall](../resources/virtualeventtownhall.md)..
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -39,6 +39,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 GET /solutions/virtualEvents/webinars/{webinarId}/registrations
 GET /solutions/virtualEvents/webinars/{webinarId}/registrations?$filter=userId eq '{userId}'
 GET /solutions/virtualEvents/webinars/{webinarId}/registrations?$filter=email eq '{email}'
+
+GET /solutions/virtualEvents/townhalls/{townhallId}/registrations
+GET /solutions/virtualEvents/townhalls/{townhallId}/registrations?$filter=userId eq '{userId}'
+GET /solutions/virtualEvents/townhalls/{townhallId}/registrations?$filter=email eq '{email}'
 ```
 ## Optional query parameters
 
@@ -51,7 +55,7 @@ In the request URL, you can provide either of the following query parameters wit
 |Parameter|Type|Description|
 |:---|:---|:---|
 |userId|String|The ID of the specified user in Microsoft Entra.|
-|email|String|The email address of the specified user registered to the webinar.|
+|email|String|The email address of the specified user registered to the virtual event.|
 
 ## Request headers
 
@@ -74,7 +78,7 @@ If you fetch a virtual event registration by **userId** or **email**, this metho
 
 #### Request
 
-The following example shows a request.
+The following example shows a request for a webinar
 
 # [HTTP](#tab/http)
 <!-- {
@@ -371,6 +375,92 @@ Content-Type: application/json
       },
       "status": "registered",
       "registrationDateTime": "2023-03-07T22:04:17",
+      "cancelationDateTime": null,
+      "preferredTimezone":"Pacific Standard Time",
+      "preferredLanguage":"en-us",
+      "registrationQuestionAnswers": [
+        {
+          "questionId": "95320781-96b3-4b8f-8cf8-e6561d23447a",
+          "displayName": "Which city do you currently work in?",
+          "value": null,
+          "booleanValue": null,
+          "multiChoiceValues": [
+            "Seattle"
+          ]
+        },
+        {
+          "questionId": "4577afdb-8bee-4219-b482-04b52c6b855c",
+          "displayName": "Do you in the same city where you work?",
+          "value": null,
+          "booleanValue": true,
+          "multiChoiceValues": []
+        },
+        {
+          "questionId": "80fefcf1-caf7-4cd3-b8d7-159e17c47f20",
+          "displayName": "Which cities have you worked in?",
+          "value": null,
+          "booleanValue": null,
+          "multiChoiceValues": [
+            "Cancun",
+            "Hoboken",
+            "Beijing"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Example 4: Retrieve a list of virtual event registrations
+
+#### Request
+
+The following example shows a request for a townhall
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "list_virtualEventRegistrations",
+  "sampleKeys": ["41a3c9e0-1c20-4de3-ac3e-bdda88886221@c1bc66a8-9554-4700-9441-dd9b1d29bdf8"]
+}
+-->
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/solutions/virtualEvents/townhalls/41a3c9e0-1c20-4de3-ac3e-bdda88886221@c1bc66a8-9554-4700-9441-dd9b1d29bdf8/registrations
+```
+
+---
+
+#### Response
+
+The following example shows the response.
+
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "Collection(microsoft.graph.virtualEventRegistration)"
+}
+-->
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.virtualEventRegistration",
+      "id": "83fa21e5-3e5d-4166-a1fe-3d7cc771c7da",
+      "userId": "String",
+      "firstName": "Emily",
+      "lastName": "Jane",
+      "email": "Jane@contoso.com",
+      "externalRegistrationInformation": {
+        "referrer": "Comicon",
+        "registrationId": "myExternalRegistrationId"
+      },
+      "status": "registered",
+      "registrationDateTime": "2026-01-18T22:04:17",
       "cancelationDateTime": null,
       "preferredTimezone":"Pacific Standard Time",
       "preferredLanguage":"en-us",
