@@ -20,6 +20,10 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## January 2026: New and generally available
 
+### Identity and access | Identity and sign-in
+
+Added the [externalAuthenticationMethodConfiguration](/graph/api/resources/externalauthenticationmethodconfiguration) and [openIdConnectSetting](/graph/api/resources/openidconnectsetting) resources to enable organizations to configure external authentication methods as part of their authentication methods policy.
+
 ### Reports | Microsoft 365 usage reports
 
 Going forward, use the Microsoft 365 Copilot usage APIs under the `/copilot` URL path segment. For more information, see:
