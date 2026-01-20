@@ -1,5 +1,5 @@
 ---
-title: "List oneDriveForBusinessBrowseSession objects"
+title: "List oneDriveForBusinessBrowseSessions"
 description: "Get a list of the oneDriveForBusinessBrowseSession objects and their properties."
 author: "manikantsinghms"
 ms.date: 09/23/2025
@@ -8,7 +8,7 @@ ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
 ---
 
-# List oneDriveForBusinessBrowseSession objects
+# List oneDriveForBusinessBrowseSessions
 
 Namespace: microsoft.graph
 
@@ -76,7 +76,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.oneDriveForBusinessBrowseSession"
+  "@odata.type": "Collection(microsoft.graph.oneDriveForBusinessBrowseSession)"
 }
 -->
 ``` http
@@ -84,19 +84,19 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/oneDriveForBusinessBrowseSessions",
-    "value": [
-        {
-            "@odata.type": "#microsoft.graph.oneDriveForBusinessBrowseSession",
-            "id": "ASAA3_8kysv7AWN-Sb9JndIPy67ZWhpFmgIk2EKs05DqCIN25Q",
-            "restorePointDateTime": "2025-12-26T03:00:56Z",
-            "status": "created",
-            "createdDateTime": "2025-12-26T05:56:03Z",
-            "expirationDateTime": "2025-12-29T05:56:01Z",
-            "backupSizeInBytes": "311659",
-            "directoryObjectId": "9a451a5a-2402-42d8-acd3-90ea088376e5"
-        }
-    ]
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/oneDriveForBusinessBrowseSessions",
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.oneDriveForBusinessBrowseSession",
+      "id": "ASAA3_8kysv7AWN-Sb9JndIPy67ZWhpFmgIk2EKs05DqCIN25Q",
+      "restorePointDateTime": "2025-12-26T03:00:56Z",
+      "status": "created",
+      "createdDateTime": "2025-12-26T05:56:03Z",
+      "expirationDateTime": "2025-12-29T05:56:01Z",
+      "backupSizeInBytes": "311659",
+      "directoryObjectId": "9a451a5a-2402-42d8-acd3-90ea088376e5"
+    }
+  ]
 }
 ```
 
