@@ -1,6 +1,6 @@
 ---
 title: "oneDriveForBusinessBrowseSession: browse"
-description: "Browse the files and folders within the oneDriveForBusiness browseSession"
+description: "Browse the files and folders within the oneDriveForBusinessBrowseSession."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Browse the files and folders within the [browseSession](../resources/browsesessionbase.md).
+Browse the files and folders within the [oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md).
 
 ## Permissions
 
@@ -39,35 +39,42 @@ POST /solutions/backupRestore/oneDriveForBusinessBrowseSessions/{oneDriveForBusi
 
 ## Request headers
 
-|Name|Description|5-
+|Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
-Users should make a request with an empty body to get the list of the top browsable locations.
+
+### Get top browsable locations
+
+In the request body, supply an empty JSON object `{}` for this method to get the list of the top browsable locations.
+
+### Browse a specify scope
 
 In the request body, supply a JSON representation of the following parameters.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
 |browseLocationItemKey|String|The item key of the location that you want to browse. Optional.|
-|browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. Optional. The possible values are `none`, `site`, `documentLibrary`, `folder`, and `unknownFutureValue`. Optional.|
-|filter|String|Contains the search expression. Optional.|
-|orderBy|[browseQueryOrder](../resources/enums.md#browsequeryorder-values)|Specifies the order by which response should be ordered. Optional.|
+|browseResourceType|[browsableResourceType](../resources/enums.md#browsableresourcetype-values)|The type of the browsable location. The possible values are: `none`, `site`, `documentLibrary`, `folder`, `unknownFutureValue`. Optional.|
+|filter|String|The search expression. Optional.|
+|orderBy|[browseQueryOrder](../resources/enums.md#browsequeryorder-values)|Specifies the order in which the response is returned. Optional.|
 
-The following table shows examples of possible formats for the filter expression. The filter is supported only on the `name` property.
+The following table shows examples of possible formats for the **filter** expression. The filter is supported only on the **name** property.
 
 |Property| Operator| Example|
 |:---|:---|:---|
-| `name`|`-contains`|`(name -contains 'contoso')`|
+| name|`-contains`|`(name -contains 'contoso')`|
 
 ## Response
 
-If successful, this function returns a `200 OK` response code and a [browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection in the response body.
+If successful, this function returns a `200 OK` response code and a collection of [browseQueryResponseItem](../resources/browsequeryresponseitem.md) objects in the response body.
 
 ## Examples
 
-### Example 1: Browse with empty body
+### Example 1: Get top browsable locations
+
+The following example shows how to get the top browsable locations.
 
 #### Request
 
@@ -98,20 +105,22 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
-    "@odata.count": 1,
-    "value": [
-        {
-            "itemKey": "18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f",
-            "name": "user0",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com",
-            "type": "site"
-        }
-    ]
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
+  "@odata.count": 1,
+  "value": [
+    {
+      "itemKey": "18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f",
+      "name": "user0",
+      "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com",
+      "type": "site"
+    }
+  ]
 }
 ```
 
-### Example 1: Browse with payload
+### Example 2: Browse a specify scope
+
+The following example shows how to specify the payload to browse specific files and folders.
 
 #### Request
 
@@ -126,7 +135,8 @@ POST https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusines
 Content-Type: application/json
 
 {
-    "browseLocationItemKey":"18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f","browseResourceType":"site"
+  "browseLocationItemKey": "18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f",
+  "browseResourceType": "site"
 }
 ```
 
@@ -146,16 +156,16 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
-    "@odata.count": 1,
-    "value": [
-        {
-            "itemKey": "18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f,1c99fa35-f265-4d7e-88d1-37d83752b3a3",
-            "name": "Documents",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents",
-            "type": "documentLibrary",
-            "itemsCount": 3
-        }
-    ]
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
+  "@odata.count": 1,
+  "value": [
+    {
+      "itemKey": "18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f,1c99fa35-f265-4d7e-88d1-37d83752b3a3",
+      "name": "Documents",
+      "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents",
+      "type": "documentLibrary",
+      "itemsCount": 3
+    }
+  ]
 }
 ```
