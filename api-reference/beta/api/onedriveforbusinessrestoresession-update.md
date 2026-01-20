@@ -213,20 +213,14 @@ To remove a **granularDriveRestoreArtifact** from a granular restore session, sp
 }
 -->
 ```http
-PATCH /solutions/backupRestore/oneDriveForBusinessRestoreSession/43e0638e-3ad7-4c7e-8749-72175d046e30
+PATCH https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessRestoreSession/43e0638e-3ad7-4c7e-8749-72175d046e30
 Content-Type: application/json
 
 {
   "granularDriveRestoreArtifacts@delta": [
     {
-      "browseSessionId": "eJxVjEEKwjAQRfc80xeIleluFd2HRkZCgAIEu9CO3aUv78W4H_q_NgQY2gSJHT8IoOhrl5AzosZGBk6",
+      "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
       "itemKey": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
-    },
-    {
-      "@removed": {
-        "reason": "changed"
-      },
-      "id": "b535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
     }
   ]
 }
@@ -251,16 +245,17 @@ Content-Type: application/json
     "id": "43e0638e-3ad7-4c7e-8749-72175d046e30",
     "granularDriveRestoreArtifacts@delta": [
         {
-            "browseSesionId": "eJxVjEEKwjAQRfc80xeIleluFd2HRkZCgAIEu9CO3aUv78W4H_q_NgQY2gSJHT8IoOhrl5AzosZGBk6",
+            "siteId": null,
             "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
+            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+            "restoredItemKey": "",
+            "webUrl": "",
+            "restoredItemPath": null,
+            "restoredItemWebUrl": "",
             "status": "added",
-            "restorePointDatetime": "2025-06-28T15:05:54.1352557Z"
-        },
-        {
-            "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
-            "@removed": {
-                "reason": "changed"
-            }
+            "restorePointDateTime": "0001-01-01T00:00:00Z",
+            "startDateTime": "0001-01-01T00:00:00Z",
+            "completionDateTime": "0001-01-01T00:00:00Z"
         }
     ]
 }

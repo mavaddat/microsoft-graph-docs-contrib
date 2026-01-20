@@ -66,7 +66,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBusinessRestoreSessionId}/granularDriveRestoreArtifacts
+GET https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessRestoreSessions/01b9d504-a6a4-464b-b2e1-0085d9fab651/granularDriveRestoreArtifacts
 ```
 
 
@@ -85,22 +85,35 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.granularDriveRestoreArtifact",
-      "id": "c08c8109-bc9e-ec60-c1a9-0798c2e5706e",
-      "browseSessionId": "String",
-      "status": "String",
-      "webUrl": "String",
-      "restoredItemKey": "String",
-      "restoredItemPath": "String",
-      "restoredItemWebUrl": "String",
-      "restorePointDateTime": "String (timestamp)",
-      "startDateTime": "String (timestamp)",
-      "completionDateTime": "String (timestamp)",
-      "directoryObjectId": "String"
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/oneDriveForBusinessRestoreSessions('01b9d504-a6a4-464b-b2e1-0085d9fab651')/granularDriveRestoreArtifacts",
+    "value": [
+        {
+            "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,292dcd7d-b1c3-40e5-afc3-7c10503a0eac",
+            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+            "restoredItemKey": "",
+            "webUrl": "",
+            "restoredItemPath": "",
+            "restoredItemWebUrl": "",
+            "status": "added",
+            "restorePointDateTime": "0001-01-01T00:00:00Z",
+            "startDateTime": "0001-01-01T00:00:00Z",
+            "completionDateTime": "0001-01-01T00:00:00Z",
+            "directoryObjectId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
+        },
+        {
+            "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,8d1ba53f-986a-409f-bf90-3bf55dbd7526",
+            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+            "restoredItemKey": "",
+            "webUrl": "",
+            "restoredItemPath": "",
+            "restoredItemWebUrl": "",
+            "status": "unknown",
+            "restorePointDateTime": "0001-01-01T00:00:00Z",
+            "startDateTime": "0001-01-01T00:00:00Z",
+            "completionDateTime": "0001-01-01T00:00:00Z",
+            "directoryObjectId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
+        }
+    ]
 }
 ```
 

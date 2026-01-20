@@ -67,24 +67,22 @@ If successful, this function returns a `200 OK` response code and a [browseQuery
 
 ## Examples
 
-### Request
+### Example 1: Browse with empty body
+
+#### Request
 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "onedriveforbusinessbrowsesessionthis.browse"
+  "name": "onedriveforbusinessbrowsesessionthis.browse.empty"
 }
 -->
 ``` http
-POST /solutions/backupRestore/oneDriveForBusinessBrowseSessions/{oneDriveForBusinessBrowseSessionId}/browse
+POST https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessBrowseSessions/K74iLNw55YTzbgnba0zxZROipFxnManccFpzecIrjuaypwA/browse
 
 ```
-<!-- 
-To be removed
-GET https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessBrowseSessions/{oneDriveForBusinessBrowseSessionId}/browse(nextFetchToken='parameterValue')
- -->
 
-### Response
+#### Response
 
 The following example shows the response.
 
@@ -100,11 +98,64 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
-    {
-      "@odata.type": "microsoft.graph.browseQueryResponseItem"
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
+    "@odata.count": 1,
+    "value": [
+        {
+            "itemKey": "18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f",
+            "name": "user0",
+            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com",
+            "type": "site"
+        }
+    ]
 }
 ```
 
+### Example 1: Browse with payload
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "onedriveforbusinessbrowsesessionthis.browse.body"
+}
+-->
+``` http
+POST https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessBrowseSessions/K74iLNw55YTzbgnba0zxZROipFxnManccFpzecIrjuaypwA/browse
+Content-Type: application/json
+
+{
+    "browseLocationItemKey":"18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f","browseResourceType":"site"
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "Collection(microsoft.graph.browseQueryResponseItem)"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
+    "@odata.count": 1,
+    "value": [
+        {
+            "itemKey": "18473961-eedf-4151-94a7-fd8eb4aec0d7,62ff7090-d987-4711-9d5c-74c9452a192f,1c99fa35-f265-4d7e-88d1-37d83752b3a3",
+            "name": "Documents",
+            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents",
+            "type": "documentLibrary",
+            "itemsCount": 3
+        }
+    ]
+}
+```

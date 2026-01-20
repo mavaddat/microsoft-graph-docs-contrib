@@ -84,21 +84,19 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.oneDriveForBusinessBrowseSession",
-      "id": "0c4831ef-d1ae-f814-c2a5-64ee53205d47",
-      "status": "String",
-      "createdDateTime": "String (timestamp)",
-      "expirationDateTime": "String (timestamp)",
-      "restorePointDateTime": "String (timestamp)",
-      "backupSizeInBytes": "String",
-      "error": {
-        "@odata.type": "microsoft.graph.publicError"
-      },
-      "directoryObjectId": "String"
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/oneDriveForBusinessBrowseSessions",
+    "value": [
+        {
+            "@odata.type": "#microsoft.graph.oneDriveForBusinessBrowseSession",
+            "id": "ASAA3_8kysv7AWN-Sb9JndIPy67ZWhpFmgIk2EKs05DqCIN25Q",
+            "restorePointDateTime": "2025-12-26T03:00:56Z",
+            "status": "created",
+            "createdDateTime": "2025-12-26T05:56:03Z",
+            "expirationDateTime": "2025-12-29T05:56:01Z",
+            "backupSizeInBytes": "311659",
+            "directoryObjectId": "9a451a5a-2402-42d8-acd3-90ea088376e5"
+        }
+    ]
 }
 ```
 

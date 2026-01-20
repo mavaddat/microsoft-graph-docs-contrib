@@ -225,20 +225,14 @@ To remove a **granularSiteRestoreArtifact** from a granular restore session, spe
 -->
 
 ```http
-PATCH /solutions/backupRestore/sharePointRestoreSessions/23e0638e-3ad7-4c7e-8749-72175d046e30
+PATCH https://graph.microsoft.com/beta/solutions/backupRestore/sharePointRestoreSessions/01b9d504-a6a4-464b-b2e1-0085d9fab651
 Content-Type: application/json
 
 {
   "granularSiteRestoreArtifacts@delta": [
     {
-      "browseSessionId": "eJxVjEEKwjAQRfc80xeIleluFd2HRkZCgAIEu9CO3aUv78W4H_q_NgQY2gSJHT8IoOhrl5AzosZGBk6",
-      "itemKey": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
-    },
-    {
-      "@removed": {
-        "reason": "changed"
-      },
-      "id": "b535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
+      "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+      "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,8d1ba53f-986a-409f-bf90-3bf55dbd7526"
     }
   ]
 }
@@ -260,21 +254,22 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@context": "#$delta",
-  "id": "23e0638e-3ad7-4c7e-8749-72175d046e30",
-  "granularSiteRestoreArtifacts@delta": [
-    {
-      "browseSesionId": "eJxVjEEKwjAQRfc80xeIleluFd2HRkZCgAIEu9CO3aUv78W4H_q_NgQY2gSJHT8IoOhrl5AzosZGBk6",
-      "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
-      "status": "added",
-      "restorePointDatetime": "2025-06-28T15:05:54.1352557Z"
-    },
-    {
-      "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
-      "@removed": {
-          "reason": "changed"
-      }
-    }
-  ]
+    "@context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointRestoreSessions/$entity",
+    "id": "01b9d504-a6a4-464b-b2e1-0085d9fab651",
+    "granularSiteRestoreArtifacts@delta": [
+        {
+            "siteId": null,
+            "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,8d1ba53f-986a-409f-bf90-3bf55dbd7526",
+            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+            "restoredItemKey": "",
+            "webUrl": "",
+            "restoredItemPath": null,
+            "restoredItemWebUrl": "",
+            "status": "added",
+            "restorePointDateTime": "0001-01-01T00:00:00Z",
+            "startDateTime": "0001-01-01T00:00:00Z",
+            "completionDateTime": "0001-01-01T00:00:00Z"
+        }
+    ]
 }
 ```

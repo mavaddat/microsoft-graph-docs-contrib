@@ -68,20 +68,22 @@ If successful, this function returns a `200 OK` response code and a [browseQuery
 
 ## Examples
 
-### Request
+### Example 1: Browse with empty body
+
+#### Request
 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "sharepointbrowsesessionthis.browse"
+  "name": "sharepointbrowsesessionthis.browse.empty"
 }
 -->
 ``` http
-POST /solutions/backupRestore/sharePointBrowseSessions/{sharePointBrowseSessionId}/browse
+POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointBrowseSessions/m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE/browse
 ```
 
 
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -96,11 +98,65 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
-    {
-      "@odata.type": "microsoft.graph.browseQueryResponseItem"
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
+    "@odata.count": 1,
+    "value": [
+        {
+            "itemKey": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e",
+            "name": "Communication site",
+            "webUrl": "https://contoso.sharepoint.com",
+            "type": "site"
+        }
+    ]
 }
 ```
 
+### Example 2: Browse with payload
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "sharepointbrowsesessionthis.browse.body"
+}
+-->
+``` http
+POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointBrowseSessions/m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE/browse
+Content-Type: application/json
+
+{
+    "browseLocationItemKey": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e",
+    "browseResourceType": "site"
+}
+
+```
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "Collection(microsoft.graph.browseQueryResponseItem)"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
+    "@odata.count": 1,
+    "value": [
+        {
+            "itemKey": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d",
+            "name": "Documents",
+            "webUrl": "https://contoso.sharepoint.com/Shared Documents",
+            "type": "documentLibrary",
+            "itemsCount": 205
+        }
+    ]
+}
+```
