@@ -1,5 +1,5 @@
 ---
-title: "List browseSessionBase objects"
+title: "List browseSessions"
 description: "Get a list of the browseSessionBase objects and their properties."
 author: "manikantsinghms"
 ms.date: 09/23/2025
@@ -8,7 +8,7 @@ ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
 ---
 
-# List browseSessionBase objects
+# List browseSessions
 
 Namespace: microsoft.graph
 
@@ -85,39 +85,39 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/browseSessions",
-    "value": [
-        {
-            "@odata.type": "#microsoft.graph.sharePointBrowseSession",
-            "id": "ASAA3_9h-N8hJaHRT4L-FA4bBG-ttVmUEwbDuUeDxhm0oaOj1w",
-            "restorePointDateTime": "2025-12-25T03:00:18Z",
-            "status": "created",
-            "createdDateTime": "2025-12-26T06:00:22Z",
-            "expirationDateTime": "2025-12-29T06:00:20Z",
-            "backupSizeInBytes": "454436",
-            "siteId": "139459b5-c306-47b9-83c6-19b4a1a3a3d7"
-        },
-        {
-            "@odata.type": "#microsoft.graph.oneDriveForBusinessBrowseSession",
-            "id": "ASAA3_8kysv7AWN-Sb9JndIPy67ZWhpFmgIk2EKs05DqCIN25Q",
-            "restorePointDateTime": "2025-12-26T03:00:56Z",
-            "status": "created",
-            "createdDateTime": "2025-12-26T05:56:03Z",
-            "expirationDateTime": "2025-12-29T05:56:01Z",
-            "backupSizeInBytes": "311659",
-            "directoryObjectId": "9a451a5a-2402-42d8-acd3-90ea088376e5"
-        },
-        {
-            "@odata.type": "#microsoft.graph.sharePointBrowseSession",
-            "id": "ASAA3_-8mIMTToEDSJypqJz2TgGbtVmUEwbDuUeDxhm0oaOj1w",
-            "restorePointDateTime": "2025-12-26T03:00:56Z",
-            "status": "created",
-            "createdDateTime": "2025-12-26T05:54:36Z",
-            "expirationDateTime": "2025-12-29T05:54:35Z",
-            "backupSizeInBytes": "454433",
-            "siteId": "139459b5-c306-47b9-83c6-19b4a1a3a3d7"
-        }
-    ]
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/browseSessions",
+  "value": [
+    {
+      "@odata.type": "#microsoft.graph.sharePointBrowseSession",
+      "id": "ASAA3_9h-N8hJaHRT4L-FA4bBG-ttVmUEwbDuUeDxhm0oaOj1w",
+      "restorePointDateTime": "2025-12-25T03:00:18Z",
+      "status": "created",
+      "createdDateTime": "2025-12-26T06:00:22Z",
+      "expirationDateTime": "2025-12-29T06:00:20Z",
+      "backupSizeInBytes": "454436",
+      "siteId": "139459b5-c306-47b9-83c6-19b4a1a3a3d7"
+    },
+    {
+      "@odata.type": "#microsoft.graph.oneDriveForBusinessBrowseSession",
+      "id": "ASAA3_8kysv7AWN-Sb9JndIPy67ZWhpFmgIk2EKs05DqCIN25Q",
+      "restorePointDateTime": "2025-12-26T03:00:56Z",
+      "status": "created",
+      "createdDateTime": "2025-12-26T05:56:03Z",
+      "expirationDateTime": "2025-12-29T05:56:01Z",
+      "backupSizeInBytes": "311659",
+      "directoryObjectId": "9a451a5a-2402-42d8-acd3-90ea088376e5"
+    },
+    {
+      "@odata.type": "#microsoft.graph.sharePointBrowseSession",
+      "id": "ASAA3_-8mIMTToEDSJypqJz2TgGbtVmUEwbDuUeDxhm0oaOj1w",
+      "restorePointDateTime": "2025-12-26T03:00:56Z",
+      "status": "created",
+      "createdDateTime": "2025-12-26T05:54:36Z",
+      "expirationDateTime": "2025-12-29T05:54:35Z",
+      "backupSizeInBytes": "454433",
+      "siteId": "139459b5-c306-47b9-83c6-19b4a1a3a3d7"
+    }
+  ]
 }
 ```
 
