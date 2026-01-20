@@ -16,7 +16,7 @@ items:
     href: ../../resources/browsesessionbase.md
   - name: List
     href: ../../api/backuprestoreroot-list-browsesessions.md
-  - name: SharePoint Browse session
+  - name: SharePoint Browse Session
     herf: ../../resources/sharepointbrowsesession.md
     items:
     - name: Create
@@ -27,7 +27,7 @@ items:
       href: ../../api/sharepointbrowsesession-get.md
     - name: List
       href: ../../api/backuprestoreroot-list-sharepointbrowsesessions.md
-  - name: OneDriveForBusiness Browse session
+  - name: OneDriveForBusiness Browse Session
     href: ../../resources/onedriveforbusinessbrowsesession.md
     items:
     - name: Create
