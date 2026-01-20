@@ -49,9 +49,8 @@ PATCH /solutions/backupRestore/sharePointRestoreSessions/{sharePointRestoreSessi
 
 |Property|Type|Description|
 |:---|:---|:---|
+|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection|A collection of [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) objects. Required.|
 |siteRestoreArtifacts|[siteRestoreArtifact](../resources/siterestoreartifact.md) collection|A collection of [siteRestoreArtifact](../resources/siterestoreartifact.md) objects. Required.|
-|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection| Collection of [granularSiteRestoreArtifacts](../resources/granularsiterestoreartifact.md) objects. Required.|
-
 
 ## Response
 
@@ -212,12 +211,12 @@ HTTP/1.1 200 OK
 }
 ```
 
-### Example 2: Update a granular restore session.
+### Example 2: Update a granular restore session
 
 To remove a **granularSiteRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md).
 
 #### Request
-
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "sharepointrestoresession_granular_update"
@@ -254,22 +253,22 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointRestoreSessions/$entity",
-    "id": "01b9d504-a6a4-464b-b2e1-0085d9fab651",
-    "granularSiteRestoreArtifacts@delta": [
-        {
-            "siteId": null,
-            "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,8d1ba53f-986a-409f-bf90-3bf55dbd7526",
-            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
-            "restoredItemKey": "",
-            "webUrl": "",
-            "restoredItemPath": null,
-            "restoredItemWebUrl": "",
-            "status": "added",
-            "restorePointDateTime": "0001-01-01T00:00:00Z",
-            "startDateTime": "0001-01-01T00:00:00Z",
-            "completionDateTime": "0001-01-01T00:00:00Z"
-        }
-    ]
+  "@context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointRestoreSessions/$entity",
+  "id": "01b9d504-a6a4-464b-b2e1-0085d9fab651",
+  "granularSiteRestoreArtifacts@delta": [
+    {
+      "siteId": null,
+      "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,8d1ba53f-986a-409f-bf90-3bf55dbd7526",
+      "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+      "restoredItemKey": "",
+      "webUrl": "",
+      "restoredItemPath": null,
+      "restoredItemWebUrl": "",
+      "status": "added",
+      "restorePointDateTime": "0001-01-01T00:00:00Z",
+      "startDateTime": "0001-01-01T00:00:00Z",
+      "completionDateTime": "0001-01-01T00:00:00Z"
+    }
+  ]
 }
 ```
