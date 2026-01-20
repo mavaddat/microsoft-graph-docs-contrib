@@ -20,7 +20,7 @@ Inherits from [aiInteractionEntity](../resources/aiinteractionentity.md).
 
 | Property    | Type   | Description                                                                                                       |
 | :---------- | :----- | :---------------------------------------------------------------------------------------------------------------- |
-| blueprintId | String | Identifier of the parent agent that defines the identity and configuration of the agent. |
+| blueprintId | String | The unique identifier of the [parent agent blueprint](/graph/api/resources/agentidentityblueprint) that defines the identity and configuration of this agent instance.|
 | identifier  | String | The unique identifier of this AI agent. Inherited from [aiInteractionEntity](../resources/aiinteractionentity.md). |
 | name        | String | The display name of the AI agent. Inherited from [aiInteractionEntity](../resources/aiinteractionentity.md).      |
 | version     | String | The version number  of Itthe AI agent used. Inherited from [aiInteractionEntity](../resources/aiinteractionentity.md).      |
