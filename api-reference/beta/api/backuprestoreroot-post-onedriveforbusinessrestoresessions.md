@@ -69,11 +69,12 @@ For a list of possible error responses, see [Backup Storage API error responses]
 
 ## Examples
 
-### Example 1: Create a standard restore session.
+### Example 1: Create a standard restore session
 
-The following example shows a request to create a standard restore session.
+The following example shows how to create a standard restore session.
 
 #### Request
+The following example shows a request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
@@ -177,12 +178,13 @@ Content-Type: application/json
   "lastModifiedDateTime": "2023-03-30T12:01:03.45Z"
 }
 ```
----
-### Example 2: Create a granular restore session.
 
-The following example shows a request to create a granular restore session.
+### Example 2: Create a granular restore session
+
+The following example shows how to create a granular restore session.
 
 #### Request
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "onedriveforbusinessrestoresession_granular_create"
@@ -205,6 +207,7 @@ Content-Type: application/json
   ]
 }
 ```
+
 #### Response
 
 The following example shows the response.
@@ -255,4 +258,5 @@ Content-Type: application/json
   }
 }
 ```
+
 ---
