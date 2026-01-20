@@ -10,8 +10,9 @@ items:
     href: ../../api/backuprestoreroot-get.md
   - name: Enable
     href: ../../api/backuprestoreroot-enable.md
+- name: Browse session
   items:
-  - name: Browse session
+  - name: Browse Session
     href: ../../resources/browsesessionbase.md
   - name: List
     href: ../../api/backuprestoreroot-list-browsesessions.md
