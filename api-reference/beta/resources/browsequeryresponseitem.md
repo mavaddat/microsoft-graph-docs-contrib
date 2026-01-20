@@ -1,6 +1,6 @@
 ---
 title: "browseQueryResponseItem resource type"
-description: "Represents the response of the browse API."
+description: "Represents the response of the sharepointBrowseSession: browse and oneDriveForBusinessBrowse: browse APIs."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -14,18 +14,18 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the response of the [sharepointBrowseSession](../api/sharepointbrowsesession-browse.md) and [oneDriveForBusinessBrowse](../api/onedriveforbusinessbrowsesession-browse.md) APIs.
+Represents the response of the [sharepointBrowseSession: browse](../api/sharepointbrowsesession-browse.md) and [oneDriveForBusinessBrowse: browse](../api/onedriveforbusinessbrowsesession-browse.md) APIs.
 
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |itemKey|String|Unique identifier of the returned item.|
-|itemsCount|Int32|Count of items presents within the items. e.g, count of files in a folder.|
-|name|String|Name of the item.|
-|sizeInBytes|String|Size of the item in bytes.|
+|itemsCount|Int32|The count of items present within the items; for example, the count of files in a folder.|
+|name|String|The name of the item.|
+|sizeInBytes|String|The size of the item in bytes.|
 |type|browseQueryResponseItemType|The type of the item. The possible values are: `none`, `site`, `documentLibrary`, `folder`, `file`, `unknownFutureValue`.|
-|webUrl|String|The web url of the item.|
+|webUrl|String|The web URL of the item.|
 
 ## Relationships
 None.
@@ -41,11 +41,11 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.browseQueryResponseItem",
   "itemKey": "String",
+  "itemsCount": "Int32",
   "name": "String",
-  "webUrl": "String",
+  "sizeInBytes": "String",
   "type": "String",
-  "itemsCount": "Integer",
-  "sizeInBytes": "String"
+  "webUrl": "String"
 }
 ```
 
