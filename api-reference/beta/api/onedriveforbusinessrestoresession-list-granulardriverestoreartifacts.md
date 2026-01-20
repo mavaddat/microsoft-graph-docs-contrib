@@ -1,5 +1,5 @@
 ---
-title: "List granularDriveRestoreArtifact objects"
+title: "List granularDriveRestoreArtifacts"
 description: "Get a list of the granularDriveRestoreArtifact objects and their properties."
 author: "manikantsinghms"
 ms.date: 09/23/2025
@@ -8,7 +8,7 @@ ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
 ---
 
-# List granularDriveRestoreArtifact objects
+# List granularDriveRestoreArtifacts
 
 Namespace: microsoft.graph
 
@@ -69,7 +69,6 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessRestoreSessions/01b9d504-a6a4-464b-b2e1-0085d9fab651/granularDriveRestoreArtifacts
 ```
 
-
 ### Response
 
 The following example shows the response.
@@ -77,7 +76,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.granularDriveRestoreArtifact"
+  "@odata.type": "Collection(microsoft.graph.granularDriveRestoreArtifact)"
 }
 -->
 ``` http
@@ -85,35 +84,35 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/oneDriveForBusinessRestoreSessions('01b9d504-a6a4-464b-b2e1-0085d9fab651')/granularDriveRestoreArtifacts",
-    "value": [
-        {
-            "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,292dcd7d-b1c3-40e5-afc3-7c10503a0eac",
-            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
-            "restoredItemKey": "",
-            "webUrl": "",
-            "restoredItemPath": "",
-            "restoredItemWebUrl": "",
-            "status": "added",
-            "restorePointDateTime": "0001-01-01T00:00:00Z",
-            "startDateTime": "0001-01-01T00:00:00Z",
-            "completionDateTime": "0001-01-01T00:00:00Z",
-            "directoryObjectId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
-        },
-        {
-            "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,8d1ba53f-986a-409f-bf90-3bf55dbd7526",
-            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
-            "restoredItemKey": "",
-            "webUrl": "",
-            "restoredItemPath": "",
-            "restoredItemWebUrl": "",
-            "status": "unknown",
-            "restorePointDateTime": "0001-01-01T00:00:00Z",
-            "startDateTime": "0001-01-01T00:00:00Z",
-            "completionDateTime": "0001-01-01T00:00:00Z",
-            "directoryObjectId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
-        }
-    ]
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/oneDriveForBusinessRestoreSessions('01b9d504-a6a4-464b-b2e1-0085d9fab651')/granularDriveRestoreArtifacts",
+  "value": [
+    {
+      "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,292dcd7d-b1c3-40e5-afc3-7c10503a0eac",
+      "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+      "restoredItemKey": "",
+      "webUrl": "",
+      "restoredItemPath": "",
+      "restoredItemWebUrl": "",
+      "status": "added",
+      "restorePointDateTime": "0001-01-01T00:00:00Z",
+      "startDateTime": "0001-01-01T00:00:00Z",
+      "completionDateTime": "0001-01-01T00:00:00Z",
+      "directoryObjectId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
+    },
+    {
+      "id": "f3846f8d-80a6-4480-ae20-5966ebdf2009,26380145-c085-4772-b5ef-94de6bc9447e,3be2f282-276a-4a1a-8db0-8bf0849df84d,8d1ba53f-986a-409f-bf90-3bf55dbd7526",
+      "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+      "restoredItemKey": "",
+      "webUrl": "",
+      "restoredItemPath": "",
+      "restoredItemWebUrl": "",
+      "status": "unknown",
+      "restorePointDateTime": "0001-01-01T00:00:00Z",
+      "startDateTime": "0001-01-01T00:00:00Z",
+      "completionDateTime": "0001-01-01T00:00:00Z",
+      "directoryObjectId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
+    }
+  ]
 }
 ```
 
