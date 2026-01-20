@@ -1,6 +1,6 @@
 ---
 title: "browseSessionBase resource type"
-description: "Represents a browse session created on a restore point."
+description: "An abstract entity that represents a browse session created on a specific restore point."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
@@ -15,28 +15,26 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a browse session created on a specific restore point. This is an abstract entity for browse sessions. 
+An abstract entity that represents a browse session created on a specific restore point. A browse session can be created only for SharePoint and OneDrive for work or school. Only *fastRestore* points are supported to create a browse session. A browse session is a short-lived entity and is deleted automatically.
 
-A browse session can be created only for SharePoint and OneDrive for Business. Only `fastRestore` points are supported to create a browse session.
-A browse session is a short-lived entity and is deleted automatically.
+Base type of [oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) and [sharePointBrowseSession](../resources/sharepointbrowsesession.md)
 
 Inherits from [entity](../resources/entity.md).
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/backuprestoreroot-list-browsesessions.md)|[browseSessionBase](../resources/browsesessionbase.md) collection|Get a list of the browseSessionBase objects and their properties.|
-
+|[List](../api/backuprestoreroot-list-browsesessions.md)|[browseSessionBase](../resources/browsesessionbase.md) collection|Get a list of the [browseSessionBase](../resources/browsesessionbase.md) objects and their properties.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |backupSizeInBytes|String|The size of the backup in bytes.|
-|createdDateTime|DateTimeOffset|The time of the creation of the browse session.|
+|createdDateTime|DateTimeOffset|The date and time when the browse session was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 |error|[publicError](../resources/publicerror.md)|Contains the error details if the browse session creation fails.|
-|expirationDateTime|DateTimeOffset|The time after which the browse session is deleted automatically.|
-|id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
-|restorePointDateTime|DateTimeOffset|The date time of the restore point on which the browse session is created.|
+|expirationDateTime|DateTimeOffset|The date and time after which the browse session is deleted automatically.|
+|id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md).|
+|restorePointDateTime|DateTimeOffset|The date and time of the restore point on which the browse session is created.|
 |status|browseSessionStatus|The status of the browse session. The possible values are: `creating`, `created`, `failed`, `unknownFutureValue`.|
 
 ## Relationships
@@ -55,15 +53,13 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.browseSessionBase",
-  "id": "String (identifier)",
-  "status": "String",
-  "createdDateTime": "String (timestamp)",
-  "expirationDateTime": "String (timestamp)",
-  "restorePointDateTime": "String (timestamp)",
   "backupSizeInBytes": "String",
-  "error": {
-    "@odata.type": "microsoft.graph.publicError"
-  }
+  "createdDateTime": "String (timestamp)",
+  "error": {"@odata.type": "microsoft.graph.publicError"},
+  "expirationDateTime": "String (timestamp)",
+  "id": "String (identifier)",
+  "restorePointDateTime": "String (timestamp)",
+  "status": "String"
 }
 ```
 
