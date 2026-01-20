@@ -15,9 +15,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [sharePointRestoreSession](../resources/sharepointrestoresession.md) object. To create a granular restore session, granular site restore artifacts should be present in the payload. `granularSiteRestoreArtifact` and `siteRestoreArtifact` in the same **create** or **update** request aren't supported.
+Create a new [sharePointRestoreSession](../resources/sharepointrestoresession.md) object. To create a granular restore session, granular site restore artifacts must be present in the payload. A request can't include both [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) and [siteRestoreArtifact](../resources/siterestoreartifact.md) in the same **create** or **update** request.
 
-If no payload is provided while creating the restore session, by default, it creates an empty standard restore session.
+If no payload is provided when you create the restore session, the request creates an empty standard restore session by default.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -52,9 +52,9 @@ In the request body, supply a JSON representation of the [sharePointRestoreSessi
 You can specify the following properties when you create a **sharePointRestoreSession** object.
 
 |Property|Type|Description|
- |:---|:---|:---|
- |siteRestoreArtifacts|[siteRestoreArtifact](../resources/siterestoreartifact.md) collection|Collection of [siteRestoreArtifact](../resources/siterestoreartifact.md) objects. Required.|
-|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection| Collection of [granularSiteRestoreArtifacts](../resources/granularsiterestoreartifact.md) objects. Required.|
+|:---|:---|:---|
+|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection|A collection of [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) objects. Required.|
+|siteRestoreArtifacts|[siteRestoreArtifact](../resources/siterestoreartifact.md) collection|A collection of [siteRestoreArtifact](../resources/siterestoreartifact.md) objects. Required.|
 
 ## Response
 
@@ -66,9 +66,10 @@ For a list of possible error responses, see [Backup Storage API error responses]
 
 ### Example 1: Create a standard restore session
 
-The following example shows a request to create a standard restore session.
+The following example shows how to create a standard restore session.
 
 #### Request
+The following example shows a request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
@@ -174,12 +175,13 @@ Content-Type: application/json
   "lastModifiedDateTime": "2015-06-19T12:01:03.45Z"
 }
 ```
----
+
 ### Example 2: Create a granular restore session
 
-The following example shows a request to create a granular restore session.
+The following example shows how to create a granular restore session.
 
 #### Request
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "sharepointrestoresession_granular_create"
@@ -202,6 +204,7 @@ Content-Type: application/json
   ]
 }
 ```
+
 #### Response
 
 The following example shows the response.
@@ -252,4 +255,3 @@ Content-Type: application/json
   }
 }
 ```
----
