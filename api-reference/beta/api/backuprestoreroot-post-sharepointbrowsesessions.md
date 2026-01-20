@@ -48,11 +48,11 @@ POST /solutions/backupRestore/sharePointBrowseSessions
 
 In the request body, supply a JSON representation of the [sharePointBrowseSession](../resources/sharepointbrowsesession.md) object.
 
-You can specify the following properties when creating a **sharePointBrowseSession**.
+You can specify the following properties when you create a **sharePointBrowseSession**.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|RestorePointId|String|The id of the [RestorePoint](../resources/restorepoint.md) on which user wants to create a browse session. Required.|
+|restorePointId|String|The ID of the [restorePoint](../resources/restorepoint.md) on which the user wants to create a browse session. Required.|
 
 ## Response
 
@@ -100,14 +100,14 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointBrowseSessions/$entity",
-    "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
-    "restorePointDateTime": "2026-01-18T03:00:15Z",
-    "status": "creating",
-    "createdDateTime": "2026-01-20T10:42:27Z",
-    "expirationDateTime": "2026-01-23T10:42:24Z",
-    "backupSizeInBytes": "584316",
-    "siteId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointBrowseSessions/$entity",
+  "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+  "restorePointDateTime": "2026-01-18T03:00:15Z",
+  "status": "creating",
+  "createdDateTime": "2026-01-20T10:42:27Z",
+  "expirationDateTime": "2026-01-23T10:42:24Z",
+  "backupSizeInBytes": "584316",
+  "siteId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
 }
 ```
 
