@@ -52,7 +52,7 @@ PATCH /solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBu
 |Property|Type|Description|
 |:---|:---|:---|
 |driveRestoreArtifacts|[driveRestoreArtifact](../resources/driverestoreartifact.md) collection|Collection of [driveRestoreArtifact](../resources/driverestoreartifact.md). Required|
-|granularDriveRestoreArtifacts|[granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) collection| Collection of [granularDriveRestoreArtifacts](../resources/granulardriverestoreartifact.md) objects. Required.|
+|granularDriveRestoreArtifacts|[granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) collection|A collection of [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) objects. Required.|
 
 ## Response
 
@@ -207,6 +207,7 @@ HTTP/1.1 200 OK
 To remove a **granularDriveRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md).
 
 #### Request
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "onedriveforbusiness_granular_update"
@@ -242,21 +243,21 @@ Content-Type: application/json
 
 {
   "@context": "#$delta",
-    "id": "43e0638e-3ad7-4c7e-8749-72175d046e30",
-    "granularDriveRestoreArtifacts@delta": [
-        {
-            "siteId": null,
-            "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
-            "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
-            "restoredItemKey": "",
-            "webUrl": "",
-            "restoredItemPath": null,
-            "restoredItemWebUrl": "",
-            "status": "added",
-            "restorePointDateTime": "0001-01-01T00:00:00Z",
-            "startDateTime": "0001-01-01T00:00:00Z",
-            "completionDateTime": "0001-01-01T00:00:00Z"
-        }
-    ]
+  "id": "43e0638e-3ad7-4c7e-8749-72175d046e30",
+  "granularDriveRestoreArtifacts@delta": [
+    {
+      "siteId": null,
+      "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
+      "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+      "restoredItemKey": "",
+      "webUrl": "",
+      "restoredItemPath": null,
+      "restoredItemWebUrl": "",
+      "status": "added",
+      "restorePointDateTime": "0001-01-01T00:00:00Z",
+      "startDateTime": "0001-01-01T00:00:00Z",
+      "completionDateTime": "0001-01-01T00:00:00Z"
+    }
+  ]
 }
 ```
