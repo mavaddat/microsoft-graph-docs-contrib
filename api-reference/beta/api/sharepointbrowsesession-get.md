@@ -69,7 +69,6 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/solutions/backupRestore/sharePointBrowseSessions/{sharePointBrowseSessionId}
 ```
 
-
 ### Response
 
 The following example shows the response.
@@ -85,14 +84,14 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointBrowseSessions/$entity",$select=siteId,backupSizeInBytes",
-    "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
-    "restorePointDateTime": "2026-01-18T03:00:15Z",
-    "status": "created",
-    "createdDateTime": "2026-01-20T10:42:27Z",
-    "expirationDateTime": "2026-01-23T10:42:24Z",
-    "backupSizeInBytes": "584316",
-    "siteId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointBrowseSessions/$entity,$select=siteId,backupSizeInBytes",
+  "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+  "restorePointDateTime": "2026-01-18T03:00:15Z",
+  "status": "created",
+  "createdDateTime": "2026-01-20T10:42:27Z",
+  "expirationDateTime": "2026-01-23T10:42:24Z",
+  "backupSizeInBytes": "584316",
+  "siteId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
 }
 ```
 
