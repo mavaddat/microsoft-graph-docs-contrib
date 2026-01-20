@@ -1,5 +1,5 @@
 ---
-title: "List sharePointBrowseSession objects"
+title: "List sharePointBrowseSessions"
 description: "Get a list of the sharePointBrowseSession objects and their properties."
 author: "manikantsinghms"
 ms.date: 09/23/2025
@@ -8,7 +8,7 @@ ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
 ---
 
-# List sharePointBrowseSession objects
+# List sharePointBrowseSessions
 
 Namespace: microsoft.graph
 
@@ -76,7 +76,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.sharePointBrowseSession"
+  "@odata.type": "Collection(microsoft.graph.sharePointBrowseSession)"
 }
 -->
 ``` http
