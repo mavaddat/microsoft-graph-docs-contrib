@@ -48,6 +48,10 @@ PATCH /solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBu
 
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
+To remove a **driveRestoreArtifact** from a standar restore session, specify the `@removed` annotation in the request body together with the ID of the [driveRestoreArtifact](../resources/driverestoreartifact.md) object.
+
+
+To remove a **granularDriveRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -63,8 +67,6 @@ For a list of possible error responses, see [Backup Storage API error responses]
 ## Examples
 
 ### Request
-
-To remove a drive restore artifact, specify the `@removed` annotation in the request body together with the ID of the [driveRestoreArtifact](../resources/driverestoreartifact.md) object.
 
 The following example shows a request.
 # [HTTP](#tab/http)
@@ -204,8 +206,6 @@ HTTP/1.1 200 OK
 
 ### Example 2: Update a granular restore session
 
-To remove a **granularDriveRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md).
-
 #### Request
 The following example shows a request.
 <!-- {
@@ -222,6 +222,12 @@ Content-Type: application/json
     {
       "browseSessionId": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
       "itemKey": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
+    },
+    {
+      "@removed": {
+        "reason": "changed"
+      },
+      "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2"
     }
   ]
 }
@@ -257,6 +263,12 @@ Content-Type: application/json
       "restorePointDateTime": "0001-01-01T00:00:00Z",
       "startDateTime": "0001-01-01T00:00:00Z",
       "completionDateTime": "0001-01-01T00:00:00Z"
+    },
+    {
+        "id": "a535851e-9fc6-4eb1-90ab-2955fd9117b5,2a8b7eaf-092a-4561-a25a-998ad2e5142e,38eec3f1-b879-44a6-8ae6-05bd46ed4b3d,ce66019f-cdf9-4575-aa81-de3aabe844a2",
+        "@removed": {
+            "reason": "changed"
+        }
     }
   ]
 }

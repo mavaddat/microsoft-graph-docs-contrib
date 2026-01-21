@@ -58,6 +58,7 @@ Inherits from [restoreSessionBase](../resources/restoresessionbase.md).
 |:---|:---|:---|
 |driveRestoreArtifacts|[driveRestoreArtifact](../resources/driverestoreartifact.md) collection|A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.|
 |driveRestoreArtifactsBulkAdditionRequests|[driveRestoreArtifactsBulkAdditionRequest](../resources/driverestoreartifactsbulkadditionrequest.md) collection|A collection of user mailboxes and destination details that can be used to restore a OneDrive for work or school drive.|
+|granularDriveRestoreArtifacts|[granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) collection|A collection of browse session id and item key details that can be used to restore OneDrive for work or school files and folders.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

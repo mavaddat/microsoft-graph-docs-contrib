@@ -27,16 +27,16 @@ Inherits from [granularRestoreArtifactBase](../resources/granularrestoreartifact
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|browseSessionId|String|The unique identifier of the [browseSession](../resources/browsesessionbase.md)|
-|completionDateTime|DateTimeOffset|Date time when the artifact's restoration completes.|
+|browseSessionId|String|The unique identifier of the [browseSession](../resources/browsesessionbase.md). Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
+|completionDateTime|DateTimeOffset|Date time when the artifact's restoration completes. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
 |id|String|The unique identifier for the artifact. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
-|restoredItemKey|String|The unique identifier for the restored artifact.|
-|restoredItemPath|String|The path of the restored artifact. It's the path of the folder where all the artifacts are restored within a granular restore session.|
-|restoredItemWebUrl|String|The web url of the restord artifact.|
-|restorePointDateTime|DateTimeOffset|The restore point date time to which the artifact is restored.|
-|startDateTime|DateTimeOffset|The start time of the restoration.|
-|status|artifactRestoreStatus|Status of the artifact restoration. The possible values are: `added`, `scheduling`, `scheduled`, `inProgress`, `succeeded`, `failed`, `unknownFutureValue`.|
-|webUrl|String|The original web url of the artifact being restored.|
+|restoredItemKey|String|The unique identifier for the restored artifact. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
+|restoredItemPath|String|The path of the restored artifact. It's the path of the folder where all the artifacts are restored within a granular restore session. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
+|restoredItemWebUrl|String|The web url of the restord artifact. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
+|restorePointDateTime|DateTimeOffset|The restore point date time to which the artifact is restored. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
+|startDateTime|DateTimeOffset|The start time of the restoration. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
+|status|artifactRestoreStatus|Status of the artifact restoration. The possible values are: `added`, `scheduling`, `scheduled`, `inProgress`, `succeeded`, `failed`, `unknownFutureValue`. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
+|webUrl|String|The original web url of the artifact being restored. Inherited from [granularRestoreArtifactBase](../resources/granularrestoreartifactbase.md).|
 |siteId|String|Id of the site in which artifact is present.|
 
 ## Relationships

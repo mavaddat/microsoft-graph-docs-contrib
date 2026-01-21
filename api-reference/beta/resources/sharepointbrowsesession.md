@@ -22,10 +22,10 @@ Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/backuprestoreroot-list-onedriveforbusinessbrowsesessions.md)|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) collection|Get a list of the oneDriveForBusinessBrowseSession objects and their properties.|
-|[Create](../api/backuprestoreroot-post-onedriveforbusinessbrowsesessions.md)|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md)|Create a new oneDriveForBusinessBrowseSession object.|
-|[Get](../api/onedriveforbusinessbrowsesession-get.md)|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md)|Read the properties and relationships of [oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) object.|
-|[browse](../api/onedriveforbusinessbrowsesession-browse.md)|[browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection|Allow client to browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md)|
+|[List](../api/backuprestoreroot-list-sharepointbrowsesessions.md)|[sharePointBrowseSession](../resources/sharepointbrowsesession.md) collection|Get a list of the sharePointBrowseSession objects and their properties.|
+|[Create](../api/backuprestoreroot-post-sharepointbrowsesessions.md)|[sharePointBrowseSession](../resources/sharepointbrowsesession.md)|Create a new sharePointBrowseSession object.|
+|[Get](../api/sharepointbrowsesession-get.md)|[sharePointBrowseSession](../resources/sharepointbrowsesession.md)|Read the properties and relationships of [sharePointBrowseSession](../resources/sharepointbrowsesession.md) object.|
+|[browse](../api/sharepointbrowsesession-browse.md)|[browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection|Allow client to browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md)|
 
 ## Properties
 |Property|Type|Description|

@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 An abstract type that represents granular restore artifacts associated with a restore session.
 
-Base type for [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md).
+Base type for [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) and [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md)
 
 Inherits from [entity](../resources/entity.md).
 

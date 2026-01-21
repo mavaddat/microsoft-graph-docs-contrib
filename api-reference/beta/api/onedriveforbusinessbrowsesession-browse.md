@@ -87,6 +87,8 @@ The following example shows a request.
 ``` http
 POST https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessBrowseSessions/K74iLNw55YTzbgnba0zxZROipFxnManccFpzecIrjuaypwA/browse
 
+{}
+
 ```
 
 #### Response
@@ -118,7 +120,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 2: Browse a specify scope
+### Example 2: Browse a specify resource
 
 The following example shows how to specify the payload to browse specific files and folders.
 

@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Browse the files and folders within a [browseSession](../resources/browsesessionbase.md).
+Browse the files and folders within the [sharePointBrowseSession](../resources/sharepointbrowsesession.md).
 
 ## Permissions
 
@@ -68,7 +68,7 @@ If successful, this function returns a `200 OK` response code and a [browseQuery
 
 ## Examples
 
-### Example 1: Browse with empty body
+### Example 1: Get top browsable locations
 
 #### Request
 
@@ -111,7 +111,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 2: Browse with payload
+### Example 2: Browse a specify resource
 
 #### Request
 
