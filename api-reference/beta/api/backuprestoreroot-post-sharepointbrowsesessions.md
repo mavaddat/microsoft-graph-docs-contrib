@@ -73,15 +73,7 @@ POST https://graph.microsoft.com/beta/solutions/backupRestore/sharePointBrowseSe
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.sharePointBrowseSession",
-  "status": "String",
-  "expirationDateTime": "String (timestamp)",
-  "restorePointDateTime": "String (timestamp)",
-  "backupSizeInBytes": "String",
-  "error": {
-    "@odata.type": "microsoft.graph.publicError"
-  },
-  "siteId": "String"
+  "restorePointId": "TXpSbE5HUXpNR1l0TldZMFlpMDBNMk16TFdFeFl6WXRZall3TTJFeFl6Sm1OV000WHpFPV8xNzQ5NTY3MDAwXzE0XzE="
 }
 ```
 
@@ -100,14 +92,14 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointBrowseSessions/$entity",
-  "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
-  "restorePointDateTime": "2026-01-18T03:00:15Z",
-  "status": "creating",
-  "createdDateTime": "2026-01-20T10:42:27Z",
-  "expirationDateTime": "2026-01-23T10:42:24Z",
-  "backupSizeInBytes": "584316",
-  "siteId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointBrowseSessions/$entity",
+    "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+    "restorePointDateTime": "2026-01-18T03:00:15Z",
+    "status": "created",
+    "createdDateTime": "2026-01-20T10:42:27Z",
+    "expirationDateTime": "2026-01-23T10:42:24Z",
+    "backupSizeInBytes": "584316",
+    "siteId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
 }
 ```
 
