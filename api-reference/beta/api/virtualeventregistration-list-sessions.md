@@ -1,6 +1,6 @@
 ---
 title: "List sessions for a virtual event registration"
-description: "Get a list of sessions that a registrant registered for a webinar or a town hall."
+description: "Get a list of sessions that a registrant registered for a webinar or town hall."
 author: "halleclottey-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of [sessions](../resources/virtualeventsession.md) that a registrant registered for a [webinar](../resources/virtualeventwebinar.md) or a [town hall](../resources/virtualeventtownhall.md).
+Get a list of [sessions](../resources/virtualeventsession.md) that a registrant registered for a [webinar](../resources/virtualeventwebinar.md) or [town hall](../resources/virtualeventtownhall.md).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

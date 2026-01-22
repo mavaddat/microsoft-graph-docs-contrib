@@ -1,6 +1,6 @@
 ---
 title: "virtualEventRegistration: cancel"
-description: "Cancel a registrant's registration record for a webinar or a town hall."
+description: "Cancel a registrant's registration record for a webinar or town hall."
 author: "halleclottey-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Cancel a registrant's [registration record](../resources/virtualeventregistration.md) for a [webinar](../resources/virtualeventwebinar.md) or a [town hall](../resources/virtualeventtownhall.md). 
+Cancel a registrant's [registration record](../resources/virtualeventregistration.md) for a [webinar](../resources/virtualeventwebinar.md) or [town hall](../resources/virtualeventtownhall.md). 
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
