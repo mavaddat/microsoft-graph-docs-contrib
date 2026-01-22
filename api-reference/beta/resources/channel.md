@@ -52,6 +52,9 @@ where files are shared, and where tabs are added.
 |[Get tab in channel](../api/channel-get-tabs.md) | [teamsTab](teamstab.md) | Get a specific tab pinned to a channel.|
 |[Update tab in channel](../api/channel-patch-tabs.md) | [teamsTab](teamstab.md) | Updates the properties of a tab in a channel.|
 |[Remove tab from channel](../api/channel-delete-tabs.md) | None | Remove (unpin) a tab from a channel.|
+|[List apps in channel](../api/channel-list-enabledapps.md) | [teamsApp](teamsapp.md) collection | Get a list of the [enabled apps](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
+|[Add app to channel](../api/channel-post-enabledapps.md) | None | Add a new [teamsApp](../resources/teamsapp.md) object that enables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
+|[Remove app from channel](../api/channel-delete-enabledapps.md) | None | Remove a [teamsApp](../resources/teamsapp.md) object that disables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
 |[Provision channel email address](../api/channel-provisionemail.md) |[provisionChannelEmailResult](../resources/provisionchannelemailresult.md)| Provision an email address for the channel.|
 |[Remove channel email address](../api/channel-removeemail.md) | None | Remove the email address of the channel.|
 |[Remove incoming channel](../api/team-delete-incomingchannels.md) | None| Remove an incoming [channel](../resources/channel.md) (a **channel** shared with a **team**) from a [team](../resources/team.md).|
@@ -75,7 +78,7 @@ where files are shared, and where tabs are added.
 |email|String| The email address for sending messages to the channel. Read-only.|
 |webUrl|String|A hyperlink to the channel in Microsoft Teams. This URL is supplied when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.|
 |membershipType|[channelMembershipType](../resources/channel.md#channelmembershiptype-values)|The type of the channel. Can be set during creation and can't be changed. The possible values are: `standard`, `private`, `unknownFutureValue`, `shared`. The default value is `standard`. Use the `Prefer: include-unknown-enum-members` request header to get the following members in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `shared`.|
-|layoutType|[channelLayoutType](../resources/channel.md#channellayouttype-values)|The layout type of the channel. Can be set during creation and can be updated. The possible values are: `post`, `chat`, `unknownFutureValue`. The default value is `post`. Channels with `post` layout use traditional post-reply conversation format, while channels with `chat` layout provide a chat-like threading experience similar to group chats.|
+|layoutType|[channelLayoutType](channellayouttype.md)|The layout type of the channel. Can be set during creation and can be updated. The possible values are: `post`, `chat`, `unknownFutureValue`. The default value is `post`. Channels with `post` layout use traditional post-reply conversation format, while channels with `chat` layout provide a chat-like threading experience similar to group chats.|
 |createdDateTime|dateTimeOffset|Read only. Timestamp at which the channel was created.|
 |moderationSettings|[channelModerationSettings](../resources/channelmoderationsettings.md)|Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.|
 |originalCreatedDateTime|dateTimeOffset|Timestamp of the original creation time for the channel. The value is `null` if the channel never entered migration mode.|
@@ -91,14 +94,6 @@ where files are shared, and where tabs are added.
 | private            | Channel can have members that are a subset of all the members on the parent team. |
 | unknownFutureValue | Evolvable enumeration sentinel value. Don't use.                                 |
 | shared             | Members can be directly added to the channel without adding them to the team.     |
-
-### channelLayoutType values
-
-| Member             | Description                                                                                                          |
-|:-------------------|:---------------------------------------------------------------------------------------------------------------------|
-| post               | Traditional post-reply conversation format. Posts are displayed in a structured format with replies nested under the original post. This is the default layout type.                   |
-| chat               | Chat-like threading experience similar to group chats. Messages are displayed in a continuous flow with support for threaded conversations on specific topics.|
-| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.                                                                    |
 
 ### migrationMode values
 
@@ -125,6 +120,7 @@ For a POST request example, see [Request (create channel in migration state)](/m
 | Relationship | Type |Description|
 |:---------------|:--------|:----------|
 |allMembers|[conversationMember](conversationmember.md) collection |A collection of membership records associated with the channel. It includes both direct and indirect members of shared channels.|
+|enabledApps|[teamsApp](../resources/teamsapp.md) collection| A collection of enabled apps in the channel.|
 |[filesFolder](../api/channel-get-filesfolder.md)|[driveItem](driveitem.md)|Metadata for the location where the channel's files are stored.|
 |members|[conversationMember](conversationmember.md) collection|A collection of membership records associated with the channel.|
 |messages|[chatMessage](chatmessage.md) collection| A collection of all the messages in the channel. Nullable.|
