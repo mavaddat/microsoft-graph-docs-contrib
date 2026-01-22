@@ -5884,3 +5884,12 @@ Possible values for user account types (group membership), per Windows definitio
 |unrestricted|
 |allowedTenants|
 |unknownFutureValue|
+
+### fileArchiveStatus values 
+
+|Member|
+|:---|
+|notArchived|
+|fullyArchived|
+|reactivating|
+|unknownFutureValue|
