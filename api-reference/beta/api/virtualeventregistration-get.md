@@ -31,13 +31,17 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
+To get a **virtualEventRegistration** for a webinar.
+
+<!-- { "blockType": "ignored" } -->
 ```http
 GET /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}
+```
 
+To get a **virtualEventRegistration** for a town hall.
+
+<!-- { "blockType": "ignored" } -->
+```http
 GET /solutions/virtualEvents/townhalls/{townhallId}/registrations/{registrationId}
 ```
 
@@ -267,9 +271,9 @@ Content-Type: application/json
 }
 ```
 
-### Example 3: Get a townhall registration by ID and include sessions
+### Example 3: Get a town hall registration by ID and include sessions
 
-The following example shows how to get a townhall registration by registration ID and use `$expand` to include **sessions**.
+The following example shows how to get a town hall registration by registration ID and use `$expand` to include **sessions**.
 
 #### Request
 
