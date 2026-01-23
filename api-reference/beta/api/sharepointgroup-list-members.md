@@ -1,5 +1,5 @@
 ---
-title: "List members"
+title: "List members for sharePointGroup"
 description: "Get a list of the sharePointGroupMember objects and their properties."
 author: "tmarwendo-microsoft"
 ms.localizationpriority: medium
