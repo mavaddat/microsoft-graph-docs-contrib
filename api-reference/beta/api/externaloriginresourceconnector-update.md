@@ -130,9 +130,9 @@ Content-Type: application/json
               "subscriptionId": "5ee98b73-d9df-43a7-8a92-36855054bdee",
               "resourceGroup": "SAPIAG Group"
   },
-  "createdBy": "kayat@igaelmdev.com",
+  "createdBy": "kayat@contoso.com",
   "createdDateTime": "2025-10-29T09:50:23Z",
-  "modifiedBy": "kayat@igaelmdev.com",
+  "modifiedBy": "kayat@contoso.com",
   "modifiedDateTime": "2025-12-04T01:10:28Z"
 }
 ```
