@@ -159,7 +159,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 2: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container
+### Example 2: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using principalId
 
 The following example shows how to add a `write` [permission](../resources/permission.md) for the `Internal Collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
 
@@ -239,6 +239,104 @@ Content-Type: application/json
     "write"
   ],
   "grantedToV2": {
+    "siteGroup": {
+      "id": "10",
+      "displayName": "Internal Collaborators"
+    }
+  },
+  "grantedTo": {
+    "siteGroup": {
+      "id": "10",
+      "displayName": "Internal Collaborators"
+    }
+  }
+}
+```
+
+### Example 3: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using its Id
+
+The following example shows how to add a `write` [permission](../resources/permission.md) for the `Internal Collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
+
+#### Request
+
+The following example shows a request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "driveitem-post-permissions-3",
+  "scopes": "filestoragecontainer.selected",
+  "target": "action"
+} -->
+```http
+POST https://graph.microsoft.com/beta/drives/b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop/items/01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU/permissions
+Content-Type: application/json
+
+{
+  "grantedToV2": {
+    "sharePointGroup": {
+      "id": "ZGYwZTEzYTgtOTExOS00MjdmLWEzNjktOTdjOWM3YjNlYjcyXzE0"
+    }
+  },
+  "roles": ["write"]
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/driveitem-post-permissions-3-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/driveitem-post-permissions-3-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/driveitem-post-permissions-3-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/driveitem-post-permissions-3-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/driveitem-post-permissions-3-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/driveitem-post-permissions-3-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/driveitem-post-permissions-3-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.permission"
+}
+-->
+``` http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "id": "aTowaS50fG1zLnNwLmV4dHwxMEBkOWNlMGZjMS02MWQ4LTRhMmUtYjVkMy0xODc3MGRmMDY3MmM=",
+  "roles": [
+    "write"
+  ],
+  "grantedToV2": {
+    "sharePointGroup": {
+      "id": "ZGYwZTEzYTgtOTExOS00MjdmLWEzNjktOTdjOWM3YjNlYjcyXzE0",
+      "principalId": "10",
+      "title": "Internal Collaborators"
+    },
     "siteGroup": {
       "id": "10",
       "displayName": "Internal Collaborators"
