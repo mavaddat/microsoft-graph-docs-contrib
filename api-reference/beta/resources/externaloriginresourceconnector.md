@@ -31,7 +31,7 @@ Inherits from [entity](../resources/entity.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |connectionInfo|[connectionInfo](../resources/connectioninfo.md)|The connection information used to communicate with the external resource system.|
-|connectorType|connectorType|The type of connector to SAP being used. Connector types can be either SAP Cloud Identity Access Governance(sapIag) or SAP Augmented Access Control (sapAc). The possible values are: `sapIag`, `sapAc`, `unknownFutureValue`. |
+|connectorType|connectorType|The type of connector to SAP being used. The possible values are: `sapIag` (SAP Cloud Identity Access Governance), `sapAc` (SAP Augmented Access Control), `unknownFutureValue`. |
 |createdBy|String|The identifier of the user or application that created the connector.|
 |createdDateTime|DateTimeOffset|The date and time when the connector was created.|
 |description|String|A description of the connector.|
