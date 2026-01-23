@@ -121,15 +121,17 @@ Content-Type: application/json
   "value": [
     {
       "@odata.type": "#microsoft.graph.sharePointGroup",
-      "id": "7",
+      "id": "ZGYwZTEzYTgtOTExOS00MjdmLWEzNjktOTdjOWM3YjNlYjcyXzE0",
       "title": "sampleTitle1",
-      "description": "sampleDescription1"
+      "description": "sampleDescription1",
+      "principalId": "7"
     },
     {
       "@odata.type": "#microsoft.graph.sharePointGroup",
-      "id": "9",
+      "id": "ZGYwZTEzYTgtOTExOS00PdjfPUHzNjktOTdjOWM3YjNlYjcyOpo8",
       "title": "sampleTitle2",
-      "description": "sampleDescription2"
+      "description": "sampleDescription2",
+      "principalId": "9"
     }
   ]
 }
