@@ -1,0 +1,39 @@
+---
+author: humertor
+ms.author: humbertor
+ms.date: 11/17/2025
+title: SharePointGroupIdentity - OneDrive API
+---
+
+# SharePointGroupIdentity resource type
+
+The **SharePointGroupIdentity** resource represents the identity of a sharePointGroup resource.
+It extends from the **sharePointIdentity** resource to provide capability to expose SharePointGroup specific information, for principalId and title.
+
+## JSON representation
+
+<!-- { "blockType": "resource", "@odata.type": "microsoft.graph.sharePointGroupIdentity",
+  "openType": true 
+} -->
+
+```json
+{
+  "principalId": "string",
+  "title": "string",
+
+  /** inherited */
+  "id": "string",
+}
+```
+
+## Properties
+
+| Property              | Type                        | Description
+|:----------------------|:----------------------------|:---------------------------------
+| title                 | String                      | Title of the sharePointGroup
+| principalId           | String                      | The ID of the SPPrincipal corresponding to the sharePointGroup
+| id                    | String                      | Unique identifier for the identity.
+
+## Remarks
+
+The "id" property represents the ID field of the relevant sharePointGroup entity.

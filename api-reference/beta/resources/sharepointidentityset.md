@@ -27,6 +27,7 @@ For usage information, see [driveItem][].
 | user        | [identity][]           | The user associated with this action. Optional. |
 | siteUser    | [sharePointIdentity][] | The SharePoint user associated with this action. Optional. |
 | siteGroup   | [sharePointIdentity][] | The SharePoint group associated with this action. Optional. |
+| sharePointGroup   | [SharePointGroupIdentity][] | The sharePointGroup entity associated with this action. Optional. |
 
 ## Relationships
 None.
@@ -36,7 +37,7 @@ None.
 The following JSON representation shows the resource type.
 
 <!-- { "blockType": "resource", "@odata.type": "microsoft.graph.sharePointIdentitySet",
-       "optionalProperties": ["user", "application", "group", "device", "siteUser", "siteGroup"],
+        "optionalProperties": ["user", "application", "group", "device", "siteUser", "siteGroup", "sharePointGroup"],
        "openType": true } -->
 
 ```json
@@ -48,13 +49,15 @@ The following JSON representation shows the resource type.
   
   "group": {"@odata.type": "microsoft.graph.identity"},
   "siteUser": {"@odata.type": "microsoft.graph.sharePointIdentity"},
-  "siteGroup":{"@odata.type": "microsoft.graph.sharePointIdentity"}
+  "siteGroup":{"@odata.type": "microsoft.graph.sharePointIdentity"},
+  "sharePointGroup": {"@odata.type": "microsoft.graph.sharePointGroupIdentity"}
 }
 ```
 
 [driveItem]: driveitem.md
 [identity]: identity.md
 [sharePointIdentity]: sharePointidentity.md
+[SharePointGroupIdentity]: sharePointGroupIdentity.md
 
 <!-- {
   "type": "#page.annotation",
