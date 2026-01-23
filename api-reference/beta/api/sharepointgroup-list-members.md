@@ -8,7 +8,7 @@ doc_type: apiPageType
 ms.date: 1/31/2025
 ---
 
-# List members
+# List members for sharePointGroup
 
 Namespace: microsoft.graph
 
