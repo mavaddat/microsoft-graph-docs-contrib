@@ -146,7 +146,7 @@ Content-Type: application/json
       "recipientAddress": "recipient@contoso.com",
       "messageId": "<0d7f3a2b-6c1e-4f9a-9b9a-3c0a2b1c4d5e@contoso.com>",
       "receivedDateTime": "2026-01-18T10:30:00Z",
-      "subject": "Dayily report",
+      "subject": "Daily report",
       "size": 45678,
       "fromIP": "203.0.113.10",
       "toIP": "",
