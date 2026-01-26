@@ -14,6 +14,9 @@ Namespace: microsoft.graph
 
 Represents a container for the Exchange admin functionality.
 
+## Properties
+None.
+
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
