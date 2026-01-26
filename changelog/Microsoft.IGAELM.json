@@ -1287,7 +1287,7 @@
           "ChangeType": "Addition",
           "Description": "Added the **externalOriginResourceConnectors** relationship to the [entitlementManagement](https://learn.microsoft.com/en-us/graph/api/resources/entitlementManagement?view=graph-rest-beta) resource.",
           "Target": "entitlementManagement"
-        }
+        },
         {
           "Id": "6061da50-e6a4-4914-8aaf-903c261922e0",
           "ApiChange": "Resource",
