@@ -61,7 +61,6 @@ This method can return any of the [HTTP status codes](/graph/errors). The most c
 
 The following example shows a request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "plannertaskchatmessage_post_reactions",
@@ -75,8 +74,6 @@ Content-type: application/json
   "reactionType": "like"
 }
 ```
-
----
 
 ### Response
 

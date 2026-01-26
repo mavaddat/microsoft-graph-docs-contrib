@@ -54,7 +54,6 @@ This method can return any of the [HTTP status codes](/graph/errors). The most c
 
 The following example shows a request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "delete_plannertaskchatmessage",
@@ -63,8 +62,6 @@ The following example shows a request.
 ```http
 DELETE https://graph.microsoft.com/beta/planner/tasks/01gzSlKkIUSUl6DF_EilrmQAKDhh/messages/5bde7bc8-d998-4e8a-8159-93d4d7ccc3b5
 ```
-
----
 
 ### Response
 

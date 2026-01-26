@@ -64,7 +64,6 @@ This method can return any of the [HTTP status codes](/graph/errors). The most c
 
 The following example shows a request to create a simple chat message.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "plannertask_post_messages",
@@ -78,8 +77,6 @@ Content-type: application/json
   "content": "This is a new chat message"
 }
 ```
-
----
 
 #### Response
 
@@ -119,7 +116,6 @@ Content-type: application/json
 
 The following example shows a request to create a chat message with a user mention.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "plannertask_post_messages_with_mentions",
@@ -140,8 +136,6 @@ Content-type: application/json
   ]
 }
 ```
-
----
 
 #### Response
 
