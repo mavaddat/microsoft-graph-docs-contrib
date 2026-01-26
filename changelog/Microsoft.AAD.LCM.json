@@ -1423,6 +1423,30 @@
           "ChangeType": "Addition",
           "Description": "Added the **administrationScopeTargets** relationship to the [workflowBase](https://learn.microsoft.com/en-us/graph/api/resources/identityGovernance-workflowBase?view=graph-rest-1.0) resource.",
           "Target": "workflowBase"
+        },
+        {
+          "Id": "99be4eb6-61a0-49c4-a895-050976aff90c",
+          "ApiChange": "Resource",
+          "ChangedApiName": "directoryObject",
+          "ChangeType": "Addition",
+          "Description": "Added the [directoryObject](https://learn.microsoft.com/en-us/graph/api/resources/directoryObject?view=graph-rest-1.0) resource.",
+          "Target": "directoryObject"
+        },
+        {
+          "Id": "99be4eb6-61a0-49c4-a895-050976aff90c",
+          "ApiChange": "EntitySet",
+          "ChangedApiName": "directoryObjects",
+          "ChangeType": "Addition",
+          "Description": "Added the [directoryObjects](https://learn.microsoft.com/en-us/?view=graph-rest-1.0) resource.",
+          "Target": "graphService"
+        },
+        {
+          "Id": "99be4eb6-61a0-49c4-a895-050976aff90c",
+          "ApiChange": "NavigationPropertyBinding",
+          "ChangedApiName": "lifecycleWorkflows/workflows/administrationScopeTargets",
+          "ChangeType": "Addition",
+          "Description": "Added the [lifecycleWorkflows/workflows/administrationScopeTargets](https://learn.microsoft.com/en-us/?view=graph-rest-1.0) resource.",
+          "Target": "identityGovernance"
         }
       ],
       "Id": "0cd51000-c5bc-4a2e-8278-7d75cd72921d",
