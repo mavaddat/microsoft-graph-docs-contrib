@@ -39,7 +39,7 @@ In the request URL, provide the following query parameters with values.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|recipientAddress|String|The SMTP email address of the user that the message was addressed to.|
+|recipientAddress|String|Required. The SMTP email address of the user that the message was addressed to.|
 
 
 ## Request headers
