@@ -54,7 +54,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this function returns a `200 OK` response code and a [exchangeMessageTraceDetail](../resources/exchangemessagetracedetail.md) collection in the response body.
+If successful, this function returns a `200 OK` response code and an [exchangeMessageTraceDetail](../resources/exchangemessagetracedetail.md) collection in the response body.
 
 ## Examples
 
