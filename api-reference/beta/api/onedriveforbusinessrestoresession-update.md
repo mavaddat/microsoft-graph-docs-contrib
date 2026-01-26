@@ -48,15 +48,15 @@ PATCH /solutions/backupRestore/oneDriveForBusinessRestoreSessions/{oneDriveForBu
 
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
-To remove a **driveRestoreArtifact** from a standar restore session, specify the `@removed` annotation in the request body together with the ID of the [driveRestoreArtifact](../resources/driverestoreartifact.md) object.
-
-
-To remove a **granularDriveRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md).
-
 |Property|Type|Description|
 |:---|:---|:---|
 |driveRestoreArtifacts|[driveRestoreArtifact](../resources/driverestoreartifact.md) collection|Collection of [driveRestoreArtifact](../resources/driverestoreartifact.md). Required|
 |granularDriveRestoreArtifacts|[granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) collection|A collection of [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) objects. Required.|
+
+To remove a **driveRestoreArtifact** from a standar restore session, specify the `@removed` annotation in the request body together with the ID of the [driveRestoreArtifact](../resources/driverestoreartifact.md) object.
+
+
+To remove a **granularDriveRestoreArtifact** from a granular restore session, specify the `@removed` annotation in the request body for the respective artifact ID of the [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md).
 
 ## Response
 

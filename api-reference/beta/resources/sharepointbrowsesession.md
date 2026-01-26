@@ -22,9 +22,9 @@ Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/backuprestoreroot-list-sharepointbrowsesessions.md)|[sharePointBrowseSession](../resources/sharepointbrowsesession.md) collection|Get a list of the sharePointBrowseSession objects and their properties.|
 |[Create](../api/backuprestoreroot-post-sharepointbrowsesessions.md)|[sharePointBrowseSession](../resources/sharepointbrowsesession.md)|Create a new sharePointBrowseSession object.|
 |[Get](../api/sharepointbrowsesession-get.md)|[sharePointBrowseSession](../resources/sharepointbrowsesession.md)|Read the properties and relationships of [sharePointBrowseSession](../resources/sharepointbrowsesession.md) object.|
+|[List](../api/backuprestoreroot-list-sharepointbrowsesessions.md)|[sharePointBrowseSession](../resources/sharepointbrowsesession.md) collection|Get a list of the sharePointBrowseSession objects and their properties.|
 |[browse](../api/sharepointbrowsesession-browse.md)|[browseQueryResponseItem](../resources/browsequeryresponseitem.md) collection|Allow client to browse files and folder present within a [BrowseSession](../resources/browsesessionbase.md)|
 
 ## Properties

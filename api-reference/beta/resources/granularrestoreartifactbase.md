@@ -12,11 +12,11 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)] 
 
 An abstract type that represents granular restore artifacts associated with a restore session.
 
-Base type for [granularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) and [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md)
+Base type for [grnularDriveRestoreArtifact](../resources/granulardriverestoreartifact.md) and [granularSiteRaestoreArtifact](../resources/granularsiterestoreartifact.md)
 
 Inherits from [entity](../resources/entity.md).
 

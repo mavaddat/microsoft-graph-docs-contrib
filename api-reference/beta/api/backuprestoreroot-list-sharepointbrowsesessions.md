@@ -39,7 +39,7 @@ GET /solutions/backupRestore/sharePointBrowseSessions
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method does not support query parameters.
 
 ## Request headers
 
@@ -84,19 +84,17 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/sharePointBrowseSessions",
   "value": [
     {
-      "@odata.type": "#microsoft.graph.sharePointBrowseSession",
-      "id": "eff933bc-09df-2bd0-d91f-4f58482a9da0",
-      "status": "String",
-      "createdDateTime": "String (timestamp)",
-      "expirationDateTime": "String (timestamp)",
-      "restorePointDateTime": "String (timestamp)",
-      "backupSizeInBytes": "String",
-      "error": {
-        "@odata.type": "microsoft.graph.publicError"
-      },
-      "siteId": "String"
+      "@odata.type": "#microsoft.graph.sharePointBrowseSessions",
+      "id": "ASAA3_8kysv7AWN-Sb9JndIPy67ZWhpFmgIk2EKs05DqCIN25Q",
+      "restorePointDateTime": "2025-12-26T03:00:56Z",
+      "status": "created",
+      "createdDateTime": "2025-12-26T05:56:03Z",
+      "expirationDateTime": "2025-12-29T05:56:01Z",
+      "backupSizeInBytes": "311659",
+      "siteId": "9a451a5a-2402-42d8-acd3-90ea088376e5"
     }
   ]
 }

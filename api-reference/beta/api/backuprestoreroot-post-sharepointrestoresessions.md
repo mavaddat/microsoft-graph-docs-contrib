@@ -17,7 +17,7 @@ Namespace: microsoft.graph
 
 Create a new [sharePointRestoreSession](../resources/sharepointrestoresession.md) object. To create a granular restore session, granular site restore artifacts must be present in the payload. A request can't include both [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) and [siteRestoreArtifact](../resources/siterestoreartifact.md) in the same **create** or **update** request.
 
-If no payload is provided when you create the restore session, the request creates an empty standard restore session by default.
+If no payload is provided when you create the restore session, the request creates an empty `standard` restore session by default.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -53,8 +53,8 @@ You can specify the following properties when you create a **sharePointRestoreSe
 
 |Property|Type|Description|
 |:---|:---|:---|
-|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection|A collection of [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) objects. Required.|
 |siteRestoreArtifacts|[siteRestoreArtifact](../resources/siterestoreartifact.md) collection|A collection of [siteRestoreArtifact](../resources/siterestoreartifact.md) objects. Required.|
+|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection|A collection of [granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) objects. Required.|
 
 ## Response
 

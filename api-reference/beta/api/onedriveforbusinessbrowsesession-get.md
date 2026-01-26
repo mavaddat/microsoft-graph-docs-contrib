@@ -39,7 +39,7 @@ GET /solutions/backupRestore/oneDriveForBusinessBrowseSessions/{oneDriveForBusin
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method doesn't support query parameters.
 
 ## Request headers
 
@@ -84,19 +84,14 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.oneDriveForBusinessBrowseSession",
-    "id": "0c4831ef-d1ae-f814-c2a5-64ee53205d47",
-    "status": "String",
-    "createdDateTime": "String (timestamp)",
-    "expirationDateTime": "String (timestamp)",
-    "restorePointDateTime": "String (timestamp)",
-    "backupSizeInBytes": "String",
-    "error": {
-      "@odata.type": "microsoft.graph.publicError"
-    },
-    "directoryObjectId": "String"
-  }
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#solutions/backupRestore/oneDriveForBusinessBrowseSessions/$entity",
+    "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
+    "restorePointDateTime": "2026-01-18T03:00:15Z",
+    "status": "created",
+    "createdDateTime": "2026-01-20T10:42:27Z",
+    "expirationDateTime": "2026-01-23T10:42:24Z",
+    "backupSizeInBytes": "584316",
+    "directoryObjectId": "f3846f8d-80a6-4480-ae20-5966ebdf2009"
 }
 ```
 
