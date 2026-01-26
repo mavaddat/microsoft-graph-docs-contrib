@@ -1656,6 +1656,14 @@
               ]
             },
             {
+              "name": "Fraud protection provider",
+              "resources": [
+                "fraudProtectionProvider",
+                "arkoseFraudProtectionProvider",
+                "humanSecurityFraudProtectionProvider"
+              ]
+            },
+            {
               "name": "Web application firewall",
               "resources": [
                 "webApplicationFirewallProvider",
@@ -1836,14 +1844,13 @@
               "name": "Identity protection",
               "overview": "../../resources/identityprotection-overview.md",
               "resources": [
+                "agentRiskDetection",
                 "riskDetection",
+                "riskyAgent",
                 "riskyUser",
                 "riskyUserHistoryItem",
-                "servicePrincipalRiskDetection",
                 "riskyServicePrincipal",
-                "fraudProtectionProvider",
-                "arkoseFraudProtectionProvider",
-                "humanSecurityFraudProtectionProvider"
+                "servicePrincipalRiskDetection"
               ]
             },
             {
@@ -3587,6 +3594,31 @@
             "timeRange",
             "userSolutionRoot",
             "workforceIntegrationEncryption"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenant administration (preview)",
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
+          "shouldSort": true,
+          "resources": [
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationSnapshotJob"
+          ],
+          "complexTypes": [
+            "baselineParameter",
+            "baselineResource",
+            "clientCredentials",
+            "driftedProperty",
+            "errorDetail",
+            "openComplexDictionaryType"
           ]
         }
       ]

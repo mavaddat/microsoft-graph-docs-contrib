@@ -5893,3 +5893,55 @@ Possible values for user account types (group membership), per Windows definitio
 |fullyArchived|
 |reactivating|
 |unknownFutureValue|
+
+### baselineParameterType values 
+
+|Member|
+|:---|
+|string|
+|integer|
+|boolean|
+|unknownFutureValue|
+
+### driftStatus values 
+
+|Member|
+|:---|
+|active|
+|fixed|
+|unknownFutureValue|
+
+### monitorMode values 
+
+|Member|
+|:---|
+|monitorOnly|
+|unknownFutureValue|
+
+### monitorRunStatus values 
+
+|Member|
+|:---|
+|successful|
+|partiallySuccessful|
+|failed|
+|unknownFutureValue|
+
+### monitorStatus values 
+
+|Member|
+|:---|
+|active|
+|inactive|
+|unknownFutureValue|
+
+### snapshotJobStatus values 
+
+|Member|
+|:---|
+|notStarted|
+|running|
+|succeeded|
+|failed|
+|unknownFutureValue|
+|partiallySuccessful|
