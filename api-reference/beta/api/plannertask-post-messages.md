@@ -47,7 +47,7 @@ The following table lists the properties that you can set when you create a **pl
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-| content | String | The content of the chat message. Supports plain text and sanitized HTML. Required. |
+| content | String | The content of the chat message. This property supports plain text and sanitized HTML. Required. |
 | mentions | [plannerTaskChatMention](../resources/plannertaskchatmention.md) collection | The list of mentions in the message. Optional. |
 
 ## Response
@@ -62,7 +62,7 @@ This method can return any of the [HTTP status codes](/graph/errors). The most c
 
 #### Request
 
-The following example shows a request to create a simple chat message.
+The following example shows a request to create a chat message.
 
 <!-- {
   "blockType": "request",

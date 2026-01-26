@@ -20,10 +20,10 @@ Represents a chat message associated with a [plannerTask](plannertask.md). Task 
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-| [List messages](../api/plannertask-list-messages.md) | [plannerTaskChatMessage](plannertaskchatmessage.md) collection | Get the chat messages associated with a planner task. |
-| [Create message](../api/plannertask-post-messages.md) | [plannerTaskChatMessage](plannertaskchatmessage.md) | Create a new chat message on a planner task. |
+| [List messages](../api/plannertask-list-messages.md) | [plannerTaskChatMessage](plannertaskchatmessage.md) collection | Get the chat messages associated with a Planner task. |
+| [Create message](../api/plannertask-post-messages.md) | [plannerTaskChatMessage](plannertaskchatmessage.md) | Create a new chat message on a Planner task. |
 | [Update message](../api/plannertaskchatmessage-update.md) | [plannerTaskChatMessage](plannertaskchatmessage.md) | Update the properties of a chat message. |
-| [Delete message](../api/plannertaskchatmessage-delete.md) | None | Delete a chat message from a planner task. |
+| [Delete message](../api/plannertaskchatmessage-delete.md) | None | Delete a chat message from a Planner task. |
 | [Add reaction](../api/plannertaskchatmessage-post-reactions.md) | None | Add a reaction to a chat message. |
 | [Remove reaction](../api/plannertaskchatmessage-delete-reactions.md) | None | Remove a reaction from a chat message. |
 
@@ -39,7 +39,7 @@ Represents a chat message associated with a [plannerTask](plannertask.md). Task 
 | id | String | Read-only. The unique identifier of the message. |
 | mentions | [plannerTaskChatMention](plannertaskchatmention.md) collection | The list of mentions in the message. |
 | messageType | plannerTaskChatMessageType | The type of message. The possible values are: `richTextHtml`, `unknownFutureValue`. |
-| parentEntityId | String | The ID of the parent planner task that this message belongs to. |
+| parentEntityId | String | The ID of the parent Planner task that this message belongs to. |
 | reactions | [plannerTaskChatReaction](plannertaskchatreaction.md) collection | The reactions on the message. |
 
 ## Relationships

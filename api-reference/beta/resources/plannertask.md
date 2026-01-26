@@ -26,8 +26,8 @@ Represents a planner task in Microsoft 365. A planner task is contained in a [pl
 |[Update](../api/plannertask-update.md) | [plannerTask](plannertask.md)	|Update a **plannerTask** object. |
 |[Delete](../api/plannertask-delete.md) | None |Delete a **plannerTask** object. |
 |[Get delta](../api/plannertask-delta.md)|[plannerTask](../resources/plannertask.md) collection| Get newly created, updated, or deleted **plannerTask** objects in either a **plannerPlan** or assigned to the signed-in user without having to perform a full read of the entire resource collection. |
-|[List messages](../api/plannertask-list-messages.md)|[plannerTaskChatMessage](../resources/plannertaskchatmessage.md) collection| Get the chat messages associated with a planner task. |
-|[Create message](../api/plannertask-post-messages.md)|[plannerTaskChatMessage](../resources/plannertaskchatmessage.md)| Create a new chat message on a planner task. |
+|[List messages](../api/plannertask-list-messages.md)|[plannerTaskChatMessage](../resources/plannertaskchatmessage.md) collection| Get the chat messages associated with a Planner task. |
+|[Create message](../api/plannertask-post-messages.md)|[plannerTaskChatMessage](../resources/plannertaskchatmessage.md)| Create a new chat message on a Planner task. |
 
 ## Properties
 | Property	   | Type	|Description|
