@@ -1347,7 +1347,8 @@
         "outlookCategory",
         "mailFolder",
         "mailSearchFolder",
-        "messageRule"
+        "messageRule",
+        "exchangeMessageTrace"
       ],
       "childNodes": [
         {
