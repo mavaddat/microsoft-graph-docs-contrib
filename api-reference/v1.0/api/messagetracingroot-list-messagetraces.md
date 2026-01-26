@@ -12,7 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get a list of [exchangeMessageTrace](../resources/exchangeMessageTrace.md) objects.
+Get a list of [exchangeMessageTrace](../resources/exchangemessagetrace.md) objects.
 
 > [!NOTE]
 >   - This API has a throttling limit of 100 requests per 5 minutes. For more information, see [Microsoft Graph service-specific throttling limits](/graph/throttling-limits).
@@ -146,7 +146,7 @@ Content-Type: application/json
       "recipientAddress": "recipient@contoso.com",
       "messageId": "<0d7f3a2b-6c1e-4f9a-9b9a-3c0a2b1c4d5e@contoso.com>",
       "receivedDateTime": "2026-01-18T10:30:00Z",
-      "subject": "Dayily report",
+      "subject": "Daily report",
       "size": 45678,
       "fromIP": "203.0.113.10",
       "toIP": "",
@@ -170,7 +170,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/exchange/tracing/messageTraces?$filter=receivedDateTime ge 2026-01-20T00:00:00Z and receivedDateTime le 2026-01-23T00:00:00Z
+GET https://graph.microsoft.com/v1.0/admin/exchange/tracing/messageTraces?$filter=receivedDateTime ge 2026-01-20T00:00:00Z and receivedDateTime le 2026-01-23T00:00:00Z
 ```
 
 
