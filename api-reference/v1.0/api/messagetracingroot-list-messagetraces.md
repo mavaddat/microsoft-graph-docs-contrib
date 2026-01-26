@@ -170,7 +170,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/exchange/tracing/messageTraces?$filter=receivedDateTime ge 2026-01-20T00:00:00Z and receivedDateTime le 2026-01-23T00:00:00Z
+GET https://graph.microsoft.com/v1.0/admin/exchange/tracing/messageTraces?$filter=receivedDateTime ge 2026-01-20T00:00:00Z and receivedDateTime le 2026-01-23T00:00:00Z
 ```
 
 
