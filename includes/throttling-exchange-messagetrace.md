@@ -14,4 +14,4 @@ The preceding limits apply to the following resources:
 
 | <!-- fake header--> | <!-- fake header--> |
 |--|--|
-|<ul> <li> [exchangeMessageTrace](/graph/api/resources/exchangemessagetrace)
+|<ul><li>[exchangeMessageTrace](/graph/api/resources/exchangemessagetrace)</li></ul>| |
