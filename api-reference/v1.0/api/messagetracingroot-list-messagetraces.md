@@ -12,7 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get a list of [exchangeMessageTrace](../resources/exchangeMessageTrace.md) objects.
+Get a list of [exchangeMessageTrace](../resources/exchangemessagetrace.md) objects.
 
 > [!NOTE]
 >   - This API has a throttling limit of 100 requests per 5 minutes. For more information, see [Microsoft Graph service-specific throttling limits](/graph/throttling-limits).
