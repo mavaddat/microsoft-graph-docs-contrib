@@ -1129,9 +1129,15 @@
                 "passwordAuthenticationMethod",
                 "phoneAuthenticationMethod",
                 "platformCredentialAuthenticationMethod",
+                "qrCodePinAuthenticationMethod",
                 "softwareOathAuthenticationMethod",
                 "temporaryAccessPassAuthenticationMethod",
                 "windowsHelloForBusinessAuthenticationMethod"
+              ],
+              "complexTypes": [
+                "qrCode",
+                "qrCodeImageDetails",
+                "qrPin"
               ]
             },
             {
@@ -1142,6 +1148,7 @@
                 "emailAuthenticationMethodConfiguration",
                 "fido2AuthenticationMethodConfiguration",
                 "microsoftAuthenticatorAuthenticationMethodConfiguration",
+                "qrCodePinAuthenticationMethodConfiguration",
                 "smsAuthenticationMethodConfiguration",
                 "temporaryAccessPassAuthenticationMethodConfiguration",
                 "softwareOathAuthenticationMethodConfiguration",
