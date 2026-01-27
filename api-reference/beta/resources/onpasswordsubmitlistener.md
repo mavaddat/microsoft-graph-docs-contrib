@@ -1,6 +1,6 @@
 ---
 title: "onPasswordSubmitListener resource type"
-description: "Event listener for the OnPasswordSubmit authentication event, used for Just-In-Time migration scenarios."
+description: "Represents an event listener for the onPasswordSubmit authentication event, used for Just-In-Time migration scenarios."
 author: "diadabal"
 ms.date: 01/13/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Event listener that triggers during password submission in the authentication flow. This listener enables organizations to intercept password submission events for specific applications and invoke custom logic, such as validating credentials against a legacy authentication system for Just-In-Time (JIT) user migration.
+Represents an event listener that triggers during password submission in the authentication flow. This listener enables organizations to intercept password submission events for specific applications and invoke custom logic, such as validating credentials against a legacy authentication system for Just-In-Time (JIT) user migration.
 
 When configured, this listener activates during the sign-in process when a user submits their password. The listener evaluates the conditions to determine if it should invoke the configured handler for the authentication event.
 
@@ -24,14 +24,6 @@ Inherits from [authenticationEventListener](../resources/authenticationeventlist
 None.
 
 For the list of API operations for managing this resource type, see the [authenticationEventListener](../resources/authenticationeventlistener.md) resource type.
-
-|Method|Return type|Description|
-|:---|:---|:---|
-|[List authenticationEventListeners](../api/identitycontainer-list-authenticationeventlisteners.md)|[authenticationEventListener](../resources/authenticationeventlistener.md) collection|Get a list of authenticationEventListener objects, including onPasswordSubmitListener.|
-|[Create authenticationEventListener](../api/identitycontainer-post-authenticationeventlisteners.md)|[authenticationEventListener](../resources/authenticationeventlistener.md)|Create a new onPasswordSubmitListener object.|
-|[Get authenticationEventListener](../api/authenticationeventlistener-get.md)|[authenticationEventListener](../resources/authenticationeventlistener.md)|Read the properties of an onPasswordSubmitListener object.|
-|[Update authenticationEventListener](../api/authenticationeventlistener-update.md)|None|Update the properties of an onPasswordSubmitListener object.|
-|[Delete authenticationEventListener](../api/authenticationeventlistener-delete.md)|None|Delete an onPasswordSubmitListener object.|
 
 ## Properties
 |Property|Type|Description|

@@ -1,6 +1,6 @@
 ---
 title: "onPasswordSubmitCustomExtension resource type"
-description: "Custom authentication extension for the OnPasswordSubmit event, used for Just-In-Time migration from legacy authentication providers."
+description: "Represents a custom authentication extension for the onPasswordSubmit event, used for Just-In-Time migration from legacy authentication providers."
 author: "diadabal"
 ms.date: 01/13/2026
 ms.localizationpriority: medium
@@ -14,24 +14,16 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Custom authentication extension for the OnPasswordSubmit event. This extension enables organizations to validate user credentials against legacy authentication systems during the sign-in process, facilitating Just-In-Time (JIT) migration scenarios where passwords cannot be exported from the legacy system.
+Represents a custom authentication extension for the **onPasswordSubmit** event. This extension enables organizations to validate user credentials against legacy authentication systems during the sign-in process, facilitating Just-In-Time (JIT) migration scenarios where passwords can't be exported from the legacy system.
 
 When a user attempts to sign in, this extension calls a customer-provided API endpoint to validate the password against the legacy system. Upon successful validation, the user's credentials are persisted in Microsoft Entra ID, completing the migration for that user.
 
 Inherits from [customAuthenticationExtension](../resources/customauthenticationextension.md).
 
 ## Methods
+None.
 
-Custom authentication extensions are managed through the base type endpoint. See [customAuthenticationExtension](../resources/customauthenticationextension.md) for available methods.
-
-|Method|Return type|Description|
-|:---|:---|:---|
-|[List customAuthenticationExtensions](../api/identitycontainer-list-customauthenticationextensions.md)|[customAuthenticationExtension](../resources/customauthenticationextension.md) collection|Get a list of customAuthenticationExtension objects, including onPasswordSubmitCustomExtension.|
-|[Create customAuthenticationExtension](../api/identitycontainer-post-customauthenticationextensions.md)|[customAuthenticationExtension](../resources/customauthenticationextension.md)|Create a new onPasswordSubmitCustomExtension object.|
-|[Get customAuthenticationExtension](../api/customauthenticationextension-get.md)|[customAuthenticationExtension](../resources/customauthenticationextension.md)|Read the properties of an onPasswordSubmitCustomExtension object.|
-|[Update customAuthenticationExtension](../api/customauthenticationextension-update.md)|None|Update the properties of an onPasswordSubmitCustomExtension object.|
-|[Delete customAuthenticationExtension](../api/customauthenticationextension-delete.md)|None|Delete an onPasswordSubmitCustomExtension object.|
-|[validateAuthenticationConfiguration](../api/customauthenticationextension-validateauthenticationconfiguration.md)|[authenticationConfigurationValidation](../resources/authenticationconfigurationvalidation.md)|Validate the authentication configuration of the custom extension.|
+For the list of API operations for managing this resource type, see the [customAuthenticationExtension](../resources/customauthenticationextension.md) resource type.
 
 ## Properties
 |Property|Type|Description|

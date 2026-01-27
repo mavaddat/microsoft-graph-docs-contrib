@@ -1,6 +1,6 @@
 ---
 title: "onPasswordMigrationCustomExtensionHandler resource type"
-description: "Handler that invokes a custom authentication extension for password validation during Just-In-Time user migration."
+description: "Represents a handler that invokes a custom authentication extension for password validation during Just-In-Time user migration."
 author: "diadabal"
 ms.date: 01/13/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Handler that invokes a custom authentication extension API to validate user credentials against a legacy authentication system during the sign-in process. This handler enables Just-In-Time (JIT) migration scenarios where passwords cannot be exported from the legacy system.
+Represents a handler that invokes a custom authentication extension API to validate user credentials against a legacy authentication system during the sign-in process. This handler enables Just-In-Time (JIT) migration scenarios where passwords can't be exported from the legacy system.
 
 When triggered, this handler:
 1. Checks if the user requires migration based on the specified `migrationPropertyId` custom attribute
