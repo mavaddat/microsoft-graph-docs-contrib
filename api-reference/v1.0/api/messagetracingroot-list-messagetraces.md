@@ -60,7 +60,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following example shows how to retrieve the default top 1,000 message-trace information for the previous 48 hours, which is the default time period.
 
-### Request
+##### Request
 
 The following example shows a request.
 <!-- {
@@ -73,7 +73,7 @@ GET https://graph.microsoft.com/v1.0/admin/exchange/tracing/messageTraces
 ```
 
 
-### Response
+##### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -110,7 +110,7 @@ Content-Type: application/json
 
 The following example returns the message trace that matches the specified message trace ID (the `id` property).
 
-### Request
+##### Request
 
 The following example shows a request.
 <!-- {
@@ -123,7 +123,7 @@ GET https://graph.microsoft.com/v1.0/admin/exchange/tracing/messageTraces?$filte
 ```
 
 
-### Response
+##### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -160,7 +160,7 @@ Content-Type: application/json
 
 The following example shows how to retrieve message trace information for messages between `2026-01-20T00:00:00Z` and `2026-01-23T00:00:00Z`  (UTC) by filtering on `receivedDateTime`.
 
-### Request
+##### Request
 
 The following example shows a request.
 
@@ -174,7 +174,7 @@ GET https://graph.microsoft.com/v1.0/admin/exchange/tracing/messageTraces?$filte
 ```
 
 
-### Response
+##### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
