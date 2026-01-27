@@ -26,16 +26,16 @@ Represents the trace information for an email message as it passes through the E
 
 |Property|Type|Description|
 |:---|:---|:---|
-|fromIP|String|The source IP address. For incoming messages, this value is the public IP address of the SMTP email server that sent the message.|
-|id|String|The unique identifier for the message trace.|
-|messageId|String|The Message-ID header field of the message. The format of the Message-ID depends on the messaging server that sent the message.|
-|receivedDateTime|DateTimeOffset|The date and time when the message was received by Exchange Online. The timestamp is in UTC format.|
-|recipientAddress|String|The SMTP email address of the user that the message was addressed to.|
-|senderAddress|String|The SMTP email address of the user the message was purportedly from.|
+|fromIP|String|The source IP address. For incoming messages, this value is the public IP address of the SMTP email server that sent the message. <br/><br/>Supports `$filter` (`eq`).|
+|id|String|The unique identifier for the message trace. <br/><br/>Supports `$filter` (`eq`).|
+|messageId|String|The Message-ID header field of the message. The format of the Message-ID depends on the messaging server that sent the message. <br/><br/>Supports `$filter` (`eq`).|
+|receivedDateTime|DateTimeOffset|The date and time when the message was received by Exchange Online. The timestamp is in UTC format. <br/><br/>Supports `$filter` (`ge`, `le`).|
+|recipientAddress|String|The SMTP email address of the user that the message was addressed to. <br/><br/>Supports `$filter` (`eq`).|
+|senderAddress|String|The SMTP email address of the user the message was purportedly from. <br/><br/>Supports `$filter` (`eq`).|
 |size|Int32|The size of the message in bytes.|
-|status|exchangeMessageTraceStatus|The delivery status of the message. The possible values are: `gettingStatus`, `pending`, `failed`, `delivered`, `expanded`, `quarantined`, `filteredAsSpam`, `unknownFutureValue`.|
-|subject|String|The subject line of the message.|
-|toIP|String|The destination IP address. For outgoing messages, this value is the public IP address in the resolved MX record for the destination domain. For incoming messages to Exchange Online, this value is blank.|
+|status|exchangeMessageTraceStatus|The delivery status of the message. The possible values are: `gettingStatus`, `pending`, `failed`, `delivered`, `expanded`, `quarantined`, `filteredAsSpam`, `unknownFutureValue`. <br/><br/>Supports `$filter` (`eq`).|
+|subject|String|The subject line of the message. <br/><br/>Supports `$filter` (`contains`, `startsWith`, `endsWith`).|
+|toIP|String|The destination IP address. For outgoing messages, this value is the public IP address in the resolved MX record for the destination domain. For incoming messages to Exchange Online, this value is blank. <br/><br/>Supports `$filter` (`eq`).|
 
 ## Relationships
 

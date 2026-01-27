@@ -206,3 +206,54 @@ Content-Type: application/json
   ]
 }
 ```
+
+### Example 4: List message traces by subject and recipient
+
+The following example lists message traces for messages where the subject contains `Weekly digest` and the recipient address is `test@contoso.com`.
+
+##### Request
+
+The following example shows a request.
+
+<!-- {
+  "blockType": "request",
+  "name": "list_exchangemessagetrace_by_subject_and_recipient"
+}
+-->
+``` http
+GET https://graph.microsoft.com/v1.0/admin/exchange/tracing/messageTraces?$filter=contains(subject, 'Weekly digest') and recipientAddress eq 'test@contoso.com'
+```
+
+
+##### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.exchangeMessageTrace"
+}
+-->
+``` http
+HTTP/1.1 200 OK        
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#admin/exchange/tracing/messageTraces",
+  "value": [
+    {
+      "id": "c1d2e3f4-5678-49ab-9cde-0123456789ab",
+      "senderAddress": "sender@contoso.com",
+      "recipientAddress": "test@contoso.com",
+      "messageId": "<2a3b4c5d-6e7f-8091-a2b3-c4d5e6f78901@contoso.com>",
+      "receivedDateTime": "2026-01-22T09:15:00Z",
+      "subject": "Weekly digest: updates for your team",
+      "size": 28765,
+      "fromIP": "203.0.113.25",
+      "toIP": "",
+      "status": "delivered"
+    }
+  ]
+}
+```
