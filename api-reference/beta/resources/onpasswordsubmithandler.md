@@ -29,5 +29,14 @@ This is an abstract type with no properties. Derived types may define additional
 None.
 
 ## JSON representation
-
-This is an abstract type. The JSON representation is determined by the derived type.
+The following JSON representation shows the resource type.
+<!-- {
+  "blockType": "resource",
+  "@odata.type": "microsoft.graph.onPasswordSubmitHandler"
+}
+-->
+``` json
+{
+  "@odata.type": "#microsoft.graph.onPasswordSubmitHandler"
+}
+```
