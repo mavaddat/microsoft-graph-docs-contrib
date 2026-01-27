@@ -1,10 +1,10 @@
 ---
 title: "onPasswordSubmitHandler resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+description: "Abstract base type for handlers that process the OnPasswordSubmit authentication event."
+author: "diadabal"
 ms.date: 01/13/2026
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
 ---
 
@@ -14,27 +14,20 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
-This is an abstract type.
+Abstract base type for handlers that can be invoked when an OnPasswordSubmit authentication event occurs. This type defines the contract for all handlers that process password submission events in the authentication flow.
 
+Concrete implementations of this handler type include:
+- [onPasswordMigrationCustomExtensionHandler](../resources/onpasswordmigrationcustomextensionhandler.md) - Invokes a custom extension API for password validation during Just-In-Time migration scenarios
+
+This is an abstract type and cannot be instantiated directly. Use one of the derived types to configure a handler for the OnPasswordSubmit event.
 
 ## Properties
-|Property|Type|Description|
-|:---|:---|:---|
+
+This is an abstract type with no properties. Derived types may define additional properties.
 
 ## Relationships
 None.
 
 ## JSON representation
-The following JSON representation shows the resource type.
-<!-- {
-  "blockType": "resource",
-  "@odata.type": "microsoft.graph.onPasswordSubmitHandler"
-}
--->
-``` json
-{
-  "@odata.type": "#microsoft.graph.onPasswordSubmitHandler"
-}
-```
 
+This is an abstract type. The JSON representation is determined by the derived type.

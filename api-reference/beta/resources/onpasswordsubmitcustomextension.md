@@ -1,10 +1,10 @@
 ---
 title: "onPasswordSubmitCustomExtension resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+description: "Custom authentication extension for the OnPasswordSubmit event, used for Just-In-Time migration from legacy authentication providers."
+author: "diadabal"
 ms.date: 01/13/2026
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
 ---
 
@@ -14,32 +14,35 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+Custom authentication extension for the OnPasswordSubmit event. This extension enables organizations to validate user credentials against legacy authentication systems during the sign-in process, facilitating Just-In-Time (JIT) migration scenarios where passwords cannot be exported from the legacy system.
 
+When a user attempts to sign in, this extension calls a customer-provided API endpoint to validate the password against the legacy system. Upon successful validation, the user's credentials are persisted in Microsoft Entra ID, completing the migration for that user.
 
 Inherits from [customAuthenticationExtension](../resources/customauthenticationextension.md).
 
-
 ## Methods
+
+Custom authentication extensions are managed through the base type endpoint. See [customAuthenticationExtension](../resources/customauthenticationextension.md) for available methods.
+
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/onpasswordmigrationcustomextensionhandler-list-customextension.md)|[onPasswordSubmitCustomExtension](../resources/onpasswordsubmitcustomextension.md) collection|Get a list of the onPasswordSubmitCustomExtension objects and their properties.|
-|[Create](../api/onpasswordmigrationcustomextensionhandler-post-customextension.md)|[onPasswordSubmitCustomExtension](../resources/onpasswordsubmitcustomextension.md)|Create a new onPasswordSubmitCustomExtension object.|
-|[Get](../api/onpasswordsubmitcustomextension-get.md)|[onPasswordSubmitCustomExtension](../resources/onpasswordsubmitcustomextension.md)|Read the properties and relationships of [onPasswordSubmitCustomExtension](../resources/onpasswordsubmitcustomextension.md) object.|
-|[Update](../api/onpasswordsubmitcustomextension-update.md)|[onPasswordSubmitCustomExtension](../resources/onpasswordsubmitcustomextension.md)|Update the properties of an onPasswordSubmitCustomExtension object.|
-|[Delete](../api/onpasswordmigrationcustomextensionhandler-delete-customextension.md)|None|Delete an onPasswordSubmitCustomExtension object.|
-|[validateAuthenticationConfiguration](../api/onpasswordsubmitcustomextension-validateauthenticationconfiguration.md)|[authenticationConfigurationValidation](../resources/authenticationconfigurationvalidation.md)|**TODO: Add Description**|
+|[List customAuthenticationExtensions](../api/identitycontainer-list-customauthenticationextensions.md)|[customAuthenticationExtension](../resources/customauthenticationextension.md) collection|Get a list of customAuthenticationExtension objects, including onPasswordSubmitCustomExtension.|
+|[Create customAuthenticationExtension](../api/identitycontainer-post-customauthenticationextensions.md)|[customAuthenticationExtension](../resources/customauthenticationextension.md)|Create a new onPasswordSubmitCustomExtension object.|
+|[Get customAuthenticationExtension](../api/customauthenticationextension-get.md)|[customAuthenticationExtension](../resources/customauthenticationextension.md)|Read the properties of an onPasswordSubmitCustomExtension object.|
+|[Update customAuthenticationExtension](../api/customauthenticationextension-update.md)|None|Update the properties of an onPasswordSubmitCustomExtension object.|
+|[Delete customAuthenticationExtension](../api/customauthenticationextension-delete.md)|None|Delete an onPasswordSubmitCustomExtension object.|
+|[validateAuthenticationConfiguration](../api/customauthenticationextension-validateauthenticationconfiguration.md)|[authenticationConfigurationValidation](../resources/authenticationconfigurationvalidation.md)|Validate the authentication configuration of the custom extension.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|authenticationConfiguration|[customExtensionAuthenticationConfiguration](../resources/customextensionauthenticationconfiguration.md)|**TODO: Add Description** Inherited from [customCalloutExtension](../resources/customcalloutextension.md).|
-|behaviorOnError|[customExtensionBehaviorOnError](../resources/customextensionbehavioronerror.md)|**TODO: Add Description** Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
-|clientConfiguration|[customExtensionClientConfiguration](../resources/customextensionclientconfiguration.md)|**TODO: Add Description** Inherited from [customCalloutExtension](../resources/customcalloutextension.md).|
-|description|String|**TODO: Add Description** Inherited from [customCalloutExtension](../resources/customcalloutextension.md).|
-|displayName|String|**TODO: Add Description** Inherited from [customCalloutExtension](../resources/customcalloutextension.md).|
-|endpointConfiguration|[customExtensionEndpointConfiguration](../resources/customextensionendpointconfiguration.md)|**TODO: Add Description** Inherited from [customCalloutExtension](../resources/customcalloutextension.md).|
-|id|String|**TODO: Add Description** Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
+|authenticationConfiguration|[customExtensionAuthenticationConfiguration](../resources/customextensionauthenticationconfiguration.md)|Configuration for securing the API call to the external system. Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
+|behaviorOnError|[customExtensionBehaviorOnError](../resources/customextensionbehavioronerror.md)|Error handling behavior if the external API fails or is unreachable. Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
+|clientConfiguration|[customExtensionClientConfiguration](../resources/customextensionclientconfiguration.md)|HTTP client configuration including timeout and retry settings. Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
+|description|String|Description of the custom authentication extension. Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
+|displayName|String|Display name for the custom authentication extension. Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
+|endpointConfiguration|[customExtensionEndpointConfiguration](../resources/customextensionendpointconfiguration.md)|HTTP endpoint configuration for the external API. Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
+|id|String|Unique identifier for the custom authentication extension. Inherited from [customAuthenticationExtension](../resources/customauthenticationextension.md).|
 
 ## Relationships
 None.
@@ -58,16 +61,19 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.onPasswordSubmitCustomExtension",
   "id": "String (identifier)",
+  "displayName": "String",
+  "description": "String",
+  "endpointConfiguration": {
+    "@odata.type": "microsoft.graph.httpRequestEndpoint",
+    "targetUrl": "String"
+  },
   "authenticationConfiguration": {
-    "@odata.type": "microsoft.graph.customExtensionAuthenticationConfiguration"
+    "@odata.type": "microsoft.graph.azureAdTokenAuthentication",
+    "resourceId": "String"
   },
   "clientConfiguration": {
-    "@odata.type": "microsoft.graph.customExtensionClientConfiguration"
-  },
-  "description": "String",
-  "displayName": "String",
-  "endpointConfiguration": {
-    "@odata.type": "microsoft.graph.customExtensionEndpointConfiguration"
+    "timeoutInMilliseconds": 1024,
+    "maximumRetries": 1024
   },
   "behaviorOnError": {
     "@odata.type": "microsoft.graph.customExtensionBehaviorOnError"

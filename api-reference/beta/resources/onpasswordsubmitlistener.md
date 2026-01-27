@@ -1,10 +1,10 @@
 ---
 title: "onPasswordSubmitListener resource type"
-description: "**TODO: Add Description**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+description: "Event listener for the OnPasswordSubmit authentication event, used for Just-In-Time migration scenarios."
+author: "diadabal"
 ms.date: 01/13/2026
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
 ---
 
@@ -14,29 +14,34 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+Event listener that triggers during password submission in the authentication flow. This listener enables organizations to intercept password submission events for specific applications and invoke custom logic, such as validating credentials against a legacy authentication system for Just-In-Time (JIT) user migration.
 
+When configured, this listener activates during the sign-in process when a user submits their password. The listener evaluates the conditions to determine if it should invoke the configured handler for the authentication event.
 
 Inherits from [authenticationEventListener](../resources/authenticationeventlistener.md).
 
-
 ## Methods
+None.
+
+For the list of API operations for managing this resource type, see the [authenticationEventListener](../resources/authenticationeventlistener.md) resource type.
+
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/onpasswordsubmitlistener-list.md)|[onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md) collection|Get a list of the onPasswordSubmitListener objects and their properties.|
-|[Get](../api/onpasswordsubmitlistener-get.md)|[onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md)|Read the properties and relationships of [onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md) object.|
-|[Update](../api/onpasswordsubmitlistener-update.md)|[onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md)|Update the properties of an onPasswordSubmitListener object.|
-|[Delete](../api/onpasswordsubmitlistener-delete.md)|None|Delete an onPasswordSubmitListener object.|
+|[List authenticationEventListeners](../api/identitycontainer-list-authenticationeventlisteners.md)|[authenticationEventListener](../resources/authenticationeventlistener.md) collection|Get a list of authenticationEventListener objects, including onPasswordSubmitListener.|
+|[Create authenticationEventListener](../api/identitycontainer-post-authenticationeventlisteners.md)|[authenticationEventListener](../resources/authenticationeventlistener.md)|Create a new onPasswordSubmitListener object.|
+|[Get authenticationEventListener](../api/authenticationeventlistener-get.md)|[authenticationEventListener](../resources/authenticationeventlistener.md)|Read the properties of an onPasswordSubmitListener object.|
+|[Update authenticationEventListener](../api/authenticationeventlistener-update.md)|None|Update the properties of an onPasswordSubmitListener object.|
+|[Delete authenticationEventListener](../api/authenticationeventlistener-delete.md)|None|Delete an onPasswordSubmitListener object.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|authenticationEventsFlowId|String|**TODO: Add Description** Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
-|conditions|[authenticationConditions](../resources/authenticationconditions.md)|**TODO: Add Description** Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
-|displayName|String|**TODO: Add Description** Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
-|handler|[onPasswordSubmitHandler](../resources/onpasswordsubmithandler.md)|**TODO: Add Description**|
-|id|String|**TODO: Add Description** Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
-|priority|Int32|**TODO: Add Description** Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|authenticationEventsFlowId|String|Identifier of the authentication events flow. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|conditions|[authenticationConditions](../resources/authenticationconditions.md)|Conditions that determine when this listener is active, such as which applications trigger the event. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|displayName|String|Display name for the authentication event listener. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|handler|[onPasswordSubmitHandler](../resources/onpasswordsubmithandler.md)|Configuration for the handler to invoke when this listener is triggered. For JIT migration scenarios, this is typically an [onPasswordMigrationCustomExtensionHandler](../resources/onpasswordmigrationcustomextensionhandler.md).|
+|id|String|Unique identifier for the authentication event listener. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|priority|Int32|Priority of this listener relative to other listeners for the same event. Lower values indicate higher priority. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
 
 ## Relationships
 None.
@@ -56,7 +61,7 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.onPasswordSubmitListener",
   "id": "String (identifier)",
   "displayName": "String",
-  "priority": "Integer",
+  "priority": 1024,
   "conditions": {
     "@odata.type": "microsoft.graph.authenticationConditions"
   },
