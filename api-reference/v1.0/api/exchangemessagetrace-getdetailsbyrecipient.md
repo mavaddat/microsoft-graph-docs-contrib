@@ -2,7 +2,7 @@
 title: "exchangeMessageTrace: getDetailsByRecipient"
 description: "Get a list of exchangeMessageTraceDetail objects filtered on the recipient."
 author: "Huajian-MSIT"    
-ms.date: 01/23/2026          
+ms.date: 01/27/2026          
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType
@@ -86,9 +86,9 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.exchangeMessageTraceDetail)",
   "value": [
     {
-      "@odata.type": "#microsoft.graph.exchangeMessageTraceDetail",
       "id": "7e3b2b2e-1b5e-4b17-80cc-2af6c1d9a3b1",
       "messageId": "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>",
       "dateTime": "2025-06-13T10:30:05Z",
@@ -98,7 +98,6 @@ Content-Type: application/json
       "data": "<root><MEP ... String=\"Message Body\" /></root>"
     },
     {
-      "@odata.type": "#microsoft.graph.exchangeMessageTraceDetail",
       "id": "7e3b2b2e-1b5e-4b17-80cc-2af6c1d9a3b1",
       "messageId": "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>",
       "dateTime": "2025-06-13T10:30:10Z",
@@ -110,4 +109,3 @@ Content-Type: application/json
   ]
 }
 ```
-

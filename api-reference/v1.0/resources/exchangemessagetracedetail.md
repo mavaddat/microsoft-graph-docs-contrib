@@ -2,7 +2,7 @@
 title: "exchangeMessageTraceDetail resource type"
 description: "Represents a detailed trace event for an email message as it passes through the Exchange Online organization."
 author: "Huajian-MSIT"
-ms.date: 01/23/2026
+ms.date: 01/27/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: resourcePageType

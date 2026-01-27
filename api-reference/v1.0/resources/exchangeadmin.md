@@ -2,7 +2,7 @@
 title: "exchangeAdmin resource type"
 description: "Represents a container for the Exchange admin functionality."
 author: "Huajian-MSIT"
-ms.date: 01/23/2026
+ms.date: 01/27/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: resourcePageType

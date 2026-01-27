@@ -2,7 +2,7 @@
 title: "List messageTraces"
 description: "Get a list of exchangeMessageTrace objects."
 author: "Huajian-MSIT"
-ms.date: 01/23/2026
+ms.date: 01/27/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType
