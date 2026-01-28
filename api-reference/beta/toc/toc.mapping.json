@@ -1693,6 +1693,10 @@
                 "onEmailOtpSendListener",
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
+                "onPasswordMigrationCustomExtensionHandler",
+                "onPasswordSubmitCustomExtension",
+                "onPasswordSubmitHandler",
+                "onPasswordSubmitListener",
                 "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"

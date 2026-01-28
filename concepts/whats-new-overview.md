@@ -61,6 +61,14 @@ The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged app
 
 ## January 2026: New in preview only
 
+### Identity and access | Identity and sign-in
+
+Added new authentication event resources to support Just-In-Time (JIT) user migration scenarios from legacy authentication systems:
+- Use the [onPasswordSubmitListener](/graph/api/resources/onpasswordsubmitlistener?view=graph-rest-beta&preserve-view=true) resource to configure authentication event listeners that trigger during password submission.
+- Use the [onPasswordSubmitCustomExtension](/graph/api/resources/onpasswordsubmitcustomextension?view=graph-rest-beta&preserve-view=true) resource to configure custom extensions that validate passwords against external legacy authentication systems.
+- Use the [onPasswordSubmitHandler](/graph/api/resources/onpasswordsubmithandler?view=graph-rest-beta&preserve-view=true) resource as the base type for handlers invoked during password submission events.
+- Use the [onPasswordMigrationCustomExtensionHandler](/graph/api/resources/onpasswordmigrationcustomextensionhandler?view=graph-rest-beta&preserve-view=true) resource to configure handlers that invoke custom extensions during JIT migration.
+
 ### Applications
 
 The **allowedTenantIds** property on [allowedTenantsAudience](/graph/api/resources/allowedtenantsaudience?view=graph-rest-beta&preserve-view=true) must contain at least one value and can't include more than 20 values.
