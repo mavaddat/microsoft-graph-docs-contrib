@@ -1696,7 +1696,6 @@
                 "onPasswordMigrationCustomExtensionHandler",
                 "onPasswordSubmitCustomExtension",
                 "onPasswordSubmitHandler",
-                "onPasswordSubmitListener",
                 "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
