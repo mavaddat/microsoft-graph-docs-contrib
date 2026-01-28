@@ -35,7 +35,7 @@ Base type of [processConversationMetadata](./processconversationmetadata.md) and
 | modifiedDateTime | DateTimeOffset                                                                 | Required. Timestamp indicating when the original content was last modified. For ephemeral content like messages, this might be the same as `createdDateTime`.                    |
 | name             | String                                                                         | Required. A descriptive name for the content (for example, file name, web page title, "Chat Message").                                                                                |
 | sequenceNumber   | Int64                                                                          | A sequence number indicating the order in which content was generated or should be processed, required when `correlationId` is used.             |
-| contentCategory  | microsoft.graph.contentCategory                             | The type of content. Possible values are `none`, `ai`.  Default value is `ai`.            |
+| contentCategory  | microsoft.graph.contentCategory                             | The type of content. Values include `none` and `ai`.  The default value is `ai`, which refers to AI generated content.            |
 
 ## Relationships
 
