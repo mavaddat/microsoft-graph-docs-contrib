@@ -30,7 +30,7 @@ Inherits from [entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|connectionInfo|[connectionInfo](../resources/connectioninfo.md)|The connection information used to communicate with the external resource system.|
+|connectionInfo|[connectionInfo](../resources/connectioninfo.md)|The connection information used to communicate with the external resource system. When **connectorType** is `sapIag`, the type is [externalTokenBasedSapIagConnectionInfo](../resources/externaltokenbasedsapiagconnectioninfo.md).|
 |connectorType|connectorType|The type of connector to SAP being used. The possible values are: `sapIag` (SAP Cloud Identity Access Governance), `sapAc` (SAP Augmented Access Control), `unknownFutureValue`. |
 |createdBy|String|The identifier of the user or application that created the connector.|
 |createdDateTime|DateTimeOffset|The date and time when the connector was created.|
