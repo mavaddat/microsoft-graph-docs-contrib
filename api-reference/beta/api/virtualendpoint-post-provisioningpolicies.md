@@ -210,7 +210,6 @@ Content-Type: application/json
   },
   "managedBy": "windows365",
   "provisioningType": "dedicated",
-  "userExperienceType": "cloudPc",
   "userSettingsPersistenceConfiguration": {
       "userSettingsPersistenceEnabled": true,
       "userSettingsPersistenceStorageSizeCategory": "fourGB"
