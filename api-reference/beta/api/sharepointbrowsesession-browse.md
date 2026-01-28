@@ -244,7 +244,7 @@ We get the nextLink in the response of first POST api call as shown above and su
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "sharepointbrowsesessionthis.browse.mextlink"
+  "name": "sharepointbrowsesessionthis.browse.nextlink"
 }
 -->
 ``` http
