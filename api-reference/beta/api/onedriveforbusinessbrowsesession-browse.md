@@ -262,7 +262,6 @@ The following example shows a request.
 -->
 ``` http
 GET https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessBrowseSessions/m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE/browse?$skiptoken=nextFetchToken
-
 ```
 
 #### Response
@@ -346,11 +345,7 @@ Content-Type: application/json
             "type": "file",
             "itemsCount": 0,
             "sizeInBytes": "2853"
-        }
-    ]
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.browseQueryResponseItem)",
-    "@odata.count": 10,
-    "value": [
+        },
         {
             "itemKey": "bb281f72-f7cc-4379-b295-0c61253127af,77042fcb-74e3-46aa-8a53-05f9739ebdf4,07a7125a-15e3-402d-beb9-ee6540f7f5bc,2db4d4a9-7a10-409d-acfb-136101b43ba8",
             "name": "objectdelete-onedriveforbusinessbrowsesessions.md",
@@ -367,54 +362,6 @@ Content-Type: application/json
             "itemsCount": 0,
             "sizeInBytes": "2411"
         },
-        {
-            "itemKey": "bb281f72-f7cc-4379-b295-0c61253127af,77042fcb-74e3-46aa-8a53-05f9739ebdf4,07a7125a-15e3-402d-beb9-ee6540f7f5bc,cd692efa-0297-4a98-a39b-ec568a118f35",
-            "name": "objectdelete-onedriveforbusinessrestoresessions.md",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents/api/objectdelete-onedriveforbusinessrestoresessions.md",
-            "type": "file",
-            "itemsCount": 0,
-            "sizeInBytes": "2605"
-        },
-        {
-            "itemKey": "bb281f72-f7cc-4379-b295-0c61253127af,77042fcb-74e3-46aa-8a53-05f9739ebdf4,07a7125a-15e3-402d-beb9-ee6540f7f5bc,24c84b57-692b-40b3-b0b0-9cb8613b4398",
-            "name": "objectdelete-restoresessions.md",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents/api/objectdelete-restoresessions.md",
-            "type": "file",
-            "itemsCount": 0,
-            "sizeInBytes": "2422"
-        },
-        {
-            "itemKey": "bb281f72-f7cc-4379-b295-0c61253127af,77042fcb-74e3-46aa-8a53-05f9739ebdf4,07a7125a-15e3-402d-beb9-ee6540f7f5bc,b74f9233-27a7-4d49-a723-c9a4ab717d2d",
-            "name": "objectdelete-exchangerestoresessions.md",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents/api/objectdelete-exchangerestoresessions.md",
-            "type": "file",
-            "itemsCount": 0,
-            "sizeInBytes": "2484"
-        },
-        {
-            "itemKey": "bb281f72-f7cc-4379-b295-0c61253127af,77042fcb-74e3-46aa-8a53-05f9739ebdf4,07a7125a-15e3-402d-beb9-ee6540f7f5bc,4f20a6c4-c999-4ee8-9552-ca6a7fc46edf",
-            "name": "objectdelete-onedriveforbusinessbrowsesessions.md",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents/api/objectdelete-onedriveforbusinessbrowsesessions.md",
-            "type": "file",
-            "itemsCount": 0,
-            "sizeInBytes": "2493"
-        },
-        {
-            "itemKey": "bb281f72-f7cc-4379-b295-0c61253127af,77042fcb-74e3-46aa-8a53-05f9739ebdf4,07a7125a-15e3-402d-beb9-ee6540f7f5bc,92d28cdf-82b4-4964-b6fa-fd61240acf6c",
-            "name": "objectdelete-sharepointrestoresessions.md",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents/api/objectdelete-sharepointrestoresessions.md",
-            "type": "file",
-            "itemsCount": 0,
-            "sizeInBytes": "2504"
-        },
-        {
-            "itemKey": "bb281f72-f7cc-4379-b295-0c61253127af,77042fcb-74e3-46aa-8a53-05f9739ebdf4,07a7125a-15e3-402d-beb9-ee6540f7f5bc,cbd8e3c8-d0da-40a8-8eb8-51699268d6cf",
-            "name": "objectenable.md",
-            "webUrl": "https://contoso-my.sharepoint.com/personal/user0_contoso_onmicrosoft_com/Documents/api/objectenable.md",
-            "type": "file",
-            "itemsCount": 0,
-            "sizeInBytes": "2853"
-        }
     ]
 }
 ```
