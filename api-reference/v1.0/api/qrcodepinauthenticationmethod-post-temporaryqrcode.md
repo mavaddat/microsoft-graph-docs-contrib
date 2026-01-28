@@ -107,10 +107,10 @@ Content-Type: application/json
   "createdDateTime": "2026-01-30T08:00:00Z",
   "lastUsedDateTime": "0001-01-01T00:00:00Z",
   "image": {
-    "binaryValue": "iVBORw0KGgoAAAANSUhEUgAAAAUA",
+    "binaryValue": "Binary",
     "version": 1,
     "errorCorrectionLevel": "l",
-    "rawContent": "dXNlcjpwYXNzd29yZA=="
+    "rawContent": "Binary"
   }
 }
 ```
