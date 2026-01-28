@@ -1694,8 +1694,7 @@
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
                 "onPasswordMigrationCustomExtensionHandler",
-                "onPasswordSubmitCustomExtension",
-                "onPasswordSubmitHandler",
+                "onPasswordSubmitListener",
                 "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
@@ -1826,6 +1825,7 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
+                "onPasswordSubmitCustomExtension",
                 "onTokenIssuanceStartCustomExtension"
               ]
             },
