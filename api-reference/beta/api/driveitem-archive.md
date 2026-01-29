@@ -81,7 +81,7 @@ The following example shows a request for file archive operation on the [DriveIt
 
 <!-- {
   "blockType": "request",
-  "name": "driveitemthis.archive"
+  "name": "archive-file"
 }
 -->
 ``` http
@@ -109,7 +109,7 @@ The following example shows a request for folder archive operation on the [Drive
 
 <!-- {
   "blockType": "request",
-  "name": "driveitemthis.archive"
+  "name": "archive-folder"
 }
 -->
 ``` http

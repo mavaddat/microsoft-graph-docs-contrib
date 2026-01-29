@@ -80,7 +80,7 @@ The following example shows a request for a file unarchive operation on the [Dri
 
 <!-- {
   "blockType": "request",
-  "name": "driveitemthis.unarchive"
+  "name": "unarchive-file"
 }
 -->
 ``` http
@@ -96,7 +96,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` json
+``` http
 HTTP/1.1 200 OK
 Content-type: application/json
     "createdDateTime": "2016-03-21T20:01:37Z",
@@ -125,7 +125,7 @@ Content-type: application/json
 The following example shows a request for a folder unarchive operation on the [DriveItem](../resources/driveitem.md). The request completes asynchronously and returns `202 Accepted` with a [monitor URL](/graph/long-running-actions-overview).
 <!-- {
   "blockType": "request",
-  "name": "driveitemthis.unarchive"
+  "name": "unarchive-folder"
 }
 -->
 ``` http
