@@ -59,6 +59,20 @@ The Defender for Identity sensor management APIs let you discover eligible serve
 
 Use the **reportFileMetadata** property on [ediscoveryPurgeDataOperation](/graph/api/resources/security-ediscoverypurgedataoperation) to get the purge job report file metadata.
 
+### Security | eDiscovery
+
+Use the **reportFileMetadata** property on [ediscoveryPurgeDataOperation](/graph/api/resources/security-ediscoverypurgedataoperation) to get the purge job report file metadata.
+
+### Security | Identities
+
+The Defender for Identity sensor management APIs let you discover eligible servers, control automatic onboarding, activate or deactivate the unified agent, and manage required auditing settings during activation—all through a single management interface.
+
+### Teamwork and communications | Administration
+
+- [Get the policy ID](/graph/api/teamsadministration-teamspolicyassignment-getpolicyid) for a given policy name and policy type within Teams administration.
+- [Assign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-assign) to a user using the user ID, policy type, and policy ID.
+- [Unassign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-unassign) from a user using the user ID and policy type.
+
 ### Teamwork and communications | Apps
 
 The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged application permission required to install or upgrade a Teams app that requires consent to [resource-specific consent (RSC)](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions when using the [teamsAppInstallation in a team: upgrade](/graph/api/team-teamsappinstallation-upgrade) API.
