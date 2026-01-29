@@ -7,6 +7,8 @@ ms.date: 01/29/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+toc.title: QR Code
+toc.keywords: [ QRCodePin, QRCode ]
 ---
 
 # qrCode resource type

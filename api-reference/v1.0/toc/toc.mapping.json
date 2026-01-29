@@ -1129,15 +1129,19 @@
                 "passwordAuthenticationMethod",
                 "phoneAuthenticationMethod",
                 "platformCredentialAuthenticationMethod",
-                "qrCodePinAuthenticationMethod",
                 "softwareOathAuthenticationMethod",
                 "temporaryAccessPassAuthenticationMethod",
                 "windowsHelloForBusinessAuthenticationMethod"
               ],
-              "complexTypes": [
-                "qrCode",
-                "qrCodeImageDetails",
-                "qrPin"
+              "childNodes": [
+                {
+                  "name": "QR code authentication",
+                  "resources": [
+                    "qrCodePinAuthenticationMethod",
+                    "qrCode",
+                    "qrPin"
+                  ]
+                }
               ]
             },
             {

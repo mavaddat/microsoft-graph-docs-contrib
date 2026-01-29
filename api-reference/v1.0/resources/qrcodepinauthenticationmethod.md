@@ -3,10 +3,12 @@ title: "qrCodePinAuthenticationMethod resource type"
 description: "Represents a QR code and PIN authentication method registered to a user, used for frontline worker authentication."
 author: "jpettere"
 ms.reviewer: intelligentaccesspm
-ms.date: 01/27/2026
+ms.date: 01/29/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+toc.title: QR code authentication
+toc.keywords: [ QRCodePin ]
 ---
 
 # qrCodePinAuthenticationMethod resource type
@@ -24,7 +26,7 @@ Inherits from [authenticationMethod](../resources/authenticationmethod.md).
 |Method|Return type|Description|
 |:---|:---|:---|
 |[Get](../api/qrcodepinauthenticationmethod-get.md)|[qrCodePinAuthenticationMethod](../resources/qrcodepinauthenticationmethod.md)|Read the properties of a user's QR code PIN authentication method.|
-|[Create (PUT)](../api/authentication-put-qrcodepinmethod.md)|[qrCodePinAuthenticationMethod](../resources/qrcodepinauthenticationmethod.md)|Create a new QR code PIN authentication method for a user.|
+|[Create](../api/authentication-put-qrcodepinmethod.md)|[qrCodePinAuthenticationMethod](../resources/qrcodepinauthenticationmethod.md)|Create a new QR code PIN authentication method for a user.|
 |[Delete](../api/qrcodepinauthenticationmethod-delete.md)|None|Delete a user's QR code PIN authentication method.|
 
 ## Properties
