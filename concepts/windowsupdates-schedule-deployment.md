@@ -84,7 +84,7 @@ Content-Type: application/json
 
 ## Stage a deployment over a period of time
 
-You can also schedule a deployment so that assigned devices are offered the update in a gradual rollout that is staged over time. The update is offered to subsets of devices assigned to the deployment at regular intervals, with the total duration of the rollout determined by either an end date or offering rate. You can think of a gradual rollout as similar to a recurring calendar event series.
+You can schedule a phased rollout to gradually offer the update to assigned devices. The update is rolled out to device subsets at regular intervals, with the rollout duration set by an end date or offering rate. A gradual rollout works like a recurring calendar event.
 
 ### Example: Stage a deployment at regular intervals between start and end dates
 
