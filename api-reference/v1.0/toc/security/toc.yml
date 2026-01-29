@@ -450,6 +450,8 @@ items:
         href: ../../api/security-ediscoveryholdpolicy-delete-usersources.md
       - name: Retry policy
         href: ../../api/security-ediscoveryholdpolicy-retrypolicy.md
+  - name: eDiscovery purge data operation
+    href: ../../resources/security-ediscoverypurgedataoperation.md
   - name: eDiscovery search
     items:
     - name: eDiscovery search
