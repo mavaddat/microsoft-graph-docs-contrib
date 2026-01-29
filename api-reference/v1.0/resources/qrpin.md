@@ -23,7 +23,8 @@ Inherits from [entity](../resources/entity.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Reset PIN](../api/qrcodepinauthenticationmethod-resetpin.md)|[qrPin](../resources/qrpin.md)|Reset a user's PIN to a new temporary PIN that must be changed on next sign-in.|
+|[Reset PIN](../api/qrpin-updatepin.md)|[qrPin](../resources/qrpin.md)|Reset a user's PIN to a new temporary PIN that must be changed on next sign-in.|
+|[Update PIN](../api/qrpin-update.md)|[qrPin](../resources/qrpin.md)|Update a user's PIN.|
 
 ## Properties
 
