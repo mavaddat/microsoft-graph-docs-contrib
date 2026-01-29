@@ -495,6 +495,7 @@ Namespace: microsoft.graph
 | Member |
 | -------------------- |
 | user |
+| application |
 | unknownFutureValue |
 
 ### plannerTaskChatMessageType values
@@ -502,6 +503,7 @@ Namespace: microsoft.graph
 | Member |
 | -------------------- |
 | richTextHtml |
+| plainText |
 | unknownFutureValue |
 
 ### applicationKeyOrigin values
