@@ -16,15 +16,15 @@ Namespace: microsoft.graph
 
 Archives a [DriveItem](../resources/driveitem.md).
 
-**File Archive**: Archives a single active file using a synchronous request. The file is archived immediately.
+When archiving a single active file using a synchronous request, the file is archived immediately.
 
-_Note_: File DriveItem Archive is not supported when the request includes the Prefer: respond-async header.
+> [!NOTE]
+> File DriveItem archive is not supported when the request includes the Prefer: respond-async header.
 
-**Folder Archive**: Archives all active files within a folder using an asynchronous request. The operation is initiated asynchronously, and a [monitor URL](/graph/long-running-actions-overview) is returned in the response to allow clients to track the progress of the archive operation.
+When archiving a folder using an asynchronous request, a [monitor URL](/graph/long-running-actions-overview) is returned in the response. Use the monitor URL to track progress until the operation completes.
 
-Use the [monitor URL](/graph/long-running-actions-overview) to track progress until the operation completes.
-
-_Note_: Folder DriveItem Archive is supported only when the request includes the Prefer: respond-async header
+> [!NOTE]
+> Folder DriveItem archive is supported only when the request includes the Prefer: respond-async header
 
 ## Permissions
 
@@ -73,23 +73,22 @@ Otherwise, if successful, this action returns a `202 Accepted` response code, wi
 
 ## Examples
 
-### File Archive Example
+### Example 1: Archive File DriveItem
 
-For file archive operation on the [DriveItem](../resources/driveitem.md), the request completes synchronously and returns `204 No Content`
+#### Request
 
-#### File Archive Request
+The following example shows a request for file archive operation on the [DriveItem](../resources/driveitem.md). The request completes synchronously and returns `204 No Content`
 
-The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "driveitemthis.archive"
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/drive/root/archive
+POST https://graph.microsoft.com/beta/drive/items/{driveItemId}/archive
 ```
 
-#### File Archive Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -102,25 +101,24 @@ The following example shows the response.
 HTTP/1.1 204 No Content
 ```
 
-### Folder Archive Example
+### Example 2: Archive Folder DriveItem
 
-For folder archive operation on the [DriveItem](../resources/driveitem.md), the request completes asynchronously and returns `202 Accepted` with a [monitor URL](/graph/long-running-actions-overview).
+#### Request
 
-#### Folder Archive Request
+The following example shows a request for folder archive operation on the [DriveItem](../resources/driveitem.md). The request completes asynchronously and returns `202 Accepted` with a [monitor URL](/graph/long-running-actions-overview).
 
-The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "driveitemthis.archive"
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/drive/root/archive
+POST https://graph.microsoft.com/beta/drive/items/{driveItemId}/archive
 Content-type: application/json
 Prefer: respond-async
 ```
 
-#### Folder Archive Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
