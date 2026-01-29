@@ -1140,6 +1140,7 @@
               "resources": [
                 "authenticationMethodsPolicy",
                 "emailAuthenticationMethodConfiguration",
+                "externalAuthenticationMethodConfiguration",
                 "fido2AuthenticationMethodConfiguration",
                 "microsoftAuthenticatorAuthenticationMethodConfiguration",
                 "smsAuthenticationMethodConfiguration",
