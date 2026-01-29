@@ -39,7 +39,7 @@ Represents a chat message associated with a [plannerTask](plannertask.md). Task 
 | id | String | Read-only. The unique identifier of the message. |
 | mentions | [plannerTaskChatMention](plannertaskchatmention.md) collection | The list of mentions in the message. |
 | messageType | plannerTaskChatMessageType | The type of message. The possible values are: `richTextHtml`, `unknownFutureValue`. |
-| parentEntityId | String | The ID of the parent Planner task that this message belongs to. |
+| parentEntityId | String | The ID of the parent plannerTask that this message belongs to. |
 | reactions | [plannerTaskChatReaction](plannertaskchatreaction.md) collection | The reactions on the message. |
 
 ## Relationships
