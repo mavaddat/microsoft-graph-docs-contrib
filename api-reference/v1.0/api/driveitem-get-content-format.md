@@ -60,6 +60,8 @@ The following values are valid for the **format** parameter:
 
 ## Example
 
+### Request
+
 # [HTTP](#tab/http)
 <!-- { "blockType": "request", "name": "convert-item-content", "scopes": "files.read" } -->
 
@@ -97,7 +99,7 @@ GET /me/drive/items/{item-id}/content?format={format}
 
 ---
 
-## Response
+### Response
 
 Returns a `302 Found` response redirecting to a preauthenticated download URL for the converted file.
 
