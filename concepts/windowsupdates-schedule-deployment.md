@@ -88,9 +88,11 @@ You can schedule a phased rollout to gradually offer the update to assigned devi
 
 ### Example: Stage a deployment at regular intervals between start and end dates
 
-One way to stage a deployment over time is to set the **endDateTime** of the deployment. All devices assigned to the deployment will be offered the update within the window between the **startDateTime** and **endDateTime**. If the **startDateTime** is not specified, then the deployment will begin as soon as devices are assigned.
+To stage a deployment over time, set the **endDateTime**. Devices receive the update between **startDateTime** and **endDateTime**; if **startDateTime** is not set, the deployment starts when devices are assigned.
 
 In this example, you configure a new deployment so that a new set of devices is offered the update every week (**durationBetweenOffers** set to seven days), starting on July 1, 2021. All devices are offered the update before August 1, 2021.
+
+In this example, the deployment offers the update to a new set of devices weekly (**durationBetweenOffers = 7 days**), starting July 1, 2021, and completes before August 1, 2021.
 
 #### Request
 
