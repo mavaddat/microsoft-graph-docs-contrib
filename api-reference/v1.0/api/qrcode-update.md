@@ -2,7 +2,7 @@
 title: "Create or Update qrCode"
 description: "Update the properties of a qrCode object."
 author: "jpettere"
-ms.date: 04/16/2025
+ms.date: 01/29/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
@@ -142,12 +142,6 @@ Content-Type: application/json
   "expireDateTime": "2025-12-01T12:00:00Z",
 }
 ```
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/update-qrcode-python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 
