@@ -3,10 +3,12 @@ title: "qrCodePinAuthenticationMethod resource type"
 description: "Represents a QR code and PIN authentication method registered to a user, used for frontline worker authentication."
 author: "jpettere"
 ms.reviewer: intelligentaccesspm
-ms.date: 01/27/2026
+ms.date: 01/29/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+toc.title: QR code authentication
+toc.keywords: [ QRCodePin ]
 ---
 
 # qrCodePinAuthenticationMethod resource type
@@ -23,17 +25,9 @@ Inherits from [authenticationMethod](../resources/authenticationmethod.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Create](../api/authentication-post-qrcodepinauthenticationmethod.md)|[qrCodePinAuthenticationMethod](../resources/qrcodepinauthenticationmethod.md)|Create a new QR code PIN authentication method for a user.|
 |[Get](../api/qrcodepinauthenticationmethod-get.md)|[qrCodePinAuthenticationMethod](../resources/qrcodepinauthenticationmethod.md)|Read the properties of a user's QR code PIN authentication method.|
+|[Create](../api/authentication-put-qrcodepinmethod.md)|[qrCodePinAuthenticationMethod](../resources/qrcodepinauthenticationmethod.md)|Create a new QR code PIN authentication method for a user.|
 |[Delete](../api/qrcodepinauthenticationmethod-delete.md)|None|Delete a user's QR code PIN authentication method.|
-|[Create standard QR code](../api/qrcodepinauthenticationmethod-post-standardqrcode.md)|[qrCode](../resources/qrcode.md)|Create a new standard QR code for an existing QR code PIN authentication method.|
-|[Get standard QR code](../api/qrcodepinauthenticationmethod-get-standardqrcode.md)|[qrCode](../resources/qrcode.md)|Read the properties of a user's standard QR code.|
-|[Update standard QR code](../api/qrcodepinauthenticationmethod-update-standardqrcode.md)|None|Update the expiration date of a user's standard QR code.|
-|[Delete standard QR code](../api/qrcodepinauthenticationmethod-delete-standardqrcode.md)|None|Delete a user's standard QR code.|
-|[Create temporary QR code](../api/qrcodepinauthenticationmethod-post-temporaryqrcode.md)|[qrCode](../resources/qrcode.md)|Create a temporary QR code for an existing QR code PIN authentication method.|
-|[Get temporary QR code](../api/qrcodepinauthenticationmethod-get-temporaryqrcode.md)|[qrCode](../resources/qrcode.md)|Read the properties of a user's temporary QR code.|
-|[Delete temporary QR code](../api/qrcodepinauthenticationmethod-delete-temporaryqrcode.md)|None|Delete a user's temporary QR code.|
-|[Reset PIN](../api/qrcodepinauthenticationmethod-resetpin.md)|[qrPin](../resources/qrpin.md)|Reset a user's PIN and generate a new temporary PIN.|
 
 ## Properties
 

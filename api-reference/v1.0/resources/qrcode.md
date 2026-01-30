@@ -3,10 +3,12 @@ title: "qrCode resource type"
 description: "Represents a QR code credential used with the QR code PIN authentication method."
 author: "jpettere"
 ms.reviewer: intelligentaccesspm
-ms.date: 01/27/2026
+ms.date: 01/29/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+toc.title: QR Code
+toc.keywords: [ QRCodePin, QRCode ]
 ---
 
 # qrCode resource type
@@ -25,13 +27,9 @@ Inherits from [entity](../resources/entity.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get standard QR code](../api/qrcodepinauthenticationmethod-get-standardqrcode.md)|[qrCode](../resources/qrcode.md)|Read the properties of a user's standard QR code.|
-|[Create standard QR code](../api/qrcodepinauthenticationmethod-post-standardqrcode.md)|[qrCode](../resources/qrcode.md)|Create a new standard QR code.|
-|[Update standard QR code](../api/qrcodepinauthenticationmethod-update-standardqrcode.md)|None|Update the expiration date of a standard QR code.|
-|[Delete standard QR code](../api/qrcodepinauthenticationmethod-delete-standardqrcode.md)|None|Delete a standard QR code.|
-|[Get temporary QR code](../api/qrcodepinauthenticationmethod-get-temporaryqrcode.md)|[qrCode](../resources/qrcode.md)|Read the properties of a user's temporary QR code.|
-|[Create temporary QR code](../api/qrcodepinauthenticationmethod-post-temporaryqrcode.md)|[qrCode](../resources/qrcode.md)|Create a new temporary QR code.|
-|[Delete temporary QR code](../api/qrcodepinauthenticationmethod-delete-temporaryqrcode.md)|None|Delete a temporary QR code.|
+|[Create or update](../api/qrcode-update.md)|[qrCode](../resources/qrcode.md)|Create a new standard QR code or update the expiration date of an existing one.|
+|[Get](../api/qrcode-get.md)|[qrCode](../resources/qrcode.md)|Read the properties of a user's QR code.|
+|[Delete](../api/qrcode-delete.md)|None|Delete a QR code.|
 
 ## Properties
 

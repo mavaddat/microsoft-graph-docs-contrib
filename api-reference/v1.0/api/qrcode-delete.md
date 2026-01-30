@@ -1,36 +1,51 @@
 ---
-title: "Update standard QR code"
-description: "Update the expiration date of a user's standard QR code."
+title: "Delete qrCode"
+description: "Delete a qrCode object."
 author: "jpettere"
-ms.reviewer: intelligentaccesspm
-ms.date: 01/27/2026
+ms.date: 04/16/2025
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
 ---
 
-# Update standard QR code
+# Delete qrCode
 
 Namespace: microsoft.graph
 
-Update the expiration date of a user's standard [qrCode](../resources/qrcode.md). Only the **expireDateTime** property can be updated for an existing standard QR code.
-
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+Delete a standard or temporary [qrCode](../resources/qrcode.md) object.
 
 ## Permissions
-
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "qrcodepinauthenticationmethod_update_standardqrcode" } -->
-[!INCLUDE [permissions-table](../includes/permissions/qrcodepinauthenticationmethod-update-standardqrcode-permissions.md)]
+<!-- { 
+  "blockType": "permissions", 
+  "name": "qrcode_delete", 
+  "requestUrls": ["DELETE /users/{id}/authentication/qrCodePinMethod/standardQRCode", "DELETE /users/{id}/authentication/qrCodePinMethod/temporaryQRCode"]
+ } -->
+[!INCLUDE [permissions-table](../includes/permissions/qrcode-delete-permissions.md)]
 
 [!INCLUDE [rbac-authentication-methods-apis-write-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-write-others.md)]
 
 ## HTTP request
 
+Delete your own QR Code.
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 <!-- { "blockType": "ignored" } -->
 ```http
-PATCH /users/{id | userPrincipalName}/authentication/qrCodePinMethod/standardQRCode
+DELETE /me/authentication/qrCodePinMethod/standardQRCode
+DELETE /me/authentication/qrCodePinMethod/temporaryQRCode
+```
+
+Delete another user's QR Code.
+
+[!INCLUDE [authentication-methods-apis-users-selfservice](../includes/authentication-methods-apis-users-selfservice.md)]
+
+<!-- { "blockType": "ignored" } -->
+```http
+DELETE /users/{id}/authentication/qrCodePinMethod/standardQRCode
+DELETE /users/{id}/authentication/qrCodePinMethod/temporaryQRCode
 ```
 
 ## Request headers
@@ -38,15 +53,10 @@ PATCH /users/{id | userPrincipalName}/authentication/qrCodePinMethod/standardQRC
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
-|Content-Type|application/json. Required.|
 
 ## Request body
 
-In the request body, supply a JSON representation with the **expireDateTime** property.
-
-|Property|Type|Description|
-|:---|:---|:---|
-|expireDateTime|DateTimeOffset|The new expiration date and time for the standard QR code. The lifetime can be extended or reduced but must remain within the valid range (1-395 days from the start date).|
+Don't supply a request body for this method.
 
 ## Response
 
@@ -57,19 +67,13 @@ If successful, this method returns a `204 No Content` response code.
 ### Request
 
 The following example shows a request.
-
 <!-- {
   "blockType": "request",
-  "name": "update_standardqrcode"
+  "name": "delete_qrcode"
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/v1.0/users/7c4999ca-a540-47ab-9ab9-8c362f5bf0fe/authentication/qrCodePinMethod/standardQRCode
-Content-Type: application/json
-
-{
-  "expireDateTime": "2027-06-30T12:00:00Z"
-}
+DELETE https://graph.microsoft.com/v1.0/users/7c4999f7-9c25-4f8e-8b84-766eb28a1b49/authentication/qrCodePinMethod/standardQRCode
 ```
 
 ### Response
@@ -84,3 +88,4 @@ The following example shows the response.
 ```http
 HTTP/1.1 204 No Content
 ```
+
