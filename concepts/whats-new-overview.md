@@ -31,6 +31,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 - QR code authentication method in Microsoft Entra ID lets you manage the QR code authentication method for users, and how they can sign in with a QR code and PIN. The following key resources support this capability:
    - The [qrCodePinAuthenticationMethod](/graph/api/resources/qrcodepinauthenticationmethod) resource and related APIs for managing QR code PIN authentication methods for users. This single-factor authentication method is designed for frontline workers and combines a QR code with a PIN. The following related resources were also added: [qrCode](/graph/api/resources/qrcode), [qrPin](/graph/api/resources/qrpin), and [qrCodeImageDetails](/graph/api/resources/qrcodeimagedetails).
    - The [qrCodePinAuthenticationMethodConfiguration](/graph/api/resources/qrcodepinauthenticationmethodconfiguration) resource for managing the QR code authentication method policy for a tenant.
+   - Updated the [authenticationMethodModes](/graph/api/resources/authenticationmethodmodes) and [baseAuthenticationMethod](/graph/api/resources/baseauthenticationmethod) enumerations to add the `qrCodePin` member to support this new authentication method.
 
 ### Reports | Microsoft 365 usage reports
 

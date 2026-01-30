@@ -4452,47 +4452,6 @@ Possible values for user account types (group membership), per Windows definitio
 | cannotSatisfy |
 | unknownFutureValue |
 
-### authenticationMethodModes values
-
-| Member |
-| --------------------------- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido2 |
-| windowsHelloForBusiness |
-| microsoftAuthenticatorPush |
-| deviceBasedPush |
-| temporaryAccessPassOneTime |
-| temporaryAccessPassMultiUse |
-| email |
-| x509CertificateSingleFactor |
-| x509CertificateMultiFactor |
-| federatedSingleFactor |
-| federatedMultiFactor |
-| unknownFutureValue |
-| qrCodePin |
-
-### baseAuthenticationMethod values
-
-| Member |
-| ----------------------- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido |
-| microsoftAuthenticator |
-| windowsHelloForBusiness |
-| temporaryAccessPass |
-| email |
-| x509Certificate |
-| federation |
-| unknownFutureValue |
-
 ### searchContent values
 
 | Member |
@@ -5409,16 +5368,6 @@ Possible values for user account types (group membership), per Windows definitio
 |junk|
 |notJunk|
 |phish|
-|unknownFutureValue|
-
-### errorCorrectionLevel values
-
-|Member|
-|:---|
-|l|
-|m|
-|q|
-|h|
 |unknownFutureValue|
 
 ### protectionSource values
