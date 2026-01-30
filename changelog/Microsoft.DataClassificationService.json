@@ -89,6 +89,38 @@
           "ChangeType": "Addition",
           "Description": "Added the [resourceAccessDetail](https://learn.microsoft.com/en-us/graph/api/resources/resourceAccessDetail?view=graph-rest-beta) resource type.",
           "Target": "resourceAccessDetail"
+        },
+        {
+          "Id": "c39f9275-6638-4c3e-a3d2-c709fe4e89b9",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "contentCategory",
+          "ChangeType": "Addition",
+          "Description": "Added the **contentCategory** enumeration type.",
+          "Target": "contentCategory"
+        },
+        {
+          "Id": "c39f9275-6638-4c3e-a3d2-c709fe4e89b9",
+          "ApiChange": "Property",
+          "ChangedApiName": "contentCategory",
+          "ChangeType": "Addition",
+          "Description": "Added the **contentCategory** property to the [processContentMetadataBase](https://learn.microsoft.com/en-us/graph/api/resources/processContentMetadataBase?view=graph-rest-beta) resource.",
+          "Target": "processContentMetadataBase"
+        },
+        {
+          "Id": "c39f9275-6638-4c3e-a3d2-c709fe4e89b9",
+          "ApiChange": "Property",
+          "ChangedApiName": "contentCategory",
+          "ChangeType": "Addition",
+          "Description": "Added the **contentCategory** property to the [processConversationMetadata](https://learn.microsoft.com/en-us/graph/api/resources/processConversationMetadata?view=graph-rest-beta) resource.",
+          "Target": "processContentMetadataBase"
+        },
+        {
+          "Id": "c39f9275-6638-4c3e-a3d2-c709fe4e89b9",
+          "ApiChange": "Property",
+          "ChangedApiName": "contentCategory",
+          "ChangeType": "Addition",
+          "Description": "Added the **contentCategory** property to the [processFileMetadata](https://learn.microsoft.com/en-us/graph/api/resources/processFileMetadata?view=graph-rest-beta) resource.",
+          "Target": "processContentMetadataBase"
         }
       ],
       "Id": "e72bfd48-4fdc-4e10-9d29-89785912a3be",
@@ -1365,22 +1397,6 @@
           "ChangeType": "Addition",
           "Description": "Added the **auditLogUserType** enumeration type.",
           "Target": "auditLogUserType"
-        },
-        {
-          "Id": "c39f9275-6638-4c3e-a3d2-c709fe4e89b9",
-          "ApiChange": "Enumeration",
-          "ChangedApiName": "contentCategory",
-          "ChangeType": "Addition",
-          "Description": "Added the **contentCategory** enumeration type.",
-          "Target": "contentCategory"
-        },
-        {
-          "Id": "c39f9275-6638-4c3e-a3d2-c709fe4e89b9",
-          "ApiChange": "Property",
-          "ChangedApiName": "contentCategory",
-          "ChangeType": "Addition",
-          "Description": "Added the **contentCategory** property to the [processContentMetadataBase](https://learn.microsoft.com/en-us/graph/api/resources/processContentMetadataBase?view=graph-rest-beta) resource.",
-          "Target": "processContentMetadataBase"
         }
       ],
       "Id": "b1e78bac-28ac-4381-aa07-a4141f5df4a6",
