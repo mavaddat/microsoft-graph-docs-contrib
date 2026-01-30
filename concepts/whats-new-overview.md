@@ -98,6 +98,20 @@ Added the **priorityScore** property to the [incident](/graph/api/resources/secu
 
 The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged application permission required to install or upgrade a Teams app that requires consent to [resource-specific consent (RSC)](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions when using the [teamsAppInstallation in a team: upgrade](/graph/api/team-teamsappinstallation-upgrade?view=graph-rest-beta&preserve-view=true) API.
 
+### Tasks and plans
+
+Added support for chat messaging on Planner tasks, enabling users to create, update, delete, and react to messages directly on tasks. Use the following new resources and APIs:
+- [plannerTaskChatMessage](/graph/api/resources/plannertaskchatmessage?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatMention](/graph/api/resources/plannertaskchatmention?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatReaction](/graph/api/resources/plannertaskchatreaction?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatReactionEvent](/graph/api/resources/plannertaskchatreactionevent?view=graph-rest-beta&preserve-view=true)
+- [List messages](/graph/api/plannertask-list-messages?view=graph-rest-beta&preserve-view=true)
+- [Create message](/graph/api/plannertask-post-messages?view=graph-rest-beta&preserve-view=true)
+- [Update message](/graph/api/plannertaskchatmessage-update?view=graph-rest-beta&preserve-view=true)
+- [Delete message](/graph/api/plannertaskchatmessage-delete?view=graph-rest-beta&preserve-view=true)
+- [Add reaction](/graph/api/plannertaskchatmessage-post-reactions?view=graph-rest-beta&preserve-view=true)
+- [Remove reaction](/graph/api/plannertaskchatmessage-delete-reactions?view=graph-rest-beta&preserve-view=true)
+
 ### Tenant administration | Configuration management
 
 The new unified tenant configuration management APIs in Microsoft Graph allow administrators to control and manage configuration settings across a single workload or multiple workloads within an organization. To learn more about supported use cases, see [Use the unified tenant configuration management APIs in Microsoft Graph (preview)](/graph/api/resources/unified-tenant-configuration-management-api-overview?view=graph-rest-beta&preserve-view=true).
