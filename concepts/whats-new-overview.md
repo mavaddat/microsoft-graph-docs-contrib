@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 01/26/2026
+ms.date: 01/28/2026
 ms.topic: whats-new
 ---
 
@@ -22,16 +22,15 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Identity and access | Identity and sign-in
 
-- Added the [qrCodePinAuthenticationMethod](/graph/api/resources/qrcodepinauthenticationmethod) resource and related APIs to manage QR code PIN authentication methods for users. This single-factor authentication method is designed for frontline workers and combines a QR code with a PIN. The following related resources were also added: [qrCode](/graph/api/resources/qrcode), [qrPin](/graph/api/resources/qrpin), and [qrCodeImageDetails](/graph/api/resources/qrcodeimagedetails).
-- Added the [qrCodePinAuthenticationMethodConfiguration](/graph/api/resources/qrcodepinauthenticationmethodconfiguration) resource to manage the QR code PIN authentication method policy for a tenant.
-- Added the `qrCodePin` member to the **authenticationMethodModes** and **baseAuthenticationMethod** enumeration types.
-- Added the **errorCorrectionLevel** enumeration type to represent QR code error correction levels.
+- Starting January 26, 2026, users who manage their own [authentication methods](/graph/api/resources/authenticationmethods-overview) through self-service operations, such as adding, updating, or deleting phone numbers and email addresses, must complete multifactor authentication (MFA) if they last authenticated more than 10 minutes ago in the current session. For more guidance on handling this change in your application, see [Microsoft Entra authentication methods API overview](/graph/api/resources/authenticationmethods-overview).
 - Added `qrCode` as a new supported value for the **usageAuthMethod** enumeration which is the type for the **authMethod** property on [credentialUsageSummary](/graph/api/resources/credentialusagesummary?view=graph-rest-beta&preserve-view=true), [userCredentialUsageDetails](/graph/api/resources/usercredentialusagedetails?view=graph-rest-beta&preserve-view=true), [userEventsSummary](/graph/api/resources/usereventssummary?view=graph-rest-beta&preserve-view=true), and [userRegistrationActivitySummary](/graph/api/resources/userregistrationactivitysummary?view=graph-rest-beta&preserve-view=true) resources. This value represents the use of the [QR code](/graph/api/resources/qrcodepinauthenticationmethod?view=graph-rest-beta&preserve-view=true) as an authentication method.
-- Added the [externalAuthenticationMethod](/graph/api/resources/externalAuthenticationMethod) resource to represent external authentication methods registered to a user for authentication using an external identity provider.
-- Added the **externalAuthenticationMethods** relationship to the [authentication](/graph/api/resources/authentication) resource.
-- Added the **createdDateTime** property to the [authenticationMethod](/graph/api/resources/authenticationMethod) resource.
-- Changed the **createdDateTime** property to be inherited from [authenticationMethod](/graph/api/resources/authenticationMethod) in the following derived authentication method resources: [fido2AuthenticationMethod](/graph/api/resources/fido2AuthenticationMethod), [microsoftAuthenticatorAuthenticationMethod](/graph/api/resources/microsoftAuthenticatorAuthenticationMethod), [passwordAuthenticationMethod](/graph/api/resources/passwordAuthenticationMethod), [platformCredentialAuthenticationMethod](/graph/api/resources/platformCredentialAuthenticationMethod), [temporaryAccessPassAuthenticationMethod](/graph/api/resources/temporaryAccessPassAuthenticationMethod), and [windowsHelloForBusinessAuthenticationMethod](/graph/api/resources/windowsHelloForBusinessAuthenticationMethod).
-Starting January 26, 2026, users who manage their own [authentication methods](/graph/api/resources/authenticationmethods-overview) through self-service operations, such as adding, updating, or deleting phone numbers and email addresses, must complete multifactor authentication (MFA) if they last authenticated more than 10 minutes ago in the current session. For more guidance on handling this change in your application, see [Microsoft Entra authentication methods API overview](/graph/api/resources/authenticationmethods-overview).
+- You can now manage external authentication methods (EAM) in Microsoft Entra ID to let users choose an external provider to meet multifactor authentication (MFA) requirements when they sign in to Microsoft Entra ID. For more information, see:
+   - [externalAuthenticationMethod resource type](/graph/api/resources/externalauthenticationmethod) for managing external authentication methods registered to a user for authentication using an external identity provider.
+   - [externalAuthenticationMethodConfiguration resource type](/graph/api/resources/externalauthenticationmethodconfiguration) for managing the tenant-wide policy.
+- Added the **createdDateTime** property to the [authenticationMethod](/graph/api/resources/authenticationMethod) resource, which is the base type for the following derived authentication method resources: [fido2AuthenticationMethod](/graph/api/resources/fido2AuthenticationMethod), [microsoftAuthenticatorAuthenticationMethod](/graph/api/resources/microsoftAuthenticatorAuthenticationMethod), [passwordAuthenticationMethod](/graph/api/resources/passwordAuthenticationMethod), [platformCredentialAuthenticationMethod](/graph/api/resources/platformCredentialAuthenticationMethod), [temporaryAccessPassAuthenticationMethod](/graph/api/resources/temporaryAccessPassAuthenticationMethod), and [windowsHelloForBusinessAuthenticationMethod](/graph/api/resources/windowsHelloForBusinessAuthenticationMethod).
+- QR code authentication method in Microsoft Entra ID lets you manage the QR code authentication method for users, and how they can sign in with a QR code and PIN. The following key resources support this capability:
+   - The [qrCodePinAuthenticationMethod](/graph/api/resources/qrcodepinauthenticationmethod) resource and related APIs for managing QR code PIN authentication methods for users. This single-factor authentication method is designed for frontline workers and combines a QR code with a PIN. The following related resources were also added: [qrCode](/graph/api/resources/qrcode), [qrPin](/graph/api/resources/qrpin), and [qrCodeImageDetails](/graph/api/resources/qrcodeimagedetails).
+   - The [qrCodePinAuthenticationMethodConfiguration](/graph/api/resources/qrcodepinauthenticationmethodconfiguration) resource for managing the QR code authentication method policy for a tenant.
 
 ### Reports | Microsoft 365 usage reports
 
@@ -41,13 +40,24 @@ Going forward, use the Microsoft 365 Copilot usage APIs under the `/copilot` URL
 - [Get Copilot user count trend](/microsoft-365-copilot/extensibility/api/admin-settings/reports/copilotreportroot-getmicrosoft365copilotusercounttrend)
 - [Get Copilot usage user detail](/microsoft-365-copilot/extensibility/api/admin-settings/reports/copilotreportroot-getmicrosoft365copilotusageuserdetail)
 
-### Security
+### Security | Advanced hunting
+
+Added migration guidance for Microsoft Defender for Endpoint (MDE) advanced hunting APIs to help organizations transition from the retired APIs that were available through the `https://api.securitycenter.microsoft.com` endpoint to the advanced hunting APIs available in Microsoft Graph. For more information, see [Migrate from the older APIs](/graph/api/resources/security-api-overview#migrate-from-older-apis).
+
+### Security | Alerts and incidents
 
 - Added the **priorityScore** property to the [incident](/graph/api/resources/security-incident) resource to provide a priority score for the incident from 0 to 100, with > 85 being the top priority, 15 - 85 medium priority, and < 15 low priority. This score is generated using machine learning and is based on multiple factors, including severity, disruption impact, threat intelligence, alert types, asset criticality, threat analytics, incident rarity, and additional priority signals.
 - Made the following updates to APIs for managing Microsoft Defender for Identity (MDI) sensors:
   - Added the **domainName** property to the [sensorCandidate](/graph/api/resources/security-sensorcandidate) resource to specify the domain name of the sensor.
   - Added the **serviceStatus** property to the [sensor](/graph/api/resources/security-sensor) resource to indicate the service status. The possible values are: `stopped`, `starting`, `running`, `disabled`, `onboarding`, `unknown`, `unknownFutureValue`.
-- Added migration guidance for Microsoft Defender for Endpoint (MDE) advanced hunting APIs to help organizations transition from the retired APIs that were available through the `https://api.securitycenter.microsoft.com` endpoint to the advanced hunting APIs available in Microsoft Graph. For more information, see [Migrate from the older APIs](/graph/api/resources/security-api-overview#migrate-from-older-apis).
+
+### Security | eDiscovery
+
+Use the **reportFileMetadata** property on [ediscoveryPurgeDataOperation](/graph/api/resources/security-ediscoverypurgedataoperation) to get the purge job report file metadata.
+
+### Security | Identities
+
+The Defender for Identity sensor management APIs let you discover eligible servers, control automatic onboarding, activate or deactivate the unified agent, and manage required auditing settings during activation—all through a single management interface.
 
 ### Teamwork and communications | Administration
 
@@ -59,20 +69,7 @@ Going forward, use the Microsoft 365 Copilot usage APIs under the `/copilot` URL
 
 The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged application permission required to install or upgrade a Teams app that requires consent to [resource-specific consent (RSC)](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions when using the [teamsAppInstallation in a team: upgrade](/graph/api/team-teamsappinstallation-upgrade) API.
 
-### Security | Identities
-
-The Defender for Identity sensor management APIs let you discover eligible servers, control automatic onboarding, activate or deactivate the unified agent, and manage required auditing settings during activation—all through a single management interface.
-
 ## January 2026: New in preview only
-
-### Device and app management | Device updates
-
-Added a new approval and deployment management model for Windows quality updates in Autopatch-managed environments. You can now define quality update policies with customizable approval rules, assign deployment rings to group devices for phased rollout, and manage the approval status of update content before deploying to devices. The following resources provide more information:
-  - [policy](/graph/api/resources/windowsupdates-policy?view=graph-rest-beta&preserve-view=true)
-  - [qualityUpdatePolicy](/graph/api/resources/windowsupdates-qualityupdatepolicy?view=graph-rest-beta&preserve-view=true)
-  - [policyApproval](/graph/api/resources/windowsupdates-policyapproval?view=graph-rest-beta&preserve-view=true)
-  - [ring](/graph/api/resources/windowsupdates-ring?view=graph-rest-beta&preserve-view=true)
-  - [qualityUpdateRing](/graph/api/resources/windowsupdates-qualityupdatering?view=graph-rest-beta&preserve-view=true)
 
 ### Applications
 
@@ -83,11 +80,25 @@ The **allowedTenantIds** property on [allowedTenantsAudience](/graph/api/resourc
 - Added `mexico` as a new supported value for the **cloudPcGeographicLocationType** enumeration type. This enum is the return type for the **geographicLocationType** property on [cloudPcDomainJoinConfiguration](/graph/api/resources/cloudpcdomainjoinconfiguration?view=graph-rest-beta&preserve-view=true) and [cloudPcSupportedRegion](/graph/api/resources/cloudpcsupportedregion?view=graph-rest-beta&preserve-view=true).
 - Added the `cloudPCInventoryReport` member to the **cloudPcReportName** enumeration type. This enum is the return type for the **reportName** property on [cloudPcExportJob](/graph/api/resources/cloudPcExportJob?view=graph-rest-beta&preserve-view=true),  [getFrontlineReport action](/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta&preserve-view=true), and [getCloudPcRecommendationReports action](/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-beta&preserve-view=true).
 - Use the **category** property on [cloudPcSourceDeviceImage](/graph/api/resources/cloudpcsourcedeviceimage?view=graph-rest-beta&preserve-view=true) to get the category of the source image that is requested. For more information, see [Get cloudPcSourceDeviceImage objects with a specific category](/graph/api/cloudpcdeviceimage-getsourceimages?view=graph-rest-beta&preserve-view=true#example-2-get-cloudpcsourcedeviceimage-objects-with-a-specific-category).
-- Added `refreshPolicyConfiguration` as a supported value for the **status** property on the [cloudPC](/graph/api/resources/cloudpc?view=graph-rest-beta&preserve-view=true) and [cloudPcStatusSummary](/graph/api/resources/cloudpcstatussummary?view=graph-rest-beta&preserve-view=true) to indicates that the Cloud PC is in the process of refreshing the new policy configurations.
+- Added `refreshPolicyConfiguration` as a supported value for the **status** property on the [cloudPC](/graph/api/resources/cloudpc?view=graph-rest-beta&preserve-view=true) and [cloudPcStatusSummary](/graph/api/resources/cloudpcstatussummary?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is in the process of refreshing the new policy configurations.
+
+### Device and app management | Device updates
+
+Added a new approval and deployment management model for Windows quality updates in Autopatch-managed environments. You can now define quality update policies with customizable approval rules, assign deployment rings to group devices for phased rollout, and manage the approval status of update content before deploying to devices. The following resources provide more information:
+  - [policy](/graph/api/resources/windowsupdates-policy?view=graph-rest-beta&preserve-view=true)
+  - [qualityUpdatePolicy](/graph/api/resources/windowsupdates-qualityupdatepolicy?view=graph-rest-beta&preserve-view=true)
+  - [policyApproval](/graph/api/resources/windowsupdates-policyapproval?view=graph-rest-beta&preserve-view=true)
+  - [ring](/graph/api/resources/windowsupdates-ring?view=graph-rest-beta&preserve-view=true)
+  - [qualityUpdateRing](/graph/api/resources/windowsupdates-qualityupdatering?view=graph-rest-beta&preserve-view=true)
+
+### Groups
+
+Use the **welcomeMessageEnabled** property on the [group](/graph/api/resources/group?view=graph-rest-beta&preserve-view=true) resource to control whether a welcome message is sent to new members when they're added to a Microsoft 365 group. The default value is `true`.
 
 ### Identity and access | Identity and sign-in
 
-Use the **groupSyncInbound** property on [crossTenantIdentitySyncPolicyPartner](/graph/api/resources/crosstenantidentitysyncpolicypartner?view=graph-rest-beta&preserve-view=true) to define whether groups can be synchronized from a partner tenant in cross-tenant access policy settings.
+- Added `riskRemediation` as a new member to the [conditionalAccessGrantControl](/graph/api/resources/conditionalaccessgrantcontrols?view=graph-rest-beta&preserve-view=true#builtincontrols-property) enumeration. This value allows users to self-remediate their user risk through conditional access policies.
+- Use the **groupSyncInbound** property on [crossTenantIdentitySyncPolicyPartner](/graph/api/resources/crosstenantidentitysyncpolicypartner?view=graph-rest-beta&preserve-view=true) to define whether groups can be synchronized from a partner tenant in cross-tenant access policy settings.
 
 ### Message trace
 
@@ -95,7 +106,11 @@ Use the message trace API to track the flow of email messages through your Excha
 
 ### Reports | Identity and access reports
 
-- Added `qrCode` as a new supported value for the **usageAuthMethod** enumeration which is the type for the **authMethod** property on [credentialUsageSummary](/graph/api/resources/credentialusagesummary?view=graph-rest-beta&preserve-view=true), [userCredentialUsageDetails](/graph/api/resources/usercredentialusagedetails?view=graph-rest-beta&preserve-view=true), [userEventsSummary](/graph/api/resources/usereventssummary?view=graph-rest-beta&preserve-view=true), and [userRegistrationActivitySummary](/graph/api/resources/userregistrationactivitysummary?view=graph-rest-beta&preserve-view=true) resources. This value represents the use of the [QR code](/graph/api/resources/qrcodepinauthenticationmethod?view=graph-rest-beta&preserve-view=true) as an authentication method.
+Added `qrCode` as a new supported value for the **usageAuthMethod** enumeration which is the type for the **authMethod** property on [credentialUsageSummary](/graph/api/resources/credentialusagesummary?view=graph-rest-beta&preserve-view=true), [userCredentialUsageDetails](/graph/api/resources/usercredentialusagedetails?view=graph-rest-beta&preserve-view=true), [userEventsSummary](/graph/api/resources/usereventssummary?view=graph-rest-beta&preserve-view=true), and [userRegistrationActivitySummary](/graph/api/resources/userregistrationactivitysummary?view=graph-rest-beta&preserve-view=true) resources. This value represents the use of the [QR code](/graph/api/resources/qrcodepinauthenticationmethod?view=graph-rest-beta&preserve-view=true) as an authentication method.
+
+### Security | Alerts and incidents
+
+Added the **priorityScore** property to the [incident](/graph/api/resources/security-incident?view=graph-rest-beta&preserve-view=true) resource to provide a priority score for the incident from 0 to 100, with > 85 being the top priority, 15 - 85 medium priority, and < 15 low priority. This score is generated using machine learning and is based on multiple factors, including severity, disruption impact, threat intelligence, alert types, asset criticality, threat analytics, incident rarity, and additional priority signals.
 
 ### Security | Cloud zones
 
@@ -106,10 +121,6 @@ Added support for managing *zones* in Microsoft Defender for Cloud, enabling org
 - Deprecated the **accessedResources** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) in favor of the **accessedResources_v2** property.
 - Use the **accessedResources_v2** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) to get detailed information about resources accessed during the conversation, including identifiers, access type, and status.
 - Use the **agents** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) to get information about AI agents that participated in the preparation of the message.
-
-### Security | Alerts and incidents
-
-Added the **priorityScore** property to the [incident](/graph/api/resources/security-incident?view=graph-rest-beta&preserve-view=true) resource to provide a priority score for the incident from 0 to 100, with > 85 being the top priority, 15 - 85 medium priority, and < 15 low priority. This score is generated using machine learning and is based on multiple factors, including severity, disruption impact, threat intelligence, alert types, asset criticality, threat analytics, incident rarity, and additional priority signals.
 
 ### Teamwork and communications | Apps
 
