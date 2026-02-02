@@ -1523,18 +1523,6 @@
       ]
         },
         {
-          "name": "Audit log query",
-          "overview": "../../resources/security-auditlogquery.md",
-          "resources": [
-            "microsoft.graph.security.auditLogQuery",
-            "microsoft.graph.security.auditLogRecord"
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.auditData",
-            "microsoft.graph.security.defaultAuditData"
-          ]
-        },
-        {
           "name": "Partner billing reports",
           "overview": "../../resources/partners-billing-api-overview.md",
           "resources": [
@@ -1645,6 +1633,18 @@
                 "attackSimulationTrainingUserCoverage"
               ]
             }
+          ]
+        },
+        {
+          "name": "Audit log query",
+          "overview": "../../resources/security-auditlogquery.md",
+          "resources": [
+            "microsoft.graph.security.auditLogQuery",
+            "microsoft.graph.security.auditLogRecord"
+          ],
+          "complexTypes": [
+            "microsoft.graph.security.auditData",
+            "microsoft.graph.security.defaultAuditData"
           ]
         },
         {
