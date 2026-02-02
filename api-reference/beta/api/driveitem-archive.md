@@ -14,17 +14,17 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Archives a [DriveItem](../resources/driveitem.md).
+Archives a [driveItem](../resources/driveitem.md).
 
 When archiving a single active file using a synchronous request, the file is archived immediately.
 
 > [!NOTE]
-> File DriveItem archive is not supported when the request includes the Prefer: respond-async header.
+> Archiving a driveItem file is not supported when the request includes the Prefer: respond-async header.
 
 When archiving a folder using an asynchronous request, a [monitor URL](/graph/long-running-actions-overview) is returned in the response. Use the monitor URL to track progress until the operation completes.
 
 > [!NOTE]
-> Folder DriveItem archive is supported only when the request includes the Prefer: respond-async header
+> Archiving a driveItem folder is supported only when the request includes the Prefer: respond-async header
 
 ## Permissions
 
@@ -67,18 +67,17 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this action returns a `204 No Content` response code for file [DriveItem](../resources/driveitem.md).
+If successful, this action returns a `204 No Content` response code for a [driveItem](../resources/driveitem.md) file.
 
-Otherwise, if successful, this action returns a `202 Accepted` response code, with a monitor URI, is returned for folder [DriveItem](../resources/driveitem.md).
+Otherwise, if successful, this action returns a `202 Accepted` response code, with a monitor URI, is returned for a [driveItem](../resources/driveitem.md) folder.
 
 ## Examples
 
-### Example 1: Archive File DriveItem
+### Example 1: Archive driveItem file
 
 #### Request
 
-The following example shows a request for file archive operation on the [DriveItem](../resources/driveitem.md). The request completes synchronously and returns `204 No Content`
-
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "archive-file"
@@ -101,12 +100,11 @@ The following example shows the response.
 HTTP/1.1 204 No Content
 ```
 
-### Example 2: Archive Folder DriveItem
+### Example 2: Archive driveItem Folder
 
 #### Request
 
-The following example shows a request for folder archive operation on the [DriveItem](../resources/driveitem.md). The request completes asynchronously and returns `202 Accepted` with a [monitor URL](/graph/long-running-actions-overview).
-
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "archive-folder"

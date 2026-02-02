@@ -14,17 +14,17 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Unarchives a [DriveItem](../resources/driveitem.md).
+Unarchives a [driveItem](../resources/driveitem.md).
 
 When unarchiving a single recently archived file, the file is unarchived immediately. Otherwise, the archived file starts the reactivation process.
 
 > [!NOTE]
-> File DriveItem unarchive is not supported when the request includes the Prefer: respond-async header.
+> Unarchiving a driveItem file is not supported when the request includes the Prefer: respond-async header.
 
 When unarchiving a folder using an asynchronous request, a [monitor URL](/graph/long-running-actions-overview) is returned in the response. Use the monitor URL to track progress until the operation completes.
 
 > [!NOTE]
-> Folder DriveItem unarchive is supported only when the request includes the Prefer: respond-async header
+> Unarchiving a driveItem folder is supported only when the request includes the Prefer: respond-async header
 
 ## Permissions
 
@@ -67,16 +67,17 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this action returns a `200 OK` response code for file [DriveItem](../resources/driveitem.md). The response body will include the driveItem’s metadata, with the archiveStatus property included under the [FileFacet](../resources/file.md).
+If successful, this action returns a `200 OK` response code for a [driveItem](../resources/driveitem.md) file. The response body will include the driveItem’s metadata, with the archiveStatus property included under the [FileFacet](../resources/file.md).
 
-Otherwise, if successful, this action returns a `202 Accepted` response code, with a monitor URI, for folder [DriveItem](../resources/driveitem.md).
+Otherwise, if successful, this action returns a `202 Accepted` response code, with a monitor URI, for a [driveItem](../resources/driveitem.md) folder.
 
 ## Examples
 
-### Example 1: Unarchive File DriveItem
+### Example 1: Unarchive driveItem file
 
 #### Request
-The following example shows a request for a file unarchive operation on the [DriveItem](../resources/driveitem.md). The request completes synchronously. It returns `200 OK` with the archiveStatus property under the [FileFacet](../resources/file.md).
+
+The following example shows a request.
 
 <!-- {
   "blockType": "request",
@@ -119,10 +120,11 @@ Content-type: application/json
     "size": 157286400
 ```
 
-### Example 2: Unarchive Folder DriveItem
+### Example 2: Unarchive driveItem folder
 
 #### Request
-The following example shows a request for a folder unarchive operation on the [DriveItem](../resources/driveitem.md). The request completes asynchronously and returns `202 Accepted` with a [monitor URL](/graph/long-running-actions-overview).
+
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "unarchive-folder"
@@ -134,7 +136,7 @@ Content-type: application/json
 Prefer: respond-async
 ```
 
-#### Folder Unarchive Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
