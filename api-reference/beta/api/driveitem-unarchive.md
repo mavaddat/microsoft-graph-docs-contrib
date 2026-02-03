@@ -101,10 +101,12 @@ The following example shows the response.
 ``` http
 HTTP/1.1 200 OK
 Content-type: application/json
+{
     "file": {
         "archiveStatus": "reactivating",
         "mimeType": "text/plain"
     }
+}
 ```
 
 ### Example 2: Unarchive driveItem folder
