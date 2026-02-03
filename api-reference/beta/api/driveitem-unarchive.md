@@ -95,7 +95,8 @@ The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
-  "truncated": true
+  "truncated": true,
+  "@odata.type": "microsoft.graph.file"
 }
 -->
 ``` http
@@ -105,6 +106,9 @@ Content-type: application/json
 {
     "file": {
         "archiveStatus": "reactivating",
+        "hashes": {
+            "quickXorHash": "Sy2meSLBupGTGjRSLAv3LPpWqwo="
+        },
         "mimeType": "text/plain"
     }
 }
