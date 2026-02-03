@@ -95,6 +95,12 @@ This resource is an open type that allows additional properties beyond those doc
 |verifiedPublisher|[verifiedPublisher](../resources/verifiedpublisher.md)|Specifies the verified publisher of the agent identity blueprint. Inherited from [application](../resources/application.md).|
 |web|[webApplication](../resources/webapplication.md)|Specifies settings for a web application. Inherited from [application](../resources/application.md).|
 
+
+### Limits on requested permissions per app
+
+[!INCLUDE [microsoft-graph-permissions-limits](../../../concepts/includes/msgraph-permissions-limits.md)]
+
+
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
@@ -103,10 +109,6 @@ This resource is an open type that allows additional properties beyond those doc
 |inheritablePermissions|[inheritablePermission](../resources/inheritablepermission.md) collection|Defines scopes of a resource application that may be automatically granted to agent identities without additional consent.|
 |owners|[directoryObject](../resources/directoryobject.md) collection|Directory objects that are owners of this agent identity blueprint. The owners are a set of nonadmin users or service principals allowed to modify this object. Read-only. Nullable. Inherited from [microsoft.graph.application](../resources/application.md)|
 |sponsors|[directoryObject](../resources/directoryobject.md) collection|The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances. Required during the create operation.|
-
-### Limits on requested permissions per app
-
-[!INCLUDE [microsoft-graph-permissions-limits](../../../concepts/includes/msgraph-permissions-limits.md)]
 
 ## JSON representation
 The following JSON representation shows the resource type. Only a subset of all properties are returned by default. All other properties can only be retrieved using `$select`.
