@@ -47,6 +47,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 POST /drive/root/archive
 POST /drives/{drivesId}/root/archive
 POST /shares/{sharesId}/root/archive
+POST /drives/{drivesId}/items/{driveItemId}/archive
 POST /drive/items/{driveItemId}/archive
 POST /shares/{sharesId}/driveItem/archive
 POST /drive/bundles/{driveItemId}/archive
@@ -84,7 +85,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/drive/items/{driveItemId}/archive
+POST https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/archive
 ```
 
 #### Response
@@ -111,8 +112,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/drive/items/{driveItemId}/archive
-Content-type: application/json
+POST https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/archive
 Prefer: respond-async
 ```
 

@@ -47,6 +47,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 POST /drive/root/unarchive
 POST /drives/{drivesId}/root/unarchive
 POST /shares/{sharesId}/root/unarchive
+POST /drives/{drivesId}/items/{driveItemId}/unarchive
 POST /drive/items/{driveItemId}/unarchive
 POST /shares/{sharesId}/driveItem/unarchive
 POST /drive/bundles/{driveItemId}/unarchive
@@ -85,7 +86,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/drive/items/{driveItemId}/unarchive
+POST https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/unarchive
 ```
 
 #### Response
@@ -100,24 +101,10 @@ The following example shows the response.
 ``` http
 HTTP/1.1 200 OK
 Content-type: application/json
-    "createdDateTime": "2016-03-21T20:01:37Z",
-    "cTag": "\"c:{86EB4C8E-D20D-46B9-AD41-23B8868DDA8A},0\"",
-    "eTag": "\"{86EB4C8E-D20D-46B9-AD41-23B8868DDA8A},1\"",
-    "id": "01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK",
-    "lastModifiedDateTime": "2025-07-21T20:01:37Z",
-    "name": "Feature.txt",
     "file": {
         "archiveStatus": "reactivating",
-        "hashes": {
-            "quickXorHash": "Sy2meSLBupGTGjRSLAv3LPpWqwo="
-        },
         "mimeType": "text/plain"
-    },
-    "fileSystemInfo": {
-        "createdDateTime": "2025-07-21T20:01:37Z",
-        "lastModifiedDateTime": "2025-07-21T20:01:37Z"
-    },
-    "size": 157286400
+    }
 ```
 
 ### Example 2: Unarchive driveItem folder
@@ -131,8 +118,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/drive/items/{driveItemId}/unarchive
-Content-type: application/json
+POST https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/unarchive
 Prefer: respond-async
 ```
 
