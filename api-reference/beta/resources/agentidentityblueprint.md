@@ -104,6 +104,10 @@ This resource is an open type that allows additional properties beyond those doc
 |owners|[directoryObject](../resources/directoryobject.md) collection|Directory objects that are owners of this agent identity blueprint. The owners are a set of nonadmin users or service principals allowed to modify this object. Read-only. Nullable. Inherited from [microsoft.graph.application](../resources/application.md)|
 |sponsors|[directoryObject](../resources/directoryobject.md) collection|The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances. Required during the create operation.|
 
+### Limits on requested permissions per app
+
+[!INCLUDE [microsoft-graph-permissions-limits](../../../concepts/includes/msgraph-permissions-limits.md)]
+
 ## JSON representation
 The following JSON representation shows the resource type. Only a subset of all properties are returned by default. All other properties can only be retrieved using `$select`.
 <!-- {
