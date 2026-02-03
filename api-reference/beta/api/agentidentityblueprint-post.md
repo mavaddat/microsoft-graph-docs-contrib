@@ -56,6 +56,7 @@ Content-type: application/json
 
 {
   "displayName": "Display name",
+  "requiredResourceAccess": [],
   "sponsors@odata.bind": [
     "https://graph.microsoft.com/beta/users/e64405d7-f156-4ce1-b1f5-b0d801c367f3"
    ]
@@ -79,6 +80,7 @@ Content-type: application/json
     "createdDateTime": "2019-09-17T19:10:35.2742618Z",
     "displayName": "Display name",
     "publisherDomain": "contoso.com",
+    "requiredResourceAccess": [],
     "signInAudience": "AzureADMyOrg"
 }
 ```
