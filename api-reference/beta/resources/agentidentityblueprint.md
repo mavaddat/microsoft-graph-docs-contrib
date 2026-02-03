@@ -127,6 +127,7 @@ The following JSON representation shows the resource type. Only a subset of all 
   "displayName": "String",
   "groupMembershipClaims": "String",
   "publisherDomain": "String",
+  "requiredResourceAccess": [{"@odata.type": "microsoft.graph.requiredResourceAccess"}],
   "signInAudience": "String",
   "tags": ["String"],
   "tokenEncryptionKeyId": "Guid",
