@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Archives a [driveItem](../resources/driveitem.md).
+Archive a [driveItem](../resources/driveitem.md).
 
 When archiving a single active file using a synchronous request, the file is archived immediately.
 
@@ -101,7 +101,7 @@ The following example shows the response.
 HTTP/1.1 204 No Content
 ```
 
-### Example 2: Archive driveItem Folder
+### Example 2: Archive driveItem folder
 
 #### Request
 

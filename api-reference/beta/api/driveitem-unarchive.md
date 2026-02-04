@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Unarchives a [driveItem](../resources/driveitem.md).
+Unarchive a [driveItem](../resources/driveitem.md).
 
 When unarchiving a single recently archived file, the file is unarchived immediately. Otherwise, the archived file starts the reactivation process.
 
