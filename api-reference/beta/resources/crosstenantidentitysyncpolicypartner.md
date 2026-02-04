@@ -37,9 +37,9 @@ Inherits from [policyDeletableItem](../resources/policydeletableitem.md).
 |:---|:---|:---|
 |deletedDateTime|DateTimeOffset|Shows the last date and time the policy was deleted.|
 |displayName|String|Display name for the cross-tenant user or group synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.|
-|groupSyncInbound|[crossTenantGroupSyncInbound](../resources/crosstenantgroupsyncinbound.md)|Defines whether groups can be synchronized from a partner tenant. Key.|
-|tenantId|String|Tenant identifier for the partner Microsoft Entra organization. Read-only.|
-|userSyncInbound|[crossTenantUserSyncInbound](../resources/crosstenantusersyncinbound.md)|Defines whether users can be synchronized from the partner tenant. Key. |
+|groupSyncInbound|[crossTenantGroupSyncInbound](../resources/crosstenantgroupsyncinbound.md)|Defines whether groups can be synchronized from a partner tenant.|
+|tenantId|String|Tenant identifier for the partner Microsoft Entra organization. Key. Read-only.|
+|userSyncInbound|[crossTenantUserSyncInbound](../resources/crosstenantusersyncinbound.md)|Defines whether users can be synchronized from the partner tenant.|
 
 ## Relationships
 
