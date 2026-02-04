@@ -18,6 +18,12 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## February 2026: New in preview only
+
+### Files
+
+- Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&preserve-view=true) and [driveItem: unarchive](/graph/api/driveitem-unarchive?view=graph-rest-beta&preserve-view=true) to enable organizations to archive/unarchive driveItems.
+
 ## January 2026: New and generally available
 
 ### Identity and access | Identity and sign-in
