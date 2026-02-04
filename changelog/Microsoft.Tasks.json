@@ -53,7 +53,7 @@
         {
           "Id": "23a612be-abd4-492b-afb3-2076bf2a297b",
           "ApiChange": "Method",
-          "ChangedApiName": "List messages",
+          "ChangedApiName": "List",
           "ChangeType": "Addition",
           "Description": "Added the [List messages](https://learn.microsoft.com/en-us/graph/api/plannertask-list-messages?view=graph-rest-beta) method to the [plannerTask](https://learn.microsoft.com/en-us/graph/api/resources/plannerTask?view=graph-rest-beta) resource.",
           "Target": "plannerTask"
@@ -61,7 +61,7 @@
         {
           "Id": "23a612be-abd4-492b-afb3-2076bf2a297b",
           "ApiChange": "Method",
-          "ChangedApiName": "Create message",
+          "ChangedApiName": "Create",
           "ChangeType": "Addition",
           "Description": "Added the [Create message](https://learn.microsoft.com/en-us/graph/api/plannertask-post-messages?view=graph-rest-beta) method to the [plannerTask](https://learn.microsoft.com/en-us/graph/api/resources/plannerTask?view=graph-rest-beta) resource.",
           "Target": "plannerTask"
@@ -69,7 +69,7 @@
         {
           "Id": "23a612be-abd4-492b-afb3-2076bf2a297b",
           "ApiChange": "Method",
-          "ChangedApiName": "Update message",
+          "ChangedApiName": "Update",
           "ChangeType": "Addition",
           "Description": "Added the [Update message](https://learn.microsoft.com/en-us/graph/api/plannertaskchatmessage-update?view=graph-rest-beta) method to the [plannerTaskChatMessage](https://learn.microsoft.com/en-us/graph/api/resources/plannerTaskChatMessage?view=graph-rest-beta) resource.",
           "Target": "plannerTaskChatMessage"
