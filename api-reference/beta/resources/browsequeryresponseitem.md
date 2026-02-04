@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the response of the [sharepointBrowseSession: browse](../api/sharepointbrowsesession-browse.md) and [oneDriveForBusinessBrowse: browse](../api/onedriveforbusinessbrowsesession-browse.md) APIs.
+Represents the response of the [sharepointBrowseSession](../api/sharepointbrowsesession-browse.md) and [oneDriveForBusinessBrowse](../api/onedriveforbusinessbrowsesession-browse.md) APIs.
 
 
 ## Properties

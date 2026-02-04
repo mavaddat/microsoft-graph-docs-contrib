@@ -1986,7 +1986,25 @@
       "Id": "9f23ea7f-462e-47a8-b6ec-eb95e225cff8",
       "Cloud": "Prod",
       "Version": "beta",
-      "CreatedDateTime": "2025-10-17T12:03:04.3321855Z",
+      "CreatedDateTime": "2026-02-03T12:03:04.3321855Z",
+      "WorkloadArea": "EnhancedRestore",
+      "SubArea": "Backup and Restore"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "9ca2c80b-e8fd-4738-99bc-f413d8976fc4",
+          "ApiChange": "Property",
+          "ChangedApiName": "restorePointId",
+          "ChangeType": "Addition",
+          "Description": "Added the **restorePointId** property to the [browseSessionBase](https://learn.microsoft.com/en-us/graph/api/resources/browseSessionBase?view=graph-rest-beta) resource.",
+          "Target": "browseSessionBase"
+        }
+      ],
+      "Id": "9ca2c80b-e8fd-4738-99bc-f413d8976fc4",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-01-28T12:54:21.4149243Z",
       "WorkloadArea": "EnhancedRestore",
       "SubArea": "Backup and Restore"
     }
