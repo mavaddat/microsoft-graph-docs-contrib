@@ -13,7 +13,7 @@ Use granular search queries to filter and search for specific mailbox artifacts 
 
 ## Overview
 
-The [artifactQuery](../main/api-reference/beta/resources/artifactquery.md) resource contains a `queryExpression` property that allows you to specify search criteria for mailbox artifacts. You can combine multiple properties using logical operators to create complex search expressions that filter restore points based on your specific requirements.
+The [artifactQuery](../api-reference/beta/resources/artifactquery.md) resource contains a `queryExpression` property that allows you to specify search criteria for mailbox artifacts. You can combine multiple properties using logical operators to create complex search expressions that filter restore points based on your specific requirements.
 
 ## Supported properties
 
