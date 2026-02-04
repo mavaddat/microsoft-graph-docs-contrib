@@ -24,8 +24,8 @@ Represents a chat message associated with a [plannerTask](plannertask.md). Task 
 | [Create message](../api/plannertask-post-messages.md) | [plannerTaskChatMessage](plannertaskchatmessage.md) | Create a new chat message on a Planner task. |
 | [Update message](../api/plannertaskchatmessage-update.md) | [plannerTaskChatMessage](plannertaskchatmessage.md) | Update the properties of a chat message. |
 | [Delete message](../api/plannertaskchatmessage-delete.md) | None | Delete a chat message from a Planner task. |
-| [Add reaction](../api/plannertaskchatmessage-post-reactions.md) | None | Add a reaction to a chat message. |
-| [Remove reaction](../api/plannertaskchatmessage-delete-reactions.md) | None | Remove a reaction from a chat message. |
+| [Set reaction](../api/plannertaskchatmessage-setreaction.md) | None | Set a reaction to a chat message. |
+| [Unset reaction](../api/plannertaskchatmessage-unsetreaction.md) | None | Remove a reaction from a chat message. |
 
 ## Properties
 

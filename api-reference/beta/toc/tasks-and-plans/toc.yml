@@ -322,10 +322,10 @@ items:
       href: ../../api/plannertaskchatmessage-update.md
     - name: Delete message
       href: ../../api/plannertaskchatmessage-delete.md
-    - name: Add reaction
-      href: ../../api/plannertaskchatmessage-post-reactions.md
-    - name: Remove reaction
-      href: ../../api/plannertaskchatmessage-delete-reactions.md
+    - name: Set reaction
+      href: ../../api/plannertaskchatmessage-setreaction.md
+    - name: Unset reaction
+      href: ../../api/plannertaskchatmessage-unsetreaction.md
   - name: Planner task chat reaction
     href: ../../resources/plannertaskchatreaction.md
   - name: Planner task chat reaction event

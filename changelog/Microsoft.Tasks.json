@@ -85,17 +85,17 @@
         {
           "Id": "23a612be-abd4-492b-afb3-2076bf2a297b",
           "ApiChange": "Method",
-          "ChangedApiName": "Add reaction",
+          "ChangedApiName": "setReaction",
           "ChangeType": "Addition",
-          "Description": "Added the [Add reaction](https://learn.microsoft.com/en-us/graph/api/plannertaskchatmessage-post-reactions?view=graph-rest-beta) method to the [plannerTaskChatMessage](https://learn.microsoft.com/en-us/graph/api/resources/plannerTaskChatMessage?view=graph-rest-beta) resource.",
+          "Description": "Added the [setReaction](https://learn.microsoft.com/en-us/graph/api/plannertaskchatmessage-setreaction?view=graph-rest-beta) method to the [plannerTaskChatMessage](https://learn.microsoft.com/en-us/graph/api/resources/plannerTaskChatMessage?view=graph-rest-beta) resource.",
           "Target": "plannerTaskChatMessage"
         },
         {
           "Id": "23a612be-abd4-492b-afb3-2076bf2a297b",
           "ApiChange": "Method",
-          "ChangedApiName": "Remove reaction",
+          "ChangedApiName": "unsetReaction",
           "ChangeType": "Addition",
-          "Description": "Added the [Remove reaction](https://learn.microsoft.com/en-us/graph/api/plannertaskchatmessage-delete-reactions?view=graph-rest-beta) method to the [plannerTaskChatMessage](https://learn.microsoft.com/en-us/graph/api/resources/plannerTaskChatMessage?view=graph-rest-beta) resource.",
+          "Description": "Added the [unsetReaction](https://learn.microsoft.com/en-us/graph/api/plannertaskchatmessage-unsetreaction?view=graph-rest-beta) method to the [plannerTaskChatMessage](https://learn.microsoft.com/en-us/graph/api/resources/plannerTaskChatMessage?view=graph-rest-beta) resource.",
           "Target": "plannerTaskChatMessage"
         }
       ],

@@ -109,8 +109,8 @@ Added support for chat messaging on Planner tasks, enabling users to create, upd
 - [Create message](/graph/api/plannertask-post-messages?view=graph-rest-beta&preserve-view=true)
 - [Update message](/graph/api/plannertaskchatmessage-update?view=graph-rest-beta&preserve-view=true)
 - [Delete message](/graph/api/plannertaskchatmessage-delete?view=graph-rest-beta&preserve-view=true)
-- [Add reaction](/graph/api/plannertaskchatmessage-post-reactions?view=graph-rest-beta&preserve-view=true)
-- [Remove reaction](/graph/api/plannertaskchatmessage-delete-reactions?view=graph-rest-beta&preserve-view=true)
+- [setReaction](/graph/api/plannertaskchatmessage-setreaction?view=graph-rest-beta&preserve-view=true)
+- [unsetReaction](/graph/api/plannertaskchatmessage-unsetreaction?view=graph-rest-beta&preserve-view=true)
 
 ### Tenant administration | Configuration management
 
