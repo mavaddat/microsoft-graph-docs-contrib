@@ -45,13 +45,9 @@ POST /solutions/backupRestore/oneDriveForBusinessBrowseSessions/{oneDriveForBusi
 
 ## Request body
 
-### Get top browsable locations
+To get top browsable locations, in the request body, supply an empty JSON object `{}` for this method to get the list of the top browsable locations.
 
-In the request body, supply an empty JSON object `{}` for this method to get the list of the top browsable locations.
-
-### Browse a specify scope
-
-In the request body, supply a JSON representation of the following parameters.
+To browse a specify scope, in the request body, supply a JSON representation of the following parameters.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
