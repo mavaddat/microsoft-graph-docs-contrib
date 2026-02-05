@@ -34,7 +34,7 @@ GET /planner/tasks/{task-id}/messages
 
 ## Optional query parameters
 
-This method supports the `$skipToken` query parameter for paging. Other OData query parameters are not supported.
+This method supports the `$skipToken` query parameter for paging. This method doesn't support other OData query parameters.
 
 ## Request headers
 

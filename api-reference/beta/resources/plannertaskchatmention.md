@@ -20,7 +20,7 @@ Represents a mention in a [plannerTaskChatMessage](plannertaskchatmessage.md). M
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-| mentioned | String | The user ID of the user who is mentioned. |
+| mentioned | String | The ID of the mentioned user. |
 | mentionType | plannerTaskChatMentionType | The type of mention. The possible values are: `user`, `unknownFutureValue`. |
 | position | Int32 | The zero-based position of the mention in the message content. |
 

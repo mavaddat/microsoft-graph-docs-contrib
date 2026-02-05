@@ -58,7 +58,7 @@ This method can return any of the [HTTP status codes](/graph/errors). The most c
 
 ## Examples
 
-### Example 1: Create a simple message
+### Example 1: Create a message
 
 #### Request
 
