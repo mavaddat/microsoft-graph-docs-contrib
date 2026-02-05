@@ -153,6 +153,14 @@
           "ChangeType": "Addition",
           "Description": "Added the [setReaction](https://learn.microsoft.com/en-us/graph/api/plannertaskchatmessage-setreaction?view=graph-rest-beta) method to the [plannerTaskChatMessage](https://learn.microsoft.com/en-us/graph/api/resources/plannertaskchatmessage?view=graph-rest-beta) resource.",
           "Target": "plannerTaskChatMessage"
+        },
+        {
+          "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "ApiChange": "Method",
+          "ChangedApiName": "unsetReaction",
+          "ChangeType": "Addition",
+          "Description": "Added the [unsetReaction](https://learn.microsoft.com/en-us/graph/api/plannertaskchatmessage-unsetreaction?view=graph-rest-beta) method to the [plannerTaskChatMessage](https://learn.microsoft.com/en-us/graph/api/resources/plannertaskchatmessage?view=graph-rest-beta) resource.",
+          "Target": "plannerTaskChatMessage"
         }
       ],
       "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
