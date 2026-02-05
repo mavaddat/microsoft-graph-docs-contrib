@@ -1,6 +1,6 @@
 ---
-title: "Granular search queries for backup and restore APIs"
-description: "Learn how to construct granular search queries to filter mailbox artifacts using the Microsoft Graph backup and restore APIs."
+title: Filtering mailbox artifacts with granular search queries"
+description: "Learn how to create granular search expressions to filter mailbox artifacts during backup and restore operations with Microsoft Graph APIs."
 author: "subham-rkb"
 ms.date: 02/04/2026
 ms.localizationpriority: medium
