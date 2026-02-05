@@ -261,6 +261,7 @@
         "Outlook",
         "Outlook calendar"
       ],
+      "overview": "../../resources/calendar-overview.md",
       "resources": [
         "calendar",
         "event",
@@ -751,8 +752,13 @@
             "microsoft.graph.windowsUpdates.deployment",
             "microsoft.graph.windowsUpdates.deploymentAudience",
             "microsoft.graph.windowsUpdates.operationalInsightsConnection",
+            "microsoft.graph.windowsUpdates.policy",
+            "microsoft.graph.windowsUpdates.qualityUpdatePolicy",
+            "microsoft.graph.windowsUpdates.policyApproval",
             "microsoft.graph.windowsUpdates.product",
             "microsoft.graph.windowsUpdates.resourceConnection",
+            "microsoft.graph.windowsUpdates.ring",
+            "microsoft.graph.windowsUpdates.qualityUpdateRing",
             "microsoft.graph.windowsUpdates.updatableAsset",
             "microsoft.graph.windowsUpdates.updatableAssetGroup",
             "microsoft.graph.windowsUpdates.updatePolicy"
@@ -763,6 +769,8 @@
             "adminWindowsUpdates",
             "microsoft.graph.windowsUpdates.applicableContent",
             "microsoft.graph.windowsUpdates.applicableContentDeviceMatch",
+            "microsoft.graph.windowsUpdates.approvalRule",
+            "microsoft.graph.windowsUpdates.assignedGroup",
             "microsoft.graph.windowsUpdates.azureADDeviceRegistrationError",
             "microsoft.graph.windowsUpdates.buildVersionDetails",
             "microsoft.graph.windowsUpdates.catalogContent",
@@ -781,9 +789,12 @@
             "microsoft.graph.windowsUpdates.driverUpdateFilter",
             "microsoft.graph.windowsUpdates.durationDrivenRolloutSettings",
             "microsoft.graph.windowsUpdates.edition",
+            "microsoft.graph.windowsUpdates.excludedGroupAssignment",
             "microsoft.graph.windowsUpdates.expediteSettings",
             "microsoft.graph.windowsUpdates.featureUpdateCatalogEntry",
             "microsoft.graph.windowsUpdates.gradualRolloutSettings",
+            "microsoft.graph.windowsUpdates.groupAssignment",
+            "microsoft.graph.windowsUpdates.includedGroupAssignment",
             "microsoft.graph.windowsUpdates.itemBody",
             "microsoft.graph.windowsUpdates.knowledgeBaseArticle",
             "microsoft.graph.windowsUpdates.knownIssue",
@@ -791,10 +802,13 @@
             "microsoft.graph.windowsUpdates.monitoringRule",
             "microsoft.graph.windowsUpdates.monitoringSettings",
             "microsoft.graph.windowsUpdates.productRevision",
+            "microsoft.graph.windowsUpdates.qualityUpdateApprovalRule",
             "microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry",
             "microsoft.graph.windowsUpdates.qualityUpdateCveSeverityInformation",
             "microsoft.graph.windowsUpdates.qualityUpdateFilter",
             "microsoft.graph.windowsUpdates.rateDrivenRolloutSettings",
+            "microsoft.graph.windowsUpdates.recoveryApprovalRule",
+            "microsoft.graph.windowsUpdates.recoveryUpdateCatalogEntry",
             "microsoft.graph.windowsUpdates.remediationUpdateFilter",
             "microsoft.graph.windowsUpdates.safeguardProfile",
             "microsoft.graph.windowsUpdates.safeguardSettings",
@@ -1037,6 +1051,7 @@
         "microsoft.graph.externalConnectors.itemIdResolver",
         "microsoft.graph.externalConnectors.property",
         "microsoft.graph.externalConnectors.propertyRule",
+        "microsoft.graph.externalConnectors.principal",
         "publicError",
         "publicErrorDetail",
         "publicInnerError",
@@ -1642,6 +1657,14 @@
               ]
             },
             {
+              "name": "Fraud protection provider",
+              "resources": [
+                "fraudProtectionProvider",
+                "arkoseFraudProtectionProvider",
+                "humanSecurityFraudProtectionProvider"
+              ]
+            },
+            {
               "name": "Web application firewall",
               "resources": [
                 "webApplicationFirewallProvider",
@@ -1671,6 +1694,7 @@
                 "onEmailOtpSendListener",
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
+                "onPasswordSubmitListener",
                 "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
@@ -1801,6 +1825,7 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
+                "onPasswordSubmitCustomExtension",
                 "onTokenIssuanceStartCustomExtension"
               ]
             },
@@ -1822,14 +1847,13 @@
               "name": "Identity protection",
               "overview": "../../resources/identityprotection-overview.md",
               "resources": [
+                "agentRiskDetection",
                 "riskDetection",
+                "riskyAgent",
                 "riskyUser",
                 "riskyUserHistoryItem",
-                "servicePrincipalRiskDetection",
                 "riskyServicePrincipal",
-                "fraudProtectionProvider",
-                "arkoseFraudProtectionProvider",
-                "humanSecurityFraudProtectionProvider"
+                "servicePrincipalRiskDetection"
               ]
             },
             {
@@ -2360,7 +2384,7 @@
         "mailFolderOperation",
         "mailSearchFolder",
         "messageRule",
-        "userConfiguration"
+        "exchangeMessageTrace"
       ],
       "childNodes": [
         {
@@ -2841,6 +2865,16 @@
           ]
         },
         {
+          "name": "Cloud zones or scopes (preview)",
+          "resources": [
+            "microsoft.graph.security.zone",
+            "microsoft.graph.security.environment"
+          ],
+          "complexTypes": [
+            "microsoft.graph.security.auditInfo"
+          ]
+        },
+        {
           "name": "Data security and compliance",
           "resources": [
             "contentActivity",
@@ -2923,6 +2957,7 @@
           "complexTypes": [
             "microsoft.graph.security.ediscoveryAddToReviewSetOperation",
             "microsoft.graph.security.ediscoveryEstimateOperation",
+            "microsoft.graph.security.ediscoveryPurgeDataOperation",
             "microsoft.graph.security.reportFileMetadata"
           ]
         },
@@ -2951,7 +2986,8 @@
             "microsoft.graph.security.identityAccounts",
             "microsoft.graph.security.user",
             "microsoft.graph.security.sensorCandidate",
-            "microsoft.graph.security.sensorCandidateActivationConfiguration"
+            "microsoft.graph.security.sensorCandidateActivationConfiguration",
+            "microsoft.graph.security.autoAuditingConfiguration"
           ],
           "complexTypes": [
             "microsoft.graph.security.deploymentAccessKeyType",
@@ -3273,7 +3309,6 @@
           "name": "Administration",
           "resources": [
             "microsoft.graph.teamsAdministration.numberAssignment",
-            "microsoft.graph.teamsAdministration.teamsUserConfiguration",
             "microsoft.graph.teamsAdministration.telephoneNumberLongRunningOperation",
             "microsoft.graph.teamsAdministration.telephoneNumberManagementRoot",
             "microsoft.graph.teamsAdministration.teamsPolicyAssignment",
@@ -3564,6 +3599,31 @@
             "timeRange",
             "userSolutionRoot",
             "workforceIntegrationEncryption"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenant administration (preview)",
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
+          "shouldSort": true,
+          "resources": [
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationSnapshotJob"
+          ],
+          "complexTypes": [
+            "baselineParameter",
+            "baselineResource",
+            "clientCredentials",
+            "driftedProperty",
+            "errorDetail",
+            "openComplexDictionaryType"
           ]
         }
       ]

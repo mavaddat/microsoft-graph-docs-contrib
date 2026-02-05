@@ -5,7 +5,7 @@ doc_type: enumPageType
 ms.localizationpriority: medium
 ms.subservice: "non-product-specific"
 author: "MSGraphDocsvTeam"
-ms.date: 12/02/2025
+ms.date: 01/28/2026
 ms.custom: sfi-ropc-nochange
 ---
 
@@ -944,7 +944,7 @@ Namespace: microsoft.graph
 | remoteDesktopToken |
 | refreshToken       |
 
-### approverInformationVisibilityvalues
+### approverInformationVisibility values
 
 | Member |
 | ---- |
@@ -1839,6 +1839,7 @@ Namespace: microsoft.graph
 | fido2SecurityKey |
 | oneTimePasscode |
 | passKeySynced |
+| qrCode |
 
 ### authenticationAppAdminConfiguration values
 
@@ -3237,6 +3238,7 @@ Possible values for user account types (group membership), per Windows definitio
 | compliantApplication |
 | passwordChange |
 | unknownFutureValue |
+| riskRemediation |
 
 ### perUserMfaState values
 
@@ -5483,6 +5485,19 @@ Possible values for user account types (group membership), per Windows definitio
 | bullseye         |
 | unknownFutureValue |
 
+### exchangeMessageTraceStatus values
+
+|Member|
+|:---|
+|gettingStatus|
+|pending|
+|failed|
+|delivered|
+|expanded|
+|quarantined|
+|filteredAsSpam|
+|unknownFutureValue|
+
 ### notificationEventsType values
 
 |Member|
@@ -5870,3 +5885,55 @@ Possible values for user account types (group membership), per Windows definitio
 |unrestricted|
 |allowedTenants|
 |unknownFutureValue|
+
+### baselineParameterType values 
+
+|Member|
+|:---|
+|string|
+|integer|
+|boolean|
+|unknownFutureValue|
+
+### driftStatus values 
+
+|Member|
+|:---|
+|active|
+|fixed|
+|unknownFutureValue|
+
+### monitorMode values 
+
+|Member|
+|:---|
+|monitorOnly|
+|unknownFutureValue|
+
+### monitorRunStatus values 
+
+|Member|
+|:---|
+|successful|
+|partiallySuccessful|
+|failed|
+|unknownFutureValue|
+
+### monitorStatus values 
+
+|Member|
+|:---|
+|active|
+|inactive|
+|unknownFutureValue|
+
+### snapshotJobStatus values 
+
+|Member|
+|:---|
+|notStarted|
+|running|
+|succeeded|
+|failed|
+|unknownFutureValue|
+|partiallySuccessful|
