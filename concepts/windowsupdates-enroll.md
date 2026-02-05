@@ -1,11 +1,11 @@
 ---
 title: "Enroll in update management by Windows Autopatch"
 description: "Enroll a device in update management so that you can use Windows Autopatch to manage content delivered from Windows Update to that device."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
 ms.subservice: windows-autopatch
 doc_type: conceptualPageType
-ms.date: 11/07/2024
+ms.date: 01/28/2026
 ms.topic: how-to
 ---
 
@@ -23,7 +23,7 @@ The following example shows how to enroll a device in feature update management.
 
 ### Request
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/enrollAssets
 Content-Type: application/json
 
@@ -48,7 +48,7 @@ Content-Type: application/json
 
 ### Response
 
-``` http
+```http
 HTTP/1.1 202 Accepted
 ```
 
@@ -65,7 +65,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/983f0
 ```
 
 ### Response
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -90,7 +90,7 @@ When you [unenroll](/graph/api/windowsupdates-updatableasset-unenrollassets) a d
 
 ### Request
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/unenrollAssets
 Content-Type: application/json
 
@@ -107,7 +107,7 @@ Content-Type: application/json
 
 ### Response
 
-``` http
+```http
 HTTP/1.1 202 Accepted
 ```
 
@@ -115,11 +115,11 @@ You can unregister a device completely by deleting the device object. When a dev
 
 ### Request
 
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/admin/windows/updates/updatableAssets/{azureADDeviceId}
 ```
 
 ### Response
-``` http
+```http
 HTTP/1.1 202 Accepted
 ```

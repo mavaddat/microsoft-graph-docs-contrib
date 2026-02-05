@@ -32,6 +32,9 @@ GET /admin/cloudLicensing/allotments/{allotmentId}
 GET /admin/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
+<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_admin", "requestUrls": ["GET /admin/cloudLicensing/allotments/{id}", "GET /admin/cloudLicensing/assignments/{id}/allotment"] } -->
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-allotment-get-admin-permissions.md)]
+
 Permissions to get an **allotment** for a user:
 
 <!-- { "blockType": "ignored"} -->
@@ -42,7 +45,7 @@ GET /users/{userId}/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
 GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment", "GET /users/{id}/cloudLicensing/waitingMembers/{id}/allotment", "GET /me/cloudLicensing/assignments/{assignmentId}/allotment", "GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment"] } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_user", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment", "GET /users/{id}/cloudLicensing/waitingMembers/{id}/allotment", "GET /me/cloudLicensing/assignments/{assignmentId}/allotment", "GET /me/cloudLicensing/waitingMembers/{waitingMemberId}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usercloudlicensing-get-allotment-permissions.md)]
 
 Permissions to get an **allotment** for a group:
@@ -52,7 +55,7 @@ Permissions to get an **allotment** for a group:
 GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_2", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment"] } -->
+<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_group", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-groupcloudlicensing-get-allotment-permissions.md)]
 
 ## HTTP request
