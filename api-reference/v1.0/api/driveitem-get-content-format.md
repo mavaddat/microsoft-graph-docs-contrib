@@ -116,7 +116,7 @@ Location: https://b0mpua-by3301.files.1drv.com/y23vmagahszhxzlcvhasdhasghasodfi
 
 ### Error responses
 
-For more information about how errors are returned, see [Error Responses][error-response].
+For more information about how errors are returned, see [Error responses][error-response].
 
 [error-response]: /graph/errors
 [file-facet]: ../resources/file.md
