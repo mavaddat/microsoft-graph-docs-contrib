@@ -29,7 +29,7 @@ PATCH /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_update", "requestUrls": ["PATCH /admin/cloudLicensing/assignments/{id}", "PATCH /admin/cloudLicensing/allotments/{allotmentId}/assignments/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-update-assignment-permissions.md)]
 
 Permissions to update an **assignment** for a user:
 
@@ -40,7 +40,7 @@ PATCH /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_update_user", "requestUrls": ["PATCH /me/cloudLicensing/allotments/{id}/assignments/{id}", "PATCH /users/{id}/cloudLicensing/assignments/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-user-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usercloudlicensing-update-assignment-permissions.md)]
 
 Permissions to update an **assignment** for a group:
 
@@ -50,7 +50,7 @@ PATCH /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_update_group", "requestUrls": ["PATCH /groups/{id}/cloudLicensing/assignments/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-update-group-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-groupcloudlicensing-update-assignment-permissions.md)]
 
 ## HTTP request
 

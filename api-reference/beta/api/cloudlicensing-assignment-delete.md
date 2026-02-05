@@ -29,7 +29,7 @@ DELETE /admin/cloudLicensing/allotments/{allotmentId}/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_admin", "requestUrls": ["DELETE /admin/cloudLicensing/assignments/{id}", "DELETE /admin/cloudLicensing/allotments/{id}/assignments/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-admincloudlicensing-delete-assignment-permissions.md)]
 
 Permissions to delete an **assignment** for a user:
 
@@ -40,7 +40,7 @@ DELETE /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_user", "requestUrls": ["DELETE /me/cloudLicensing/assignments/{id}", "DELETE /users/{id}/cloudLicensing/assignments/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-user-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usercloudlicensing-delete-assignment-permissions.md)]
 
 Permissions to delete an **assignment** for a group:
 
@@ -50,7 +50,7 @@ DELETE /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_delete_group", "requestUrls": ["DELETE /groups/{id}/cloudLicensing/assignments/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-delete-group-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-groupcloudlicensing-delete-assignment-permissions.md)]
 
 ## HTTP request
 

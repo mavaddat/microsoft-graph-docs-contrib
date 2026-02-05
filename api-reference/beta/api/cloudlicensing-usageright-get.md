@@ -29,7 +29,7 @@ GET /users/{userId}/cloudLicensing/usageRights/{usageRightId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_get" } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-get-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usercloudlicensing-get-usageright-permissions.md)]
 
 Permissions to get a **usageRight** for a group:
 
@@ -39,7 +39,7 @@ GET /groups/{groupId}/cloudLicensing/usageRights/{usageRightId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_usageright_get_2", "requestUrls": ["GET /groups/{id}/cloudLicensing/usageRights/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usageright-get-2-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-groupcloudlicensing-get-usageright-permissions.md)]
 
 ## HTTP request
 

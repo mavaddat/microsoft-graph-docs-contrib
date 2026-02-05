@@ -40,7 +40,7 @@ GET /users/{userId}/cloudLicensing/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get_user", "requestUrls": ["GET /me/cloudLicensing/assignments/{id}"], "GET /users/{id}/cloudLicensing/assignments/{id}" } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-user-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-usercloudlicensing-get-assignment-permissions.md)]
 
 Permissions to get an **assignment** for a group:
 
@@ -50,7 +50,7 @@ GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get_group", "requestUrls": ["GET /groups/{id}/cloudLicensing/assignments/{id}"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-group-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-groupcloudlicensing-get-assignment-permissions.md)]
 
 ## HTTP request
 
