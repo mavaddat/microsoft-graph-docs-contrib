@@ -38,7 +38,7 @@ GET /users/{userId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get_allotment_permissions_user", "requestUrls": ["GET /users/{id}/cloudLicensing/assignments/{id}/allotment"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-user-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-2-permissions.md)]
 
 
 Permissions to get an **allotment** for a group:
@@ -49,7 +49,7 @@ GET /groups/{groupId}/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
 <!-- { "blockType": "permissions", "name": "cloudlicensing_assignment_get_allotment_permissions_group", "requestUrls": ["GET /groups/{id}/cloudLicensing/assignments/{id}/allotment"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-group-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-assignment-get-allotment-3-permissions.md)]
 
 ## HTTP request
 
