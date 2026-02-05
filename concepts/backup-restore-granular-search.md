@@ -1,5 +1,5 @@
 ---
-title: Filtering mailbox artifacts with granular search queries"
+title: "Filtering mailbox artifacts with granular search queries"
 description: "Learn how to create granular search expressions to filter mailbox artifacts during backup and restore operations with Microsoft Graph APIs."
 author: "subham-rkb"
 ms.date: 02/04/2026
