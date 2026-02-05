@@ -132,11 +132,11 @@
       "ChangeList": [
         {
           "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
-          "ApiChange": "Enum type",
-          "ChangedApiName": "plannerTaskChatMentionType",
+          "ApiChange": "EnumType",
+          "ChangedApiName": "plannerTaskChatMessageType",
           "ChangeType": "Addition",
-          "Description": "Added the **plannerTaskChatMentionType** enumeration type.",
-          "Target": "plannerTaskChatMentionType"
+          "Description": "Added the **plannerTaskChatMessageType** enumeration type.",
+          "Target": "plannerTaskChatMessageType"
         }
       ],
       "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
