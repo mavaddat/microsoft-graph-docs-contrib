@@ -125,6 +125,7 @@ Use the **welcomeMessageEnabled** property on the [group](/graph/api/resources/g
 
 ### Identity and access | Identity and sign-in
 
+- Added the [agentIdentityType](/graph/api/resources/agentidentitytype?view=graph-rest-beta&preserve-view=true) enumeration to represent the type of Microsoft Entra agent identity for risk detection and management. Use the **identityType** property on the [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) and [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) resources to classify different types of agent identities.
 - Added `riskRemediation` as a new member to the [conditionalAccessGrantControl](/graph/api/resources/conditionalaccessgrantcontrols?view=graph-rest-beta&preserve-view=true#builtincontrols-property) enumeration. This value allows users to self-remediate their user risk through conditional access policies.
 - Use the **groupSyncInbound** property on [crossTenantIdentitySyncPolicyPartner](/graph/api/resources/crosstenantidentitysyncpolicypartner?view=graph-rest-beta&preserve-view=true) to define whether groups can be synchronized from a partner tenant in cross-tenant access policy settings.
 
