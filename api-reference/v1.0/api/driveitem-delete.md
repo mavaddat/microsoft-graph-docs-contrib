@@ -49,7 +49,7 @@ DELETE /users/{userId}/drive/items/{itemId}
 
 ### Request
 
-Here's an example of how to call this API.
+The following example shows how to call this API.
 
 
 # [HTTP](#tab/http)
