@@ -19,7 +19,7 @@ The [artifactQuery](../api-reference/beta/resources/artifactquery.md) resource c
 
 The following table describes the properties you can use in query expressions.
 
-| Property | Description | Value Type | Supported Operators | Wildcard Support |
+| Property | Description | Value type | Supported operators | Wildcard support |
 |----------|-------------|------------|---------------------|------------------|
 | Subject | The subject of the message or primary searchable string for other item types | String | -like, -and (up to 3) | * (after string) |
 | Sender | Messages from the specified sender | Display name, Alias, SMTP address, or LegacyDN | -like | * (after string) |
