@@ -88,7 +88,7 @@ This resource supports:
 | [List trending](../api/insights-list-trending.md) | [trending](insights-trending.md) collection | Get a list of trending files. |
 | [Get content discovery settings](../api/usersettings-get.md) | [userSettings](usersettings.md) | Get users's content discovery settings. |
 | [Update content discovery settings](../api/usersettings-update.md) | None | Update users's content discovery settings. |
-| [List shared (deprecated)](../api/insights-list-shared.md) | [sharedInsight](insights-shared.md) collection | Get a list of shared files. This API is deprecated and will stop returning data after November, 2026. |
+| [List shared (deprecated)](../api/insights-list-shared.md) | [sharedInsight](insights-shared.md) collection | Get a list of shared files. This API is deprecated and will stop returning data after November 2026. |
 | [List used (deprecated)](../api/insights-list-used.md) | [usedInsight](insights-used.md) collection | Get a list of used files. This API is deprecated and will stop returning data after November 2026. |
 | **License management** |||
 | [Assign license](../api/user-assignlicense.md) | [user](user.md) | Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription. |
