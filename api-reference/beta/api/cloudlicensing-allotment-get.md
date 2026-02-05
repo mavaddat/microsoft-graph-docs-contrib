@@ -32,9 +32,6 @@ GET /admin/cloudLicensing/allotments/{allotmentId}
 GET /admin/cloudLicensing/assignments/{assignmentId}/allotment
 ```
 
-<!-- { "blockType": "permissions", "name": "cloudlicensing_allotment_get_admin", "requestUrls": ["GET /admin/cloudLicensing/allotments/{id}", "GET /admin/cloudLicensing/assignments/{id}/allotment"] } -->
-[!INCLUDE [permissions-table](../includes/permissions/cloudlicensing-allotment-get-admin-permissions.md)]
-
 Permissions to get an **allotment** for a user:
 
 <!-- { "blockType": "ignored"} -->
