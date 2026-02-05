@@ -1,6 +1,6 @@
 ---
 title: "browseQueryResponseItem resource type"
-description: "Represents the response of the sharepointBrowseSession: browse and oneDriveForBusinessBrowse: browse APIs."
+description: "Represents the response of the sharepointBrowseSession and oneDriveForBusinessBrowse APIs."
 author: "manikantsinghms"
 ms.date: 09/23/2025
 ms.localizationpriority: medium
