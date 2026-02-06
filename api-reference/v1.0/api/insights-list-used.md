@@ -13,7 +13,7 @@ ms.date: 04/04/2024
 Namespace: microsoft.graph
 
 > [!CAUTION]
-> The `/insights/used` API is deprecated and will stop returning data after November, 2026.
+> The `/insights/used` API is deprecated and will stop returning data after November 2026.
 
 Calculate and list the documents that a user has viewed or modified. 
 
