@@ -537,15 +537,23 @@
           "overview": "../../resources/cloud-licensing-api-overview.md",
           "keywords": [
             "Cloud licensing",
-            "Microsoft Cloud Licensing"
+            "Microsoft Cloud Licensing",
+            "licensing",
+            "license assignment",
+            "allotment"
           ],
           "resources": [
-            "microsoft.graph.cloudLicensing.usageRight"
+            "microsoft.graph.cloudLicensing.allotment",
+            "microsoft.graph.cloudLicensing.assignment",
+            "microsoft.graph.cloudLicensing.assignmentError",
+            "microsoft.graph.cloudLicensing.usageRight",          
+            "microsoft.graph.cloudLicensing.waitingMember"
           ],
           "complexTypes": [
             "microsoft.graph.cloudLicensing.groupCloudLicensing",
-            "microsoft.graph.cloudLicensing.userCloudLicensing",
-            "microsoft.graph.cloudLicensing.service"
+            "microsoft.graph.cloudLicensing.service",
+            "microsoft.graph.cloudLicensing.subscription",
+            "microsoft.graph.cloudLicensing.userCloudLicensing"
           ],
           "childNodes": []
         },
@@ -1063,6 +1071,7 @@
         "microsoft.graph.externalConnectors.itemIdResolver",
         "microsoft.graph.externalConnectors.property",
         "microsoft.graph.externalConnectors.propertyRule",
+        "microsoft.graph.externalConnectors.principal",
         "publicError",
         "publicErrorDetail",
         "publicInnerError",
@@ -1705,6 +1714,7 @@
                 "onEmailOtpSendListener",
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
+                "onPasswordSubmitListener",
                 "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
@@ -1835,6 +1845,7 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
+                "onPasswordSubmitCustomExtension",
                 "onTokenIssuanceStartCustomExtension"
               ]
             },
@@ -2966,6 +2977,7 @@
           "complexTypes": [
             "microsoft.graph.security.ediscoveryAddToReviewSetOperation",
             "microsoft.graph.security.ediscoveryEstimateOperation",
+            "microsoft.graph.security.ediscoveryPurgeDataOperation",
             "microsoft.graph.security.reportFileMetadata"
           ]
         },
