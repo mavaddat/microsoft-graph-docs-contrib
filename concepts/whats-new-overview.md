@@ -22,12 +22,12 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Granular browse and restore for backup storage
 
-Users can now browse a `fastRestore` point and selectively restore files and folders by creating a browse session.
+Users can now browse a `fastRestore` endpoint and selectively restore files and folders by creating a browse session.
 
 The granular restore process is designed to be simple and efficient and consists of three main steps:
 
 - **Create a browse session**  
-The user initiates a browse session for a specific restore point (backup snapshot).  
+  Initiate a browse session for a specific restore point (backup snapshot).  
   - You can create a [SharePoint browse session](../api-reference/beta/api/backuprestoreroot-post-sharepointbrowsesessions.md) or a [OneDrive for Business browse session](../api-reference/beta/api/backuprestoreroot-post-onedriveforbusinessrestoresessions.md).
 
 - **Browse items**  
@@ -36,7 +36,7 @@ The user initiates a browse session for a specific restore point (backup snapsho
   - You can browse items within a [SharePoint browse session](../api-reference/beta/api/sharepointbrowsesession-browse.md) or a [OneDrive for Business browse session](../api-reference/beta/api/onedriveforbusinessbrowsesession-browse.md).
 
 - **Create a restore session**  
-  The user selects one or more items from the browse session and initiates a restore session.  
+  Select one or more items from the browse session and initiates a restore session.  
   - Only the selected items are restored to their previous state, leaving the rest of the site or drive unchanged.  
   - You can create a [SharePoint granular restore session](../api-reference/beta/api/backuprestoreroot-post-sharepointrestoresessions.md#example-2-create-a-granular-restore-session) or a [OneDrive for Business granular restore session](../api-reference/beta/api/backuprestoreroot-post-onedriveforbusinessrestoresessions.md#example-2-create-a-granular-restore-session).
 
