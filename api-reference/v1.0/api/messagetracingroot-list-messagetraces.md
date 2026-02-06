@@ -61,7 +61,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following example shows how to retrieve the default top 1,000 message-trace information for the previous 48 hours, which is the default time period.
 
-##### Request
+#### Request
 
 The following example shows a request.
 <!-- {
