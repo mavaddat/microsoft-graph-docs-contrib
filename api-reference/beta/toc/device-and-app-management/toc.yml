@@ -130,6 +130,8 @@ items:
       href: ../../api/cloudlicensing-usercloudlicensing-list-usagerights.md
     - name: Get
       href: ../../api/cloudlicensing-usageright-get.md
+    - name: List assignments
+      href: ../../api/cloudlicensing-usageright-list-assignments.md
   - name: Waiting member
     items:
     - name: Waiting member
