@@ -17,7 +17,8 @@ Namespace: microsoft.graph
 Get a list of [exchangeMessageTrace](../resources/exchangeMessageTrace.md) objects.
 
 > [!NOTE]
-> This API has a throttling limit of 100 requests per 5 minutes. For more information, see [Microsoft Graph service-specific throttling limits](/graph/throttling-limits).
+> * Before you can use this API, ensure that the [Prerequisites](../resources/exchangemessagetrace#prerequisites) are met.
+> * This API has a throttling limit of 100 requests per 5 minutes. For more information, see [Microsoft Graph service-specific throttling limits](/graph/throttling-limits).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

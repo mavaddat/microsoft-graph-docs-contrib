@@ -39,6 +39,20 @@ Represents the trace information for an email message as it passes through the E
 |subject|String|The subject line of the message. <br/><br/>Supports `$filter` (`contains`, `startsWith`, `endsWith`).|
 |toIP|String|The destination IP address. For outgoing messages, this value is the public IP address in the resolved MX record for the destination domain. For incoming messages to Exchange Online, this value is blank. <br/><br/>Supports `$filter` (`eq`).|
 
+## Prerequisites
+ 
+Before you can use the [List message traces](../api/messagetracingroot-list-messagetraces.md) or [Get details by recipient](../api/exchangemessagetrace-getdetailsbyrecipient.md) APIs, you must provision a service principal in your tenant for the Microsoft application with the following application (client) ID: `8bd644d1-64a1-4d4b-ae52-2e0cbf64e373`. Provisioning the service principal creates a local representation of the application in your tenant and enables authentication and authorization for these APIs.
+ 
+To provision the service principal, you can follow these steps:
+ 
+1. Connect to Microsoft Graph PowerShell:
+    ```PowerShell
+    Connect-MgGraph -Scopes "Application.ReadWrite.All"
+    ```
+2. Run the following command to provision the service principal:
+    ```PowerShell
+    New-MgServicePrincipal -AppId 8bd644d1-64a1-4d4b-ae52-2e0cbf64e373
+
 ## Relationships
 
 None.
