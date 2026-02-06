@@ -25,7 +25,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "sharedWithMe",
           "ChangeType": "Deprecation",
-          "Description": "Deprecated the [sharedWithMe](https://learn.microsoft.com/en-us/graph/api/drive-sharedwithme?view=graph-rest-1.0) method on the [drive](https://learn.microsoft.com/en-us/graph/api/resources/drive?view=graph-rest-1.0) resource. This API is deprecated and will stop returning data after November, 2027.",
+          "Description": "Deprecated the [sharedWithMe](https://learn.microsoft.com/en-us/graph/api/drive-sharedwithme?view=graph-rest-1.0) method on the [drive](https://learn.microsoft.com/en-us/graph/api/resources/drive?view=graph-rest-1.0) resource. This API is deprecated and will stop returning data after November, 2026.",
           "Target": "drive"
         },
         {
@@ -33,7 +33,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "recent",
           "ChangeType": "Deprecation",
-          "Description": "Deprecated the [recent](https://learn.microsoft.com/en-us/graph/api/drive-recent?view=graph-rest-1.0) method on the [drive](https://learn.microsoft.com/en-us/graph/api/resources/drive?view=graph-rest-1.0) resource. This API is deprecated and will stop returning data after November, 2027.",
+          "Description": "Deprecated the [recent](https://learn.microsoft.com/en-us/graph/api/drive-recent?view=graph-rest-1.0) method on the [drive](https://learn.microsoft.com/en-us/graph/api/resources/drive?view=graph-rest-1.0) resource. This API is deprecated and will stop returning data after November 2026.",
           "Target": "drive"
         },
         {
@@ -4992,7 +4992,7 @@
       "WorkloadArea": "Files",
       "SubArea": ""
     },
-     {
+    {
       "ChangeList": [
         {
           "Id": "c81e7d2b-df4a-42db-a19e-c85713782820",
