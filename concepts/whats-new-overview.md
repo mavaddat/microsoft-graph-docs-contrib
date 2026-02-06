@@ -20,6 +20,27 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## February 2026: New and generally available
 
+### Granular browse and restore for backup storage
+
+Users can now browse a `fastRestore` endpoint and selectively restore files and folders by creating a browse session.
+
+The granular restore process is designed to be simple and efficient and consists of three main steps:
+
+- **Create a browse session**  
+  Initiate a browse session for a specific restore point (backup snapshot).  
+  - You can create a [SharePoint browse session](../api-reference/beta/api/backuprestoreroot-post-sharepointbrowsesessions.md) or a [OneDrive for Business browse session](../api-reference/beta/api/backuprestoreroot-post-onedriveforbusinessrestoresessions.md).
+
+- **Browse items**  
+  Once the session is created, the user can query it to list all backed-up items available within the browse session.  
+  - Results are returned as a collection of [browseQueryResponseItem](../api-reference/beta/resources/browsequeryresponseitem.md) objects, each representing a file, folder, or other resource.  
+  - You can browse items within a [SharePoint browse session](../api-reference/beta/api/sharepointbrowsesession-browse.md) or a [OneDrive for Business browse session](../api-reference/beta/api/onedriveforbusinessbrowsesession-browse.md).
+
+- **Create a restore session**  
+  Select one or more items from the browse session and initiates a restore session.  
+  - Only the selected items are restored to their previous state, leaving the rest of the site or drive unchanged.  
+  - You can create a [SharePoint granular restore session](../api-reference/beta/api/backuprestoreroot-post-sharepointrestoresessions.md#example-2-create-a-granular-restore-session) or a [OneDrive for Business granular restore session](../api-reference/beta/api/backuprestoreroot-post-onedriveforbusinessrestoresessions.md#example-2-create-a-granular-restore-session).
+
+
 ### Teamwork and communications | Administration
 - [Get the policy ID](/graph/api/teamsadministration-teamspolicyassignment-getpolicyid) for a given policy name and policy type within Teams administration.
 - [Assign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-assign) to a user using the user ID, policy type, and policy ID.
