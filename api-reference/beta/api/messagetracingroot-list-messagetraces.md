@@ -116,7 +116,7 @@ Content-Type: application/json
 
 The following example returns the message trace that matches the specified message trace ID (the `id` property).
 
-##### Request
+#### Request
 
 The following example shows a request.
 <!-- {
