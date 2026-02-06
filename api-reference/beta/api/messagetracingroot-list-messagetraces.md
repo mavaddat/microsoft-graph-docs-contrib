@@ -129,7 +129,7 @@ GET https://graph.microsoft.com/beta/admin/exchange/tracing/messageTraces?$filte
 ```
 
 
-##### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
