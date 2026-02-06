@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 > [!CAUTION]
-> The `/insights/shared` API is deprecated and will stop returning data after November, 2026.
+> The `/insights/shared` API is deprecated and will stop returning data after November 2026.
 
 Calculated insight that includes the list of documents shared with a user.
 
