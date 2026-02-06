@@ -525,15 +525,23 @@
           "overview": "../../resources/cloud-licensing-api-overview.md",
           "keywords": [
             "Cloud licensing",
-            "Microsoft Cloud Licensing"
+            "Microsoft Cloud Licensing",
+            "licensing",
+            "license assignment",
+            "allotment"
           ],
           "resources": [
-            "microsoft.graph.cloudLicensing.usageRight"
+            "microsoft.graph.cloudLicensing.allotment",
+            "microsoft.graph.cloudLicensing.assignment",
+            "microsoft.graph.cloudLicensing.assignmentError",
+            "microsoft.graph.cloudLicensing.usageRight",          
+            "microsoft.graph.cloudLicensing.waitingMember"
           ],
           "complexTypes": [
             "microsoft.graph.cloudLicensing.groupCloudLicensing",
-            "microsoft.graph.cloudLicensing.userCloudLicensing",
-            "microsoft.graph.cloudLicensing.service"
+            "microsoft.graph.cloudLicensing.service",
+            "microsoft.graph.cloudLicensing.subscription",
+            "microsoft.graph.cloudLicensing.userCloudLicensing"
           ],
           "childNodes": []
         },
@@ -1051,6 +1059,7 @@
         "microsoft.graph.externalConnectors.itemIdResolver",
         "microsoft.graph.externalConnectors.property",
         "microsoft.graph.externalConnectors.propertyRule",
+        "microsoft.graph.externalConnectors.principal",
         "publicError",
         "publicErrorDetail",
         "publicInnerError",
@@ -1656,6 +1665,14 @@
               ]
             },
             {
+              "name": "Fraud protection provider",
+              "resources": [
+                "fraudProtectionProvider",
+                "arkoseFraudProtectionProvider",
+                "humanSecurityFraudProtectionProvider"
+              ]
+            },
+            {
               "name": "Web application firewall",
               "resources": [
                 "webApplicationFirewallProvider",
@@ -1685,6 +1702,7 @@
                 "onEmailOtpSendListener",
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
+                "onPasswordSubmitListener",
                 "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
@@ -1815,6 +1833,7 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
+                "onPasswordSubmitCustomExtension",
                 "onTokenIssuanceStartCustomExtension"
               ]
             },
@@ -1841,11 +1860,8 @@
                 "riskyAgent",
                 "riskyUser",
                 "riskyUserHistoryItem",
-                "servicePrincipalRiskDetection",
                 "riskyServicePrincipal",
-                "fraudProtectionProvider",
-                "arkoseFraudProtectionProvider",
-                "humanSecurityFraudProtectionProvider"
+                "servicePrincipalRiskDetection"
               ]
             },
             {
@@ -2949,6 +2965,7 @@
           "complexTypes": [
             "microsoft.graph.security.ediscoveryAddToReviewSetOperation",
             "microsoft.graph.security.ediscoveryEstimateOperation",
+            "microsoft.graph.security.ediscoveryPurgeDataOperation",
             "microsoft.graph.security.reportFileMetadata"
           ]
         },
@@ -2977,7 +2994,8 @@
             "microsoft.graph.security.identityAccounts",
             "microsoft.graph.security.user",
             "microsoft.graph.security.sensorCandidate",
-            "microsoft.graph.security.sensorCandidateActivationConfiguration"
+            "microsoft.graph.security.sensorCandidateActivationConfiguration",
+            "microsoft.graph.security.autoAuditingConfiguration"
           ],
           "complexTypes": [
             "microsoft.graph.security.deploymentAccessKeyType",

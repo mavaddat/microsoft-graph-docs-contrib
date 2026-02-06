@@ -2,7 +2,7 @@
 title: "List applicableContent"
 description: "List applicable update content to offer to Microsoft Entra groups, Windows Autopatch groups, or both."
 author: "andredm7"
-ms.date: 01/20/2026
+ms.date: 01/27/2026
 ms.localizationpriority: medium
 ms.subservice: "windows-autopatch"
 doc_type: apiPageType
@@ -22,6 +22,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "windowsupdates_policy_list_applicablecontent" } -->
 [!INCLUDE [permissions-table](../includes/permissions/windowsupdates-policy-list-applicablecontent-permissions.md)]
+
+[!INCLUDE [rbac-windows-updates-apis](../includes/rbac-for-apis/rbac-windows-updates-apis.md)]
 
 ## HTTP request
 
