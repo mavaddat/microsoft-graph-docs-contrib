@@ -3,7 +3,7 @@ title: "userProtectionScopeContainer: compute"
 toc.title: "userProtectionScopeContainer: compute"
 description: "Compute the data protection policies and actions applicable to a specific user based on their context."
 author: "kylemar"
-ms.date: 06/19/2025
+ms.date: 02/06/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
@@ -47,6 +47,7 @@ POST /users/{usersId}/dataSecurityAndGovernance/protectionScopes/compute
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type  | application/json. Required. |
 | If-None-Match | Optional. This value is used by the API to determine if the policy state has changed since the last call to the API. |
+| Client-Request-Id  | String (GUID recommended). Optional. Unique identifier for this request, which is used for tracing and debugging in logs and support interactions. If an ID is not provided, one may be generated automatically. |
 
 ## Request body
 

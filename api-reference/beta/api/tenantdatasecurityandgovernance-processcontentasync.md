@@ -2,8 +2,8 @@
 title: "tenantDataSecurityAndGovernance: processContentAsync"
 toc.title: "tenantDataSecurityAndGovernance: processContentAsync"
 description: "Process a batch of tenant-wide content entries asynchronously against data protection policies."
-author: "ArunGedela"
-ms.date: 04/08/2025
+author: "v-reezaali"
+ms.date: 02/06/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
@@ -38,6 +38,7 @@ POST /security/dataSecurityAndGovernance/processContentAsync
 | :------------ | :------------ |
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type  | application/json. Required. |
+| Client-Request-Id  | String (GUID recommended). Optional. Unique identifier for this request, which is used for tracing and debugging in logs and support interactions. If an ID is not provided, one may be generated automatically. |
 
 ## Request body
 

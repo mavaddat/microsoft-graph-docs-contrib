@@ -3,7 +3,7 @@ title: "userDataSecurityAndGovernance: processContent"
 toc.title: "userDataSecurityAndGovernance: processContent"
 description: "Process content against data protection policies in the context of the current, or specified, user."
 author: "kylemar"
-ms.date: 06/19/2025
+ms.date: 02/06/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
@@ -45,6 +45,7 @@ POST /users/{userId}/dataSecurityAndGovernance/processContent
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 | If-None-Match | Optional. This value is used by the API to determine if the policy state changed since the last call to the API. The value is from the Etag header returned from [protectionScopes compute](../api/userprotectionscopecontainer-compute.md). If newly computed Etag value does not match the value passsed in this header, protectionScopeState property returned will be "modified" and the app needs to refresh by calling [protectionScopes compute](../api/userprotectionscopecontainer-compute.md). |
+| Client-Request-Id  | String (GUID recommended). Optional. Unique identifier for this request, which is used for tracing and debugging in logs and support interactions. If an ID is not provided, one may be generated automatically. |
 
 ## Request body
 
