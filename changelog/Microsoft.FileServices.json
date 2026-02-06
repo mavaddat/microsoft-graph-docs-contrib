@@ -5385,6 +5385,48 @@
       "CreatedDateTime": "2025-12-18T05:31:00.804975Z",
       "WorkloadArea": "Files",
       "SubArea": ""
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "387c18f1-d16e-4eed-a432-9990c07d71a9",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "fileArchiveStatus",
+          "ChangeType": "Addition",
+          "Description": "Added the **fileArchiveStatus** enumeration type.",
+          "Target": "fileArchiveStatus"
+        },
+        {
+          "Id": "387c18f1-d16e-4eed-a432-9990c07d71a9",
+          "ApiChange": "Property",
+          "ChangedApiName": "archiveStatus",
+          "ChangeType": "Addition",
+          "Description": "Added the **archiveStatus** property to the [file](https://learn.microsoft.com/en-us/graph/api/resources/file?view=graph-rest-beta) resource.",
+          "Target": "file"
+        },
+        {
+          "Id": "387c18f1-d16e-4eed-a432-9990c07d71a9",
+          "ApiChange": "Method",
+          "ChangedApiName": "archive",
+          "ChangeType": "Addition",
+          "Description": "Added the [archive](https://learn.microsoft.com/en-us/graph/api/driveItem-archive?view=graph-rest-beta) method to the [driveItem](https://learn.microsoft.com/en-us/graph/api/resources/driveItem?view=graph-rest-beta) resource.",
+          "Target": "driveItem"
+        },
+        {
+          "Id": "387c18f1-d16e-4eed-a432-9990c07d71a9",
+          "ApiChange": "Method",
+          "ChangedApiName": "unarchive",
+          "ChangeType": "Addition",
+          "Description": "Added the [unarchive](https://learn.microsoft.com/en-us/graph/api/driveItem-unarchive?view=graph-rest-beta) method to the [driveItem](https://learn.microsoft.com/en-us/graph/api/resources/driveItem?view=graph-rest-beta) resource.",
+          "Target": "driveItem"
+        }
+      ],
+      "Id": "387c18f1-d16e-4eed-a432-9990c07d71a9",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-02-05T23:09:29.5797462Z",
+      "WorkloadArea": "Files",
+      "SubArea": ""
     }
   ]
 }
