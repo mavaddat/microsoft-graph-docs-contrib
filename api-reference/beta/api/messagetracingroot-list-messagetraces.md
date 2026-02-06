@@ -217,7 +217,7 @@ Content-Type: application/json
 
 The following example lists message traces for messages where the subject contains `Weekly digest` and the recipient address is `test@contoso.com`.
 
-##### Request
+#### Request
 
 The following example shows a request.
 
