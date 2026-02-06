@@ -748,6 +748,8 @@ items:
       href: ../../resources/security-ediscoveryaddtoreviewsetoperation.md
     - name: eDiscovery estimate operation
       href: ../../resources/security-ediscoveryestimateoperation.md
+    - name: eDiscovery purge data operation
+      href: ../../resources/security-ediscoverypurgedataoperation.md
     - name: Report file metadata
       href: ../../resources/security-ediscoveryreportfilemetadata.md
 - name: Email and collaboration protection
@@ -840,6 +842,14 @@ items:
       href: ../../api/security-sensorcandidateactivationconfiguration-get.md
     - name: Update
       href: ../../api/security-identitycontainer-post-sensorcandidateactivationconfiguration.md
+  - name: Auto-auditing configuration
+    items:
+    - name: Auto-auditing configuration
+      href: ../../resources/security-autoauditingconfiguration.md
+    - name: Get
+      href: ../../api/security-autoauditingconfiguration-get.md
+    - name: Update
+      href: ../../api/security-autoauditingconfiguration-update.md
   - name: Complex types
     items:
     - name: Account
