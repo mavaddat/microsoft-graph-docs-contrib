@@ -174,7 +174,7 @@
       ],
       "resources": [
         "backupRestoreRoot",
-        "browseSession",
+        "browseSessionBase",
         "emailNotificationsSetting",
         "protectionPolicyBase",
         "protectionRuleBase",
