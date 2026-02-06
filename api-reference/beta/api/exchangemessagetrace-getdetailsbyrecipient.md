@@ -16,6 +16,9 @@ Namespace: microsoft.graph
 
 Get a list of [exchangeMessageTraceDetail](../resources/exchangemessagetracedetail.md) objects filtered on the recipient.
 
+> [!NOTE]
+> This API has a throttling limit of 100 requests per 5 minutes. For more information, see [Microsoft Graph service-specific throttling limits](/graph/throttling-limits).
+
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
@@ -87,9 +90,9 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.exchangeMessageTraceDetail)",
   "value": [
     {
-      "@odata.type": "#microsoft.graph.exchangeMessageTraceDetail",
       "id": "7e3b2b2e-1b5e-4b17-80cc-2af6c1d9a3b1",
       "messageId": "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>",
       "dateTime": "2025-06-13T10:30:05Z",
@@ -99,7 +102,6 @@ Content-Type: application/json
       "data": "<root><MEP ... String=\"Message Body\" /></root>"
     },
     {
-      "@odata.type": "#microsoft.graph.exchangeMessageTraceDetail",
       "id": "7e3b2b2e-1b5e-4b17-80cc-2af6c1d9a3b1",
       "messageId": "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>",
       "dateTime": "2025-06-13T10:30:10Z",
@@ -111,4 +113,3 @@ Content-Type: application/json
   ]
 }
 ```
-

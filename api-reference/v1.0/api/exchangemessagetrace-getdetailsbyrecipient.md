@@ -86,7 +86,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.exchangeMessageTraceDetail)",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.exchangeMessageTraceDetail)",
   "value": [
     {
       "id": "7e3b2b2e-1b5e-4b17-80cc-2af6c1d9a3b1",

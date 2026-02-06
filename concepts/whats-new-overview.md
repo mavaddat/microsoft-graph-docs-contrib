@@ -20,6 +20,10 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## February 2026: New and generally available
 
+### Message trace
+
+Use the message trace API to track the flow of email messages through your Exchange Online organization. For more information, see [exchangeMessageTrace](/graph/api/resources/exchangemessagetrace).
+
 ### Teamwork and communications | Administration
 - [Get the policy ID](/graph/api/teamsadministration-teamspolicyassignment-getpolicyid) for a given policy name and policy type within Teams administration.
 - [Assign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-assign) to a user using the user ID, policy type, and policy ID.
@@ -64,10 +68,6 @@ Enhancements to the [detonationDetails](/graph/api/resources/security-detonation
 Added **Principal** and  **PrincipalCollection** data types to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) to specify as the data type people property related items in the external connection.
 
 ## January 2026: New and generally available
-
-### Message trace
-
-Use the message trace API to track the flow of email messages through your Exchange Online organization. For more information, see [exchangeMessageTrace](/graph/api/resources/exchangemessagetrace).
 
 ### Identity and access | Identity and sign-in
 
