@@ -5733,7 +5733,6 @@ Possible values for user account types (group membership), per Windows definitio
 |Member|
 |:---|
 |sitepagepublishing|
-|group|
 |sts|
 |unknownFutureValue|
 
@@ -5926,6 +5925,16 @@ Possible values for user account types (group membership), per Windows definitio
 |created|
 |failed|
 |unknownFutureValue|
+
+### fileArchiveStatus values 
+
+|Member|
+|:---|
+|notArchived|
+|fullyArchived|
+|reactivating|
+|unknownFutureValue|
+
 ### baselineParameterType values 
 
 |Member|

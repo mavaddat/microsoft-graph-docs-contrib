@@ -45,6 +45,10 @@ The granular restore process is designed to be simple and efficient, consisting 
 
 ## February 2026: New in preview only
 
+### Files
+
+- Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&preserve-view=true) and [driveItem: unarchive](/graph/api/driveitem-unarchive?view=graph-rest-beta&preserve-view=true) to enable organizations to archive/unarchive driveItems.
+
 ### Device and app management | Cloud licensing
 
 Use the new cloud licensing APIs to manage tenant, user, and group licensing data for Microsoft 365 services. These APIs provide programmatic access to allotments, assignments, assignment errors, subscription lifecycles, and waiting members. For more information, see [Use the cloud licensing API in Microsoft Graph (preview)](/graph/api/resources/cloud-licensing-api-overview?view=graph-rest-beta&preserve-view=true).
