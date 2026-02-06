@@ -161,7 +161,7 @@ Content-Type: application/json
 
 The following example shows how to retrieve message trace information for messages between `2026-01-20T00:00:00Z` and `2026-01-23T00:00:00Z`  (UTC) by filtering on `receivedDateTime`.
 
-##### Request
+#### Request
 
 The following example shows a request.
 
