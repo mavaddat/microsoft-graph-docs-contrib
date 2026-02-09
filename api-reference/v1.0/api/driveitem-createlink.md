@@ -89,13 +89,15 @@ If successful, this method returns a single [Permission](../resources/permission
 
 The response will be `201 Created` if a new sharing link is created for the item or `200 OK` if an existing link is returned.
 
-## Example
+## Examples
 
-The following example requests a sharing link to be created for the DriveItem specified by {itemId} in the user's OneDrive.
+### Example 1: Creating sharable links
+
+The following example requests a sharing link to be created for the DriveItem specified by {item-id} in the user's OneDrive.
 The sharing link is configured to be read-only and usable by anyone with the link.
 All existing permissions are removed when sharing for the first time if `retainInheritedPermissions` is false.
 
-### Request
+#### Request
 
 
 # [HTTP](#tab/http)
@@ -146,7 +148,7 @@ Content-type: application/json
 
 ---
 
-### Response
+#### Response
 
 <!-- { "blockType": "response", "@odata.type": "microsoft.graph.permission" } -->
 
@@ -170,13 +172,13 @@ Content-Type: application/json
 }
 ```
 
-## Creating company sharable links
+### Example 2: Creating company sharable links
 
 OneDrive for Business and SharePoint support company sharable links.
 These are similar to anonymous links, except they only work for members of the owning organization.
 To create a company sharable link, use the **scope** parameter with a value of `organization`.
 
-### Request
+#### Request
 
 
 # [HTTP](#tab/http)
@@ -222,7 +224,7 @@ Content-Type: application/json
 
 ---
 
-### Response
+#### Response
 
 <!-- { "blockType": "response", "@odata.type": "microsoft.graph.permission" } -->
 
@@ -245,14 +247,14 @@ Content-Type: application/json
 }
 ```
 
-## Creating embeddable links
+### Example 3: Creating embeddable links
 
 When using the `embed` link type, the webUrl returned can be embedded in an `<iframe>` HTML element.
 When an embed link is created the `webHtml` property contains the HTML code for an `<iframe>` to host the content.
 
 **Note:** Embed links are only supported for OneDrive personal.
 
-### Request
+#### Request
 
 
 # [HTTP](#tab/http)
@@ -297,7 +299,7 @@ Content-Type: application/json
 
 ---
 
-### Response
+#### Response
 
 <!-- { "blockType": "response", "@odata.type": "microsoft.graph.permission" } -->
 
