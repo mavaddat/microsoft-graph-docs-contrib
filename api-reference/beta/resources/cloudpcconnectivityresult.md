@@ -32,6 +32,8 @@ Represents the details of the Cloud PC connectivity status, including whether th
 |available|1|The Cloud PC is able to be connected.|
 |availableWithWarning|2|The Cloud PC is able to be connected but there are warnings.|
 |unavailable|3|The Cloud PC is unable to be connected.|
+|unavailableForServicing|4|The Cloud PC is temporarily unavailable for service-initiated maintenance.|
+|inUse|5|The Cloud PC is currently in use by an end user.|
 |unknownFutureValue|999|Evolvable enumeration sentinel value. Don't use.|
 
 ## Relationships
