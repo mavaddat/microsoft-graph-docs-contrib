@@ -430,7 +430,7 @@ Content-Type: application/json
 
 You can specify the following options after the size of the thumbnail requested:
 
-##### Examples of custom identifiers
+### Examples of custom identifiers
 
 | Thumbnail identifier | Resolution             | Aspect ratio | Description                                                                                                                                         |
 |:---------------------|:-----------------------|:-------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
