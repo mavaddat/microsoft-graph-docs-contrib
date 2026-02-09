@@ -350,8 +350,6 @@ Content-type: application/json
 }
 ```
 
-##### Size options
-
 This table defines the possible thumbnail sizes.
 While you can request any arbitrary thumbnail size, the defined values are likely to exist and return a value quickly:
 
@@ -453,8 +451,7 @@ Thumbnails are not supported on SharePoint Server 2016.
 
 ### Error responses
 
-See [Error Responses][error-response] for more info about
-how errors are returned.
+See [Error Responses][error-response] for more info about how errors are returned.
 
 [error-response]: /graph/errors
 
