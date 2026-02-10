@@ -53,10 +53,9 @@ You can specify the following properties when you create a **profilePropertySett
 
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|Name of the property-level setting.|
-|id|String|System generated GUID. Inherited from [entity](../resources/entity.md).|
 |name|String|Other name of the property-level setting. For backward compatibility.|
 |prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization.|
+|displayName|String|Name of the property-level setting.|
 
 ## Response
 
