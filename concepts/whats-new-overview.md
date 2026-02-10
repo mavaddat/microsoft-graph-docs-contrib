@@ -18,11 +18,83 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## February 2026: New and generally available
+
+### Message trace
+
+Use the message trace API to track the flow of email messages through your Exchange Online organization. For more information, see [exchangeMessageTrace](/graph/api/resources/exchangemessagetrace).
+
+### Granular browse and restore for backup storage
+
+Users can now browse a `fastRestore` endpoint and selectively restore files and folders by creating a browse session.
+
+The granular restore process is designed to be simple and efficient and consists of three main steps:
+
+- **Create a browse session**  
+  Initiate a browse session for a specific restore point (backup snapshot).  
+  - You can create a [SharePoint browse session](../api-reference/beta/api/backuprestoreroot-post-sharepointbrowsesessions.md) or a [OneDrive for Business browse session](../api-reference/beta/api/backuprestoreroot-post-onedriveforbusinessrestoresessions.md).
+
+- **Browse items**  
+  Once the session is created, the user can query it to list all backed-up items available within the browse session.  
+  - Results are returned as a collection of [browseQueryResponseItem](../api-reference/beta/resources/browsequeryresponseitem.md) objects, each representing a file, folder, or other resource.  
+  - You can browse items within a [SharePoint browse session](../api-reference/beta/api/sharepointbrowsesession-browse.md) or a [OneDrive for Business browse session](../api-reference/beta/api/onedriveforbusinessbrowsesession-browse.md).
+
+- **Create a restore session**  
+  Select one or more items from the browse session and initiates a restore session.  
+  - Only the selected items are restored to their previous state, leaving the rest of the site or drive unchanged.  
+  - You can create a [SharePoint granular restore session](../api-reference/beta/api/backuprestoreroot-post-sharepointrestoresessions.md#example-2-create-a-granular-restore-session) or a [OneDrive for Business granular restore session](../api-reference/beta/api/backuprestoreroot-post-onedriveforbusinessrestoresessions.md#example-2-create-a-granular-restore-session).
+
+
+### Teamwork and communications | Administration
+- [Get the policy ID](/graph/api/teamsadministration-teamspolicyassignment-getpolicyid) for a given policy name and policy type within Teams administration.
+- [Assign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-assign) to a user using the user ID, policy type, and policy ID.
+- [Unassign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-unassign) from a user using the user ID and policy type.
+
 ## February 2026: New in preview only
 
 ### Applications
 
 Use the **requiredResourceAccess** property on [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint?view=graph-rest-beta&preserve-view=true) to specify the Microsoft Graph permissions (delegated scopes and app roles) required by the agent.
+
+### Files
+
+- Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&preserve-view=true) and [driveItem: unarchive](/graph/api/driveitem-unarchive?view=graph-rest-beta&preserve-view=true) to enable organizations to archive/unarchive driveItems.
+
+### Device and app management | Cloud licensing
+
+Use the new cloud licensing APIs to manage tenant, user, and group licensing data for Microsoft 365 services. These APIs provide programmatic access to allotments, assignments, assignment errors, subscription lifecycles, and waiting members. For more information, see [Use the cloud licensing API in Microsoft Graph (preview)](/graph/api/resources/cloud-licensing-api-overview?view=graph-rest-beta&preserve-view=true).
+
+### Identity and access | Identity and sign-in
+
+- Added the [agentIdentityType](/graph/api/resources/agentidentitytype?view=graph-rest-beta&preserve-view=true) enumeration to represent the type of Microsoft Entra agent identity for risk detection and management. Use the **identityType** property on the [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) and [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) resources to classify different types of agent identities.
+- Added new authentication event resources to support Just-In-Time (JIT) user migration scenarios from legacy authentication systems:
+  - Use the [onPasswordSubmitListener](/graph/api/resources/onpasswordsubmitlistener?view=graph-rest-beta&preserve-view=true) resource to configure authentication event listeners that trigger during password submission.
+  - Use the [onPasswordSubmitCustomExtension](/graph/api/resources/onpasswordsubmitcustomextension?view=graph-rest-beta&preserve-view=true) resource to configure custom extensions that validate passwords against external legacy authentication systems.
+  - Use the [onPasswordSubmitHandler](/graph/api/resources/onpasswordsubmithandler?view=graph-rest-beta&preserve-view=true) resource as the base type for handlers invoked during password submission events.
+  - Use the [onPasswordMigrationCustomExtensionHandler](/graph/api/resources/onpasswordmigrationcustomextensionhandler?view=graph-rest-beta&preserve-view=true) resource to configure handlers that invoke custom extensions during JIT migration.
+
+### Security | Data security and compliance
+
+- Deprecated the **accessedResources** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) in favor of the **accessedResources_v2** property.
+- Use the **accessedResources_v2** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) to get detailed information about resources accessed during the conversation, including identifiers, access type, and status.
+- Use the **agents** property on [processConversationMetadata](/graph/api/resources/processconversationmetadata?view=graph-rest-beta&preserve-view=true) to get information about AI agents that participated in the preparation of the message.
+
+### Security | Email and collaboration protection
+
+Enhancements to the [detonationDetails](/graph/api/resources/security-detonationdetails?view=graph-rest-beta&preserve-view=true) resource that represents details from analysis of suspicious files and URLs in emails in Microsoft Defender for Office 365:
+
+- Added the following properties to provide more detailed threat analysis:
+  - **detonationBehaviourDetailsV2** - Shows events that took place during detonation in JSON format
+  - **entityMetadata** - Additional metadata about the entity in JSON format
+  - **mitreTechniques** - Attack techniques aligned with the MITRE ATT&CK framework
+  - **staticAnalysis** - Results of static analysis performed on the file or URL
+  - **submissionSource** - The source of the submission
+- The **detonationBehaviourDetails** property is deprecated and will stop returning data in March 2026. Use the **detonationBehaviourDetailsV2** property instead.
+- Added the `moveToQuarantine` member to the **remediationAction** enumeration. Use the `Prefer: include-unknown-enum-members` request header to access this evolvable enum member.
+
+### Search
+
+Added **Principal** and  **PrincipalCollection** data types to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) to specify as the data type people property related items in the external connection.
 
 ## January 2026: New and generally available
 
@@ -58,16 +130,6 @@ Added migration guidance for Microsoft Defender for Endpoint (MDE) advanced hunt
 
 Use the **reportFileMetadata** property on [ediscoveryPurgeDataOperation](/graph/api/resources/security-ediscoverypurgedataoperation) to get the purge job report file metadata.
 
-### Security | Identities
-
-The Defender for Identity sensor management APIs let you discover eligible servers, control automatic onboarding, activate or deactivate the unified agent, and manage required auditing settings during activation—all through a single management interface.
-
-### Teamwork and communications | Administration
-
-- [Get the policy ID](/graph/api/teamsadministration-teamspolicyassignment-getpolicyid) for a given policy name and policy type within Teams administration.
-- [Assign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-assign) to a user using the user ID, policy type, and policy ID.
-- [Unassign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-unassign) from a user using the user ID and policy type.
-
 ### Teamwork and communications | Apps
 
 The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged application permission required to install or upgrade a Teams app that requires consent to [resource-specific consent (RSC)](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions when using the [teamsAppInstallation in a team: upgrade](/graph/api/team-teamsappinstallation-upgrade) API.
@@ -80,6 +142,16 @@ The **allowedTenantIds** property on [allowedTenantsAudience](/graph/api/resourc
 
 ### Device and app management | Cloud PC
 
+- Use the following resources to represent the data sent to Azure Logic Apps as part of a custom extension callout request when a custom extension in a catalog is used:
+  - [accessPackageAssignmentCalloutData](/graph/api/resources/accesspackageassignmentcalloutdata) - for access package assignments
+  - [accessPackageAssignmentRequestCalloutData](/graph/api/resources/accesspackageassignmentrequestcalloutdata) - for access package assignment requests
+- Added the [controlConfiguration](/graph/api/resources/controlconfiguration) resource and the **controlConfigurations** relationship to the [entitlementManagement](/graph/api/resources/entitlementmanagement?view=graph-rest-beta&preserve-view=true) resource to represent the policies that control lifecycle and access to access packages across the organization.
+- Added the [entraIdProtectionRiskyUserApproval](/graph/api/resources/entraidprotectionriskyuserapproval) resource to represent the approval configuration for risky users detected by Microsoft Entra ID Protection.
+- Added the [insiderRiskyUserApproval](/graph/api/resources/insiderriskyuserapproval) resource to represent the approval configuration for risky users detected by Microsoft Purview Insider Risk Management.
+
+### Identity and access | Identity and sign-in
+
+Added the `microsoftRevokedSessions` value to the [riskDetail](/graph/api/resources/riskdetail) enumeration to indicate that Microsoft revoked sessions. This enumeration member applies to the following Microsoft Entra Identity Protection resources: [riskDetection](/graph/api/resources/riskdetection?view=graph-rest-beta&preserve-view=true), [riskUserActivity](/graph/api/resources/riskuseractivity), [riskyUser](/graph/api/resources/riskyuser?view=graph-rest-beta&preserve-view=true), and [signIn](/graph/api/resources/signin?view=graph-rest-beta&preserve-view=true).
 - Added `mexico` as a new supported value for the **cloudPcGeographicLocationType** enumeration type. This enum is the return type for the **geographicLocationType** property on [cloudPcDomainJoinConfiguration](/graph/api/resources/cloudpcdomainjoinconfiguration?view=graph-rest-beta&preserve-view=true) and [cloudPcSupportedRegion](/graph/api/resources/cloudpcsupportedregion?view=graph-rest-beta&preserve-view=true).
 - Added the `cloudPCInventoryReport` member to the **cloudPcReportName** enumeration type. This enum is the return type for the **reportName** property on [cloudPcExportJob](/graph/api/resources/cloudPcExportJob?view=graph-rest-beta&preserve-view=true),  [getFrontlineReport action](/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta&preserve-view=true), and [getCloudPcRecommendationReports action](/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-beta&preserve-view=true).
 - Use the **category** property on [cloudPcSourceDeviceImage](/graph/api/resources/cloudpcsourcedeviceimage?view=graph-rest-beta&preserve-view=true) to get the category of the source image that is requested. For more information, see [Get cloudPcSourceDeviceImage objects with a specific category](/graph/api/cloudpcdeviceimage-getsourceimages?view=graph-rest-beta&preserve-view=true#example-2-get-cloudpcsourcedeviceimage-objects-with-a-specific-category).
@@ -105,6 +177,11 @@ Use the **welcomeMessageEnabled** property on the [group](/graph/api/resources/g
 
 ### Message trace
 
+Use the [userConfiguration](/graph/api/resources/userconfiguration) resource and its associated methods to manage user-specific settings, metadata, or application data tied to mailbox folders, using XML, binary, or dictionary formats.
+
+### Reports | Identity and access reports
+
+Removed the **conditionalAccessAudience** resource type. The return type of the **conditionalAccessAudiences** property of the [signIn resource type](/graph/api/resources/signin) is a collection of String objects and not the **conditionalAccessAudience** complex type.
 Use the message trace API to track the flow of email messages through your Exchange Online organization. For more information, see [exchangeMessageTrace](/graph/api/resources/exchangemessagetrace?view=graph-rest-beta&preserve-view=true).
 
 ### Reports | Identity and access reports
@@ -127,6 +204,7 @@ Added support for managing *zones* in Microsoft Defender for Cloud, enabling org
 
 ### Teamwork and communications | Apps
 
+Use the **layoutType** property on the [channel](/graph/api/resources/channel) resource to create channels with different conversation experiences and switch between them at any time. The property supports two values: `post` for traditional post-reply format and `chat` for a chat-like threading experience. You can set the layout type when [creating a channel](/graph/api/channel-post) and [update it](/graph/api/channel-patch) later to switch between layouts.
 The `TeamsAppInstallation.ManageSelectedForTeam.All` is the least privileged application permission required to install or upgrade a Teams app that requires consent to [resource-specific consent (RSC)](/microsoftteams/platform/graph-api/rsc/resource-specific-consent) permissions when using the [teamsAppInstallation in a team: upgrade](/graph/api/team-teamsappinstallation-upgrade?view=graph-rest-beta&preserve-view=true) API.
 
 ### Tenant administration | Configuration management
@@ -137,11 +215,18 @@ The new unified tenant configuration management APIs in Microsoft Graph allow ad
 
 ### Calendars | Places
 
+- [Create](/graph/api/place-post), [get descendants](/graph/api/place-descendants), and [delete](/graph/api/place-delete) a [place](/graph/api/resources/place) and its derived objects (for example, [building](/graph/api/resources/building), [desk](/graph/api/resources/desk), [floor](/graph/api/resources/floor), or [section](/graph/api/resources/section). These APIs enable scalable onboarding and management of the Places directory.
+- The new map APIs in Places enable applications with appropriate read or write permissions to interact with map feature objects. For more information, see [Working with the Places API in Microsoft Graph](/graph/api/resources/places-api-overview#map-feature-types).
+- Use the [checkInClaim](/graph/api/resources/checkinclaim) resource to represent the check-in status of an Outlook calendar [event](/graph/api/resources/event) booked at a place. For more information see, [Create checkInClaim](/graph/api/place-post-checkins) and [Get checkInClaim](/graph/api/checkinclaim-get).
 - Use the **wifiState** property on [building](/graph/api/resources/building) to indicate whether a building has Wi-Fi.
 - Use the **heightAdjustableState** property on [desk](/graph/api/resources/desk) to indicate whether a desk is height adjustable.
 - Use the **teamsEnabledState** property on [room](/graph/api/resources/room) to indicate whether a room is enabled for Microsoft Teams.
 - Use the **placeId** property on [room](/graph/api/resources/room) and [workspace](/graph/api/resources/workspace) as an alternative immutable unique identifier.
 - Use the [unavailablePlaceMode](/graph/api/resources/unavailableplacemode) resource to indicate why a **desk** or **workspace** is marked as unavailable for booking.
+
+### Teamwork and communications | Administration
+
+[Get](/graph/api/teamsadministration-teamsuserconfiguration-get) or [list](/graph/api/teamsadministration-teamsadminroot-list-userconfigurations) user configurations for users with accounts in the Teams context.
 
 ### Teamwork and communications | Calls and online meetings
 
