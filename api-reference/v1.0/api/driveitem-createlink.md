@@ -56,7 +56,7 @@ The request should be a JSON object with the following properties.
 |   Name       |  Type  |                                 Description                                  |
 | :------------| :----- | :--------------------------------------------------------------------------- |
 | **type**     | string | The type of sharing link to create. Either `view`, `edit`, or `embed`.       |
-| **password** | string | The password of the sharing link that is set by the creator. Optional and OneDrive Personal only.
+| **password** | string | The password of the sharing link set by the creator. Optional and OneDrive Personal only.
 | **expirationDateTime** | string | A String with format of yyyy-MM-ddTHH:mm:ssZ of DateTime indicates the expiration time of the permission. |
 | **retainInheritedPermissions** |  Boolean          | Optional. If `true` (default), any existing inherited permissions are retained on the shared item when sharing this item for the first time. If `false`, all existing permissions are removed when sharing for the first time.  |
 | **scope** | string | Optional. The scope of link to create. Either `anonymous`, `organization`, or `users`. |
@@ -74,11 +74,11 @@ The following values are allowed for the **type** parameter.
 ### Scope types
 
 The following values are allowed for the **scope** parameter.
-If the **scope** parameter is not specified, the default link type for the organization is created.
+If the **scope** parameter isn't specified, the default link type for the organization is created.
 
 | Value          | Description
 |:---------------|:------------------------------------------------------------
-| `anonymous`    | Anyone with the link has access, without needing to sign in. This may include people outside of your organization. Anonymous link support may be disabled by an administrator.
+| `anonymous`    | Anyone with the link has access, without needing to sign in. It may include people outside of your organization. Anonymous link support may be disabled by an administrator.
 | `organization` | Anyone signed into your organization (tenant) can use the link to get access. Only available in OneDrive for Business and SharePoint.
 | `users`        | Share only with people you choose inside or outside the organization.
 
@@ -87,7 +87,7 @@ If the **scope** parameter is not specified, the default link type for the organ
 
 If successful, this method returns a single [Permission](../resources/permission.md) resource in the response body that represents the requested sharing permissions.
 
-The response will be `201 Created` if a new sharing link is created for the item or `200 OK` if an existing link is returned.
+The response is `201 Created` if a new sharing link is created for the item or `200 OK` if an existing link is returned.
 
 ## Examples
 
@@ -175,7 +175,7 @@ Content-Type: application/json
 ### Example 2: Creating company sharable links
 
 OneDrive for Business and SharePoint support company sharable links.
-These are similar to anonymous links, except they only work for members of the owning organization.
+They are similar to anonymous links, except they only work for members of the owning organization.
 To create a company sharable link, use the **scope** parameter with a value of `organization`.
 
 #### Request
