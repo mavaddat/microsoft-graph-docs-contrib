@@ -3,6 +3,7 @@ author: humbertorMSFT
 ms.author: humbertor
 ms.date: 11/17/2025
 title: SharePointGroupIdentity - OneDrive API
+description: "Represents an identity of type SharePointGroup"
 ---
 
 # SharePointGroupIdentity resource type
