@@ -59,7 +59,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ### Example 1: Retrieve all the existing sharePointGroup objects that are local to a fileStorageContainer
 
-The following example retrieves all the **sharePointGroup** objects that are local to a **fileStoragecontainer** identified by the container ID `b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z`.
+The following example retrieves all the **sharePointGroup** objects that are local to a **fileStorageContainer** identified by the container ID `b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z`.
 
 #### Request
 
@@ -71,7 +71,7 @@ The following example shows a request.
   "name": "list_sharepointgroups_1"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/sharePointGroups
+GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/sharePointGroups
 ```
 
 # [C#](#tab/csharp)
@@ -147,7 +147,7 @@ The following example shows a request.
   "name": "list_sharepointgroups_2"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/sharePointGroups
+GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/sharePointGroups
 ```
 
 # [C#](#tab/csharp)

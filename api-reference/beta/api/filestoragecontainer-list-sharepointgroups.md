@@ -63,7 +63,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ### Example 1: Retrieve all the existing sharePointGroup objects that are local to a fileStorageContainer
 
-The following example retrieves all the **sharePointGroup** objects that are local to a **fileStoragecontainer** identified by the container ID `b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z`.
+The following example retrieves all the **sharePointGroup** objects that are local to a **fileStorageContainer** identified by the container ID `b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z`.
 
 #### Request
 
