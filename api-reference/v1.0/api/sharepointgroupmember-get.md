@@ -12,7 +12,7 @@ ms.date: 1/31/2025
 
 Namespace: microsoft.graph
 
-Read the properties and relationships of a [sharePointGroupMember](../resources/sharepointgroup.md) object.
+Read the properties and relationships of a [sharePointGroupMember](../resources/sharepointgroupmember.md) object.
 
 ## Permissions
 
