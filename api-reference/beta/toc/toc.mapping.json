@@ -190,9 +190,9 @@
           "overview": "../../resources/browsesessionbase.md",
           "resources": [
             "oneDriveForBusinessBrowseSession",
-            "sharePointBrowseSession",
-          ]
-        },
+            "sharePointBrowseSession"
+          ],
+      
       "childNodes": [
         {
           "name": "Protection policy",
