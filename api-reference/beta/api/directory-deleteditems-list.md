@@ -69,6 +69,12 @@ GET /directory/deletedItems/microsoft.graph.certificateBasedAuthPki
 GET /directory/deletedItems/microsoft.graph.certificateAuthorityDetail
 ```
 
+> [!IMPORTANT]
+> For soft deleted security groups, the `securityEnabled` property returns `False` instead of `True` due to a known limitation. To determine whether a soft deleted group is a Microsoft 365 group or a security group, check the groupTypes property:
+>
+> - If groupTypes contains ["Unified"], it's a Microsoft 365 group
+> - If groupTypes is empty [], it's a security group
+
 The OData cast type is a required part of the URI and calling `GET /directory/deleteditems` without a type is **not** supported.
 
 ## Optional query parameters
