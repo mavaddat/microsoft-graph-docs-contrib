@@ -7,8 +7,6 @@ title: SharePointGroupIdentity - OneDrive API
 
 # SharePointGroupIdentity resource type
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 The **SharePointGroupIdentity** resource represents the identity of a sharePointGroup resource.
 It extends from the **sharePointIdentity** resource to provide capability to expose SharePointGroup specific information, for principalId and title.
 
