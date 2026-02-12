@@ -33,7 +33,7 @@ It extends from the **sharePointIdentity** resource to provide capability to exp
 | Property              | Type                        | Description
 |:----------------------|:----------------------------|:---------------------------------
 | title                 | String                      | Title of the sharePointGroup
-| principalId           | String                      | The ID of the SPPrincipal corresponding to the sharePointGroup
+| principalId           | String                      | The identifier of the Principal corresponding to the sharePointGroup
 | id                    | String                      | Unique identifier for the identity.
 
 ## Remarks
