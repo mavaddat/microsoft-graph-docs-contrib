@@ -56,7 +56,7 @@ In the request body, supply a JSON representation of the [permission](../resourc
 > [!IMPORTANT]
 >
 > - This API only accepts `grantedToV2` as input for the **permission** object. Other properties such as `grantedToIdentitiesV2` or the deprecated `grantedTo` and `grantedToIdentities` are not accepted.
-> - For SharePoint Embedded, when creating a new [sharePointGroup](../resources/sharepointgroup.md) permission, the request body must include both the `id` and `displayName` of the **sharePointGroup** referenced in the `grantedToV2.siteGroup` property. See [Example 2](#example-2-add-a-sharepoint-group-permission-to-a-driveitem-in-a-sharepoint-embedded-container-using-principalId).
+> - For SharePoint Embedded, when creating a new [sharePointGroup](../resources/sharepointgroup.md) permission, the request body must include both the `id` and `displayName` of the **sharePointGroup** referenced in the `grantedToV2.siteGroup` property. See [Example 2](#example-2-add-a-sharepoint-group-permission-to-a-driveitem-in-a-sharepoint-embedded-container-using-principalid).
 
 ## Response
 
