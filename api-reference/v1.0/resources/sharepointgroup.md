@@ -31,8 +31,8 @@ Represents a cohort of users or Microsoft 365 groups that are localized to a Sha
 |:---|:---|:---|
 |description|String|The user-visible description of the **sharePointGroup**. Read-write.|
 |id|String|The unique stable identifier of the **sharePointGroup**. This ID is unique only within the context of a single SharePoint Embedded container or SharePoint site. Read-only.|
-|title|String|The user-visible title of the **sharePointGroup**. Read-write.|
-| principalId|String| The ID of the SPPrincipal. Read-only.| 
+|principalId|String|The ID of the SPPrincipal. Read-only.|
+|title|String|The user-visible title of the **sharePointGroup**. Read-write.| 
 
 ## Relationships
 |Relationship|Type|Description|
@@ -53,7 +53,7 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.sharePointGroup",
   "description": "String",
   "id": "String (identifier)",
-  "title": "String",
-  "principalId": "String"
+  "principalId": "String",
+  "title": "String"
 }
 ```
