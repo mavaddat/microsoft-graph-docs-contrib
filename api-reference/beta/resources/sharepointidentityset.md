@@ -57,7 +57,7 @@ The following JSON representation shows the resource type.
 [driveItem]: driveitem.md
 [identity]: identity.md
 [sharePointIdentity]: sharePointidentity.md
-[SharePointGroupIdentity]: sharePointGroupIdentity.md
+[SharePointGroupIdentity]: sharepointgroupidentity.md
 
 <!-- {
   "type": "#page.annotation",
