@@ -107,15 +107,13 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.sharePointGroupMember",
-    "id": "aTowIy5mfG1lbWJlcnNoaXB8YWRtaW5AYTgzMGVkYWQ5MDUwODQ5c3Bncm91cHRlc3QyLm9ubWljcm9zb2Z0LmNvbQ7",
-    "identity": {
-      "@odata.type": "microsoft.graph.sharePointIdentitySet",
-      "user": {
-        "displayName": "John Smith",
-        "email": "john.smith@contoso.onmicrosoft.com"
-      }
+  "@odata.type": "#microsoft.graph.sharePointGroupMember",
+  "id": "aTowIy5mfG1lbWJlcnNoaXB8YWRtaW5AYTgzMGVkYWQ5MDUwODQ5c3Bncm91cHRlc3QyLm9ubWljcm9zb2Z0LmNvbQ7",
+  "identity": {
+    "@odata.type": "microsoft.graph.sharePointIdentitySet",
+    "user": {
+      "displayName": "John Smith",
+      "email": "john.smith@contoso.onmicrosoft.com"
     }
   }
 }
