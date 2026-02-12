@@ -60,7 +60,7 @@ If successful, this method returns a `201 Created` response code and a [sharePoi
 
 ### Request
 
-The following example shows a request that creates a new **sharePointGroup** that is local to a **fileStoragContainer**. The title and description of the **sharePointGroup** are shown in the request body.
+The following example shows a request that creates a new **sharePointGroup** that is local to a **fileStorageContainer**. The title and description of the **sharePointGroup** are shown in the request body.
 
 # [HTTP](#tab/http)
 <!-- {
