@@ -8,6 +8,8 @@ doc_type: apiPageType
 ms.localizationpriority: medium
 ---
 
+# List group memberOf
+
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
