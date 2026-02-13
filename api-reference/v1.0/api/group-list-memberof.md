@@ -1,5 +1,5 @@
 ---
-title: "List memberOf"
+title: "List group memberships"
 description: "Get security groups, administrative units, and admin roles that the security group is a direct member of, or administrative units and admin roles that the Microsoft 365 group is a direct member of."
 author: "yuhko-msft"
 ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
@@ -9,7 +9,7 @@ doc_type: apiPageType
 ms.date: 04/04/2024
 ---
 
-# List memberOf
+# List group memberships
 
 Namespace: microsoft.graph
 
