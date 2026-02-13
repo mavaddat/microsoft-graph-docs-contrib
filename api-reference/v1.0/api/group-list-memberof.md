@@ -1,6 +1,6 @@
 ---
 title: "List memberOf"
-description: "Get security groups, administrative units, and admin roles that the group is a direct member of."
+description: "Get security groups, administrative units, and admin roles that the security group is a direct member of or administrative units and admin roles that the Microsoft 365 group is a direct member of."
 author: "yuhko-msft"
 ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
 ms.localizationpriority: high
