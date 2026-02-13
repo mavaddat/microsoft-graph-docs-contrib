@@ -16,16 +16,14 @@ Namespace: microsoft.graph
 
 Retrieve the properties of a collection of [agentRiskDetection](../resources/agentriskdetection.md) objects.
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "agentriskdetection-list-permissions"
-}
--->
-[!INCLUDE [permissions-table](../includes/permissions/agentriskdetection-list-permissions.md)]
+<!-- { "blockType": "permissions", "name": "identityprotectionroot_list_agentriskdetections" } -->
+[!INCLUDE [permissions-table](../includes/permissions/identityprotectionroot-list-agentriskdetections-permissions.md)]
 
 [!INCLUDE [rbac-identity-protection-apis-read](../includes/rbac-for-apis/rbac-identity-protection-apis-read.md)]
 
@@ -120,6 +118,7 @@ Content-Type: application/json
 			"id": "1e384c2b0799b01834c0f886560a9a64e433135fe5b8607c535ebbfb03d2ee67",
 			"agentId": "229da549-7a91-4365-900f-d4ef49a759a0",
 			"agentDisplayName": "Copilot Application",
+			"identityType": "agentIdentity",
 			"activityDateTime": "2025-07-30T15:38:56.9594972Z",
 			"detectedDateTime": "2025-07-30T15:38:56.9594972Z",
 			"detectionTimingType": "offline",

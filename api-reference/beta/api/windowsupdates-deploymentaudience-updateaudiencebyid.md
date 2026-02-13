@@ -1,11 +1,11 @@
 ---
 title: "deploymentAudience: updateAudienceById"
 description: "Update the members and exclusions collections of a deploymentAudience with updatableAsset resources of the same type."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
 ms.subservice: windows-autopatch
 doc_type: apiPageType
-ms.date: 08/31/2024
+ms.date: 01/27/2026
 ---
 
 # deploymentAudience: updateAudienceById
@@ -58,7 +58,7 @@ The following table shows the parameters that can be used with this action.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|memberEntityType|String|The full type of the updatable assets. Possible values are: `#microsoft.graph.windowsUpdates.azureADDevice`, `#microsoft.graph.windowsUpdates.updatableAssetGroup`.|
+|memberEntityType|String|The full type of the updatable assets. The possible values are: `#microsoft.graph.windowsUpdates.azureADDevice`, `#microsoft.graph.windowsUpdates.updatableAssetGroup`.|
 |addMembers|String collection|List of identifiers corresponding to the updatable assets to add as members of the deployment audience.|
 |removeMembers|String collection|List of identifiers corresponding to the updatable assets to remove as members of the deployment audience.|
 |addExclusions|String collection|List of identifiers corresponding to the updatable assets to add as exclusions from the deployment audience.|
