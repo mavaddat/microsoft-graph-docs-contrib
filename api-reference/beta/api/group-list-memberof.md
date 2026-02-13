@@ -6,6 +6,7 @@ ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
 ms.subservice: "entra-groups"
 doc_type: apiPageType
 ms.localizationpriority: medium
+ms.date: 02/13/2026
 ---
 
 # List group memberships
