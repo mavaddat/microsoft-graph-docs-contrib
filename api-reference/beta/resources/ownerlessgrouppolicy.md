@@ -22,7 +22,7 @@ Inherits from [entity](../resources/entity.md).
 |Method|Return type|Description|
 |:---|:---|:---|
 |[Get](../api/ownerlessgrouppolicy-get.md)|[ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md)|Read the properties of an [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) object.|
-|[Update](../api/ownerlessgrouppolicy-update.md)|[ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md)|Create or update an [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) object.|
+|[Update](../api/ownerlessgrouppolicy-upsert.md)|[ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md)|Create or update an [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) object.|
 
 ## Properties
 |Property|Type|Description|
