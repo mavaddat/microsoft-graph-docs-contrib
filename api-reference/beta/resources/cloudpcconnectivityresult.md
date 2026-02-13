@@ -34,7 +34,7 @@ Represents the details of the Cloud PC connectivity status, including whether th
 |unavailable|3|The Cloud PC is unable to be connected.|
 |unknownFutureValue|999|Evolvable enumeration sentinel value. Don't use.|
 |underServiceMaintenance|1000|The Cloud PC is temporarily unavailable for service-initiated maintenance.|
-|inUse|1001|The Cloud PC is currently in use by an end user.|
+|inUse|1001|The Cloud PC is currently in use by a user.|
 
 ## Relationships
 None.
