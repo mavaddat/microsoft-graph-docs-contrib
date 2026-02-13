@@ -1,6 +1,6 @@
 ---
 title: "List memberOf"
-description: "Get security groups, administrative units, and admin roles that the security group is a direct member of or administrative units and admin roles that the Microsoft 365 group is a direct member of."
+description: "Get security groups, administrative units, and admin roles that the security group is a direct member of, or administrative units and admin roles that the Microsoft 365 group is a direct member of."
 author: "yuhko-msft"
 ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
 ms.localizationpriority: high
@@ -14,6 +14,8 @@ ms.date: 04/04/2024
 Namespace: microsoft.graph
 
 Get security groups, [administrative units](../resources/administrativeunit.md), and [admin roles](../resources/directoryrole.md) that the security [group](../resources/group.md) is a direct member of, or administrative units and admin roles that the Microsoft 365 group is a direct member of.
+
+This operation is not transitive.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
