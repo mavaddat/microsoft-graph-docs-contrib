@@ -4,7 +4,7 @@ description: "Create or update the ownerless group policy for the tenant using u
 author: "Ananya-Sharma"
 ms.date: 02/12/2026
 ms.localizationpriority: medium
-ms.subservice: "groups"
+ms.subservice: "exchange"
 doc_type: apiPageType
 ---
 
@@ -24,10 +24,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "ownerlessgrouppolicy-update-permissions"
+  "name": "ownerlessgrouppolicy-upsert-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/ownerlessgrouppolicy-update-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/ownerlessgrouppolicy-upsert-permissions.md)]
 
 ## HTTP request
 

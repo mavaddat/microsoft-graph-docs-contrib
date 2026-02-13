@@ -4,7 +4,7 @@ description: "Represents the criteria for selecting target owners in an ownerles
 author: "Ananya-Sharma"
 ms.date: 02/12/2026
 ms.localizationpriority: medium
-ms.subservice: "groups"
+ms.subservice: "exchange"
 doc_type: resourcePageType
 ---
 
