@@ -28,13 +28,13 @@ Represents the details of the Cloud PC connectivity status, including whether th
 
 |Member|Value|Description|
 |:---|:---|:---|
-|unknown|0|The Cloud PC connectivity status is unknown.|
-|available|1|The Cloud PC is able to be connected.|
-|availableWithWarning|2|The Cloud PC is able to be connected but there are warnings.|
-|unavailable|3|The Cloud PC is unable to be connected.|
-|unknownFutureValue|999|Evolvable enumeration sentinel value. Don't use.|
-|underServiceMaintenance|1000|The Cloud PC is temporarily unavailable for service-initiated maintenance.|
-|inUse|1001|The Cloud PC is currently in use by a user.|
+|unknown|0|Default. Indicates the Cloud PC connectivity status is unknown.|
+|available|1|Indicates the Cloud PC is able to be connected.|
+|availableWithWarning|2|Indicates the Cloud PC is able to be connected but there are warnings.|
+|unavailable|3|Indicates the Cloud PC is unable to be connected.|
+|unknownFutureValue|4|Evolvable enumeration sentinel value. Don't use.|
+|underServiceMaintenance|5|Indicates the Cloud PC is temporarily unavailable for service-initiated maintenance.|
+|inUse|6|Indicates the Cloud PC is currently in use by a user.|
 
 ## Relationships
 None.
