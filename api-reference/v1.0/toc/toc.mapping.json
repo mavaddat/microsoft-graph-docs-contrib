@@ -1089,6 +1089,14 @@
               ]
             },
             {
+              "name": "Fraud protection provider",
+              "resources": [
+                "fraudProtectionProvider",
+                "arkoseFraudProtectionProvider",
+                "humanSecurityFraudProtectionProvider"
+              ]
+            },
+            {
               "name": "Web application firewall",
               "resources": [
                 "webApplicationFirewallProvider",
@@ -1118,6 +1126,7 @@
               "resources": [
                 "authenticationMethod",
                 "emailAuthenticationMethod",
+                "externalAuthenticationMethod",
                 "fido2AuthenticationMethod",
                 "microsoftAuthenticatorAuthenticationMethod",
                 "passwordAuthenticationMethod",
@@ -1126,6 +1135,16 @@
                 "softwareOathAuthenticationMethod",
                 "temporaryAccessPassAuthenticationMethod",
                 "windowsHelloForBusinessAuthenticationMethod"
+              ],
+              "childNodes": [
+                {
+                  "name": "QR code authentication",
+                  "resources": [
+                    "qrCodePinAuthenticationMethod",
+                    "qrCode",
+                    "qrPin"
+                  ]
+                }
               ]
             },
             {
@@ -1134,8 +1153,10 @@
               "resources": [
                 "authenticationMethodsPolicy",
                 "emailAuthenticationMethodConfiguration",
+                "externalAuthenticationMethodConfiguration",
                 "fido2AuthenticationMethodConfiguration",
                 "microsoftAuthenticatorAuthenticationMethodConfiguration",
+                "qrCodePinAuthenticationMethodConfiguration",
                 "smsAuthenticationMethodConfiguration",
                 "temporaryAccessPassAuthenticationMethodConfiguration",
                 "softwareOathAuthenticationMethodConfiguration",
@@ -1201,10 +1222,7 @@
                 "riskyUser",
                 "riskyUserHistoryItem",
                 "servicePrincipalRiskDetection",
-                "riskyServicePrincipal",
-                "fraudProtectionProvider",
-                "arkoseFraudProtectionProvider",
-                "humanSecurityFraudProtectionProvider"
+                "riskyServicePrincipal"
               ]
             },
             {
@@ -1350,7 +1368,8 @@
         "outlookCategory",
         "mailFolder",
         "mailSearchFolder",
-        "messageRule"
+        "messageRule",
+        "exchangeMessageTrace"
       ],
       "childNodes": [
         {
@@ -1519,18 +1538,6 @@
       ]
         },
         {
-          "name": "Audit log query",
-          "overview": "../../resources/security-auditlogquery.md",
-          "resources": [
-            "microsoft.graph.security.auditLogQuery",
-            "microsoft.graph.security.auditLogRecord"
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.auditData",
-            "microsoft.graph.security.defaultAuditData"
-          ]
-        },
-        {
           "name": "Partner billing reports",
           "overview": "../../resources/partners-billing-api-overview.md",
           "resources": [
@@ -1644,6 +1651,18 @@
           ]
         },
         {
+          "name": "Audit log query",
+          "overview": "../../resources/security-auditlogquery.md",
+          "resources": [
+            "microsoft.graph.security.auditLogQuery",
+            "microsoft.graph.security.auditLogRecord"
+          ],
+          "complexTypes": [
+            "microsoft.graph.security.auditData",
+            "microsoft.graph.security.defaultAuditData"
+          ]
+        },
+        {
           "name": "Data security and compliance",
           "resources": [
             "contentActivity",
@@ -1703,6 +1722,7 @@
             "microsoft.graph.security.ediscoveryCustodian",
             "microsoft.graph.security.ediscoveryNoncustodialDataSource",
             "microsoft.graph.security.ediscoveryHoldPolicy",
+            "microsoft.graph.security.ediscoveryPurgeDataOperation",
             "microsoft.graph.security.ediscoverySearch",
             "microsoft.graph.security.ediscoveryReviewSet",
             "microsoft.graph.security.ediscoveryReviewTag",
