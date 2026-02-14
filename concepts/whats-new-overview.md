@@ -22,6 +22,10 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Files
 
+- Create and manage [sharePointGroup](/graph/api/resources/sharepointgroup) and its members in a SharePoint Embedded container.
+
+### Reports | Microsoft 365 usage reports
+
 Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
   - [Get column](/graph/api/filestoragecontainer-get-column)
   - [Update column](/graph/api/filestoragecontainer-update-column)
