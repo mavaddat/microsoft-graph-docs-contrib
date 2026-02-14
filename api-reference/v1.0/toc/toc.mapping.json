@@ -702,7 +702,10 @@
         "permission",
         "recycleBin",
         "recycleBinItem",
-        "sharedDriveItem"
+        "sharedDriveItem",
+        "sharePointGroup",
+        "sharePointGroupIdentity",
+        "sharePointGroupMember"
       ],
       "complexTypes": [
         "fileStorageContainerTypeRegistrationSettings",
