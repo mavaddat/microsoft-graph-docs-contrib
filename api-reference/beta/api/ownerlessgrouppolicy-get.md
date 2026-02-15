@@ -81,7 +81,6 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.ownerlessGroupPolicy",
-  "id": "6be89e4e-edd8-3f59-d570-ebf3088d1923",
   "isEnabled": true,
   "notificationDurationInWeeks": 3,
   "maxMembersToNotify": 40,

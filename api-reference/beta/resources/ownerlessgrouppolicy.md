@@ -29,7 +29,6 @@ Inherits from [entity](../resources/entity.md).
 |:---|:---|:---|
 |emailInfo|[emailDetails](../resources/emaildetails.md)|The email notification details for the ownerless group policy, including the sender, subject, and body.|
 |enabledGroupIds|String collection|The collection of group IDs for which the policy is enabled.|
-|id|String|The unique identifier for the policy. Inherited from [entity](../resources/entity.md).|
 |isEnabled|Boolean|Indicates whether the ownerless group policy is enabled. Setting this property to `false` clears the values of all other policy parameters.|
 |maxMembersToNotify|Int64|The maximum number of members to notify. Value range is 0-90. Members are sorted by oldest membership first.|
 |notificationDurationInWeeks|Int64|The number of weeks for the notification duration. Value range is 1-7.|
@@ -43,16 +42,13 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "keyProperty": "id",
   "@odata.type": "microsoft.graph.ownerlessGroupPolicy",
-  "baseType": "microsoft.graph.entity",
-  "openType": "id"
+  "baseType": "microsoft.graph.entity"
 }
 -->
 ``` json
 {
   "@odata.type": "#microsoft.graph.ownerlessGroupPolicy",
-  "id": "String (identifier)",
   "isEnabled": "Boolean",
   "notificationDurationInWeeks": "Integer",
   "maxMembersToNotify": "Integer",
