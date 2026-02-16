@@ -20,7 +20,7 @@ It provides capability to expose sharePointGroup specific information, for the p
 | Property              | Type                        | Description                      |
 |:----------------------|:----------------------------|:---------------------------------|
 | title                 | String                      | Title of the sharePointGroup.|
-| principalId           | String                      | The identifier of the Principal corresponding to the sharePointGroup
+| principalId           | String                      | The identifier of the principal corresponding to the sharePointGroup.|
 | id                    | String                      | Unique identifier for the identity. Represents the ID field of the relevant sharePointGroup entity.|
 
 ## JSON representation
