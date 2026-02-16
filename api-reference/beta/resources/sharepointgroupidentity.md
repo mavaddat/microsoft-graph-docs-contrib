@@ -12,8 +12,8 @@ description: "Represents an identity of type SharePointGroup"
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The **SharePointGroupIdentity** resource represents the identity of a sharePointGroup resource.
-It extends from the **sharePointIdentity** resource to provide capability to expose SharePointGroup specific information, for principalId and title.
+Represents the identity of a sharePointGroup resource.
+It provides capability to expose SharePointGroup specific information, for the principalId and title properties.
 
 ## Properties
 
