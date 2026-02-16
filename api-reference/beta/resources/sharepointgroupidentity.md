@@ -4,7 +4,7 @@ ms.author: humbertor
 ms.date: 11/17/2025
 ms.subservice: "onedrive"
 doc_type: resourcePageType
-title: SharePointGroupIdentity - OneDrive API
+title: sharePointGroupIdentity  resource type
 description: "Represents an identity of type sharePointGroup."
 ---
 
@@ -12,7 +12,7 @@ description: "Represents an identity of type sharePointGroup."
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the identity of a sharePointGroup resource.
+Represents the identity of a sharePointGroup resource. It provides capability to expose sharePointGroup specific information, for the principalId and title properties.
 It provides capability to expose sharePointGroup specific information, for the principalId and title properties.
 
 ## Properties
