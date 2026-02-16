@@ -27,7 +27,7 @@ For usage information, see [driveItem][].
 | user        | [identity][]           | The user associated with this action. Optional. |
 | siteUser    | [sharePointIdentity][] | The SharePoint user associated with this action. Optional. |
 | siteGroup   | [sharePointIdentity][] | The SharePoint group associated with this action. Optional. |
-| sharePointGroup   | [SharePointGroupIdentity][] | The sharePointGroup entity associated with this action. Optional. |
+| sharePointGroup   | [sharePointGroupIdentity][] | The SharePoint group entity associated with this action. Optional. |
 
 ## Relationships
 None.
