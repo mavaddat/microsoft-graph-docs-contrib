@@ -5,23 +5,23 @@ ms.date: 11/17/2025
 ms.subservice: "onedrive"
 doc_type: resourcePageType
 title: SharePointGroupIdentity - OneDrive API
-description: "Represents an identity of type SharePointGroup"
+description: "Represents an identity of type sharePointGroup."
 ---
 
-# SharePointGroupIdentity resource type
+# sharePointGroupIdentity resource type
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents the identity of a sharePointGroup resource.
-It provides capability to expose SharePointGroup specific information, for the principalId and title properties.
+It provides capability to expose sharePointGroup specific information, for the principalId and title properties.
 
 ## Properties
 
 | Property              | Type                        | Description                      |
 |:----------------------|:----------------------------|:---------------------------------|
-| title                 | String                      | Title of the sharePointGroup
+| title                 | String                      | Title of the sharePointGroup.|
 | principalId           | String                      | The identifier of the Principal corresponding to the sharePointGroup
-| id                    | String                      | Unique identifier for the identity. Represents the ID field of the relevant sharePointGroup entity.
+| id                    | String                      | Unique identifier for the identity. Represents the ID field of the relevant sharePointGroup entity.|
 
 ## JSON representation
 
