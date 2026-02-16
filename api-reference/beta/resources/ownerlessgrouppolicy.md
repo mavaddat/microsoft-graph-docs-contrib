@@ -16,13 +16,15 @@ Namespace: microsoft.graph
 
 Represents the configuration for managing groups that have lost their sole owner. Use this policy to send actionable notification emails to active members of ownerless groups to accept ownership. Administrators can configure notification duration, maximum members to notify, and control ownership eligibility by using security groups.
 
+Only users with the Global Administrator, Groups Administrator, or Exchange Administrator roles can access this policy.
+
 Inherits from [entity](../resources/entity.md).
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
 |[Get](../api/ownerlessgrouppolicy-get.md)|[ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md)|Read the properties of an [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) object.|
-|[Update](../api/ownerlessgrouppolicy-upsert.md)|[ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md)|Create or update an [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) object.|
+|[Upsert](../api/ownerlessgrouppolicy-upsert.md)|[ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md)|Create or update an [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) object.|
 
 ## Properties
 |Property|Type|Description|

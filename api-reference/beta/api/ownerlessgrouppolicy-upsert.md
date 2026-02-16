@@ -29,6 +29,13 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/ownerlessgrouppolicy-upsert-permissions.md)]
 
+> [!IMPORTANT]
+> In delegated scenarios, the calling user must be assigned one of the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
+>
+> - Global Administrator
+> - Groups Administrator
+> - Exchange Administrator
+
 ## HTTP request
 
 <!-- {

@@ -22,8 +22,8 @@ None.
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|notifyMembers|notifyMembers|The strategy for selecting members to notify about taking ownership. The possible values are: `all`, `allowSelected`, `blockSelected`, `unknownFutureValue`.|
-|securityGroups|String collection|The collection of security group identifiers used for allow or block filtering. When **notifyMembers** is `all`, this collection can be empty. When **notifyMembers** is `allowSelected`, only members in these security groups are eligible. When **notifyMembers** is `blockSelected`, members in these security groups are excluded.|
+|notifyMembers|notifyMembers|The strategy for selecting members to notify about taking ownership. The possible values are: `all`, `allowSelected`, `blockSelected`.|
+|securityGroups|String collection|The collection of security group identifiers used for allow or block filtering. When **notifyMembers** is `all`, all members are eligible for ownership and this collection can be empty. When **notifyMembers** is `allowSelected`, only members in these security groups are eligible. When **notifyMembers** is `blockSelected`, members in these security groups are excluded.|
 
 ## Relationships
 None.
