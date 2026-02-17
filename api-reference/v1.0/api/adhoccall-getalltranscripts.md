@@ -3,7 +3,6 @@ title: "adhocCall: getAllTranscripts"
 description: Get transcripts from all ad hoc calls initiated by a user
 #customer intent: As a developer, I want to retrieve all transcripts from ad hoc calls initiated by a specific user so that I can analyze the meeting content programmatically.
 author: "kanchm"
-ms.author: v-sukanyadas
 ms.reviewer: v-sukanyadas
 ms.date: 02/17/2026
 ms.localizationpriority: medium

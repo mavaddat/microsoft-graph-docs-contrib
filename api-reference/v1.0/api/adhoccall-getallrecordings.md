@@ -3,7 +3,6 @@ title: "adhocCall: getAllRecordings"
 description: Get recordings from all ad hoc calls initiated by a user
 #customer intent: As a developer, I want to retrieve all recordings from ad hoc calls initiated by a specific user so that I can analyze meeting data for compliance purposes.
 author: "kanchm"
-ms.author: v-sukanyadas
 ms.reviewer: v-sukanyadas
 ms.date: 02/17/2026
 ms.localizationpriority: medium
