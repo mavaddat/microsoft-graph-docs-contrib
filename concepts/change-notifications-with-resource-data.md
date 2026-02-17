@@ -104,8 +104,31 @@ Rich notifications include a **validationTokens** property, which contains an ar
 > Microsoft Graph doesn't send validation tokens for [change notifications delivered through Azure Event Hubs](change-notifications-delivery-event-hubs.md) because the subscription service doesn't need to validate the **notificationUrl** for Event Hubs.
 
 > [!NOTE]
-> Make sure for the tenant-app pair you are expecting notifications, ExplicitAccessGrantRequired flag is set to false. To set ExplicitAccessGrantRequired to false, you can run this command through Azure Powershell: "Set-AzureADServicePrincipal -objectid "your-object id" -AppRoleAssignmentRequired $false". Or you can set it to false on the Azure Portal by navigating to Microsoft Entra ID → Enterprise Applications → [your app] → Properties and setting "Assignment required?" to false. 
-If ExplicitAccessGrantRequired needs to be set to true, assign our application Microsoft Graph Change Tracking a resource app role: [Assign app roles to applications](/entra/identity-platform/howto-add-app-roles-in-apps#assign-app-roles-to-applications). Otherwise, the notification will contain null validation token.
+> **Explicit access configuration is required for notifications to work correctly.**
+>
+> For the tenant–app pair from which you expect notifications, ensure the **`ExplicitAccessGrantRequired`** property is set to **`false`**.
+>
+> #### Option 1: Set via Azure PowerShell
+> ```powershell
+> Set-AzureADServicePrincipal `
+>   -ObjectId "<your-object-id>" `
+>   -AppRoleAssignmentRequired $false
+> ```
+>
+> #### Option 2: Set via Azure Portal
+> 1. Go to **Microsoft Entra ID**
+> 2. Navigate to **Enterprise Applications** → **\<your app\>**
+> 3. Open **Properties**
+> 4. Set **`Assignment required?`** to **No**
+>
+> #### When `ExplicitAccessGrantRequired` must be `true`
+> If **`ExplicitAccessGrantRequired`** needs to remain **`true`**, you must explicitly assign the **Microsoft Graph Change Tracking** application a **resource app role**.
+>
+> For instructions, see:  
+> [Assign app roles to applications](/entra/identity-platform/howto-add-app-roles-in-apps#assign-app-roles-to-applications)
+>
+> ⚠️ If neither condition is met, the notification payload will contain a **`null` validation token**.
+``
 
 In the following example, the change notification contains two items for the same app, and for two different tenants, therefore the **validationTokens** array contains two tokens that need to be validated.
 
