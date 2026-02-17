@@ -1,8 +1,8 @@
 ---
 title: adhocCall resource type
 description: Represents an ad hoc call, including PSTN calls, one-to-one calls, and group calls.
+author: "kanchm"
 #customer intent: As a developer, I want to understand the properties of the `adhocCall` resource type so that I can integrate it into my application.
-ms.author: "kanchm"
 ms.reviewer: v-sukanyadas
 ms.date: 02/17/2026
 ms.localizationpriority: medium

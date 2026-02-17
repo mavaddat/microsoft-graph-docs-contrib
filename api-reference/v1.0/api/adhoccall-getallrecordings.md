@@ -1,8 +1,8 @@
 ---
 title: "adhocCall: getAllRecordings"
 description: Get recordings from all ad hoc calls initiated by a user
+author: "kanchm"
 #customer intent: As a developer, I want to retrieve all recordings from ad hoc calls initiated by a specific user so that I can analyze meeting data for compliance purposes.
-ms.author: "kanchm"
 ms.reviewer: v-sukanyadas
 ms.date: 02/17/2026
 ms.localizationpriority: medium
@@ -73,6 +73,8 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/v1.0/adhocCalls/getAllRecordings(userId=d4220f1b-4c12-436c-8a03-dc3e362f9d54,startDateTime=2025-10-07T07:25:21.9730833Z,endDateTime=2025-10-07T07:25:52.4130833Z)
 ```
+
+---
 
 ### Response
 
