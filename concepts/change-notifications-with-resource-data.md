@@ -122,10 +122,8 @@ Rich notifications include a **validationTokens** property, which contains an ar
 > 4. Set **`Assignment required?`** to **No**
 >
 > #### When `ExplicitAccessGrantRequired` must be `true`
-> If **`ExplicitAccessGrantRequired`** needs to remain **`true`**, you must explicitly assign the **Microsoft Graph Change Tracking** application a **resource app role**.
->
-> For instructions, see:  
-> [Assign app roles to applications](/entra/identity-platform/howto-add-app-roles-in-apps#assign-app-roles-to-applications)
+> 1. If **`ExplicitAccessGrantRequired`** needs to remain **`true`**, you must explicitly assign the **Microsoft Graph Change Tracking** application a **resource app role**.
+> 2. For instructions, see: [Assign app roles to applications](/entra/identity-platform/howto-add-app-roles-in-apps#assign-app-roles-to-applications)
 >
 > ⚠️ If neither condition is met, the notification payload will contain a **`null` validation token**.
 ``
