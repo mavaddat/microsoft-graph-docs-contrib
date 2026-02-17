@@ -2,7 +2,7 @@
 title: "adhocCall: getAllTranscripts"
 description: Get transcripts from all ad hoc calls initiated by a user
 #customer intent: As a developer, I want to retrieve all transcripts from ad hoc calls initiated by a specific user so that I can analyze the meeting content programmatically.
-author: "kanchm"
+ms.author: "kanchm"
 ms.reviewer: v-sukanyadas
 ms.date: 02/17/2026
 ms.localizationpriority: medium
@@ -23,7 +23,7 @@ Get all transcripts from [adhoc call](../resources/adhoccall.md) instances that 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "adhoccall_getalltranscripts" } -->
-[!INCLUDE [permissions-table](../includes/permissions/adhoccall-getalltranscripts-permissions.md)]
+[!INCLUDE [permissions-table](../../beta/includes/permissions/adhoccall-getalltranscripts-permissions.md)]
 
 ## HTTP request
 
