@@ -146,9 +146,5 @@ Content-type: application/json
   "type": "#page.annotation",
   "description": "Get directory",
   "keywords": "",
-  "section": "documentation",
-  "tocPath": "",
-  "suppressions": [
-  
-  ]
+  "suppressions": []
 }-->

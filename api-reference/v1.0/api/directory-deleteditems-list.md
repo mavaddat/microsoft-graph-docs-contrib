@@ -254,9 +254,5 @@ Content-type: application/json
   "type": "#page.annotation",
   "description": "List deleteditems",
   "keywords": "",
-  "section": "documentation",
-  "tocPath": "",
-  "suppressions": [
-   
-  ]
+  "suppressions": []
 }-->
