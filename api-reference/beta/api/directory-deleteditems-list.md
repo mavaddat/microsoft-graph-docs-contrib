@@ -70,10 +70,12 @@ GET /directory/deletedItems/microsoft.graph.certificateAuthorityDetail
 ```
 
 > [!IMPORTANT]
-> For soft deleted security groups, the **securityEnabled** property returns `false` instead of `true` due to a known limitation. To determine whether a soft deleted group is a Microsoft 365 group or a security group, check the **groupTypes** property:
+> For soft deleted security groups, the **securityEnabled** property returns `false` instead of `true` due to a known limitation.
 >
-> - If groupTypes contains ["Unified"], it's a Microsoft 365 group
-> - If groupTypes is empty [], it's a security group
+> To identify the group type, use the **groupTypes** property:
+>
+> - `["Unified"]`indicates a Microsoft 365 group.
+> - An empty array (`[]`) indicates a security group.
 
 The OData cast type is a required part of the URI and calling `GET /directory/deleteditems` without a type is **not** supported.
 
@@ -274,10 +276,7 @@ Content-type: application/json
   "section": "documentation",
   "tocPath": "",
   "suppressions": [
-   Error: /api/directory-deleteditems-list.md:
-      Exception processing links.
-      Link Definition was null. Link text: 'Unified' (Parameter 'Definition')
-  
+   
   ]
 }
 -->

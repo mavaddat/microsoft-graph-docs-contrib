@@ -60,10 +60,12 @@ GET /directory/deleteditems/{object-id}
 ```
 
 > [!IMPORTANT]
-> For soft deleted security groups, the **securityEnabled** property returns `false` instead of `true` due to a known limitation. To determine whether a soft deleted group is a Microsoft 365 group or a security group, check the **groupTypes** property:
+> For soft deleted security groups, the **securityEnabled** property returns `false` instead of `true` due to a known limitation.
 >
-> - If groupTypes contains ["Unified"], it's a Microsoft 365 group
-> - If groupTypes is empty [], it's a security group
+> To identify the group type, use the **groupTypes** property:
+>
+> - `["Unified"]`indicates a Microsoft 365 group.
+> - An empty array (`[]`) indicates a security group.
 
 ## Optional query parameters
 This method supports the [OData query parameters](/graph/query-parameters) to help customize the response.
@@ -162,9 +164,7 @@ Content-type: application/json
   "section": "documentation",
   "tocPath": "",
   "suppressions": [
-  Error: /api/directory-deleteditems-get.md:
-      Exception processing links.
-      Link Definition was null. Link text: 'Unified' (Parameter 'Definition')
+  
   ]
 }
 -->
