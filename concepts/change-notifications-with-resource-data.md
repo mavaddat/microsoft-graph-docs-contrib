@@ -126,7 +126,7 @@ Rich notifications include a **validationTokens** property, which contains an ar
 > 2. For instructions, see: [Assign app roles to applications](/entra/identity-platform/howto-add-app-roles-in-apps#assign-app-roles-to-applications)
 >
 > ⚠️ If neither condition is met, the notification payload will contain a **`null` validation token**.
-``
+
 
 In the following example, the change notification contains two items for the same app, and for two different tenants, therefore the **validationTokens** array contains two tokens that need to be validated.
 
