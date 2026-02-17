@@ -104,7 +104,8 @@ Rich notifications include a **validationTokens** property, which contains an ar
 > Microsoft Graph doesn't send validation tokens for [change notifications delivered through Azure Event Hubs](change-notifications-delivery-event-hubs.md) because the subscription service doesn't need to validate the **notificationUrl** for Event Hubs.
 
 > [!NOTE]
-> Make sure for the tenant-app pair you are expecting notifications, ExplicitAccessGrantRequired flag is set to false. If it needs to be set to true, assign our application Microsoft Graph Change Tracking a resource app role: [Assign app roles to applications](https://learn.microsoft.com/en-us/entra/identity-platform/howto-add-app-roles-in-apps#assign-app-roles-to-applications). Otherwise, the notification will contain null validation token.
+> Make sure for the tenant-app pair you are expecting notifications, ExplicitAccessGrantRequired flag is set to false. To set ExplicitAccessGrantRequired to false, you can run this command through Azure Powershell: "Set-AzureADServicePrincipal -objectid "your-object id" -AppRoleAssignmentRequired $false". Or you can set it to false on the Azure Portal by navigating to Microsoft Entra ID → Enterprise Applications → [your app] → Properties and setting "Assignment required?" to false. 
+If ExplicitAccessGrantRequired needs to be set to true, assign our application Microsoft Graph Change Tracking a resource app role: [Assign app roles to applications](https://learn.microsoft.com/en-us/entra/identity-platform/howto-add-app-roles-in-apps#assign-app-roles-to-applications). Otherwise, the notification will contain null validation token.
 
 In the following example, the change notification contains two items for the same app, and for two different tenants, therefore the **validationTokens** array contains two tokens that need to be validated.
 
