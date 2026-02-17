@@ -32,7 +32,7 @@ For usage information, see [driveItem][].
 The following JSON representation shows the resource type.
 
 <!-- { "blockType": "resource", "@odata.type": "microsoft.graph.sharePointIdentitySet",
-       "optionalProperties": ["user", "application", "group", "device", "siteUser", "siteGroup"],
+       "optionalProperties": ["user", "application", "group", "device", "siteUser", "siteGroup", "sharePointGroup"],
        "openType": true } -->
 
 ```json
