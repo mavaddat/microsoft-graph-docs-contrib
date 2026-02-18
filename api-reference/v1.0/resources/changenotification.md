@@ -57,8 +57,8 @@ The following JSON representation shows the resource type.
   "encryptedContent": {
     "@odata.type": "microsoft.graph.changeNotificationEncryptedContent"
   },
-  "lifecycleEvent": "String",
   "id": "String (identifier)",
+  "lifecycleEvent": "String",
   "resource": "String",
   "resourceData": {
     "@odata.type": "microsoft.graph.resourceData"
