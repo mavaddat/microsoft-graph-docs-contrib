@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-let place = await client.api('/places/microsoft.graph.desk')
+let desk = await client.api('/places/microsoft.graph.desk')
 	.version('beta')
 	.get();
 

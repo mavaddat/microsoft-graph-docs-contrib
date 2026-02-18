@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-let place = await client.api('/places/microsoft.graph.section')
+let section = await client.api('/places/microsoft.graph.section')
 	.version('beta')
 	.get();
 

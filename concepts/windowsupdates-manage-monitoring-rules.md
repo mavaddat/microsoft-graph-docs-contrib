@@ -1,11 +1,11 @@
 ---
 title: "Manage monitoring rules using Windows Autopatch"
 description: "Use Windows Autopatch to create a monitoring rule or resume deployments paused by a monitoring rule."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
 ms.subservice: windows-autopatch
 doc_type: conceptualPageType
-ms.date: 11/07/2024
+ms.date: 01/28/2026
 ms.topic: how-to
 ---
 
@@ -111,7 +111,7 @@ The following example shows how to resume the deployment by removing the rule.
 
 #### Request
 
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/admin/windows/updates/deployments/b5171742-1742-b517-4217-17b5421717b5
 Content-Type: application/json
 
@@ -128,7 +128,7 @@ Content-Type: application/json
 
 #### Response
 
-``` http
+```http
 HTTP/1.1 202 Accepted
 Content-Type: application/json
 
@@ -171,7 +171,7 @@ The following example shows how to resume the deployment by changing the monitor
 
 #### Request
 
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/admin/windows/updates/deployments/b5171742-1742-b517-4217-17b5421717b5
 Content-Type: application/json
 
@@ -194,7 +194,7 @@ Content-Type: application/json
 
 #### Response
 
-``` http
+```http
 HTTP/1.1 202 Accepted
 Content-Type: application/json
 

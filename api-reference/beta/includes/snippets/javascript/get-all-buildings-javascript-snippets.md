@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-let place = await client.api('/places/microsoft.graph.building')
+let building = await client.api('/places/microsoft.graph.building')
 	.version('beta')
 	.get();
 

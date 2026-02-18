@@ -127,7 +127,7 @@ Subscriptions on virtual events support only basic notifications and are limited
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /subscriptions/getVapidPublicKey
 ```
 
@@ -156,7 +156,7 @@ The following example shows a request.
   "name": "subscriptionthis.getvapidpublickey"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/subscriptions/getVapidPublicKey
 ```
 
@@ -180,6 +180,10 @@ GET https://graph.microsoft.com/beta/subscriptions/getVapidPublicKey
 [!INCLUDE [sample-code](../includes/snippets/php/subscriptionthisgetvapidpublickey-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/subscriptionthisgetvapidpublickey-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/subscriptionthisgetvapidpublickey-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -196,7 +200,7 @@ The following example shows the response.
   "@odata.type": "Edm.String"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

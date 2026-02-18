@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-let place = await client.api('/places/microsoft.graph.floor')
+let floor = await client.api('/places/microsoft.graph.floor')
 	.version('beta')
 	.get();
 

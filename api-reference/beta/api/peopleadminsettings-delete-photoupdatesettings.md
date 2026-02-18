@@ -31,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /admin/people/photoUpdateSettings/$ref
 ```
 
@@ -60,7 +60,7 @@ The following example shows a request.
   "name": "delete_photoupdatesettings"
 }
 -->
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/admin/people/photoUpdateSettings
 ```
 
@@ -84,12 +84,15 @@ DELETE https://graph.microsoft.com/beta/admin/people/photoUpdateSettings
 [!INCLUDE [sample-code](../includes/snippets/php/delete-photoupdatesettings-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/delete-photoupdatesettings-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/delete-photoupdatesettings-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
-
 
 ### Response
 
@@ -100,6 +103,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

@@ -17,7 +17,7 @@ Namespace: microsoft.graph
 
 Process [content](../resources/processcontentrequest.md) against data protection policies in the context of the current, or specified, user.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -81,7 +81,7 @@ The following example shows a request.
   "name": "userdatasecurityandgovernance.processcontent_1"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/me/dataSecurityAndGovernance/processContent
 Content-Type: application/json
 
@@ -100,7 +100,8 @@ Content-Type: application/json
              "sequenceNumber": 0, 
              "isTruncated": false,
              "createdDateTime": "2025-05-27T17:23:20",
-             "modifiedDateTime": "2025-05-27T17:23:20"
+             "modifiedDateTime": "2025-05-27T17:23:20",
+             "contentCategory": "ai"
           }
        ],
        "activityMetadata": { 
@@ -166,14 +167,19 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.processContentResponse"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.processContentResponse",
   "protectionScopeState": "notModified",
-  "policyActions": [],
+   "policyActions": [
+    {
+      "@odata.type": "#microsoft.graph.dlpAction",
+      "action" : "restrictWebGrounding"
+    }
+  ],
   "processingErrors": []
 }
 ```
@@ -189,7 +195,7 @@ The following example shows a request.
   "name": "userdatasecurityandgovernance.processcontent_2"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/users/{5def8f26-aff8-4db6-a08c-0fcf8f1aa2ba}/dataSecurityAndGovernance/processContent
 Content-Type: application/json
 
@@ -272,7 +278,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.processContentResponse"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -301,7 +307,7 @@ The following example shows a request.
   "name": "userdatasecurityandgovernance.processcontent_3"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/me/dataSecurityAndGovernance/processContent
 Content-Type: application/json
 
@@ -323,6 +329,7 @@ Content-Type: application/json
 				"length": 17352,
 				"isTruncated": false,
 				"ownerId": "ffe1ca70-6e5b-4120-abf0-472034ba05d4",
+             	"contentCategory": "none",
 				"customProperties": {
 					"Department": "Finance",
 					"ReviewerName": "John Smith"
@@ -391,7 +398,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.processContentResponse"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

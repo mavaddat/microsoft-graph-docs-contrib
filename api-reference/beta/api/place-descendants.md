@@ -16,8 +16,9 @@ Namespace: microsoft.graph
 
 Get all the descendants of a specific type under a [place](../resources/place.md).
 
-> **Note:**
-> This method can't return more than 2,500 places.
+> [!NOTE]
+> * Before you can use this API, ensure that the Places settings are properly configured. For more information, see [Prerequisites for Places list and descendant APIs](../resources/places-api-overview.md#prerequisites-for-places-list-and-descendant-apis).
+> * This method can't return more than 2,500 places.
 
 ## Permissions
 
@@ -36,7 +37,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /places/{id}/descendants/{placeType}
 ```
 
@@ -62,14 +63,21 @@ If successful, this function returns a `200 OK` response code and a [place](../r
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "placethis.descendants"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/places/ca163ae1-14a3-4e2a-8a97-5f82d672186f/descendants/microsoft.graph.desk
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/placethisdescendants-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
@@ -81,7 +89,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.place)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -94,7 +102,7 @@ Content-Type: application/json
       "parentId": "ca163ae1-14a3-4e2a-8a97-5f82d672186f",
       "isWheelChairAccessible": false,
       "mode": {
-        "@odata.type": "#microsoft.graph.offlinePlaceMode",
+        "@odata.type": "#microsoft.graph.unavailablePlaceMode",
         "reason": "New"
       }
     },

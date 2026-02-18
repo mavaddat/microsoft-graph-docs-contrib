@@ -33,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /admin/people/photoUpdateSettings
 ```
 
@@ -68,7 +68,7 @@ The following example shows a request.
   "name": "update_photoupdatesettings"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/admin/people/photoUpdateSettings
 Content-Type: application/json
 
@@ -101,12 +101,15 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/php/update-photoupdatesettings-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/update-photoupdatesettings-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/update-photoupdatesettings-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
-
 
 ### Response
 
@@ -118,7 +121,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.photoUpdateSettings"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

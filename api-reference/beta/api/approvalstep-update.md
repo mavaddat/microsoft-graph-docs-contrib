@@ -24,7 +24,11 @@ The following tables show the least privileged permission or permissions require
 
 ### Permissions required for calling this API for entitlement management
 
-<!-- { "blockType": "permissions", "name": "approvalstep_update", "requestUrls": ["PATCH /identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/{id}/steps/{id}"] } -->
+<!-- { 
+  "blockType": "permissions", 
+  "name": "approvalstep_update", 
+  "requestUrls": ["PATCH /identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/{id}/steps/{id}"]
+ } -->
 [!INCLUDE [permissions-table](../includes/permissions/approvalstep-update-permissions.md)]
 
 [!INCLUDE [rbac-entitlement-end-user-apis-write](../includes/rbac-for-apis/rbac-entitlement-management-end-user-apis-write.md)]
@@ -76,7 +80,7 @@ The following table shows the properties that are required for this method.
 
 | Property       | Type    |Description|
 |:---------------|:--------|:----------|
-| reviewResult | String | Decision of the approver. Possible values are: `Approve`, `Deny`.|
+| reviewResult | String | Decision of the approver. The possible values are: `Approve`, `Deny`.|
 | justification | String | Justification related to the approver's decision. |
 
 

@@ -25,13 +25,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "place_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/place-update-permissions.md)]
 
+>**Note**: Exchange Admin role is requied to update places.
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /places/{id}
 ```
 
@@ -133,7 +135,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "microsoft.graph.building"
 } -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -224,7 +226,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "microsoft.graph.floor"
 } -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -309,7 +311,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "microsoft.graph.section"
 } -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -389,7 +391,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "microsoft.graph.desk"
 } -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -478,7 +480,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "microsoft.graph.room"
 } -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
