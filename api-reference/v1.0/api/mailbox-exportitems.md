@@ -12,7 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Export Exchange [mailboxItem](../resources/mailboxitem.md) objects in full fidelity. This API exports each item as an opaque stream. The data stream isn't intended for parsing, but can be used to import an item back into an Exchange mailbox. For more information, see: [Overview of the mailbox import and export APIs in Microsoft Graph (preview)](/graph/mailbox-import-export-concept-overview)
+Export Exchange [mailboxItem](../resources/mailboxitem.md) objects in full fidelity. This API exports each item as an opaque stream. The data stream isn't intended for parsing, but can be used to import an item back into an Exchange mailbox. For more information, see: [Overview of the mailbox import and export APIs in Microsoft Graph](/graph/mailbox-import-export-concept-overview)
 
 You can export up to 20 items in a single export request.
 
@@ -69,7 +69,7 @@ The following example exports two items present in the user's mailbox. The **ite
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/exportItems
+POST https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/exportItems
 Content-type: application/json
 
 {
@@ -122,7 +122,7 @@ Content-type: application/json
 Content-length: 232
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.exportItemResponse)",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(microsoft.graph.exportItemResponse)",
     "value": [
         {
             "itemId": "EDSVrdi3lRAADmpnf1AAA=",

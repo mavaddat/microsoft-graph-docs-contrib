@@ -61,7 +61,7 @@ The following example shows how to create an import session. The opaque URL, ret
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/createImportSession
+POST https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/createImportSession
 ```
 
 # [C#](#tab/csharp)
@@ -106,8 +106,8 @@ Content-type: application/json
 Content-length: 232
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#microsoft.graph.mailboxItemImportSession",
-    "importUrl": "https://outlook.office365.com/api/gbeta/Mailboxes('MBX:e0643f21@a7809c93')/importItem?authtoken=eyJhbGciOiJSUzI1NiIsImtpZCI6IjFTeXQ1b",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.mailboxItemImportSession",
+    "importUrl": "https://outlook.office365.com/api/gv1.0/Mailboxes('MBX:e0643f21@a7809c93')/importItem?authtoken=eyJhbGciOiJSUzI1NiIsImtpZCI6IjFTeXQ1b",
     "expirationDateTime": "2024-10-17T19:00:48.1052906Z"
 }
 ```

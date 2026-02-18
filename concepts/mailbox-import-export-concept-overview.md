@@ -36,10 +36,10 @@ The following are some of the scenarios that the mailbox import and export APIs 
 
 ## API reference
 
-Looking for the API reference for this service, see [Mailbox import and export APIs in Microsoft Graph beta](/graph/api/resources/mailbox-import-export-api-overview?view=graph-rest-beta&preserve-view=true).
+Looking for the API reference for this service, see [Mailbox import and export APIs in Microsoft Graph](/graph/api/resources/mailbox-import-export-api-overview).
 
 ## Next steps
 
-- To learn more about the mailbox import and export APIs, see [Use the mailbox import and export APIs in Microsoft Graph (preview)](/graph/api/resources/mailbox-import-export-api-overview).
+- To learn more about the mailbox import and export APIs, see [Use the mailbox import and export APIs in Microsoft Graph](/graph/api/resources/mailbox-import-export-api-overview).
 - To learn how to import a mailbox item, see [Import an Exchange mailbox item using the mailbox import and export APIs](/graph/import-exchange-mailbox-item).
 - Try the mailbox import and export APIs in [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).

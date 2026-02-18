@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders
+GET https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders
 ```
 
 # [C#](#tab/csharp)
@@ -113,14 +113,14 @@ Content-type: application/json
 Content-length: 232
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders",
     "value": [
         {
             "@odata.type": "#microsoft.graph.mailboxFolder",
             "id": "EDSVrdi3lRAAACgfQBAAA=",
             "displayName": "Archive",
             "parentFolderId": "NJWt2LeVEAAAIBCAAAAA==",
-            "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
+            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
             "childFolderCount": 0,
             "totalItemCount": 2,
             "type": "IPF.Note"
@@ -130,13 +130,13 @@ Content-length: 232
             "id": "NJWt2LeVEAAAIBDQAAAA==",
             "displayName": "Calendar",
             "parentFolderId": "NJWt2LeVEAAAIBCAAAAA==",
-            "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
+            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
             "childFolderCount": 5,
             "totalItemCount": 6,
             "type": "IPF.Appointment"
         }
     ],
-    "@odata.nextLink": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders?%24skip=10"
+    "@odata.nextLink": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders?%24skip=10"
 }
 ```
 
@@ -155,7 +155,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders?$filter=type eq 'IPF.Appointment'&$select=displayName,type&$top=5
+GET https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders?$filter=type eq 'IPF.Appointment'&$select=displayName,type&$top=5
 ```
 
 # [C#](#tab/csharp)
@@ -200,13 +200,13 @@ Content-type: application/json
 Content-length: 232
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders",
     "value": [
         {
             "@odata.type": "#microsoft.graph.mailboxFolder",
             "id": "NJWt2LeVEAAAIBDQAAAA==",
             "displayName": "Calendar",
-            "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
+            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
             "type": "IPF.Appointment"
         }
     ]

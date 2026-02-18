@@ -67,7 +67,7 @@ The following example shows how to create a new mailbox folder.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0648f21@aab09c93/folders
+POST https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0648f21@aab09c93/folders
 
 {
   "displayName": "Announcements",
@@ -103,11 +103,11 @@ Content-type: application/json
 Content-length: 179
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#admin/exchange/mailboxes('MBX%3A73c326ef%402829ab8a')/folders/$entity",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#admin/exchange/mailboxes('MBX%3A73c326ef%402829ab8a')/folders/$entity",
   "id": "AQMkAGUw==",
   "displayName": "Announcements",
   "parentFolderId": "AQMkAGUc==",
-  "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0648f21@aab09c93",
+  "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0648f21@aab09c93",
   "childFolderCount": 0,
   "totalItemCount": 0,
   "type": "IPF.Note"

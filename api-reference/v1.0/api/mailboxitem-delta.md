@@ -86,7 +86,7 @@ For an example that shows a round of delta query calls, see [Get incremental cha
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/AAMkAGUwNjQ4ZyTAAA=/items/delta
+GET https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/AAMkAGUwNjQ4ZyTAAA=/items/delta
 Prefer: odata.maxpagesize=2
 ```
 
@@ -135,8 +135,8 @@ Content-Type: application/json
 Content-length: 337
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(mailboxItem)",
-    "@odata.nextLink": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/AAMkAGUwNjQ4ZyTAAA=/items/delta?$skiptoken={_skipToken_}",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(mailboxItem)",
+    "@odata.nextLink": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/AAMkAGUwNjQ4ZyTAAA=/items/delta?$skiptoken={_skipToken_}",
     "value": [
         {
             "@odata.type": "#microsoft.graph.mailboxItem",

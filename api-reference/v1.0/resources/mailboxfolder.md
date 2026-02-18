@@ -40,7 +40,6 @@ This resource supports [delta query](/graph/delta-query-overview) to track incre
 |displayName|String|The display name of the folder.|
 |id|String|The unique identifier for the folder.|
 |parentFolderId|String|The unique identifier for the parent folder of this folder.|
-|parentMailboxUrl|String|The routing link to the actual underlying mailbox where the folder physically resides. The folder can be accessed using `GET {parentMailboxUrl}/folders/{id}`, which treats the entire URL as an opaque string. <br><br> This method is especially important when auto-expanding archiving is enabled for a user's in-place archive mailbox. The user's archive content can span across multiple mailboxes in such scenarios.|
 |totalItemCount|Int32|The number of items in the folder.|
 |type|String|Describes the folder class type.|
 
@@ -68,7 +67,6 @@ The following JSON representation shows the resource type.
   "childFolderCount": "Int32",
   "id": "String (identifier)",
   "parentFolderId": "String",
-  "parentMailboxUrl": "String",
   "totalItemCount": "Int32",
   "type": "String"
 }

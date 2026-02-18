@@ -69,7 +69,7 @@ The following example shows how to get the mailbox folder collection under a spe
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/NJWt2LeVEAAAIBDAAAAA==/childFolders
+GET https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/NJWt2LeVEAAAIBDAAAAA==/childFolders
 ```
 
 # [C#](#tab/csharp)
@@ -114,14 +114,14 @@ Content-type: application/json
 Content-length: 232
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders('NJWt2LeVEAAAIBDAAAAA==')/childFolders",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders('NJWt2LeVEAAAIBDAAAAA==')/childFolders",
     "value": [
         {
             "@odata.type": "#microsoft.graph.mailboxFolder",
             "id": "EDSVrdi3lRAAEvNS16AAA=",
             "displayName": "Folder_1",
             "parentFolderId": "NJWt2LeVEAAAIBDAAAAA==",
-            "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
+            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
             "childFolderCount": 0,
             "totalItemCount": 20,
             "type": "IPF.Note"
@@ -131,7 +131,7 @@ Content-length: 232
             "id": "EDSVrdi3lRAAEED0yTAAA=",
             "displayName": "Folder_2",
             "parentFolderId": "NJWt2LeVEAAAIBDAAAAA==",
-            "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
+            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93",
             "childFolderCount": 0,
             "totalItemCount": 1,
             "type": "IPF.Note"

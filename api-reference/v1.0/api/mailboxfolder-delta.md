@@ -82,7 +82,7 @@ For a similar example that shows how to use the state tokens to track changes in
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/delta
+GET https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/delta
 Prefer: odata.maxpagesize=2
 ```
 
@@ -131,19 +131,19 @@ Content-type: application/json
 Content-length: 254
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(mailboxFolder)",
-    "@odata.deltaLink": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/delta?$deltatoken={_deltaToken_}",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#Collection(mailboxFolder)",
+    "@odata.deltaLink": "https://graph.microsoft.com/v1.0/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/delta?$deltatoken={_deltaToken_}",
     "value": [
         {
             "@odata.type": "#microsoft.graph.mailboxFolder",
             "displayName": "Inbound",
-            "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/Exchange/Mailboxes/MBX:e0643f21@a7809c93",
+            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/Exchange/Mailboxes/MBX:e0643f21@a7809c93",
             "id": "AAMkAGUwNjQ4ZjIxLTQ3Y2YtNDViMi1iZjc4LTMzNjMwNWM0ZGE2YQAuAAAAAADbrwBIJbBSTKolRbhHUzSHAQCQ2fKdhq8oSKEDSVrdi3lRAAACgfP9AAA="
         },
         {
             "@odata.type": "#microsoft.graph.mailboxFolder",
             "displayName": "Outbound",
-            "parentMailboxUrl": "https://graph.microsoft.com/beta/admin/Exchange/Mailboxes/MBX:e0643f21@a7809c93",
+            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/Exchange/Mailboxes/MBX:e0643f21@a7809c93",
             "id": "AAMkAGUwNjQ4ZjIxLTQ3Y2YtNDViMi1iZjc4LTMzNjMwNWM0ZGE2YQAuAAAAAADbrwBIJbBSTKolRbhHUzSHAQCQ2fKdhq8oSKEDSVrdi3lRAAACgfP_AAA="
         }
     ]
