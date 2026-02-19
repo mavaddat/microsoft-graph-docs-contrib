@@ -15,7 +15,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "emailDetails",
           "ChangeType": "Addition",
-          "Description": "Added the [emailDetails](https://learn.microsoft.com/en-us/graph/api/resources/emailDetails?view=graph-rest-beta) resource.",
+          "Description": "Added the [emailDetails](https://learn.microsoft.com/en-us/graph/api/resources/emaildetails?view=graph-rest-beta) resource.",
           "Target": "emailDetails"
         },
         {
@@ -23,7 +23,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "targetOwners",
           "ChangeType": "Addition",
-          "Description": "Added the [targetOwners](https://learn.microsoft.com/en-us/graph/api/resources/targetOwners?view=graph-rest-beta) resource.",
+          "Description": "Added the [targetOwners](https://learn.microsoft.com/en-us/graph/api/resources/targetowners?view=graph-rest-beta) resource.",
           "Target": "targetOwners"
         },
         {
@@ -31,15 +31,15 @@
           "ApiChange": "Resource",
           "ChangedApiName": "ownerlessGroupPolicy",
           "ChangeType": "Addition",
-          "Description": "Added the [ownerlessGroupPolicy](https://learn.microsoft.com/en-us/graph/api/resources/ownerlessGroupPolicy?view=graph-rest-beta) resource.",
+          "Description": "Added the [ownerlessGroupPolicy](https://learn.microsoft.com/en-us/graph/api/resources/ownerlessgrouppolicy?view=graph-rest-beta) resource.",
           "Target": "ownerlessGroupPolicy"
         },
         {
           "Id": "56106a0b-9fb9-47c7-b22f-1eba28e5ec43",
-          "ApiChange": "Relationship",
-          "ChangedApiName": "ownerlessGroupPolicy",
+          "ApiChange": "Resource",
+          "ChangedApiName": "policyRoot",
           "ChangeType": "Addition",
-          "Description": "Added the **ownerlessGroupPolicy** relationship to the [policyRoot](https://learn.microsoft.com/en-us/graph/api/resources/policyRoot?view=graph-rest-beta) resource.",
+          "Description": "Added the [policyRoot](https://learn.microsoft.com/en-us/graph/api/resources/policyroot?view=graph-rest-beta) resource.",
           "Target": "policyRoot"
         }
       ],
