@@ -1381,7 +1381,7 @@ When a new relationship is added to an existing resource:
 
    Example where minimal descriptions are needed:
   ```markdown
-  The possible values are: <br/><li>`none`: No cross-tenant access. Indicates a single-tenant, non-B2B scenario. </li> <li>`b2bCollaboration`: The connection involves B2B collaboration across tenants. </li> <li>`unknownFutureValue`: Evolvable enumeration sentinel value. </li>
+  The possible values are: <br/><li>`none`: No cross-tenant access. Indicates a single-tenant, non-B2B scenario. </li> <li>`b2bCollaboration`: The connection involves B2B collaboration across tenants. </li> <li>`unknownFutureValue`: Evolvable enumeration sentinel value. Do not use.</li>
   ```
 
 **Note:** enums.md and enums-{subnamespace}.md files are not customer-facing (they're for API Doctor validation only).
