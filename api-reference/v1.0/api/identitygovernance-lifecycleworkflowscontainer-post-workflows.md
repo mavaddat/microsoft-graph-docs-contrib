@@ -388,6 +388,7 @@ The following example shows a request that creates a workflow with the following
 -->
 ``` http
 POST https://graph.microsoft.com/v1.0/identityGovernance/lifecycleWorkflows/workflows
+Content-Type: application/json
 
 {
   "category": "mover",
@@ -396,7 +397,7 @@ POST https://graph.microsoft.com/v1.0/identityGovernance/lifecycleWorkflows/work
   "tasks": [
     {
       "arguments": [],
-      "description": "Send email to notify user’s manager of user move",
+      "description": "Send email to notify user's manager of user move",
       "displayName": "Send email to notify manager of user move",
       "isEnabled": true,
       "continueOnError": false,

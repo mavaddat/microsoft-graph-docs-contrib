@@ -394,7 +394,7 @@ The following example shows a request.
 -->
 ``` http
 POST https://graph.microsoft.com/v1.0/identityGovernance/lifecycleWorkflows/workflows/{workflowId}/createNewVersion
-
+Content-Type: application/json
 
 {
   "workflow": {
@@ -405,7 +405,7 @@ POST https://graph.microsoft.com/v1.0/identityGovernance/lifecycleWorkflows/work
       {
         "category": "mover",
         "continueOnError": false,
-        "description": "Send email to notify user’s manager of user move",
+        "description": "Send email to notify user's manager of user move",
         "displayName": "Send email to notify manager of user move",
         "executionSequence": 1,
         "id": "f09eb640-6c16-4f1a-8b48-6a295a307705",
@@ -480,7 +480,7 @@ Content-Type: application/json
     {
       "category": "mover",
       "continueOnError": false,
-      "description": "Send email to notify user’s manager of user move",
+      "description": "Send email to notify user's manager of user move",
       "displayName": "Send email to notify manager of user move",
       "executionSequence": 1,
       "id": "c070b422-17e3-45a2-82a0-42b5a46c2421",
@@ -533,6 +533,7 @@ The following example shows a request that updates a workflow with the following
 -->
 ``` http
 POST https://graph.microsoft.com/v1.0/identityGovernance/lifecycleWorkflows/workflows/{workflowId}/createNewVersion
+Content-Type: application/json
 
 {
   "workflow": {
@@ -543,7 +544,7 @@ POST https://graph.microsoft.com/v1.0/identityGovernance/lifecycleWorkflows/work
       {
         "category": "mover",
         "continueOnError": false,
-        "description": "Send email to notify user’s manager of user move",
+        "description": "Send email to notify user's manager of user move",
         "displayName": "Send email to notify manager of user move",
         "executionSequence": 1,
         "id": "f09eb640-6c16-4f1a-8b48-6a295a307705",
@@ -588,7 +589,7 @@ The following example shows the response.
 }
 -->
 ``` http
-HTTP/1.1 201 Created
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
@@ -613,7 +614,7 @@ Content-Type: application/json
     {
       "category": "mover",
       "continueOnError": false,
-      "description": "Send email to notify user’s manager of user move",
+      "description": "Send email to notify user's manager of user move",
       "displayName": "Send email to notify manager of user move",
       "executionSequence": 1,
       "id": "c070b422-17e3-45a2-82a0-42b5a46c2421",
@@ -635,10 +636,10 @@ Content-Type: application/json
           "name": "groupID",
           "value": "5fa668df-a7b0-43fe-828d-48f7a1f7ca44"
         }
-      ],
-      "administrationScopeTargets": []
+      ]
     }
   ],
+  "administrationScopeTargets": [],
   "createdBy": {
     "id": "2355df95-8fd8-499c-adcf-4b5f1acf713d"
   }
