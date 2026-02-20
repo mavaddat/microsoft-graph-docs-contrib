@@ -321,6 +321,7 @@ The following JSON representation shows the resource type.
   "mailEnabled": "Boolean",
   "mailNickname": "String",
   "onPremisesDomainName": "String",
+  "onPremisesExtensionAttributes": "String",
   "onPremisesLastSyncDateTime": "String (timestamp)",
   "onPremisesNetBiosName": "String",
   "onPremisesProvisioningErrors": [
