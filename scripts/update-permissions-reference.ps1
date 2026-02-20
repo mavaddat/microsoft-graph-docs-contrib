@@ -174,6 +174,8 @@ $authUri = "https://login.microsoftonline.com/$TenantId/oauth2/v2.0/token"
 $response = Invoke-RestMethod $authUri  -Method 'POST' -Headers $headers -Body $body
 $response | ConvertTo-Json
 $accessToken = $response.access_token
+# Suppressing PSScriptAnalyzer warning as this is required for Connect-MgGraph
+[Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSAvoidUsingConvertToSecureStringWithPlainText', '', Justification='Access token from OAuth response must be converted to SecureString for Connect-MgGraph cmdlet')]
 $secureAccessToken = ConvertTo-SecureString $accessToken -AsPlainText -Force
 
 # Install the Microsoft Graph PowerShell module if not already installed
