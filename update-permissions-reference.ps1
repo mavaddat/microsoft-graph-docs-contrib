@@ -4,13 +4,6 @@ param (
     [string]$ClientSecret
 )
 
-# Helper function to convert access token to SecureString
-# Suppression is required as Connect-MgGraph requires SecureString parameter
-function ConvertTo-SecureAccessToken {
-    param([string]$AccessToken)
-    return ConvertTo-SecureString $AccessToken -AsPlainText -Force
-}
-
 # Function to create custom permission objects
 function Create-PermissionObjects {
     param (
@@ -181,7 +174,7 @@ $authUri = "https://login.microsoftonline.com/$TenantId/oauth2/v2.0/token"
 $response = Invoke-RestMethod $authUri  -Method 'POST' -Headers $headers -Body $body
 $response | ConvertTo-Json
 $accessToken = $response.access_token
-$secureAccessToken = ConvertTo-SecureAccessToken -AccessToken $accessToken
+$secureAccessToken = ConvertTo-SecureString $accessToken -AsPlainText -Force
 
 # Install the Microsoft Graph PowerShell module if not already installed
 if (-not (Get-Module -Name Microsoft.Graph -ListAvailable)) {
