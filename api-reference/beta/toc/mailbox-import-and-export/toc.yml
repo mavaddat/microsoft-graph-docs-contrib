@@ -3,7 +3,7 @@
 #
 items:
 - name: Overview
-  href: ../../resources/exchange-import-export-api-overview.md
+  href: ../../resources/mailbox-import-export-api-overview.md
 - name: Mailbox
   items:
   - name: Mailbox
