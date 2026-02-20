@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate temp-docstubs folder
         run: |
-          ./validate-temp-docstubs.ps1
+          ./scripts/validate-temp-docstubs.ps1
         shell: pwsh
