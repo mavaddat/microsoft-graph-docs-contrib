@@ -46,8 +46,8 @@ POST /users/{usersId}/dataSecurityAndGovernance/protectionScopes/compute
 | :------------ | :------------ |
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type  | application/json. Required. |
-| If-None-Match | Optional. This value is used by the API to determine if the policy state has changed since the last call to the API. |
-| Client-Request-Id  | String (GUID recommended). Optional. Unique identifier for this request, which is used for tracing and debugging in logs and support interactions. If an ID is not provided, one may be generated automatically. We recommend that you specify the ID to make tracing and debugging easier. The same ID that was sent in the request will be returned in the response. |
+| If-None-Match | Optional. This value is used by the API to determine if the policy state changed since the last call to the API. |
+| Client-Request-Id  | String (GUID recommended). Optional. Unique identifier for this request, which is used for tracing and debugging in logs and support interactions. If an ID isn't provided, one may be generated automatically. We recommend that you specify the ID to make tracing and debugging easier. The same ID that was sent in the request is returned in the response. |
 
 ## Request body
 
@@ -65,7 +65,7 @@ In the request body, provide a JSON object with the following parameters.
 
 | Name          | Description   |
 | :------------ | :------------ |
-| ETag          | An indicator whether the admin-configured policy state has changed. If the Etag matches the If-None-Match value and you have cached the results of parsing previous results from this API, there is no need to parse the response and cache the parsed results. Cache this value for calls to [process content](../api/userdatasecurityandgovernance-processcontent.md). |
+| ETag          | An indicator whether the admin-configured policy state changed. If the Etag matches the If-None-Match value and you cached the results of parsing previous results from this API, there's no need to parse the response and cache the parsed results. Cache this value for calls to [process content](../api/userdatasecurityandgovernance-processcontent.md). |
 
 ## Response
 
