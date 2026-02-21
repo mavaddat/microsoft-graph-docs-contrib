@@ -44,7 +44,7 @@ POST /users/{usersId}/dataSecurityAndGovernance/protectionScopes/compute
 | :------------ | :------------ |
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type  | application/json. Required. |
-| Client-Request-Id  | String (GUID recommended). Optional. Unique identifier for this request, which is used for tracing and debugging in logs and support interactions. If an ID is not provided, one may be generated automatically. We recommend that you specify the ID to make tracing and debugging easier. The same ID that was sent in the request will be returned in the response. |
+| Client-Request-Id  | String (GUID recommended). Optional. Unique identifier for this request, which is used for tracing and debugging in logs and support interactions. If an ID isn't provided, one may be generated automatically. We recommend that you specify the ID to make tracing and debugging easier. The same ID that was sent in the request is returned in the response. |
 
 ## Request body
 
@@ -62,7 +62,7 @@ In the request body, provide a JSON object with the following parameters.
 
 | Name          | Description   |
 | :------------ | :------------ |
-| ETag          | An indicator whether the admin-configured policy state has changed. If you have cached Etag value and it matches ETag from previous results from this API, there is no need to parse the response and cache the parsed results. Cache this value for calls to [process content](../api/userdatasecurityandgovernance-processcontent.md). |
+| ETag          | An indicator whether the admin-configured policy state changed. If you cached Etag value and it matches ETag from previous results from this API, there's no need to parse the response and cache the parsed results. Cache this value for calls to [process content](../api/userdatasecurityandgovernance-processcontent.md). |
 
 ## Response
 
@@ -94,7 +94,7 @@ Client-Request-Id: 50dc805c-3af4-42d9-ad16-a746235cc736
 
 #### Response
 
-The following example shows the response. It indicates that for the `uploadText` activity for the integrated application with id 83ef208a-0396-4893-9d4f-d36efbffc8bd, policies require inline evaluation. For the `uploadFile` activity for the integrated application with id 83ef208a-0396-4893-9d4f-d36efbffc8bd, policies require offline evaluation and trigger a `restrictAccess` action (likely blocking uploads based on contextual information, e.g. blocking uploads for specific users or group).
+The following example shows the response. It indicates that for the `uploadText` activity for the integrated application with id 83ef208a-0396-4893-9d4f-d36efbffc8bd, policies require inline evaluation. For the `uploadFile` activity for the integrated application with id 83ef208a-0396-4893-9d4f-d36efbffc8bd, policies require offline evaluation and trigger a `restrictAccess` action (likely blocking uploads based on contextual information; for example, blocking uploads for specific users or group).
 
 > **Note:** The response object shown here might be shortened for readability.
 
