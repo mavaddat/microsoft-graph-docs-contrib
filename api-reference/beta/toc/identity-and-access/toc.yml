@@ -4640,6 +4640,74 @@ items:
       href: ../../resources/networkaccess-m365forwardingrule.md
     - name: Private access forwarding rule
       href: ../../resources/networkaccess-privateaccessforwardingrule.md
+  - name: Cloud firewall
+    items:
+    - name: Cloud firewall policy
+      items:
+      - name: Cloud firewall policy
+        href: ../../resources/networkaccess-cloudfirewallpolicy.md
+      - name: List
+        href: ../../api/networkaccess-networkaccessroot-list-cloudfirewallpolicies.md
+      - name: Create
+        href: ../../api/networkaccess-networkaccessroot-post-cloudfirewallpolicies.md
+      - name: Get
+        href: ../../api/networkaccess-cloudfirewallpolicy-get.md
+      - name: Update
+        href: ../../api/networkaccess-cloudfirewallpolicy-update.md
+      - name: Delete
+        href: ../../api/networkaccess-cloudfirewallpolicy-delete.md
+      - name: List policyRules
+        href: ../../api/networkaccess-cloudfirewallpolicy-list-policyrules.md
+      - name: Create policyRule
+        href: ../../api/networkaccess-cloudfirewallpolicy-post-policyrules.md
+    - name: Cloud firewall policy link
+      items:
+      - name: Cloud firewall policy link
+        href: ../../resources/networkaccess-cloudfirewallpolicylink.md
+      - name: List
+        href: ../../api/networkaccess-cloudfirewallpolicylink-list.md
+      - name: Create
+        href: ../../api/networkaccess-cloudfirewallpolicylink-post-policy.md
+      - name: Get
+        href: ../../api/networkaccess-cloudfirewallpolicylink-get.md
+      - name: Update
+        href: ../../api/networkaccess-cloudfirewallpolicylink-update.md
+      - name: Delete
+        href: ../../api/networkaccess-cloudfirewallpolicylink-delete.md
+    - name: Cloud firewall rule
+      items:
+      - name: Cloud firewall rule
+        href: ../../resources/networkaccess-cloudfirewallrule.md
+      - name: List
+        href: ../../api/networkaccess-cloudfirewallpolicy-list-policyrules.md
+      - name: Create
+        href: ../../api/networkaccess-cloudfirewallpolicy-post-policyrules.md
+      - name: Get
+        href: ../../api/networkaccess-cloudfirewallrule-get.md
+      - name: Update
+        href: ../../api/networkaccess-cloudfirewallrule-update.md
+      - name: Delete
+        href: ../../api/networkaccess-cloudfirewallrule-delete.md
+    - name: Cloud firewall policy settings
+      href: ../../resources/networkaccess-cloudfirewallpolicysettings.md
+    - name: Cloud firewall rule settings
+      href: ../../resources/networkaccess-cloudfirewallrulesettings.md
+    - name: Cloud firewall matching conditions
+      href: ../../resources/networkaccess-cloudfirewallmatchingconditions.md
+    - name: Cloud firewall source matching
+      href: ../../resources/networkaccess-cloudfirewallsourcematching.md
+    - name: Cloud firewall destination matching
+      href: ../../resources/networkaccess-cloudfirewalldestinationmatching.md
+    - name: Cloud firewall destination address
+      href: ../../resources/networkaccess-cloudfirewalldestinationaddress.md
+    - name: Cloud firewall destination FQDN address
+      href: ../../resources/networkaccess-cloudfirewalldestinationfqdnaddress.md
+    - name: Cloud firewall destination IP address
+      href: ../../resources/networkaccess-cloudfirewalldestinationipaddress.md
+    - name: Cloud firewall source address
+      href: ../../resources/networkaccess-cloudfirewallsourceaddress.md
+    - name: Cloud firewall source IP address
+      href: ../../resources/networkaccess-cloudfirewallsourceipaddress.md
   - name: Filtering traffic
     items:
     - name: Filtering profile

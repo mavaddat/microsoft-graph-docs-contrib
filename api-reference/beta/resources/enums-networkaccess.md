@@ -636,6 +636,25 @@ Namespace: microsoft.graph.networkaccess
 |codeHosting|
 |unknownFutureValue|
 
+### cloudFirewallAction values
+
+|Member|
+|:---|
+|allow|
+|block|
+|unknownFutureValue|
+
+### cloudFirewallProtocol values
+
+> [!NOTE]
+> This is a flagged enumeration that allows multiple values to be selected simultaneously, for example, `tcp, udp`.
+
+|Member|
+|:---|
+|tcp|
+|udp|
+|unknownFutureValue|
+
 <!--
 {
   "type": "#page.annotation",
