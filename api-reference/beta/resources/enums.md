@@ -5380,16 +5380,6 @@ Possible values for user account types (group membership), per Windows definitio
 |dynamicRule|
 |unknownFutureValue|
 
-### organizationAllowedAudiences values
-
-|Member|
-|:---|
-|me|
-|organization|
-|federatedOrganizations|
-|everyone|
-|unknownFutureValue|
-
 ### educationSpeechType values
 
 |Member|
@@ -5935,3 +5925,11 @@ Possible values for user account types (group membership), per Windows definitio
 |failed|
 |unknownFutureValue|
 |partiallySuccessful|
+
+### contentCategory values 
+
+|Member|
+|:---|
+|none|
+|ai|
+|unknownFutureValue|
