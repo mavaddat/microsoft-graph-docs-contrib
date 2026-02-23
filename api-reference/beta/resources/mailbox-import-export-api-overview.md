@@ -1,5 +1,5 @@
 ---
-title: "Use the mailbox import and export APIs in Microsoft Graph (preview)"
+title: "Use the mailbox import and export APIs in Microsoft Graph"
 description: "Learn how to use the mailbox import and export APIs in Microsoft Graph to import and export contents from Exchange Online mailboxes."
 ms.localizationpriority: high
 author: "cparker-msft"
@@ -8,7 +8,7 @@ doc_type: conceptualPageType
 ms.date: 12/06/2024
 ---
 
-# Use the mailbox import and export APIs in Microsoft Graph (preview)
+# Use the mailbox import and export APIs in Microsoft Graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
