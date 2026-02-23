@@ -7,7 +7,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "exportItemResponse",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/resources/exportItemResponse?view=graph-rest-1.0 resource type.",
+          "Description": "Added the [exportItemResponse](https://learn.microsoft.com/en-us/graph/api/resources/exportItemResponse?view=graph-rest-1.0) resource type.",
           "Target": "exportItemResponse"
         },
         {
@@ -15,7 +15,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "mailboxItemImportSession",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/resources/mailboxItemImportSession?view=graph-rest-1.0 resource type.",
+          "Description": "Added the [mailboxItemImportSession](https://learn.microsoft.com/en-us/graph/api/resources/mailboxItemImportSession?view=graph-rest-1.0) resource type.",
           "Target": "mailboxItemImportSession"
         },
         {
@@ -23,7 +23,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "exchangeSettings",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/resources/exchangeSettings?view=graph-rest-1.0 resource type.",
+          "Description": "Added the [exchangeSettings](https://learn.microsoft.com/en-us/graph/api/resources/exchangeSettings?view=graph-rest-1.0) resource type.",
           "Target": "exchangeSettings"
         },
         {
@@ -31,7 +31,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "mailbox",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/resources/mailbox?view=graph-rest-1.0 resource and associated methods.",
+          "Description": "Added the [mailbox](https://learn.microsoft.com/en-us/graph/api/resources/mailbox?view=graph-rest-1.0) resource and associated methods.",
           "Target": "mailbox"
         },
         {
@@ -39,7 +39,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "mailboxFolder",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/resources/mailboxFolder?view=graph-rest-1.0 resource and associated methods.",
+          "Description": "Added the [mailboxFolder](https://learn.microsoft.com/en-us/graph/api/resources/mailboxFolder?view=graph-rest-1.0) resource and associated methods.",
           "Target": "mailboxFolder"
         },
         {
@@ -47,7 +47,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "mailboxItem",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/resources/mailboxItem?view=graph-rest-1.0 resource and associated methods.",
+          "Description": "Added the [mailboxItem](https://learn.microsoft.com/en-us/graph/api/resources/mailboxItem?view=graph-rest-1.0) resource and associated methods.",
           "Target": "mailboxItem"
         },
         {
@@ -55,7 +55,7 @@
           "ApiChange": "Relationship",
           "ChangedApiName": "exchange",
           "ChangeType": "Addition",
-          "Description": "Added the **exchange** relationship to the https://learn.microsoft.com/en-us/graph/api/resources/userSettings?view=graph-rest-1.0 resource.",
+          "Description": "Added the **exchange** relationship to the [userSettings](https://learn.microsoft.com/en-us/graph/api/resources/userSettings?view=graph-rest-1.0) resource.",
           "Target": "userSettings"
         },
         {
@@ -63,7 +63,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "createImportSession",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/mailbox-createImportSession?view=graph-rest-1.0 method to the https://learn.microsoft.com/en-us/graph/api/resources/mailbox?view=graph-rest-1.0 resource.",
+          "Description": "Added the [createImportSession](https://learn.microsoft.com/en-us/graph/api/mailbox-createImportSession?view=graph-rest-beta) method to the [mailbox](https://learn.microsoft.com/en-us/graph/api/resources/mailbox?view=graph-rest-beta) resource.",
           "Target": "mailbox"
         },
         {
@@ -71,7 +71,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "exportItems",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/mailbox-exportItems?view=graph-rest-1.0 method to the https://learn.microsoft.com/en-us/graph/api/resources/mailbox?view=graph-rest-1.0 resource.",
+          "Description": "Added the [exportItems](https://learn.microsoft.com/en-us/graph/api/mailbox-exportItems?view=graph-rest-1.0) method to the [mailbox](https://learn.microsoft.com/en-us/graph/api/resources/mailbox?view=graph-rest-1.0) resource.",
           "Target": "mailbox"
         },
         {
@@ -79,7 +79,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "delta",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/mailboxFolder-delta?view=graph-rest-1.0 method to the https://learn.microsoft.com/en-us/graph/api/resources/mailboxFolder?view=graph-rest-1.0 resource.",
+          "Description": "Added the [delta](https://learn.microsoft.com/en-us/graph/api/mailboxFolder-delta?view=graph-rest-1.0) method to the [mailboxFolder](https://learn.microsoft.com/en-us/graph/api/resources/mailboxFolder?view=graph-rest-1.0) resource.",
           "Target": "mailboxFolder"
         },
         {
@@ -87,7 +87,7 @@
           "ApiChange": "Parameter",
           "ChangedApiName": "bindingParameter",
           "ChangeType": "Addition",
-          "Description": "Added the **bindingParameter** parameter to the https://learn.microsoft.com/en-us/graph/api/mailboxFolder-delta?view=graph-rest-1.0 method.",
+          "Description": "Added the **bindingParameter** parameter to the [delta](https://learn.microsoft.com/en-us/graph/api/mailboxFolder-delta?view=graph-rest-1.0) method.",
           "Target": "delta"
         },
         {
@@ -95,7 +95,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "delta",
           "ChangeType": "Addition",
-          "Description": "Added the https://learn.microsoft.com/en-us/graph/api/mailboxItem-delta?view=graph-rest-1.0 method to the https://learn.microsoft.com/en-us/graph/api/resources/mailboxItem?view=graph-rest-1.0 resource.",
+          "Description": "Added the [delta](https://learn.microsoft.com/en-us/graph/api/mailboxItem-delta?view=graph-rest-1.0) method to the [mailboxItem](https://learn.microsoft.com/en-us/graph/api/resources/mailboxItem?view=graph-rest-1.0) resource.",
           "Target": "mailboxItem"
         },
         {
@@ -103,7 +103,7 @@
           "ApiChange": "Parameter",
           "ChangedApiName": "bindingParameter",
           "ChangeType": "Addition",
-          "Description": "Added the **bindingParameter** parameter to the https://learn.microsoft.com/en-us/graph/api/mailboxItem-delta?view=graph-rest-1.0 method.",
+          "Description": "Added the **bindingParameter** parameter to the [delta](https://learn.microsoft.com/en-us/graph/api/mailboxItem-delta?view=graph-rest-1.0) method.",
           "Target": "delta"
         }
       ],
