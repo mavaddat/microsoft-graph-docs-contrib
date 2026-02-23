@@ -2,7 +2,7 @@
 title: "exportItemResponse resource type"
 description: "Represents the result of an export operation performed by the exportItems function."
 author: "cparker-msft"
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: resourcePageType

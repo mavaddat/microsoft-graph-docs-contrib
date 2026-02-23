@@ -2,7 +2,7 @@
 title: "mailboxFolder: delta"
 description: "Get a set of mailboxFolder objects that were added, deleted, or removed from the user's mailbox."
 author: "cparker-msft"
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType

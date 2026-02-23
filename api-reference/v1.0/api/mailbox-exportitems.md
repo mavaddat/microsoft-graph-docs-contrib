@@ -2,7 +2,7 @@
 title: "mailbox: exportItems"
 description: "Export Exchange mailboxItem objects in full fidelity. This API exports each item as an opaque stream. The data stream isn't intended for parsing, but can be used to import an item back into an Exchange mailbox. For more information, see Overview of the mailbox import and export APIs in Microsoft Graph."
 author: "cparker-msft"
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType

@@ -2,7 +2,7 @@
 title: "mailboxFolder resource type"
 description: "Represents a folder in a user's mailbox, such as inbox, drafts, or other user created folders."
 author: "cparker-msft"
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: resourcePageType

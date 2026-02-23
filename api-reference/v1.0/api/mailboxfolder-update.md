@@ -2,7 +2,7 @@
 title: "Update mailboxFolder"
 description: "Update mailboxFolder properties such as the displayName within a mailbox."
 author: "cparker-msft"
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType

@@ -5,7 +5,7 @@ ms.localizationpriority: high
 author: "cparker-msft"
 ms.subservice: "outlook"
 doc_type: conceptualPageType
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ---
 
 # Use the mailbox import and export APIs in Microsoft Graph

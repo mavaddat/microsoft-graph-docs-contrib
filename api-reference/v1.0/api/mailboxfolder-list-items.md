@@ -2,7 +2,7 @@
 title: "List items"
 description: "Get the mailboxItem collection within a specified folder in a mailbox."
 author: "cparker-msft"
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType

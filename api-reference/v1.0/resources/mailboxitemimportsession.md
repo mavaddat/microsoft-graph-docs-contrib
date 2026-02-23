@@ -2,7 +2,7 @@
 title: "mailboxItemImportSession resource type"
 description: "Provides information about how to import items into a user's mailbox."
 author: "cparker-msft"
-ms.date: 12/06/2024
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: resourcePageType

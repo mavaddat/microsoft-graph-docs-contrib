@@ -2,7 +2,7 @@
 title: "mailbox resource type"
 description: "Represents a user's mailbox."
 author: "cparker-msft"
-ms.date: 01/10/2025
+ms.date: 02/23/2026
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: resourcePageType
