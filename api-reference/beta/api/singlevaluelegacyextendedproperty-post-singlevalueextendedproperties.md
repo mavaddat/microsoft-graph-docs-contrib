@@ -29,6 +29,7 @@ The following user resources are supported:
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
 - [todoTask](../resources/todotask.md)
+- [mailboxFolder](../resources/mailboxfolder.md)
 
 The following group resources are supported:
 
@@ -57,6 +58,7 @@ Depending on the resource you're creating the extended property in and the permi
 | [Outlook task](../resources/outlooktask.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
 | [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
 | [todoTask](../resources/todotask.md) | Tasks.ReadWrite | Not supported. | Not supported. |
+| [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All | 
 
 ## HTTP request
 You can create extended properties in a new or existing resource instance.
@@ -66,7 +68,7 @@ instance, and include the properties of the new resource instance _and extended 
 Some resources support creation in more than one way. For more information on how to create these resource instances,
 see the corresponding topics for creating a [message](../resources/message.md), [mailFolder](../api/user-post-mailfolders.md),
 [event](../api/user-post-events.md), [calendar](../api/user-post-calendars.md),
-[contact](../api/user-post-contacts.md), [contactFolder](../api/user-post-contactfolders.md),
+[contact](../api/user-post-contacts.md), [contactFolder](../api/user-post-contactfolders.md), [mailboxFolder](../api/mailbox-post-folders.md),
 [Outlook task](../resources/outlooktask.md), [Outlook task folder](../resources/outlooktaskfolder.md),
 [group event](../api/group-post-events.md), [group post](../resources/post.md), and [todoTask](../resources/todotask.md).
 
@@ -92,6 +94,8 @@ POST /users/{id|userPrincipalName}/contacts
 
 POST /me/contactFolders
 POST /users/{id|userPrincipalName}/contactFolders
+
+POST /admin/exchange/mailboxes/{mailboxId}/folders
 
 POST /me/outlook/tasks
 POST /users/{id|userPrincipalName}/outlook/tasks
@@ -145,6 +149,8 @@ PATCH /users/{id|userPrincipalName}/contacts/{id}
 
 PATCH /me/contactFolders/{id}
 PATCH /users/{id|userPrincipalName}/contactFolders/{id}
+
+PATCH /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}
 
 PATCH /me/outlook/tasks/{id}
 PATCH /users/{id|userPrincipalName}/outlook/tasks/{id}

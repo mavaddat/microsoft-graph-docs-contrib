@@ -29,6 +29,8 @@ User resources:
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
 - [todoTask](../resources/todotask.md)
+- [mailboxItem](../resources/mailboxitem.md)
+- [mailboxFolder](../resources/mailboxfolder.md)
 
 Microsoft 365 group resources:
 

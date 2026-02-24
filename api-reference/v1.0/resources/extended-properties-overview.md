@@ -22,6 +22,8 @@ You can use extended properties REST API to store or get such custom data in the
 - [calendar](../resources/calendar.md)
 - [contact](../resources/contact.md)
 - [contactFolder](../resources/contactfolder.md)
+- [mailboxItem](../resources/mailboxitem.md)
+- [mailboxFolder](../resources/mailboxfolder.md)
 
 Or, in the following Microsoft 365 group resources:
 

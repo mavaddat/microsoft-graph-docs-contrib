@@ -26,6 +26,8 @@ The following user resources are supported:
 - [event](../resources/event.md)
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
+- [mailboxItem](../resources/mailboxitem.md)
+- [mailboxFolder](../resources/mailboxfolder.md)
 
 As well as the following group resources:
 
@@ -52,6 +54,8 @@ Depending on the resource you're getting the extended property from and the perm
 | group [post](../resources/post.md) | Group.Read.All | Not supported | Group.Read.All |
 | [mailFolder](../resources/mailfolder.md) | Mail.Read | Mail.Read | Mail.Read |
 | [message](../resources/message.md) | Mail.Read | Mail.Read | Mail.Read |
+| [mailboxItem](../resources/mailboxitem.md) | MailboxItem.Read | Not supported. | MailboxItem.Read.All |
+| [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All |
 
 ## HTTP request
 
@@ -108,6 +112,24 @@ Get a **contactFolder** instance:
 ```http
 GET /me/contactfolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/contactFolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **mailboxItem** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/items?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/items/{mailboxItemId}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **mailboxFolder** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /admin/exchange/mailboxes/{mailboxId}/folders?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
 
 [!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
