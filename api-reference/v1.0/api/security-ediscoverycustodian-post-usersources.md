@@ -44,7 +44,7 @@ POST /security/cases/ediscoveryCases/{ediscoveryCaseId}/custodians/{custodianId}
 ## Request body
 In the request body, supply a JSON representation of the [userSource](../resources/security-usersource.md) object.
 
-You can specify the following properties when you create a **userSource**. Learn more about why some users may not have associated sites here [https://learn.microsoft.com/en-us/purview/edisc-data-sources#other-considerations](/purview/edisc-data-sources)
+You can specify the following properties when you create a **userSource**. To learn more about why some users may not have associated sites, see [E-Discovery data sources](https://learn.microsoft.com/en-us/purview/edisc-data-sources#other-considerations).
 
 |Property|Type|Description|
 |:---|:---|:---|
