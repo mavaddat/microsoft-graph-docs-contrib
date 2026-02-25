@@ -47,14 +47,14 @@ Tracking changes in folders incurs a round of one or more **delta** function cal
 
 ### OData query parameters
 
-You can use the `$select` query parameter to specify only the properties you need for best performance. The **id** and **parentMailboxUrl** properties are always returned.
+You can use the `$select` query parameter to specify only the properties you need for best performance. The **id** is always returned.
 
 ## Request headers
 
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
-|Prefer|odata.maxpagesize={x}. Optional.|
+|Prefer|odata.maxpagesize={x}. Optional. Controls page size.|
 
 ## Request body
 
@@ -110,13 +110,11 @@ Content-length: 254
         {
             "@odata.type": "#microsoft.graph.mailboxFolder",
             "displayName": "Inbound",
-            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/Exchange/Mailboxes/MBX:e0643f21@a7809c93",
             "id": "AAMkAGUwNjQ4ZjIxLTQ3Y2YtNDViMi1iZjc4LTMzNjMwNWM0ZGE2YQAuAAAAAADbrwBIJbBSTKolRbhHUzSHAQCQ2fKdhq8oSKEDSVrdi3lRAAACgfP9AAA="
         },
         {
             "@odata.type": "#microsoft.graph.mailboxFolder",
             "displayName": "Outbound",
-            "parentMailboxUrl": "https://graph.microsoft.com/v1.0/admin/Exchange/Mailboxes/MBX:e0643f21@a7809c93",
             "id": "AAMkAGUwNjQ4ZjIxLTQ3Y2YtNDViMi1iZjc4LTMzNjMwNWM0ZGE2YQAuAAAAAADbrwBIJbBSTKolRbhHUzSHAQCQ2fKdhq8oSKEDSVrdi3lRAAACgfP_AAA="
         }
     ]

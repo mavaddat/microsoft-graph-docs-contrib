@@ -56,7 +56,7 @@ You can use the `$select` query parameter to specify only the properties you nee
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
-|Prefer|odata.maxpagesize={x}. Optional.|
+|Prefer|odata.maxpagesize={x}. Optional. Controls page size.|
 
 ## Request body
 

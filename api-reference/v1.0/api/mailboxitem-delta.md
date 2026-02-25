@@ -58,7 +58,7 @@ Tracking changes in items incurs a round of one or more **delta** function calls
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
-|Prefer|odata.maxpagesize={x}. Optional.|
+|Prefer|odata.maxpagesize={x}. Optional. Controls page size.|
 
 ## Request body
 
