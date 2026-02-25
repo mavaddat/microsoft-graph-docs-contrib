@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: "rwaithera"
 ms.subservice: "people"
 doc_type: "apiPageType"
-ms.date: 09/19/2024
+ms.date: 02/25/2026
 ---
 
 # Create profileCardProperty
@@ -60,7 +60,7 @@ You can specify the following properties when you create a **profileCardProperty
 |:---|:---|:---|
 |annotations|[profileCardAnnotation](../resources/profilecardannotation.md) collection|Any alternative or localized labels that an administrator chose to specify.|
 |directoryPropertyName|String|The name of the directory property that is intended to surface on the profile card.|
-|isVisible|Boolean|Indicates whether a given profile property should be shown on a user’s profile card.|
+|isVisible|Boolean|Indicates whether the given directory property should be shown on a user’s profile card.|
 
 ## Response
 
