@@ -66,7 +66,6 @@ If successful, this method returns a `200 OK` response code and an updated [prof
 
 The following example adds a localized label `Kostnadssenter` for the locale `no`.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_profilecardproperty",
