@@ -75,7 +75,7 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageCatalogs/8b8f588b-0fc0-42f9-b345-86686de9d9fa/accessPackageResources/5265a889-0b20-4772-b000-21bbb3ff207e/externalOriginResourceConnector
+PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors(%27e363ebb8-6faa-4980-ac5b-eefc196e1cd4%27)
 Content-Type: application/json
 
 {
@@ -88,7 +88,6 @@ Content-Type: application/json
           "url": "dev.test",
           "accessTokenUrl": "9e90019f-6256-41fa-a225-5ef9cc1d9bf8",
           "clientId": "e9ad8b1d-959c-4e86-8ba2-2cbf4d14bc29",
-          "domain": "dev",
           "keyVaultName": "Keyvault",
           "secretName": "Test",
           "subscriptionId": "5ee98b73-d9df-43a7-8a92-36855054bdee",
@@ -124,7 +123,6 @@ Content-Type: application/json
               "url": "dev.test",
               "accessTokenUrl": "9e90019f-6256-41fa-a225-5ef9cc1d9bf8",
               "clientId": "e9ad8b1d-959c-4e86-8ba2-2cbf4d14bc29",
-              "domain": "dev",
               "keyVaultName": "Keyvault",
               "secretName": "Test",
               "subscriptionId": "5ee98b73-d9df-43a7-8a92-36855054bdee",
