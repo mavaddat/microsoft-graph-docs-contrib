@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageCatalogs/06a6415b-2f20-44ce-b43e-ae9570f26fa2/accessPackageResources/cedee304-3210-4da3-ba5c-2f3adb400efc/externalOriginResourceConnector
+GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors(%27e363ebb8-6faa-4980-ac5b-eefc196e1cd4%27)
 ```
 
 
@@ -89,7 +89,7 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#identityGovernance/entitlementManagement/externalOriginResourceConnector/$entity",
   "@odata.type": "#microsoft.graph.externalOriginResourceConnector",
-  "id": "06a6415b-2f20-44ce-b43e-ae9570f26fa2",
+  "id": "e363ebb8-6faa-4980-ac5b-eefc196e1cd",
   "displayName": "SAP Access Control",
   "description": "SAP Access  Control test",
   "connectorType": "sapAc",
@@ -98,7 +98,6 @@ Content-Type: application/json
               "url": "dev.test",
               "accessTokenUrl": "9e90019f-6256-41fa-a225-5ef9cc1d9bf8",
               "clientId": "e9ad8b1d-959c-4e86-8ba2-2cbf4d14bc29",
-              "domain": "dev",
               "keyVaultName": "Keyvault",
               "secretName": "Test",
               "subscriptionId": "5ee98b73-d9df-43a7-8a92-36855054bdee",

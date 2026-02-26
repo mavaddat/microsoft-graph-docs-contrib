@@ -23,8 +23,10 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get](../api/externaloriginresourceconnector-get.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Read the properties and relationships of [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
-|[Update](../api/externaloriginresourceconnector-update.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Update the properties of an externalOriginResourceConnector object.|
+|[List](../api/entitlementmanagement-list-externaloriginresourceconnectors.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) collection|Get a list of the [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) objects and their properties.|
+|[Create](../api/entitlementmanagement-post-externaloriginresourceconnectors.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Create a new [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
+|[Get](../api/externaloriginresourceconnector-get.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Read the properties and relationships of an [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
+|[Update](../api/externaloriginresourceconnector-update.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Update the properties of an [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
 
 
 ## Properties

@@ -114,7 +114,7 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#identityGovernance/entitlementManagement/externalOriginResourceConnector/$entity",
   "@odata.type": "#microsoft.graph.externalOriginResourceConnector",
-  "id": "8b8f588b-0fc0-42f9-b345-86686de9d9fa",
+  "id": "e363ebb8-6faa-4980-ac5b-eefc196e1cd",
   "displayName": "SAP Identity Access Governance Connector Test",
   "description": "SAP Identity Access Governance Connector test",
   "connectorType": "sapIag",
