@@ -27,6 +27,7 @@ Inherits from [entity](../resources/entity.md).
 |[Create](../api/entitlementmanagement-post-externaloriginresourceconnectors.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Create a new [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
 |[Get](../api/externaloriginresourceconnector-get.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Read the properties and relationships of an [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
 |[Update](../api/externaloriginresourceconnector-update.md)|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md)|Update the properties of an [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
+|[Delete](../api/externaloriginresourceconnector-delete.md)|None|Delete an [externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) object.|
 
 
 ## Properties
