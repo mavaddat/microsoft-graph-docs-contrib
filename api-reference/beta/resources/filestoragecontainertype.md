@@ -2,7 +2,7 @@
 title: "fileStorageContainerType resource type"
 description: "Associates a SharePoint Embedded application and a set of containers."
 author: "javieralvarezchiang"
-ms.date: 06/30/2025
+ms.date: 02/27/2026
 ms.localizationpriority: medium
 ms.subservice: "sharepoint-embedded"
 doc_type: resourcePageType
