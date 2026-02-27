@@ -14,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a [cloudFirewallRule](../resources/networkaccess-cloudfirewallrule.md) object from a cloud firewall policy.
+Delete a [cloudFirewallRule](../resources/networkaccess-cloudfirewallrule.md) object from a [cloudFirewallPolicy(../resources/networkaccess-cloudfirewallpolicy.md).
 
 ## Permissions
 
