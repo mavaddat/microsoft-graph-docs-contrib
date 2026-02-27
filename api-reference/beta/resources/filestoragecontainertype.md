@@ -4,7 +4,7 @@ description: "Associates a SharePoint Embedded application and a set of containe
 author: "javieralvarezchiang"
 ms.date: 06/30/2025
 ms.localizationpriority: medium
-ms.subservice: "onedrive"
+ms.subservice: "sharepoint-embedded"
 doc_type: resourcePageType
 ---
 
@@ -28,6 +28,10 @@ A **fileStorageContainerType** must be [registered](../resources/filestoragecont
 |[Get](../api/filestoragecontainertype-get.md)|[fileStorageContainerType](../resources/filestoragecontainertype.md)|Get a [fileStorageContainerType](../resources/filestoragecontainertype.md) using its ID.|
 |[Update](../api/filestoragecontainertype-update.md)|[fileStorageContainerType](../resources/filestoragecontainertype.md)|Update the properties of a [fileStorageContainerType](../resources/filestoragecontainertype.md) object.|
 |[Delete](../api/filestorage-delete-containertypes.md)|None|Delete a [fileStorageContainerType](../resources/filestoragecontainertype.md) object from the tenant.|
+|[Add permission](../api/filestoragecontainertype-post-permissions.md)|[permission](../resources/permission.md)|Add a permission to a container type, granting a user the `owner` role.|
+|[List permissions](../api/filestoragecontainertype-list-permissions.md)|[permission](../resources/permission.md) collection|Get the list of permissions on a container type.|
+|[Get permission](../api/filestoragecontainertype-get-permission.md)|[permission](../resources/permission.md)|Get a specific permission on a container type.|
+|[Delete permission](../api/filestoragecontainertype-delete-permissions.md)|None|Remove a permission from a container type.|
 
 ## Properties
 |Property|Type|Description|
@@ -43,7 +47,9 @@ A **fileStorageContainerType** must be [registered](../resources/filestoragecont
 |settings|[fileStorageContainerTypeSettings](../resources/filestoragecontainertypesettings.md)|The settings of the **fileStorageContainerType**.|
 
 ## Relationships
-None.
+|Relationship|Type|Description|
+|:---|:---|:---|
+|permissions|[permission](../resources/permission.md) collection|The set of permissions for users in the container type. The permissions collection defines who has access to manage the container type. Use the `owner` role to grant management access.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
