@@ -646,8 +646,6 @@ Namespace: microsoft.graph.networkaccess
 
 ### cloudFirewallProtocol values
 
-> [!NOTE]
-> This is a flagged enumeration that allows multiple values to be selected simultaneously, for example, `tcp, udp`.
 
 |Member|
 |:---|
