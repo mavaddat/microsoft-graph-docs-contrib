@@ -75,7 +75,7 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors(%27e363ebb8-6faa-4980-ac5b-eefc196e1cd4%27)
+PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors(e363ebb8-6faa-4980-ac5b-eefc196e1cd4)
 Content-Type: application/json
 
 {
