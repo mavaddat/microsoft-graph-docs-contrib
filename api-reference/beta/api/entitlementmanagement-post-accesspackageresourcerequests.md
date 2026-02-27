@@ -626,6 +626,83 @@ Content-type: application/json
   "requestStatus": "Fulfilled"
 }
 ```
+
+
+### Example 6: Create an accessPackageResourceRequest for adding an external origin resource connector
+
+#### Request
+
+The following example shows a request for adding an external origin resource connector to a catalog, including specifying a required attribute of that resource connector.
+
+<!-- {
+  "blockType": "request",
+  "name": "create_accesspackageresourcerequest_from_accesspackageresourcerequests_connector"
+}-->
+```http
+POST https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/accessPackageResourceRequests
+Content-type: application/json
+
+{
+  "catalogId": "08a0fe5c-eb09-46d6-a364-794bab6da5a0",
+  "accessPackageResource": {
+    "id": "f19969b6-14fe-f011-bf1d-002248bece64",
+    "displayName": "SAP IAG Access Rights",
+    "description": "This resource represents the Business Role of SAP IAG",
+    "resourceType": "Business Role",
+    "originId": "https://IAGINTGORG-iag-intg-space-java-rest-ari.cfapps.sap.hana.ondemand.com",
+    "originSystem": "External",
+    "accessPackageResourceScopes": [],
+    "externalOriginResourceConnector": {
+      "id": "609f2e1b-085a-490c-b798-53f4150897fb",
+      "displayName": "SAP IAG 1.0",
+      "description": "SAP IAG 1.0",
+      "connectorType": "sapIag",
+      "createdBy": "kumapanka@elmdebug.onmicrosoft.com",
+      "createdDateTime": "2026-01-30T18:06:56.487491Z",
+      "modifiedBy": "kumapanka@elmdebug.onmicrosoft.com",
+      "modifiedDateTime": "2026-01-30T18:06:56.487491Z",
+      "connectionInfo": {
+        "@odata.type": "#Microsoft.IGAELM.EC.FrontEnd.ExternalModel.externalTokenBasedSapIagConnectionInfo",
+        "url": "https://INT-iag-intg-space-java-rest-arqapi.cfapps.sap.hana.ondemand.com",
+        "subscriptionId": "838be7e1-4525-44bd-a821-8b0cfad2c15a",
+        "resourceGroup": "SAPIAG-Integration-RG1",       
+        "accessTokenUrl": "https://entra-ig-l4s6yn.authentication.sap.hana.ondemand.com/oauth/token",
+        "clientId": "sb-8d6b-72b5-46ce-9273-471874a0913b133623|iagapi-iag-intg-space!b11378",
+        "keyVaultName": "IAG-KeyVlt",
+        "secretName": "ClntSecret"
+      }
+    }
+  },
+  "requestType": "AdminAdd"
+}
+
+```
+
+
+
+#### Response
+
+The following example shows the response.
+
+> **Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.accessPackageResourceRequest"
+} -->
+
+```http
+HTTP/1.1 201 Created
+Content-type: application/json
+
+{
+  "id": "0e37f047-c6b9-4d5c-99cd-e3fab4007be4",
+  "requestType": "AdminAdd",
+  "requestState": "Delivered",
+  "requestStatus": "Fulfilled"
+}
+```
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
 2019-02-04 14:57:30 UTC -->
 <!-- {
