@@ -20,13 +20,7 @@ Inherits from [microsoft.graph.networkaccess.policyLink](../resources/networkacc
 
 ## Methods
 
-|Method|Return type|Description|
-|:---|:---|:---|
-|[List](../api/networkaccess-cloudfirewallpolicylink-list.md)|[microsoft.graph.networkaccess.cloudFirewallPolicyLink](../resources/networkaccess-cloudfirewallpolicylink.md) collection|Get a list of the cloudFirewallPolicyLink objects and their properties.|
-|[Create](../api/networkaccess-cloudfirewallpolicylink-post-policy.md)|[microsoft.graph.networkaccess.policy](../resources/networkaccess-policy.md)|Add a cloud firewall policy to a filtering profile through this link.|
-|[Get](../api/networkaccess-cloudfirewallpolicylink-get.md)|[microsoft.graph.networkaccess.cloudFirewallPolicyLink](../resources/networkaccess-cloudfirewallpolicylink.md)|Read the properties and relationships of a cloudFirewallPolicyLink object.|
-|[Update](../api/networkaccess-cloudfirewallpolicylink-update.md)|[microsoft.graph.networkaccess.cloudFirewallPolicyLink](../resources/networkaccess-cloudfirewallpolicylink.md)|Update the properties of a cloudFirewallPolicyLink object.|
-|[Delete](../api/networkaccess-cloudfirewallpolicylink-delete.md)|None|Delete a cloudFirewallPolicyLink object.|
+For supported API operations, see [filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md)
 
 ## Properties
 
