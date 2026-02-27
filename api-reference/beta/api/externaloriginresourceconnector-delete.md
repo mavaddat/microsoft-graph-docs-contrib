@@ -35,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-DELETE /identityGovernance/entitlementManagement/externalOriginResourceConnectors(externalOriginResourceConnectorId)
+DELETE /identityGovernance/entitlementManagement/externalOriginResourceConnectors({externalOriginResourceConnectorId})
 ```
 
 ## Request headers
