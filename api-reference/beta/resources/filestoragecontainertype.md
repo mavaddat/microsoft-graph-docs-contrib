@@ -72,6 +72,7 @@ The following JSON representation shows the resource type.
   "id": "String (identifier)",
   "name": "String",
   "owningAppId": "Guid",
+  "permissions": [ { "@odata.type": "microsoft.graph.permission" } ],
   "settings": {"@odata.type": "microsoft.graph.fileStorageContainerTypeSettings"}
 }
 ```
