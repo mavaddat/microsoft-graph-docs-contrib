@@ -4,7 +4,7 @@ description: "Get the list of permissions for a fileStorageContainerType object.
 author: "grjoseph"
 ms.date: 02/27/2026
 ms.localizationpriority: medium
-ms.subservice: "onedrive"
+ms.subservice: "sharepoint-embedded"
 doc_type: apiPageType
 ---
 

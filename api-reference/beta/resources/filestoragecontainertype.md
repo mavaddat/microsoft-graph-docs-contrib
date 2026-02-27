@@ -4,7 +4,7 @@ description: "Associates a SharePoint Embedded application and a set of containe
 author: "javieralvarezchiang"
 ms.date: 02/27/2026
 ms.localizationpriority: medium
-ms.subservice: "sharepoint-embedded"
+ms.subservice: "onedrive"
 doc_type: resourcePageType
 ---
 
