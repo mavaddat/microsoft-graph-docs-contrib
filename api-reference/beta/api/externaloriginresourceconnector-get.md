@@ -36,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalogId}/accessPackageResources/{accessPackageResourceId}/externalOriginResourceConnector
+GET /identityGovernance/entitlementManagement/externalOriginResourceConnectors
 ```
 
 ## Optional query parameters
@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors(e363ebb8-6faa-4980-ac5b-eefc196e1cd4)
+GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors
 ```
 
 
