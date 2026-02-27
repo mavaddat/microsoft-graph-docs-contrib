@@ -52,10 +52,9 @@ PATCH /admin/people/profileCardProperties/{id}
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
+|annotations|[profileCardAnnotation](../resources/profilecardannotation.md) collection| Any alternative or localized labels an administrator chose to specify. Optional.|
 |directoryPropertyName|String|The name of the directory property that is intended to surface on the profile card. Optional. |
 |isVisible|Boolean|Indicates whether the given directory property should be shown on a user’s profile card. Optional.|
-|annotations|profileCardAnnotation collection| Any alternative or localized labels an administrator chose to specify. Optional.|
-
 
 ## Response
 
