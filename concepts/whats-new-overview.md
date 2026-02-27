@@ -18,6 +18,11 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## March 2026: New in preview only
+
+### People and workplace intelligence | People admin settings
+Added the **isVisible** property to the [profileCardProperty](/graph/api/resources/profileCardProperty?view=graph-rest-beta) resource.
+
 ## February 2026: New and generally available
 
 ### Search
