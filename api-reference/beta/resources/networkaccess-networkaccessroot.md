@@ -20,10 +20,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 
 ## Methods
 
-|Method|Return type|Description|
-|:---|:---|:---|
-|[List cloud firewall policies](../api/networkaccess-networkaccessroot-list-cloudfirewallpolicies.md)|[microsoft.graph.networkaccess.cloudFirewallPolicy](../resources/networkaccess-cloudfirewallpolicy.md) collection|Get a list of the cloud firewall policy objects and their properties.|
-|[Create cloud firewall policy](../api/networkaccess-networkaccessroot-post-cloudfirewallpolicies.md)|[microsoft.graph.networkaccess.cloudFirewallPolicy](../resources/networkaccess-cloudfirewallpolicy.md)|Create a new cloud firewall policy.|
+None.
 
 
 ## Properties
