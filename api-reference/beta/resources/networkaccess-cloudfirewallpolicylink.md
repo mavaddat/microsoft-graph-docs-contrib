@@ -34,7 +34,7 @@ For supported API operations, see [filteringPolicyLink](../resources/networkacce
 
 |Relationship|Type|Description|
 |:---|:---|:---|
-|policy|[microsoft.graph.networkaccess.policy](../resources/networkaccess-policy.md)|The cloud firewall policy associated with this link. The link connects the policy to filtering profiles, enabling the cloud firewall capabilities to be applied to network traffic. Inherited from [microsoft.graph.networkaccess.policyLink](../resources/networkaccess-policylink.md). Supports `$expand`.|
+|policy|[microsoft.graph.networkaccess.policy](../resources/networkaccess-policy.md)|The [cloud firewall policy](../resources/networkaccess-cloudfirewallpolicy.md) associated with this link. The link connects the policy to filtering profiles, enabling the cloud firewall capabilities to be applied to network traffic. Inherited from [microsoft.graph.networkaccess.policyLink](../resources/networkaccess-policylink.md). Supports `$expand`.|
 
 ## JSON representation
 
