@@ -14,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a cloud firewall policy for Microsoft Global Secure Access that provides Layer 3 (Network) protection by monitoring and controlling all network traffic. A cloud firewall policy takes effect once the admin associates it with the desired filtering profile.
+Represents a cloud firewall policy for Microsoft Global Secure Access that provides Layer 3 (Network) protection by monitoring and controlling all network traffic. A cloud firewall policy takes effect once the admin associates it with the desired filtering profile. For more information, see [Configure Global Secure Access cloud firewall (preview)](/entra/global-secure-access/how-to-configure-cloud-firewall).
 
 Inherits from [microsoft.graph.networkaccess.policy](../resources/networkaccess-policy.md).
 
