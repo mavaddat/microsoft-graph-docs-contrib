@@ -53,7 +53,7 @@ PATCH /networkAccess/cloudFirewallPolicies/{cloudFirewallPolicyId}/policyRules/{
 |name|String|A unique display name for the rule. Optional.|
 |description|String|A description of the rule. Optional.|
 |priority|Int64|A unique priority value that determines the rule evaluation order. Optional.|
-|action|[microsoft.graph.networkaccess.cloudFirewallAction](../resources/enums-networkaccess.md#cloudfirewallaction-values)|The action to take when traffic matches the rule. The possible values are: `allow`, `block`, `unknownFutureValue`. Optional.|
+|action|microsoft.graph.networkaccess.cloudFirewallAction|The action to take when traffic matches the rule. The possible values are: `allow`, `block`, `unknownFutureValue`. Optional.|
 |settings|[microsoft.graph.networkaccess.cloudFirewallRuleSettings](../resources/networkaccess-cloudfirewallrulesettings.md)|Configuration settings for the rule. Optional.|
 |matchingConditions|[microsoft.graph.networkaccess.cloudFirewallMatchingConditions](../resources/networkaccess-cloudfirewallmatchingconditions.md)|The conditions that traffic must match. Optional.|
 
