@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Remove a user [permission](../resources/permission.md) from a [fileStorageContainerType](../resources/filestoragecontainertype.md) by deleting the specified permission resource. Only existing owners (users with the `owner` role in the container type's **permissions** collection) or SharePoint Embedded Administrators or Global Administrators can remove permissions.
 
-Owners can remove their own permission. If an owner removes their own permission and is not a SharePoint Embedded Administrator or Global Administrator, they lose access to manage the container type.
+Owners can remove other owners' permissions but can't remove their own permission. To remove their own permission, an owner must be a SharePoint Embedded Administrator or Global Administrator.
 
 Guest users can't perform this operation.
 
