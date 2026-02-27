@@ -1,10 +1,10 @@
 ---
-title: "adhocCall: getAllTranscripts"
-description: Get transcripts from all ad hoc calls initiated by a user
+title: "Get all ad hoc call transcripts - Microsoft Graph"
+description: "Learn how to retrieve all transcripts from ad hoc calls initiated by a specific user using the Microsoft Graph API. Includes request examples and response formats."
 author: "kanchm"
 #customer intent: As a developer, I want to retrieve all transcripts from ad hoc calls initiated by a specific user so that I can analyze the meeting content programmatically.
 ms.reviewer: v-sukanyadas
-ms.date: 02/17/2026
+ms.date: 02/27/2026
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
@@ -14,7 +14,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get all transcripts from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.
+Use the [adhocCall](../resources/adhoccall.md) getAllTranscripts API to retrieve all transcripts from ad hoc call instances that a specific user initiates. This API enables you to programmatically access and analyze meeting transcripts for calls organized by a given user, filtered by optional date ranges.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -79,7 +79,7 @@ GET https://graph.microsoft.com/v1.0/adhocCalls/getAllTranscripts(userId=d4220f1
 ### Response
 
 The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
+> **Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
