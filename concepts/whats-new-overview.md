@@ -21,7 +21,8 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 ## March 2026: New in preview only
 
 ### People and workplace intelligence | People admin settings
-Added the **isVisible** property to the [profileCardProperty](/graph/api/resources/profileCardProperty?view=graph-rest-beta) resource.
+
+Use the **isVisible** property on [profileCardProperty](/graph/api/resources/profilecardproperty?view=graph-rest-beta&preserve-view=true) to indicate whether the given directory property should be shown on a user’s profile card.
 
 ## February 2026: New and generally available
 
