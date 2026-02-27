@@ -1,6 +1,6 @@
 ---
 title: "Get all recordings from ad hoc calls - Microsoft Graph"
-description: Get recordings from all ad hoc calls initiated by a user
+description: "Get recordings from all ad hoc calls initiated by a specific user so that you can programmatically access and analyze meeting recordings."
 author: "kanchm"
 #customer intent: As a developer, I want to retrieve all recordings from ad hoc calls initiated by a specific user so that I can analyze meeting data for compliance purposes.
 ms.reviewer: v-sukanyadas
