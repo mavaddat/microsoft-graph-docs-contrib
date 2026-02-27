@@ -39,6 +39,7 @@ Inherits from [entity](entity.md).
 |lastModifiedBy|[identitySet](../resources/identityset.md)|The identity of person who last modified the protection unit.|
 |lastModifiedDateTime|DateTimeOffset|Timestamp of the last modification of this protection unit.|
 |policyId|String|The unique identifier of the protection policy based on which protection unit was created.|
+|backupRetentionPeriodInDays|Int32|The retention period of the backup, in days.|
 |protectionSources|protectionSource|Indicates the sources by which a protection unit is currently protected. A protection unit protected by multiple sources is indicated by comma-separated values. The possible values are: `none`, `manual`, `dynamicRule`, `unknownFutureValue`.|
 |status|[protectionUnitStatus](../resources/protectionunitbase.md#protectionunitstatus-values)|The status of the protection unit. The possible values are: `protectRequested`, `protected`, `unprotectRequested`, `unprotected`, `removeRequested`, `unknownFutureValue`.|
 |offboardRequestedDateTime|DateTimeOffset|The time when protection unit offboard was requested.|
@@ -79,6 +80,7 @@ The following JSON representation shows the resource type.
   "lastModifiedBy": {"@odata.type": "microsoft.graph.identitySet"},
   "lastModifiedDateTime": "String (timestamp)",
   "policyId": "String",
+  "backupRetentionPeriodInDays": "Int32",
   "protectionSources": "String",
   "status": "String",
   "offboardRequestedDateTime": "String (timestamp)",
