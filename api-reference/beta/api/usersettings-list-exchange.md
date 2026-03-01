@@ -119,8 +119,8 @@ Content-type: application/json
 Content-length: 232
 
 {
-      "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('megan%40contoso.com')/settings/exchange/$entity",
-      "primaryMailboxId": "MBX:e0643f21@a7809c93"
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('megan%40contoso.com')/settings/exchange/$entity",
+    "primaryMailboxId": "MBX:e0643f21@a7809c93"
 }
 ```
 <!--
@@ -131,8 +131,6 @@ Content-length: 232
   "section": "documentation",
   "tocPath": "",
   "suppressions": [
-  "Error: list_exchangesettings:
-    Failed to locate collection property 'value' in response."
 ]
 }-->
 
