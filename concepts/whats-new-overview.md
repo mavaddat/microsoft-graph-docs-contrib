@@ -18,6 +18,12 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## March 2026: New and generally available
+
+### Mailbox import and export
+
+Use the mailbox import and export APIs in Microsoft Graph to build solutions that integrate with mailbox resources for data import and export scenarios. For more information, see [Overview of the mailbox import and export APIs in Microsoft Graph](/graph/mailbox-import-export-concept-overview).
+
 ## February 2026: New and generally available
 
 ### Groups
@@ -31,10 +37,6 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
    - The [qrCodePinAuthenticationMethod](/graph/api/resources/qrcodepinauthenticationmethod) resource and related APIs for managing QR code PIN authentication methods for users. This single-factor authentication method is designed for frontline workers and combines a QR code with a PIN. The following related resources were also added: [qrCode](/graph/api/resources/qrcode), [qrPin](/graph/api/resources/qrpin), and [qrCodeImageDetails](/graph/api/resources/qrcodeimagedetails).
    - The [qrCodePinAuthenticationMethodConfiguration](/graph/api/resources/qrcodepinauthenticationmethodconfiguration) resource for managing the QR code authentication method policy for a tenant.
    - Updated the [authenticationMethodModes](/graph/api/resources/authenticationmethodmodes) and [baseAuthenticationMethod](/graph/api/resources/baseauthenticationmethod) enumerations to add the `qrCodePin` member to support this new authentication method.
-
-### Mailbox import and export
-
-Use the mailbox import and export APIs in Microsoft Graph to build solutions that integrate with mailbox resources for data import and export scenarios. For more information, see [Overview of the mailbox import and export APIs in Microsoft Graph](/graph/mailbox-import-export-concept-overview).
 
 ### Message trace
 
