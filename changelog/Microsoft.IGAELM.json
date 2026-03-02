@@ -1512,6 +1512,24 @@
       "WorkloadArea": "Identity and access",
       "SubArea": "Governance"
     },
+     {
+      "ChangeList": [
+        {
+          "Id": "8c6bfd24-a94d-4fb2-b1df-9f1539efadc7",
+          "ApiChange": "Property",
+          "ChangedApiName": "domain",
+          "ChangeType": "Deletion",
+          "Description": "Removed the **domain** property from the [externalTokenBasedSapIagConnectionInfo](https://learn.microsoft.com/en-us/graph/api/resources/externalTokenBasedSapIagConnectionInfo?view=graph-rest-beta) resource.",
+          "Target": "externalTokenBasedSapIagConnectionInfo"
+        }
+      ],
+      "Id": "8c6bfd24-a94d-4fb2-b1df-9f1539efadc7",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-03-02T17:16:43.9332257Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Governance"
+    },
     {
       "ChangeList": [
         {
