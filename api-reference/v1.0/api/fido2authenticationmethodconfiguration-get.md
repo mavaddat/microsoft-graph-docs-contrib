@@ -12,7 +12,7 @@ ms.date: 04/04/2024
 # Get fido2AuthenticationMethodConfiguration
 Namespace: microsoft.graph
 
-Retrieve the properties and relationships of the [fido2AuthenticationMethodConfiguration](../resources/fido2authenticationmethodconfiguration.md) object, which represents the Passkey (FIDO2) [authentication method policy](../resources/authenticationmethodspolicies-overview.md) for the Microsoft Entra tenant.
+Retrieve the properties and relationships of the [fido2AuthenticationMethodConfiguration](../resources/fido2authenticationmethodconfiguration.md) object, which represents the passkey (FIDO2) [authentication method policy](../resources/authenticationmethodspolicies-overview.md) for the Microsoft Entra tenant.
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
