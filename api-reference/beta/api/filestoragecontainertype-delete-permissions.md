@@ -1,6 +1,6 @@
 ---
 title: "Delete permission from a fileStorageContainerType"
-description: "Remove a permission from a fileStorageContainerType object."
+description: "Delete a user permission from a fileStorageContainerType by deleting the specified permission resource."
 author: "grjoseph"
 ms.date: 02/27/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Remove a user [permission](../resources/permission.md) from a [fileStorageContainerType](../resources/filestoragecontainertype.md) by deleting the specified permission resource. Only existing owners (users with the `owner` role in the container type's **permissions** collection) or SharePoint Embedded Administrators or Global Administrators can remove permissions.
+Delete a user [permission](../resources/permission.md) from a [fileStorageContainerType](../resources/filestoragecontainertype.md) by deleting the specified permission resource. Only existing owners (users with the `owner` role in the container type's **permissions** collection) or SharePoint Embedded Administrators or Global Administrators can remove permissions.
 
 Owners can remove other owners' permissions but can't remove their own permission. To remove their own permission, an owner must be a SharePoint Embedded Administrator or Global Administrator.
 
