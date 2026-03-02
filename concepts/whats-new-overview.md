@@ -18,6 +18,12 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## March 2026: New in preview only
+
+### Backup storage
+
+Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get the retention period of the backup, in days.
+
 ## February 2026: New and generally available
 
 ### Files
