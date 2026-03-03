@@ -21,10 +21,9 @@ The following constraints apply:
 - Duplicate permissions are silently ignored (idempotent). If the specified user already has a permission, the existing permission is returned with a `201 Created` status.
 - Currently only the `owner` role is supported.
 
-Guest users can't perform this operation.
-
 > [!NOTE]
-> Guest users can't be recipients of container type permissions.
+> * Guest users can't be recipients of container type permissions.
+> * Guest users can't perform this operation.
 
 ## Permissions
 
