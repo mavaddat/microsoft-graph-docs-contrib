@@ -885,7 +885,7 @@
           "ApiChange": "Relationship",
           "ChangedApiName": "permissions",
           "ChangeType": "Addition",
-          "Description": "Added the **permissions** navigation property to [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) resource.",
+          "Description": "Added the **permissions** relationship to [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) resource.",
           "Target": "fileStorageContainer"
         },
         {
@@ -943,7 +943,7 @@
           "ApiChange": "Relationship",
           "ChangedApiName": "permissions",
           "ChangeType": "Addition",
-          "Description": "Added the **permissions** navigation property to [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource.",
+          "Description": "Added the **permissions** relationship to [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource.",
           "Target": "fileStorageContainer"
         },
         {
@@ -5435,7 +5435,7 @@
           "ApiChange": "Relationship",
           "ChangedApiName": "permissions",
           "ChangeType": "Addition",
-          "Description": "Added the **permissions** navigation property to the [fileStorageContainerType](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainertype?view=graph-rest-beta) resource.",
+          "Description": "Added the **permissions** relationship to the [fileStorageContainerType](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainertype?view=graph-rest-beta) resource.",
           "Target": "fileStorageContainerType"
         },
         {
