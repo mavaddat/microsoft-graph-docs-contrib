@@ -1541,6 +1541,8 @@ items:
         href: ../../api/fido2authenticationmethod-get.md
       - name: Delete
         href: ../../api/fido2authenticationmethod-delete.md
+      - name: Creation options
+        href: ../../api/fido2authenticationmethod-creationoptions.md
     - name: Microsoft Authenticator
       items:
       - name: Microsoft Authenticator
