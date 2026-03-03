@@ -25,7 +25,6 @@ Inherits from [connectionInfo](../resources/connectioninfo.md).
 |:---|:---|:---|
 |accessTokenUrl|String|The URL endpoint used to obtain access tokens for authentication with the SAP IAG system.|
 |clientId|String|The client identifier used for authentication with the SAP IAG system.|
-|domain|String|The domain of the SAP IAG system.|
 |keyVaultName|String|The name of the Azure Key Vault that stores the client secret for authentication.|
 |resourceGroup|String|The Azure resource group that contains the Key Vault.|
 |secretName|String|The name of the secret in Azure Key Vault that contains the client secret.|
@@ -48,7 +47,6 @@ The following JSON representation shows the resource type.
   "url": "String",
   "accessTokenUrl": "String",
   "clientId": "String",
-  "domain": "String",
   "keyVaultName": "String",
   "secretName": "String",
   "subscriptionId": "String",
