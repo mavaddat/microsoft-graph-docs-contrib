@@ -1,7 +1,7 @@
 ---
 title: "Get fido2AuthenticationMethod"
 description: "Read the properties and relationships of a fido2AuthenticationMethod object."
-author: "calvinlui"
+author: "hanki71"
 ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
@@ -12,7 +12,7 @@ ms.date: 07/28/2025
 # Get fido2AuthenticationMethod
 Namespace: microsoft.graph
 
-Retrieve a user's single [FIDO2 passkey authentication method](../resources/fido2authenticationmethod.md) object.
+Retrieve a user's single [passkey (FIDO2) authentication method](../resources/fido2authenticationmethod.md) object.
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
