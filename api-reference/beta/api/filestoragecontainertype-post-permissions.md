@@ -23,6 +23,9 @@ The following constraints apply:
 
 Guest users can't perform this operation.
 
+> [!IMPORTANT]
+> Guest users can't be recipients of container type permissions.
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -60,7 +63,7 @@ You can specify the following properties when creating a **permission**.
 |Property|Type|Description|
 |:---|:---|:---|
 |roles|String collection|The roles granted to the user. Currently only `owner` is supported. Required.|
-|grantedToV2|[sharePointIdentitySet](../resources/sharepointidentityset.md)|The identity of the user to grant the permission to. You must specify the **user** property with the user's **id**. Required.|
+|grantedToV2|[sharePointIdentitySet](../resources/sharepointidentityset.md)|The identity of the user to grant the permission to. Only the **user** property with the user's **id** is supported; group and application identities aren't supported. Required.|
 
 
 
