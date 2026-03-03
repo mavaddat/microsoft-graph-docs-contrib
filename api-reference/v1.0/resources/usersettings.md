@@ -45,7 +45,7 @@ This resource supports:
 |:---------------|:--------|:----------|
 |[Get settings](../api/usersettings-get.md) |[userSettings](../resources/usersettings.md)| Get the user and organization settings. |
 |[Update settings](../api/usersettings-update.md) |[userSettings](../resources/usersettings.md)| Update the user current settings. |
-|[List Exchange settings](../api/usersettings-list-exchange.md)|[exchangeSettings](../resources/exchangesettings.md) collection|Get a list of Exchange settings, including mailboxes that belong to a user.|
+|[List Exchange settings](../api/usersettings-list-exchange.md)|[exchangeSettings](../resources/exchangesettings.md) collection|Get a list of Exchange mailboxes that belong to a user.|
 |[List Windows settings](../api/usersettings-list-windows.md)|[windowsSetting](../resources/windowssetting.md) collection|Get the **windowsSetting** objects and their properties for the signed in user.|
 |[Get work hours and locations](../api/workhoursandlocationssetting-get.md)|[workHoursAndLocationsSetting](workhoursandlocationssetting.md)|Get the properties and relationships of your own [workHoursAndLocationsSetting](../resources/workhoursandlocationssetting.md).|
 
