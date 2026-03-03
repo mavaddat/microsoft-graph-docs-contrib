@@ -35,7 +35,7 @@ The following steps allow your app to systematically export and import contents 
 | Get one or more mailbox items                        | [mailboxItem](../resources/mailboxitem.md) | [mailboxItem methods](../resources/mailboxitem.md#methods) |
 | Get delta for folders                                | [mailboxFolder](../resources/mailboxfolder.md)  [mailboxFolder: delta](../api/mailboxfolder-delta.md) |
 | Get delta for items                                  | [mailboxItem](../resources/mailboxitem.md) | [mailboxItem: delta](../api/mailboxitem-delta.md) |
-| Import or export mailboxes                           | [mailbox](../resources/mailbox.md) | [mailbox methods](../resources/mailboxitem.md#methods) |
+| Import or export mailboxes                           | [mailbox](../resources/mailbox.md) | [mailbox methods](../resources/mailbox.md#methods) |
 | Get a list of mailboxes that belong to a user        | [exchangeSettings](../resources/exchangesettings.md) | [List Exchange settings](../api/usersettings-list-exchange.md) |
 
 ## Next steps
