@@ -20,9 +20,9 @@ The following user resources are supported:
 - [contact](../resources/contact.md)
 - [contactFolder](../resources/contactfolder.md)
 - [event](../resources/event.md)
+- [mailboxFolder](../resources/mailboxfolder.md)
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
-- [mailboxFolder](../resources/mailboxfolder.md)
 
 The following group resources are supported:
 
@@ -47,9 +47,9 @@ Depending on the resource you're creating the extended property in and the permi
 | group [calendar](../resources/calendar.md) | Group.ReadWrite.All | Not supported | Not supported |
 | group [event](../resources/event.md) | Group.ReadWrite.All | Not supported | Not supported |
 | group [post](../resources/post.md) | Group.ReadWrite.All | Not supported | Not supported |
+| [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All | 
 | [mailFolder](../resources/mailfolder.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
 | [message](../resources/message.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
-| [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All | 
 
 ## HTTP request
 You can create extended properties in a new or existing resource instance.
