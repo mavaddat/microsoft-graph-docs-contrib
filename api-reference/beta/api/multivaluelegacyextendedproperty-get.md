@@ -28,12 +28,12 @@ The following user resources are supported:
 - [contact](../resources/contact.md)
 - [contactFolder](../resources/contactfolder.md)
 - [event](../resources/event.md)
+- [mailboxFolder](../resources/mailboxfolder.md)
+- [mailboxItem](../resources/mailboxitem.md) 
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
-- [mailboxItem](../resources/mailboxitem.md)
-- [mailboxFolder](../resources/mailboxfolder.md)
 
 As well as the following group resources:
 
@@ -58,12 +58,12 @@ Depending on the resource you're getting the extended property from and the perm
 | group [calendar](../resources/calendar.md) | Group.Read.All | Not supported | Not supported |
 | group [event](../resources/event.md) | Group.Read.All | Not supported | Not supported |
 | group [post](../resources/post.md) | Group.Read.All | Not supported | Group.Read.All |
+| [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All |
+| [mailboxItem](../resources/mailboxitem.md) | MailboxItem.Read | Not supported. | MailboxItem.Read.All |
 | [mailFolder](../resources/mailfolder.md) | Mail.Read | Mail.Read | Mail.Read |
 | [message](../resources/message.md) | Mail.Read | Mail.Read | Mail.Read |
 | [Outlook task](../resources/outlooktask.md) | Tasks.Read | Tasks.Read | Not supported |
 | [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.Read | Tasks.Read | Not supported |
-| [mailboxItem](../resources/mailboxitem.md) | MailboxItem.Read | Not supported. | MailboxItem.Read.All |
-| [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All |
 
 ## HTTP request
 
