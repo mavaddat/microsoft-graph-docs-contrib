@@ -3,7 +3,7 @@
     {
       "ChangeList": [
         {
-          "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
+          "Id": "d7bfd87d-b5a0-42e9-9707-6eec3ecd7d39",
           "ApiChange": "Enumeration",
           "ChangedApiName": "attestationEnforcement",
           "ChangeType": "Addition",
@@ -11,7 +11,7 @@
           "Target": "attestationEnforcement"
         },
         {
-          "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
+          "Id": "d7bfd87d-b5a0-42e9-9707-6eec3ecd7d39",
           "ApiChange": "Enumeration",
           "ChangedApiName": "passkeyTypes",
           "ChangeType": "Addition",
@@ -19,7 +19,7 @@
           "Target": "passkeyTypes"
         },
         {
-          "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
+          "Id": "d7bfd87d-b5a0-42e9-9707-6eec3ecd7d39",
           "ApiChange": "Property",
           "ChangedApiName": "defaultPasskeyProfile",
           "ChangeType": "Addition",
@@ -27,7 +27,7 @@
           "Target": "fido2AuthenticationMethodConfiguration"
         },
         {
-          "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
+          "Id": "d7bfd87d-b5a0-42e9-9707-6eec3ecd7d39",
           "ApiChange": "Relationship",
           "ChangedApiName": "passkeyProfiles",
           "ChangeType": "Addition",
@@ -35,34 +35,26 @@
           "Target": "fido2AuthenticationMethodConfiguration"
         },
         {
-          "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
-          "ApiChange": "Property",
-          "ChangedApiName": "allowedPasskeyProfiles",
-          "ChangeType": "Addition",
-          "Description": "Added the **allowedPasskeyProfiles** property to the [passkeyAuthenticationMethodTarget](https://learn.microsoft.com/en-us/graph/api/resources/passkeyAuthenticationMethodTarget?view=graph-rest-1.0) resource.",
-          "Target": "passkeyAuthenticationMethodTarget"
-        },
-        {
-          "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
-          "ApiChange": "Resource",
-          "ChangedApiName": "passkeyProfile",
-          "ChangeType": "Addition",
-          "Description": "Added the [passkeyProfile](https://learn.microsoft.com/en-us/graph/api/resources/passkeyProfile?view=graph-rest-1.0) resource.",
-          "Target": "passkeyProfile"
-        },
-        {
-          "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
+          "Id": "d7bfd87d-b5a0-42e9-9707-6eec3ecd7d39",
           "ApiChange": "Resource",
           "ChangedApiName": "passkeyAuthenticationMethodTarget",
           "ChangeType": "Addition",
           "Description": "Added the [passkeyAuthenticationMethodTarget](https://learn.microsoft.com/en-us/graph/api/resources/passkeyAuthenticationMethodTarget?view=graph-rest-1.0) resource.",
           "Target": "passkeyAuthenticationMethodTarget"
+        },
+        {
+          "Id": "d7bfd87d-b5a0-42e9-9707-6eec3ecd7d39",
+          "ApiChange": "Resource",
+          "ChangedApiName": "passkeyProfile",
+          "ChangeType": "Addition",
+          "Description": "Added the [passkeyProfile](https://learn.microsoft.com/en-us/graph/api/resources/passkeyProfile?view=graph-rest-1.0) resource.",
+          "Target": "passkeyProfile"
         }
       ],
-      "Id": "138e2084-47cb-4678-b7b0-c13c85f3e5ee",
+      "Id": "d7bfd87d-b5a0-42e9-9707-6eec3ecd7d39",
       "Cloud": "Prod",
       "Version": "v1.0",
-      "CreatedDateTime": "2026-03-02T00:00:00.0000000Z",
+      "CreatedDateTime": "2026-02-19T20:52:24.5840903Z",
       "WorkloadArea": "Identity and access",
       "SubArea": "Identity and sign-in"
     },

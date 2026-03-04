@@ -3,7 +3,7 @@
     {
       "ChangeList": [
         {
-          "Id": "bd506fd5-c60e-4612-aa2e-5b9c4318a36d",
+          "Id": "02aed374-de85-437f-a6fb-9b62b4495f3b",
           "ApiChange": "Enumeration",
           "ChangedApiName": "passkeyType",
           "ChangeType": "Addition",
@@ -11,50 +11,18 @@
           "Target": "passkeyType"
         },
         {
-          "Id": "bd506fd5-c60e-4612-aa2e-5b9c4318a36d",
-          "ApiChange": "Resource",
-          "ChangedApiName": "passkeyProfileStructure",
-          "ChangeType": "Addition",
-          "Description": "Added the [passkeyProfileStructure](https://learn.microsoft.com/en-us/graph/api/resources/passkeyProfileStructure?view=graph-rest-1.0) resource.",
-          "Target": "passkeyProfileStructure"
-        },
-        {
-          "Id": "bd506fd5-c60e-4612-aa2e-5b9c4318a36d",
+          "Id": "02aed374-de85-437f-a6fb-9b62b4495f3b",
           "ApiChange": "Property",
           "ChangedApiName": "passkeyType",
           "ChangeType": "Addition",
           "Description": "Added the **passkeyType** property to the [fido2AuthenticationMethod](https://learn.microsoft.com/en-us/graph/api/resources/fido2AuthenticationMethod?view=graph-rest-1.0) resource.",
           "Target": "fido2AuthenticationMethod"
-        },
-        {
-          "Id": "bd506fd5-c60e-4612-aa2e-5b9c4318a36d",
-          "ApiChange": "Property",
-          "ChangedApiName": "lastUsedDateTime",
-          "ChangeType": "Addition",
-          "Description": "Added the **lastUsedDateTime** property to the [fido2AuthenticationMethod](https://learn.microsoft.com/en-us/graph/api/resources/fido2AuthenticationMethod?view=graph-rest-1.0) resource.",
-          "Target": "fido2AuthenticationMethod"
-        },
-        {
-          "Id": "bd506fd5-c60e-4612-aa2e-5b9c4318a36d",
-          "ApiChange": "Property",
-          "ChangedApiName": "publicKeyCredential",
-          "ChangeType": "Addition",
-          "Description": "Added the **publicKeyCredential** property to the [fido2AuthenticationMethod](https://learn.microsoft.com/en-us/graph/api/resources/fido2AuthenticationMethod?view=graph-rest-1.0) resource.",
-          "Target": "fido2AuthenticationMethod"
-        },
-        {
-          "Id": "bd506fd5-c60e-4612-aa2e-5b9c4318a36d",
-          "ApiChange": "Method",
-          "ChangedApiName": "creationOptions",
-          "ChangeType": "Addition",
-          "Description": "Added the [creationOptions](https://learn.microsoft.com/en-us/graph/api/fido2authenticationmethod-creationoptions?view=graph-rest-1.0) method to the [fido2AuthenticationMethod](https://learn.microsoft.com/en-us/graph/api/resources/fido2AuthenticationMethod?view=graph-rest-1.0) resource.",
-          "Target": "fido2AuthenticationMethod"
         }
       ],
-      "Id": "bd506fd5-c60e-4612-aa2e-5b9c4318a36d",
+      "Id": "02aed374-de85-437f-a6fb-9b62b4495f3b",
       "Cloud": "Prod",
       "Version": "v1.0",
-      "CreatedDateTime": "2026-03-02T00:00:00.0000000Z",
+      "CreatedDateTime": "2026-02-19T20:52:24.5844666Z",
       "WorkloadArea": "Identity and access",
       "SubArea": "Identity and sign-in"
     },
