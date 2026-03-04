@@ -174,7 +174,6 @@
       ],
       "resources": [
         "backupRestoreRoot",
-        "browseSessionBase",
         "emailNotificationsSetting",
         "protectionPolicyBase",
         "protectionRuleBase",
@@ -188,8 +187,8 @@
       "childNodes": [
         {
           "name": "Browse session",
+          "overview": "../../resources/browsesessionbase.md",
           "resources": [
-            "browseSessionBase",
             "oneDriveForBusinessBrowseSession",
             "sharePointBrowseSession"
           ]
@@ -2404,7 +2403,8 @@
         "mailFolderOperation",
         "mailSearchFolder",
         "messageRule",
-        "exchangeMessageTrace"
+        "exchangeMessageTrace",
+        "userConfiguration"
       ],
       "childNodes": [
         {
