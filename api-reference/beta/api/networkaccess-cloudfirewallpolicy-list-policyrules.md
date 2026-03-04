@@ -14,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [cloudFirewallRule](../resources/networkaccess-cloudfirewallrule.md) objects and their properties for a cloud firewall policy.
+Get a list of the [cloudFirewallRule](../resources/networkaccess-cloudfirewallrule.md) objects and their properties for a [cloudFirewallPolicy](../resources/networkaccess-cloudfirewallpolicy.md).
 
 ## Permissions
 
@@ -26,6 +26,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 [!INCLUDE [permissions-table](../includes/permissions/networkaccess-cloudfirewallpolicy-list-policyrules-permissions.md)]
+
+[!INCLUDE [rbac-global-secure-access-apis-read](../includes/rbac-for-apis/rbac-global-secure-access-apis-read.md)]
 
 ## HTTP request
 

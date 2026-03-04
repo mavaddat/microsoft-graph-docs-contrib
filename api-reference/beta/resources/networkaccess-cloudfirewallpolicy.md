@@ -27,8 +27,6 @@ Inherits from [microsoft.graph.networkaccess.policy](../resources/networkaccess-
 |[Get](../api/networkaccess-cloudfirewallpolicy-get.md)|[microsoft.graph.networkaccess.cloudFirewallPolicy](../resources/networkaccess-cloudfirewallpolicy.md)|Read the properties and relationships of a cloudFirewallPolicy object.|
 |[Update](../api/networkaccess-cloudfirewallpolicy-update.md)|None|Update the properties of a cloudFirewallPolicy object.|
 |[Delete](../api/networkaccess-cloudfirewallpolicy-delete.md)|None|Delete a cloudFirewallPolicy object.|
-|[List policyRules](../api/networkaccess-cloudfirewallpolicy-list-policyrules.md)|[microsoft.graph.networkaccess.cloudFirewallRule](../resources/networkaccess-cloudfirewallrule.md) collection|Get the cloudFirewallRule resources from the policyRules navigation property.|
-|[Create policyRule](../api/networkaccess-cloudfirewallpolicy-post-policyrules.md)|[microsoft.graph.networkaccess.cloudFirewallRule](../resources/networkaccess-cloudfirewallrule.md)|Create a new cloudFirewallRule object.|
 
 ## Properties
 

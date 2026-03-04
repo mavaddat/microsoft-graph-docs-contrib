@@ -14,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a firewall rule that defines conditions and actions for network traffic filtering within a cloud firewall policy. Each rule specifies matching conditions for source and destination addresses, ports, and protocols, along with an action to take when traffic matches the conditions.
+Represents a firewall rule that defines conditions and actions for network traffic filtering within a [cloud firewall policy](../resources/networkaccess-cloudfirewallpolicy.md). Each rule specifies matching conditions for source and destination addresses, ports, and protocols, along with an action to take when traffic matches the conditions.
 
 Inherits from [microsoft.graph.networkaccess.policyRule](../resources/networkaccess-policyrule.md).
 
@@ -32,7 +32,7 @@ Inherits from [microsoft.graph.networkaccess.policyRule](../resources/networkacc
 
 |Property|Type|Description|
 |:---|:---|:---|
-|action|[microsoft.graph.networkaccess.cloudFirewallAction](../resources/enums-networkaccess.md#cloudfirewallaction-values)|The action to take when traffic matches the rule conditions. The possible values are: `allow`, `block`, `unknownFutureValue`. Required.|
+|action|microsoft.graph.networkaccess.cloudFirewallAction|The action to take when traffic matches the rule conditions. The possible values are: `allow`, `block`, `unknownFutureValue`. Required.|
 |description|String|A human-readable description of the rule's purpose. Optional.|
 |id|String|A unique identifier for the rule. Inherited from [microsoft.graph.entity](../resources/entity.md). Key. Not nullable. Read-only.|
 |matchingConditions|[microsoft.graph.networkaccess.cloudFirewallMatchingConditions](../resources/networkaccess-cloudfirewallmatchingconditions.md)|The conditions that network traffic must match for the rule to apply. Required.|

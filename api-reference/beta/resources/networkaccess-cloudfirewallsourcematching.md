@@ -14,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Defines the source matching criteria for a cloud firewall rule, including source addresses and ports. Currently, only IP address types are supported for source addresses.
+Defines the [source matching criteria](../resources/networkaccess-cloudfirewallmatchingconditions.md) for a cloud firewall rule, including source addresses and ports. Currently, only IP address types are supported for source addresses.
 
 ## Properties
 

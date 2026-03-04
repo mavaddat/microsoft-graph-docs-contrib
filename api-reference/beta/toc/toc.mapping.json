@@ -2228,6 +2228,23 @@
               ]
             },
             {
+              "name": "Cloud firewall",
+              "resources": [
+                "microsoft.graph.networkaccess.cloudFirewallPolicy",
+                "microsoft.graph.networkaccess.cloudFirewallPolicyLink",
+                "microsoft.graph.networkaccess.cloudFirewallRule",
+                "microsoft.graph.networkaccess.cloudFirewallPolicySettings",
+                "microsoft.graph.networkaccess.cloudFirewallRuleSettings",
+                "microsoft.graph.networkaccess.cloudFirewallMatchingConditions",
+                "microsoft.graph.networkaccess.cloudFirewallSourceMatching",
+                "microsoft.graph.networkaccess.cloudFirewallDestinationMatching",
+                "microsoft.graph.networkaccess.cloudFirewallDestinationAddress",
+                "microsoft.graph.networkaccess.cloudFirewallDestinationIpAddress",
+                "microsoft.graph.networkaccess.cloudFirewallSourceAddress",
+                "microsoft.graph.networkaccess.cloudFirewallSourceIpAddress"
+              ]
+            },
+            {
               "name": "Remote network",
               "resources": [
                 "microsoft.graph.networkaccess.deviceLink",

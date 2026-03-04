@@ -27,6 +27,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/networkaccess-networkaccessroot-post-cloudfirewallpolicies-permissions.md)]
 
+[!INCLUDE [rbac-global-secure-access-apis-write](../includes/rbac-for-apis/rbac-global-secure-access-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
@@ -80,7 +82,7 @@ Content-Type: application/json
   "name": "Block unauthorized egress",
   "description": "Policy to block unauthorized outbound connections",
   "settings": {
-    "defaultAction": "block"
+    "defaultAction": "allow"
   }
 }
 ```
@@ -109,7 +111,7 @@ Content-Type: application/json
   "version": "1.0.0",
   "lastModifiedDateTime": "2025-02-11T16:11:41Z",
   "settings": {
-    "defaultAction": "block"
+    "defaultAction": "allow"
   }
 }
 ```

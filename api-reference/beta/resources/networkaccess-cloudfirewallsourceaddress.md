@@ -14,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an abstract base type for cloud firewall source addresses. Use the `@odata.type` property to specify the concrete derived type in requests. Currently, only IP address types are supported for sources.
+Represents an abstract base type for [cloud firewall source addresses](../resources/networkaccess-cloudfirewallsourcematching.md). Use the `@odata.type` property to specify the concrete derived type in requests. Currently, only IP address types are supported for sources.
 
 The following type is derived from this resource:
 

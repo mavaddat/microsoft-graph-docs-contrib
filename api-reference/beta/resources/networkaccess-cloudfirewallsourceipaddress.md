@@ -41,6 +41,8 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.networkaccess.cloudFirewallSourceIpAddress",
-  "values": ["192.168.1.1", "10.0.0.0/8"]
+  "values": [
+    "String"
+  ]
 }
 ```

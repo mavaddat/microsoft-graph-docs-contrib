@@ -1285,86 +1285,6 @@
         {
           "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
           "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallDestinationAddress",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallDestinationAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationaddress?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallDestinationAddress"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallDestinationFqdnAddress",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallDestinationFqdnAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationfqdnaddress?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallDestinationFqdnAddress"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallDestinationIpAddress",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallDestinationIpAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationipaddress?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallDestinationIpAddress"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallDestinationMatching",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallDestinationMatching](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationmatching?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallDestinationMatching"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallMatchingConditions",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallMatchingConditions](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallmatchingconditions?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallMatchingConditions"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallPolicySettings",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallPolicySettings](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallpolicysettings?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallPolicySettings"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallRuleSettings",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallRuleSettings](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallrulesettings?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallRuleSettings"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallSourceAddress",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallSourceAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallsourceaddress?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallSourceAddress"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallSourceIpAddress",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallSourceIpAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallsourceipaddress?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallSourceIpAddress"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
-          "ChangedApiName": "cloudFirewallSourceMatching",
-          "ChangeType": "Addition",
-          "Description": "Added the [cloudFirewallSourceMatching](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallsourcematching?view=graph-rest-beta) resource.",
-          "Target": "cloudFirewallSourceMatching"
-        },
-        {
-          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
-          "ApiChange": "Resource",
           "ChangedApiName": "cloudFirewallPolicy",
           "ChangeType": "Addition",
           "Description": "Added the [cloudFirewallPolicy](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta) resource.",
@@ -1385,6 +1305,78 @@
           "ChangeType": "Addition",
           "Description": "Added the [cloudFirewallRule](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta) resource.",
           "Target": "cloudFirewallRule"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallPolicySettings",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallPolicySettings](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallpolicysettings?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallPolicySettings"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallRuleSettings",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallRuleSettings](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallrulesettings?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallRuleSettings"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallMatchingConditions",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallMatchingConditions](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallmatchingconditions?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallMatchingConditions"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallSourceMatching",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallSourceMatching](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallsourcematching?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallSourceMatching"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallDestinationMatching",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallDestinationMatching](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationmatching?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallDestinationMatching"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallDestinationAddress",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallDestinationAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationaddress?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallDestinationAddress"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallDestinationIpAddress",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallDestinationIpAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationipaddress?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallDestinationIpAddress"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallSourceAddress",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallSourceAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallsourceaddress?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallSourceAddress"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallSourceIpAddress",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallSourceIpAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallsourceipaddress?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallSourceIpAddress"
         },
         {
           "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
@@ -1437,9 +1429,9 @@
         {
           "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
           "ApiChange": "Method",
-          "ChangedApiName": "List cloudFirewallRule",
+          "ChangedApiName": "List cloudFirewallRules",
           "ChangeType": "Addition",
-          "Description": "Added the [List cloudFirewallRule](https://learn.microsoft.com/en-us/graph/api/networkaccess-cloudfirewallpolicy-list-policyrules?view=graph-rest-beta) method to the [cloudFirewallPolicy](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta) resource.",
+          "Description": "Added the [List cloudFirewallRules](https://learn.microsoft.com/en-us/graph/api/networkaccess-cloudfirewallpolicy-list-policyrules?view=graph-rest-beta) method to the [cloudFirewallPolicy](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta) resource.",
           "Target": "cloudFirewallPolicy"
         },
         {
@@ -1477,9 +1469,9 @@
         {
           "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
           "ApiChange": "Method",
-          "ChangedApiName": "List cloudFirewallPolicyLink",
+          "ChangedApiName": "List cloudFirewallPolicyLinks",
           "ChangeType": "Addition",
-          "Description": "Added the [List cloudFirewallPolicyLink](https://learn.microsoft.com/en-us/graph/api/networkaccess-cloudfirewallpolicylink-list?view=graph-rest-beta) method to the [filteringProfile](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-filteringprofile?view=graph-rest-beta) resource.",
+          "Description": "Added the [List cloudFirewallPolicyLinks](https://learn.microsoft.com/en-us/graph/api/networkaccess-cloudfirewallpolicylink-list?view=graph-rest-beta) method to the [filteringProfile](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-filteringprofile?view=graph-rest-beta) resource.",
           "Target": "filteringProfile"
         },
         {

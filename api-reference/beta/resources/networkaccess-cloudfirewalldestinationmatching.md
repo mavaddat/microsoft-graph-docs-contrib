@@ -14,15 +14,15 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Defines the destination matching criteria for a cloud firewall rule, including destination addresses, ports, and protocols.
+Defines the destination matching criteria for a [cloud firewall rule](../resources/networkaccess-cloudfirewallrule.md), including destination addresses, ports, and protocols.
 
 ## Properties
 
 |Property|Type|Description|
 |:---|:---|:---|
-|addresses|[microsoft.graph.networkaccess.cloudFirewallDestinationAddress](../resources/networkaccess-cloudfirewalldestinationaddress.md) collection|The destination addresses to match, which can be IP addresses or FQDNs. An empty collection means don't filter by destination addresses (match all). Required.|
+|addresses|[microsoft.graph.networkaccess.cloudFirewallDestinationAddress](../resources/networkaccess-cloudfirewalldestinationaddress.md) collection|The destination addresses to match. An empty collection means don't filter by destination addresses (match all). Required.|
 |ports|String collection|The destination ports to match, for example, `80`, `443`, `1024-2048`. An empty collection means don't filter by destination ports (match all). Required.|
-|protocols|[microsoft.graph.networkaccess.cloudFirewallProtocol](../resources/enums-networkaccess.md#cloudfirewallprotocol-values)|The network protocols to match. This is a flagged enumeration that allows multiple values to be selected simultaneously, for example, `tcp, udp`. An empty collection means don't filter by protocol (match all). The possible values are: `tcp`, `udp`, `unknownFutureValue`. Required.|
+|protocols|microsoft.graph.networkaccess.cloudFirewallProtocol|The network protocols to match. This is a flagged enumeration that allows multiple values to be selected simultaneously, for example, `tcp, udp`. An empty collection means don't filter by protocol (match all). The possible values are: `tcp`, `udp`, `unknownFutureValue`. Required.|
 
 ## Relationships
 

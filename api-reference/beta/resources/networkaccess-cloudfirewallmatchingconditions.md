@@ -14,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Defines the conditions that network traffic must match for a cloud firewall rule to apply. All specified conditions use AND logic between properties, meaning all specified criteria must be met. Within collections, items use OR logic, meaning any one value in the collection can match. At least one of the **sources** or **destinations** properties must have a value.
+Defines the conditions that network traffic must match for a [cloud firewall rule](../resources/networkaccess-cloudfirewallrule.md) to apply. All specified conditions use "AND" logic between properties, meaning all specified criteria must be met. Within collections, items use "OR" logic, meaning any one value in the collection can match. At least one of the **sources** or **destinations** properties must have a value.
 
 ## Properties
 

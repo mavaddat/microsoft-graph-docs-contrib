@@ -27,6 +27,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/networkaccess-cloudfirewallrule-get-permissions.md)]
 
+[!INCLUDE [rbac-global-secure-access-apis-read](../includes/rbac-for-apis/rbac-global-secure-access-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
@@ -90,7 +92,7 @@ Content-Type: application/json
   "@odata.type": "#microsoft.graph.networkaccess.cloudFirewallRule",
   "id": "406ebb24-e229-4011-8240-e11bbaa4f49d",
   "name": "Block outbound to risky destinations",
-  "description": "Block traffic to specific IPs and FQDNs",
+  "description": "Block traffic to specific IPs",
   "priority": 100,
   "action": "block",
   "settings": {
@@ -111,10 +113,6 @@ Content-Type: application/json
         {
           "@odata.type": "#microsoft.graph.networkaccess.cloudFirewallDestinationIpAddress",
           "values": ["10.0.0.1"]
-        },
-        {
-          "@odata.type": "#microsoft.graph.networkaccess.cloudFirewallDestinationFqdnAddress",
-          "values": ["*.contoso.com"]
         }
       ],
       "ports": ["80", "443", "445-447"],

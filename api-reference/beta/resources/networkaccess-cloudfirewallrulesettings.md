@@ -14,13 +14,13 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the configuration settings for a cloud firewall rule, including the enabled or disabled status.
+Represents the configuration settings for a [cloud firewall rule](../resources/networkaccess-cloudfirewallrule.md), including the enabled or disabled status.
 
 ## Properties
 
 |Property|Type|Description|
 |:---|:---|:---|
-|status|[microsoft.graph.networkaccess.securityRuleStatus](../resources/enums-networkaccess.md#securityrulestatus-values)|The status of the rule. The possible values are: `enabled`, `disabled`, `unknownFutureValue`. Read-only.|
+|status|microsoft.graph.networkaccess.securityRuleStatus|The status of the rule. The possible values are: `enabled`, `disabled`, `unknownFutureValue`. Read-only.|
 
 ## Relationships
 
