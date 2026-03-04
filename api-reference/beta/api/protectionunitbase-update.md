@@ -8,6 +8,7 @@ ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
 ms.date: 03/04/2026
 ---
+
 # Update protectionUnitBase
 
 Namespace: microsoft.graph
@@ -58,12 +59,12 @@ If successful, this method returns a `200 OK` response code and an updated [prot
 
 ### Errors
 
-For a list of possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
-
 The following error scenarios are specific to this API:
 - `404 Not Found` with error code `BillingPolicyNotFound`.
 - `409 Conflict` with error code `ConflictState`.
 - `422 Unprocessable Entity` with error code `InvalidBillingPolicyAssignment`.
+
+For a list of more possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
 
 ## Examples
 
@@ -72,7 +73,7 @@ The following error scenarios are specific to this API:
 #### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
+
 <!-- {
   "blockType": "request",
   "name": "protectionunitbase_update"
@@ -86,8 +87,6 @@ Content-Type: application/json
   "billingPolicyId": "7b18e4d3-4033-4408-a165-b0f352dec262"
 }
 ```
-
----
 
 #### Response
 
@@ -116,7 +115,7 @@ Content-Type: application/json
 #### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
+
 <!-- {
   "blockType": "request",
   "name": "protectionunitbase_update_error_example"
@@ -130,8 +129,6 @@ Content-Type: application/json
   "billingPolicyId": "00000000-0000-0000-0000-000000000000"
 }
 ```
-
----
 
 #### Response
 
