@@ -6,7 +6,7 @@ author: "hanki71"
 ms.reviewer: intelligentaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
-ms.date: 08/14/2024
+ms.date: 03/04/2026
 ---
 
 # fido2AuthenticationMethod: creationOptions

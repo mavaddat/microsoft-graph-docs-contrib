@@ -5,7 +5,7 @@ author: "hanki71"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
-ms.date: 07/24/2024
+ms.date: 03/04/2026
 ---
 
 # passkeyAuthenticationMethodTarget resource type

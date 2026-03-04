@@ -2,7 +2,7 @@
 title: "passkeyProfile resource type"
 description: "Profile that enables granular, group-based control over passkey configurations for the Passkeys (FIDO2) authentication method policy."
 author: "hanki71"
-ms.date: 09/25/2025
+ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType

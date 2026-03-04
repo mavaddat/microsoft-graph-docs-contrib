@@ -2,7 +2,7 @@
 title: "passkeyProfileStructure resource type"
 description: "Passkey profile information for policy evaluation"
 author: "hanki71"
-ms.date: 09/25/2025
+ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType

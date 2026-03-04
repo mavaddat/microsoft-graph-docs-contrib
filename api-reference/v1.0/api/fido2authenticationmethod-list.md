@@ -6,7 +6,7 @@ ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
-ms.date: 07/28/2025
+ms.date: 03/04/2026
 ---
 
 # List fido2AuthenticationMethod
