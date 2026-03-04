@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
 toc.title: FIDO2
-ms.date: 03/04/2026
+Sms.date: 03/04/2026
 ---
 
 # fido2AuthenticationMethod resource type
@@ -35,10 +35,8 @@ This is a derived type that inherits from the [authenticationMethod](authenticat
 |createdDateTime|DateTimeOffset|The timestamp when this key was registered to the user. Inherited from [authenticationMethod](../resources/authenticationmethod.md).|
 |displayName|String|The display name of the key as given by the user.|
 |id|String|The authentication method identifier.|
-|lastUsedDateTime|DateTimeOffset|The date and time the authentication method was last used by the user. Read-only. Optional. This optional value is `null` if the authentication method doesn't populate it. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [authenticationMethod](../resources/authenticationmethod.md).|
 |model|String|The manufacturer-assigned model of the FIDO2 passkey.|
 |passkeyType|passkeyType|The type of passkey. The possible values are: `deviceBound`, `synced`, `unknownFutureValue`.|
-|publicKeyCredential|[webauthnPublicKeyCredential](../resources/webauthnpublickeycredential.md)|Contains the WebAuthn public key credential information being registered. Only used for write requests. This property isn't returned on read operations.|
 
 ## Relationships
 None.
@@ -66,11 +64,8 @@ The following JSON representation shows the resource type.
   "createdDateTime": "String (timestamp)",
   "displayName": "String",
   "id": "String (identifier)",
-  "lastUsedDateTime": "String (timestamp)",
   "model": "String",
   "passkeyType": "String",
-  "publicKeyCredential": {
-    "@odata.type": "microsoft.graph.webauthnPublicKeyCredential"
   }
 }
 ```
