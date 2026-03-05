@@ -71,6 +71,8 @@ You can specify the following properties when creating a **permission**.
 
 If successful, this method returns a `201 Created` response code and a [permission](../resources/permission.md) object in the response body.
 
+If the request exceeds the limit of three permissions per container type, this method returns a `400 Bad Request` response code.
+
 ## Examples
 
 ### Request
