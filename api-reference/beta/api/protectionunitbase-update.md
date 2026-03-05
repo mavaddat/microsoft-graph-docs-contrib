@@ -143,10 +143,18 @@ HTTP/1.1 403 Operation Not Allowed
 Content-Type: application/json
 
 {
-  "error": {
+  "@odata.type": "#microsoft.graph.publicError",
+  "code": "OperationNotAllowed",
+  "message": "Only protection units removed from backup policies are allowed for this API.",
+  "target": "billingPolicyId",
+  "details": [],
+  "innerError": {
+    "@odata.type": "#microsoft.graph.publicError",
     "code": "OperationNotAllowed",
-    "message": "Only protection units removed from backup policies are allowed for this API.",
-    "details": []
+    "message": "The protection unit is attached to a backup policy.",
+    "target": "policyId",
+    "details": [],
+    "innerError": null
   }
 }
 ```
