@@ -28,10 +28,10 @@ A **fileStorageContainerType** must be [registered](../resources/filestoragecont
 |[Get](../api/filestoragecontainertype-get.md)|[fileStorageContainerType](../resources/filestoragecontainertype.md)|Get a [fileStorageContainerType](../resources/filestoragecontainertype.md) using its ID.|
 |[Update](../api/filestoragecontainertype-update.md)|[fileStorageContainerType](../resources/filestoragecontainertype.md)|Update the properties of a [fileStorageContainerType](../resources/filestoragecontainertype.md) object.|
 |[Delete](../api/filestorage-delete-containertypes.md)|None|Delete a [fileStorageContainerType](../resources/filestoragecontainertype.md) object from the tenant.|
-|[Add permission](../api/filestoragecontainertype-post-permissions.md)|[permission](../resources/permission.md)|Add a permission to a container type, granting a user the `owner` role.|
-|[List permissions](../api/filestoragecontainertype-list-permissions.md)|[permission](../resources/permission.md) collection|Get the list of permissions on a container type.|
-|[Get permission](../api/filestoragecontainertype-get-permission.md)|[permission](../resources/permission.md)|Get a specific permission on a container type.|
-|[Delete permission](../api/filestoragecontainertype-delete-permissions.md)|None|Remove a permission from a container type.|
+|[List permissions](../api/filestoragecontainertype-list-permissions.md)|[permission](../resources/permission.md) collection|Get the list of [permission](../resources/permission.md) objects associated with a [fileStorageContainerType](../resources/filestoragecontainertype.md).|
+|[Create permission](../api/filestoragecontainertype-post-permissions.md)|[permission](../resources/permission.md)|Create a user [permission](../resources/permission.md) object, which adds this permission to a [fileStorageContainerType](../resources/filestoragecontainertype.md).|
+|[Get permission](../api/filestoragecontainertype-get-permission.md)|[permission](../resources/permission.md)|Get a specific [permission](../resources/permission.md) from a [fileStorageContainerType](../resources/filestoragecontainertype.md).|
+|[Delete permission](../api/filestoragecontainertype-delete-permissions.md)|None|Delete a user [permission](../resources/permission.md) from a [fileStorageContainerType](../resources/filestoragecontainertype.md) by deleting the specified permission resource.|
 
 ## Properties
 |Property|Type|Description|
@@ -72,7 +72,6 @@ The following JSON representation shows the resource type.
   "id": "String (identifier)",
   "name": "String",
   "owningAppId": "Guid",
-  "permissions": [ { "@odata.type": "microsoft.graph.permission" } ],
   "settings": {"@odata.type": "microsoft.graph.fileStorageContainerTypeSettings"}
 }
 ```

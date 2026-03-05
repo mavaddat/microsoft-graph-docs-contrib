@@ -16,9 +16,10 @@ Namespace: microsoft.graph
 
 Get a specific [permission](../resources/permission.md) from a [fileStorageContainerType](../resources/filestoragecontainertype.md). The permission represents a user with management rights to the container type.
 
-The calling user must be listed in the container type's **permissions** collection with the `owner` role, or be a SharePoint Embedded Administrator or Global Administrator.
+The calling user must be listed in the **permissions** collection for the container type with the `owner` role, or be a SharePoint Embedded Administrator or Global Administrator.
 
-Guest users can't perform this operation.
+> [!NOTE]
+> * Guest users can't perform this operation.
 
 ## Permissions
 

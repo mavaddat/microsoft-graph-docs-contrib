@@ -1,6 +1,6 @@
 ---
 title: "List permissions for a fileStorageContainerType"
-description: "Get the list of permissions for a fileStorageContainerType object."
+description: "Get the list of permission objects associated with a fileStorageContainerType."
 author: "grjoseph"
 ms.date: 02/27/2026
 ms.localizationpriority: medium
@@ -16,9 +16,10 @@ Namespace: microsoft.graph
 
 Get the list of [permission](../resources/permission.md) objects associated with a [fileStorageContainerType](../resources/filestoragecontainertype.md). Each permission represents a user with management rights to the container type.
 
-The calling user must be listed in the container type's **permissions** collection with the `owner` role, or be a SharePoint Embedded Administrator or Global Administrator.
+The calling user must be listed in the **permissions** collection for the container type with the `owner` role, or be a SharePoint Embedded Administrator or Global Administrator.
 
-Guest users can't perform this operation.
+> [!NOTE]
+> * Guest users can't perform this operation.
 
 ## Permissions
 

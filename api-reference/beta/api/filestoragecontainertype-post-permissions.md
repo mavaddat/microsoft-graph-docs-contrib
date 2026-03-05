@@ -1,6 +1,6 @@
 ---
 title: "Create permission for a fileStorageContainerType"
-description: "Add a permission to a fileStorageContainerType object."
+description: "Create a user permission object, which adds this permission to a fileStorageContainerType."
 author: "grjoseph"
 ms.date: 02/27/2026
 ms.localizationpriority: medium
@@ -14,17 +14,16 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Add a user [permission](../resources/permission.md) to a [fileStorageContainerType](../resources/filestoragecontainertype.md). Only existing owners (users with the `owner` role in the container type's **permissions** collection) or SharePoint Embedded Administrators or Global Administrators can add permissions.
+Create a user [permission](../resources/permission.md) object, which adds this permission to a [fileStorageContainerType](../resources/filestoragecontainertype.md). Only existing owners (users with the `owner` role in the **permissions** collection of the container type), SharePoint Embedded Administrators, or Global Administrators can add permissions.
 
 The following constraints apply:
 - A maximum of **3** permissions per container type is allowed. Adding a fourth permission returns a `400 Bad Request` error.
 - Duplicate permissions are treated as idempotent. If the specified user already has a permission on the container type, the service makes no changes and returns the existing permission resource in the response body with a `201 Created` status, even though no new permission is created.
 - Currently only the `owner` role is supported.
 
-Guest users can't perform this operation.
-
-> [!IMPORTANT]
-> Guest users can't be recipients of container type permissions.
+> [!NOTE]
+> * Guest users can't be recipients of container type permissions.
+> * Guest users can't perform this operation.
 
 ## Permissions
 
@@ -58,13 +57,12 @@ POST /storage/fileStorage/containerTypes/{fileStorageContainerTypeId}/permission
 
 In the request body, supply a JSON representation of the [permission](../resources/permission.md) object.
 
-You can specify the following properties when creating a **permission**.
+You can specify the following properties when you create a **permission**.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|roles|String collection|The roles granted to the user. Currently only `owner` is supported. Required.|
 |grantedToV2|[sharePointIdentitySet](../resources/sharepointidentityset.md)|The identity of the user to grant the permission to. Only the **user** property with the user's **id** is supported; group and application identities aren't supported. Required.|
-
+|roles|String collection|The roles granted to the user. Currently only `owner` is supported. Required.|
 
 
 ## Response
