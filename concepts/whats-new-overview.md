@@ -152,6 +152,8 @@ Introduced the Entra Backup and Recovery APIs to enable IT administrators to bac
 - Use **passwordCredentials** as a property on [appManagementConfiguration](/graph/api/resources/appmanagementconfiguration?view=graph-rest-beta&preserve-view=true) to get a collection of password restrictions settings to be applied to an application or service principal.
 - Use **customSecurityAttributes** as a property on [appManagementPolicyActorExemptions](/graph/api/resources/appmanagementpolicyactorexemptions?view=graph-rest-beta&preserve-view=true) to get a collection of [customSecurityAttributeExemption](/graph/api/resources/customsecurityattributeexemption?view=graph-rest-beta&preserve-view=true) objects to exempt from the policy enforcement.
 
+Added [Update protectionUnitBase](/graph/api/protectionunitbase-update?view=graph-rest-beta&preserve-view=true) and the **billingPolicyId** property on [protectionUnitBase](/graph/api/resources/protectionunitbase?view=graph-rest-beta&preserve-view=true), [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true).
+
 ### Identity and access | Governance
 
 Use the **administrationScopeTargets** relationship on the [workflowBase](/graph/api/resources/identitygovernance-workflowbase), [workflow](/graph/api/resources/identitygovernance-workflow), and [workflowVersion](/graph/api/resources/identitygovernance-workflowversion) resources to specify the [administrative units](/graph/api/resources/administrativeunit) in the scope of a lifecycle workflow.

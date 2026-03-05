@@ -2088,6 +2088,30 @@
         },
         {
           "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
+          "ApiChange": "Property",
+          "ChangedApiName": "billingPolicyId",
+          "ChangeType": "Addition",
+          "Description": "Added the **billingPolicyId** property to the [driveProtectionUnit](https://learn.microsoft.com/en-us/graph/api/resources/driveProtectionUnit?view=graph-rest-beta) resource.",
+          "Target": "driveProtectionUnit"
+        },
+        {
+          "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
+          "ApiChange": "Property",
+          "ChangedApiName": "billingPolicyId",
+          "ChangeType": "Addition",
+          "Description": "Added the **billingPolicyId** property to the [mailboxProtectionUnit](https://learn.microsoft.com/en-us/graph/api/resources/mailboxProtectionUnit?view=graph-rest-beta) resource.",
+          "Target": "mailboxProtectionUnit"
+        },
+        {
+          "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
+          "ApiChange": "Property",
+          "ChangedApiName": "billingPolicyId",
+          "ChangeType": "Addition",
+          "Description": "Added the **billingPolicyId** property to the [siteProtectionUnit](https://learn.microsoft.com/en-us/graph/api/resources/siteProtectionUnit?view=graph-rest-beta) resource.",
+          "Target": "siteProtectionUnit"
+        },
+        {
+          "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
           "ApiChange": "Method",
           "ChangedApiName": "update",
           "ChangeType": "Addition",

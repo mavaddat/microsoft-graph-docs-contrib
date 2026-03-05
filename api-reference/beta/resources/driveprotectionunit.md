@@ -28,6 +28,7 @@ Inherits from [protectionUnitBase](../resources/protectionunitbase.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |backupRetentionPeriodInDays|Int32|The retention period of the backup, in days. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
+|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit for cost allocation. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |createdBy|[identitySet](../resources/identityset.md)|The identity of person who created the protection unit. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |createdDateTime|DateTimeOffset|The time of creation of the protection unit. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |directoryObjectId|String|ID of the directory object.|
@@ -59,6 +60,7 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.driveProtectionUnit",
   "backupRetentionPeriodInDays": "Int32",
+  "billingPolicyId": "String",
   "createdBy": {"@odata.type": "microsoft.graph.identitySet"},
   "createdDateTime": "String (timestamp)",
   "directoryObjectId": "String",
