@@ -18,7 +18,7 @@ Add a user [permission](../resources/permission.md) to a [fileStorageContainerTy
 
 The following constraints apply:
 - A maximum of **3** permissions per container type is allowed. Adding a fourth permission returns a `400 Bad Request` error.
-- Duplicate permissions are silently ignored (idempotent). If the specified user already has a permission, the existing permission is returned with a `201 Created` status.
+- Duplicate permissions are treated as idempotent. If the specified user already has a permission on the container type, the service makes no changes and returns the existing permission resource in the response body with a `201 Created` status, even though no new permission is created.
 - Currently only the `owner` role is supported.
 
 Guest users can't perform this operation.
