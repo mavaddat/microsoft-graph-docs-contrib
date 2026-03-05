@@ -7,13 +7,13 @@ ms.localizationpriority: high
 ms.topic: reference
 ms.subservice: entra-applications
 ms.custom: graphiamtop20, scenarios:getting-started
-ms.date: 12/22/2025
+ms.date: 03/02/2026
 #Customer intent: As a developer, I want to learn more about the permissions available in Microsoft Graph, so that I understand the impact of granting specific permissions to my app.
 ---
 
 # Microsoft Graph permissions reference
 
-For an app to access data in Microsoft Graph, the user or administrator must grant it the permissions it needs. This article lists the delegated and application permissions exposed by Microsoft Graph. For guidance about how to use the permissions, see the [Overview of Microsoft Graph permissions](permissions-overview.md).
+For an app to access data in Microsoft Graph, the user or administrator must grant it the necessary permissions. This article lists the delegated and application permissions exposed by Microsoft Graph. For guidance about how to use the permissions, see the [Overview of Microsoft Graph permissions](permissions-overview.md).
 
 To read information about all Microsoft Graph permissions programmatically, sign in to an API client such as Graph Explorer using an account that has at least the *Application.Read.All* permission and run the following request.
 
@@ -3538,7 +3538,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 | Identifier | - | 8e6ec84c-5fcd-4cc7-ac8a-2296efc0ed9b |
 | DisplayText | - | Manage file storage container types on behalf of the signed in user |
 | Description | - | Allows the application to manage file storage container types on behalf of the signed in user. The user must be a SharePoint Embedded Admin or Global Admin. |
-| AdminConsentRequired | - | Yes |
+| AdminConsentRequired | - | No |
 
 ---
 
@@ -3549,7 +3549,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 | Identifier | - | c319a7df-930e-44c0-a43b-7e5e9c7f4f24 |
 | DisplayText | - | Manage file storage container type registrations on behalf of the signed in user |
 | Description | - | Allows the application to manage file storage container type registrations on behalf of the signed in user. The user must be a SharePoint Embedded Admin or Global Admin. |
-| AdminConsentRequired | - | Yes |
+| AdminConsentRequired | - | No |
 
 ---
 
@@ -8549,6 +8549,17 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 
 ---
 
+### TeamworkTargetedMessage.Read.All
+
+| Category | Application | Delegated |
+|--|--|--|
+| Identifier | b0cfd829-be18-4b31-bb0e-ec1df8197ba3 | - |
+| DisplayText | Read all targeted messages of group chat or channel | - |
+| Description | Allows the app to read all group chat or channel targeted messages in Microsoft Teams. | - |
+| AdminConsentRequired | Yes | - |
+
+---
+
 ### TeamworkUserInteraction.Read.All
 
 | Category | Application | Delegated |
@@ -8655,7 +8666,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 | Identifier | - | fd5353c6-26dd-449f-a565-c4e16b9fce78 |
 | DisplayText | - | Read threat submissions |
 | Description | - | Allows the app to read the threat submissions and threat submission policies owned by the signed-in user. |
-| AdminConsentRequired | - | No |
+| AdminConsentRequired | - | Yes |
 
 ---
 
@@ -8677,7 +8688,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 | Identifier | - | 68a3156e-46c9-443c-b85c-921397f082b5 |
 | DisplayText | - | Read and write threat submissions |
 | Description | - | Allows the app to read the threat submissions and threat submission policies owned by the signed-in user. Also allows the app to create new threat submissions on behalf of the signed-in user. |
-| AdminConsentRequired | - | No |
+| AdminConsentRequired | - | Yes |
 
 ---
 
