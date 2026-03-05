@@ -62,8 +62,7 @@ The following JSON representation shows the resource type.
     "resourceId": "String"
   },
   "clientConfiguration": {
-    "timeoutInMilliseconds": 1024,
-    "maximumRetries": 1024
+    "@odata.type": "microsoft.graph.customExtensionClientConfiguration"
   },
   "behaviorOnError": {
     "@odata.type": "microsoft.graph.customExtensionBehaviorOnError"
