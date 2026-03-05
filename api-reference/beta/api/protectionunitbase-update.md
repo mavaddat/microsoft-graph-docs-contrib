@@ -26,8 +26,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "protectionunitbase_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/protectionunitbase-update-permissions.md)]
 
-This API supports only delegated permissions for work or school accounts.
-
 ## HTTP request
 
 <!-- {
@@ -47,27 +45,27 @@ PATCH /solutions/backupRestore/protectionUnits/{protectionUnitBaseId}
 
 ## Request body
 
-[!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
-
-This API supports updating only the `billingPolicyId` property, and only for protection units removed from backup policies (`policyId` is empty or `null`).
+This API supports updates only to the **billingPolicyId** property, and only for protection units removed from backup policies (**policyId** is empty or `null`).
 
 In the request body, provide a JSON representation of the following property.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit. Optional. You can update this property only when the protection unit isn't attached to a protection policy (`policyId` is empty or `null`).|
+|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit. Optional. You can update this property only when the protection unit isn't attached to a protection policy (**policyId** is empty or `null`).|
+
+> **Note:** You can't update the **billingPolicyId** property when the protection unit is attached to a protection policy (**policyId** has a value).
 
 ## Response
 
 If successful, this method returns a `200 OK` response code and an updated [protectionUnitBase](../resources/protectionunitbase.md) object in the response body.
 
-Updating `billingPolicyId` isn't allowed when the protection unit is attached to a protection policy (`policyId` has a value).
-
 For a list of more possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
 
 ## Examples
 
-### Example 1: Update billing policy when the protection unit isn't attached to a protection policy
+### Example 1: Update the billing policy when the protection unit isn't attached to a protection policy
+
+The following example shows how to update the **billingPolicyId** property when the protection unit isn't attached to a protection policy.
 
 #### Request
 
@@ -110,7 +108,9 @@ Content-Type: application/json
 }
 ```
 
-### Example 2: Update billing policy when the protection unit is attached to a protection policy
+### Example 2: Update the billing policy when the protection unit is attached to a protection policy
+
+The following example shows the response when you try to update the **billingPolicyId** property while the protection unit is attached to a protection policy.
 
 #### Request
 
