@@ -24,7 +24,7 @@ This is a derived type that inherits from the [authenticationMethod](authenticat
 |[List](../api/fido2authenticationmethod-list.md)|[fido2AuthenticationMethod](../resources/fido2authenticationmethod.md) collection|Retrieve a list of a user's **fido2AuthenticationMethod** objects and their properties.|
 |[Get](../api/fido2authenticationmethod-get.md)|[fido2AuthenticationMethod](../resources/fido2authenticationmethod.md)|Read the properties and relationships of a user's **fido2AuthenticationMethod** object.|
 |[Delete](../api/fido2authenticationmethod-delete.md)|None|Delete a user's **fido2AuthenticationMethod** object.|
-|[Creation options](../api/fido2authenticationmethod-creationoptions.md)|[webauthnCredentialCreationOptions](../resources/webauthncredentialcreationoptions.md)|Retrieve creation options required to generate and register an Entra ID compatible passkey.|
+
 
 ## Properties
 |Property|Type|Description|
