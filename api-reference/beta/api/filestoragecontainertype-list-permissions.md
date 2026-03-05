@@ -41,6 +41,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 GET /storage/fileStorage/containerTypes/{fileStorageContainerTypeId}/permissions
 ```
 
+## Optional query parameters
+
+This method supports the `$count`, `$filter`, `$orderby`, `$select`, and `$top` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+
 ## Request headers
 
 |Name|Description|
