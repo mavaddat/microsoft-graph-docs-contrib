@@ -1,10 +1,10 @@
 ---
-title: "adhocCall: getAllRecordings"
-description: Get recordings from all ad hoc calls initiated by a user
+title: "Get all recordings from ad hoc calls - Microsoft Graph"
+description: "Get recordings from all ad hoc calls initiated by a specific user so that you can programmatically access and analyze meeting recordings."
 author: "kanchm"
 #customer intent: As a developer, I want to retrieve all recordings from ad hoc calls initiated by a specific user so that I can analyze meeting data for compliance purposes.
 ms.reviewer: v-sukanyadas
-ms.date: 02/17/2026
+ms.date: 02/27/2026
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType		   
@@ -14,7 +14,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get all recordings from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.
+Use the [adhocCall](../resources/adhoccall.md) getAllRecordings API to retrieve all recordings from ad hoc call instances that a specific user initiates. This API enables you to programmatically access and analyze meeting recordings for calls organized by a given user, filtered by optional date ranges.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -80,7 +80,7 @@ GET https://graph.microsoft.com/v1.0/adhocCalls/getAllRecordings(userId=d4220f1b
 
 The following example shows the response.
 
->**Note:** The response object shown here might be shortened for readability.
+> **Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,

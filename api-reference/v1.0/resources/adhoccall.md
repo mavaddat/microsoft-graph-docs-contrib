@@ -1,10 +1,10 @@
 ---
-title: adhocCall resource type
-description: Represents an ad hoc call, including PSTN calls, one-to-one calls, and group calls.
+title: "adhocCall resource type - Microsoft Graph"
+description: "Learn about the adhocCall resource type in Microsoft Graph API for PSTN calls, one-to-one calls, and group calls. Includes properties and relationships."
 author: "kanchm"
 #customer intent: As a developer, I want to understand the properties of the `adhocCall` resource type so that I can integrate it into my application.
 ms.reviewer: v-sukanyadas
-ms.date: 02/17/2026
+ms.date: 02/27/2026
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
@@ -15,7 +15,7 @@ toc.title: "Ad hoc call"
 
 Namespace: microsoft.graph
 
-Represents an ad hoc call, including PSTN calls, one-to-one calls, and group calls.
+The adhocCall resource type represents an ad hoc call in Microsoft Graph API, including PSTN calls, one-to-one calls, and group calls. Use this resource to manage call recordings and transcripts through the Microsoft Graph communications API.
 
 This resource supports subscribing to [change notifications](/graph/change-notifications-overview).
 
@@ -53,3 +53,5 @@ The following JSON representation shows the resource type.
 
 * [Change notifications for Microsoft Teams resources](/graph/teams-change-notification-in-microsoft-teams-overview)
 * [Get change notifications for transcripts and recordings using Microsoft Graph](/graph/teams-changenotifications-callrecording-and-calltranscript)
+* [callRecording resource type](../resources/callrecording.md)
+* [callTranscript resource type](../resources/calltranscript.md)
