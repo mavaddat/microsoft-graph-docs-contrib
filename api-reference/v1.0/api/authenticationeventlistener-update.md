@@ -22,6 +22,7 @@ Update the properties of an [authenticationEventListener](../resources/authentic
 - [onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md) resource type
 - [onEmailOtpSendListener](../resources/onemailotpsendlistener.md) resource type
 - [onFraudProtectionLoadStartListener](../resources/onfraudprotectionloadstartlistener.md) resource type
+- [onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md) resource type
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
@@ -59,6 +60,7 @@ You must specify the **@odata.type** property and the value of the [authenticati
 |conditions|[authenticationConditions](../resources/authenticationconditions.md)|The conditions on which this authenticationEventListener should trigger. Optional.|
 |displayName|String|The display name of the authentication event listener policy. Optional.|
 |handler|[onTokenIssuanceStartHandler](../resources/ontokenissuancestarthandler.md) &#124; [onFraudProtectionLoadStartHandler](../resources/onfraudprotectionloadstarthandler.md)|The handler to invoke when conditions are met. The type of handler depends on the listener type:<br/>- For **onTokenIssuanceStartListener**, use [onTokenIssuanceStartHandler](../resources/ontokenissuancestarthandler.md).<br/>- For **onFraudProtectionLoadStartListener**, use [onFraudProtectionLoadStartHandler](../resources/onfraudprotectionloadstarthandler.md).|
+|handler|[onPasswordSubmitHandler](../resources/onpasswordsubmithandler.md)|The handler to invoke when conditions are met. Can be updated for the **onPasswordSubmitListener** type.|
 
 ## Response
 

@@ -1114,6 +1114,7 @@
                 "onEmailOtpSendListener",
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
+                "onPasswordSubmitListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
               ]
@@ -1210,6 +1211,7 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
+                "onPasswordSubmitCustomExtension",
                 "onTokenIssuanceStartCustomExtension"
               ]
             },
@@ -1312,7 +1314,9 @@
                 "onAttributeCollectionStartHandler",
                 "onAttributeCollectionStartCustomExtensionHandler",
                 "onAttributeCollectionSubmitHandler",
-                "onAttributeCollectionSubmitCustomExtensionHandler"
+                "onAttributeCollectionSubmitCustomExtensionHandler",
+                "onPasswordMigrationCustomExtensionHandler",
+                "onPasswordSubmitHandler"
               ]
             },
             {
