@@ -26,6 +26,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "protectionunitbase_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/protectionunitbase-update-permissions.md)]
 
+This API supports only delegated permissions for work or school accounts.
+
 ## HTTP request
 
 <!-- {
@@ -47,28 +49,25 @@ PATCH /solutions/backupRestore/protectionUnits/{protectionUnitBaseId}
 
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
+This API supports updating only the `billingPolicyId` property, and only for protection units removed from backup policies (`policyId` is empty or `null`).
+
 In the request body, provide a JSON representation of the following property.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit. Optional.|
+|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit. Optional. You can update this property only when the protection unit isn't attached to a protection policy (`policyId` is empty or `null`).|
 
 ## Response
 
 If successful, this method returns a `200 OK` response code and an updated [protectionUnitBase](../resources/protectionunitbase.md) object in the response body.
 
-### Errors
-
-The following error scenarios are specific to this API:
-- `404 Not Found` with error code `BillingPolicyNotFound`.
-- `409 Conflict` with error code `ConflictState`.
-- `422 Unprocessable Entity` with error code `InvalidBillingPolicyAssignment`.
+Updating `billingPolicyId` isn't allowed when the protection unit is attached to a protection policy (`policyId` has a value).
 
 For a list of more possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
 
 ## Examples
 
-### Example 1: Update billing policy on a protection unit
+### Example 1: Update billing policy when the protection unit isn't attached to a protection policy
 
 #### Request
 
@@ -76,15 +75,15 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "protectionunitbase_update"
+  "name": "protectionunitbase_update_unattached_policy"
 }
 -->
 ```msgraph-interactive
-PATCH https://graph.microsoft.com/beta/solutions/backupRestore/protectionUnits/89014d8c-71fe-4d00-a01a-31850bc5b32c
+PATCH https://graph.microsoft.com/beta/solutions/backupRestore/protectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
 Content-Type: application/json
 
 {
-  "billingPolicyId": "7b18e4d3-4033-4408-a165-b0f352dec262"
+  "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa"
 }
 ```
 
@@ -102,15 +101,16 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "id": "89014d8c-71fe-4d00-a01a-31850bc5b32c",
-  "policyId": "845457dc-4bb2-4815-bef3-8628ebd1952e",
-  "billingPolicyId": "7b18e4d3-4033-4408-a165-b0f352dec262",
-  "status": "protected",
-  "lastModifiedDateTime": "2026-02-20T12:00:00Z"
+  "id": "2b8180db-48ec-4ea3-af9f-4da73f24b9cb",
+  "policyId": "",
+  "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",
+  "status": "unprotected",
+  "protectionSources": "none",
+  "lastModifiedDateTime": "2026-03-05T08:30:00Z"
 }
 ```
 
-### Example 2: Update with a billing policy that doesn't exist
+### Example 2: Update billing policy when the protection unit is attached to a protection policy
 
 #### Request
 
@@ -118,15 +118,15 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "protectionunitbase_update_error_example"
+  "name": "protectionunitbase_update_attached_policy_error"
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/beta/solutions/backupRestore/protectionUnits/12345678-1234-1234-1234-123456789012
+PATCH https://graph.microsoft.com/beta/solutions/backupRestore/protectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
 Content-Type: application/json
 
 {
-  "billingPolicyId": "00000000-0000-0000-0000-000000000000"
+  "billingPolicyId": "f65f082d-a073-4451-9a3b-2355956f2cd7"
 }
 ```
 
@@ -139,18 +139,14 @@ The following example shows the response.
 }
 -->
 ```http
-HTTP/1.1 404 Not Found
+HTTP/1.1 403 Operation Not Allowed
 Content-Type: application/json
 
 {
   "error": {
-    "code": "BillingPolicyNotFound",
-    "message": "The specified billing policy '00000000-0000-0000-0000-000000000000' does not exist or is not accessible.",
-    "innerError": {
-      "date": "2026-02-20T12:00:00",
-      "request-id": "12345678-1234-1234-1234-123456789012",
-      "client-request-id": "87654321-4321-4321-4321-210987654321"
-    }
+    "code": "OperationNotAllowed",
+    "message": "Only protection units removed from backup policies are allowed for this API.",
+    "details": []
   }
 }
 ```
@@ -158,4 +154,3 @@ Content-Type: application/json
 ## Related content
 
 - [protectionUnitBase](../resources/protectionunitbase.md)
-- [Backup Storage API error responses](/graph/backup-storage-error-codes)
