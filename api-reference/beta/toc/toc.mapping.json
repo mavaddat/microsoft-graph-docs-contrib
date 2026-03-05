@@ -617,6 +617,9 @@
             "cloudPcDisasterRecoveryNetworkSetting",
             "cloudPcDiscoveredApp",
             "cloudPcDomainJoinConfiguration",
+            "cloudpcexternalpartneractionreport",
+            "cloudpcexternalpartneractionresult",
+            "cloudpcexternalpartneragentsetting",
             "cloudPcForensicStorageAccount",
             "cloudPcFrontlineSharedDeviceDetail",
             "cloudPcHealthCheckItem",
@@ -2403,7 +2406,8 @@
         "mailFolderOperation",
         "mailSearchFolder",
         "messageRule",
-        "exchangeMessageTrace"
+        "exchangeMessageTrace",
+        "userConfiguration"
       ],
       "childNodes": [
         {
@@ -3771,5 +3775,4 @@
     }
   ]
 }
-
 
