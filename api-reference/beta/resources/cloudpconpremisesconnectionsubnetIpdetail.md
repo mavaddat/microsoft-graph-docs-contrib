@@ -1,6 +1,6 @@
 ---
 title: "cloudPcOnPremisesConnectionSubnetIpDetail resource type"
-description: "Describes the subnet IP details of a Cloud PC OnPremises Connection."
+description: "Describes the subnet IP details of a Cloud PC on-premises connection."
 author: "shijun2026-3"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Describes the subnet IP details of a [Cloud PC OnPremises Connection](../resources/cloudpconpremisesconnection.md).
+Describes the subnet IP details of a [Cloud PC on-premises connection](../resources/cloudpconpremisesconnection.md).
 
 [!INCLUDE [on-premise-rename-note](../../includes/on-premise-rename-note.md)]
 
