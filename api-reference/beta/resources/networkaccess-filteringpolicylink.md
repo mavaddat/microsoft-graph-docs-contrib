@@ -16,7 +16,12 @@ Namespace: microsoft.graph.networkaccess
 
 The association between a filtering policy and a filtering profile.
 
-This is an abstract type.
+This is an abstract type from which the following types are derived:
+
+- [microsoft.graph.networkaccess.cloudFirewallPolicyLink](../resources/networkaccess-cloudfirewallpolicylink.md)
+- [microsoft.graph.networkaccess.threatIntelligencePolicyLink](../resources/networkaccess-threatintelligencepolicylink.md)
+- [microsoft.graph.networkaccess.tlsInspectionPolicyLink](../resources/networkaccess-tlsinspectionpolicylink.md)
+
 Inherits from [microsoft.graph.networkaccess.policyLink](../resources/networkaccess-policylink.md).
 
 ## Methods
