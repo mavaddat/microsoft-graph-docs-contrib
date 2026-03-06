@@ -67,6 +67,5 @@ The following JSON representation shows the resource type.
   "model": "String",
   "passkeyType": "String",
   }
-}
 ```
 
