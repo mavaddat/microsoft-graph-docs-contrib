@@ -31,8 +31,6 @@ The architecture includes three components:
 
 - A **cache** that persists messages. To improve the response time for your application and to potentially lower the costs for you, minimize reading the same message multiple times by storing messages in this cache. You do not want to be surprised by the API consumption charges later. To learn how to set up a cache, see [Add caching to improve performance in Azure API Management](/azure/api-management/api-management-howto-cache).
 
-    Some Teams APIs have licensing and payment requirements. For details, see [Payment models and licensing requirements](/graph/teams-licenses) for details.
-
 After you set up these components, you can start using Teams APIs. 
 
 ## Step 2: Create a new chat
