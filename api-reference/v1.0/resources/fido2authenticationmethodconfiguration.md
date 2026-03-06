@@ -71,6 +71,6 @@ The following JSON representation shows the resource type.
   "keyRestrictions": {
     "@odata.type": "microsoft.graph.fido2KeyRestrictions"
   },
-  "includeTargets": [ { "@odata.type": "microsoft.graph.authenticationMethodTarget" } ]
+  "includeTargets": [ { "@odata.type": "microsoft.graph.passkeyAuthenticationMethodTarget" } ]
 }
 ```
