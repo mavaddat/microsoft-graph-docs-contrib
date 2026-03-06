@@ -36,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-PATCH /identityGovernance/entitlementManagement/externalOriginResourceConnectors({externalOriginResourceConnectorsID})
+PATCH /identityGovernance/entitlementManagement/externalOriginResourceConnectors
 ```
 
 ## Request headers
