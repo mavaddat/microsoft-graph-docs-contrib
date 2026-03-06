@@ -37,7 +37,7 @@ The following table lists the APIs and [change notification](/graph/api/subscrip
 | Teams meeting APIs: <ul><li>[GET /users/{userId}/onlineMeetings/{meetingId}/transcripts/{transcriptId}/content](/graph/api/calltranscript-get#example-2-get-a-calltranscript-content)</li><li>[GET /users/{userId}/onlineMeetings/{meetingId}/transcripts/{transcriptId}/metadataContent](/graph/api/calltranscript-get#example-4-get-a-calltranscript-metadatacontent)</li><li>[GET /users/{userId}/onlineMeetings/{meetingId}/recordings/{recordingId}/content](/graph/api/callrecording-get#example-2-get-callrecording-content)</li><li>[GET /copilot/users/{userId}/onlineMeetings/{meetingId}/aiInsights/{aiInsightId}](/microsoft-365-copilot/extensibility/api/ai-services/meeting-insights/callaiinsight-get)</li></ul> | No model parameter |
 
 > [!NOTE]
-> To set up an active Azure subscription for your application for billing purposes, see [Enable metered Microsoft 365 APIs and services](/graph/metered-api-setup). For more information, see [Payment and billing updates](#payment-and-billing)
+> To set up an active Azure subscription for your application for billing purposes, see [Enable metered Microsoft 365 APIs and services](/graph/metered-api-setup). For more information, see [Payment and billing updates](#payment-and-billing).
 
 ## Payment models
 
