@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 03/04/2026
+ms.date: 03/06/2026
 ms.topic: whats-new
 ---
 
@@ -19,6 +19,11 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
 ## March 2026: New and generally available
+
+### Device and app management | Cloud PC
+
+- Added the [cloudPcOnPremisesConnectionSubnetIpDetail](/graph/api/resources/cloudpconpremisesconnectionsubnetipdetail) resource type to represent the subnet IP details of a Cloud PC On-premises Connection.
+- Added the **subnetPrivateIpDetail** property to [cloudPcOnPremisesConnection](https://learn.microsoft.com/en-us/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta).
 
 ### Files
 
