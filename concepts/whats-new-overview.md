@@ -23,7 +23,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 ### Device and app management | Cloud PC
 
 - Added the [cloudPcOnPremisesConnectionSubnetIpDetail](/graph/api/resources/cloudpconpremisesconnectionsubnetipdetail) resource type to represent the subnet IP details of a Cloud PC On-premises Connection.
-- Added the **subnetPrivateIpDetail** property to [cloudPcOnPremisesConnection](https://learn.microsoft.com/en-us/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta).
+- Added the **subnetPrivateIpDetail** property to [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta).
 
 ### Files
 
