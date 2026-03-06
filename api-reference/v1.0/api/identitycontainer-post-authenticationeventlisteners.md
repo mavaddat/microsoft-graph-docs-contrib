@@ -400,7 +400,7 @@ The following example shows a request.
   "name": "create_authenticationeventlistener_onpasswordsubmitlistener"
 }
 -->
-``` http
+```msgraph-interactive
 POST https://graph.microsoft.com/v1.0/identity/authenticationEventListeners
 Content-Type: application/json
 

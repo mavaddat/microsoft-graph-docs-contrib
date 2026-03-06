@@ -516,7 +516,7 @@ The following example shows a request.
   "name": "create_customauthenticationextension_onpasswordsubmitcustomextension"
 }
 -->
-``` http
+```msgraph-interactive
 POST https://graph.microsoft.com/v1.0/identity/customAuthenticationExtensions
 Content-Type: application/json
 
