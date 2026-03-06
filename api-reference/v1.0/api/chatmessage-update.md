@@ -18,7 +18,8 @@ The update only works for chats where members are Microsoft Teams users. If one 
 
 This method doesn't support federation. Only the user in the tenant who sent the message can perform data loss prevention (DLP) updates on the specified chat message.
 
-[!INCLUDE [teams-model-A-only-disclaimer](../../includes/teams-model-A-only-disclaimer.md)]
+> [!NOTE]
+> When used with application permissions, Microsoft Communications DLP [service plan](/azure/active-directory/enterprise-users/licensing-service-plan-reference), such as one of these [supported licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-loss-prevention-graph-apis-for-teams-data-loss-prevention-dlp-and-for-teams-export) is required.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -62,17 +63,6 @@ To update a **chatMessage** in a **chat**:
 ```http
 PATCH /chats/{chatThread-id}/messages/{message-id}
 ```
-
-## Optional query parameters
-
-You can use `model` query parameter, which only supports the value `A`, as shown in the following examples. 
-
-```http
-PATCH /teams/(team-id)/channels/{channel-id}/messages/{message-id}?model=A
-PATCH /teams/(team-id)/channels/{channel-id}/messages/{message-id}/replies/{reply-id}?model=A
-PATCH /chats/{chatThread-id}/messages/{message-id}?model=A
-```
-If no `model` is specified, [evaluation mode](/graph/teams-licenses#evaluation-mode-default-requirements) is used.
 
 ## Request headers
 
