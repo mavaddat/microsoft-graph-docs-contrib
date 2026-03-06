@@ -36,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-PATCH /identityGovernance/entitlementManagement/externalOriginResourceConnectors($expand={externalOriginResourceConnectors})
+PATCH /identityGovernance/entitlementManagement/externalOriginResourceConnectors({externalOriginResourceConnectorsID})
 ```
 
 ## Request headers
@@ -75,7 +75,7 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors($expand=e363ebb8-6faa-4980-ac5b-eefc196e1cd4)
+PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/externalOriginResourceConnectors(e363ebb8-6faa-4980-ac5b-eefc196e1cd4)
 Content-Type: application/json
 
 {
