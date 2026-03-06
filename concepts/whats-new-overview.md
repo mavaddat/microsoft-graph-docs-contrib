@@ -20,11 +20,6 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## March 2026: New and generally available
 
-### Device and app management | Cloud PC
-
-- Added the [cloudPcOnPremisesConnectionSubnetIpDetail](/graph/api/resources/cloudpconpremisesconnectionsubnetipdetail) resource type to represent the subnet IP details of a Cloud PC On-premises Connection.
-- Added the **subnetPrivateIpDetail** property to [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta).
-
 ### Files
 
 Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
@@ -39,6 +34,11 @@ Use the following new container columns APIs added to further support structured
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
 
 ## March 2026: New in preview only
+
+### Device and app management | Cloud PC
+
+- Added the [cloudPcOnPremisesConnectionSubnetIpDetail](/graph/api/resources/cloudpconpremisesconnectionsubnetipdetail?view=graph-rest-beta&preserve-view=true) resource type to represent the subnet IP details of a Cloud PC on-premises connection.
+- Use the **subnetPrivateIpDetail** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta&preserve-view=true) to get detailed information about the subnet's private IP addresses associated with the subnet.
 
 ### Identity and access | Governance
 
