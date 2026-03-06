@@ -96,13 +96,11 @@ If successful, this method returns a `200 OK` response.
 
 ### Errors
 
-This API has . If these requirements are not met, the API returns one of the following errors.
+DLP Patch APIs require the Microsoft Communications DLP [service plan](/azure/active-directory/enterprise-users/licensing-service-plan-reference), such as one of these [supported licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-loss-prevention-graph-apis-for-teams-data-loss-prevention-dlp-and-for-teams-export)
+| Sample error type                                | Status code            | Sample error messages                                                                                                                       |
+|:-------------------------------------------------|:-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
+| E5 license or Microsoft Communications Service Plan requirement not met.  | 402 (Payment Required) | `"...needs a valid license to access this API..."` </br> `"...tenant needs a valid license to access this API..."` |
 
-| Sample error type                | Status code            | Sample error messages                                                                                     |
-|:---------------------------------|:-----------------------|:----------------------------------------------------------------------------------------------------------|
-| E5 license requirement not met   | 402 (Payment Required) | `"...needs a valid license to access this API..."` </br> `"...tenant needs a valid license to access this API..."` |
-| Model B is not supported for API | 402 (Payment Required) | `"...the 'model' query parameter does not support value 'B' for this API. Use billing model 'A'..."`            |
-| Evaluation capacity exceeded     | 402 (Payment Required) | `"...evaluation mode capacity has been exceeded. Use a valid billing model..."`                             |
 
 ## Examples
 
