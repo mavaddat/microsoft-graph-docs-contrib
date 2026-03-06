@@ -20,21 +20,3 @@ Use the `Prefer: include-unknown-enum-members` request header to get the followi
 **team**, **channel**, and **chat** subscriptions can be specified to include resource data (**includeResourceData** set to `true`). In that case, encryption is required and the subscription creation fails if an **encryptionCertificate** isn't specified for such subscriptions.
 
 You can use the **notifyOnUserSpecificProperties** query string parameter when you subscribe to changes in a particular chat or at user level. When you set the query string parameter **notifyOnUserSpecificProperties** to `true` during subscription creation, two types of payloads are sent to the subscriber. One type contains user-specific properties, and the other is sent without them. For more information, see [Get change notifications for chats using Microsoft Graph](/graph/teams-changenotifications-chat).
-
-#### Request example
-
-Specify the `model` query parameter in the **resource** property in the request body.
-
-```http
-POST https://graph.microsoft.com/v1.0/subscriptions
-Content-type: application/json
-
-{
-   "changeType": "created",
-   "notificationUrl": "https://webhook.azurewebsites.net/api/send/myNotifyClient",
-   "resource": "chats/getAllMessages",
-   "expirationDateTime":"2016-11-20T18:23:45.9356913Z",
-   "clientState": "secretClientValue",
-   "latestSupportedTlsVersion": "v1_2"
-}
-```
