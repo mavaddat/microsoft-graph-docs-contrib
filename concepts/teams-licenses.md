@@ -13,10 +13,14 @@ ms.topic: article
 
 > [!IMPORTANT]
 > Starting August 25, 2025, the Teams APIs listed in this article are no longer metered, and no billing configuration is required to use these APIs. If your application is configured for billing, no action is required. This article is provided for reference as the final billing cycle for metered Microsoft Teams APIs concludes.
-> 
-> As a result of this change, the model query parameter is no longer required and will be ignored if supplied. License enforcement is not applicable unless explicitly specified in the documentation for a given API.
 >
-> The following sections are retained for reference only and are considered obsolete. This document will be deprecated in June 2026.
+> As a result of this change, the model query parameter is no longer required and will be ignored if supplied. License enforcement is not applicable unless explicitly specified in the documentation for the respective API.
+>
+> The following exceptions apply:
+> - Teams meeting AI insights APIs continue to require [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365/copilot) license.
+> - DLP Patch APIs require the Microsoft Communications DLP [service plan](/azure/active-directory/enterprise-users/licensing-service-plan-reference), such as one of these [supported licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-loss-prevention-graph-apis-for-teams-data-loss-prevention-dlp-and-for-teams-export)
+>
+> The below sections are retained for reference only and are considered obsolete. This document will be deprecated in June 2026.
 
 This article describes the payment models and licensing requirements for Microsoft Teams APIs in Microsoft Graph. For a high-level description of metered APIs and services in Microsoft Graph, see [Overview of metered APIs and services in Microsoft Graph](metered-api-overview.md).
 
