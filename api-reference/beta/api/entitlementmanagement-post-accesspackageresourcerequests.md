@@ -643,37 +643,36 @@ POST https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/a
 Content-type: application/json
 
 {
-  "catalogId": "08a0fe5c-eb09-46d6-a364-794bab6da5a0",
+  "catalogId": "bcb19bf7-cdf7-4a70-a106-f6543620b2a5",
   "accessPackageResource": {
-    "id": "f19969b6-14fe-f011-bf1d-002248bece64",
+    "id": "88eb460d-ca08-4eb9-afae-8d60a8b00377",
     "displayName": "SAP IAG Access Rights",
-    "description": "This resource represents the Business Role of SAP IAG",
-    "resourceType": "Business Role",
-    "originId": "https://IAGINTGORG-iag-intg-space-java-rest-ari.cfapps.sap.hana.ondemand.com",
+    "description": "This resource represents the business roles of SAP IAG",
+    "resourceType": "Business role",
+    "originId": "https://iagintgorg-iag-intg-space-java-rest-arqapi.cfapps.sap.hana.ondemand.com",
     "originSystem": "External",
     "accessPackageResourceScopes": [],
     "externalOriginResourceConnector": {
-      "id": "609f2e1b-085a-490c-b798-53f4150897fb",
-      "displayName": "SAP IAG 1.0",
-      "description": "SAP IAG 1.0",
+      "id": "1a53cea5-48bd-467c-af81-a24245b0df2b",
+      "displayName": "SAP IAG 10.0",
+      "description": "SAP IAG 10.0.0",
       "connectorType": "sapIag",
-      "createdBy": "kumapanka@elmdebug.onmicrosoft.com",
-      "createdDateTime": "2026-01-30T18:06:56.487491Z",
-      "modifiedBy": "kumapanka@elmdebug.onmicrosoft.com",
-      "modifiedDateTime": "2026-01-30T18:06:56.487491Z",
       "connectionInfo": {
-        "@odata.type": "#Microsoft.IGAELM.EC.FrontEnd.ExternalModel.externalTokenBasedSapIagConnectionInfo",
-        "url": "https://INT-iag-intg-space-java-rest-arqapi.cfapps.sap.hana.ondemand.com",
-        "subscriptionId": "838be7e1-4525-44bd-a821-8b0cfad2c15a",
-        "resourceGroup": "SAPIAG-Integration-RG1",       
-        "accessTokenUrl": "https://entra-ig-l4s6yn.authentication.sap.hana.ondemand.com/oauth/token",
-        "clientId": "sb-8d6b-72b5-46ce-9273-471874a0913b133623|iagapi-iag-intg-space!b11378",
-        "keyVaultName": "IAG-KeyVlt",
-        "secretName": "ClntSecret"
+        "@odata.type": "microsoft.graph.externalTokenBasedSapIagConnectionInfo",
+        "url": "https://iagigorg-iag-intg-space-java-rest-arqapi.cfapps.sap.hana.ondemand.com",
+        "subscriptionId": "8e072eb5-73f5-4ed2-9324-a734dcb9728",
+        "resourceGroup": "pankaj",
+        "accessTokenUrl": "https://entra-docu-intg-mrrd3gv.authentication.sap.hana.ondemand.com/oauth/token",
+        "clientId": "sb-72062308-a7ae-456f-b9a4-24302b8a4aa!b247012|iagapi-iag-intg-space!b11378",
+        "keyVaultName": "SAPIAG-KV",
+        "secretName": "ClientSecret"
       }
-    }
+    },
+    "accessPackageResourceEnvironment": null
   },
-  "requestType": "AdminAdd"
+  "requestType": "AdminAdd",
+  "history": [],
+  "executeImmediately": true
 }
 
 ```
