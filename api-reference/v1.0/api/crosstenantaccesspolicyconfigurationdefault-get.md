@@ -243,6 +243,45 @@ Content-Type: application/json
         "socialIdentityProviders" 
     ],
     "fallbackIdentityProvider": "defaultConfiguredIdp" 
+  },
+  "m365CollaborationInbound":
+  {
+    "users":
+    {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllUsers",
+          "targetType": "user"
+        }
+      ]
+    }
+  },
+  "m365CollaborationOutbound":
+  {
+    "usersAndGroups":
+    {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllUsers",
+          "targetType": "user"
+        }
+      ]
+    }
+  },
+  "appServiceConnectInbound":
+  {
+    "applications":
+    {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllApplications",
+          "targetType": "application"
+        }
+      ]
+    }
   }
 }
 ```
