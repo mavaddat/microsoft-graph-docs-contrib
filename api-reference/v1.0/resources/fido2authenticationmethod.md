@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
 toc.title: FIDO2
-Sms.date: 03/04/2026
+ms.date: 03/04/2026
 ---
 
 # fido2AuthenticationMethod resource type
