@@ -18,7 +18,7 @@ ms.topic: article
 >
 > The following exceptions apply:
 > - Teams meeting AI insights APIs continue to require [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365/copilot) license.
-> - DLP Patch APIs require the Microsoft Communications DLP [service plan](/azure/active-directory/enterprise-users/licensing-service-plan-reference), such as one of these [supported licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-loss-prevention-graph-apis-for-teams-data-loss-prevention-dlp-and-for-teams-export)
+> - [Data Loss Protection](/graph/api/chatmessage-update) (DLP) Patch APIs will require Microsoft Communications DLP [service plan](/azure/active-directory/enterprise-users/licensing-service-plan-reference), such as one of these [supported licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-loss-prevention-graph-apis-for-teams-data-loss-prevention-dlp-and-for-teams-export)
 >
 > The below sections are retained for reference only and are considered obsolete. This document is deprecated in June 2026.
 
