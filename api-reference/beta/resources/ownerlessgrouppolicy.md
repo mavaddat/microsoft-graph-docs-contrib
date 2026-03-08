@@ -1,6 +1,6 @@
 ---
 title: "ownerlessGroupPolicy resource type"
-description: "Represents the configuration for managing groups that have lost their sole owner."
+description: "Represents the configuration for managing M365 groups that have lost their sole owner."
 author: "Ananya-Sharma"
 ms.date: 02/12/2026
 ms.localizationpriority: medium
@@ -14,9 +14,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the configuration for managing groups that have lost their sole owner. Use this policy to send actionable notification emails to active members of ownerless groups to accept ownership. Administrators can configure notification duration, maximum members to notify, and control ownership eligibility by using security groups.
+Represents the configuration for managing [Microsoft 365 groups](../resources/group.md) that have lost their sole owner. Use this policy to send actionable notification emails to active members of ownerless groups to accept ownership. Administrators can configure notification duration, maximum members to notify, and control ownership eligibility by using security groups.
 
-Only users with the Global Administrator, Groups Administrator, or Exchange Administrator roles can access this policy.
+For more information, see [Manage ownerless Microsoft 365 groups and teams](/microsoft-365/admin/create-groups/ownerless-groups-teams)
 
 Inherits from [entity](../resources/entity.md).
 
@@ -30,8 +30,8 @@ Inherits from [entity](../resources/entity.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |emailInfo|[emailDetails](../resources/emaildetails.md)|The email notification details for the ownerless group policy, including the sender, subject, and body.|
-|enabledGroupIds|String collection|The collection of group IDs for which the policy is enabled.|
-|isEnabled|Boolean|Indicates whether the ownerless group policy is enabled. Setting this property to `false` clears the values of all other policy parameters.|
+|enabledGroupIds|String collection|The collection of IDs for groups to which the policy is enabled.|
+|isEnabled|Boolean|Indicates whether the ownerless group policy is enabled in the tenant. Setting this property to `false` clears the values of all other policy parameters.|
 |maxMembersToNotify|Int64|The maximum number of members to notify. Value range is 0-90. Members are sorted by oldest membership first.|
 |notificationDurationInWeeks|Int64|The number of weeks for the notification duration. Value range is 1-7.|
 |policyWebUrl|String|The URL to the policy documentation.|

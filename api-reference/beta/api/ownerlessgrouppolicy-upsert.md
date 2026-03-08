@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create or update the [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) for the tenant using upsert semantics. If the policy doesn't exist, it creates a new one. If the policy exists, it updates the existing policy.
+Create or update the [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) for the tenant. If the policy doesn't exist, it creates a new one; if the policy exists, it updates the existing policy.
 
 To disable the policy, set **isEnabled** to `false`. Setting **isEnabled** to `false` clears the values of all other policy parameters.
 
@@ -30,11 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 [!INCLUDE [permissions-table](../includes/permissions/ownerlessgrouppolicy-upsert-permissions.md)]
 
 > [!IMPORTANT]
-> In delegated scenarios, the calling user must be assigned one of the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
->
-> - Global Administrator
-> - Groups Administrator
-> - Exchange Administrator
+> In delegated scenarios, the calling user must be assigned the *Groups Administrator* or *Exchange Administrator* [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with supported permissions.
 
 ## HTTP request
 
@@ -60,7 +56,7 @@ PATCH /policies/ownerlessGroupPolicy
 |Property|Type|Description|
 |:---|:---|:---|
 |emailInfo|[emailDetails](../resources/emaildetails.md)|The email notification details for the ownerless group policy. Required.|
-|enabledGroupIds|String collection|The collection of group IDs for which the policy is enabled. Required.|
+|enabledGroupIds|String collection|The collection of IDs for Microsoft 365 groups for which the policy is enabled. Required.|
 |isEnabled|Boolean|Indicates whether the ownerless group policy is enabled. Setting this property to `false` clears the values of all other policy parameters. Required.|
 |maxMembersToNotify|Int64|The maximum number of members to notify. Value range is 0-90. Required.|
 |notificationDurationInWeeks|Int64|The number of weeks for the notification duration. Value range is 1-7. Required.|
