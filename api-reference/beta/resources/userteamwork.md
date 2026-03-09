@@ -22,7 +22,7 @@ Represents a container for the range of Microsoft Teams functionalities that are
 |:---|:---|:---|
 |[List apps for user](../api/userteamwork-list-installedapps.md)|[teamsAppInstallation](../resources/teamsappinstallation.md) collection|Retrieve the list of apps installed in the personal scope of the specified user.|
 |[Get](../api/userteamwork-get.md)|[userTeamwork](../resources/userteamwork.md)|Get userTeamwork settings for the specified [user](../resources/user.md), which includes the Microsoft Teams region and the locale chosen by the user.|
-|[List sections](../api/teamworksection-list.md)|[teamworkSection](../resources/teamworksection.md) collection|Get the list of sections in a user's teamwork.|
+|[List sections](../api/userteamwork-list-sections.md)|[teamworkSection](../resources/teamworksection.md) collection|Get the list of [sections](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md).|
 
 ## Properties
 
