@@ -51,7 +51,7 @@ PATCH /policies/ownerlessGroupPolicy
 
 ## Request body
 
-[!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
+In the request body, supply a JSON representation of the [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) object. All required properties must be provided for both create and update operations. The API performs a full replacement of the policy configuration. Unlike the admin portal, the API doesn't apply default values for any properties.
 
 |Property|Type|Description|
 |:---|:---|:---|
