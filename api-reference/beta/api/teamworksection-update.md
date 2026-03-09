@@ -60,14 +60,13 @@ In the request body, supply a JSON representation of only the properties to upda
 > The valid **sortType** values depend on the section type:
 > - *User-defined sections*: `mostRecent`, `unreadThenMostRecent`, and `userDefinedCustomOrder` are valid. `nameAlphabetical` isn't supported.
 > - *System-defined sections*: The valid values depend on the specific section. For example, the *Teams* and *Channels* sections support `nameAlphabetical`, but the *RecentChats* and *MutedChats* sections don't. When the property **isHierarchicalViewEnabled** is set to `true`, only `nameAlphabetical` is valid.
->
-> Setting an unsupported sort type returns a `400 Bad Request` error.
+
 
 ## Response
 
 If successful, this method returns a `200 OK` response code and an updated [teamworkSection](../resources/teamworksection.md) object in the response body.
 
-If the request specifies an unsupported **sortType** for the section type, this method returns a `400 Bad Request` response code.
+If the request specifies an unsupported **sortType** for the section type, this method returns a `400 Bad Request` response code. For more information, see the [Request body](teamworksection-update.md#request-body) section.
 
 ## Examples
 
