@@ -20,7 +20,7 @@ Inherits from [microsoft.graph.networkaccess.policyLink](../resources/networkacc
 
 ## Methods
 
-For supported API operations, see [filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md)
+For supported API operations, see [filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md).
 
 ## Properties
 
