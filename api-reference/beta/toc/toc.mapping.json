@@ -2231,6 +2231,7 @@
               "name": "Cloud firewall",
               "resources": [
                 "microsoft.graph.networkaccess.cloudFirewallPolicy",
+                "microsoft.graph.networkaccess.cloudFirewallRule",
                 "microsoft.graph.networkaccess.cloudFirewallPolicyLink",
               ]
             },
