@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties of a [teamworkSection](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md).
+Read the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -54,7 +54,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a [teamworkSection](../resources/teamworksection.md) object in the response body. If the `If-None-Match` header is provided and the resource hasn't changed, this method returns a `304 Not Modified` response.
+If successful, this method returns a `200 OK` response code and a [teamworkSection](../resources/teamworksection.md) object in the response body. If the `If-None-Match` header is provided and the resource didn't change, this method returns a `304 Not Modified` response.
 
 ## Examples
 
