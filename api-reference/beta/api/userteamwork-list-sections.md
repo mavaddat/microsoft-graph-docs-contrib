@@ -79,8 +79,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.teamworkSection",
-  "isCollection": true
+  "@odata.type": "Collection(microsoft.graph.teamworkSection")
 }-->
 ```http
 HTTP/1.1 200 OK
