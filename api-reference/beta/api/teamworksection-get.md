@@ -46,7 +46,7 @@ This method doesn't currently support [OData query parameters](/graph/query-para
 | Header | Value |
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| If-None-Match | The ETag value of a previously retrieved **teamworkSection**. If the resource hasn't changed, this header causes a `304 Not Modified` response. Optional. |
+| If-None-Match | The ETag value of a previously retrieved **teamworkSection**. If the resource didn't change, this header causes a `304 Not Modified` response. Optional. |
 
 ## Request body
 
