@@ -14,10 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The association between a filtering policy and a filtering profile.
-
-This is an abstract type from which the following types are derived:
-
+The association between a policy and a [filtering profile](../resources/networkaccess-filteringprofile.md). This resource is an abstract type for associating the following derived policies with a filtering profile:
 - [microsoft.graph.networkaccess.cloudFirewallPolicyLink](../resources/networkaccess-cloudfirewallpolicylink.md)
 - [microsoft.graph.networkaccess.threatIntelligencePolicyLink](../resources/networkaccess-threatintelligencepolicylink.md)
 - [microsoft.graph.networkaccess.tlsInspectionPolicyLink](../resources/networkaccess-tlsinspectionpolicylink.md)
@@ -28,6 +25,7 @@ Inherits from [microsoft.graph.networkaccess.policyLink](../resources/networkacc
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List](../api/networkaccess-filteringpolicylink-list.md)|[microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) collection|Get a list of the [microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) objects and their properties.|
+|[Create](../api/networkaccess-filteringpolicylink-post.md)|[microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md)|Create a [microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) object and its properties.|
 |[Get](../api/networkaccess-filteringpolicylink-get.md)|[microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md)|Get a [microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) object.|
 |[Update](../api/networkaccess-filteringpolicylink-update.md)|[microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md)|Update the properties of a [microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) object.|
 |[Delete](../api/networkaccess-filteringpolicylink-delete.md)|None|Delete a [microsoft.graph.networkaccess.filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) object.|
