@@ -3572,6 +3572,15 @@
           ]
         },
         {
+          "name": "Sections (preview)",
+          "resources": [
+            "teamworkSection"
+          ],
+          "complexTypes": [
+            "sectionDisplayIcon"
+          ]
+        },
+        {
           "name": "Shift management",
           "resources": [
             "dayNote",

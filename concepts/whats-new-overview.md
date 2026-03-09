@@ -48,6 +48,10 @@ Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagent
 - Added the [crossTenantAccessType](/graph/api/resources/networkaccess-crosstenantaccesstype?view=graph-rest-beta&preserve-view=true) enumeration type.
 - Added the [deviceJoinType](/graph/api/resources/networkaccess-devicejointype?view=graph-rest-beta&preserve-view=true) enumeration type.
 
+### Teamwork and communications | Sections
+
+Organize chats, channels, and meetings into custom sections in a user's Microsoft Teams chat list using the new [teamworkSection](/graph/api/resources/teamworksection?view=graph-rest-beta&preserve-view=true) resource. Use the section management APIs to [list](/graph/api/teamworksection-list?view=graph-rest-beta&preserve-view=true), [create](/graph/api/teamworksection-create?view=graph-rest-beta&preserve-view=true), [get](/graph/api/teamworksection-get?view=graph-rest-beta&preserve-view=true), [update](/graph/api/teamworksection-update?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/teamworksection-delete?view=graph-rest-beta&preserve-view=true) sections.
+
 ## February 2026: New and generally available
 
 ### External data connections

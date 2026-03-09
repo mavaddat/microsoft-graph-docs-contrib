@@ -3886,6 +3886,35 @@ Possible values for user account types (group membership), per Windows definitio
 | strategic |
 | unknownFutureValue |
 
+### sectionIconSkinTone values
+
+| Member |
+| ------------------ |
+| light |
+| mediumLight |
+| medium |
+| mediumDark |
+| dark |
+| unknownFutureValue |
+
+### sectionSortType values
+
+| Member |
+| ------------------ |
+| mostRecent |
+| unreadThenMostRecent |
+| nameAlphabetical |
+| userDefinedCustomOrder |
+| unknownFutureValue |
+
+### sectionType values
+
+| Member |
+| ------------------ |
+| userDefined |
+| systemDefined |
+| unknownFutureValue |
+
 ### serviceHealthClassificationType values
 
 | Member |

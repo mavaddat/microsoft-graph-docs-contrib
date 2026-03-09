@@ -5,7 +5,7 @@ author: "akjo"
 doc_type: resourcePageType
 ms.localizationpriority: high
 ms.subservice: "teams"
-ms.date: 07/18/2024
+ms.date: 03/08/2026
 ---
 
 # userTeamwork resource type
@@ -22,6 +22,7 @@ Represents a container for the range of Microsoft Teams functionalities that are
 |:---|:---|:---|
 |[List apps for user](../api/userteamwork-list-installedapps.md)|[teamsAppInstallation](../resources/teamsappinstallation.md) collection|Retrieve the list of apps installed in the personal scope of the specified user.|
 |[Get](../api/userteamwork-get.md)|[userTeamwork](../resources/userteamwork.md)|Get userTeamwork settings for the specified [user](../resources/user.md), which includes the Microsoft Teams region and the locale chosen by the user.|
+|[List sections](../api/teamworksection-list.md)|[teamworkSection](../resources/teamworksection.md) collection|Get the list of sections in a user's teamwork.|
 
 ## Properties
 
@@ -37,6 +38,7 @@ Represents a container for the range of Microsoft Teams functionalities that are
 |:---------------|:--------|:----------|
 |associatedTeams|[associatedTeamInfo](associatedteaminfo.md) collection| The list of [associatedTeamInfo](associatedteaminfo.md) objects that a [user](user.md) is associated with.|
 |installedApps|[teamsAppInstallation](teamsappinstallation.md) collection|The apps installed in the personal scope of this user.|
+|sections|[teamworkSection](teamworksection.md) collection|The sections in the user's chat list.|
 
 ## JSON representation
 

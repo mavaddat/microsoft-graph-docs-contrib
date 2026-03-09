@@ -1,0 +1,113 @@
+---
+title: "teamworkSection resource type"
+description: "Represents a section in a user's Microsoft Teams chat list that organizes chats, channels, and meetings."
+author: "jsinghmokha"
+ms.localizationpriority: medium
+ms.subservice: "teams"
+doc_type: resourcePageType
+ms.date: 03/08/2026
+---
+
+# teamworkSection resource type
+
+Namespace: microsoft.graph
+
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+Represents a section in a user's Microsoft Teams chat list that organizes chats, channels, and meetings into custom or system-defined groups. Sections can be user-defined, allowing users to create, rename, and delete them, or system-defined, which are managed by the service.
+
+## Methods
+
+| Method | Return type | Description |
+|:-------|:------------|:------------|
+| [List](../api/teamworksection-list.md) | [teamworkSection](teamworksection.md) collection | Get the list of sections in a user's teamwork. |
+| [Create](../api/teamworksection-create.md) | [teamworkSection](teamworksection.md) | Create a new section in a user's teamwork. |
+| [Get](../api/teamworksection-get.md) | [teamworkSection](teamworksection.md) | Read the properties of a section. |
+| [Update](../api/teamworksection-update.md) | [teamworkSection](teamworksection.md) | Update the properties of a user-defined section. |
+| [Delete](../api/teamworksection-delete.md) | None | Delete a user-defined section. |
+
+## Properties
+
+| Property | Type | Description |
+|:---------|:-----|:------------|
+| createdDateTime | DateTimeOffset | Date and time when the section was created. Read-only. |
+| displayIcon | [sectionDisplayIcon](sectiondisplayicon.md) | The icon displayed for the section. |
+| displayName | String | The display name of the section. Required. Maximum length is 50 characters. |
+| id | String | The unique identifier for the section. Read-only. |
+| isExpanded | Boolean | Indicates whether the section is expanded in the user interface. The default value is `true`. |
+| isHierarchicalViewEnabled | Boolean | Indicates whether the hierarchical view is enabled for the section. Read-only. |
+| lastModifiedDateTime | DateTimeOffset | Date and time when the section was last modified. Read-only. |
+| sectionType | sectionType | The type of the section. The possible values are: `userDefined`, `systemDefined`, `unknownFutureValue`. Read-only. |
+| sortType | sectionSortType | The sort order of items in the section. The valid values depend on the **sectionType**. The possible values are: `mostRecent`, `unreadThenMostRecent`, `nameAlphabetical`, `userDefinedCustomOrder`, `unknownFutureValue`. For details, see [sectionSortType values](#sectionsorttype-values). |
+
+### sectionType values
+
+| Member | Description |
+|:-------|:------------|
+| userDefined | A section created by the user that can be renamed, reordered, and deleted. |
+| systemDefined | A section managed by the service that can't be deleted. Only the **sortType** property can be updated. |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use. |
+
+### sectionSortType values
+
+| Member | Description |
+|:-------|:------------|
+| mostRecent | Sort items by most recent activity. Valid for user-defined and most system-defined sections. |
+| unreadThenMostRecent | Sort unread items first, then by most recent activity. Valid for user-defined and most system-defined sections. |
+| nameAlphabetical | Sort items alphabetically by name. Valid for specific system-defined sections only, such as Teams and Channels. Not valid for user-defined sections. |
+| userDefinedCustomOrder | Sort items according to a user-defined custom order. Valid for user-defined sections only. This is the default sort type for new user-defined sections. |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use. |
+
+> [!NOTE]
+> The valid sort types for system-defined sections depend on the specific section. For example, the Teams and Channels section supports `nameAlphabetical`, while RecentChats and MutedChats support only `mostRecent` and `unreadThenMostRecent`. When **isHierarchicalViewEnabled** is `true` for a Teams and Channels section, only `nameAlphabetical` is valid. Setting an unsupported sort type returns a `400 Bad Request` error.
+
+## Relationships
+
+None.
+
+## JSON representation
+
+The following JSON representation shows the resource type.
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [
+    "displayIcon",
+    "isExpanded",
+    "isHierarchicalViewEnabled",
+    "sortType"
+  ],
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.teamworkSection"
+}-->
+
+```json
+{
+  "@odata.type": "#microsoft.graph.teamworkSection",
+  "createdDateTime": "String (timestamp)",
+  "displayIcon": {"@odata.type": "microsoft.graph.sectionDisplayIcon"},
+  "displayName": "String",
+  "id": "String (identifier)",
+  "isExpanded": "Boolean",
+  "isHierarchicalViewEnabled": "Boolean",
+  "lastModifiedDateTime": "String (timestamp)",
+  "sectionType": "String",
+  "sortType": "String"
+}
+```
+
+<!-- uuid: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+2026-03-08 00:00:00 UTC -->
+<!--
+{
+  "type": "#page.annotation",
+  "description": "teamworkSection resource",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": ""
+}
+-->
+
+## Related content
+
+- [userTeamwork resource type](userteamwork.md)
