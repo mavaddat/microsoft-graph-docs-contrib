@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [teamworkSection](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). For system-defined sections, only the **sortType** property can be updated.
+Update the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). For system-defined sections, only the **sortType** property can be updated.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -58,8 +58,8 @@ In the request body, supply a JSON representation of only the properties to upda
 
 > [!IMPORTANT]
 > The valid **sortType** values depend on the section type:
-> - **User-defined sections**: `mostRecent`, `unreadThenMostRecent`, and `userDefinedCustomOrder` are valid. `nameAlphabetical` is not supported.
-> - **System-defined sections**: Valid values depend on the specific section. For example, the Teams and Channels section supports `nameAlphabetical`, while RecentChats and MutedChats do not. When **isHierarchicalViewEnabled** is `true`, only `nameAlphabetical` is valid.
+> - *User-defined sections*: `mostRecent`, `unreadThenMostRecent`, and `userDefinedCustomOrder` are valid. `nameAlphabetical` isn't supported.
+> - *System-defined sections*: The valid values depend on the specific section. For example, the *Teams* and *Channels* sections support `nameAlphabetical`, but the *RecentChats* and *MutedChats* sections don't. When the property **isHierarchicalViewEnabled** is set to `true`, only `nameAlphabetical` is valid.
 >
 > Setting an unsupported sort type returns a `400 Bad Request` error.
 
@@ -67,10 +67,12 @@ In the request body, supply a JSON representation of only the properties to upda
 
 If successful, this method returns a `200 OK` response code and an updated [teamworkSection](../resources/teamworksection.md) object in the response body.
 
+If the request specifies an unsupported **sortType** for the section type, this method returns a `400 Bad Request` response code.
+
 ## Examples
 
 ### Example 1: Update the display name of a section
-
+The following example shows how to update the display name of a **teamworkSection** object.
 #### Request
 
 The following example shows a request.
@@ -126,7 +128,7 @@ Content-type: application/json
 ```
 
 ### Example 2: Update the sort order of a section
-
+The following example shows how to update the sort order of a **teamworkSection** object.
 #### Request
 
 The following example shows a request.
