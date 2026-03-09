@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [teamworkSection](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md).
+Create a new [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -56,7 +56,7 @@ The following table lists the properties that you can set when you create a **te
 | displayIcon | [sectionDisplayIcon](../resources/sectiondisplayicon.md) | The icon displayed for the section. Optional. The **skinTone** property of the icon can't be set and is derived from user settings. |
 | displayName | String | The display name of the section. Required. Maximum length is 50 characters. |
 | isExpanded | Boolean | Indicates whether the section is expanded in the user interface. Optional. The default value is `true`. |
-| sortType | sectionSortType | The sort order of items in the section. Optional. The default value is `userDefinedCustomOrder`. The valid values for user-defined sections are: `mostRecent`, `unreadThenMostRecent`, `userDefinedCustomOrder`, `unknownFutureValue`. `nameAlphabetical` is not valid for user-defined sections. |
+| sortType | sectionSortType | The sort order of items in the section. Optional. The default value is `userDefinedCustomOrder`. The valid values for user-defined sections are: `mostRecent`, `unreadThenMostRecent`, `userDefinedCustomOrder`, `unknownFutureValue`. The `nameAlphabetical` member isn't valid for user-defined sections. |
 
 ## Response
 
