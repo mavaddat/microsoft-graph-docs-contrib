@@ -66,7 +66,7 @@ In the request body, supply a JSON representation of only the properties to upda
 
 If successful, this method returns a `200 OK` response code and an updated [teamworkSection](../resources/teamworksection.md) object in the response body.
 
-If the request specifies an unsupported **sortType** for the section type, this method returns a `400 Bad Request` response code. For more information, see the [Request body](teamworksection-update.md#request-body) section.
+If the request specifies an unsupported **sortType** for the section type, this method returns a `400 Bad Request` response code. For more information, see the [Request body](#request-body) section.
 
 ## Examples
 
