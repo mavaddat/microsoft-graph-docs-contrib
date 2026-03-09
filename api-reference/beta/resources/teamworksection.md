@@ -1,6 +1,6 @@
 ---
 title: "teamworkSection resource type"
-description: "Represents a section in a user's Microsoft Teams chat list that organizes chats, channels, and meetings."
+description: "Represents a section in a user's Microsoft Teams chat list that organizes chats, channels, and meetings into custom or system-defined groups."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -20,25 +20,25 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 
 | Method | Return type | Description |
 |:-------|:------------|:------------|
-| [List](../api/teamworksection-list.md) | [teamworkSection](teamworksection.md) collection | Get the list of sections in a user's teamwork. |
-| [Create](../api/teamworksection-create.md) | [teamworkSection](teamworksection.md) | Create a new section in a user's teamwork. |
-| [Get](../api/teamworksection-get.md) | [teamworkSection](teamworksection.md) | Read the properties of a section. |
-| [Update](../api/teamworksection-update.md) | [teamworkSection](teamworksection.md) | Update the properties of a user-defined section. |
-| [Delete](../api/teamworksection-delete.md) | None | Delete a user-defined section. |
+| [List](../api/userteamwork-list-sections.md) | [teamworkSection](teamworksection.md) collection | Get the list of [sections](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
+| [Create](../api/userteamwork-post-sections.md) | [teamworkSection](teamworksection.md) | Create a new [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
+| [Get](../api/teamworksection-get.md) | [teamworkSection](teamworksection.md) | Read the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
+| [Update](../api/teamworksection-update.md) | [teamworkSection](teamworksection.md) | Update the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
+| [Delete](../api/teamworksection-delete.md) | None | Delete a user-defined [section](../resources/teamworksection.md) from a user's [teamwork](../resources/userteamwork.md). |
 
 ## Properties
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
-| createdDateTime | DateTimeOffset | Date and time when the section was created. Read-only. |
+| createdDateTime | DateTimeOffset | Date and time when the section was created. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`. |
 | displayIcon | [sectionDisplayIcon](sectiondisplayicon.md) | The icon displayed for the section. |
 | displayName | String | The display name of the section. Required. Maximum length is 50 characters. |
 | id | String | The unique identifier for the section. Read-only. |
 | isExpanded | Boolean | Indicates whether the section is expanded in the user interface. The default value is `true`. |
 | isHierarchicalViewEnabled | Boolean | Indicates whether the hierarchical view is enabled for the section. Read-only. |
-| lastModifiedDateTime | DateTimeOffset | Date and time when the section was last modified. Read-only. |
+| lastModifiedDateTime | DateTimeOffset | Date and time when the section was last modified. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`. |
 | sectionType | sectionType | The type of the section. The possible values are: `userDefined`, `systemDefined`, `unknownFutureValue`. Read-only. |
-| sortType | sectionSortType | The sort order of items in the section. The valid values depend on the **sectionType**. The possible values are: `mostRecent`, `unreadThenMostRecent`, `nameAlphabetical`, `userDefinedCustomOrder`, `unknownFutureValue`. For details, see [sectionSortType values](#sectionsorttype-values). |
+| sortType | sectionSortType | The sort order of items in the section. The valid values depend on the **sectionType**. The possible values are: `mostRecent`, `unreadThenMostRecent`, `nameAlphabetical`, `userDefinedCustomOrder`, `unknownFutureValue`. For more information, see [sectionSortType values](#sectionsorttype-values). |
 
 ### sectionType values
 
@@ -54,12 +54,12 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 |:-------|:------------|
 | mostRecent | Sort items by most recent activity. Valid for user-defined and most system-defined sections. |
 | unreadThenMostRecent | Sort unread items first, then by most recent activity. Valid for user-defined and most system-defined sections. |
-| nameAlphabetical | Sort items alphabetically by name. Valid for specific system-defined sections only, such as Teams and Channels. Not valid for user-defined sections. |
+| nameAlphabetical | Sort items alphabetically by name. Valid for specific system-defined sections only, such as *Teams* and *Channels*. Not valid for user-defined sections. |
 | userDefinedCustomOrder | Sort items according to a user-defined custom order. Valid for user-defined sections only. This is the default sort type for new user-defined sections. |
 | unknownFutureValue | Evolvable enumeration sentinel value. Don't use. |
 
 > [!NOTE]
-> The valid sort types for system-defined sections depend on the specific section. For example, the Teams and Channels section supports `nameAlphabetical`, while RecentChats and MutedChats support only `mostRecent` and `unreadThenMostRecent`. When **isHierarchicalViewEnabled** is `true` for a Teams and Channels section, only `nameAlphabetical` is valid. Setting an unsupported sort type returns a `400 Bad Request` error.
+> The valid sort types for system-defined sections depend on the specific section. For example, the *Teams* and *Channels* sections support `nameAlphabetical`, but the *RecentChats* and *MutedChats* sections support only `mostRecent` and `unreadThenMostRecent`. When the property **isHierarchicalViewEnabled** is set to `true` for a *Teams* and *Channels* section, only `nameAlphabetical` is valid. Setting an unsupported sort type returns a `400 Bad Request` error.
 
 ## Relationships
 
