@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the icon displayed for a [teamworkSection](teamworksection.md) in Microsoft Teams. The icon can be an emoji character or a custom image.
+Represents the icon displayed for a [section](teamworksection.md) in Microsoft Teams. The icon can be an emoji character or a custom image.
 
 ## Properties
 
