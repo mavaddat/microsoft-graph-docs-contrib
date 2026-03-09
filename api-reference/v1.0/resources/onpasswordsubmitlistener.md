@@ -31,7 +31,6 @@ For the list of API operations for managing this resource type, see the [authent
 |displayName|String|Display name for the authentication event listener. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
 |handler|[onPasswordSubmitHandler](../resources/onpasswordsubmithandler.md)|Configuration for the handler to invoke when this listener is triggered. For JIT migration scenarios, this is typically an [onPasswordMigrationCustomExtensionHandler](../resources/onpasswordmigrationcustomextensionhandler.md).|
 |id|String|Unique identifier for the authentication event listener. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
-|priority|Int32|Priority of this listener relative to other listeners for the same event. Lower values indicate higher priority. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
 
 ## Relationships
 None.
@@ -51,7 +50,6 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.onPasswordSubmitListener",
   "id": "String (identifier)",
   "displayName": "String",
-  "priority": 1024,
   "conditions": {
     "@odata.type": "microsoft.graph.authenticationConditions"
   },

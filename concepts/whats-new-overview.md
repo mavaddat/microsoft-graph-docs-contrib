@@ -35,7 +35,6 @@ Use the following new container columns APIs added to further support structured
   - Use the [onPasswordSubmitHandler](/graph/api/resources/onpasswordsubmithandler) resource as the base type for handlers invoked during password submission events.
   - Use the [onPasswordMigrationCustomExtensionHandler](/graph/api/resources/onpasswordmigrationcustomextensionhandler) resource to configure handlers that invoke custom extensions during JIT migration.
 
-### Reports | Identity and access reports
 ### Identity and access | Governance
 
 - Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
