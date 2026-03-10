@@ -286,10 +286,10 @@ HTTP/1.1 204 No Content
 
 ### Example 4: Configure Microsoft 365 collaboration settings
 
-The following example configures the default cross-tenant access policy to allow inbound Microsoft 365 collaboration for all users.
+The following example shows how to configure the default cross-tenant access policy to allow inbound Microsoft 365 collaboration for all users.
 
 #### Request
-
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "update_crosstenantaccesspolicyconfigurationdefault_m365collab"
@@ -316,7 +316,7 @@ Content-Type: application/json
 ```
 
 #### Response
-
+The following example shows the request.
 <!-- {
   "blockType": "response",
   "truncated": true
