@@ -1935,6 +1935,32 @@
               ]
             },
             {
+              "name": "Tenant governance",
+              "childNodes": [
+                {
+                  "name": "Settings",
+                  "resources": [
+                    "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting"
+                  ]
+                },
+                {
+                  "name": "Governance relationships",
+                  "resources": [
+                    "microsoft.graph.tenantGovernanceServices.governanceInvitation",
+                    "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+                    "microsoft.graph.tenantGovernanceServices.governanceRelationship",
+                    "microsoft.graph.tenantGovernanceServices.governanceRequest"
+                  ]
+                },
+                {
+                  "name": "Related tenants",
+                  "resources": [
+                    "microsoft.graph.tenantGovernanceServices.relatedTenant"
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Organizational branding",
               "keywords": [
                 "Tenant branding",

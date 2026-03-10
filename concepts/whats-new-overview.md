@@ -39,6 +39,15 @@ Use the following new container columns APIs added to further support structured
 
 Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
+### Identity and access | Multi-tenant management
+
+Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
+- Use the [tenantGovernanceSetting](/graph/api/resources/tenantgovernance-tenantgovernancesetting?view=graph-rest-beta&preserve-view=true) singleton to manage tenant governance settings and enable related tenant discovery
+- Establish governance relationships using [governanceRequest](/graph/api/resources/tenantgovernance-governancerequest?view=graph-rest-beta&preserve-view=true) or [governanceInvitation](/graph/api/resources/tenantgovernance-governanceinvitation?view=graph-rest-beta&preserve-view=true) resources
+- Track established relationships with [governanceRelationship](/graph/api/resources/tenantgovernance-governancerelationship?view=graph-rest-beta&preserve-view=true)
+- Configure relationship policies using [governancePolicyTemplate](/graph/api/resources/tenantgovernance-governancepolicytemplate?view=graph-rest-beta&preserve-view=true)
+- Discover related tenants with [relatedTenant](/graph/api/resources/tenantgovernance-relatedtenant?view=graph-rest-beta&preserve-view=true) and access relationship metrics
+
 ### Identity and access | Network access
 
 - Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
