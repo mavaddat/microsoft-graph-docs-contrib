@@ -50,17 +50,10 @@ In the request body, supply a JSON representation of the [microsoft.graph.tenant
 
 You can specify the following properties when creating a **governanceRequest**.
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|governingTenantId|String|**TODO: Add Description** Required.|
-|governingTenantName|String|**TODO: Add Description** Required.|
-|governedTenantId|String|**TODO: Add Description** Required.|
-|governedTenantName|String|**TODO: Add Description** Required.|
-|policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernance-relationshippolicy.md)|**TODO: Add Description** Required.|
-|status|microsoft.graph.tenantGovernanceServices.requestStatus|**TODO: Add Description**. The possible values are: `pending`, `accepted`, `rejected`, `unknownFutureValue`. Required.|
-|requestDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|expirationDateTime|DateTimeOffset|**TODO: Add Description** Required.|
+|governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant. Required.|
+|policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernance-relationshippolicy.md)|Provide the governance policy template id that will be used to generated the policySnapshot. Required.|
 
 
 
@@ -83,17 +76,10 @@ POST https://graph.microsoft.com/beta/directory/tenantGovernance/governanceReque
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governanceRequest",
-  "governingTenantId": "String",
-  "governingTenantName": "String",
   "governedTenantId": "String",
-  "governedTenantName": "String",
-  "policySnapshot": {
-    "@odata.type": "microsoft.graph.tenantGovernanceServices.relationshipPolicy"
-  },
-  "status": "String",
-  "requestDateTime": "String (timestamp)",
-  "expirationDateTime": "String (timestamp)"
+  "governancePolicyTemplate@odata.bind": {
+    "https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicyTemplates/<id>"
+  }
 }
 ```
 

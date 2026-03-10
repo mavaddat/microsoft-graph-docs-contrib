@@ -50,17 +50,12 @@ In the request body, supply a JSON representation of the [microsoft.graph.tenant
 
 You can specify the following properties when creating a **governancePolicyTemplate**.
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|**TODO: Add Description** Required.|
-|description|String|**TODO: Add Description** Required.|
-|governedTenantCanTerminate|Boolean|**TODO: Add Description** Required.|
-|version|String|**TODO: Add Description** Required.|
-|createdDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|lastModifiedDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|**TODO: Add Description** Required.|
-|delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|**TODO: Add Description** Required.|
+|displayName|String|The display name of the policy template. Required.|
+|description|String|A description of the policy template. Required.|
+|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established. Required.|
+|delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established. Required.|
 
 
 
@@ -83,11 +78,8 @@ POST https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolic
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
   "displayName": "String",
   "description": "String",
-  "governedTenantCanTerminate": "Boolean",
-  "version": "String",
   "multiTenantApplicationsToProvision": [
     {
       "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"

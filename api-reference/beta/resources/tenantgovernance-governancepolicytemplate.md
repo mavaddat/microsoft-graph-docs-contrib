@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a policy template that defines the configuration for governance relationships, including delegated administration role assignments and multi-tenant applications to provision. Policy templates are used when creating [governanceRequest](tenantgovernance-governancerequest.md) objects and are stored as snapshots in established [governanceRelationship](tenantgovernance-governancerelationship.md) objects.
+Represents a policy template that defines the configuration for governance relationships, including delegated administration role assignments and multi-tenant applications to provision. Policy templates are used when creating [governanceRequest](tenantgovernance-governancerequest.md) objects and are stored as [snapshots](tenantgovernance-relationshippolicy) in established [governanceRelationship](tenantgovernance-governancerelationship.md) objects.
 
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
@@ -40,7 +40,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |id|String|The unique identifier for the policy template. Inherited from [entity](../resources/entity.md).|
 |lastModifiedDateTime|DateTimeOffset|The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
 |multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established.|
-|version|String|The version of the policy template.|
+|version|String|The version of the policy template. Version count increased by 1 when updated.|
 
 ## Relationships
 None.
@@ -61,7 +61,6 @@ The following JSON representation shows the resource type.
   "id": "String (identifier)",
   "displayName": "String",
   "description": "String",
-  "governedTenantCanTerminate": "Boolean",
   "version": "String",
   "createdDateTime": "String (timestamp)",
   "lastModifiedDateTime": "String (timestamp)",

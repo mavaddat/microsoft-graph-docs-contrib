@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the **status** property of a [governanceRelationship](../resources/tenantgovernance-governancerelationship.md) to initiate the termination process. Either the governing tenant or governed tenant (if **governedTenantCanTerminate** is `true`) can initiate termination.
+Update the **status** property of a [governanceRelationship](../resources/tenantgovernance-governancerelationship.md) to initiate the termination process. 
 
 ## Permissions
 
@@ -49,19 +49,9 @@ PATCH /directory/tenantGovernance/governanceRelationships/{governanceRelationshi
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|governingTenantId|String|**TODO: Add Description** Required.|
-|governingTenantName|String|**TODO: Add Description** Required.|
-|governedTenantId|String|**TODO: Add Description** Required.|
-|governedTenantName|String|**TODO: Add Description** Required.|
-|status|microsoft.graph.tenantGovernanceServices.relationshipStatus|**TODO: Add Description**. The possible values are: `active`, `terminated`, `terminationRequestedByGoverningTenant`, `unknownFutureValue`. Required.|
-|policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernance-relationshippolicy.md)|**TODO: Add Description** Required.|
-|createdType|microsoft.graph.tenantGovernanceServices.relationshipCreationType|**TODO: Add Description**. The possible values are: `approvedByAdmin`, `addOnTenant`, `unknownFutureValue`. Required.|
-|creationDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-
-
+|status|microsoft.graph.tenantGovernanceServices.relationshipStatus|The current status of the governance relationship. The possible values are: `active`, `terminated`, `terminationRequestedByGoverningTenant`, `unknownFutureValue`. Required.|
 
 ## Response
 
@@ -82,17 +72,7 @@ PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/governanceRela
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governanceRelationship",
-  "governingTenantId": "String",
-  "governingTenantName": "String",
-  "governedTenantId": "String",
-  "governedTenantName": "String",
   "status": "String",
-  "policySnapshot": {
-    "@odata.type": "microsoft.graph.tenantGovernanceServices.relationshipPolicy"
-  },
-  "createdType": "String",
-  "creationDateTime": "String (timestamp)"
 }
 ```
 

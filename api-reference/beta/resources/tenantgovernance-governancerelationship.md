@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an established governance relationship between a governing tenant (typically a managed service provider or partner organization) and a governed tenant (customer organization). A governance relationship is created when a [governanceRequest](tenantgovernance-governancerequest.md) is accepted by the governed tenant.
+Represents an established governance relationship between a governing tenant and a governed tenant. A governance relationship is created when a [governanceRequest](tenantgovernance-governancerequest.md) is accepted by the governed tenant.
 
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).

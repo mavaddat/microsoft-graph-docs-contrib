@@ -49,11 +49,9 @@ PATCH /directory/tenantGovernance/settings
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|isRelatedTenantsEnabled|Boolean|**TODO: Add Description** Required.|
-|canReceiveInvitations|Boolean|**TODO: Add Description** Required.|
+|canReceiveInvitations|Boolean| Indicates whether the tenant can receive governance invitations. When set to `false`, the tenant cannot receive new governance invitations. When set to `true`, other tenants can send your tenant invitations by providing your tenant id or domain name. This setting is disabled by default. Required.|
 
 
 

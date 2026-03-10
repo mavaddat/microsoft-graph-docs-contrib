@@ -50,15 +50,9 @@ In the request body, supply a JSON representation of the [microsoft.graph.tenant
 
 You can specify the following properties when creating a **governanceInvitation**.
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|governingTenantId|String|**TODO: Add Description** Required.|
-|governedTenantId|String|**TODO: Add Description** Required.|
-|governingTenantName|String|**TODO: Add Description** Required.|
-|governedTenantName|String|**TODO: Add Description** Required.|
-|createdDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|expirationDateTime|DateTimeOffset|**TODO: Add Description** Required.|
+|governingTenantId|String|The Microsoft Entra tenant ID of the governing tenant. Required.|
 
 
 
@@ -81,12 +75,7 @@ POST https://graph.microsoft.com/beta/directory/tenantGovernance/governanceInvit
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governanceInvitation",
   "governingTenantId": "String",
-  "governedTenantId": "String",
-  "governingTenantName": "String",
-  "governedTenantName": "String",
-  "expirationDateTime": "String (timestamp)"
 }
 ```
 

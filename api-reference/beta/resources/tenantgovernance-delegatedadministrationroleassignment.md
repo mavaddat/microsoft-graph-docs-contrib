@@ -20,12 +20,12 @@ Represents a role assignment configuration for delegated administration in a gov
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|roleTemplates|[microsoft.graph.tenantGovernanceServices.roleTemplate](../resources/tenantgovernance-roletemplate.md) collection|A collection of role templates that define the roles to be assigned to the group in the governed tenant.|
+|roleTemplates|[microsoft.graph.tenantGovernanceServices.roleTemplate](../resources/tenantgovernance-roletemplate.md) collection|A collection of role templates that define the roles to be assigned to the group in the governed tenant. |
 
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|group|[group](../resources/group.md)|The security group in the governing tenant that will receive the role assignments in the governed tenant.|
+|group|[group](../resources/group.md)|The security group in the governing tenant that will receive the role assignments in the governed tenant. This group must be [role assignable] (https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/groups-create-eligible?tabs=admin-center).|
 
 ## JSON representation
 The following JSON representation shows the resource type.

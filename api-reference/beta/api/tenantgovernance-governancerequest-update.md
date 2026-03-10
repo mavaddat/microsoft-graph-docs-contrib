@@ -49,17 +49,9 @@ PATCH /directory/tenantGovernance/governanceRequests/{governanceRequestId}
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|governingTenantId|String|**TODO: Add Description** Required.|
-|governingTenantName|String|**TODO: Add Description** Required.|
-|governedTenantId|String|**TODO: Add Description** Required.|
-|governedTenantName|String|**TODO: Add Description** Required.|
-|policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernance-relationshippolicy.md)|**TODO: Add Description** Required.|
-|status|microsoft.graph.tenantGovernanceServices.requestStatus|**TODO: Add Description**. The possible values are: `pending`, `accepted`, `rejected`, `unknownFutureValue`. Required.|
-|requestDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|expirationDateTime|DateTimeOffset|**TODO: Add Description** Required.|
+|status|microsoft.graph.tenantGovernanceServices.requestStatus|The current status of the governance request. The possible values are: `pending`, `accepted`, `rejected`, `unknownFutureValue`. Required.|
 
 
 
@@ -82,17 +74,7 @@ PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/governanceRequ
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governanceRequest",
-  "governingTenantId": "String",
-  "governingTenantName": "String",
-  "governedTenantId": "String",
-  "governedTenantName": "String",
-  "policySnapshot": {
-    "@odata.type": "microsoft.graph.tenantGovernanceServices.relationshipPolicy"
-  },
   "status": "String",
-  "requestDateTime": "String (timestamp)",
-  "expirationDateTime": "String (timestamp)"
 }
 ```
 

@@ -30,7 +30,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|canReceiveInvitations|Boolean|Indicates whether the tenant can receive governance invitations. When set to `false`, the tenant cannot receive new governance invitations.|
+|canReceiveInvitations|Boolean|Indicates whether the tenant can receive governance invitations. When set to `false`, the tenant cannot receive new governance invitations. When set to `true`, other tenants can send your tenant invitations by providing your tenant id or domain name. This setting is disabled by default.|
 |id|String|The unique identifier for the tenant governance setting. Inherited from [entity](../resources/entity.md).|
 |isRelatedTenantsEnabled|Boolean|Indicates whether the related tenants feature is enabled for tenant discovery. When set to `false`, related tenant APIs don't work. This property can be enabled by calling the [enableRelatedTenants](../api/tenantgovernance-tenantgovernancesetting-enablerelatedtenants.md) action.|
 

@@ -35,7 +35,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 PATCH /directory/tenantGovernance/governancePolicyTemplates/{governancePolicyTemplateId}
-PATCH /directory/tenantGovernance/governanceRequests/{governanceRequestId}/governancePolicyTemplate
 ```
 
 ## Request headers
@@ -50,17 +49,12 @@ PATCH /directory/tenantGovernance/governanceRequests/{governanceRequestId}/gover
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|**TODO: Add Description** Required.|
-|description|String|**TODO: Add Description** Required.|
-|governedTenantCanTerminate|Boolean|**TODO: Add Description** Required.|
-|version|String|**TODO: Add Description** Required.|
-|createdDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|lastModifiedDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|**TODO: Add Description** Required.|
-|delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|**TODO: Add Description** Required.|
+|displayName|String|The display name of the policy template. Required.|
+|description|String|A description of the policy template. Required.|
+|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established. Required.|
+|delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established. Required.|
 
 
 
@@ -83,11 +77,8 @@ PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/governancePoli
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
   "displayName": "String",
   "description": "String",
-  "governedTenantCanTerminate": "Boolean",
-  "version": "String",
   "multiTenantApplicationsToProvision": [
     {
       "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"
@@ -120,7 +111,6 @@ Content-Type: application/json
   "id": "fa0c9c2e-b7c4-4468-e737-6c03920c6e3f",
   "displayName": "String",
   "description": "String",
-  "governedTenantCanTerminate": "Boolean",
   "version": "String",
   "createdDateTime": "String (timestamp)",
   "lastModifiedDateTime": "String (timestamp)",

@@ -35,7 +35,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 GET /directory/tenantGovernance/governancePolicyTemplates/{governancePolicyTemplateId}
-GET /directory/tenantGovernance/governanceRequests/{governanceRequestId}/governancePolicyTemplate
 ```
 
 ## Optional query parameters
@@ -91,7 +90,6 @@ Content-Type: application/json
     "id": "fa0c9c2e-b7c4-4468-e737-6c03920c6e3f",
     "displayName": "String",
     "description": "String",
-    "governedTenantCanTerminate": "Boolean",
     "version": "String",
     "createdDateTime": "String (timestamp)",
     "lastModifiedDateTime": "String (timestamp)",

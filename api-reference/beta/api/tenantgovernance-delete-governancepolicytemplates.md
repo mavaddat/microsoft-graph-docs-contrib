@@ -35,7 +35,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 DELETE /directory/tenantGovernance/governancePolicyTemplates/{governancePolicyTemplateId}/$ref
-DELETE /directory/tenantGovernance/governanceRequests/{governanceRequestId}/governancePolicyTemplate/$ref
 ```
 
 ## Request headers
