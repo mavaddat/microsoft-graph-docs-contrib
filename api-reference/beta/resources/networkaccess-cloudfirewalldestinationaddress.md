@@ -16,7 +16,7 @@ Namespace: microsoft.graph.networkaccess
 
 Represents an abstract base type for matching addresses in a [cloud firewall destination](../resources/networkaccess-cloudfirewalldestinationmatching.md). Use the `@odata.type` property to specify the concrete derived type in requests.
 
-The following type is derived from this resource:
+The following types are derived from this resource:
 
 - [microsoft.graph.networkaccess.cloudFirewallDestinationIpAddress](../resources/networkaccess-cloudfirewalldestinationipaddress.md)
 - [microsoft.graph.networkaccess.cloudFirewallDestinationFqdnAddress](../resources/networkaccess-cloudfirewalldestinationfqdnaddress.md)
