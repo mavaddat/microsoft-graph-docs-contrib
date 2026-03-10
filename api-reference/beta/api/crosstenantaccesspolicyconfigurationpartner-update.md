@@ -51,6 +51,7 @@ PATCH /policies/crossTenantAccessPolicy/partners/{id}
 
 |Property|Type|Description|
 |:---|:---|:---|
+| appServiceConnectInbound | [crossTenantAccessPolicyAppServiceConnectSetting](../resources/crosstenantaccesspolicyappserviceconnectsetting.md) | Defines your partner-specific configuration for inbound app service connect settings. |
 | automaticUserConsentSettings | [inboundOutboundPolicyConfiguration](../resources/inboundoutboundpolicyconfiguration.md) | Determines the partner-specific configuration for automatic user consent settings. |
 | b2bCollaborationInbound | [crossTenantAccessPolicyB2BSetting](../resources/crosstenantaccesspolicyb2bsetting.md) | Defines your partner-specific configuration for users from other organizations accessing your resources via Microsoft Entra B2B collaboration. |
 | b2bCollaborationOutbound | [crossTenantAccessPolicyB2BSetting](../resources/crosstenantaccesspolicyb2bsetting.md) | Defines your partner-specific configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B collaboration. |
@@ -59,7 +60,6 @@ PATCH /policies/crossTenantAccessPolicy/partners/{id}
 | inboundTrust | [crossTenantAccessPolicyInboundTrust](../resources/crosstenantaccesspolicyinboundtrust.md) | Determines the partner-specific configuration for trusting other Conditional Access claims from external Microsoft Entra organizations. |
 | m365CollaborationInbound | [crossTenantAccessPolicyM365CollaborationInboundSetting](../resources/crosstenantaccesspolicym365collaborationinboundsetting.md) | Defines your partner-specific configuration for inbound Microsoft 365 collaboration settings. |
 | m365CollaborationOutbound | [crossTenantAccessPolicyM365CollaborationOutboundSetting](../resources/crosstenantaccesspolicym365collaborationoutboundsetting.md) | Defines your partner-specific configuration for outbound Microsoft 365 collaboration settings. |
-| appServiceConnectInbound | [crossTenantAccessPolicyAppServiceConnectSetting](../resources/crosstenantaccesspolicyappserviceconnectsetting.md) | Defines your partner-specific configuration for inbound app service connect settings. |
 | tenantRestrictions  |[crossTenantAccessPolicyTenantRestrictions](../resources/crosstenantaccesspolicytenantrestrictions.md) | Defines the default tenant restrictions configuration for users in your organization who access an external organization on your network or devices. |
 
 ## Response
@@ -297,9 +297,9 @@ The following example shows the response.
 HTTP/1.1 204 No Content
 ```
 
-### Example 4: Configure M365 collaboration settings
+### Example 4: Configure Microsoft 365 collaboration settings
 
-The following example configures the partner-specific cross-tenant access policy to allow inbound M365 collaboration for all users.
+The following example configures the partner-specific cross-tenant access policy to allow inbound Microsoft 365 collaboration for all users.
 
 #### Request
 
