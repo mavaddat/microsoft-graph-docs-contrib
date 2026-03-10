@@ -299,7 +299,7 @@ HTTP/1.1 204 No Content
 
 ### Example 4: Configure Microsoft 365 collaboration settings
 
-The following example configures the partner-specific cross-tenant access policy to allow inbound Microsoft 365 collaboration for all users.
+The following example shows how to configure the partner-specific cross-tenant access policy to allow inbound Microsoft 365 collaboration for all users.
 
 #### Request
 
