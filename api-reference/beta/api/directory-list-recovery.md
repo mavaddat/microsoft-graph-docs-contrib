@@ -53,7 +53,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [recovery](../resources/recovery.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [recovery](../resources/entrarecoveryservices-recovery.md) objects in the response body.
 
 ## Examples
 

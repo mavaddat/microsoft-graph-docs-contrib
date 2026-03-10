@@ -50,11 +50,10 @@ In the request body, supply a JSON representation of the [microsoft.graph.entraR
 
 You can specify the following properties when creating a **snapshot**.
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|totalChangedObjects|Int32|**TODO: Add Description** Optional.|
+|createdDateTime|DateTimeOffset|Required.|
+|totalChangedObjects|Int32|Optional.|
 
 
 

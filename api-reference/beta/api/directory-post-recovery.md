@@ -50,7 +50,6 @@ In the request body, supply a JSON representation of the [microsoft.graph.entraR
 
 You can specify the following properties when creating a **recovery**.
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
 

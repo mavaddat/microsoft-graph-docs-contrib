@@ -49,11 +49,10 @@ PATCH /directory/recovery/snapshots/{snapshotId}
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|totalChangedObjects|Int32|**TODO: Add Description** Optional.|
+|createdDateTime|DateTimeOffset|Required.|
+|totalChangedObjects|Int32|Optional.|
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "recoveryPreviewJob: cancel"
-description: "**TODO: Add Description**"
+description: "Cancel a preview job."
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-**TODO: Add Description**
+Cancel a running [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md) object (either a preview or recovery job). The job must be in a non-terminal state (`initialized`, `calculating`, `loadingData`, or `running`). After cancellation, the job status changes to `abandoned`.
 
 ## Permissions
 

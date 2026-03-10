@@ -49,13 +49,12 @@ PATCH /recoveryChangeObjectBase
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|entityTypeName|microsoft.graph.entraRecoveryServices.resourceTypeName|**TODO: Add Description**. The possible values are: `user`, `group`, `conditionalAccessPolicy`, `namedLocationPolicy`, `authenticationMethodPolicy`, `authorizationPolicy`, `authenticationStrengthPolicy`, `application`, `servicePrincipal`, `unknownFutureValue`, `oAuth2PermissionGrant`, `appRoleAssignment`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `oAuth2PermissionGrant` , `appRoleAssignment`. Required.|
-|displayName|String|**TODO: Add Description** Optional.|
-|recoveryAction|microsoft.graph.entraRecoveryServices.recoveryAction|**TODO: Add Description**. The possible values are: `softDelete`, `update`, `restore`, `unknownFutureValue`. Required.|
-|failureMessage|String|**TODO: Add Description** Optional.|
+|entityTypeName|microsoft.graph.entraRecoveryServices.resourceTypeName|The possible values are: `user`, `group`, `conditionalAccessPolicy`, `namedLocationPolicy`, `authenticationMethodPolicy`, `authorizationPolicy`, `authenticationStrengthPolicy`, `application`, `servicePrincipal`, `unknownFutureValue`, `oAuth2PermissionGrant`, `appRoleAssignment`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `oAuth2PermissionGrant` , `appRoleAssignment`. Required.|
+|displayName|String|Optional.|
+|recoveryAction|microsoft.graph.entraRecoveryServices.recoveryAction|The possible values are: `softDelete`, `update`, `restore`, `unknownFutureValue`. Required.|
+|failureMessage|String|Optional.|
 
 
 
