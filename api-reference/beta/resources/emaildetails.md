@@ -22,7 +22,7 @@ None.
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|body|String|The body content of the notification email in HTML format.|
+|body|String|The body content of the notification email in plain text format.|
 |senderEmailAddress|String|The email address of the sender for notification emails. Shared mailboxes aren't supported.|
 |subject|String|The subject line of the notification email.|
 

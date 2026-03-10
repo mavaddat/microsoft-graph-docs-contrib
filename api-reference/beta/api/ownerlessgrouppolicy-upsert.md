@@ -108,8 +108,8 @@ Content-Type: application/json
   ],
   "emailInfo": {
     "senderEmailAddress": "admin@contoso.com",
-    "subject": "Your group needs an owner",
-    "body": "Please consider accepting ownership of this group."
+    "subject": "Need your help with $Group.Name group",
+    "body": "Hi $User.DisplayName, \n\nYou'\''re receiving this email because you'\''ve been an active member of the $Group.Name group. This group currently does not have an owner. \n\nPer your organization'\''s policy, the group requires an owner.\n\nThank you"
   }
 }
 ```
@@ -140,8 +140,8 @@ Content-Type: application/json
   "emailInfo": {
     "@odata.type": "microsoft.graph.emailDetails",
     "senderEmailAddress": "admin@contoso.com",
-    "subject": "Your group needs an owner",
-    "body": "Please consider accepting ownership of this group."
+    "subject": "Need your help with $Group.Name group",
+    "body": "Hi $User.DisplayName, \n\nYou'\''re receiving this email because you'\''ve been an active member of the $Group.Name group. This group currently does not have an owner. \n\nPer your organization'\''s policy, the group requires an owner.\n\nThank you"
   },
   "policyWebUrl": "https://contoso.com/policies/ownerless-groups",
   "targetOwners": {
