@@ -25,7 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "name": "tenantgovernanceservices-tenantgovernance-delete-governanceinvitations-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-tenantgovernance-delete-governanceinvitations-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-delete-governanceinvitations-permissions.md)]
 
 ## HTTP request
 

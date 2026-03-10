@@ -28,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "name": "tenantgovernanceservices-tenantgovernance-list-relatedtenants-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-tenantgovernance-list-relatedtenants-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-list-relatedtenants-permissions.md)]
 
 ## HTTP request
 

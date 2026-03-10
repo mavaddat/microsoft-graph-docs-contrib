@@ -25,7 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "name": "tenantgovernanceservices-tenantgovernance-list-governancepolicytemplates-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-tenantgovernance-list-governancepolicytemplates-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-list-governancepolicytemplates-permissions.md)]
 
 ## HTTP request
 
