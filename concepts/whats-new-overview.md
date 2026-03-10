@@ -27,18 +27,20 @@ Use the following new container columns APIs added to further support structured
   - [Update column](/graph/api/filestoragecontainer-update-column)
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
 
-### Identity and access | Directory management
-
-Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and App Service Connect settings:
-- Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting) resource type.
-- Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting) resource type.
-- Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting) resource type.
-- Added the **appServiceConnectInbound**, **m365CollaborationInbound**, and **m365CollaborationOutbound** properties to the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) resources.
-
 ### Identity and access | Governance
 
 - Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
+
+### Identity and access | Identity and sign-in
+
+Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and app service connect settings:
+- Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting) resource type that represents the inbound app service connect settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting) resource type that represents the inbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting) resource type that represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Use the **appServiceConnectInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for inbound app service connect settings.
+- Use the **m365CollaborationInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for inbound Microsoft 365 collaboration settings.
+- Use the **m365CollaborationOutbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for outbound Microsoft 365 collaboration settings.
 
 ## March 2026: New in preview only
 
@@ -46,17 +48,19 @@ Added the following resources and properties to the cross-tenant access policy A
 
 Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
 
-### Identity and access | Directory management
-
-Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and App Service Connect settings:
-- Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting?view=graph-rest-beta&preserve-view=true) resource type.
-- Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting?view=graph-rest-beta&preserve-view=true) resource type.
-- Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting?view=graph-rest-beta&preserve-view=true) resource type.
-- Added the **appServiceConnectInbound**, **m365CollaborationInbound**, and **m365CollaborationOutbound** properties to the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) resources.
-
 ### Identity and access | Governance
 
 Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
+
+### Identity and access | Identity and sign-in
+
+Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and app service connect settings:
+- Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the inbound app service connect settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the inbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Use the **appServiceConnectInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for inbound app service connect settings.
+- Use the **m365CollaborationInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for inbound Microsoft 365 collaboration settings.
+- Use the **m365CollaborationOutbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for outbound Microsoft 365 collaboration settings.
 
 ### Identity and access | Network access
 
