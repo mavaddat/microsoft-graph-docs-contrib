@@ -80,7 +80,7 @@
       "Version": "beta",
       "CreatedDateTime": "2026-03-03T22:57:06.7301343Z",
       "WorkloadArea": "Identity and access",
-      "SubArea": "Directory management"
+      "SubArea": "Identity and sign-in"
     },
     {
       "ChangeList": [
@@ -162,7 +162,7 @@
       "Version": "v1.0",
       "CreatedDateTime": "2026-03-03T22:57:06.7303992Z",
       "WorkloadArea": "Identity and access",
-      "SubArea": "Directory management"
+      "SubArea": "Identity and sign-in"
     },
     {
       "ChangeList": [
