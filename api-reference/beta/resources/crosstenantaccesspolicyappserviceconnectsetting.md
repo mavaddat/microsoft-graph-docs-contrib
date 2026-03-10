@@ -1,6 +1,6 @@
 ---
 title: "crossTenantAccessPolicyAppServiceConnectSetting resource type"
-description: "Represents the inbound app service connect settings for a cross-tenant access policy, defining which applications can connect across tenant boundaries."
+description: "Represents the inbound app service connect settings for a cross-tenant access policy that specify which applications can connect across tenant boundaries."
 author: "srinivaspadala-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the inbound app service connect settings for a cross-tenant access policy, defining which applications can connect across tenant boundaries.
+Represents the inbound app service connect settings for a cross-tenant access policy that specify which applications can connect across tenant boundaries.
 
 ## Properties
 
