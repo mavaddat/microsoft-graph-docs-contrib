@@ -57,7 +57,7 @@ PATCH /policies/crossTenantAccessPolicy/default
 | b2bDirectConnectInbound | [crossTenantAccessPolicyB2BSetting](../resources/crosstenantaccesspolicyb2bsetting.md) | Defines your default configuration for users from other organizations accessing your resources via Microsoft Entra B2B direct connect. |
 | b2bDirectConnectOutbound | [crossTenantAccessPolicyB2BSetting](../resources/crosstenantaccesspolicyb2bsetting.md) | Defines your default configuration for users in your organization going outbound to access resources in another organization via Microsoft Entra B2B direct connect. |
 | inboundTrust | [crossTenantAccessPolicyInboundTrust](../resources/crosstenantaccesspolicyinboundtrust.md) | Determines the default configuration for trusting other Conditional Access claims from external Microsoft Entra organizations. |
-| invitationRedemptionIdentityProviderConfiguration | [defaultInvitationRedemptionIdentityProviderConfiguration](../resources/defaultInvitationRedemptionIdentityProviderConfiguration.md) | Defines the priority order based on which an identity provider will be chosen during invitation redemption. |
+| invitationRedemptionIdentityProviderConfiguration | [defaultInvitationRedemptionIdentityProviderConfiguration](../resources/defaultInvitationRedemptionIdentityProviderConfiguration.md) | Defines the priority order based on which an identity provider is chosen during invitation redemption. |
 | m365CollaborationInbound | [crossTenantAccessPolicyM365CollaborationInboundSetting](../resources/crosstenantaccesspolicym365collaborationinboundsetting.md) | Defines your default configuration for inbound Microsoft 365 collaboration settings that determine which users from other organizations can collaborate with your organization using Microsoft 365 apps. |
 | m365CollaborationOutbound | [crossTenantAccessPolicyM365CollaborationOutboundSetting](../resources/crosstenantaccesspolicym365collaborationoutboundsetting.md) | Defines your default configuration for outbound Microsoft 365 collaboration settings that determine which users in your organization can collaborate with other organizations using Microsoft 365 apps. |
 | tenantRestrictions  |[crossTenantAccessPolicyTenantRestrictions](../resources/crosstenantaccesspolicytenantrestrictions.md) | Defines the default tenant restrictions configuration for users in your organization who access an external organization on your network or devices. |
@@ -289,10 +289,10 @@ HTTP/1.1 204 No Content
 
 ### Example 4: Configure Microsoft 365 collaboration settings
 
-The following example configures the default cross-tenant access policy to allow inbound Microsoft 365 collaboration for all users.
+The following example shows how to configure the default cross-tenant access policy to allow inbound Microsoft 365 collaboration for all users.
 
 #### Request
-
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "update_crosstenantaccesspolicyconfigurationdefault_m365collab"
@@ -319,7 +319,7 @@ Content-Type: application/json
 ```
 
 #### Response
-
+The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true
