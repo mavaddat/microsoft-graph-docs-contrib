@@ -1220,7 +1220,12 @@
             "organizationSettings",
             "uxSetting",
             "deviceTemplate",
-            "mutualTlsOauthConfiguration"
+            "mutualTlsOauthConfiguration",
+            "entrarecoveryservices-recovery",
+            "entrarecoveryservices-snapshot",
+            "entrarecoveryservices-recoveryjobbase",
+            "entrarecoveryservices-recoverypreviewjob",
+            "entrarecoveryservices-recoveryjob"
           ],
           "childNodes": [
             {
