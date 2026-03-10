@@ -1357,6 +1357,14 @@
         {
           "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
           "ApiChange": "Resource",
+          "ChangedApiName": "cloudFirewallDestinationFqdnAddress",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudFirewallDestinationFqdnAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudFirewallDestinationFqdnAddress?view=graph-rest-beta) resource.",
+          "Target": "cloudFirewallDestinationFqdnAddress"
+        },
+        {
+          "Id": "214065d0-04c0-44ab-a521-ef7dac331768",
+          "ApiChange": "Resource",
           "ChangedApiName": "cloudFirewallDestinationIpAddress",
           "ChangeType": "Addition",
           "Description": "Added the [cloudFirewallDestinationIpAddress](https://learn.microsoft.com/en-us/graph/api/resources/networkaccess-cloudfirewalldestinationipaddress?view=graph-rest-beta) resource.",
