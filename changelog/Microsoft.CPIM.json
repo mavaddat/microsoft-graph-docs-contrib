@@ -3,7 +3,7 @@
     {
       "ChangeList": [
         {
-          "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "Id": "04057538-8aaf-42eb-b1b2-c6cc1b64170d",
           "ApiChange": "Resource",
           "ChangedApiName": "onPasswordSubmitListener",
           "ChangeType": "Addition",
@@ -11,7 +11,7 @@
           "Target": "onPasswordSubmitListener"
         },
         {
-          "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "Id": "04057538-8aaf-42eb-b1b2-c6cc1b64170d",
           "ApiChange": "Resource",
           "ChangedApiName": "onPasswordSubmitCustomExtension",
           "ChangeType": "Addition",
@@ -19,7 +19,7 @@
           "Target": "onPasswordSubmitCustomExtension"
         },
         {
-          "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "Id": "04057538-8aaf-42eb-b1b2-c6cc1b64170d",
           "ApiChange": "Resource",
           "ChangedApiName": "onPasswordSubmitHandler",
           "ChangeType": "Addition",
@@ -27,7 +27,7 @@
           "Target": "onPasswordSubmitHandler"
         },
         {
-          "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "Id": "04057538-8aaf-42eb-b1b2-c6cc1b64170d",
           "ApiChange": "Resource",
           "ChangedApiName": "onPasswordMigrationCustomExtensionHandler",
           "ChangeType": "Addition",
@@ -35,7 +35,7 @@
           "Target": "onPasswordMigrationCustomExtensionHandler"
         }
       ],
-      "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "Id": "04057538-8aaf-42eb-b1b2-c6cc1b64170d",
       "Cloud": "Prod",
       "Version": "v1.0",
       "CreatedDateTime": "2026-03-05T00:00:00.0000000Z",
