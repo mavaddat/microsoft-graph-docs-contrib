@@ -19,6 +19,7 @@ Represents an abstract base type for matching addresses in a [cloud firewall des
 The following type is derived from this resource:
 
 - [microsoft.graph.networkaccess.cloudFirewallDestinationIpAddress](../resources/networkaccess-cloudfirewalldestinationipaddress.md)
+- [microsoft.graph.networkaccess.cloudFirewallDestinationFqdnAddress](../resources/networkaccess-cloudfirewalldestinationfqdnaddress.md)
 
 ## Properties
 
