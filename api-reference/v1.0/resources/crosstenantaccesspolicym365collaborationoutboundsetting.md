@@ -1,6 +1,6 @@
 ---
 title: "crossTenantAccessPolicyM365CollaborationOutboundSetting resource type"
-description: "Represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy, defining which users in your organization can collaborate with external organizations using Microsoft 365 apps."
+description: "Represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy that specify which users in your organization can collaborate with external organizations using Microsoft 365 apps."
 author: "srinivaspadala-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
@@ -12,7 +12,7 @@ ms.date: 03/06/2026
 
 Namespace: microsoft.graph
 
-Represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy, defining which users in your organization can collaborate with external organizations using Microsoft 365 apps.
+Represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy that specify which users in your organization can collaborate with external organizations using Microsoft 365 apps.
 
 ## Properties
 
