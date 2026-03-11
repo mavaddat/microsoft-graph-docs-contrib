@@ -89,6 +89,8 @@ Updated the admin consent requirement for the following delegated permissions re
 
 - Added [cloudPcExternalPartnerActionResult](/graph/api/resources/cloudpcexternalpartneractionresult?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
 
+- Added [cloudPcExternalPartnerActionReport](/graph/api/resources/cloudpcexternalpartneractionreport?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+
 ### Tasks and plans
 
 Added support for chat messaging on Planner tasks, enabling users to create, update, delete, and react to messages directly on tasks. Use the following new resources and APIs:
@@ -102,9 +104,6 @@ Added support for chat messaging on Planner tasks, enabling users to create, upd
 - [Delete message](/graph/api/plannertaskchatmessage-delete?view=graph-rest-beta&preserve-view=true)
 - [setReaction](/graph/api/plannertaskchatmessage-setreaction?view=graph-rest-beta&preserve-view=true)
 - [unsetReaction](/graph/api/plannertaskchatmessage-unsetreaction?view=graph-rest-beta&preserve-view=true)
-
-### Tenant administration | Configuration management
-- Added [cloudPcExternalPartnerActionReport](/graph/api/resources/cloudpcexternalpartneractionreport?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
 
 ### Identity and access | Identity and sign-in
 
