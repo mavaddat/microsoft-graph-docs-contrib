@@ -4,7 +4,7 @@ description: "Specifies an entity type and a list of entity IDs to scope recover
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
-ms.subservice: "RecoveryServices"
+ms.subservice: "entra-id"
 doc_type: resourcePageType
 ---
 

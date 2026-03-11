@@ -4,7 +4,7 @@ description: "Cancel a recovery job."
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
-ms.subservice: "RecoveryServices"
+ms.subservice: "entra-id"
 doc_type: apiPageType
 ---
 

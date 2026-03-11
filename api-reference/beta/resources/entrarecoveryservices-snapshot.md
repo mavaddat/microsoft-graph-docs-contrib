@@ -4,7 +4,7 @@ description: "Represents a backup snapshot of the tenant's directory data at a s
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
-ms.subservice: "RecoveryServices"
+ms.subservice: "entra-id"
 doc_type: resourcePageType
 ---
 

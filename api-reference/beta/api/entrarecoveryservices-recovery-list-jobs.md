@@ -4,7 +4,7 @@ description: "Get a list of all recovery jobs (both preview and recovery) across
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
-ms.subservice: "RecoveryServices"
+ms.subservice: "entra-id"
 doc_type: apiPageType
 ---
 

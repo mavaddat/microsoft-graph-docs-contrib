@@ -4,7 +4,7 @@ description: "Abstract base complex type for filtering criteria used to scope re
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
-ms.subservice: "RecoveryServices"
+ms.subservice: "entra-id"
 doc_type: resourcePageType
 ---
 
