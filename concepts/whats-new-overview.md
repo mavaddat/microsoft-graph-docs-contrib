@@ -20,10 +20,6 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## March 2026: New and generally available
 
-### Device and app management | Cloud PC
-
-Added `underServiceMaintenance` and `inUse` as new supported values for the **cloudPcConnectivityStatus** enumeration. Use these values with the **status** property on [cloudPcConnectivityResult](/graph/api/resources/cloudpcconnectivityresult) to indicate that the Cloud PC is temporarily unavailable for service-initiated maintenance or is currently in use by a user.
-
 ### Applications
 
 Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
@@ -49,6 +45,10 @@ Using the **signInAudience** and **signInAudienceRestrictions** properties to li
 ### Backup storage
 
 Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
+
+### Device and app management | Cloud PC
+
+Added `underServiceMaintenance` and `inUse` as new supported values for the **cloudPcConnectivityStatus** enumeration. Use these values with the **status** property on [cloudPcConnectivityResult](/graph/api/resources/cloudpcconnectivityresult?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is temporarily unavailable for service-initiated maintenance or is currently in use by a user.
 
 ### Identity and access | Governance
 
