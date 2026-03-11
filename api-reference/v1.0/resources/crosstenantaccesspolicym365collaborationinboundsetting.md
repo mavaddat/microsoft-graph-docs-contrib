@@ -14,6 +14,8 @@ Namespace: microsoft.graph
 
 Represents the inbound Microsoft 365 collaboration settings for a cross-tenant access policy that specify which users from external organizations can collaborate with your organization using Microsoft 365 apps.
 
+This resource is used by the **m365CollaborationInbound** property of the [crossTenantAccessPolicyConfigurationDefault](../resources/crosstenantaccesspolicyconfigurationdefault.md) and [crossTenantAccessPolicyConfigurationPartner](../resources/crosstenantaccesspolicyconfigurationpartner.md) resources.
+
 ## Properties
 
 |Property|Type|Description|

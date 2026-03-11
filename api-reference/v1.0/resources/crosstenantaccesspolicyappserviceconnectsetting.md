@@ -14,6 +14,8 @@ Namespace: microsoft.graph
 
 Represents the inbound app service connect settings for a cross-tenant access policy that specify which applications can connect across tenant boundaries.
 
+This resource is used by the **appServiceConnectInbound** property of the [crossTenantAccessPolicyConfigurationDefault](../resources/crosstenantaccesspolicyconfigurationdefault.md) and [crossTenantAccessPolicyConfigurationPartner](../resources/crosstenantaccesspolicyconfigurationpartner.md) resources.
+
 ## Properties
 
 |Property|Type|Description|
