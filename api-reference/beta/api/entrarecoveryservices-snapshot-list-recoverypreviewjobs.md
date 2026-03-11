@@ -77,7 +77,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "Collection(microsoft.graph.entraRecoveryServices.recoveryPreview Job)"
+  "@odata.type": "Collection(microsoft.graph.entraRecoveryServices.recoveryPreviewJob)"
 }
 -->
 ``` http

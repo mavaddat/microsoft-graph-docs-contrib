@@ -38,7 +38,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /directory/recovery/snapshots/{snapshotId}/recoveryJobs/{jobId}/getFailedChanges()
+GET /directory/recovery/snapshots/{snapshotId}/recoveryJobs/{jobId}/getFailedChanges
 ```
 
 ## Function parameters
@@ -78,7 +78,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges()
+GET https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges
 ```
 
 #### Response
@@ -135,7 +135,7 @@ Content-Type: application/json
       "failureMessage": "Restore failed: Domain 'contoso.com' is not verified."
     }
   ],
-  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges()?$skip=3"
+  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges?$skip=3"
 }
 ```
 
@@ -152,7 +152,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges()?$top=1
+GET https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges?$top=1
 ```
 
 #### Response
@@ -186,6 +186,6 @@ Content-Type: application/json
       "failureMessage": "Update failed: Service principal is managed by another service."
     }
   ],
-  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges()?$skip=1&$top=1"
+  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges?$skip=1&$top=1"
 }
 ```
