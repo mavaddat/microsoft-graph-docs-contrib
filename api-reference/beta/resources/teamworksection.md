@@ -37,8 +37,8 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 | isExpanded | Boolean | Indicates whether the section is expanded in the user interface. The default value is `true`. |
 | isHierarchicalViewEnabled | Boolean | Indicates whether the hierarchical view is enabled for the section. Read-only. |
 | lastModifiedDateTime | DateTimeOffset | Date and time when the section was last modified. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`. |
-| sectionType | sectionType | The type of the section. The possible values are: `userDefined`, `systemDefined`, `unknownFutureValue`. Read-only. |
-| sortType | sectionSortType | The sort order of items in the section. The valid values depend on the **sectionType**. The possible values are: `mostRecent`, `unreadThenMostRecent`, `nameAlphabetical`, `userDefinedCustomOrder`, `unknownFutureValue`. For more information, see [sectionSortType values](#sectionsorttype-values). |
+| sectionType | [sectionType](#sectiontype-values) | The type of the section. The possible values are: `userDefined`, `systemDefined`, `unknownFutureValue`. Read-only. |
+| sortType | [sectionSortType](#sectionsorttype-values) | The sort order of items in the section. The valid values depend on the **sectionType**. The possible values are: `mostRecent`, `unreadThenMostRecent`, `nameAlphabetical`, `userDefinedCustomOrder`, `unknownFutureValue`. |
 
 ### sectionType values
 
