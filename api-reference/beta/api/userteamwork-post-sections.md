@@ -22,13 +22,8 @@ Create a new [section](../resources/teamworksection.md) in a user's [teamwork](.
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "ignored" } -->
-
-| Permission type | Least privileged permissions | Higher privileged permissions |
-|:----------------|:-----------------------------|:-----------------------------|
-| Delegated (work or school account) | TeamworkSection.ReadWrite | Not available. |
-| Delegated (personal Microsoft account) | Not supported. | Not supported. |
-| Application | TeamworkSection.ReadWrite.All | Not available. |
+<!-- { "blockType": "permissions", "name": "userteamwork_post_sections" } -->
+[!INCLUDE [permissions-table](../includes/permissions/userteamwork-post-sections-permissions.md)]
 
 ## HTTP request
 

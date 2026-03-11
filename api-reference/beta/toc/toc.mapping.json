@@ -3569,15 +3569,17 @@
           ],
           "complexTypes": [
             "forwardToChatResult"
-          ]
-        },
-        {
-          "name": "Sections (preview)",
-          "resources": [
-            "teamworkSection"
           ],
-          "complexTypes": [
-            "sectionDisplayIcon"
+          "childNodes": [
+            {
+              "name": "Sections (preview)",
+              "resources": [
+                "teamworkSection"
+              ],
+              "complexTypes": [
+                "sectionDisplayIcon"
+              ]
+            }
           ]
         },
         {

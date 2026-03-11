@@ -1,0 +1,5 @@
+|Permission type|Least privileged permissions|Higher privileged permissions|
+|:---|:---|:---|
+|Delegated (work or school account)|TeamworkSection.Read|TeamworkSection.ReadWrite|
+|Delegated (personal Microsoft account)|Not supported.|Not supported.|
+|Application|TeamworkSection.Read.All|TeamworkSection.ReadWrite.All|
