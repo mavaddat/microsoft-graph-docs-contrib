@@ -37,7 +37,7 @@ A user can create a request to remove their own personal data when the app is gr
 }
 -->
 ```http
-POST /directory/outboundSharedUserProfiles/{userId}/tenants/{tenantId}/removePersonalData
+POST /directory/outboundSharedUserProfiles/{id}/tenants/{id}/removePersonalData
 ```
 
 ## Request headers

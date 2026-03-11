@@ -38,7 +38,7 @@ A user can retrieve their own [outboundSharedUserProfile](../resources/outbounds
 -->
 
 ```http
-GET /directory/outboundSharedUserProfiles/{userId}
+GET /directory/outboundSharedUserProfiles/{id}
 ```
 
 ## Request headers
