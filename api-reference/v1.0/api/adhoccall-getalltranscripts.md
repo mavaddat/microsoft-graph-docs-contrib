@@ -37,13 +37,13 @@ GET /users/{usersId}/adhocCalls/getAllTranscripts
 
 ## Function parameters
 
-In the request URL, provide the following query parameters with values.
+In the request URL, provide the following function parameters with values.
 
 | Parameter      | Type           | Description |
 | :------------- | :------------- | :---------- |
 | userId         | String         | The user identifier of the meeting organizer to filter for artifacts for meetings organized by the given user identifier. Required. |
-| startDateTime  | DateTimeOffset | Optional. Filter for artifacts created after the given start date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. |
-| endDateTime    | DateTimeOffset | Optional. Filter for artifacts created before the given end date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. |
+| startDateTime  | DateTimeOffset | Filter for artifacts created after the given start date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. Optional. |
+| endDateTime    | DateTimeOffset | Filter for artifacts created before the given end date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. Optional. |
 
 ## Request headers
 
