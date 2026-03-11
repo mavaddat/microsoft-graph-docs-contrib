@@ -49,16 +49,15 @@ PATCH /directory/recovery/jobs/{recoveryJobBaseId}
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 
-**TODO: Remove properties that don't apply**
 |Property|Type|Description|
 |:---|:---|:---|
-|status|microsoft.graph.entraRecoveryServices.recoveryStatus|**TODO: Add Description**. The possible values are: `initialized`, `running`, `successful`, `failed`, `abandoned`, `unknownFutureValue`, `calculating`, `loadingData`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `calculating` , `loadingData`. Required.|
-|targetStateDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|jobStartDateTime|DateTimeOffset|**TODO: Add Description** Required.|
-|jobCompletionDateTime|DateTimeOffset|**TODO: Add Description** Optional.|
-|filteringCriteria|[microsoft.graph.entraRecoveryServices.recoveryJobFilteringCriteriaBase](../resources/entrarecoveryservices-recoveryjobfilteringcriteriabase.md)|**TODO: Add Description** Optional.|
-|totalChangedObjectsCalculated|Int32|**TODO: Add Description** Optional.|
-|totalChangedLinksCalculated|Int32|**TODO: Add Description** Optional.|
+|status|microsoft.graph.entraRecoveryServices.recoveryStatus|The possible values are: `initialized`, `running`, `successful`, `failed`, `abandoned`, `unknownFutureValue`, `calculating`, `loadingData`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `calculating` , `loadingData`. Required.|
+|targetStateDateTime|DateTimeOffset| Required.|
+|jobStartDateTime|DateTimeOffset| Required.|
+|jobCompletionDateTime|DateTimeOffset| Optional.|
+|filteringCriteria|[microsoft.graph.entraRecoveryServices.recoveryJobFilteringCriteriaBase](../resources/entrarecoveryservices-recoveryjobfilteringcriteriabase.md)| Optional.|
+|totalChangedObjectsCalculated|Int32| Optional.|
+|totalChangedLinksCalculated|Int32| Optional.|
 
 
 
