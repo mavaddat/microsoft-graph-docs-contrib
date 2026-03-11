@@ -16,6 +16,12 @@ Namespace: microsoft.graph
 
 Get a list of [exchangeMessageTraceDetail](../resources/exchangemessagetracedetail.md) objects filtered on the recipient.
 
+> [!NOTE]
+> * Before you can use this API, ensure that the [Prerequisites](../resources/exchangemessagetrace.md#prerequisites) are met.
+> * This API has a throttling limit of 100 requests per 5 minutes. For more information, see [Microsoft Graph service-specific throttling limits](/graph/throttling-limits).
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -85,9 +91,9 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.exchangeMessageTraceDetail)",
   "value": [
     {
-      "@odata.type": "#microsoft.graph.exchangeMessageTraceDetail",
       "id": "7e3b2b2e-1b5e-4b17-80cc-2af6c1d9a3b1",
       "messageId": "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>",
       "dateTime": "2025-06-13T10:30:05Z",
@@ -97,7 +103,6 @@ Content-Type: application/json
       "data": "<root><MEP ... String=\"Message Body\" /></root>"
     },
     {
-      "@odata.type": "#microsoft.graph.exchangeMessageTraceDetail",
       "id": "7e3b2b2e-1b5e-4b17-80cc-2af6c1d9a3b1",
       "messageId": "<d9683b4c-127b-413a-ae2e-fa7dfb32c69d@contoso.com>",
       "dateTime": "2025-06-13T10:30:10Z",
@@ -109,4 +114,3 @@ Content-Type: application/json
   ]
 }
 ```
-
