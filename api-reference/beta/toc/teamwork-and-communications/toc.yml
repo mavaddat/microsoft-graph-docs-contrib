@@ -800,6 +800,8 @@ items:
         href: ../../api/userteamwork-list-installedapps.md
       - name: Get
         href: ../../api/userteamwork-get.md
+      - name: List sections
+        href: ../../api/userteamwork-list-sections.md
 - name: Employee learning
   displayName: Viva Learning
   items:
@@ -1231,16 +1233,26 @@ items:
       href: ../../api/teamworktagmember-get.md
     - name: Delete
       href: ../../api/teamworktagmember-delete.md
-  - name: Activity feed
+  - name: Sections (preview)
     items:
-    - name: Send notification to user in chat
-      href: ../../api/chat-sendactivitynotification.md
-    - name: Send notification to user in team
-      href: ../../api/team-sendactivitynotification.md
-    - name: Send notification to user
-      href: ../../api/userteamwork-sendactivitynotification.md
-    - name: Send notification to multiple users in bulk
-      href: ../../api/teamwork-sendactivitynotificationtorecipients.md
+    - name: Teamwork section
+      items:
+      - name: Teamwork section
+        href: ../../resources/teamworksection.md
+      - name: List
+        href: ../../api/userteamwork-list-sections.md
+      - name: Create
+        href: ../../api/userteamwork-post-sections.md
+      - name: Get
+        href: ../../api/teamworksection-get.md
+      - name: Update
+        href: ../../api/teamworksection-update.md
+      - name: Delete
+        href: ../../api/teamworksection-delete.md
+    - name: Complex types
+      items:
+      - name: Section display icon
+        href: ../../resources/sectiondisplayicon.md
   - name: Complex types
     items:
     - name: Forward to chat result
