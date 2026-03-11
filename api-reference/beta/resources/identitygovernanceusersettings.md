@@ -16,13 +16,8 @@ Namespace: microsoft.graph
 
 Represents identity governance settings for a user, including the approver delegate configuration. This resource is accessed via the `identityGovernance` property on the [user](user.md) resource.
 
-<!-- ## Methods
-
-| Method | Return type | Description |
-|:-------|:------------|:------------|
-| [Get approverDelegate](../api/identitygovernanceusersettings-get-approverdelegate.md) | [approverDelegate](approverdelegate.md) | Retrieve the approver delegate information for a user. |
-| [Set approverDelegate](../api/identitygovernanceusersettings-put-approverdelegate.md) | None | Set or replace the approver delegate for a user. |
-| [Delete approverDelegate](../api/identitygovernanceusersettings-delete-approverdelegate.md) | None | Remove the approver delegate for a user. | -->
+## Methods
+None.
 
 ## Properties
 
