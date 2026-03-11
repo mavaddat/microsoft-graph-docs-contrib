@@ -1,7 +1,7 @@
 ---
 title: "relatedTenant: refreshStatus"
-description: "Get the status of a refresh operation for a related tenant."
-author: "hafowler"
+description: "Get the status of the related tenants refresh action"
+author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-tenantgovernance"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the status of a refresh operation for a [relatedTenant](../resources/tenantgovernance-relatedtenant.md) that was initiated by the [refresh](../api/tenantgovernance-relatedtenant-refresh.md) method.
+Get the status of the related tenants refresh action
 
 ## Permissions
 
@@ -22,7 +22,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "tenantgovernanceservices-relatedtenant-refreshstatus-permissions"
+  "name": "tenantgovernance-relatedtenant-refreshstatus-permissions"
 }
 -->
 [!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-relatedtenant-refreshstatus-permissions.md)]
@@ -81,9 +81,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "microsoft.graph.tenantGovernanceServices.relatedTenantsRefreshStatus"
-  }
+  "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenantsRefreshStatus",
+  "mostRecentRefreshTime": "2025-03-10T14:30:00Z",
+  "mostRecentRefreshRequestStatus": "Completed",
+  "isFirstRefresh": true
 }
 ```
 

@@ -1,7 +1,7 @@
 ---
 title: "List relatedTenants"
-description: "Get a list of related tenants discovered through the tenant discovery feature."
-author: "hafowler"
+description: "Get a list of relatedTenant objects and their properties."
+author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-tenantgovernance"
@@ -14,10 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [relatedTenant](../resources/tenantgovernance-relatedtenant.md) objects and their properties. This returns tenants discovered through the tenant discovery feature.
-
-> [!IMPORTANT]
-> This API requires that the **isRelatedTenantsEnabled** property is set to `true` by calling the [enableRelatedTenants](../api/tenantgovernance-tenantgovernancesetting-enablerelatedtenants.md) action first.
+Get a list of [relatedTenant](../resources/tenantgovernance-relatedtenant.md) objects and their properties, including relationship metrics.
 
 ## Permissions
 
@@ -25,10 +22,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "tenantgovernanceservices-tenantgovernance-list-relatedtenants-permissions"
+  "name": "tenantgovernance-tenantgovernance-list-relatedtenants-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-list-relatedtenants-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-tenantgovernance-list-relatedtenants-permissions.md)]
 
 ## HTTP request
 
@@ -56,7 +53,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [relatedTenant](../resources/relatedtenant.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [relatedTenant](../resources/tenantgovernance-relatedtenant.md) objects in the response body.
 
 ## Examples
 
@@ -65,13 +62,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_relatedtenant"
+  "name": "list_relatedtenants"
 }
 -->
 ``` http
 GET https://graph.microsoft.com/beta/directory/tenantGovernance/relatedTenants
 ```
-
 
 ### Response
 
@@ -80,7 +76,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.relatedTenant"
+  "@odata.type": "Collection(microsoft.graph.tenantGovernanceServices.relatedTenant)"
 }
 -->
 ``` http
@@ -88,13 +84,88 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/tenantGovernance/relatedTenants",
   "value": [
     {
       "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenant",
-      "id": "9e95a368-1877-7e3e-206d-34ac51cb1397",
-      "createdDateTime": "String (timestamp)"
+      "id": "a3b7c912-45de-4f8a-b2c1-8e9f0a1b2c3d",
+      "createdDateTime": "2026-02-15T05:34:29.4426526Z",
+      "b2BRegistrationMetrics": {
+        "initial": {
+          "createdDateTime": "2026-02-13T20:54:25Z",
+          "watermarkDateTime": "2026-02-12T00:00:00Z",
+          "inboundTotalUsers": 1,
+          "outboundTotalUsers": 0
+        },
+        "recent": {
+          "updateDateTime": "2026-02-16T23:13:49Z",
+          "watermarkDateTime": "2026-02-15T00:00:00Z",
+          "inboundTotalUsers": 0,
+          "outboundTotalUsers": 0
+        }
+      },
+      "b2BSignInActivityMetrics": {
+        "initial": {
+          "createdDateTime": "2026-02-17T08:08:23Z",
+          "watermarkDateTime": "2026-02-15T00:00:00Z",
+          "inboundMonthlyTotalUsers": 1,
+          "outboundMonthlyTotalUsers": 0,
+          "inboundMonthlyTotalApplications": 10,
+          "outboundMonthlyTotalApplications": 0
+        },
+        "recent": {
+          "updateDateTime": "2026-02-17T08:08:23Z",
+          "watermarkDateTime": "2026-02-15T00:00:00Z",
+          "inboundMonthlyTotalUsers": 1,
+          "outboundMonthlyTotalUsers": 0,
+          "inboundMonthlyTotalApplications": 10,
+          "outboundMonthlyTotalApplications": 0
+        }
+      },
+      "appB2BSignInActivityMetrics": {
+        "initial": {
+          "createdDateTime": "2026-02-17T08:08:23Z",
+          "watermarkDateTime": "2026-02-15T00:00:00Z",
+          "inboundMonthlyTotalUsers": 1,
+          "outboundMonthlyTotalUsers": 0,
+          "inboundMonthlyTotalApplications": 1,
+          "outboundMonthlyTotalApplications": 0
+        },
+        "recent": {
+          "updateDateTime": "2026-02-17T08:08:23Z",
+          "watermarkDateTime": "2026-02-15T00:00:00Z",
+          "inboundMonthlyTotalUsers": 1,
+          "outboundMonthlyTotalUsers": 0,
+          "inboundMonthlyTotalApplications": 1,
+          "outboundMonthlyTotalApplications": 0
+        }
+      },
+      "multiTenantApplicationMetrics": null,
+      "billingMetrics": null
+    },
+    {
+      "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenant",
+      "id": "7d4e9f82-bc3a-4e1d-9a7f-6c8b5e4a2d1f",
+      "createdDateTime": "2026-02-16T05:35:45.2357127Z",
+      "b2BRegistrationMetrics": null,
+      "b2BSignInActivityMetrics": null,
+      "appB2BSignInActivityMetrics": null,
+      "multiTenantApplicationMetrics": {
+        "initial": {
+          "createdDateTime": "2026-02-15T08:29:31Z",
+          "watermarkDateTime": "2026-02-14T00:00:00Z",
+          "inboundMonthlyTotalApplications": 10,
+          "outboundMonthlyTotalApplications": 0
+        },
+        "recent": {
+          "updateDateTime": "2026-02-15T08:29:31Z",
+          "watermarkDateTime": "2026-02-14T00:00:00Z",
+          "inboundMonthlyTotalApplications": 10,
+          "outboundMonthlyTotalApplications": 0
+        }
+      },
+      "billingMetrics": null
     }
   ]
 }
 ```
-

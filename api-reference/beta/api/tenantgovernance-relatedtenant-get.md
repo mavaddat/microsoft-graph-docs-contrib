@@ -1,7 +1,7 @@
 ---
 title: "Get relatedTenant"
-description: "Read the properties of a related tenant discovered through tenant discovery."
-author: "hafowler"
+description: "Read the properties and relationships of microsoft.graph.tenantGovernanceServices.relatedTenant object."
+author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-tenantgovernance"
@@ -14,10 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties of a [relatedTenant](../resources/tenantgovernance-relatedtenant.md) object.
-
-> [!IMPORTANT]
-> This API requires that the **isRelatedTenantsEnabled** property is set to `true` by calling the [enableRelatedTenants](../api/tenantgovernance-tenantgovernancesetting-enablerelatedtenants.md) action first.
+Read the properties and relationships of [microsoft.graph.tenantGovernanceServices.relatedTenant](../resources/tenantgovernance-relatedtenant.md) object.
 
 ## Permissions
 
@@ -25,7 +22,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "tenantgovernanceservices-relatedtenant-get-permissions"
+  "name": "tenantgovernance-relatedtenant-get-permissions"
 }
 -->
 [!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-relatedtenant-get-permissions.md)]
@@ -88,11 +85,61 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenant",
-    "id": "9e95a368-1877-7e3e-206d-34ac51cb1397",
-    "createdDateTime": "String (timestamp)"
-  }
+  "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenant",
+  "id": "a3b7c912-45de-4f8a-b2c1-8e9f0a1b2c3d",
+  "createdDateTime": "2026-02-15T05:34:29.4426526Z",
+  "b2BRegistrationMetrics": {
+    "initial": {
+      "createdDateTime": "2026-02-13T20:54:25Z",
+      "watermarkDateTime": "2026-02-12T00:00:00Z",
+      "inboundTotalUsers": 1,
+      "outboundTotalUsers": 0
+    },
+    "recent": {
+      "updateDateTime": "2026-02-16T23:13:49Z",
+      "watermarkDateTime": "2026-02-15T00:00:00Z",
+      "inboundTotalUsers": 0,
+      "outboundTotalUsers": 0
+    }
+  },
+  "b2BSignInActivityMetrics": {
+    "initial": {
+      "createdDateTime": "2026-02-17T08:08:23Z",
+      "watermarkDateTime": "2026-02-15T00:00:00Z",
+      "inboundMonthlyTotalUsers": 1,
+      "outboundMonthlyTotalUsers": 0,
+      "inboundMonthlyTotalApplications": 10,
+      "outboundMonthlyTotalApplications": 0
+    },
+    "recent": {
+      "updateDateTime": "2026-02-17T08:08:23Z",
+      "watermarkDateTime": "2026-02-15T00:00:00Z",
+      "inboundMonthlyTotalUsers": 1,
+      "outboundMonthlyTotalUsers": 0,
+      "inboundMonthlyTotalApplications": 10,
+      "outboundMonthlyTotalApplications": 0
+    }
+  },
+  "appB2BSignInActivityMetrics": {
+    "initial": {
+      "createdDateTime": "2026-02-17T08:08:23Z",
+      "watermarkDateTime": "2026-02-15T00:00:00Z",
+      "inboundMonthlyTotalUsers": 1,
+      "outboundMonthlyTotalUsers": 0,
+      "inboundMonthlyTotalApplications": 1,
+      "outboundMonthlyTotalApplications": 0
+    },
+    "recent": {
+      "updateDateTime": "2026-02-17T08:08:23Z",
+      "watermarkDateTime": "2026-02-15T00:00:00Z",
+      "inboundMonthlyTotalUsers": 1,
+      "outboundMonthlyTotalUsers": 0,
+      "inboundMonthlyTotalApplications": 1,
+      "outboundMonthlyTotalApplications": 0
+    }
+  },
+  "multiTenantApplicationMetrics": null,
+  "billingMetrics": null
 }
 ```
 

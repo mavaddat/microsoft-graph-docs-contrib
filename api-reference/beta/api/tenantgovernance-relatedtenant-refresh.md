@@ -1,7 +1,7 @@
 ---
 title: "relatedTenant: refresh"
-description: "Trigger a refresh operation to update related tenant data and metrics."
-author: "hafowler"
+description: "Refresh the related tenants list"
+author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-tenantgovernance"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Trigger a refresh operation to update data and metrics for a [relatedTenant](../resources/tenantgovernance-relatedtenant.md). Use the [refreshStatus](../api/tenantgovernance-relatedtenant-refreshstatus.md) method to check the status of the operation.
+Refresh the list of related tenants
 
 ## Permissions
 
@@ -22,7 +22,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "tenantgovernanceservices-relatedtenant-refresh-permissions"
+  "name": "tenantgovernance-relatedtenant-refresh-permissions"
 }
 -->
 [!INCLUDE [permissions-table](../includes/permissions/tenantgovernance-relatedtenant-refresh-permissions.md)]
