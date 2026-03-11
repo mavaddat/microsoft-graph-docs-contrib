@@ -1,6 +1,6 @@
 ---
 title: "Get recoveryJobBase"
-description: "Get the properties of a recovery job."
+description: "Get the properties of a recovery or preview job."
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
