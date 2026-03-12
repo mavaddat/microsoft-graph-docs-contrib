@@ -1,6 +1,6 @@
 ---
 title: "contentActivityMetadata resource type"
-description: "Represents metadata for a content entry of enforcement result status."
+description: "Represents metadata for a content entry that records the outcome of enforcement after a DLP policy match."
 author: "zhengnlu"
 ms.date: 12/20/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents metadata for a content entry of an enforcement result status.
+Represents metadata for a content entry that records the outcome of enforcement after a DLP policy match.
 
 Inherits from [processContentMetadataBase](../resources/processcontentmetadatabase.md).
 
@@ -26,7 +26,7 @@ Inherits from [processContentMetadataBase](../resources/processcontentmetadataba
 | contentCategory  | contentCategory | The type of content. The possible values are: `none`, `ai`, `unknownFutureValue`. The default value is `ai`, which refers to AI-generated content. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | correlationId    | String                                                                         | An identifier used to group multiple related content entries; for example, different parts of the same file upload or messages in a conversation. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | createdDateTime  | DateTimeOffset                                                                 | The date and time when the original content was created; for example, file creation time or message sent time. Required. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
-| enforcementResultStatus          | enforcementResultStatus                                                                         | The status of the enforcement result. The possible values are: `success`, `missingOrInvalidConfiguration`, `userOverride`, `agentFailure`, `enforcementTimeout`, `oSOverride`, `processNonExistent`, `other`, `unknownFutureValue`.                                           |
+| enforcementResultStatus          | microsoft.graph.security.enforcementResultStatus                                                                         | Indicates the enforcement outcome reported by the enforcement plane after a DLP policy match. The possible values are: `success`, `missingOrInvalidConfiguration`, `userOverride`, `agentFailure`, `enforcementTimeout`, `oSOverride`, `processNonExistent`, `other`, `unknownFutureValue`.                                           |
 | identifier       | String                                                                         | A unique identifier for this specific content entry within the context of the calling application or the enforcement plane; for example, message ID, file path, or file URL. Required. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | isTruncated      | Boolean                                                                        | Indicates whether the provided **content** was shortened from its original form; for example, due to size limits. Required. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | length           | Int64                                                                          | The length of the original content in bytes. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
