@@ -6,7 +6,7 @@ ms.date: 10/16/2025
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
-toc.title: "Ad hoc call (preview)"
+toc.title: "Ad hoc call"
 ---
 
 # adhocCall resource type
