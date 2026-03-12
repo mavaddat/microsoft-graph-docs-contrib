@@ -205,7 +205,7 @@ Content-Type: application/json
                 "@odata.type": "#microsoft.graph.user",
                 "@removed": {
                     "reason": "changed"  
-                }
+                },
                 "deletedDateTime": "2024-08-26T00:00:00Z" 
             },
 
@@ -232,27 +232,25 @@ Content-Type: application/json
                 "members@delta": [ //member link change representation using delta
 
                     { //user was soft deleted
-                    "@odata.type": "user",
-                    "id": "632f6bb2-3ec8-4c1f-9073-0027a8c6859",
-                    "@removed": {
-                        "reason": "changed"
+                        "@odata.type": "user",
+                        "id": "632f6bb2-3ec8-4c1f-9073-0027a8c6859",
+                        "@removed": {
+                            "reason": "changed"}
+                    },
+                    { 
+                        //user was added to the group
+                        "@odata.type": "user",
+                        "id": "37de1ae3-408f-4702-8636-20824abda004"
                     }
-                    },
-
-                    { //user was added to the group
-                    "@odata.type": "user",
-                    "id": "37de1ae3-408f-4702-8636-20824abda004"
-                    },
-                    <...more users here...>
                 ],
-
-                "owners@delta": [ //owner link change representation
-                {
-                //this user was added as an owner for the group
-                "id": "34567890-3456-3456-3456-3456789012cd",
-                "displayName": "John Miler",
-                "userPrincipalName": "johnmiller@example.com"
-                }
+                "owners@delta": [ 
+                    //owner link change representation
+                    {
+                        //this user was added as an owner for the group
+                        "id": "34567890-3456-3456-3456-3456789012cd",
+                        "displayName": "John Miler",
+                        "userPrincipalName": "johnmiller@example.com"
+                    }
                 ]
                 //this will be followed by the properties that are different in the curent state
             },
@@ -265,7 +263,7 @@ Content-Type: application/json
                 "securityEnabled": false,
                 "visibility": "Public",
                 "renewedDateTime": "2023-07-01T00:00:00Z"
-             //this will be followed by the properties that are different in the target/snapshot state
+                //this will be followed by the properties that are different in the target/snapshot state
              }
         },
 

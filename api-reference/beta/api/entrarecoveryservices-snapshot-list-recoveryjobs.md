@@ -98,8 +98,8 @@ Content-Type: application/json
       "totalLinksModified": "124",
       "totalFailedChanges": 0,
       "totalChangedObjectsCalculated" : 1024,
-      "totalChangedLinksCalculated" : 124
-      "filteringCriteria": null,
+      "totalChangedLinksCalculated" : 124,
+      "filteringCriteria": null
     },
     {
       "id": "a1b2c3d4-5e6f-7a8b-9c0d-e1f2a3b4c5d6", 
@@ -111,8 +111,8 @@ Content-Type: application/json
       "totalLinksModified": "256",
       "totalFailedChanges": 0,
       "totalChangedObjectsCalculated" : 2304,
-      "totalChangedLinksCalculated" : 2304
-      "filteringCriteria": null,
+      "totalChangedLinksCalculated" : 2304,
+      "filteringCriteria": null
     }
   ]
 }
