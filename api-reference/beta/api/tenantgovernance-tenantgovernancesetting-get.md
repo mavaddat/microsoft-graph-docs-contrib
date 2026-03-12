@@ -85,12 +85,10 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
-    "id": "eb127a89-3063-43b7-b804-8ea0e10dc90a",
-    "isRelatedTenantsEnabled": "Boolean",
-    "canReceiveInvitations": "Boolean"
-  }
+  "@odata.type": "#microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
+  "id": "eb127a89-3063-43b7-b804-8ea0e10dc90a",
+  "isRelatedTenantsEnabled": "Boolean",
+  "canReceiveInvitations": "Boolean"
 }
 ```
 

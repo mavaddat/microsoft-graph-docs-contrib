@@ -53,7 +53,7 @@ You can specify the following properties when creating a **governanceRequest**.
 |Property|Type|Description|
 |:---|:---|:---|
 |governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant. Required.|
-|policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernance-relationshippolicy.md)|Provide the governance policy template id that will be used to generated the policySnapshot. Required.|
+|policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernance-relationshippolicy.md)|Provide the governance policy template ID that is used to generate the policySnapshot. Required.|
 
 
 
@@ -68,7 +68,7 @@ If successful, this method returns a `201 Created` response code and a [microsof
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "create_governancerequest_from_"
+  "name": "create_governancerequest"
 }
 -->
 ``` http
@@ -77,9 +77,7 @@ Content-Type: application/json
 
 {
   "governedTenantId": "String",
-  "governancePolicyTemplate@odata.bind": {
-    "https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicyTemplates/<id>"
-  }
+  "governancePolicyTemplate@odata.bind": "https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicyTemplates/<id>"
 }
 ```
 

@@ -21,8 +21,8 @@ Represents the initial snapshot of B2B registration metrics captured when the re
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|Timestamp which represents the date time that B2B registration data was initially aggregated.|
 |watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated createdDateTime property.|
-|inboundTotalUsers|Decimal|Count of B2B guest users invited and accepted into the calling tenant from the related tenant at the time of initial aggregation.|
-|outboundTotalUsers|Decimal|Count of B2B guest users invited and accepted from the calling tenant and provisioned into the related tenant at the time of initial aggregation.|
+|inboundTotalUsers|Int64|Count of B2B guest users invited and accepted into the calling tenant from the related tenant at the time of initial aggregation.|
+|outboundTotalUsers|Int64|Count of B2B guest users invited and accepted from the calling tenant and provisioned into the related tenant at the time of initial aggregation.|
 
 ## Relationships
 None.
@@ -39,8 +39,8 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial",
   "createdDateTime": "String (timestamp)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundTotalUsers": "Decimal",
-  "outboundTotalUsers": "Decimal"
+  "inboundTotalUsers": "Int64",
+  "outboundTotalUsers": "Int64"
 }
 ```
 

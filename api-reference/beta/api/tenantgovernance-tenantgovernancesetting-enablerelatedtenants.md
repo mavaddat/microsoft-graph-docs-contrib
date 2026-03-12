@@ -17,7 +17,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 Enable the related tenants feature for tenant discovery. After calling this action, the **isRelatedTenantsEnabled** property is set to `true`, which allows the use of related tenant APIs.
 
 > [!IMPORTANT]
-> This action must be called before using any related tenant APIs. Related tenant APIs will not work unless this feature is explicitly enabled.
+> This action must be called before using any related tenant APIs. Related tenant APIs won't run successfully unless this feature is explicitly enabled.
 
 ## Permissions
 

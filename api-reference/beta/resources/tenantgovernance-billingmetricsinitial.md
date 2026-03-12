@@ -21,13 +21,13 @@ Represents the initial snapshot of billing metrics captured when the relationshi
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|Timestamp which represents when billing metrics are initially aggregated for the related tenant.|
 |watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated createdDateTime property.|
-|localAssociatedTenantCount|Decimal|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant.|
-|localAssociatedTenantBillingManagementActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Billing Management is active.|
-|localAssociatedTenantProvisioningActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Provisioning is active.|
+|localAssociatedTenantCount|Int64|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant.|
+|localAssociatedTenantBillingManagementActiveCount|Int64|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Billing Management is active.|
+|localAssociatedTenantProvisioningActiveCount|Int64|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Provisioning is active.|
 |localAssociatedTenantIds|String collection|Collection of associated billing tenant IDs corresponding to localAssociatedTenants.|
-|foreignAssociatedTenantCount|Decimal|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant.|
-|foreignAssociatedTenantBillingManagementActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Billing Management is active.|
-|foreignAssociatedTenantProvisioningActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Provisioning is active.|
+|foreignAssociatedTenantCount|Int64|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant.|
+|foreignAssociatedTenantBillingManagementActiveCount|Int64|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Billing Management is active.|
+|foreignAssociatedTenantProvisioningActiveCount|Int64|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Provisioning is active.|
 
 ## Relationships
 None.
@@ -44,15 +44,15 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.billingMetricsInitial",
   "createdDateTime": "String (timestamp)",
   "watermarkDateTime": "String (timestamp)",
-  "localAssociatedTenantCount": "Decimal",
-  "localAssociatedTenantBillingManagementActiveCount": "Decimal",
-  "localAssociatedTenantProvisioningActiveCount": "Decimal",
+  "localAssociatedTenantCount": "Int64",
+  "localAssociatedTenantBillingManagementActiveCount": "Int64",
+  "localAssociatedTenantProvisioningActiveCount": "Int64",
   "localAssociatedTenantIds": [
     "String"
   ],
-  "foreignAssociatedTenantCount": "Decimal",
-  "foreignAssociatedTenantBillingManagementActiveCount": "Decimal",
-  "foreignAssociatedTenantProvisioningActiveCount": "Decimal"
+  "foreignAssociatedTenantCount": "Int64",
+  "foreignAssociatedTenantBillingManagementActiveCount": "Int64",
+  "foreignAssociatedTenantProvisioningActiveCount": "Int64"
 }
 ```
 

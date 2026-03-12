@@ -23,7 +23,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/tenantgovernance-tenantgovernance-list-relatedtenants.md)|[microsoft.graph.tenantGovernanceServices.relatedTenant](../resources/tenantgovernance-relatedtenant.md) collection|Get a list of related tenants with their relationship metrics.|
+|[List](../api/tenantgovernance-list-relatedtenants.md)|[microsoft.graph.tenantGovernanceServices.relatedTenant](../resources/tenantgovernance-relatedtenant.md) collection|Get a list of related tenants with their relationship metrics.|
 |[Get](../api/tenantgovernance-relatedtenant-get.md)|[microsoft.graph.tenantGovernanceServices.relatedTenant](../resources/tenantgovernance-relatedtenant.md)|Read the properties and metrics of a specific related tenant.|
 |[refresh](../api/tenantgovernance-relatedtenant-refresh.md)|None|Trigger an ad-hoc refresh of related tenants data outside the regular refresh schedule.|
 |[refreshStatus](../api/tenantgovernance-relatedtenant-refreshstatus.md)|[microsoft.graph.tenantGovernanceServices.relatedTenantsRefreshStatus](../resources/tenantgovernance-relatedtenantsrefreshstatus.md)|Get the status of a related tenants refresh operation.|
@@ -49,7 +49,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.tenantGovernanceServices.relatedTenant",
   "baseType": "microsoft.graph.entity",
-  "openType": "id"
+  "openType": false
 }
 -->
 ``` json

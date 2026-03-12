@@ -19,8 +19,8 @@ Represents B2B collaboration metrics that track guest user registrations between
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|initial|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial](../resources/tenantgovernance-b2bregistrationmetricsinitial.md)|B2B registration metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernance-b2bregistrationmetricsrecent.md)|B2B registration metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
+|initial|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial](../resources/tenantgovernance-b2bregistrationmetricsinitial.md)|B2B registration metrics correpsonding to initial snapshots where metrics were aggregated for the first time.|
+|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernance-b2bregistrationmetricsrecent.md)|B2B registration metrics correpsonding to recent snapshots where metrics have sufficiently changed.|
 
 ## Relationships
 None.

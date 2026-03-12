@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) objects and their properties. Policy templates define the configuration that will be applied when establishing governance relationships.
+Get a list of the [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) objects and their properties. Policy templates define the configuration that is applied when establishing governance relationships.
 
 ## Permissions
 
@@ -53,7 +53,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [governancePolicyTemplate](../resources/governancepolicytemplate.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) objects in the response body.
 
 ## Examples
 
@@ -77,7 +77,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate"
+  "@odata.type": "Collection(microsoft.graph.tenantGovernanceServices.governancePolicyTemplate)"
 }
 -->
 ``` http

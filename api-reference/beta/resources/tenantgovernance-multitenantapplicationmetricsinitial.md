@@ -21,8 +21,8 @@ Represents the initial snapshot of multi-tenant application metrics captured whe
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|Timestamp which represents when multitenant application metrics are initially aggregated for the related tenant.|
 |watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated createdDateTime property.|
-|inboundMonthlyTotalApplications|Decimal|Count of applications in the related tenant that have been consented into the calling tenant. Lookback period is 30 days.|
-|outboundMonthlyTotalApplications|Decimal|Count of applications in the calling tenant that have been consented into the related tenant. Lookback period is 30 days.|
+|inboundMonthlyTotalApplications|Int64|Count of applications in the related tenant that have been consented into the calling tenant. Lookback period is 30 days.|
+|outboundMonthlyTotalApplications|Int64|Count of applications in the calling tenant that have been consented into the related tenant. Lookback period is 30 days.|
 ## Relationships
 None.
 
@@ -38,8 +38,8 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial",
   "createdDateTime": "String (timestamp)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalApplications": "Decimal",
-  "outboundMonthlyTotalApplications": "Decimal"
+  "inboundMonthlyTotalApplications": "Int64",
+  "outboundMonthlyTotalApplications": "Int64"
 }
 ```
 

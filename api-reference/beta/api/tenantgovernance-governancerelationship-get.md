@@ -85,20 +85,18 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.tenantGovernanceServices.governanceRelationship",
-    "id": "4dc75e3b-731c-9741-d3c6-66eb7620d6fa",
-    "governingTenantId": "String",
-    "governingTenantName": "String",
-    "governedTenantId": "String",
-    "governedTenantName": "String",
-    "status": "String",
-    "policySnapshot": {
-      "@odata.type": "microsoft.graph.tenantGovernanceServices.relationshipPolicy"
-    },
-    "createdType": "String",
-    "creationDateTime": "String (timestamp)"
-  }
+  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governanceRelationship",
+  "id": "4dc75e3b-731c-9741-d3c6-66eb7620d6fa",
+  "governingTenantId": "String",
+  "governingTenantName": "String",
+  "governedTenantId": "String",
+  "governedTenantName": "String",
+  "status": "String",
+  "policySnapshot": {
+    "@odata.type": "microsoft.graph.tenantGovernanceServices.relationshipPolicy"
+  },
+  "createdType": "String",
+  "creationDateTime": "String (timestamp)"
 }
 ```
 

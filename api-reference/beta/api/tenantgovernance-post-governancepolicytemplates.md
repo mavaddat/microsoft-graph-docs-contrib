@@ -54,7 +54,7 @@ You can specify the following properties when creating a **governancePolicyTempl
 |:---|:---|:---|
 |displayName|String|The display name of the policy template. Required.|
 |description|String|A description of the policy template. Required.|
-|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established. Required.|
+|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multitenant applications to be provisioned in the governed tenant when the governance relationship is established. Required.|
 |delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established. Required.|
 
 
@@ -70,7 +70,7 @@ If successful, this method returns a `201 Created` response code and a [microsof
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "create_governancepolicytemplate_from_"
+  "name": "create_governancepolicytemplate"
 }
 -->
 ``` http

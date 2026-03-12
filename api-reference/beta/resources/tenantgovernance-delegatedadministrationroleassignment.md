@@ -25,7 +25,7 @@ Represents a role assignment configuration for delegated administration in a gov
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|group|[group](../resources/group.md)|The security group in the governing tenant that will receive the role assignments in the governed tenant. This group must be [role assignable] (https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/groups-create-eligible?tabs=admin-center).|
+|group|[group](../resources/group.md)|The security group in the governing tenant that will receive the role assignments in the governed tenant. This group must be role-assignable.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

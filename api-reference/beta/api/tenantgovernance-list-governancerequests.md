@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [governanceRequest](../resources/tenantgovernance-governancerequest.md) objects and their properties. This returns all governance requests where the calling tenant is either the governing tenant or the governed tenant.
+Get a list of the [governanceRequest](../resources/tenantgovernance-governancerequest.md) objects and their properties. This API method returns all governance requests where the calling tenant is either the governing tenant or the governed tenant.
 
 ## Permissions
 
@@ -53,7 +53,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [governanceRequest](../resources/governancerequest.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a collection of [governanceRequest](../resources/tenantgovernance-governancerequest.md) objects in the response body.
 
 ## Examples
 
@@ -77,7 +77,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.governanceRequest"
+  "@odata.type": "Collection(microsoft.graph.tenantGovernanceServices.governanceRequest)"
 }
 -->
 ``` http

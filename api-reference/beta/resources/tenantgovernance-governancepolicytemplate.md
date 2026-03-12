@@ -14,8 +14,11 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a policy template that defines the configuration for governance relationships, including delegated administration role assignments and multi-tenant applications to provision. Policy templates are used when creating [governanceRequest](tenantgovernance-governancerequest.md) objects and are stored as [snapshots](tenantgovernance-relationshippolicy) in established [governanceRelationship](tenantgovernance-governancerelationship.md) objects.
+Represents a policy template that defines the configuration for governance relationships, including delegated administration role assignments and multi-tenant applications to provision. Policy templates are used when creating [governanceRequest](tenantgovernance-governancerequest.md) objects and are stored as [snapshots](tenantgovernance-relationshippolicy.md) in established [governanceRelationship](tenantgovernance-governancerelationship.md) objects.
 
+## Default policy template
+
+The system provides a default policy template with the ID `default`. This template serves as a reusable configuration that is applied when governance relationships are automatically created for add-on tenants. The default template cannot be deleted.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
@@ -25,8 +28,8 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |:---|:---|:---|
 |[List](../api/tenantgovernance-list-governancepolicytemplates.md)|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) collection|Get a list of the [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) objects and their properties.|
 |[Create](../api/tenantgovernance-post-governancepolicytemplates.md)|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md)|Create a new governance policy template.|
-|[Get](../api/tenantgovernance-governancepolicytemplate-get.md)|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md)|Read the properties of a [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) object.|
-|[Update](../api/tenantgovernance-governancepolicytemplate-update.md)|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md)|Update the properties of a governance policy template.|
+|[Get](../api/tenantgovernance-governancepolicytemplate-get.md)|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md)|Read the properties of a [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) object, including the system-provided default template.|
+|[Update](../api/tenantgovernance-governancepolicytemplate-update.md)|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md)|Update the properties of a governance policy template, including the system-provided default template.|
 |[Delete](../api/tenantgovernance-delete-governancepolicytemplates.md)|None|Delete a governance policy template.|
 
 ## Properties
@@ -51,7 +54,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
   "baseType": "microsoft.graph.entity",
-  "openType": "id"
+  "openType": false
 }
 -->
 ``` json

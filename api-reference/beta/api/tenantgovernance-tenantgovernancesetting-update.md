@@ -51,7 +51,7 @@ PATCH /directory/tenantGovernance/settings
 
 |Property|Type|Description|
 |:---|:---|:---|
-|canReceiveInvitations|Boolean| Indicates whether the tenant can receive governance invitations. When set to `false`, the tenant cannot receive new governance invitations. When set to `true`, other tenants can send your tenant invitations by providing your tenant id or domain name. This setting is disabled by default. Required.|
+|canReceiveInvitations|Boolean| Indicates whether the tenant can receive governance invitations. When set to `false`, the tenant can't receive new governance invitations. When set to `true`, other tenants can send your tenant invitations by providing your tenant ID or domain name. This setting is disabled by default. Required.|
 
 
 
@@ -87,7 +87,8 @@ The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
-  "truncated": true
+  "truncated": true,
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting"
 }
 -->
 ``` http

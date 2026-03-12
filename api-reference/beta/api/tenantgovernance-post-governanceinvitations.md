@@ -67,7 +67,7 @@ If successful, this method returns a `201 Created` response code and a [microsof
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "create_governanceinvitation_from_"
+  "name": "create_governanceinvitation"
 }
 -->
 ``` http
@@ -75,7 +75,7 @@ POST https://graph.microsoft.com/beta/directory/tenantGovernance/governanceInvit
 Content-Type: application/json
 
 {
-  "governingTenantId": "String",
+  "governingTenantId": "String"
 }
 ```
 

@@ -35,6 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 PATCH /directory/tenantGovernance/governancePolicyTemplates/{governancePolicyTemplateId}
+PATCH /directory/tenantGovernance/governancePolicyTemplates/default
 ```
 
 ## Request headers
@@ -53,7 +54,7 @@ PATCH /directory/tenantGovernance/governancePolicyTemplates/{governancePolicyTem
 |:---|:---|:---|
 |displayName|String|The display name of the policy template. Required.|
 |description|String|A description of the policy template. Required.|
-|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established. Required.|
+|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multitenant applications to be provisioned in the governed tenant when the governance relationship is established. Required.|
 |delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established. Required.|
 
 
@@ -64,7 +65,9 @@ If successful, this method returns a `200 OK` response code and an updated [micr
 
 ## Examples
 
-### Request
+### Example 1: Update a custom governance policy template
+
+#### Request
 
 The following example shows a request.
 <!-- {
@@ -93,13 +96,14 @@ Content-Type: application/json
 ```
 
 
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
-  "truncated": true
+  "truncated": true,
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate"
 }
 -->
 ``` http
@@ -108,12 +112,77 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
-  "id": "fa0c9c2e-b7c4-4468-e737-6c03920c6e3f",
   "displayName": "String",
   "description": "String",
   "version": "String",
   "createdDateTime": "String (timestamp)",
   "lastModifiedDateTime": "String (timestamp)",
+  "multiTenantApplicationsToProvision": [
+    {
+      "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"
+    }
+  ],
+  "delegatedAdministrationRoleAssignments": [
+    {
+      "@odata.type": "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment"
+    }
+  ]
+}
+```
+
+### Example 2: Update the default governance policy template
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "update_governancepolicytemplate_default"
+}
+-->
+``` http
+PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicyTemplates/default
+Content-Type: application/json
+
+{
+  "governedTenantCanTerminate": true,
+  "multiTenantApplicationsToProvision": [
+    {
+      "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"
+    }
+  ],
+  "delegatedAdministrationRoleAssignments": [
+    {
+      "@odata.type": "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment"
+    }
+  ]
+}
+```
+
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+  "id": "default",
+  "displayName": "Default Policy Template",
+  "description": "The system-provided default governance policy template",
+  "version": "1.0",
+  "createdDateTime": "String (timestamp)",
+  "lastModifiedDateTime": "String (timestamp)",
+  "governedTenantCanTerminate": true,
   "multiTenantApplicationsToProvision": [
     {
       "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"

@@ -35,6 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ``` http
 GET /directory/tenantGovernance/governancePolicyTemplates/{governancePolicyTemplateId}
+GET /directory/tenantGovernance/governancePolicyTemplates/default
 ```
 
 ## Optional query parameters
@@ -57,7 +58,9 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 
 ## Examples
 
-### Request
+### Example 1: Get a specific governance policy template
+
+#### Request
 
 The following example shows a request.
 <!-- {
@@ -70,7 +73,7 @@ GET https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicy
 ```
 
 
-### Response
+#### Response
 
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
@@ -85,25 +88,66 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
-    "id": "fa0c9c2e-b7c4-4468-e737-6c03920c6e3f",
-    "displayName": "String",
-    "description": "String",
-    "version": "String",
-    "createdDateTime": "String (timestamp)",
-    "lastModifiedDateTime": "String (timestamp)",
-    "multiTenantApplicationsToProvision": [
-      {
-        "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"
-      }
-    ],
-    "delegatedAdministrationRoleAssignments": [
-      {
-        "@odata.type": "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment"
-      }
-    ]
-  }
+  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+  "id": "fa0c9c2e-b7c4-4468-e737-6c03920c6e3f",
+  "displayName": "String",
+  "description": "String",
+  "version": "String",
+  "createdDateTime": "String (timestamp)",
+  "lastModifiedDateTime": "String (timestamp)",
+  "multiTenantApplicationsToProvision": [
+    {
+      "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"
+    }
+  ],
+  "delegatedAdministrationRoleAssignments": [
+    {
+      "@odata.type": "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment"
+    }
+  ]
+}
+```
+
+### Example 2: Get the default governance policy template
+
+#### Request
+
+The following example shows a request.
+<!-- {
+  "blockType": "request",
+  "name": "get_governancepolicytemplate_default"
+}
+-->
+``` http
+GET https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicyTemplates/default
+```
+
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate"
+}
+-->
+``` http
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+  "id": "default",
+  "displayName": "Default Policy Template",
+  "description": "The system-provided default governance policy template",
+  "version": "1.0",
+  "createdDateTime": "String (timestamp)",
+  "lastModifiedDateTime": "String (timestamp)",
+  "governedTenantCanTerminate": false,
+  "multiTenantApplicationsToProvision": [],
+  "delegatedAdministrationRoleAssignments": []
 }
 ```
 
