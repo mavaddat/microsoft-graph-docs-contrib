@@ -628,7 +628,7 @@ Content-type: application/json
 ```
 
 
-### Example 6: Create an accessPackageResourceRequest for adding an external origin resource connector
+### Example 7: Create an accessPackageResourceRequest for adding a SAP IAG Access Rights as a resource
 
 #### Request
 
@@ -661,7 +661,7 @@ Content-type: application/json
         "@odata.type": "microsoft.graph.externalTokenBasedSapIagConnectionInfo",
         "url": "https://iagigorg-iag-intg-space-java-rest-arqapi.cfapps.sap.hana.ondemand.com",
         "subscriptionId": "8e072eb5-73f5-4ed2-9324-a734dcb9728",
-        "resourceGroup": "pankaj",
+        "resourceGroup": "SAPResourceGroup",
         "accessTokenUrl": "https://entra-docu-intg-mrrd3gv.authentication.sap.hana.ondemand.com/oauth/token",
         "clientId": "sb-72062308-a7ae-456f-b9a4-24302b8a4aa!b247012|iagapi-iag-intg-space!b11378",
         "keyVaultName": "SAPIAG-KV",
