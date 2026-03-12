@@ -85,10 +85,9 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots/$entity",
   "@odata.type": "#microsoft.graph.entraRecoveryServices.snapshot",
   "id": "MjAyNC0wOC0yNlQwMjozMDowMFo=",
-  "createdDateTime": "2024-08-26T02:30:00Z",
-  "totalChangedObjects": 1000000
+  "createdDateTime": "2024-08-25T06:30:00Z",
+  "totalChangedObjects": 1230000
 }
 ```

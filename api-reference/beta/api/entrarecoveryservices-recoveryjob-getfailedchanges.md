@@ -94,48 +94,56 @@ The following example shows the response.
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase)",
-  "@odata.count": 5,
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "5a2f3e1d-4c7b-4e8f-9d2c-c1c2d7e8e1f1",
-      "entityTypeName": "user",
-      "recoveryAction": "update",
-      "deltaFromCurrent": {
-        "displayName": "Jane Smith"
-      },
-      "currentState": {
-        "displayName": "Jane M. Smith"
-      },
-      "failureMessage": "Update failed: Property 'displayName' is protected by a directory extension."
-    },
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "8f3c2a1d-7e4b-4d8c-9a2f-b1c3d4e5f6a7",
-      "entityTypeName": "group",
-      "recoveryAction": "restore",
-      "deltaFromCurrent": {
-        "displayName": "Operations Team",
-        "mailNickname": "operations"
-      },
-      "currentState": null,
-      "failureMessage": "Restore failed: A group with the same mailNickname already exists."
-    },
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "2d4e5f6a-3b1c-4e7d-8c9f-a2b3c4d5e6f7",
-      "entityTypeName": "user",
-      "recoveryAction": "restore",
-      "deltaFromCurrent": {
-        "userPrincipalName": "john.doe@contoso.com"
-      },
-      "currentState": null,
-      "failureMessage": "Restore failed: Domain 'contoso.com' is not verified."
-    }
-  ],
-  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/getFailedChanges?$skip=3"
+{    
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getFailedChanges",
+    "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getFailedChanges$skiptoken=RFNwdAIAAQAAACA6X1NNVFBfYnJhemlsc291dGhAbWl",
+    "value": // this will enumerate over the changes we could not apply 
+      [
+        {   
+            "entityTypeName": "user",
+            "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
+            "displayName": "JD",
+            "recoveryAction": "update",
+            "deltaFromCurrent":
+            {  
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "John Doe",
+                "userPrincipalName": "johndoe@example.com",
+                "mail": "johndoe@example.com",
+                "jobTitle": "Software Engineer",
+                "department": "Engineering",
+                "officeLocation": "Redmond",
+                "mobilePhone": "+1 555-555-5555",
+                "businessPhones": [
+                "+1 555-555-5555"
+                ],
+                "preferredLanguage": "en-US",
+                "accountEnabled": true,
+                "passwordProfile": {
+                "forceChangePasswordNextSignIn": false
+                }
+            },
+            "currentState":
+            {
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "JD",
+                "userPrincipalName": "johndoe@example2.com",
+                "mail": "jdoe@example.com",
+                "jobTitle": "Product Manager",
+                "department": "Management",
+                "officeLocation": "San Fransisco",
+                "mobilePhone": "+1 999-999-9999",
+                "businessPhones": [
+                "+1 555-888-5555"
+                ],
+                "preferredLanguage": "en-SP",
+                "accountEnabled": false,
+                "passwordProfile": {
+                "forceChangePasswordNextSignIn": true
+                }
+            }
+        }
+      ],
 }
 ```
 

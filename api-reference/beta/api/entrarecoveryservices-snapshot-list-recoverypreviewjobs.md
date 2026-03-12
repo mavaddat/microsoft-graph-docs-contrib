@@ -85,19 +85,20 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots('MjAyNC0wOC0yNlQwMjozMDowMFo=')/recoveryPreviewJobs",
-  "value": [
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/recoveryPreviewJobs",  
+  "value": 
+  [
     {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryPreviewJob",
-      "id": "d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1",
+      "id": "d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1", 
       "status": "successful",
-      "targetStateDateTime": "2024-08-26T02:30:00Z",
-      "jobStartDateTime": "2024-08-26T06:40:00Z",
+      "targetStateDateTime": "2024-08-26T02:30:00Z" ,
+      "jobStartDateTime":  "2024-08-26T06:40:00Z",
       "jobCompletionDateTime": "2024-08-26T08:50:00Z",
-      "filteringCriteria": null,
       "totalChangedObjectsCalculated": 2000,
-      "totalChangedLinksCalculated": 300
+      "totalChangedLinksCalculated": 1000,
+      "filteringCriteria": null
     }
+    //this would be followed by the other preview jobs if they exist
   ]
 }
 ```

@@ -94,146 +94,259 @@ The following example shows the response.
 HTTP/1.1 200 OK
 Content-Type: application/json
 
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase)",
-  "@odata.count": 102424,
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "f71f21d6-1e7c-4a7f-9d2c-c1c2d7e8e1f1",
-      "entityTypeName": "user",
-      "recoveryAction": "update",
-      "deltaFromCurrent": {
-        "displayName": "Chris Green"
-      },
-      "currentState": {
-        "displayName": "Christopher Green"
-      }
-    },
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "2a8f3e4d-7f1e-4c7b-8b1d-9a2f7b3e5c4d",
-      "entityTypeName": "group",
-      "recoveryAction": "update",
-      "deltaFromCurrent": {
-        "description": "Marketing team"
-      },
-      "currentState": {
-        "description": "Sales and Marketing team"
-      }
-    }
-  ],
-  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges?$skip=2"
-}
+{  
+   "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges$delta",
+   "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges$skiptoken=RFNwdAIAAQAAACA6X1NNVFBfYnJhemlsc291dGhAbWl",
+   "value":
+    [
+        {
+            "entityTypeName": "user",
+            "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
+            "displayName": "JD", //this will represent the display name in the current state and will help uniquely identify the object
+            "recoveryAction": "update",
+            "deltaFromCurrent": 
+            //this will be a delta from the current state describing the effective changes that will take place when you start the recovery 
+            {  
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "John Doe",
+                "userPrincipalName": "johndoe@example.com",
+                "mail": "johndoe@example.com",
+                "jobTitle": "Software Engineer",
+                "department": "Engineering",
+                "officeLocation": "Redmond",
+                "mobilePhone": "+1 555-555-5555",
+                "businessPhones": [
+                "+1 555-555-5555"
+                ],
+                "preferredLanguage": "en-US",
+                "accountEnabled": true,
+                "passwordProfile": {
+                "forceChangePasswordNextSignIn": false
+                }
+                //this will be followed by the rest of the properties that will change as part of restoring to the snapshot state
+            },
+
+            "currentState":
+            { // this will describe how things look like in the current state. It will not include any delta annotations
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "JD",
+                "userPrincipalName": "johndoe@example2.com",
+                "mail": "jdoe@example.com",
+                "jobTitle": "Product Manager",
+                "department": "Management",
+                "officeLocation": "San Fransisco",
+                "mobilePhone": "+1 999-999-9999",
+                "businessPhones": [
+                "+1 555-888-5555"
+                ],
+                "preferredLanguage": "en-SP",
+                "accountEnabled": false,
+                "passwordProfile": {
+                "forceChangePasswordNextSignIn": true
+                }
+                //this will be followed by the rest of the properties that have changed since the snapshotted state 
+            }
+        },
+
+        {
+             // This example describes a scenario in which the user is soft deleted in the live container/current state.
+             // To rollback to the snapshot state, the user has to be restored
+            "entityTypeName": "user",
+            "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
+            "displayName": "Test Display Name2",
+            "recoveryAction": "restore",
+            "deltaFromCurrent":
+            {   //since the user needs to be restored to recover, we will not use delta annotations
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "Test Display Name1", 
+                "deletedDateTime": null //a null deletedDateTime property will indicate that the user will not be in the deleted state after recovery
+                //this will be followed by the remaining properties that have changed 
+            },
+
+            "currentState":
+            {
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "Test Display Name2",
+                "deletedDateTime": "2024-08-20T00:00:00Z" // a non null deltedDateTime value indicates that the user is soft deleted in the current state
+            }
+        },
+
+        { // This example describes a scenario in which the user did not exist in the snapshot state and was created in the live container/current state. To recover, we will soft delete the user
+            "entityTypeName": "user",
+            "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
+            "displayName": "Test Display Name2",
+            "recoveryAction": "softDelete",
+            "deltaFromCurrent":
+            {   
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "Test Display Name1",
+                "@removed": {
+                    "reason": "changed"  //annotation depicting soft deletion
+                },
+                "deletedDateTime": "2024-08-26T00:00:00Z" //non null deletion time. This will be set to current time to indicate that we will
+                //delete this user as part of the recovery process
+            },
+
+            "currentState":
+            {
+                "@odata.type": "#microsoft.graph.user",
+                "displayName": "Test Display Name2",
+                "deletedDateTime": null
+            }
+        },
+
+        { // This example describes a scenario in which the user exists is soft deleted in the snapshot state and is restored in the current state/live container. We need to soft delete the user in such a situation 
+            "entityTypeName": "user",
+            "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
+            "displayName": "testUser",
+            "recoveryAction": "softDelete",
+            "deltaFromCurrent":
+            { 
+                "@odata.type": "#microsoft.graph.user",
+                "@removed": {
+                    "reason": "changed"  
+                }
+                "deletedDateTime": "2024-08-26T00:00:00Z" 
+            },
+
+            "currentState":
+            {
+                "@odata.type": "#microsoft.graph.user",
+                "deletedDateTime": null //We will only show this property in the current state unless more properties have changed
+            }
+        },
+
+        {
+            "entityTypeName": "group",
+            "id": "ef043007-ea2e-44ba-a8ff-59c1cfc08dac",
+            "displayName": "Engineering Team",
+            "recoveryAction": "update",
+            "deltaFromCurrent":
+             {
+                "@odata.type": "#microsoft.graph.group",
+                "displayName": "Management Team",
+                "description": "Group for the engineering team",
+                "securityEnabled": true,
+                "visibility": "Private",
+                "renewedDateTime": "2023-06-01T00:00:00Z",
+                "members@delta": [ //member link change representation using delta
+
+                    { //user was soft deleted
+                    "@odata.type": "user",
+                    "id": "632f6bb2-3ec8-4c1f-9073-0027a8c6859",
+                    "@removed": {
+                        "reason": "changed"
+                    }
+                    },
+
+                    { //user was added to the group
+                    "@odata.type": "user",
+                    "id": "37de1ae3-408f-4702-8636-20824abda004"
+                    },
+                    <...more users here...>
+                ],
+
+                "owners@delta": [ //owner link change representation
+                {
+                //this user was added as an owner for the group
+                "id": "34567890-3456-3456-3456-3456789012cd",
+                "displayName": "John Miler",
+                "userPrincipalName": "johnmiller@example.com"
+                }
+                ]
+                //this will be followed by the properties that are different in the curent state
+            },
+
+            "currentState":
+             {
+                "@odata.type": "#microsoft.graph.group",
+                "displayName": "Engineering Team",
+                "description": "Management Team's group",
+                "securityEnabled": false,
+                "visibility": "Public",
+                "renewedDateTime": "2023-07-01T00:00:00Z"
+             //this will be followed by the properties that are different in the target/snapshot state
+             }
+        },
+
+        {  // policies
+            "entityTypeName": "conditionalAccessPolicy",
+            "id": "863f9620-8b90-4296-b8dc-6ff480da5c8b",
+            "displayName": "Require MFA for Admins",
+            "recoveryAction": "update",
+            "deltaFromCurrent":
+             {
+                "@odata.type": "#microsoft.graph.conditionalAccessPolicy",
+                "displayName": "Require MFA for Finance Team",
+                "conditions": {
+                    "users": {
+                    "includeUsers": ["finance1", "finance2"],
+                    "excludeUsers": ["backup-account"]
+                    },
+                    "applications": {
+                    "includeApplications": ["financeApp1", "financeApp2"],
+                    "excludeApplications": ["financeApp3"]
+                    },
+                    "signInRiskLevels": ["medium"],
+                    "devicePlatforms": ["iOS", "Android"],
+                    "locations": {
+                    "includeLocations": ["office1", "office2"],
+                    "excludeLocations": ["remote"]
+                    },
+                    "clientAppTypes": ["mobileAppsAndDesktopClients"]
+                },
+                "grantControls": {
+                    "operator": "OR",
+                    "builtInControls": ["mfa", "passwordChange"]
+                },
+                "sessionControls": {
+                    "applicationEnforcedRestrictions": null,
+                    "cloudAppSecurity": null,
+                    "signInFrequency": {
+                    "value": 14,
+                    "type": "days"
+                    }
+                },
+                "state": "enabled"
+             }  ,
+            "currentState":
+             {
+                "@odata.type": "#microsoft.graph.conditionalAccessPolicy",
+                "displayName": "Require MFA for Admins",
+                "conditions": {
+                    "users": {
+                    "includeUsers": ["admin1", "admin2"],
+                    "excludeUsers": ["emergency-access-account"]
+                    },
+                    "applications": {
+                    "includeApplications": ["app1", "app2"],
+                    "excludeApplications": ["app3"]
+                    },
+                    "signInRiskLevels": ["high"],
+                    "devicePlatforms": ["windows", "macOS"],
+                    "locations": {
+                    "includeLocations": ["location1", "location2"],
+                    "excludeLocations": ["location3"]
+                    },
+                    "clientAppTypes": ["browser", "mobileAppsAndDesktopClients"]
+                },
+                "grantControls": {
+                    "operator": "AND",
+                    "builtInControls": ["mfa", "compliantDevice"]
+                },
+                "sessionControls": {
+                    "applicationEnforcedRestrictions": null,
+                    "cloudAppSecurity": null,
+                    "signInFrequency": {
+                    "value": 7,
+                    "type": "days"
+                    }
+                },
+                "state": "disabled"
+            }
+          }
+    ]      
+ }
+
 ```
 
-### Example 2: Get changes showing objects that will be restored
-
-The following example shows changes where objects that were soft-deleted in the current tenant will be restored from the snapshot.
-
-#### Request
-
-The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "recoverypreviewjobthis.getchanges.example2"
-}
--->
-``` http
-GET https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges?$skip=1000
-```
-
-#### Response
-
-The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "Collection(microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase)"
-}
--->
-``` http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase)",
-  "@odata.count": 102424,
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "8c2e9a4f-3d7b-4e1c-9f2a-5b8c1e2f3a4d",
-      "entityTypeName": "user",
-      "recoveryAction": "restore",
-      "deltaFromCurrent": {
-        "displayName": "Alex Johnson",
-        "userPrincipalName": "alex.johnson@contoso.com",
-        "accountEnabled": true
-      },
-      "currentState": null
-    },
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "1f3a5c7e-4d2b-4e8f-9c1a-2b3d4e5f6a7b",
-      "entityTypeName": "group",
-      "recoveryAction": "restore",
-      "deltaFromCurrent": {
-        "displayName": "Finance Team",
-        "mailEnabled": true,
-        "securityEnabled": false
-      },
-      "currentState": null
-    }
-  ],
-  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges?$skip=1002"
-}
-```
-
-### Example 3: Get changes showing objects that will be soft-deleted
-
-The following example shows changes where objects that exist in the current tenant but didn't exist in the snapshot will be soft-deleted.
-
-#### Request
-
-The following example shows a request.
-<!-- {
-  "blockType": "request",
-  "name": "recoverypreviewjobthis.getchanges.example3"
-}
--->
-``` http
-GET https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges?$skip=2000
-```
-
-#### Response
-
-The following example shows the response.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "Collection(microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase)"
-}
--->
-``` http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase)",
-  "@odata.count": 102424,
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase",
-      "objectId": "9d4f2e1c-7a3b-4f8e-9c2d-3e4f5a6b7c8d",
-      "entityTypeName": "application",
-      "recoveryAction": "softDelete",
-      "deltaFromCurrent": null,
-      "currentState": {
-        "displayName": "Test Application",
-        "appId": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d"
-      }
-    }
-  ],
-  "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges?$skip=2001"
-}
-```

@@ -85,21 +85,34 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots('MjAyNC0wOC0yNlQwMjozMDowMFo=')/recoveryJobs",
-  "value": [
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryJobs",  
+  "value": 
+  [
     {
-      "@odata.type": "#microsoft.graph.entraRecoveryServices.recoveryJob",
-      "id": "3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4",
+      "id": "d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1", 
       "status": "successful",
-      "targetStateDateTime": "2024-08-26T02:30:00Z",
-      "jobStartDateTime": "2024-08-26T08:30:00Z",
+      "targetStateDateTime": "2024-08-26T02:30:00Z" ,
+      "jobStartDateTime":  "2024-08-26T08:30:00Z",
       "jobCompletionDateTime": "2024-08-26T13:30:00Z",
+      "totalObjectsModified": "1024",
+      "totalLinksModified": "124",
+      "totalFailedChanges": 0,
+      "totalChangedObjectsCalculated" : 1024,
+      "totalChangedLinksCalculated" : 124
       "filteringCriteria": null,
-      "totalChangedObjectsCalculated": 1024,
-      "totalChangedLinksCalculated": 124,
-      "totalObjectsModified": 1024,
-      "totalLinksModified": 124,
-      "totalFailedChanges": 0
+    },
+    {
+      "id": "a1b2c3d4-5e6f-7a8b-9c0d-e1f2a3b4c5d6", 
+      "status": "successful",
+      "targetStateDateTime": "2025-08-26T02:30:00Z" ,
+      "jobStartDateTime":  "2025-08-26T08:30:00Z",
+      "jobCompletionDateTime": "2025-08-26T13:30:00Z",
+      "totalObjectsModified": "2048",
+      "totalLinksModified": "256",
+      "totalFailedChanges": 0,
+      "totalChangedObjectsCalculated" : 2304,
+      "totalChangedLinksCalculated" : 2304
+      "filteringCriteria": null,
     }
   ]
 }

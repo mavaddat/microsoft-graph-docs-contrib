@@ -25,7 +25,6 @@ Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobBase](../resourc
 |[Create recoveryPreviewJob](../api/entrarecoveryservices-snapshot-post-recoverypreviewjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)|Create a new recoveryPreviewJob object.|
 |[Get recoveryPreviewJob](../api/entrarecoveryservices-recoverypreviewjob-get.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)|Read the properties and relationships of a recoveryPreviewJob object.|
 |[getChanges](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md)|[microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase](../resources/entrarecoveryservices-recoverychangeobjectbase.md) collection|Retrieve the collection of changes calculated by the preview job.|
-|[cancel](../api/entrarecoveryservices-recoverypreviewjob-cancel.md)|None|Cancel a running preview job.|
 
 ## Properties
 |Property|Type|Description|

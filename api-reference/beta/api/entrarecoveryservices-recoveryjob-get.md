@@ -93,8 +93,6 @@ Content-Type: application/json
   "jobStartDateTime": "2024-08-26T08:30:00Z",
   "jobCompletionDateTime": null,
   "filteringCriteria": null,
-  "totalChangedObjectsCalculated": 102424,
-  "totalChangedLinksCalculated": 1000,
   "totalObjectsModified": 2000,
   "totalLinksModified": 300,
   "totalFailedChanges": null

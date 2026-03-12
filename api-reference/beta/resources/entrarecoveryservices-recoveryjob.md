@@ -25,7 +25,7 @@ Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobBase](../resourc
 |[Create recoveryJob](../api/entrarecoveryservices-snapshot-post-recoveryjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md)|Create a new recoveryJob object.|
 |[Get recoveryJob](../api/entrarecoveryservices-recoveryjob-get.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md)|Read the properties and relationships of a recoveryJob object.|
 |[getFailedChanges](../api/entrarecoveryservices-recoveryjob-getfailedchanges.md)|[microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase](../resources/entrarecoveryservices-recoverychangeobjectbase.md) collection|Retrieve changes that failed to apply during recovery.|
-|[cancel](../api/entrarecoveryservices-recoveryjob-cancel.md)|None|Cancel a running recovery job.|
+
 
 ## Properties
 |Property|Type|Description|
