@@ -19,6 +19,13 @@ Represents an ad hoc call, including PSTN calls, one-to-one calls, and group cal
 
 This resource supports subscribing to [change notifications](/graph/change-notifications-overview).
 
+## Methods
+
+| Method | Return Type |Description |
+| :------ | :----------- | :---------- |
+|[Get all recordings](../api/adhoccall-getallrecordings.md)|[callRecording](callrecording.md) collection|Get all recordings from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates. |
+|[Get all transcripts](../api/adhoccall-getalltranscripts.md)|[callTranscript](calltranscript.md) collection|Get all transcripts from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.|
+
 ## Properties
 
 |Property|Type|Description|
