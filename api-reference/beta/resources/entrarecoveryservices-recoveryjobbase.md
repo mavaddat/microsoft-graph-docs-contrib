@@ -23,7 +23,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get recoveryJobBase](../api/entrarecoveryservices-recoveryjobbase-get.md)|[microsoft.graph.entraRecoveryServices.recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md)|Read the properties and relationships of a recovery job.|
+|[Get recoveryJobBase](../api/entrarecoveryservices-recoveryjob-get.md)|[microsoft.graph.entraRecoveryServices.recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md)|Read the properties and relationships of a recovery job.|
 |[cancel](../api/entrarecoveryservices-recoveryjobbase-cancel.md)|None|Cancel a running recovery or preview job.|
 
 ## Properties
