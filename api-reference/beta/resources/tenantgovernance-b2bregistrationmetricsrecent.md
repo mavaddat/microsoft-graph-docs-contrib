@@ -14,15 +14,15 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the most recent snapshot of B2B registration metrics, showing current guest user counts between related tenants.
+Represents the most recent snapshot of B2B registration metrics, showing current guest counts between related tenants.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|updateDateTime|DateTimeOffset|Timestamp which represents the most recent time B2B registration data was aggregated and found to have sufficiently changed for the related tenant.|
-|watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated updateDateTime property.|
-|inboundTotalUsers|Int64|Count of B2B guest users invited and accepted into the calling tenant from the related tenant.|
-|outboundTotalUsers|Int64|Count of B2B guest users invited and accepted from the calling tenant and provisioned into the related tenant.|
+|updateDateTime|DateTimeOffset|Timestamp that represents the most recent time B2B registration data was aggregated and have sufficiently changed for the related tenant.|
+|watermarkDateTime|DateTimeOffset|Timestamp that represents the earliest segment of data missing within the aggregation window. When no data is missing, this value is within one day of the associated updateDateTime property.|
+|inboundTotalUsers|Int64|Count of B2B guests invited and accepted from the related tenant into the calling tenant at the time of initial aggregation.|
+|outboundTotalUsers|Int64|Count of B2B guests invited and accepted from the calling tenant that are provisioned into the related tenant at the time of initial aggregation.|
 
 ## Relationships
 None.

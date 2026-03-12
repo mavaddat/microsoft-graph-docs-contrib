@@ -44,7 +44,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|governancePolicyTemplate|[governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md)|The governance policy template associated with this request.|
+|governancePolicyTemplate|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md)|The governance policy template associated with this request.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

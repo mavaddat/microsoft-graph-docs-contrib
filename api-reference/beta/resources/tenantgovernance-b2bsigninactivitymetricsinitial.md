@@ -14,13 +14,13 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the initial snapshot of B2B sign-in activity metrics captured when the relationship was first discovered, establishing a baseline for monthly active guest users and applications.
+Represents the initial snapshot of B2B sign-in activity metrics captured when the relationship was first discovered, establishing a baseline for monthly active guests and applications.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|Timestamp which represents when the time B2B sign-in activity content was initially aggregated for the related tenant.|
-|watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated createdDateTime property.|
+|createdDateTime|DateTimeOffset|Timestamp that represents when the time B2B sign-in activity content was initially aggregated for the related tenant.|
+|watermarkDateTime|DateTimeOffset|Timestamp that represents the earliest segment of data missing within the aggregation window. When no data is missing, this value is within one day of the associated createdDateTime property.|
 |inboundMonthlyTotalUsers|Int64|Count of distinct users from the related tenant who signed-in to an application in the calling tenant in the past 30 days.|
 |inboundMonthlyTotalApplications|Int64|Count of distinct applications in the calling tenant with sign-ins from users in the related tenant in the past 30 days.|
 |outboundMonthlyTotalUsers|Int64|Count of distinct users from the calling tenant who signed-in to an application in the related tenant in the past 30 days.|

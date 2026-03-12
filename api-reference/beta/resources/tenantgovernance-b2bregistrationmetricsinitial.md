@@ -14,15 +14,15 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the initial snapshot of B2B registration metrics captured when the relationship between two tenants was first discovered, establishing a baseline for guest user counts.
+Represents the initial snapshot of B2B registration metrics captured when the relationship between two tenants was first discovered, establishing a baseline for guest counts.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|Timestamp which represents the date time that B2B registration data was initially aggregated.|
-|watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated createdDateTime property.|
-|inboundTotalUsers|Int64|Count of B2B guest users invited and accepted into the calling tenant from the related tenant at the time of initial aggregation.|
-|outboundTotalUsers|Int64|Count of B2B guest users invited and accepted from the calling tenant and provisioned into the related tenant at the time of initial aggregation.|
+|createdDateTime|DateTimeOffset|Timestamp that represents the date time that B2B registration data was initially aggregated.|
+|watermarkDateTime|DateTimeOffset|Timestamp that represents the earliest segment of data missing within the aggregation window. When no data is missing, this value is within one day of the associated createdDateTime property.|
+|inboundTotalUsers|Int64|Count of B2B guests invited and accepted from the related tenant into the calling tenant at the time of initial aggregation.|
+|outboundTotalUsers|Int64|Count of B2B guests invited and accepted from the calling tenant that are provisioned into the related tenant at the time of initial aggregation.|
 
 ## Relationships
 None.
