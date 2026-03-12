@@ -145,7 +145,6 @@ PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/governancePoli
 Content-Type: application/json
 
 {
-  "governedTenantCanTerminate": true,
   "multiTenantApplicationsToProvision": [
     {
       "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"
@@ -182,7 +181,6 @@ Content-Type: application/json
   "version": "1.0",
   "createdDateTime": "String (timestamp)",
   "lastModifiedDateTime": "String (timestamp)",
-  "governedTenantCanTerminate": true,
   "multiTenantApplicationsToProvision": [
     {
       "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision"

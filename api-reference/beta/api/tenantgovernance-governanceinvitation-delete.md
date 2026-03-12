@@ -34,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-DELETE /directory/tenantGovernance/governanceInvitations/{governanceInvitationId}/$ref
+DELETE /directory/tenantGovernance/governanceInvitations/{governanceInvitationId}
 ```
 
 ## Request headers

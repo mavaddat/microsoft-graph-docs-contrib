@@ -74,8 +74,6 @@ PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/settings
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
-  "isRelatedTenantsEnabled": "Boolean",
   "canReceiveInvitations": "Boolean"
 }
 ```

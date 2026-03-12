@@ -1,6 +1,6 @@
 ---
 title: "b2bRegistrationMetrics resource type"
-description: "Represents B2B collaboration guest user registration metrics between two related tenants."
+description: "Represents B2B collaboration guest registration metrics between two related tenants."
 author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
@@ -14,13 +14,13 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents B2B collaboration metrics that track guest user registrations between the calling tenant and a related tenant. Includes both initial and recent snapshots showing inbound and outbound guest user counts.
+Represents B2B collaboration metrics that track guest registrations between the calling tenant and a related tenant. Includes both initial and recent snapshots showing inbound and outbound guest counts.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |initial|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial](../resources/tenantgovernance-b2bregistrationmetricsinitial.md)|B2B registration metrics corresponding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernance-b2bregistrationmetricsrecent.md)|B2B registration metrics corresponding to recent snapshots where metrics have sufficiently changed.|
+|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernance-b2bregistrationmetricsrecent.md)|B2B registration metrics corresponding to recent snapshots where metrics sufficiently changed.|
 
 ## Relationships
 None.
