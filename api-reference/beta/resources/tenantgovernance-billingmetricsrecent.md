@@ -19,15 +19,15 @@ Represents the most recent snapshot of billing metrics, showing current billing 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|foreignAssociatedTenantBillingManagementActiveCount|Decimal|**TODO: Add Description**|
-|foreignAssociatedTenantCount|Decimal|**TODO: Add Description**|
-|foreignAssociatedTenantProvisioningActiveCount|Decimal|**TODO: Add Description**|
-|localAssociatedTenantBillingManagementActiveCount|Decimal|**TODO: Add Description**|
-|localAssociatedTenantCount|Decimal|**TODO: Add Description**|
-|localAssociatedTenantIds|String collection|**TODO: Add Description**|
-|localAssociatedTenantProvisioningActiveCount|Decimal|**TODO: Add Description**|
-|updateDateTime|DateTimeOffset|**TODO: Add Description**|
-|watermarkDateTime|DateTimeOffset|**TODO: Add Description**|
+|updateDateTime|DateTimeOffset|Timestamp which represents when billing metrics are aggregated and found to have sufficiently changed for the related tenant.|
+|watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated updateDateTime property.|
+|localAssociatedTenantCount|Decimal|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant.|
+|localAssociatedTenantBillingManagementActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Billing Management is active.|
+|localAssociatedTenantProvisioningActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Provisioning is active.|
+|localAssociatedTenantIds|String collection|Collection of associated billing tenant IDs corresponding to localAssociatedTenants.|
+|foreignAssociatedTenantCount|Decimal|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant.|
+|foreignAssociatedTenantBillingManagementActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Billing Management is active.|
+|foreignAssociatedTenantProvisioningActiveCount|Decimal|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Provisioning is active.|
 
 ## Relationships
 None.

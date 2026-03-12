@@ -138,8 +138,51 @@ Content-Type: application/json
       "outboundMonthlyTotalApplications": 0
     }
   },
-  "multiTenantApplicationMetrics": null,
-  "billingMetrics": null
+  "multiTenantApplicationMetrics": {
+    "initial": {
+      "createdDateTime": "2026-01-01T00:00:00Z",
+      "watermarkDateTime": "2026-12-30T04:00:00Z",
+      "inboundMonthlyTotalApplications": 10,
+      "outboundMonthlyTotalApplications": 0
+    },
+    "recent": {
+      "updateDateTime": "2026-01-01T00:00:00Z",
+      "watermarkDateTime": "2026-12-30T04:00:00Z",
+      "inboundMonthlyTotalApplications": 10,
+      "outboundMonthlyTotalApplications": 0
+    }
+  },
+  "billingMetrics": {
+    "initial": {
+      "createdDateTime": "2025-10-02T12:09:40Z",
+      "watermarkDateTime": "2025-10-01T00:00:00Z",
+      "localAssociatedTenantCount": 2,
+      "localAssociatedTenantBillingManagmentActiveCount": 1,
+      "localAssociatedTenantProvisioningActiveCount": 2,
+      "localAssociatedTenantIds": [
+        "/providers/Microsoft.Billing/billingAccounts/00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000_2019-05-31/associatedTenants/11111111-1111-1111-1111-111111111111",
+        "/providers/Microsoft.Billing/billingAccounts/9a157b81-1503-516b-4fe8-7849e97ca70e:e6bd1c01-9e9b-4fa7-a9f1-6fe6cbad31fa_2019-05-31/associatedTenants/22222222-2222-2222-2222-222222222222"
+      ],
+      "foreignAssociatedTenantCount": 0,
+      "foreignAssociatedTenantBillingManagmentActiveCount": 0,
+      "foreignAssociatedTenantProvisioningActiveCount": 0,
+    },
+    "recent": {
+      "updateDateTime": "2025-11-02T12:09:40Z",
+      "watermarkDateTime": "2025-11-01T00:00:00Z",
+      "localAssociatedTenantCount": 3,
+      "localAssociatedTenantBillingManagmentActiveCount": 2,
+      "localAssociatedTenantProvisioningActiveCount": 2,
+      "localAssociatedTenantIds": [
+        "/providers/Microsoft.Billing/billingAccounts/00000000-0000-0000-0000-000000000000:00000000-0000-0000-0000-000000000000_2019-05-31/associatedTenants/11111111-1111-1111-1111-111111111111",
+        "/providers/Microsoft.Billing/billingAccounts/9a157b81-1503-516b-4fe8-7849e97ca70e:e6bd1c01-9e9b-4fa7-a9f1-6fe6cbad31fa_2019-05-31/associatedTenants/22222222-2222-2222-2222-222222222222",
+        "/providers/Microsoft.Billing/billingAccounts/ffffffff-ffff-ffff-ffff-ffffffffffff:eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee_2019-05-31/associatedTenants/33333333-3333-3333-3333-333333333333"
+      ],
+      "foreignAssociatedTenantCount": 1,
+      "foreignAssociatedTenantBillingManagmentActiveCount": 0,
+      "foreignAssociatedTenantProvisioningActiveCount": 1,
+    }
+  }
 }
 ```
 

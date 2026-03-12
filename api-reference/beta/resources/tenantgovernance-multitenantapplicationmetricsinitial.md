@@ -19,11 +19,10 @@ Represents the initial snapshot of multi-tenant application metrics captured whe
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|**TODO: Add Description**|
-|inboundMonthlyTotalApplications|Decimal|**TODO: Add Description**|
-|outboundMonthlyTotalApplications|Decimal|**TODO: Add Description**|
-|watermarkDateTime|DateTimeOffset|**TODO: Add Description**|
-
+|createdDateTime|DateTimeOffset|Timestamp which represents when multitenant application metrics are initially aggregated for the related tenant.|
+|watermarkDateTime|DateTimeOffset|Timestamp which represents the earliest segment of data missing within the aggregation window. When no data is missing, this value will be within one day of the associated createdDateTime property.|
+|inboundMonthlyTotalApplications|Decimal|Count of applications in the related tenant that have been consented into the calling tenant. Lookback period is 30 days.|
+|outboundMonthlyTotalApplications|Decimal|Count of applications in the calling tenant that have been consented into the related tenant. Lookback period is 30 days.|
 ## Relationships
 None.
 
