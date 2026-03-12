@@ -53,6 +53,14 @@
         {
           "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
           "ApiChange": "Resource",
+          "ChangedApiName": "delegatedAdministrationRoleAssignmentSnapshot",
+          "ChangeType": "Addition",
+          "Description": "Added the [delegatedAdministrationRoleAssignmentSnapshot](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-delegatedAdministrationRoleAssignmentSnapshot?view=graph-rest-beta) resource.",
+          "Target": "delegatedAdministrationRoleAssignmentSnapshot"
+        },
+        {
+          "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
+          "ApiChange": "Resource",
           "ChangedApiName": "multiTenantApplicationsToProvision",
           "ChangeType": "Addition",
           "Description": "Added the [multiTenantApplicationsToProvision](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-multiTenantApplicationsToProvision?view=graph-rest-beta) resource.",
@@ -61,10 +69,26 @@
         {
           "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
           "ApiChange": "Resource",
+          "ChangedApiName": "multiTenantApplicationsToProvisionSnapshot",
+          "ChangeType": "Addition",
+          "Description": "Added the [multiTenantApplicationsToProvisionSnapshot](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-multiTenantApplicationsToProvisionSnapshot?view=graph-rest-beta) resource.",
+          "Target": "multiTenantApplicationsToProvisionSnapshot"
+        },
+        {
+          "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
+          "ApiChange": "Resource",
           "ChangedApiName": "relatedTenantsRefreshStatus",
           "ChangeType": "Addition",
           "Description": "Added the [relatedTenantsRefreshStatus](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-relatedTenantsRefreshStatus?view=graph-rest-beta) resource.",
           "Target": "relatedTenantsRefreshStatus"
+        },
+        {
+          "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
+          "ApiChange": "Resource",
+          "ChangedApiName": "requiredResourceAccess",
+          "ChangeType": "Addition",
+          "Description": "Added the [requiredResourceAccess](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-requiredResourceAccess?view=graph-rest-beta) resource.",
+          "Target": "requiredResourceAccess"
         },
         {
           "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
@@ -81,6 +105,14 @@
           "ChangeType": "Addition",
           "Description": "Added the [roleTemplate](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-roleTemplate?view=graph-rest-beta) resource.",
           "Target": "roleTemplate"
+        },
+        {
+          "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
+          "ApiChange": "Resource",
+          "ChangedApiName": "resourcePermission",
+          "ChangeType": "Addition",
+          "Description": "Added the [resourcePermission](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-resourcePermission?view=graph-rest-beta) resource.",
+          "Target": "resourcePermission"
         },
         {
           "Id": "38d95d4c-c9aa-45b0-9270-9bfe86baefa6",
@@ -265,24 +297,6 @@
       "CreatedDateTime": "2026-03-10T19:33:14.515347Z",
       "WorkloadArea": "Microsoft.TenantGovernance",
       "SubArea": ""
-    },
-    {
-      "ChangeList": [
-        {
-          "Id": "dd150e9e-21d7-48be-b1b2-3f822db29613",
-          "ApiChange": "Resource",
-          "ChangedApiName": "requiredResourceAccess",
-          "ChangeType": "Addition",
-          "Description": "Added the [requiredResourceAccess](https://learn.microsoft.com/en-us/graph/api/resources/tenantgovernance-requiredResourceAccess?view=graph-rest-beta) resource.",
-          "Target": "requiredResourceAccess"
-        }
-      ],
-      "Id": "dd150e9e-21d7-48be-b1b2-3f822db29613",
-      "Cloud": "Prod",
-      "Version": "beta",
-      "CreatedDateTime": "2026-03-10T19:33:14.5165372Z",
-      "WorkloadArea": "Identity and access",
-      "SubArea": "Directory management"
     }
   ]
 }

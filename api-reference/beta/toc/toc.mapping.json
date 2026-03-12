@@ -1944,6 +1944,16 @@
                     "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
                     "microsoft.graph.tenantGovernanceServices.governanceRelationship",
                     "microsoft.graph.tenantGovernanceServices.governanceRequest"
+                  ],
+                  "complexTypes": [
+                    "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment",
+                    "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignmentSnapshot",
+                    "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision",
+                    "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvisionSnapshot",
+                    "microsoft.graph.tenantGovernanceServices.relationshipPolicy",
+                    "microsoft.graph.tenantGovernanceServices.requiredResourceAccess",
+                    "microsoft.graph.tenantGovernanceServices.resourcePermission",
+                    "microsoft.graph.tenantGovernanceServices.roleTemplate"
                   ]
                 },
                 {
