@@ -21,7 +21,7 @@ Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobFilteringCriteri
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|entityTypes|microsoft.graph.entraRecoveryServices.resourceTypeName collection|The list of entity types to include in the recovery job.|
+|entityTypes|[microsoft.graph.entraRecoveryServices.resourceTypeName](../resources/enums-entrarecoveryservices.md) collection|The list of entity types to include in the recovery job.|
 
 ## Relationships
 None.

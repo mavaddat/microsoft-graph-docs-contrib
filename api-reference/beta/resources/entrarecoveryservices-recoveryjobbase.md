@@ -33,7 +33,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |id|String|The unique identifier for the job. Inherited from [entity](../resources/entity.md).|
 |jobCompletionDateTime|DateTimeOffset|The date and time when the job completed. Null if the job is still running.|
 |jobStartDateTime|DateTimeOffset|The date and time when the job started.|
-|status|microsoft.graph.entraRecoveryServices.recoveryStatus|The current status of the job. The possible values are: `initialized`, `running`, `successful`, `failed`, `abandoned`, `unknownFutureValue`, `calculating`, `loadingData`. You must use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `calculating`, `loadingData`.|
+|status|[microsoft.graph.entraRecoveryServices.recoveryStatus](../resources/enums-entrarecoveryservices.md)|The current status of the job. The possible values are: `initialized`, `running`, `successful`, `failed`, `abandoned`, `unknownFutureValue`, `calculating`, `loadingData`. You must use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `calculating`, `loadingData`.|
 |targetStateDateTime|DateTimeOffset|The target snapshot timestamp to which the tenant is being restored.|
 |totalChangedLinksCalculated|Int32|The total count of changed directory object links (relationships) calculated by the job. Null until the job completes calculation.|
 |totalChangedObjectsCalculated|Int32|The total count of changed directory objects calculated by the job. Null until the job completes calculation.|
