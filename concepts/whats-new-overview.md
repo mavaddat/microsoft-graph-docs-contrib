@@ -57,7 +57,7 @@ Added the `includeNewerItems` member as supported value for the **tags** propert
 
 ### Employee experience | Employee engagement
 
-Introducing new [Follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [Unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [List Followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), [List Following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.
+Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [list followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), and [list following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.
 
 ### Files
 
@@ -69,7 +69,8 @@ Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retention
 
 ### Identity and access | Governance
 
-Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
+- Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
+- Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
 ### Identity and access | Network access
 
@@ -108,10 +109,6 @@ Updated the admin consent requirement for the following delegated permissions re
 - Added [cloudPcExternalPartnerActionResult](/graph/api/resources/cloudpcexternalpartneractionresult?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
 
 - Added [cloudPcExternalPartnerActionReport](/graph/api/resources/cloudpcexternalpartneractionreport?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-
-### Identity and access | Governance
-
-- Added `privilegeLevel` as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
 
 ### Identity and access | Identity and sign-in
 
