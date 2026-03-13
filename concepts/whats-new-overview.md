@@ -47,10 +47,6 @@ Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailA
 
 ## March 2026: New in preview only
 
-### Employee experience | Employee engagement
-
-Introducing new [Follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [Unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [List Followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), [List Following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.
-
 ### Applications
 
 Using the **signInAudience** and **signInAudienceRestrictions** properties to limit where an [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
@@ -58,6 +54,10 @@ Using the **signInAudience** and **signInAudienceRestrictions** properties to li
 ### Backup storage
 
 Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
+
+### Employee experience | Employee engagement
+
+Introducing new [Follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [Unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [List Followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), [List Following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.
 
 ### Files
 
