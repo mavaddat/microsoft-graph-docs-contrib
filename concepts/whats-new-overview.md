@@ -32,6 +32,17 @@ Use the following new container columns APIs added to further support structured
   - [Update column](/graph/api/filestoragecontainer-update-column)
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
 
+### Identity and access | Directory management
+
+- Introduced the Agent Identity API to support registration and management of AI agents in Microsoft Entra ID. This API enables agent builders and tenant admins to:
+  - Create [agent identity blueprints](/graph/api/resources/agentidentityblueprint) as base definitions for agents
+  - Configure [inheritable permissions](/graph/api/resources/inheritablepermission) that control which scopes can be inherited by agent instances
+  - Create [agent identity blueprint principals](/graph/api/resources/agentidentityblueprintprincipal) as tenant-specific representations
+  - Create multiple [agent identity](/graph/api/resources/agentidentity) instances from a single blueprint for multi-instancing scenarios
+  - Manage sponsors who can authorize and manage agent lifecycles
+
+  The API also introduces supporting types including [inheritableScopes](/graph/api/resources/inheritablescopes), [allAllowedScopes](/graph/api/resources/allallowedscopes), [enumeratedScopes](/graph/api/resources/enumeratedscopes), [noScopes](/graph/api/resources/noscopes), and the **scopeCollectionKind** enumeration.
+
 ### Identity and access | Governance
 
 - Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
