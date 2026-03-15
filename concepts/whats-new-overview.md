@@ -22,8 +22,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Applications
 
-- Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
-- Added the **trafficRoutingMethod** property to the [onPremisesPublishing](/graph/api/resources/onpremisespublishing?view=graph-rest-beta&preserve-view=true) resource to control how traffic is distributed across multiple connectors in a connector group in Microsoft Entra app proxy.
+Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
 
 ### Files
 
@@ -34,14 +33,14 @@ Use the following new container columns APIs added to further support structured
 
 ### Identity and access | Directory management
 
-- Introduced the Agent Identity API to support registration and management of AI agents in Microsoft Entra ID. This API enables agent builders and tenant admins to:
+Introduced the Agent Identity API to support registration and management of AI agents in Microsoft Entra ID. This API enables agent builders and tenant admins to:
   - Create [agent identity blueprints](/graph/api/resources/agentidentityblueprint) as base definitions for agents
   - Configure [inheritable permissions](/graph/api/resources/inheritablepermission) that control which scopes can be inherited by agent instances
   - Create [agent identity blueprint principals](/graph/api/resources/agentidentityblueprintprincipal) as tenant-specific representations
   - Create multiple [agent identity](/graph/api/resources/agentidentity) instances from a single blueprint for multi-instancing scenarios
   - Manage sponsors who can authorize and manage agent lifecycles
 
-  The API also introduces supporting types including [inheritableScopes](/graph/api/resources/inheritablescopes), [allAllowedScopes](/graph/api/resources/allallowedscopes), [enumeratedScopes](/graph/api/resources/enumeratedscopes), [noScopes](/graph/api/resources/noscopes), and the **scopeCollectionKind** enumeration.
+The API also introduces supporting types including [inheritableScopes](/graph/api/resources/inheritablescopes), [allAllowedScopes](/graph/api/resources/allallowedscopes), [enumeratedScopes](/graph/api/resources/enumeratedscopes), [noScopes](/graph/api/resources/noscopes), and the **scopeCollectionKind** enumeration.
 
 ### Identity and access | Governance
 
@@ -60,7 +59,8 @@ Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailA
 
 ### Applications
 
-Using the **signInAudience** and **signInAudienceRestrictions** properties to limit where an [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
+- Using the **signInAudience** and **signInAudienceRestrictions** properties to limit where an [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
+- Added the **trafficRoutingMethod** property to the [onPremisesPublishing](/graph/api/resources/onpremisespublishing?view=graph-rest-beta&preserve-view=true) resource to control how traffic is distributed across multiple connectors in a connector group in Microsoft Entra app proxy.
 
 ### Backup storage
 
