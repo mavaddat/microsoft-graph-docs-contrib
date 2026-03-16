@@ -57,7 +57,7 @@ Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailA
 
 ### Teamswork
 
-Model parameters are deperectaed from Teams export APIs
+Model parameters are deprecated from Teams export APIs.
   - [Teams License](/graph/teams-licenses)
 
 ## March 2026: New in preview only
