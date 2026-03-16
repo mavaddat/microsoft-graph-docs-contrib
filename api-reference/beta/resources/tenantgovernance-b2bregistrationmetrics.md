@@ -19,11 +19,15 @@ Represents B2B collaboration metrics that track guest registrations between the 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|initial|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial](../resources/tenantgovernance-b2bregistrationmetricsinitial.md)|B2B registration metrics corresponding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernance-b2bregistrationmetricsrecent.md)|B2B registration metrics corresponding to recent snapshots where metrics sufficiently changed.|
+| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
+| inboundTotalUsers | Decimal | The total number of inbound B2B guest users registered. |
+| outboundTotalUsers | Decimal | The total number of outbound B2B users from this tenant registered in other tenants. |
 
 ## Relationships
-None.
+|Property|Type|Description|
+|:---|:---|:---|
+|initial|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial](../resources/tenantgovernance-b2bregistrationmetricsinitial.md)|B2B registration metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
+|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernance-b2bregistrationmetricsrecent.md)|B2B registration metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

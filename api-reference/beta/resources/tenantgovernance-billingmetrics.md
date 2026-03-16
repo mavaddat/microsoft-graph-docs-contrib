@@ -19,11 +19,20 @@ Represents billing metrics that show commerce and billing account connections be
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|initial|[microsoft.graph.tenantGovernanceServices.billingMetricsInitial](../resources/tenantgovernance-billingmetricsinitial.md)|Billing metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.billingMetricsRecent](../resources/tenantgovernance-billingmetricsrecent.md)|Billing metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
+| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
+| localAssociatedTenantCount | Decimal | The total number of local associated tenants. |
+| localAssociatedTenantBillingManagementActiveCount | Decimal | The number of local associated tenants with active billing management. |
+| localAssociatedTenantProvisioningActiveCount | Decimal | The number of local associated tenants with active provisioning. |
+| localAssociatedTenantIds | Collection(String) | The list of local associated tenant IDs. |
+| foreignAssociatedTenantCount | Decimal | The total number of foreign associated tenants. |
+| foreignAssociatedTenantBillingManagementActiveCount | Decimal | The number of foreign associated tenants with active billing management. |
+| foreignAssociatedTenantProvisioningActiveCount | Decimal | The number of foreign associated tenants with active provisioning. |
 
 ## Relationships
-None.
+|Property|Type|Description|
+|:---|:---|:---|
+|initial|[microsoft.graph.tenantGovernanceServices.billingMetricsInitial](../resources/tenantgovernance-billingmetricsinitial.md)|Billing metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
+|recent|[microsoft.graph.tenantGovernanceServices.billingMetricsRecent](../resources/tenantgovernance-billingmetricsrecent.md)|Billing metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

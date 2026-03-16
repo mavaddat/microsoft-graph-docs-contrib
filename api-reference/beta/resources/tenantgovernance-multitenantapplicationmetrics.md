@@ -19,11 +19,15 @@ Represents multi-tenant application usage metrics that track the number of appli
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|initial|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial](../resources/tenantgovernance-multitenantapplicationmetricsinitial.md)|Multitenant application metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsRecent](../resources/tenantgovernance-multitenantapplicationmetricsrecent.md)|Multitenant application metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
+| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
+| inboundMonthlyTotalApplications | Decimal | The total number of inbound multi-tenant applications in the last month. |
+| outboundMonthlyTotalApplications | Decimal | The total number of outbound multi-tenant applications in the last month. |
 
 ## Relationships
-None.
+|Property|Type|Description|
+|:---|:---|:---|
+|initial|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial](../resources/tenantgovernance-multitenantapplicationmetricsinitial.md)|Multitenant application metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
+|recent|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsRecent](../resources/tenantgovernance-multitenantapplicationmetricsrecent.md)|Multitenant application metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

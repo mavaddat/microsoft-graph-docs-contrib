@@ -19,11 +19,17 @@ Represents B2B sign-in activity metrics that track monthly active guest users an
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|initial|[microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsInitial](../resources/tenantgovernance-b2bsigninactivitymetricsinitial.md)|B2B sign-in activity metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsRecent](../resources/tenantgovernance-b2bsigninactivitymetricsrecent.md)|B2B sign-in activity metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
+| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
+| inboundMonthlyTotalUsers | Decimal | The total number of unique inbound users with sign-in activity in the last month. |
+| inboundMonthlyTotalApplications | Decimal | The total number of applications accessed by inbound users in the last month. |
+| outboundMonthlyTotalUsers | Decimal | The total number of unique outbound users with sign-in activity in the last month. |
+| outboundMonthlyTotalApplications | Decimal | The total number of applications accessed by outbound users in the last month. |
 
 ## Relationships
-None.
+|Property|Type|Description|
+|:---|:---|:---|
+|initial|[microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsInitial](../resources/tenantgovernance-b2bsigninactivitymetricsinitial.md)|B2B sign-in activity metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
+|recent|[microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsRecent](../resources/tenantgovernance-b2bsigninactivitymetricsrecent.md)|B2B sign-in activity metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
