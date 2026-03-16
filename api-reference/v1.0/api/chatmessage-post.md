@@ -1814,7 +1814,6 @@ The following example shows a request.
 > [!NOTE]
 > - Highlighted code isn't supported when sending chat messages with code blocks
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "post_chatmessage_14",
@@ -1832,8 +1831,6 @@ Content-type: application/json
   }
 }
 ```
-
----
 
 #### Response
 
