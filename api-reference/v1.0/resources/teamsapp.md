@@ -25,6 +25,10 @@ Users can see these apps in the Microsoft Teams Store, and these apps can be ins
 |[Update app in catalog](../api/teamsapp-update.md) | [teamsApp](teamsapp.md) | Update an app in your organization's app catalog.|
 |[Delete app from catalog](../api/teamsapp-delete.md) | None | Remove an app from your organization's app catalog.|
 |[Get associated bot](../api/teamworkbot-get.md) | [teamworkbot](teamworkbot.md) | Get the bot associated with the Teams app.|
+|[List apps in channel](../api/channel-list-enabledapps.md) | [teamsApp](teamsapp.md) collection | Get a list of the [enabled apps](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
+|[Get app in channel](../api/channel-get-enabledapps.md) | [teamsApp](teamsapp.md) | Get an [enabled app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
+|[Add app to channel](../api/channel-post-enabledapps.md) | None | Add a [teamsApp](../resources/teamsapp.md) that enables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
+|[Remove app from channel](../api/channel-delete-enabledapps.md) | None | Remove a [teamsApp](../resources/teamsapp.md) that disables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
 
 ## Properties
 
