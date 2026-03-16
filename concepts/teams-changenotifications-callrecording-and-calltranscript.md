@@ -12,7 +12,7 @@ ms.date: 03/16/2025
 
 # Get change notifications for transcripts and recordings using Microsoft Graph
 
-Change notifications enable you to subscribe to changes to transcripts and recordings. You can get notified whenever a [transcript](/graph/api/resources/calltranscript) or a [recording](/graph/api/resources/callrecording) is available after an online meeting or an ad hoc call.
+Change notifications enable you to subscribe to changes to transcripts and recordings. You can get notified whenever a [transcript](/graph/api/resources/calltranscript) or a [recording](/graph/api/resources/callrecording) is available after an online meeting or an [ad hoc call](../resources/adhoccall.md).
 
 This article describes scenarios for the **transcript** and **recording** resources. For more information, see [Change notifications for Microsoft Teams resources](teams-change-notification-in-microsoft-teams-overview.md).
 
@@ -462,7 +462,7 @@ Content-Type: application/json
 
 ## Subscribe to recordings available for a particular ad hoc call
 
-To get change notifications for any recording available for a particular ad hoc call, subscribe to `communications/adhocCalls/{adhocCallId}/recordings`. This resource supports [including resource data](change-notifications-with-resource-data.md) in the notification. This subscription supports [ad hoc calls](/graph/api/resources/adhoccall?view=graph-rest-beta&preserve-view=true).
+To get change notifications for any recording available for a particular ad hoc call, subscribe to `communications/adhocCalls/{adhocCallId}/recordings`. This resource supports [including resource data](change-notifications-with-resource-data.md) in the notification. This subscription supports [ad hoc calls](../resources/adhoccall.md).
 
 ### Permissions
 
@@ -512,7 +512,7 @@ One of the following permissions is required to subscribe to `users/{userId}/onl
 
 ## Subscribe to recordings available for ad hoc call where a specific user initiates transcription
 
-To get change notifications for any recording available for any ad hoc call where a specific user initiates transcription, subscribe to `users/{userId}/adhocCalls/getAllRecordings`. This resource supports [including resource data](change-notifications-with-resource-data.md) in the notification. This subscription supports [ad hoc calls](/graph/api/resources/adhoccall?view=graph-rest-beta&preserve-view=true).
+To get change notifications for any recording available for any ad hoc call where a specific user initiates transcription, subscribe to `users/{userId}/adhocCalls/getAllRecordings`. This resource supports [including resource data](change-notifications-with-resource-data.md) in the notification. This subscription supports [ad hoc calls](../resources/adhoccall.md).
 
 ### Permissions
 
