@@ -22,7 +22,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Teamwork and Communications | Calls and online meetings
 
-Added [ad hoc call](../resources/adhoccall.md) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
+Added [ad hoc call](/graph/api/resources/adhoccall?view=graph-rest-beta&preserve-view=true) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
 
 - `communications/adhocCalls/{adhocCallId}/transcripts`
 - `users/{userId}/adhocCalls/getAllTranscripts`
