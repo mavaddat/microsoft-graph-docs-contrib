@@ -20,6 +20,17 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## March 2026: New and generally available
 
+### Teamwork and Communications | Calls and online meetings
+
+Added [ad hoc call](../resources/adhoccall.md) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
+
+- `communications/adhocCalls/{adhocCallId}/transcripts`
+- `users/{userId}/adhocCalls/getAllTranscripts`
+- `communications/adhocCalls/{adhocCallId}/recordings`
+- `users/{userId}/adhocCalls/getAllRecordings`
+
+For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
+
 ### Applications
 
 Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
