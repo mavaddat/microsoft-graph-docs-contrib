@@ -1,4 +1,4 @@
-﻿---
+---
 title: "enableAndroidDeviceAdministratorEnrollment action"
 description: "Intune Deviceconfig Devicemanagement Enableandroiddeviceadministratorenrollment Api ."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create mobileThreatDefenseConnector"
 description: "Create a new mobileThreatDefenseConnector object."
 author: "jaiprakashmb"

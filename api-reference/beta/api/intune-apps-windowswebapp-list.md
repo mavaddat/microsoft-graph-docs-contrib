@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List windowsWebApps"
 description: "List properties and relationships of the windowsWebApp objects."
 author: "jaiprakashmb"

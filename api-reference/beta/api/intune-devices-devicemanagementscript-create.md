@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create deviceManagementScript"
 description: "Create a new deviceManagementScript object."
 author: "jaiprakashmb"

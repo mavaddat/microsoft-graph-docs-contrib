@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create deviceCategory"
 description: "Create a new deviceCategory object."
 author: "jaiprakashmb"

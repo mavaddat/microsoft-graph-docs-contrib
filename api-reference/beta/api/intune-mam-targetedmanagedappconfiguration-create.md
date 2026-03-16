@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create targetedManagedAppConfiguration"
 description: "Create a new targetedManagedAppConfiguration object."
 author: "jaiprakashmb"

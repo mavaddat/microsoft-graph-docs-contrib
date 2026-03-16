@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete iosLobAppProvisioningConfiguration"
 description: "Deletes a iosLobAppProvisioningConfiguration."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete windowsWebApp"
 description: "Deletes a windowsWebApp."
 author: "jaiprakashmb"

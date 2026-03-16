@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create mobileAppAssignment"
 description: "Create a new mobileAppAssignment object."
 author: "jaiprakashmb"

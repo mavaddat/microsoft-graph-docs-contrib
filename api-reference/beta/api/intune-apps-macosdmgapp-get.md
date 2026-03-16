@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get macOSDmgApp"
 description: "Read properties and relationships of the macOSDmgApp object."
 author: "jaiprakashmb"

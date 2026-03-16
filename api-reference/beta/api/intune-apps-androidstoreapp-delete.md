@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete androidStoreApp"
 description: "Deletes a androidStoreApp."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get windowsAutopilotDeviceIdentity"
 description: "Read properties and relationships of the windowsAutopilotDeviceIdentity object."
 author: "jaiprakashmb"

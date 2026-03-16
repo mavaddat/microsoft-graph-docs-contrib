@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get officeSuiteApp"
 description: "Read properties and relationships of the officeSuiteApp object."
 author: "jaiprakashmb"

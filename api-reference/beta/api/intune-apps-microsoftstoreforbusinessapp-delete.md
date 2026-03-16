@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete microsoftStoreForBusinessApp"
 description: "Deletes a microsoftStoreForBusinessApp."
 author: "jaiprakashmb"

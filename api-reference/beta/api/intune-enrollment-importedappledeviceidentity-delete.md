@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete importedAppleDeviceIdentity"
 description: "Deletes a importedAppleDeviceIdentity."
 author: "jaiprakashmb"

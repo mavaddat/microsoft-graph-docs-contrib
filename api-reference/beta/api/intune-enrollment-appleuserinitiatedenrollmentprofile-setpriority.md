@@ -1,4 +1,4 @@
-﻿---
+---
 title: "setPriority action"
 description: "Intune Enrollment Appleuserinitiatedenrollmentprofile Setpriority Api ."
 author: "jaiprakashmb"

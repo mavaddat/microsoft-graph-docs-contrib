@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List iosMobileAppConfigurations"
 description: "List properties and relationships of the iosMobileAppConfiguration objects."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List localizedNotificationMessages"
 description: "List properties and relationships of the localizedNotificationMessage objects."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List iosLobAppProvisioningConfigurations"
 description: "List properties and relationships of the iosLobAppProvisioningConfiguration objects."
 author: "jaiprakashmb"

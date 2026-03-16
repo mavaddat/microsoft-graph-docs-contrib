@@ -1,4 +1,4 @@
-﻿---
+---
 title: "executeAction action"
 description: "Intune Devices Manageddevice Executeaction Api ."
 author: "jaiprakashmb"

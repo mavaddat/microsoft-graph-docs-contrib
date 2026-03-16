@@ -1,4 +1,4 @@
-﻿---
+---
 title: "restoreManagedHomeScreen action"
 description: "Restore Managed Home Screen"
 author: "jaiprakashmb"

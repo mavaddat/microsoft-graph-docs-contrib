@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List complianceManagementPartners"
 description: "List properties and relationships of the complianceManagementPartner objects."
 author: "jaiprakashmb"

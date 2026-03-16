@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get managedAppRegistration"
 description: "Read properties and relationships of the managedAppRegistration object."
 author: "jaiprakashmb"

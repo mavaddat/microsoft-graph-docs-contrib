@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update vppToken"
 description: "Update the properties of a vppToken object."
 author: "jaiprakashmb"

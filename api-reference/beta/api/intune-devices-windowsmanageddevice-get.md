@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get windowsManagedDevice"
 description: "Read properties and relationships of the windowsManagedDevice object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete androidLobApp"
 description: "Deletes a androidLobApp."
 author: "jaiprakashmb"

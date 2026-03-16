@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get managedIOSLobApp"
 description: "Read properties and relationships of the managedIOSLobApp object."
 author: "jaiprakashmb"

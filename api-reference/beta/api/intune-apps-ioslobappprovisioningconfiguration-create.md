@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create iosLobAppProvisioningConfiguration"
 description: "Create a new iosLobAppProvisioningConfiguration object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List androidLobApps"
 description: "List properties and relationships of the androidLobApp objects."
 author: "jaiprakashmb"

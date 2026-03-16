@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update operationApprovalPolicy"
 description: "Update the properties of a operationApprovalPolicy object."
 author: "jaiprakashmb"

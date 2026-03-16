@@ -1,4 +1,4 @@
-﻿---
+---
 title: "assign action"
 description: "Intune Wip Intunebrandingprofile Assign Api ."
 author: "jaiprakashmb"
