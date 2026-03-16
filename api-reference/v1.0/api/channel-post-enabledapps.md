@@ -12,7 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Add a [teamsApp](../resources/teamsapp.md) that enables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). This operation is allowed only for channels with a **membershipType** value of `shared` or `private`.
+Add a [teamsApp](../resources/teamsapp.md) that enables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). This operation is allowed only for channels with a **membershipType** value of `shared`.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
