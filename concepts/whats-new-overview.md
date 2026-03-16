@@ -50,7 +50,7 @@ The API also introduces supporting types including [inheritableScopes](/graph/ap
 ### People and workplace intelligence | People admin settings
 
 - Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable administrators to customize the display information of a profile source seen by users across an organization in Microsoft 365 experiences.
-- Tenant administrators can use the new [profilePropertySetting](/graph/api/resources/profilepropertysetting) APIs to configure tenant-level settings for profile properties.
+- Use the new [profilePropertySetting](/graph/api/resources/profilepropertysetting) APIs to configure tenant-level settings for profile properties.
 
 ### Personal contacts
 
