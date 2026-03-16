@@ -20,7 +20,7 @@ ms.topic: article
 > - Teams meeting AI insights APIs continue to require [Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365/copilot) license.
 > - [Data Loss Protection](/graph/api/chatmessage-update) (DLP) Patch APIs will require Microsoft Communications DLP [service plan](/azure/active-directory/enterprise-users/licensing-service-plan-reference), such as one of these [supported licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-loss-prevention-graph-apis-for-teams-data-loss-prevention-dlp-and-for-teams-export)
 >
-> The below sections are retained for reference only and are considered obsolete. This document is deprecated in June 2026.
+> This article is deprecated and will be removed in June 2026. It is provided for reference only.
 
 This article describes the payment models and licensing requirements for Microsoft Teams APIs in Microsoft Graph. For a high-level description of metered APIs and services in Microsoft Graph, see [Overview of metered APIs and services in Microsoft Graph](metered-api-overview.md).
 
