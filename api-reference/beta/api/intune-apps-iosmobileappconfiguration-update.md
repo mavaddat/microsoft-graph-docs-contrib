@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update iosMobileAppConfiguration"
 description: "Update the properties of a iosMobileAppConfiguration object."
 author: "jaiprakashmb"

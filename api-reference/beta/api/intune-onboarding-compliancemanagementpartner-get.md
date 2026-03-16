@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get complianceManagementPartner"
 description: "Read properties and relationships of the complianceManagementPartner object."
 author: "jaiprakashmb"

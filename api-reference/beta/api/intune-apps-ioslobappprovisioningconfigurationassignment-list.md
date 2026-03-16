@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List iosLobAppProvisioningConfigurationAssignments"
 description: "List properties and relationships of the iosLobAppProvisioningConfigurationAssignment objects."
 author: "jaiprakashmb"

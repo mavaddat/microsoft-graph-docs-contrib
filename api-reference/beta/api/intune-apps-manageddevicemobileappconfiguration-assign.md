@@ -1,4 +1,4 @@
-﻿---
+---
 title: "assign action"
 description: "Intune Apps Manageddevicemobileappconfiguration Assign Api ."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List cloudCertificationAuthorities"
 description: "List properties and relationships of the cloudCertificationAuthority objects."
 author: "jaiprakashmb"

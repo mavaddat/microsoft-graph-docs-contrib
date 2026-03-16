@@ -1,4 +1,4 @@
-﻿---
+---
 title: "assign action"
 description: "Intune Enrollment Windowsautopilotdeploymentprofile Assign Api ."
 author: "jaiprakashmb"

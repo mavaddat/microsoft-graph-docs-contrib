@@ -1,4 +1,4 @@
-﻿---
+---
 title: "disable action"
 description: "Intune Devices Manageddevice Disable Api ."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "assign action"
 description: "Intune Rbac Rolescopetag Assign Api ."
 author: "jaiprakashmb"

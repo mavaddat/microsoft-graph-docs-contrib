@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List depTvOSEnrollmentProfiles"
 description: "List properties and relationships of the depTvOSEnrollmentProfile objects."
 author: "jaiprakashmb"

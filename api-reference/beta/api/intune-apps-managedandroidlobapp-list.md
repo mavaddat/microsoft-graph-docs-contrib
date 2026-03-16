@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List managedAndroidLobApps"
 description: "List properties and relationships of the managedAndroidLobApp objects."
 author: "jaiprakashmb"

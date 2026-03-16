@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List appleVppTokenTroubleshootingEvents"
 description: "List properties and relationships of the appleVppTokenTroubleshootingEvent objects."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List macOSMicrosoftEdgeApps"
 description: "List properties and relationships of the macOSMicrosoftEdgeApp objects."
 author: "jaiprakashmb"

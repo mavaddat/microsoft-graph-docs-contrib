@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get windowsAutopilotDeploymentProfile"
 description: "Read properties and relationships of the windowsAutopilotDeploymentProfile object."
 author: "jaiprakashmb"

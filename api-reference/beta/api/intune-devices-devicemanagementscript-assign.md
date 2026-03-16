@@ -1,4 +1,4 @@
-﻿---
+---
 title: "assign action"
 description: "Intune Devices Devicemanagementscript Assign Api ."
 author: "jaiprakashmb"

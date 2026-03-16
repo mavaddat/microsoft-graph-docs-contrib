@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get androidForWorkApp"
 description: "Read properties and relationships of the androidForWorkApp object."
 author: "jaiprakashmb"

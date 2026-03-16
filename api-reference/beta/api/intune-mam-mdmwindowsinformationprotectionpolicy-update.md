@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update mdmWindowsInformationProtectionPolicy"
 description: "Update the properties of a mdmWindowsInformationProtectionPolicy object."
 author: "jaiprakashmb"

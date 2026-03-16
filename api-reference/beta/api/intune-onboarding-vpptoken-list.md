@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List vppTokens"
 description: "List properties and relationships of the vppToken objects."
 author: "jaiprakashmb"

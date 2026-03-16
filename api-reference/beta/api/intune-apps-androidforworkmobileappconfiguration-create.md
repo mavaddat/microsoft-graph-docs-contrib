@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create androidForWorkMobileAppConfiguration"
 description: "Create a new androidForWorkMobileAppConfiguration object."
 author: "jaiprakashmb"

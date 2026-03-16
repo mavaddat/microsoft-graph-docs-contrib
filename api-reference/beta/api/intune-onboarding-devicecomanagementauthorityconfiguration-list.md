@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceComanagementAuthorityConfigurations"
 description: "List properties and relationships of the deviceComanagementAuthorityConfiguration objects."
 author: "jaiprakashmb"

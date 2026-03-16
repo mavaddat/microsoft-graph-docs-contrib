@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getRemediationSummary function"
 description: "Intune Devices Devicehealthscript Getremediationsummary Api ."
 author: "jaiprakashmb"

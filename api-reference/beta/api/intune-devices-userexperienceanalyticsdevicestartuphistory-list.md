@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsDeviceStartupHistories"
 description: "List properties and relationships of the userExperienceAnalyticsDeviceStartupHistory objects."
 author: "jaiprakashmb"

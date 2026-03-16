@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create windowsUniversalAppX"
 description: "Create a new windowsUniversalAppX object."
 author: "jaiprakashmb"

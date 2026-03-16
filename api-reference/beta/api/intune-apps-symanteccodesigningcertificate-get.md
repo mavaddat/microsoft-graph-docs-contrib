@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get symantecCodeSigningCertificate"
 description: "Read properties and relationships of the symantecCodeSigningCertificate object."
 author: "jaiprakashmb"

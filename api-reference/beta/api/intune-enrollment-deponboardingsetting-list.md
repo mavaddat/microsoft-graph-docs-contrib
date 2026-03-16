@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List depOnboardingSettings"
 description: "List properties and relationships of the depOnboardingSetting objects."
 author: "jaiprakashmb"

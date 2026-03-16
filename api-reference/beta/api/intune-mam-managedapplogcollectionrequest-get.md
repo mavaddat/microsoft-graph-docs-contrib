@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get managedAppLogCollectionRequest"
 description: "Read properties and relationships of the managedAppLogCollectionRequest object."
 author: "jaiprakashmb"

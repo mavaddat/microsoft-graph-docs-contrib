@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update winGetApp"
 description: "Update the properties of a winGetApp object."
 author: "jaiprakashmb"

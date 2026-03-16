@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get iosLobApp"
 description: "Read properties and relationships of the iosLobApp object."
 author: "jaiprakashmb"

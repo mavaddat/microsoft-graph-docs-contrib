@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List mobileLobApps"
 description: "List properties and relationships of the mobileLobApp objects."
 author: "jaiprakashmb"

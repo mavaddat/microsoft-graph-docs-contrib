@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List managedAppConfigurations"
 description: "List properties and relationships of the managedAppConfiguration objects."
 author: "jaiprakashmb"

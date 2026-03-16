@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete windowsUniversalAppX"
 description: "Deletes a windowsUniversalAppX."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete ndesConnector"
 description: "Deletes a ndesConnector."
 author: "jaiprakashmb"

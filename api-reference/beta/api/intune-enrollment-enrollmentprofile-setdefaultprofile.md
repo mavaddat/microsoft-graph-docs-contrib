@@ -1,4 +1,4 @@
-﻿---
+---
 title: "setDefaultProfile action"
 description: "Intune Enrollment Enrollmentprofile Setdefaultprofile Api ."
 author: "jaiprakashmb"

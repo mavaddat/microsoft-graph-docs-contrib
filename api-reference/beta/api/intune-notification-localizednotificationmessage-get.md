@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get localizedNotificationMessage"
 description: "Read properties and relationships of the localizedNotificationMessage object."
 author: "jaiprakashmb"

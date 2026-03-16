@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update windowsWebApp"
 description: "Update the properties of a windowsWebApp object."
 author: "jaiprakashmb"
