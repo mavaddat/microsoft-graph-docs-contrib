@@ -2707,6 +2707,14 @@ Namespace: microsoft.graph
 | declined |
 | notResponded |
 
+### privilegeLevel values
+
+|Member|
+|:---|
+|standard|
+|privileged|
+|unknownFutureValue|
+
 ### activityDomain values
 
 | Member |
@@ -5043,6 +5051,8 @@ Possible values for user account types (group membership), per Windows definitio
 | samAccountName |
 | unknownFutureValue |
 
+
+
 ### samlAttributeNameFormat values
 
 | Member |
@@ -5932,4 +5942,14 @@ Possible values for user account types (group membership), per Windows definitio
 |:---|
 |none|
 |ai|
+|unknownFutureValue|
+
+### trafficRoutingMethod values 
+
+|Member|
+|:---|
+|none|
+|random|
+|sessionPersistence|
+|performance|
 |unknownFutureValue|

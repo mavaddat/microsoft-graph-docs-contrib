@@ -578,6 +578,7 @@ Namespace: microsoft.graph
 | allDirectoryServicePrincipals |
 | allConfiguredConnectedOrganizationUsers |
 | allExternalUsers |
+| allDirectoryAgentIdentities |
 | unknownFutureValue |
 
 ### accessPackageAssignmentFilterByCurrentUserOptions values
@@ -3237,6 +3238,16 @@ Possible values for user account types (group membership), per Windows definitio
 | Active |
 | Disabled |
 | Paused |
+
+### scopeCollectionKind values 
+
+|Member|
+|:---|
+|allAllowed|
+|enumerated|
+|none|
+|scopeKindNotSet|
+|unknownFutureValue|
 
 ### scopeOperatorMultiValuedComparisonType values
 
