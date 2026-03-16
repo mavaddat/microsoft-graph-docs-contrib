@@ -1,5 +1,5 @@
 ---
-title: "List traffic"
+title: "List networkAccessTraffic objects"
 description: "Get a list of log events for traffic routed through the Global Secure Access services."
 author: "miritsadon"
 ms.date: 04/08/2025
@@ -8,7 +8,7 @@ ms.subservice: "entra-global-secure-access"
 doc_type: apiPageType
 ---
 
-# List traffic
+# List networkAccessTraffic objects
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
