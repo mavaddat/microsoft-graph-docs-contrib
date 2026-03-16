@@ -2,7 +2,7 @@
 title: "Update profilePropertySetting"
 description: "Update the properties of a profilePropertySetting object."
 author: "rwaithera"
-ms.date: 05/02/2025
+ms.date: 03/16/2026
 ms.localizationpriority: medium
 ms.subservice: "people"
 doc_type: apiPageType
@@ -12,17 +12,19 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
 
 Update the properties of a [profilePropertySetting](../resources/profilepropertysetting.md) object.
-
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "profilepropertysetting_update" } -->
+<!-- {
+  "blockType": "permissions",
+  "name": "profilepropertysetting-update-permissions"
+}
+-->
 [!INCLUDE [permissions-table](../includes/permissions/profilepropertysetting-update-permissions.md)]
 
 [!INCLUDE [rbac-peopleadmin-apis-write](../includes/rbac-for-apis/rbac-peopleadmin-apis-write.md)]
@@ -33,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-```http
+``` http
 PATCH /admin/people/profilePropertySettings/{profilePropertySettingId}
 ```
 
@@ -48,11 +50,14 @@ PATCH /admin/people/profilePropertySettings/{profilePropertySettingId}
 
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
+
 |Property|Type|Description|
 |:---|:---|:---|
 |name|String|Other name of the property-level setting. For backward compatibility. Optional.|
 |displayName|String|Name of the property-level setting. Optional.|
 |prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization. Required.|
+
+
 
 ## Response
 
@@ -68,7 +73,7 @@ The following example shows a request.
   "name": "update_profilepropertysetting"
 }
 -->
-```http
+``` http
 PATCH https://graph.microsoft.com/beta/admin/people/profilePropertySettings/00000000-0000-0000-0000-000000000001
 Content-Type: application/json
 
@@ -81,7 +86,6 @@ Content-Type: application/json
 }
 ```
 
----
 
 ### Response
 
@@ -89,11 +93,10 @@ The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.profilePropertySetting"
+  "truncated": true
 }
 -->
-```http
+``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

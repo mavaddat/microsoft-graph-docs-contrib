@@ -1,29 +1,29 @@
 ---
-title: "Update profilePropertySetting"
-description: "Update the properties of a profilePropertySetting object."
+title: "Create profilePropertySetting"
+description: "Create a new profilePropertySetting object."
 author: "rwaithera"
-ms.date: 05/02/2025
+ms.date: 03/16/2026
 ms.localizationpriority: medium
 ms.subservice: "people"
 doc_type: apiPageType
 ---
 
-# Update profilePropertySetting
+# Create profilePropertySetting
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
-Update the properties of a [profilePropertySetting](../resources/profilepropertysetting.md) object.
-
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+Create a new [profilePropertySetting](../resources/profilepropertysetting.md) object.
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "profilepropertysetting_update" } -->
-[!INCLUDE [permissions-table](../includes/permissions/profilepropertysetting-update-permissions.md)]
+<!-- {
+  "blockType": "permissions",
+  "name": "peopleadminsettings-post-profilepropertysettings-permissions"
+}
+-->
+[!INCLUDE [permissions-table](../includes/permissions/peopleadminsettings-post-profilepropertysettings-permissions.md)]
 
 [!INCLUDE [rbac-peopleadmin-apis-write](../includes/rbac-for-apis/rbac-peopleadmin-apis-write.md)]
 
@@ -33,8 +33,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-```http
-PATCH /admin/people/profilePropertySettings/{profilePropertySettingId}
+``` http
+POST /admin/people/profilePropertySettings
 ```
 
 ## Request headers
@@ -46,7 +46,9 @@ PATCH /admin/people/profilePropertySettings/{profilePropertySettingId}
 
 ## Request body
 
-[!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
+In the request body, supply a JSON representation of the [profilePropertySetting](../resources/profilepropertysetting.md) object.
+
+You can specify the following properties when creating a **profilePropertySetting**.
 
 |Property|Type|Description|
 |:---|:---|:---|
@@ -56,7 +58,7 @@ PATCH /admin/people/profilePropertySettings/{profilePropertySettingId}
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [profilePropertySetting](../resources/profilepropertysetting.md) object in the response body.
+If successful, this method returns a `201 Created` response code and a [profilePropertySetting](../resources/profilepropertysetting.md) object in the response body.
 
 ## Examples
 
@@ -65,23 +67,22 @@ If successful, this method returns a `200 OK` response code and an updated [prof
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "update_profilepropertysetting"
+  "name": "create_profilepropertysetting_from_"
 }
 -->
-```http
-PATCH https://graph.microsoft.com/beta/admin/people/profilePropertySettings/00000000-0000-0000-0000-000000000001
+``` http
+POST https://graph.microsoft.com/v1.0/admin/people/profilePropertySettings
 Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.profilePropertySetting",
+  "name": "People systems priority",
+  "displayName": "People systems priority",
   "prioritizedSourceUrls": [
-    "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')",
-    "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr2')"
+    "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')"
   ]
 }
 ```
-
----
 
 ### Response
 
@@ -93,8 +94,8 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.profilePropertySetting"
 }
 -->
-```http
-HTTP/1.1 200 OK
+``` http
+HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
@@ -104,7 +105,6 @@ Content-Type: application/json
   "displayName": "People systems priority",
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')",
-    "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr2')",
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
   ]
 }
