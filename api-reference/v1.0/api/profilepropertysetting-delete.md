@@ -23,7 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "name": "peopleadminsettings-delete-profilepropertysettings-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/peopleadminsettings-delete-profilepropertysettings-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/profilepropertysetting-delete-permissions.md)]
 
 [!INCLUDE [rbac-peopleadmin-apis-write](../includes/rbac-for-apis/rbac-peopleadmin-apis-write.md)]
 
