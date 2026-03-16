@@ -47,12 +47,6 @@ The API also introduces supporting types including [inheritableScopes](/graph/ap
 - Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
 
-<<<<<<< user/jomyjt/removeModelAndPaymentRequirementsForTeamsGraph
-### Teamswork
-
-Model parameters are deperectaed from Teams export APIs
-  - [Teams License](/graph/teams-licenses)
-=======
 ### People and workplace intelligence | People admin settings
 
 Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable administrators to customize the display information of a profile source seen by users across an organization in Microsoft 365 experiences.
@@ -60,7 +54,11 @@ Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable a
 ### Personal contacts
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
->>>>>>> main
+
+### Teamswork
+
+Model parameters are deperectaed from Teams export APIs
+  - [Teams License](/graph/teams-licenses)
 
 ## March 2026: New in preview only
 
