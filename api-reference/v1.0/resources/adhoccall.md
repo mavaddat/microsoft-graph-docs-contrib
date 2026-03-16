@@ -2,7 +2,6 @@
 title: "adhocCall resource type"
 description: "Represents an ad hoc call, including PSTN calls, one-to-one calls, and group calls."
 author: "kanchm"
-# customer intent: As a developer, I want to understand the properties of the `adhocCall` resource type so that I can integrate it into my application.
 ms.reviewer: v-sukanyadas
 ms.date: 02/27/2026
 ms.localizationpriority: medium
@@ -30,7 +29,9 @@ This resource supports subscribing to [change notifications](/graph/change-notif
 
 |Property|Type|Description|
 |:---|:---|:---|
-| id |String|The unique identifier for the ad hoc call. Read-only.|
+| endDateTime | DateTime | The meeting end time in UTC. Required when an ad hoc call is ended. |
+| id | String | The unique identifier for the call, including PSTN, 1:1, and group calls. Read-only. |
+| startDateTime | DateTime | The meeting start time in UTC. Required when the call is started. |
 
 ## Relationships
 
