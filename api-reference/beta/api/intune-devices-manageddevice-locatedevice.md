@@ -1,4 +1,4 @@
----
+﻿---
 title: "locateDevice action"
 description: "Locate a device"
 author: "jaiprakashmb"

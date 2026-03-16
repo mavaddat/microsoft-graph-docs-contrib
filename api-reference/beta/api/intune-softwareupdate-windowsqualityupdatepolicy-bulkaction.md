@@ -1,4 +1,4 @@
----
+﻿---
 title: "bulkAction action"
 description: "Intune Softwareupdate Windowsqualityupdatepolicy Bulkaction Api ."
 author: "jaiprakashmb"

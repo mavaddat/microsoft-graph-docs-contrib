@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create deviceComplianceScript"
 description: "Create a new deviceComplianceScript object."
 author: "jaiprakashmb"

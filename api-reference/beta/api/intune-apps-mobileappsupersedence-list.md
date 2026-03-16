@@ -1,4 +1,4 @@
----
+﻿---
 title: "List mobileAppSupersedences"
 description: "List properties and relationships of the mobileAppSupersedence objects."
 author: "jaiprakashmb"

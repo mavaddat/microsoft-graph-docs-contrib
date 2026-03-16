@@ -1,4 +1,4 @@
----
+﻿---
 title: "createDeviceLogCollectionRequest action"
 description: "Intune Devices Manageddevice Createdevicelogcollectionrequest Api ."
 author: "jaiprakashmb"

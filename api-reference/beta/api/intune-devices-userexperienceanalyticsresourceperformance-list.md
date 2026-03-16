@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsResourcePerformances"
 description: "List properties and relationships of the userExperienceAnalyticsResourcePerformance objects."
 author: "jaiprakashmb"

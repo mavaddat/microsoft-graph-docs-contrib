@@ -1,4 +1,4 @@
----
+﻿---
 title: "List hardwarePasswordDetails"
 description: "List properties and relationships of the hardwarePasswordDetail objects."
 author: "jaiprakashmb"

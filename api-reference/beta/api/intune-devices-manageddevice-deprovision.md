@@ -1,4 +1,4 @@
----
+﻿---
 title: "deprovision action"
 description: "Intune Devices Manageddevice Deprovision Api ."
 author: "jaiprakashmb"

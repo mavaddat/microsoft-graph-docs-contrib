@@ -1,4 +1,4 @@
----
+﻿---
 title: "List deviceManagementExchangeConnectors"
 description: "List properties and relationships of the deviceManagementExchangeConnector objects."
 author: "jaiprakashmb"

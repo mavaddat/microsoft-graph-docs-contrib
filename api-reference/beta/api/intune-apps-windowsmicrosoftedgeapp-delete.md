@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete windowsMicrosoftEdgeApp"
 description: "Deletes a windowsMicrosoftEdgeApp."
 author: "jaiprakashmb"

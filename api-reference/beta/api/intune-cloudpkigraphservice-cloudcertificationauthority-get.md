@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get cloudCertificationAuthority"
 description: "Read properties and relationships of the cloudCertificationAuthority object."
 author: "jaiprakashmb"

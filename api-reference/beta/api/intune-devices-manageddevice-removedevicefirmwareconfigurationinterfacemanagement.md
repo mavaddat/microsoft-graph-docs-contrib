@@ -1,4 +1,4 @@
----
+﻿---
 title: "removeDeviceFirmwareConfigurationInterfaceManagement action"
 description: "Remove device from Device Firmware Configuration Interface management"
 author: "jaiprakashmb"

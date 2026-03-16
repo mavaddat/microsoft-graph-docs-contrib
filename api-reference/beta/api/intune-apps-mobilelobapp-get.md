@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get mobileLobApp"
 description: "Read properties and relationships of the mobileLobApp object."
 author: "jaiprakashmb"

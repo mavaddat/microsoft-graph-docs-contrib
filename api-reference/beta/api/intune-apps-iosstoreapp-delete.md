@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete iosStoreApp"
 description: "Deletes a iosStoreApp."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete appleUserInitiatedEnrollmentProfile"
 description: "Deletes a appleUserInitiatedEnrollmentProfile."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete iosVppApp"
 description: "Deletes a iosVppApp."
 author: "jaiprakashmb"

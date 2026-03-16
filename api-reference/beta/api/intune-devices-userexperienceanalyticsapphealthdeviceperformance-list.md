@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsAppHealthDevicePerformances"
 description: "List properties and relationships of the userExperienceAnalyticsAppHealthDevicePerformance objects."
 author: "jaiprakashmb"

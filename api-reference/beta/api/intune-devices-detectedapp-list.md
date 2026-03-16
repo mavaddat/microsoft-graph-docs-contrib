@@ -1,4 +1,4 @@
----
+﻿---
 title: "List detectedApps"
 description: "List properties and relationships of the detectedApp objects."
 author: "jaiprakashmb"

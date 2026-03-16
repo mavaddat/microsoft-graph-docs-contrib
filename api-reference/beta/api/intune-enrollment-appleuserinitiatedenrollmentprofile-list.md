@@ -1,4 +1,4 @@
----
+﻿---
 title: "List appleUserInitiatedEnrollmentProfiles"
 description: "List properties and relationships of the appleUserInitiatedEnrollmentProfile objects."
 author: "jaiprakashmb"

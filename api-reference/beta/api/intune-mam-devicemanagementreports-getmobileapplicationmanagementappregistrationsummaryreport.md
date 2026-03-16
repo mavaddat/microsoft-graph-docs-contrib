@@ -1,4 +1,4 @@
----
+﻿---
 title: "getMobileApplicationManagementAppRegistrationSummaryReport action"
 description: "Intune Mam Devicemanagementreports Getmobileapplicationmanagementappregistrationsummaryreport Api ."
 author: "jaiprakashmb"

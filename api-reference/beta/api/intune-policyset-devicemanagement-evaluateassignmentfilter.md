@@ -1,4 +1,4 @@
----
+﻿---
 title: "evaluateAssignmentFilter action"
 description: "Intune Policyset Devicemanagement Evaluateassignmentfilter Api ."
 author: "jaiprakashmb"

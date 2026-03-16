@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete importedAppleDeviceIdentityResult"
 description: "Deletes a importedAppleDeviceIdentityResult."
 author: "jaiprakashmb"

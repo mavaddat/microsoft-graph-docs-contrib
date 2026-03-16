@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get hardwarePasswordDetail"
 description: "Read properties and relationships of the hardwarePasswordDetail object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "activateDeviceEsim action"
 description: "Activate eSIM on the device."
 author: "jaiprakashmb"

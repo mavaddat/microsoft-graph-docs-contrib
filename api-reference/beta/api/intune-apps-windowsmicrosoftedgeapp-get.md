@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get windowsMicrosoftEdgeApp"
 description: "Read properties and relationships of the windowsMicrosoftEdgeApp object."
 author: "jaiprakashmb"

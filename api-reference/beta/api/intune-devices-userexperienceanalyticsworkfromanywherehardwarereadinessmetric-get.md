@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric"
 description: "Read properties and relationships of the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric object."
 author: "jaiprakashmb"

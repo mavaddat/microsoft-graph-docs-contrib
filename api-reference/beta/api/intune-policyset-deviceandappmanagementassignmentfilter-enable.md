@@ -1,4 +1,4 @@
----
+﻿---
 title: "enable action"
 description: "Intune Policyset Deviceandappmanagementassignmentfilter Enable Api ."
 author: "jaiprakashmb"

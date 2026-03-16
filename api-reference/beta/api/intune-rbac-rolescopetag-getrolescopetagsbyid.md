@@ -1,4 +1,4 @@
----
+﻿---
 title: "getRoleScopeTagsById action"
 description: "Intune Rbac Rolescopetag Getrolescopetagsbyid Api ."
 author: "jaiprakashmb"

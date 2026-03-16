@@ -1,4 +1,4 @@
----
+﻿---
 title: "setEnrollmentTimeDeviceMembershipTarget action"
 description: "Intune Androidforwork Androiddeviceownerenrollmentprofile Setenrollmenttimedevicemembershiptarget Api ."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete iosLobApp"
 description: "Deletes a iosLobApp."
 author: "jaiprakashmb"

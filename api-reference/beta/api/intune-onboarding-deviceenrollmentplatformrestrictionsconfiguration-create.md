@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create deviceEnrollmentPlatformRestrictionsConfiguration"
 description: "Create a new deviceEnrollmentPlatformRestrictionsConfiguration object."
 author: "jaiprakashmb"

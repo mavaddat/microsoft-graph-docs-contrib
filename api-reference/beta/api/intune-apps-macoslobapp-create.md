@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create macOSLobApp"
 description: "Create a new macOSLobApp object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "List comanagementEligibleDevices"
 description: "List properties and relationships of the comanagementEligibleDevice objects."
 author: "jaiprakashmb"

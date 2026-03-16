@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create appleEnrollmentProfileAssignment"
 description: "Create a new appleEnrollmentProfileAssignment object."
 author: "jaiprakashmb"

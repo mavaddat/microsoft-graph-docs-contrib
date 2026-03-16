@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsModelScoreses"
 description: "List properties and relationships of the userExperienceAnalyticsModelScores objects."
 author: "jaiprakashmb"

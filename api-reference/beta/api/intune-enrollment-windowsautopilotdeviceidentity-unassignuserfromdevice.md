@@ -1,4 +1,4 @@
----
+﻿---
 title: "unassignUserFromDevice action"
 description: "Unassigns the user from an Autopilot device."
 author: "jaiprakashmb"

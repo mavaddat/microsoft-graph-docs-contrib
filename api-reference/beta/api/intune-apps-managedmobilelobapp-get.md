@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get managedMobileLobApp"
 description: "Read properties and relationships of the managedMobileLobApp object."
 author: "jaiprakashmb"

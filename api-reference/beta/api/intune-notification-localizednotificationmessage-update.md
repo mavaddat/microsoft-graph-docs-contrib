@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update localizedNotificationMessage"
 description: "Update the properties of a localizedNotificationMessage object."
 author: "jaiprakashmb"

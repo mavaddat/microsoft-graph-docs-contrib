@@ -1,4 +1,4 @@
----
+﻿---
 title: "List androidManagedStoreWebApps"
 description: "List properties and relationships of the androidManagedStoreWebApp objects."
 author: "jaiprakashmb"

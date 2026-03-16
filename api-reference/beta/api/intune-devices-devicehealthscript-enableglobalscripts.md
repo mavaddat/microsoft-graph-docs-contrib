@@ -1,4 +1,4 @@
----
+﻿---
 title: "enableGlobalScripts action"
 description: "Intune Devices Devicehealthscript Enableglobalscripts Api ."
 author: "jaiprakashmb"

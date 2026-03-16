@@ -1,4 +1,4 @@
----
+﻿---
 title: "List importedDeviceIdentityResults"
 description: "List properties and relationships of the importedDeviceIdentityResult objects."
 author: "jaiprakashmb"

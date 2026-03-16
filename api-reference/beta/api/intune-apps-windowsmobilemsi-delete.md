@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete windowsMobileMSI"
 description: "Deletes a windowsMobileMSI."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create managedAndroidStoreApp"
 description: "Create a new managedAndroidStoreApp object."
 author: "jaiprakashmb"

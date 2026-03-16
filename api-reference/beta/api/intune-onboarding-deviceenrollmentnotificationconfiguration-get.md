@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get deviceEnrollmentNotificationConfiguration"
 description: "Read properties and relationships of the deviceEnrollmentNotificationConfiguration object."
 author: "jaiprakashmb"

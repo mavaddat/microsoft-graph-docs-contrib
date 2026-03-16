@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get macOSMicrosoftDefenderApp"
 description: "Read properties and relationships of the macOSMicrosoftDefenderApp object."
 author: "jaiprakashmb"

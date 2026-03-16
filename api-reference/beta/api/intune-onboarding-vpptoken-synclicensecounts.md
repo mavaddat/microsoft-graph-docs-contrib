@@ -1,4 +1,4 @@
----
+﻿---
 title: "syncLicenseCounts action"
 description: "Intune Onboarding Vpptoken Synclicensecounts Api ."
 author: "jaiprakashmb"

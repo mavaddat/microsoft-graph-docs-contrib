@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsDeviceStartupProcesses"
 description: "List properties and relationships of the userExperienceAnalyticsDeviceStartupProcess objects."
 author: "jaiprakashmb"

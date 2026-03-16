@@ -1,4 +1,4 @@
----
+﻿---
 title: "List winGetApps"
 description: "List properties and relationships of the winGetApp objects."
 author: "jaiprakashmb"

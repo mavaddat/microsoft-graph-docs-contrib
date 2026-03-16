@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete androidManagedStoreApp"
 description: "Deletes a androidManagedStoreApp."
 author: "jaiprakashmb"

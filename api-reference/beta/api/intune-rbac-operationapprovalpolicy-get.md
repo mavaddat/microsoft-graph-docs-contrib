@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get operationApprovalPolicy"
 description: "Read properties and relationships of the operationApprovalPolicy object."
 author: "jaiprakashmb"

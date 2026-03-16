@@ -1,4 +1,4 @@
----
+﻿---
 title: "List managedAppLogCollectionRequests"
 description: "List properties and relationships of the managedAppLogCollectionRequest objects."
 author: "jaiprakashmb"

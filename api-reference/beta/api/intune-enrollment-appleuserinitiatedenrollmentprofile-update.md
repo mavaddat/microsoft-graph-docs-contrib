@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update appleUserInitiatedEnrollmentProfile"
 description: "Update the properties of a appleUserInitiatedEnrollmentProfile object."
 author: "jaiprakashmb"

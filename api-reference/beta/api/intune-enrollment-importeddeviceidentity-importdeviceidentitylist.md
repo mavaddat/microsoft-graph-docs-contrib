@@ -1,4 +1,4 @@
----
+﻿---
 title: "importDeviceIdentityList action"
 description: "Intune Enrollment Importeddeviceidentity Importdeviceidentitylist Api ."
 author: "jaiprakashmb"

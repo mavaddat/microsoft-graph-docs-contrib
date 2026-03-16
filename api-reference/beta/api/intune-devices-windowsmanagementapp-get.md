@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get windowsManagementApp"
 description: "Read properties and relationships of the windowsManagementApp object."
 author: "jaiprakashmb"

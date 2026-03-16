@@ -1,4 +1,4 @@
----
+﻿---
 title: "retrieveDeviceLocalAdminAccountDetail function"
 description: "Intune Devices Manageddevice Retrievedevicelocaladminaccountdetail Api ."
 author: "jaiprakashmb"

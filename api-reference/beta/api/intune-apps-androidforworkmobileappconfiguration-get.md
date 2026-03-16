@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get androidForWorkMobileAppConfiguration"
 description: "Read properties and relationships of the androidForWorkMobileAppConfiguration object."
 author: "jaiprakashmb"
@@ -66,7 +66,7 @@ Here is an example of the response. Note: The response object shown here may be 
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 881
+Content-Length: 928
 
 {
   "value": {
@@ -93,7 +93,8 @@ Content-Length: 881
       }
     ],
     "profileApplicability": "androidWorkProfile",
-    "connectedAppsEnabled": true
+    "connectedAppsEnabled": true,
+    "credentialProviderRoleState": "allowed"
   }
 }
 ```

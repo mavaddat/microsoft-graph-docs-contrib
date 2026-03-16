@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get roleDefinition"
 description: "Read properties and relationships of the roleDefinition object."
 author: "jaiprakashmb"

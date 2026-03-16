@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get deviceManagementTroubleshootingEvent"
 description: "Read properties and relationships of the deviceManagementTroubleshootingEvent object."
 author: "jaiprakashmb"

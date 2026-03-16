@@ -1,4 +1,4 @@
----
+﻿---
 title: "List windowsManagedAppRegistrations"
 description: "List properties and relationships of the windowsManagedAppRegistration objects."
 author: "jaiprakashmb"

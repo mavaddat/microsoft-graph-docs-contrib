@@ -1,4 +1,4 @@
----
+﻿---
 title: "enrollNowAction action"
 description: "Trigger comanagement enrollment action on ConfigurationManager client"
 author: "jaiprakashmb"

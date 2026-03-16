@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create windowsMicrosoftEdgeApp"
 description: "Create a new windowsMicrosoftEdgeApp object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create deviceComanagementAuthorityConfiguration"
 description: "Create a new deviceComanagementAuthorityConfiguration object."
 author: "jaiprakashmb"

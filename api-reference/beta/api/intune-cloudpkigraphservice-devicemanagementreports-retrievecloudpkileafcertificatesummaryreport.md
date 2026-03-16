@@ -1,4 +1,4 @@
----
+﻿---
 title: "retrieveCloudPkiLeafCertificateSummaryReport action"
 description: "Intune Cloudpkigraphservice Devicemanagementreports Retrievecloudpkileafcertificatesummaryreport Api ."
 author: "jaiprakashmb"

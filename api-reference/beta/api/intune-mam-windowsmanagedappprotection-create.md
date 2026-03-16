@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create windowsManagedAppProtection"
 description: "Create a new windowsManagedAppProtection object."
 author: "jaiprakashmb"

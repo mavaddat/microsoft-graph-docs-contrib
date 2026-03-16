@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update mobileAppAssignment"
 description: "Update the properties of a mobileAppAssignment object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get appleUserInitiatedEnrollmentProfile"
 description: "Read properties and relationships of the appleUserInitiatedEnrollmentProfile object."
 author: "jaiprakashmb"

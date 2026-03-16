@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update androidManagedStoreWebApp"
 description: "Update the properties of a androidManagedStoreWebApp object."
 author: "jaiprakashmb"

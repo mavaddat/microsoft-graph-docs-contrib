@@ -1018,7 +1018,10 @@
             "employeeExperienceUser",
             "engagementAsyncOperation",
             "engagementRole",
-            "engagementRoleMember"
+            "engagementRoleMember",
+            "storyline",
+            "storylineFollower",
+            "storylineFollowing"
           ],
           "complexTypes": [
             "engagementConversationMessageAttachment",
@@ -2505,6 +2508,9 @@
         "profilePropertySetting",
         "userAnalytics"
       ],
+      "complexTypes": [
+        "profileSourceLocalization"
+      ],
       "childNodes": [
         {
           "name": "Person",
@@ -2881,10 +2887,6 @@
           "resources": [
             "microsoft.graph.security.auditLogQuery",
             "microsoft.graph.security.auditLogRecord"
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.auditData",
-            "microsoft.graph.security.defaultAuditData"
           ]
         },
         {

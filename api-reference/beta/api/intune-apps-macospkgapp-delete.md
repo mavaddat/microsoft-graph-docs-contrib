@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete macOSPkgApp"
 description: "Deletes a macOSPkgApp."
 author: "jaiprakashmb"

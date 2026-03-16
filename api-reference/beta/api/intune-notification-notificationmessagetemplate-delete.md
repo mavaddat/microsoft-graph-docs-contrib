@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete notificationMessageTemplate"
 description: "Deletes a notificationMessageTemplate."
 author: "jaiprakashmb"

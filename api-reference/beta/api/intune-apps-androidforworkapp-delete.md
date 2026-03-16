@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete androidForWorkApp"
 description: "Deletes a androidForWorkApp."
 author: "jaiprakashmb"

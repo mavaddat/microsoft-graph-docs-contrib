@@ -1,4 +1,4 @@
----
+﻿---
 title: "List iosiPadOSWebClips"
 description: "List properties and relationships of the iosiPadOSWebClip objects."
 author: "jaiprakashmb"

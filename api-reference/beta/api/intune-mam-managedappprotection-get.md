@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get managedAppProtection"
 description: "Read properties and relationships of the managedAppProtection object."
 author: "jaiprakashmb"

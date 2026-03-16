@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsAnomalyDevices"
 description: "List properties and relationships of the userExperienceAnalyticsAnomalyDevice objects."
 author: "jaiprakashmb"

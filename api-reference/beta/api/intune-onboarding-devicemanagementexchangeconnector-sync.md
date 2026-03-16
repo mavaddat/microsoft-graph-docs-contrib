@@ -1,4 +1,4 @@
----
+﻿---
 title: "sync action"
 description: "Intune Onboarding Devicemanagementexchangeconnector Sync Api ."
 author: "jaiprakashmb"

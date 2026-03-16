@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete iosiPadOSWebClip"
 description: "Deletes a iosiPadOSWebClip."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get deviceComanagementAuthorityConfiguration"
 description: "Read properties and relationships of the deviceComanagementAuthorityConfiguration object."
 author: "jaiprakashmb"

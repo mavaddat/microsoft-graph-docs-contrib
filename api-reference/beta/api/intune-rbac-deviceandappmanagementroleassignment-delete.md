@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete deviceAndAppManagementRoleAssignment"
 description: "Deletes a deviceAndAppManagementRoleAssignment."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete deviceHealthScript"
 description: "Deletes a deviceHealthScript."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete androidForWorkMobileAppConfiguration"
 description: "Deletes a androidForWorkMobileAppConfiguration."
 author: "jaiprakashmb"

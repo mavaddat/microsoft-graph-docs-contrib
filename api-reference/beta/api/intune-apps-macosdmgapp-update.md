@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update macOSDmgApp"
 description: "Update the properties of a macOSDmgApp object."
 author: "jaiprakashmb"

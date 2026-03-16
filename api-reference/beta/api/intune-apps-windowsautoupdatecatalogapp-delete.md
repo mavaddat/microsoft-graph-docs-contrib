@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete windowsAutoUpdateCatalogApp"
 description: "Deletes a windowsAutoUpdateCatalogApp."
 author: "jaiprakashmb"

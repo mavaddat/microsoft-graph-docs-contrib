@@ -1,4 +1,4 @@
----
+﻿---
 title: "updateDeviceProfileAssignment action"
 description: "Intune Enrollment Enrollmentprofile Updatedeviceprofileassignment Api ."
 author: "jaiprakashmb"

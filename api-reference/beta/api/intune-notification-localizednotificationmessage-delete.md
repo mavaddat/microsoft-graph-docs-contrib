@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete localizedNotificationMessage"
 description: "Deletes a localizedNotificationMessage."
 author: "jaiprakashmb"

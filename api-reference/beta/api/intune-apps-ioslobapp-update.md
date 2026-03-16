@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update iosLobApp"
 description: "Update the properties of a iosLobApp object."
 author: "jaiprakashmb"

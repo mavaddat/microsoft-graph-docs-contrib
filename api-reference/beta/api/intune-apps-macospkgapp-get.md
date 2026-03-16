@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get macOSPkgApp"
 description: "Read properties and relationships of the macOSPkgApp object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get managedAppStatusRaw"
 description: "Read properties and relationships of the managedAppStatusRaw object."
 author: "jaiprakashmb"

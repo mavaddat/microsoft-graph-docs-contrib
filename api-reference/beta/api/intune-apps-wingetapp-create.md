@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create winGetApp"
 description: "Create a new winGetApp object."
 author: "jaiprakashmb"

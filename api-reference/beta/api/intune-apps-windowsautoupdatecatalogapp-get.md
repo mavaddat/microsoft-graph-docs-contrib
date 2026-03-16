@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get windowsAutoUpdateCatalogApp"
 description: "Read properties and relationships of the windowsAutoUpdateCatalogApp object."
 author: "jaiprakashmb"

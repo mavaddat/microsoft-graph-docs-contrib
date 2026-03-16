@@ -1,4 +1,4 @@
----
+﻿---
 title: "List windowsManagedAppProtections"
 description: "List properties and relationships of the windowsManagedAppProtection objects."
 author: "jaiprakashmb"

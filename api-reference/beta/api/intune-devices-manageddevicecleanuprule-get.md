@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get managedDeviceCleanupRule"
 description: "Read properties and relationships of the managedDeviceCleanupRule object."
 author: "jaiprakashmb"

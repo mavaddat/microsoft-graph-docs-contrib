@@ -1,4 +1,4 @@
----
+﻿---
 title: "updateGlobalScript action"
 description: "Update the Proprietary Device Health Script"
 author: "jaiprakashmb"

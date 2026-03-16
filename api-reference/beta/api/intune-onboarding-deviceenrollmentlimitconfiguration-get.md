@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get deviceEnrollmentLimitConfiguration"
 description: "Read properties and relationships of the deviceEnrollmentLimitConfiguration object."
 author: "jaiprakashmb"

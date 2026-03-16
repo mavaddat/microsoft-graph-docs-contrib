@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create deviceShellScript"
 description: "Create a new deviceShellScript object."
 author: "jaiprakashmb"

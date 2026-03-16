@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create deviceCustomAttributeShellScript"
 description: "Create a new deviceCustomAttributeShellScript object."
 author: "jaiprakashmb"

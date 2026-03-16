@@ -1,4 +1,4 @@
----
+﻿---
 title: "getState function"
 description: "Intune Policyset Deviceandappmanagementassignmentfilter Getstate Api ."
 author: "jaiprakashmb"

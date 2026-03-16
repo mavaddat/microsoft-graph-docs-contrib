@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete managedAndroidLobApp"
 description: "Deletes a managedAndroidLobApp."
 author: "jaiprakashmb"

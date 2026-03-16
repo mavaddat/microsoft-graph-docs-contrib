@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get resourceOperation"
 description: "Read properties and relationships of the resourceOperation object."
 author: "jaiprakashmb"

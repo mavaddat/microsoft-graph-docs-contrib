@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsWorkFromAnywhereDevices"
 description: "List properties and relationships of the userExperienceAnalyticsWorkFromAnywhereDevice objects."
 author: "jaiprakashmb"

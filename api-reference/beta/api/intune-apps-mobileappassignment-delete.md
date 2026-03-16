@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete mobileAppAssignment"
 description: "Deletes a mobileAppAssignment."
 author: "jaiprakashmb"

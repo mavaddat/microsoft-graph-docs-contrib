@@ -1,4 +1,4 @@
----
+﻿---
 title: "initiateDeviceAttestation action"
 description: "Perform Device Attestation"
 author: "jaiprakashmb"

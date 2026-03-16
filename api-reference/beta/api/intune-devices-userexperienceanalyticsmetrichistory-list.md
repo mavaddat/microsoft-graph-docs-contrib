@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsMetricHistories"
 description: "List properties and relationships of the userExperienceAnalyticsMetricHistory objects."
 author: "jaiprakashmb"

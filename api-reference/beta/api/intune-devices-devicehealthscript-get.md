@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get deviceHealthScript"
 description: "Read properties and relationships of the deviceHealthScript object."
 author: "jaiprakashmb"

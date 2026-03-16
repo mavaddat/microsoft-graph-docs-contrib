@@ -1,4 +1,4 @@
----
+﻿---
 title: "disconnect action"
 description: "A request to remove the active TeamViewer connector"
 author: "jaiprakashmb"

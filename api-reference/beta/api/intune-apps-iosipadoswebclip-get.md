@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get iosiPadOSWebClip"
 description: "Read properties and relationships of the iosiPadOSWebClip object."
 author: "jaiprakashmb"

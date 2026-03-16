@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete mobileAppProvisioningConfigGroupAssignment"
 description: "Deletes a mobileAppProvisioningConfigGroupAssignment."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsBatteryHealthDeviceRuntimeHistories"
 description: "List properties and relationships of the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory objects."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "setStoreLayout action"
 description: "Sets the Managed Google Play store layout type via Google EMM API."
 author: "jaiprakashmb"

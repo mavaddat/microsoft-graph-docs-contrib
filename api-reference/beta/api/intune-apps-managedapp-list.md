@@ -1,4 +1,4 @@
----
+﻿---
 title: "List managedApps"
 description: "List properties and relationships of the managedApp objects."
 author: "jaiprakashmb"

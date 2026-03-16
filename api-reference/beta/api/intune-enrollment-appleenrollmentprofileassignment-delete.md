@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete appleEnrollmentProfileAssignment"
 description: "Deletes a appleEnrollmentProfileAssignment."
 author: "jaiprakashmb"

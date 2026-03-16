@@ -1,4 +1,4 @@
----
+﻿---
 title: "getRemediationHistory function"
 description: "Function to get the number of remediations by a device health scripts"
 author: "jaiprakashmb"

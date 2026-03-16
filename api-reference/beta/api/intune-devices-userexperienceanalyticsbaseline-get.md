@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get userExperienceAnalyticsBaseline"
 description: "Read properties and relationships of the userExperienceAnalyticsBaseline object."
 author: "jaiprakashmb"

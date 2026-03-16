@@ -1,4 +1,4 @@
----
+﻿---
 title: "getNoncompliantDevicesToRetire action"
 description: "Intune Deviceconfig Devicecompliancepolicy Getnoncompliantdevicestoretire Api ."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "List deviceShellScripts"
 description: "List properties and relationships of the deviceShellScript objects."
 author: "jaiprakashmb"

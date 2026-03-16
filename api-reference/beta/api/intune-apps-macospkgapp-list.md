@@ -1,4 +1,4 @@
----
+﻿---
 title: "List macOSPkgApps"
 description: "List properties and relationships of the macOSPkgApp objects."
 author: "jaiprakashmb"

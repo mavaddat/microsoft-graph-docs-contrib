@@ -1,4 +1,4 @@
----
+﻿---
 title: "triggerDeviceScopeAction action"
 description: "Intune Devices Userexperienceanalyticsdevicescope Triggerdevicescopeaction Api ."
 author: "jaiprakashmb"

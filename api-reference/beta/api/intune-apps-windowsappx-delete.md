@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete windowsAppX"
 description: "Deletes a windowsAppX."
 author: "jaiprakashmb"

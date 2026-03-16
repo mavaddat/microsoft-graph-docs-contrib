@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get windowsRestoreDeviceEnrollmentConfiguration"
 description: "Read properties and relationships of the windowsRestoreDeviceEnrollmentConfiguration object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete deviceComplianceScript"
 description: "Deletes a deviceComplianceScript."
 author: "jaiprakashmb"

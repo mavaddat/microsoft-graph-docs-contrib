@@ -1,4 +1,4 @@
----
+﻿---
 title: "List windowsInformationProtectionDeviceRegistrations"
 description: "List properties and relationships of the windowsInformationProtectionDeviceRegistration objects."
 author: "jaiprakashmb"

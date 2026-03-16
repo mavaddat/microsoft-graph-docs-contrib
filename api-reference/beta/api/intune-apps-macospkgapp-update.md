@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update macOSPkgApp"
 description: "Update the properties of a macOSPkgApp object."
 author: "jaiprakashmb"

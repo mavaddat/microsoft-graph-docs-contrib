@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update macOSMicrosoftEdgeApp"
 description: "Update the properties of a macOSMicrosoftEdgeApp object."
 author: "jaiprakashmb"

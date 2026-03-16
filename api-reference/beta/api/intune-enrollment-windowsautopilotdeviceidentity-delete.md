@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete windowsAutopilotDeviceIdentity"
 description: "Deletes a windowsAutopilotDeviceIdentity."
 author: "jaiprakashmb"

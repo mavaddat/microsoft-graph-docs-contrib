@@ -1,4 +1,4 @@
----
+﻿---
 title: "getState function"
 description: "Intune Devices Tenantattachrbac Getstate Api ."
 author: "jaiprakashmb"

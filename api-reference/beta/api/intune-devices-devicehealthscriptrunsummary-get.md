@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get deviceHealthScriptRunSummary"
 description: "Read properties and relationships of the deviceHealthScriptRunSummary object."
 author: "jaiprakashmb"

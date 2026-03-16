@@ -1,4 +1,4 @@
----
+﻿---
 title: "List userExperienceAnalyticsDeviceScopes"
 description: "List properties and relationships of the userExperienceAnalyticsDeviceScope objects."
 author: "jaiprakashmb"

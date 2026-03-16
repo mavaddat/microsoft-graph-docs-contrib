@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get macOSWebClip"
 description: "Read properties and relationships of the macOSWebClip object."
 author: "jaiprakashmb"

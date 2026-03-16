@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete depEnrollmentProfile"
 description: "Deletes a depEnrollmentProfile."
 author: "jaiprakashmb"

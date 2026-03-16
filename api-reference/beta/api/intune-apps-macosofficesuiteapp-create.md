@@ -1,4 +1,4 @@
----
+﻿---
 title: "Create macOSOfficeSuiteApp"
 description: "Create a new macOSOfficeSuiteApp object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "List appleEnrollmentProfileAssignments"
 description: "List properties and relationships of the appleEnrollmentProfileAssignment objects."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
----
+﻿---
 title: "pauseConfigurationRefresh action"
 description: "Initiates a command to pause config refresh for the device."
 author: "jaiprakashmb"

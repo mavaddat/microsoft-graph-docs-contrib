@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get deviceManagementAutopilotEvent"
 description: "Read properties and relationships of the deviceManagementAutopilotEvent object."
 author: "jaiprakashmb"

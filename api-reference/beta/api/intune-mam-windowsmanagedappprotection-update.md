@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update windowsManagedAppProtection"
 description: "Update the properties of a windowsManagedAppProtection object."
 author: "jaiprakashmb"

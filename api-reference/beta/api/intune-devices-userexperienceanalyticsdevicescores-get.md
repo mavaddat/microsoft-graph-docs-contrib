@@ -1,4 +1,4 @@
----
+﻿---
 title: "Get userExperienceAnalyticsDeviceScores"
 description: "Read properties and relationships of the userExperienceAnalyticsDeviceScores object."
 author: "jaiprakashmb"

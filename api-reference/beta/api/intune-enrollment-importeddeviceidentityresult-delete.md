@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete importedDeviceIdentityResult"
 description: "Deletes a importedDeviceIdentityResult."
 author: "jaiprakashmb"

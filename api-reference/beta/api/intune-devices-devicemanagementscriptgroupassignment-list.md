@@ -1,4 +1,4 @@
----
+﻿---
 title: "List deviceManagementScriptGroupAssignments"
 description: "List properties and relationships of the deviceManagementScriptGroupAssignment objects."
 author: "jaiprakashmb"

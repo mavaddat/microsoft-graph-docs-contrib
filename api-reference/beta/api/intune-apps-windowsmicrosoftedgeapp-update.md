@@ -1,4 +1,4 @@
----
+﻿---
 title: "Update windowsMicrosoftEdgeApp"
 description: "Update the properties of a windowsMicrosoftEdgeApp object."
 author: "jaiprakashmb"

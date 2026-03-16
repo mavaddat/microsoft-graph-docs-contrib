@@ -1,4 +1,4 @@
----
+﻿---
 title: "getComanagementEligibleDevicesSummary function"
 description: "Intune Devices Devicemanagement Getcomanagementeligibledevicessummary Api ."
 author: "jaiprakashmb"

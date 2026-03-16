@@ -1,4 +1,4 @@
----
+﻿---
 title: "initiateMobileDeviceManagementKeyRecovery action"
 description: "Perform MDM key recovery and TPM attestation"
 author: "jaiprakashmb"

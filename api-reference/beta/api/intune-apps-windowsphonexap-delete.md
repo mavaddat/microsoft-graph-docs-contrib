@@ -1,4 +1,4 @@
----
+﻿---
 title: "Delete windowsPhoneXAP"
 description: "Deletes a windowsPhoneXAP."
 author: "jaiprakashmb"

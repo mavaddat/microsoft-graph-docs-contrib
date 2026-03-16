@@ -1,4 +1,4 @@
----
+﻿---
 title: "retrieveMacOSManagedDeviceLocalAdminAccountDetail function"
 description: "Intune Devices Manageddevice Retrievemacosmanageddevicelocaladminaccountdetail Api ."
 author: "jaiprakashmb"

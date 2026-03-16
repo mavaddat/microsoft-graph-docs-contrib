@@ -1,4 +1,4 @@
----
+﻿---
 title: "generateServerLogCollectionRequest action"
 description: "Intune Mstunnel Microsofttunnelserver Generateserverlogcollectionrequest Api ."
 author: "jaiprakashmb"
