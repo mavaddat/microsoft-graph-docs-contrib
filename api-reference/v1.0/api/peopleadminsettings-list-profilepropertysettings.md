@@ -86,11 +86,11 @@ Content-Type: application/json
     {
       "@odata.type": "#microsoft.graph.profilePropertySetting",
       "id": "00000000-0000-0000-0000-000000000001",
-      "name": null,
+      "name": "Profile priority config",
+      "displayName": "Profile priority config",
       "prioritizedSourceUrls": [
         "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
-      ],
-      "displayName": null
+      ]
     }
   ]
 }

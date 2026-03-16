@@ -4,7 +4,7 @@ description: "Delete a profilePropertySetting object."
 author: "rwaithera"
 ms.date: 03/16/2026
 ms.localizationpriority: medium
-ms.subservice: "*people"
+ms.subservice: "people"
 doc_type: apiPageType
 ---
 

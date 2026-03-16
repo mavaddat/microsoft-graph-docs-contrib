@@ -104,8 +104,8 @@ Content-Type: application/json
 {
   "@odata.type": "#microsoft.graph.profilePropertySetting",
   "id": "00000000-0000-0000-0000-000000000001",
-  "name": "People systems priority",
-  "displayName": "People systems priority",
+  "name": "Profile priority config",
+  "displayName": "Profile priority config",
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')",
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr2')",

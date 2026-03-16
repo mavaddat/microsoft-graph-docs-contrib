@@ -9,7 +9,7 @@ ms.date: 05/02/2025
 ms.topic: how-to
 ---
 
-# Manage profile source precedence settings for an organization using the Microsoft Graph API (preview)
+# Manage profile source precedence settings for an organization using the Microsoft Graph API
 
 Profile source precedence is a feature that empowers tenant admins with control over the source of profile data for their organization's users. Profile data might originate from Microsoft Entra ID, organizational data in Microsoft 365, user profile synchronization, or other sources. When multiple sources provide overlapping data, a tenant administrator can configure the authoritative source of profile data for users in their organization.
 
@@ -47,8 +47,8 @@ Content-Type: application/json
   "value": [
     {
       "id": "00000000-0000-0000-0000-000000000001",
-      "name": "People systems priority",
-      "displayName": "People systems priority",
+      "name": "Profile priority config",
+      "displayName": "Profile priority config",
       "prioritizedSourceUrls": [
         "https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
       ]
@@ -85,8 +85,8 @@ Content-type: application/json
 
 {
   "id": "00000000-0000-0000-0000-000000000001",
-  "name": "People systems priority",
-  "displayName": "People systems priority",
+  "name": "Profile priority config",
+  "displayName": "Profile priority config",
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='contosohr1')",
     "https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
@@ -123,8 +123,8 @@ Content-type: application/json
 
 {
   "id": "00000000-0000-0000-0000-000000000001",
-  "name": "People systems priority",
-  "displayName": "People systems priority",
+  "name": "Profile priority config",
+  "displayName": "Profile priority config",
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='contosohr1')",
     "https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='contosohr2')",
