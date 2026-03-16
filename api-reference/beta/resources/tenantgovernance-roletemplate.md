@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a Microsoft Entra role template definition used in delegated administration role assignments. The role template specifies which Microsoft Entra role should be assigned.
+Represents a [Microsoft Entra role template definition](../resources/roledefinition.md) used in [delegated administration role assignments](../resources/tenantgovernanceservices-delegatedadministrationroleassignmentsnapshot.md). The role template specifies which Microsoft Entra role should be assigned.
 
 
 ## Properties

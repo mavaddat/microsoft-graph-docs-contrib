@@ -52,10 +52,10 @@ PATCH /directory/tenantGovernance/governancePolicyTemplates/default
 
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|The display name of the policy template. Required.|
-|description|String|A description of the policy template. Required.|
-|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multitenant applications to be provisioned in the governed tenant when the governance relationship is established. Required.|
-|delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established. Required.|
+|displayName|String|The display name of the policy template. |
+|description|String|A description of the policy template.|
+|multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multitenant applications to be provisioned in the governed tenant when the governance relationship is established. |
+|delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established. |
 
 
 

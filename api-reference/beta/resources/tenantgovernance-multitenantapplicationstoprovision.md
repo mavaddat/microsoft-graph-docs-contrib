@@ -14,13 +14,13 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a multi-tenant application that should be provisioned in the governed tenant when a governance relationship is established. This allows the governing tenant to deploy management or monitoring applications into the governed tenant.
+Represents a multi-tenant application that should be provisioned in the governed tenant when a governance relationship is established. This allows the governing tenant to deploy management or monitoring applications into the governed tenant. This resource is defined in the **multiTenantApplicationsToProvision** property of [governancePolicyTemplate](../resources/tenantgovernanceservices-governancepolicytemplate.md).
 
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|appId|String|The application ID (client ID) of the multi-tenant application.|
+|appId|String|The **appId** (client ID) of the multi-tenant application.|
 |displayName|String|The display name of the application.|
 |objectId|String|The object ID of the service principal in the governing tenant.|
 |requiredResourceAccesses|[microsoft.graph.tenantGovernanceServices.requiredResourceAccess](../resources/tenantgovernance-requiredresourceaccess.md) collection|The collection of resource accesses (permissions) required by the application.|

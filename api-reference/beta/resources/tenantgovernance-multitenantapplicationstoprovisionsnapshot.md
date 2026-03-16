@@ -14,12 +14,12 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a snapshot of a multi-tenant application configuration that was captured when a governance relationship or request was created. This preserves the application configuration as it was defined at that point in time.
+Represents a snapshot of a multi-tenant application configuration that was captured when a [governance relationship](../resources/tenantgovernanceservices-governancerelationship.md) or [request](../resources/tenantgovernanceservices-governancerequest.md) was created. This preserves the application configuration as it was defined at that point in time.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|appId|String|The application ID (client ID) of the multi-tenant application.|
+|appId|String|The **appId** (client ID) of the multi-tenant application.|
 |displayName|String|The display name of the application.|
 |objectId|String|The object ID of the service principal in the governing tenant.|
 |requiredResourceAccesses|[microsoft.graph.tenantGovernanceServices.requiredResourceAccess](../resources/tenantgovernance-requiredresourceaccess.md) collection|The collection of resource accesses (permissions) required by the application.|

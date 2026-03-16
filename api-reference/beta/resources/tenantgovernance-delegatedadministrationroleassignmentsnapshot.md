@@ -14,12 +14,12 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a snapshot of a delegated administration role assignment configuration that was captured when a governance relationship or request was created. This preserves the role assignment configuration as it was defined at that point in time.
+Represents a snapshot of a delegated administration role assignment configuration that was captured when a [governanceRelationship](../resources/tenantgovernanceservices-governancerelationship.md) or [governanceRequest](../resources/tenantgovernanceservices-governancerequest.md) was created. This preserves the role assignment configuration as it was defined at that point in time.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|groupId|String|The object ID of the group in the governing tenant that will be assigned the specified roles.|
+|groupId|String|The object ID of the role-assignable security group in the governing tenant that will be assigned the specified roles.|
 |roleTemplates|[microsoft.graph.tenantGovernanceServices.roleTemplate](../resources/tenantgovernance-roletemplate.md) collection|The collection of role templates that define the Microsoft Entra roles to be assigned.|
 
 ## Relationships

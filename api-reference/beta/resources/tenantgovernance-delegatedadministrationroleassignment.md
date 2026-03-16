@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a role assignment configuration for delegated administration in a governance relationship. Specifies which security group in the governing tenant should be assigned which roles in the governed tenant.
+Represents a role assignment configuration for delegated administration in a governance relationship. Specifies which security group in the governing tenant should be assigned which roles in the governed tenant. This resource is defined in the **delegatedAdministrationRoleAssignment ** property of [governancePolicyTemplate](../resources/tenantgovernanceservices-governancepolicytemplate.md).
 
 
 ## Properties

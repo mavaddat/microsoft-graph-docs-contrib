@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an invitation sent by a future governed tenant to establish a governance relationship with a future governing tenant. 
+Represents an invitation sent by a future governed tenant to establish a [governance relationship](../resources/tenantgovernanceservices-governanceinvitation.md) with a future governing tenant. 
 
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).

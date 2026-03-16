@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) object.
+Delete a [governancePolicyTemplate](../resources/tenantgovernance-governancepolicytemplate.md) object. You can't delete the default template or templates currently used by active relationships.
 
 ## Permissions
 
@@ -69,7 +69,6 @@ DELETE https://graph.microsoft.com/beta/directory/tenantGovernance/governancePol
 ### Response
 
 The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true

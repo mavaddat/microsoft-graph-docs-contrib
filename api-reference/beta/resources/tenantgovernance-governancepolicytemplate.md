@@ -16,7 +16,6 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Represents a policy template that defines the configuration for governance relationships, including delegated administration role assignments and multi-tenant applications to provision. Policy templates are used when creating [governanceRequest](tenantgovernance-governancerequest.md) objects and are stored as [snapshots](tenantgovernance-relationshippolicy.md) in established [governanceRelationship](tenantgovernance-governancerelationship.md) objects.
 
-## Default policy template
 
 The system provides a default policy template with the ID `default`. This template serves as a reusable configuration that is applied when governance relationships are automatically created for add-on tenants. The default template cannot be deleted.
 
@@ -39,7 +38,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernance-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established.|
 |description|String|A description of the policy template.|
 |displayName|String|The display name of the policy template.|
-|id|String|The unique identifier for the policy template. Inherited from [entity](../resources/entity.md).|
+|id|String|The unique identifier for the policy template. Is `default` for the default template. Inherited from [entity](../resources/entity.md).|
 |lastModifiedDateTime|DateTimeOffset|The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
 |multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernance-multitenantapplicationstoprovision.md) collection|A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established.|
 |version|String|The version of the policy template. Version count increased by 1 when updated.|
