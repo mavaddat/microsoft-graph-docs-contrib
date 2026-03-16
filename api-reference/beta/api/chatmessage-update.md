@@ -97,6 +97,7 @@ If successful, this method returns a `200 OK` response.
 ### Errors
 
 The following table lists other response codes that this API can return.
+
 | Sample error type | Status code | Sample error messages |
 |:---|:---|:---|
 | E5 license or Microsoft Communications service plan requirement not met.  | 402 Payment Required | `"...needs a valid license to access this API..."` </br> `"...tenant needs a valid license to access this API..."` |
