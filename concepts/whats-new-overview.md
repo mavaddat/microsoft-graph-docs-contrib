@@ -32,6 +32,11 @@ Use the following new container columns APIs added to further support structured
 - Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
 
+### Teamswork
+
+Model parameters are deperectaed from Teams export APIs
+  - [Teams License](/graph/teams-licenses)
+
 ## March 2026: New in preview only
 
 ### Backup storage
