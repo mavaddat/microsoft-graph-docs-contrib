@@ -89,12 +89,10 @@ If successful, this method returns a `200 OK` response.
 
 ### Errors
 
-When used with application permissions, Microsoft Communications DLP [service plan](/azure/active-directory/enterprise-users/licensing-service-plan-reference), such as one of these [supported licenses](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#microsoft-purview-data-loss-prevention-graph-apis-for-teams-data-loss-prevention-dlp-and-for-teams-export) is required.
-
-| Sample error type                                | Status code            | Sample error messages                                                                                                                       |
-|:-------------------------------------------------|:-----------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
-| E5 license or Microsoft Communications Service Plan requirement not met.  | 402 (Payment Required) | `"...needs a valid license to access this API..."` </br> `"...tenant needs a valid license to access this API..."` |
-
+The following table lists other response codes that this API can return.
+| Sample error type | Status code | Sample error messages |
+|:---|:---|:---|
+| E5 license or Microsoft Communications service plan requirement not met.  | 402 Payment Required | `"...needs a valid license to access this API..."` </br> `"...tenant needs a valid license to access this API..."` |
 
 ## Examples
 
