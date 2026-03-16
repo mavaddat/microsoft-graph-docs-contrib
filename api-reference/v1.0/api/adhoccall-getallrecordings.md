@@ -2,7 +2,6 @@
 title: "adhocCall: getAllRecordings"
 description: "Get all recordings from adhoc call instances that a specific user initiates."
 author: "kanchm"
-#customer intent: As a developer, I want to retrieve all recordings from ad hoc calls initiated by a specific user so that I can analyze meeting data for compliance purposes.
 ms.reviewer: v-sukanyadas
 ms.date: 02/27/2026
 ms.localizationpriority: medium
@@ -32,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /adhocCalls/getAllRecordings(userId={userId}, startDateTime={startDateTime}, endDateTime={endDateTime})
+GET /users/{usersId}/adhocCalls/getAllRecordings
 ```
 
 ## Function parameters
