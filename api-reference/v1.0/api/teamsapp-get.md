@@ -26,7 +26,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-[!INCLUDE [permissions-table](../includes/permissions/channel-get-enabledapps-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/teamsapp-get-permissions.md)]
 
 ## HTTP request
 
