@@ -72,14 +72,6 @@ items:
     items:
     - name: Teams app
       href: ../../resources/teamsapp.md
-    - name: List apps in channel
-      href: ../../api/channel-list-enabledapps.md
-    - name: Get app in channel
-      href: ../../api/teamsapp-get.md
-    - name: Add app to channel
-      href: ../../api/channel-post-enabledapps.md
-    - name: Remove app from channel
-      href: ../../api/channel-delete-enabledapps.md
     - name: List apps in catalog
       href: ../../api/appcatalogs-list-teamsapps.md
     - name: Publish apps to catalog
@@ -90,6 +82,14 @@ items:
       href: ../../api/teamsapp-delete.md
     - name: Get associated bot
       href: ../../api/teamworkbot-get.md
+    - name: List apps in channel
+      href: ../../api/channel-list-enabledapps.md
+    - name: Get app in channel
+      href: ../../api/teamsapp-get.md
+    - name: Add app to channel
+      href: ../../api/channel-post-enabledapps.md
+    - name: Remove app from channel
+      href: ../../api/channel-delete-enabledapps.md
   - name: Teams app installation
     items:
     - name: Teams app installation
