@@ -50,8 +50,8 @@ PATCH /admin/people/profilePropertySettings/{profilePropertySettingId}
 
 |Property|Type|Description|
 |:---|:---|:---|
-|name|String|Other name of the property-level setting. For backward compatibility. Optional.|
 |displayName|String|Name of the property-level setting. Optional.|
+|name|String|Other name of the property-level setting. For backward compatibility. Optional.|
 |prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization. Required.|
 
 ## Response
@@ -100,8 +100,8 @@ Content-Type: application/json
 {
   "@odata.type": "#microsoft.graph.profilePropertySetting",
   "id": "00000000-0000-0000-0000-000000000001",
-  "name": "Profile priority config",
   "displayName": "Profile priority config",
+  "name": "Profile priority config",
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')",
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr2')",
