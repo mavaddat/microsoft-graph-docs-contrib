@@ -10,7 +10,7 @@ doc_type: enumTypes
 
 # Microsoft Graph tenant governance enumeration values
 
-Namespace: microsoft.graph.tenantgovernanceservices
+Namespace: microsoft.graph.tenantGovernanceServices
 
 ### permissionType values 
 
@@ -24,7 +24,7 @@ Namespace: microsoft.graph.tenantgovernanceservices
 
 # Microsoft Graph tenant governance services enumeration values
 
-Namespace: microsoft.graph.tenantgovernanceservices
+Namespace: microsoft.graph.tenantGovernanceServices
 
 ### relationshipCreationType values 
 
@@ -38,7 +38,7 @@ Namespace: microsoft.graph.tenantgovernanceservices
 
 # Microsoft Graph tenant governance services enumeration values
 
-Namespace: microsoft.graph.tenantgovernanceservices
+Namespace: microsoft.graph.tenantGovernanceServices
 
 ### relationshipStatus values 
 
@@ -53,7 +53,7 @@ Namespace: microsoft.graph.tenantgovernanceservices
 
 # Microsoft Graph tenant governance services enumeration values
 
-Namespace: microsoft.graph.tenantgovernanceservices
+Namespace: microsoft.graph.tenantGovernanceServices
 
 ### requestStatus values 
 
@@ -68,6 +68,6 @@ Namespace: microsoft.graph.tenantgovernanceservices
 
 <!-- {
   "type": "#page.annotation",
-  "namespace": "microsoft.graph.tenantgovernanceservices"
+  "namespace": "microsoft.graph.tenantGovernanceServices"
 }
 -->
