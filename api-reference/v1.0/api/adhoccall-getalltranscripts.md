@@ -1,6 +1,6 @@
 ---
 title: "adhocCall: getAllTranscripts"
-description: "Get all callTranscript objects from adhoc call instances that a specific user initiates."
+description: "Get all callTranscript objects from ad hoc call instances that a specific user initiates."
 author: "kanchm"
 ms.reviewer: v-sukanyadas
 ms.date: 02/27/2026
@@ -13,7 +13,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get all [callTranscript](calltranscript.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates. This API enables you to programmatically access and analyze meeting transcripts for calls organized by a given user, filtered by optional date ranges.
+Get all [callTranscript](../resources/calltranscript.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates. This API enables you to programmatically access and analyze meeting transcripts for calls organized by a given user, filtered by optional date ranges.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

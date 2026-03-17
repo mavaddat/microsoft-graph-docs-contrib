@@ -1,6 +1,6 @@
 ---
 title: "adhocCall: getAllRecordings"
-description: "Get the callRecording objects from adhoc call instances that a specific user initiates."
+description: "Get the callRecording objects from ad hoc call instances that a specific user initiates."
 author: "kanchm"
 ms.reviewer: v-sukanyadas
 ms.date: 02/27/2026
@@ -13,7 +13,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get the [callRecording](callrecording.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates. This API enables you to programmatically access and analyze meeting recordings for calls organized by a given user, filtered by optional date ranges.
+Get the [callRecording](../resources/callrecording.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates. This API enables you to programmatically access and analyze meeting recordings for calls organized by a given user, filtered by optional date ranges.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

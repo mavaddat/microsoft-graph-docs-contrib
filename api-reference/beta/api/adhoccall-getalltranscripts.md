@@ -1,6 +1,6 @@
 ---
 title: "adhocCall: getAllTranscripts"
-description: "Get all callTranscript objects from adhoc call instances that a specific user initiates."
+description: "Get all callTranscript objects from ad hoc call instances that a specific user initiates."
 author: "sukanya"
 ms.date: 10/27/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get all [callTranscript](calltranscript.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.
+Get all [callTranscript](../resources/calltranscript.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
