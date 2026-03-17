@@ -557,6 +557,23 @@
       ]
     },
     {
+      "name": "Tenant configuration management",
+      "resources": [
+        "configurationManagement",
+        "configurationMonitor",
+        "configurationMonitoringResult",
+        "configurationDrift",
+        "configurationSnapshotJob",
+        "configurationBaseline"
+      ],
+      "complexTypes": [
+        "baselineParameter",
+        "baselineResource",
+        "driftedProperty",
+        "errorDetail"
+      ]
+    },
+    {
       "name": "Education",
       "overview": "../../resources/education-overview.md",
       "resources": [
