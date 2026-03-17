@@ -75,7 +75,7 @@ items:
     - name: List apps in channel
       href: ../../api/channel-list-enabledapps.md
     - name: Get app in channel
-      href: ../../api/teamsapp-gets.md
+      href: ../../api/teamsapp-get.md
     - name: Add app to channel
       href: ../../api/channel-post-enabledapps.md
     - name: Remove app from channel
@@ -658,7 +658,7 @@ items:
     - name: List apps in channel
       href: ../../api/channel-list-enabledapps.md
     - name: Get app in channel
-      href: ../../api/teamsapp-gets.md
+      href: ../../api/teamsapp-get.md
     - name: Add app to channel
       href: ../../api/channel-post-enabledapps.md
     - name: Remove app from channel
