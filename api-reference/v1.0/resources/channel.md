@@ -49,7 +49,7 @@ where files are shared, and where tabs are added.
 |[Update tab in channel](../api/channel-patch-tabs.md) | [teamsTab](teamstab.md) | Updates the properties of a tab in a channel.|
 |[Remove tab from channel](../api/channel-delete-tabs.md) | None | Remove (unpin) a tab from a channel.|
 |[List apps in channel](../api/channel-list-enabledapps.md) | [teamsApp](teamsapp.md) collection | Get a list of the [enabled apps](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
-|[Get app in channel](../api/channel-get-enabledapps.md) | [teamsApp](teamsapp.md) | Get an [enabled app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
+|[Get app in channel](../api/teamsapp-gets.md) | [teamsApp](teamsapp.md) | Get an [enabled app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
 |[Add app to channel](../api/channel-post-enabledapps.md) | None | Add a [teamsApp](../resources/teamsapp.md) that enables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
 |[Remove app from channel](../api/channel-delete-enabledapps.md) | None | Remove a [teamsApp](../resources/teamsapp.md) that disables an [app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md). |
 |[Provision channel email address](../api/channel-provisionemail.md) |[provisionChannelEmailResult](../resources/provisionchannelemailresult.md)| Provision an email address for the channel.|
