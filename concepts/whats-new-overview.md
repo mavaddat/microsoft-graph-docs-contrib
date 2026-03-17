@@ -47,7 +47,14 @@ The API also introduces supporting types including [inheritableScopes](/graph/ap
 - Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
 
-<<<<<<< SukanyaDas-MSFT/GetAllTranscripts/Recordings-for-adhoc-calls-into-v1.0
+### People and workplace intelligence | People admin settings
+
+Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable administrators to customize the display information of a profile source seen by users across an organization in Microsoft 365 experiences.
+
+### Personal contacts
+
+Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
+
 ### Teamwork and Communications | Calls and online meetings
 
 Added [ad hoc call](/graph/api/resources/adhoccall) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
@@ -58,15 +65,6 @@ Added [ad hoc call](/graph/api/resources/adhoccall) support to change notificati
 - `users/{userId}/adhocCalls/getAllRecordings`
 
 For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
-=======
-### People and workplace intelligence | People admin settings
-
-Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable administrators to customize the display information of a profile source seen by users across an organization in Microsoft 365 experiences.
-
-### Personal contacts
-
-Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
->>>>>>> main
 
 ## March 2026: New in preview only
 
