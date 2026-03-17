@@ -98,8 +98,8 @@ Content-Type: application/json
     },
     {
       "@odata.type": "#microsoft.graph.teamsApp",
-      "@odata.id": "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/ghr1hs1b-a679-435a-830f-27d5218fe0e5",
-      "id": "ghr1hs1b-a679-435a-830f-27d5218fe0e5",
+      "@odata.id": "https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/c21ba739-90e0-462b-bc10-5c235ae55e99",
+      "id": "c21ba739-90e0-462b-bc10-5c235ae55e99",
       "externalId": "c21ba739-90e0-462b-bc10-5c235ae55e88",
       "displayName": "Sample App 2",
       "distributionMethod": "organization"
