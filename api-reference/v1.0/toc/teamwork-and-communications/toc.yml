@@ -384,6 +384,8 @@ items:
         href: ../../api/callrecording-delta.md
       - name: List recordings by organizer
         href: ../../api/onlinemeeting-getallrecordings.md
+      - name: Get recordings initiated by a specified user
+        href: ../../api/adhoccall-getallrecordings.md
     - name: Call transcript
       items:
       - name: Call transcript
@@ -396,6 +398,8 @@ items:
         href: ../../api/calltranscript-delta.md
       - name: List transcripts by organizer
         href: ../../api/onlinemeeting-getalltranscripts.md
+      - name: Get transcripts initiated by a specified user
+        href: ../../api/adhoccall-getalltranscripts.md
     - name: Virtual appointment
       items:
       - name: Get virtual appointment join link
