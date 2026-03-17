@@ -22,7 +22,6 @@ This resource supports subscribing to [change notifications](/graph/change-notif
 
 | Method | Return Type |Description |
 | :------ | :----------- | :---------- |
-|[Get all recordings](../api/adhoccall-getallrecordings.md)|[callRecording](callrecording.md) collection|Get all recordings from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates. |
 |[Get all recordings](../api/adhoccall-getallrecordings.md)|[callRecording](callrecording.md) collection|Get the [callRecording](callrecording.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates. |
 |[Get all transcripts](../api/adhoccall-getalltranscripts.md)|[callTranscript](calltranscript.md) collection|Get all [callTranscript](calltranscript.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.|
 
