@@ -1,5 +1,5 @@
 ---
-title: "Manage profile source precedence settings for an organization using the Microsoft Graph API (preview)"
+title: "Manage profile source precedence settings for an organization using the Microsoft Graph API"
 description: "Learn how to use Microsoft Graph APIs to configure profile source priority for an organization."
 author: "rwaithera"
 ms.localizationpriority: high

@@ -64,7 +64,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/admin/people/profilePropertySettings/00000000-0000-0000-0000-000000000001
+GET https://graph.microsoft.com/v1.0/admin/people/profilePropertySettings/00000000-0000-0000-0000-000000000001
 ```
 
 
@@ -86,10 +86,10 @@ Content-Type: application/json
   "value": {
     "@odata.type": "#microsoft.graph.profilePropertySetting",
     "id": "00000000-0000-0000-0000-000000000001",
-    "name": "Profile priority config",
     "displayName": "Profile priority config",
+    "name": "Profile priority config",
     "prioritizedSourceUrls": [
-        "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
+        "https://graph.microsoft.com/v1.0/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
     ]
   }
 }
