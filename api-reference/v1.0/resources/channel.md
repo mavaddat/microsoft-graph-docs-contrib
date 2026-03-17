@@ -104,7 +104,7 @@ For a POST request example, see [Request (create channel in migration state)](/m
 | Relationship | Type |Description|
 |:---------------|:--------|:----------|
 |allMembers|[conversationMember](conversationmember.md) collection |A collection of membership records associated with the channel, including both direct and indirect members of shared channels.|
-|enabledApps|[teamsApp](../resources/teamsapp.md) collection| A collection of enabled apps in the channel.|
+|enabledApps|[teamsApp](../resources/teamsapp.md) collection|A collection of enabled apps in the channel.|
 |[filesFolder](../api/channel-get-filesfolder.md)|[driveItem](driveitem.md)|Metadata for the location where the channel's files are stored.|
 |members|[conversationMember](conversationmember.md) collection|A collection of membership records associated with the channel.|
 |messages|[chatMessage](chatmessage.md) collection|A collection of all the messages in the channel. A navigation property. Nullable.|
