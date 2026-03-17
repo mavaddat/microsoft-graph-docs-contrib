@@ -3399,6 +3399,38 @@
           "ChangeType": "Addition",
           "Description": "Added the **enabledApps** relationship to the [channel](https://learn.microsoft.com/en-us/graph/api/resources/channel?view=graph-rest-1.0) resource.",
           "Target": "channel"
+        },
+        {
+          "Id": "05b0d20b-89ad-4898-8683-92fbe7891827",
+          "ApiChange": "Method",
+          "ChangedApiName": "teamsApp",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get teamsApp](https://learn.microsoft.com/en-us/graph/api/teamsapp-get?view=graph-rest-1.0) operation to the [teamsApp](https://learn.microsoft.com/en-us/graph/api/resources/teamsapp?view=graph-rest-1.0) resource.",
+          "Target": "teamsApp"
+        },
+        {
+          "Id": "05b0d20b-89ad-4898-8683-92fbe7891827",
+          "ApiChange": "Method",
+          "ChangedApiName": "teamsApp",
+          "ChangeType": "Addition",
+          "Description": "Added the [Remove teamsApp](https://learn.microsoft.com/en-us/graph/api/channel-delete-enabledapps?view=graph-rest-1.0) operation to the [teamsApp](https://learn.microsoft.com/en-us/graph/api/resources/teamsapp?view=graph-rest-1.0) resource.",
+          "Target": "teamsApp"
+        },
+        {
+          "Id": "05b0d20b-89ad-4898-8683-92fbe7891827",
+          "ApiChange": "Method",
+          "ChangedApiName": "teamsApp",
+          "ChangeType": "Addition",
+          "Description": "Added the [List enabledApps](https://learn.microsoft.com/en-us/graph/api/channel-list-enabledapps?view=graph-rest-1.0) operation to the [teamsApp](https://learn.microsoft.com/en-us/graph/api/resources/teamsapp?view=graph-rest-1.0) resource.",
+          "Target": "teamsApp"
+        },
+        {
+          "Id": "05b0d20b-89ad-4898-8683-92fbe7891827",
+          "ApiChange": "Method",
+          "ChangedApiName": "teamsApp",
+          "ChangeType": "Addition",
+          "Description": "Added the [Create teamsApp](https://learn.microsoft.com/en-us/graph/api/channel-post-enabledapps?view=graph-rest-1.0) operation to the [teamsApp](https://learn.microsoft.com/en-us/graph/api/resources/teamsapp?view=graph-rest-1.0) resource.",
+          "Target": "teamsApp"
         }
       ],
       "Id": "05b0d20b-89ad-4898-8683-92fbe7891827",
