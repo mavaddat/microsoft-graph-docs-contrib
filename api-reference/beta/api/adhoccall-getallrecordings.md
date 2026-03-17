@@ -1,6 +1,6 @@
 ---
 title: "adhocCall: getAllRecordings"
-description: "Get all recordings from adhoc call instances that a specific user initiates."
+description: "Get the callRecording objects from adhoc call instances that a specific user initiates."
 author: "sukanya"
 ms.date: 10/27/2025
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get all recordings from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.
+Get the [callRecording](callrecording.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
