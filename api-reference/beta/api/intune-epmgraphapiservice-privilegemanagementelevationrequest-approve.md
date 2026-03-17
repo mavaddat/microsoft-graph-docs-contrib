@@ -1,4 +1,4 @@
-﻿---
+---
 title: "approve action"
 description: "Intune Epmgraphapiservice Privilegemanagementelevationrequest Approve Api ."
 author: "jaiprakashmb"

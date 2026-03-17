@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceCustomAttributeShellScripts"
 description: "List properties and relationships of the deviceCustomAttributeShellScript objects."
 author: "jaiprakashmb"

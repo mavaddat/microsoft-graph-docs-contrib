@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete windowsPhone81AppX"
 description: "Deletes a windowsPhone81AppX."
 author: "jaiprakashmb"

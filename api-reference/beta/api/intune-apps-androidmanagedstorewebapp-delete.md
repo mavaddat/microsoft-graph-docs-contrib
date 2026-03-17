@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete androidManagedStoreWebApp"
 description: "Deletes a androidManagedStoreWebApp."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete deviceShellScript"
 description: "Deletes a deviceShellScript."
 author: "jaiprakashmb"

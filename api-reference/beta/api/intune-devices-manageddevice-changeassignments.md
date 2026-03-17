@@ -1,4 +1,4 @@
-﻿---
+---
 title: "changeAssignments action"
 description: "Intune Devices Manageddevice Changeassignments Api ."
 author: "jaiprakashmb"

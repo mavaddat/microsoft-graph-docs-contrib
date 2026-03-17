@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get userExperienceAnalyticsCategory"
 description: "Read properties and relationships of the userExperienceAnalyticsCategory object."
 author: "jaiprakashmb"

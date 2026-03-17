@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update deviceComplianceScript"
 description: "Update the properties of a deviceComplianceScript object."
 author: "jaiprakashmb"

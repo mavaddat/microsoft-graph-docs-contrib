@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get deviceShellScript"
 description: "Read properties and relationships of the deviceShellScript object."
 author: "jaiprakashmb"

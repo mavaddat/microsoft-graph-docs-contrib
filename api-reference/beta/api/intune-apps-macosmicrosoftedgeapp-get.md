@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get macOSMicrosoftEdgeApp"
 description: "Read properties and relationships of the macOSMicrosoftEdgeApp object."
 author: "jaiprakashmb"

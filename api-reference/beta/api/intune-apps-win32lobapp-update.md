@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update win32LobApp"
 description: "Update the properties of a win32LobApp object."
 author: "jaiprakashmb"

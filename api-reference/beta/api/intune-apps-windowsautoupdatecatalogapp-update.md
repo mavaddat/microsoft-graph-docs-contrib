@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update windowsAutoUpdateCatalogApp"
 description: "Update the properties of a windowsAutoUpdateCatalogApp object."
 author: "jaiprakashmb"

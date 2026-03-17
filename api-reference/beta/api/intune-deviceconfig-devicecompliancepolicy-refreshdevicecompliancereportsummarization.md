@@ -1,4 +1,4 @@
-﻿---
+---
 title: "refreshDeviceComplianceReportSummarization action"
 description: "Intune Deviceconfig Devicecompliancepolicy Refreshdevicecompliancereportsummarization Api ."
 author: "jaiprakashmb"

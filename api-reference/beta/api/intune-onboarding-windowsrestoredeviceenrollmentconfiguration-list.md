@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List windowsRestoreDeviceEnrollmentConfigurations"
 description: "List properties and relationships of the windowsRestoreDeviceEnrollmentConfiguration objects."
 author: "jaiprakashmb"

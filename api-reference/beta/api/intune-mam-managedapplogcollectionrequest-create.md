@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create managedAppLogCollectionRequest"
 description: "Create a new managedAppLogCollectionRequest object."
 author: "jaiprakashmb"

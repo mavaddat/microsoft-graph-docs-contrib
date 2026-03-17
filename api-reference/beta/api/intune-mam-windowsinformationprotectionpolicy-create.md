@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create windowsInformationProtectionPolicy"
 description: "Create a new windowsInformationProtectionPolicy object."
 author: "jaiprakashmb"

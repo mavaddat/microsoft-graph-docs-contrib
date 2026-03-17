@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List windowsAutoUpdateCatalogApps"
 description: "List properties and relationships of the windowsAutoUpdateCatalogApp objects."
 author: "jaiprakashmb"

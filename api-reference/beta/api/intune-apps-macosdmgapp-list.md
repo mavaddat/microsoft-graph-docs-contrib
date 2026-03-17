@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List macOSDmgApps"
 description: "List properties and relationships of the macOSDmgApp objects."
 author: "jaiprakashmb"

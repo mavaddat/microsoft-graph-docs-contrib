@@ -1,4 +1,4 @@
-﻿---
+---
 title: "validateXml action"
 description: "Intune Apps Mobileapp Validatexml Api ."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create deviceHealthScript"
 description: "Create a new deviceHealthScript object."
 author: "jaiprakashmb"

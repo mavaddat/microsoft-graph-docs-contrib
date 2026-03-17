@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getComanagedDevicesSummary function"
 description: "Intune Devices Devicemanagement Getcomanageddevicessummary Api ."
 author: "jaiprakashmb"

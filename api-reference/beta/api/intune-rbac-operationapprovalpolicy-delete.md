@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete operationApprovalPolicy"
 description: "Deletes a operationApprovalPolicy."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete roleScopeTag"
 description: "Deletes a roleScopeTag."
 author: "jaiprakashmb"

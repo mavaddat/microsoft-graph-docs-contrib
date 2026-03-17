@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create iosVppApp"
 description: "Create a new iosVppApp object."
 author: "jaiprakashmb"

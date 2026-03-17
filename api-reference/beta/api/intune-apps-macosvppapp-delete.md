@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete macOsVppApp"
 description: "Deletes a macOsVppApp."
 author: "jaiprakashmb"

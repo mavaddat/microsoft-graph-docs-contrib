@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsDeviceScoreses"
 description: "List properties and relationships of the userExperienceAnalyticsDeviceScores objects."
 author: "jaiprakashmb"

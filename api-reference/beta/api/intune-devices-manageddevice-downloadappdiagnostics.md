@@ -1,4 +1,4 @@
-﻿---
+---
 title: "downloadAppDiagnostics action"
 description: "Intune Devices Manageddevice Downloadappdiagnostics Api ."
 author: "jaiprakashmb"

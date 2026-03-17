@@ -1,4 +1,4 @@
-﻿---
+---
 title: "retrieveRecoveryLockPasscode function"
 description: "Intune Devices Manageddevice Retrieverecoverylockpasscode Api ."
 author: "jaiprakashmb"

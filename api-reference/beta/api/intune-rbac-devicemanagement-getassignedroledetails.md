@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getAssignedRoleDetails function"
 description: "Retrieves the assigned role definitions and role assignments of the currently authenticated user."
 author: "jaiprakashmb"

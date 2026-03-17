@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete macOSMicrosoftEdgeApp"
 description: "Deletes a macOSMicrosoftEdgeApp."
 author: "jaiprakashmb"

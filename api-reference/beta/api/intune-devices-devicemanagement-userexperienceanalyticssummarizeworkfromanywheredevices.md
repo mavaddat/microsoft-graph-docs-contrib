@@ -1,4 +1,4 @@
-﻿---
+---
 title: "userExperienceAnalyticsSummarizeWorkFromAnywhereDevices function"
 description: "Intune Devices Devicemanagement Userexperienceanalyticssummarizeworkfromanywheredevices Api ."
 author: "jaiprakashmb"

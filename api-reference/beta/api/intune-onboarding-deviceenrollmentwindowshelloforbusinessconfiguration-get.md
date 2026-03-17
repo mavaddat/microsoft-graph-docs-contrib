@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get deviceEnrollmentWindowsHelloForBusinessConfiguration"
 description: "Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object."
 author: "jaiprakashmb"

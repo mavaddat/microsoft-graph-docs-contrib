@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getMobileApplicationManagementAppConfigurationReport action"
 description: "Intune Mam Devicemanagementreports Getmobileapplicationmanagementappconfigurationreport Api ."
 author: "jaiprakashmb"
