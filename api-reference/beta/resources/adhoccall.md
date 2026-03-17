@@ -28,8 +28,8 @@ Represents an ad hoc call, including PSTN calls, one-to-one calls, and group cal
 
 | Method | Return Type |Description |
 | :------ | :----------- | :---------- |
-|[Get all recordings](../api/adhoccall-getallrecordings.md)|[callRecording](callrecording.md) collection|Get the [callRecording](callrecording.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates. |
-|[Get all transcripts](../api/adhoccall-getalltranscripts.md)|[callTranscript](calltranscript.md) collection|Get all [callTranscript](calltranscript.md) objects from [adhoc call](../resources/adhoccall.md) instances that a specific user initiates.|
+|[Get all recordings](../api/adhoccall-getallrecordings.md)|[callRecording](callrecording.md) collection|Get the [callRecording](callrecording.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates. |
+|[Get all transcripts](../api/adhoccall-getalltranscripts.md)|[callTranscript](calltranscript.md) collection|Get all [callTranscript](calltranscript.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates.|
 
 ## Properties
 
