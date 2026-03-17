@@ -41,7 +41,7 @@ GET /directory/tenantGovernance/relatedTenants
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports `$filter`, `$orderby`, `$top`, `$skip` and `$skiptoken` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -90,7 +90,7 @@ Content-Type: application/json
   "value": [
     {
       "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenant",
-      "id": "a3b7c912-45de-4f8a-b2c1-8e9f0a1b2c3d",
+      "id": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
       "createdDateTime": "2026-02-15T05:34:29.4426526Z",
       "b2BRegistrationMetrics": {
         "initial": {
@@ -147,7 +147,7 @@ Content-Type: application/json
     },
     {
       "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenant",
-      "id": "7d4e9f82-bc3a-4e1d-9a7f-6c8b5e4a2d1f",
+      "id": "bbbbcccc-1111-dddd-2222-eeee3333ffff",
       "createdDateTime": "2026-02-16T05:35:45.2357127Z",
       "b2BRegistrationMetrics": null,
       "b2BSignInActivityMetrics": null,

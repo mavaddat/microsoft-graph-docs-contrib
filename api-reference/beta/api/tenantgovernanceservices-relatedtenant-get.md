@@ -41,7 +41,7 @@ GET /directory/tenantGovernance/relatedTenants/{relatedTenantId}
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method doesn't support OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -88,7 +88,7 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.relatedTenant",
-  "id": "a3b7c912-45de-4f8a-b2c1-8e9f0a1b2c3d",
+  "id": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
   "createdDateTime": "2026-02-15T05:34:29.4426526Z",
   "b2BRegistrationMetrics": {
     "initial": {

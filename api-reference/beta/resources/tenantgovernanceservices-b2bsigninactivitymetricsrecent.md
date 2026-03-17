@@ -16,15 +16,18 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Represents the most recent snapshot of B2B sign-in activity metrics, showing current monthly active guests and application counts.
 
+Inherits from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
+|id|String|Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md).|
+|inboundMonthlyTotalApplications|Decimal|The total number of applications accessed by inbound users in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
+|inboundMonthlyTotalUsers|Decimal|The total number of unique inbound users with sign-in activity in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
+|outboundMonthlyTotalApplications|Decimal|The total number of applications accessed by outbound users in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
+|outboundMonthlyTotalUsers|Decimal|The total number of unique outbound users with sign-in activity in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
 |updateDateTime|DateTimeOffset|Timestamp that represents the most recent time B2B registration data was aggregated and have sufficiently changed for the related tenant.|
-|watermarkDateTime|DateTimeOffset|Timestamp that represents the earliest segment of data missing within the aggregation window. When no data is missing, this value is within one day of the associated updateDateTime property.|
-|inboundMonthlyTotalUsers|Int64|Count of distinct users from the related tenant who signed-in to an application in the calling tenant in the past 30 days.|
-|inboundMonthlyTotalApplications|Int64|Count of distinct applications in the calling tenant with sign-ins from users in the related tenant in the past 30 days.|
-|outboundMonthlyTotalUsers|Int64|Count of distinct users from the calling tenant who signed-in to an application in the related tenant in the past 30 days.|
-|outboundMonthlyTotalApplications|Int64|Count of distinct applications in the related tenant with sign-ins from users in the calling tenant in the past 30 days.|
+|watermarkDateTime|DateTimeOffset|The date and time when the metrics snapshot was taken. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
 
 ## Relationships
 None.
@@ -33,18 +36,22 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsRecent"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsRecent",
+  "baseType": "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase",
+  "openType": "id"
 }
 -->
 ``` json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsRecent",
-  "updateDateTime": "String (timestamp)",
+  "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalUsers": "Int64",
-  "inboundMonthlyTotalApplications": "Int64",
-  "outboundMonthlyTotalUsers": "Int64",
-  "outboundMonthlyTotalApplications": "Int64"
+  "inboundMonthlyTotalUsers": "Decimal",
+  "inboundMonthlyTotalApplications": "Decimal",
+  "outboundMonthlyTotalUsers": "Decimal",
+  "outboundMonthlyTotalApplications": "Decimal",
+  "updateDateTime": "String (timestamp)"
 }
 ```
 

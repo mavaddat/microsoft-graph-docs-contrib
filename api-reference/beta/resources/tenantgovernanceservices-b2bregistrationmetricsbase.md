@@ -19,13 +19,16 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Abstract base type that defines common properties for B2B registration metrics snapshots.
 
+Inherits from [microsoft.graph.entity](../resources/entity.md).
+
 ## Properties
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
+| id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
+| inboundTotalUsers | Decimal | The total number of inbound B2B guest users registered. |
+| outboundTotalUsers | Decimal | The total number of outbound B2B users from this tenant registered in other tenants. |
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundTotalUsers | Int64 | The total number of inbound B2B guest users registered. |
-| outboundTotalUsers | Int64 | The total number of outbound B2B users from this tenant registered in other tenants. |
 
 ## Relationships
 
@@ -40,14 +43,18 @@ The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase",
+  "baseType": "microsoft.graph.entity",
+  "openType": "id"
 }
 -->
 ```json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase",
+  "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundTotalUsers": "Int64",
-  "outboundTotalUsers": "Int64"
+  "inboundTotalUsers": "Decimal",
+  "outboundTotalUsers": "Decimal"
 }
 ```

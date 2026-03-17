@@ -19,13 +19,16 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Abstract base type that defines common properties for multi-tenant application metrics.
 
+Inherits from [microsoft.graph.entity](../resources/entity.md).
+
 ## Properties
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
+| id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
+| inboundMonthlyTotalApplications | Decimal | The total number of inbound multi-tenant applications in the last month. |
+| outboundMonthlyTotalApplications | Decimal | The total number of outbound multi-tenant applications in the last month. |
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundMonthlyTotalApplications | Int64 | The total number of inbound multi-tenant applications in the last month. |
-| outboundMonthlyTotalApplications | Int64 | The total number of outbound multi-tenant applications in the last month. |
 
 ## Relationships
 
@@ -40,14 +43,18 @@ The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase",
+  "baseType": "microsoft.graph.entity",
+  "openType": "id"
 }
 -->
 ```json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase",
+  "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalApplications": "Int64",
-  "outboundMonthlyTotalApplications": "Int64"
+  "inboundMonthlyTotalApplications": "Decimal",
+  "outboundMonthlyTotalApplications": "Decimal"
 }
 ```

@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Enable the related tenants feature for tenant discovery. After calling this action, the **isRelatedTenantsEnabled** property is set to `true`, which allows the use of related tenant APIs.
+Enable the related tenants feature for tenant discovery. After calling this action, the **isRelatedTenantsEnabled** property of [tenantGovernanceSetting](../resources/tenantgovernance-tenantgovernancesetting.md) is set to `true`, which allows the use of related tenant APIs.
 
 > [!IMPORTANT]
 > This action must be called before using any related tenant APIs. Related tenant APIs won't run successfully unless this feature is explicitly enabled.

@@ -19,15 +19,18 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Abstract base type that defines common properties for B2B sign-in activity metrics.
 
+Inherits from [microsoft.graph.entity](../resources/entity.md).
+
 ## Properties
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
+| id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
+| inboundMonthlyTotalApplications | Decimal | The total number of applications accessed by inbound users in the last month. |
+| inboundMonthlyTotalUsers | Decimal | The total number of unique inbound users with sign-in activity in the last month. |
+| outboundMonthlyTotalApplications | Decimal | The total number of applications accessed by outbound users in the last month. |
+| outboundMonthlyTotalUsers | Decimal | The total number of unique outbound users with sign-in activity in the last month. |
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundMonthlyTotalUsers | Int64 | The total number of unique inbound users with sign-in activity in the last month. |
-| inboundMonthlyTotalApplications | Int64 | The total number of applications accessed by inbound users in the last month. |
-| outboundMonthlyTotalUsers | Int64 | The total number of unique outbound users with sign-in activity in the last month. |
-| outboundMonthlyTotalApplications | Int64 | The total number of applications accessed by outbound users in the last month. |
 
 ## Relationships
 
@@ -42,16 +45,20 @@ The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase",
+  "baseType": "microsoft.graph.entity",
+  "openType": "id"
 }
 -->
 ```json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase",
+  "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalUsers": "Int64",
-  "inboundMonthlyTotalApplications": "Int64",
-  "outboundMonthlyTotalUsers": "Int64",
-  "outboundMonthlyTotalApplications": "Int64"
+  "inboundMonthlyTotalUsers": "Decimal",
+  "inboundMonthlyTotalApplications": "Decimal",
+  "outboundMonthlyTotalUsers": "Decimal",
+  "outboundMonthlyTotalApplications": "Decimal"
 }
 ```

@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the status of the related tenants refresh action
+Get the status of the [related tenants refresh action](../api/tenantgovernance-relatedtenant-refresh.md).
 
 ## Permissions
 

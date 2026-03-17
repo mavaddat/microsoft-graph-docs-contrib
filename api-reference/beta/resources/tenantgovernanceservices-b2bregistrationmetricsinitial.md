@@ -16,13 +16,16 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Represents the initial snapshot of B2B registration metrics captured when the relationship between two tenants was first discovered, establishing a baseline for guest counts.
 
+Inherits from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|Timestamp that represents the date time that B2B registration data was initially aggregated.|
-|watermarkDateTime|DateTimeOffset|Timestamp that represents the earliest segment of data missing within the aggregation window. When no data is missing, this value is within one day of the associated createdDateTime property.|
-|inboundTotalUsers|Int64|Count of B2B guests invited and accepted from the related tenant into the calling tenant at the time of initial aggregation.|
-|outboundTotalUsers|Int64|Count of B2B guests invited and accepted from the calling tenant that are provisioned into the related tenant at the time of initial aggregation.|
+|id|String|Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md).|
+|inboundTotalUsers|Decimal|The total number of inbound B2B guest users registered. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
+|outboundTotalUsers|Decimal|The total number of outbound B2B users from this tenant registered in other tenants. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
+|watermarkDateTime|DateTimeOffset|The date and time when the metrics snapshot was taken. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
 
 ## Relationships
 None.
@@ -31,16 +34,20 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial",
+  "baseType": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase",
+  "openType": "id"
 }
 -->
 ``` json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial",
-  "createdDateTime": "String (timestamp)",
+  "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundTotalUsers": "Int64",
-  "outboundTotalUsers": "Int64"
+  "inboundTotalUsers": "Decimal",
+  "outboundTotalUsers": "Decimal",
+  "createdDateTime": "String (timestamp)"
 }
 ```
 

@@ -16,31 +16,33 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Represents multi-tenant application usage metrics that track the number of applications used across tenant boundaries. Includes both initial and recent snapshots showing monthly counts of inbound and outbound multi-tenant application usage.
 
+Inherits from [microsoft.graph.entity](../resources/entity.md).
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundMonthlyTotalApplications | Int64 | The total number of inbound multi-tenant applications in the last month. |
-| outboundMonthlyTotalApplications | Int64 | The total number of outbound multi-tenant applications in the last month. |
+| id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
 
 ## Relationships
-|Property|Type|Description|
+|Relationship|Type|Description|
 |:---|:---|:---|
-|initial|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial](../resources/tenantgovernanceservices-multitenantapplicationmetricsinitial.md)|Multitenant application metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsRecent](../resources/tenantgovernanceservices-multitenantapplicationmetricsrecent.md)|Multitenant application metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
+|initial|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial](../resources/tenantgovernanceservices-multitenantapplicationmetricsinitial.md)|Multitenant application metrics corresponding to initial snapshots where metrics were aggregated for the first time.|
+|recent|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsRecent](../resources/tenantgovernanceservices-multitenantapplicationmetricsrecent.md)|Multitenant application metrics corresponding to recent snapshots where metrics were found to have sufficiently changed.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetrics"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetrics",
+  "baseType": "microsoft.graph.entity",
+  "openType": "id"
 }
 -->
 ``` json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetrics",
-  "initial": {"@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial"},
-  "recent": {"@odata.type": "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsRecent"}
+  "id": "String (identifier)"
 }
 ```
 

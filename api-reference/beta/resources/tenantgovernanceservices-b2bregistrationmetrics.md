@@ -16,31 +16,33 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Represents B2B collaboration metrics that track guest registrations between the calling tenant and a related tenant. Includes both initial and recent snapshots showing inbound and outbound guest counts.
 
+Inherits from [microsoft.graph.entity](../resources/entity.md).
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundTotalUsers | Int64 | The total number of inbound B2B guest users registered. |
-| outboundTotalUsers | Int64 | The total number of outbound B2B users from this tenant registered in other tenants. |
+| id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
 
 ## Relationships
-|Property|Type|Description|
+|Relationship|Type|Description|
 |:---|:---|:---|
-|initial|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial](../resources/tenantgovernanceservices-b2bregistrationmetricsinitial.md)|B2B registration metrics correpsionding to initial snapshots where metrics were aggregated for the first time.|
-|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernanceservices-b2bregistrationmetricsrecent.md)|B2B registration metrics correpsionding to recent snapshots where metrics were found to have sufficiently changed.|
+|initial|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial](../resources/tenantgovernanceservices-b2bregistrationmetricsinitial.md)|B2B registration metrics corresponding to initial snapshots where metrics were aggregated for the first time.|
+|recent|[microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent](../resources/tenantgovernanceservices-b2bregistrationmetricsrecent.md)|B2B registration metrics corresponding to recent snapshots where metrics were found to have sufficiently changed.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2bRegistrationMetrics"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.b2bRegistrationMetrics",
+  "baseType": "microsoft.graph.entity",
+  "openType": "id"
 }
 -->
 ``` json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2bRegistrationMetrics",
-  "initial": {"@odata.type": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial"},
-  "recent": {"@odata.type": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent"}
+  "id": "String (identifier)"
 }
 ```
 

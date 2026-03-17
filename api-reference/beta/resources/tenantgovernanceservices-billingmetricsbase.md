@@ -19,18 +19,21 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Abstract base type that defines common properties for billing metrics.
 
+Inherits from [microsoft.graph.entity](../resources/entity.md).
+
 ## Properties
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
-| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| localAssociatedTenantCount | Int64 | The total number of local associated tenants. |
-| localAssociatedTenantBillingManagementActiveCount | Int64 | The number of local associated tenants with active billing management. |
-| localAssociatedTenantProvisioningActiveCount | Int64 | The number of local associated tenants with active provisioning. |
+| foreignAssociatedTenantBillingManagementActiveCount | Decimal | The number of foreign associated tenants with active billing management. |
+| foreignAssociatedTenantCount | Decimal | The total number of foreign associated tenants. |
+| foreignAssociatedTenantProvisioningActiveCount | Decimal | The number of foreign associated tenants with active provisioning. |
+| id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
+| localAssociatedTenantBillingManagementActiveCount | Decimal | The number of local associated tenants with active billing management. |
+| localAssociatedTenantCount | Decimal | The total number of local associated tenants. |
 | localAssociatedTenantIds | Collection(String) | The list of local associated tenant IDs. |
-| foreignAssociatedTenantCount | Int64 | The total number of foreign associated tenants. |
-| foreignAssociatedTenantBillingManagementActiveCount | Int64 | The number of foreign associated tenants with active billing management. |
-| foreignAssociatedTenantProvisioningActiveCount | Int64 | The number of foreign associated tenants with active provisioning. |
+| localAssociatedTenantProvisioningActiveCount | Decimal | The number of local associated tenants with active provisioning. |
+| watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
 
 ## Relationships
 
@@ -45,19 +48,23 @@ The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.billingMetricsBase"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.billingMetricsBase",
+  "baseType": "microsoft.graph.entity",
+  "openType": "id"
 }
 -->
 ```json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.billingMetricsBase",
+  "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "localAssociatedTenantCount": "Int64",
-  "localAssociatedTenantBillingManagementActiveCount": "Int64",
-  "localAssociatedTenantProvisioningActiveCount": "Int64",
+  "localAssociatedTenantCount": "Decimal",
+  "localAssociatedTenantBillingManagementActiveCount": "Decimal",
+  "localAssociatedTenantProvisioningActiveCount": "Decimal",
   "localAssociatedTenantIds": ["String"],
-  "foreignAssociatedTenantCount": "Int64",
-  "foreignAssociatedTenantBillingManagementActiveCount": "Int64",
-  "foreignAssociatedTenantProvisioningActiveCount": "Int64"
+  "foreignAssociatedTenantCount": "Decimal",
+  "foreignAssociatedTenantBillingManagementActiveCount": "Decimal",
+  "foreignAssociatedTenantProvisioningActiveCount": "Decimal"
 }
 ```

@@ -16,18 +16,21 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Represents the initial snapshot of billing metrics captured when the relationship was first discovered, establishing a baseline for billing account associations and associated tenant connection counts.
 
+Inherits from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|Timestamp that represents when billing metrics are initially aggregated for the related tenant.|
-|watermarkDateTime|DateTimeOffset|Timestamp that represents the earliest segment of data missing within the aggregation window. When no data is missing, this value is within one day of the associated createdDateTime property.|
-|localAssociatedTenantCount|Int64|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant.|
-|localAssociatedTenantBillingManagementActiveCount|Int64|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Billing Management is active.|
-|localAssociatedTenantProvisioningActiveCount|Int64|Count of shared billing accounts where the calling tenant is the primary billing tenant and the related tenant is the associated billing tenant with Provisioning is active.|
-|localAssociatedTenantIds|String collection|Collection of associated billing tenant IDs corresponding to localAssociatedTenants.|
-|foreignAssociatedTenantCount|Int64|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant.|
-|foreignAssociatedTenantBillingManagementActiveCount|Int64|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Billing Management is active.|
-|foreignAssociatedTenantProvisioningActiveCount|Int64|Count of shared billing accounts where the calling tenant is the associated billing tenant and the related tenant is the primary billing tenant with Provisioning is active.|
+|foreignAssociatedTenantBillingManagementActiveCount|Decimal|The number of foreign associated tenants with active billing management. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
+|foreignAssociatedTenantCount|Decimal|The total number of foreign associated tenants. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
+|foreignAssociatedTenantProvisioningActiveCount|Decimal|The number of foreign associated tenants with active provisioning. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
+|id|String|Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md).|
+|localAssociatedTenantBillingManagementActiveCount|Decimal|The number of local associated tenants with active billing management. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
+|localAssociatedTenantCount|Decimal|The total number of local associated tenants. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
+|localAssociatedTenantIds|Collection(String)|The list of local associated tenant IDs. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
+|localAssociatedTenantProvisioningActiveCount|Decimal|The number of local associated tenants with active provisioning. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
+|watermarkDateTime|DateTimeOffset|The date and time when the metrics snapshot was taken. Inherited from [microsoft.graph.tenantGovernanceServices.billingMetricsBase](../resources/tenantgovernanceservices-billingmetricsbase.md).|
 
 ## Relationships
 None.
@@ -36,23 +39,27 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.tenantGovernanceServices.billingMetricsInitial"
+  "keyProperty": "id",
+  "@odata.type": "microsoft.graph.tenantGovernanceServices.billingMetricsInitial",
+  "baseType": "microsoft.graph.tenantGovernanceServices.billingMetricsBase",
+  "openType": "id"
 }
 -->
 ``` json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.billingMetricsInitial",
-  "createdDateTime": "String (timestamp)",
+  "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "localAssociatedTenantCount": "Int64",
-  "localAssociatedTenantBillingManagementActiveCount": "Int64",
-  "localAssociatedTenantProvisioningActiveCount": "Int64",
+  "localAssociatedTenantCount": "Decimal",
+  "localAssociatedTenantBillingManagementActiveCount": "Decimal",
+  "localAssociatedTenantProvisioningActiveCount": "Decimal",
   "localAssociatedTenantIds": [
     "String"
   ],
-  "foreignAssociatedTenantCount": "Int64",
-  "foreignAssociatedTenantBillingManagementActiveCount": "Int64",
-  "foreignAssociatedTenantProvisioningActiveCount": "Int64"
+  "foreignAssociatedTenantCount": "Decimal",
+  "foreignAssociatedTenantBillingManagementActiveCount": "Decimal",
+  "foreignAssociatedTenantProvisioningActiveCount": "Decimal",
+  "createdDateTime": "String (timestamp)"
 }
 ```
 

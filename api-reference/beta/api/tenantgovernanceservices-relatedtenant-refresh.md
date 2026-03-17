@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Refresh the list of related tenants
+Manually refresh the list of [related tenants](../resources/tenantgovernance-relatedtenant.md). The list is also automatically refreshed daily.
 
 ## Permissions
 
