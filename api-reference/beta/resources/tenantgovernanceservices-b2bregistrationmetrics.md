@@ -20,8 +20,8 @@ Represents B2B collaboration metrics that track guest registrations between the 
 |Property|Type|Description|
 |:---|:---|:---|
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundTotalUsers | Decimal | The total number of inbound B2B guest users registered. |
-| outboundTotalUsers | Decimal | The total number of outbound B2B users from this tenant registered in other tenants. |
+| inboundTotalUsers | Int64 | The total number of inbound B2B guest users registered. |
+| outboundTotalUsers | Int64 | The total number of outbound B2B users from this tenant registered in other tenants. |
 
 ## Relationships
 |Property|Type|Description|

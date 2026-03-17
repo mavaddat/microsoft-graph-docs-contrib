@@ -15,7 +15,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 > [!IMPORTANT]
-> This is an abstract base type and does not appear directly in API responses. Use the concrete types [b2BRegistrationMetricsInitial](tenantenantgovernanceservicestgovernance-b2bregistrationmetricsinitial.md) or [b2BRegistrationMetricsRecent](tenantgovernanceservices-b2bregistrationmetricsrecent.md).
+> This is an abstract base type and does not appear directly in API responses. Use the concrete types [b2BRegistrationMetricsInitial](tenantgovernanceservices-b2bregistrationmetricsinitial.md) or [b2BRegistrationMetricsRecent](tenantgovernanceservices-b2bregistrationmetricsrecent.md).
 
 Abstract base type that defines common properties for B2B registration metrics snapshots.
 
@@ -24,8 +24,8 @@ Abstract base type that defines common properties for B2B registration metrics s
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundTotalUsers | Decimal | The total number of inbound B2B guest users registered. |
-| outboundTotalUsers | Decimal | The total number of outbound B2B users from this tenant registered in other tenants. |
+| inboundTotalUsers | Int64 | The total number of inbound B2B guest users registered. |
+| outboundTotalUsers | Int64 | The total number of outbound B2B users from this tenant registered in other tenants. |
 
 ## Relationships
 
@@ -47,7 +47,7 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase",
   "watermarkDateTime": "String (timestamp)",
-  "inboundTotalUsers": "Decimal",
-  "outboundTotalUsers": "Decimal"
+  "inboundTotalUsers": "Int64",
+  "outboundTotalUsers": "Int64"
 }
 ```

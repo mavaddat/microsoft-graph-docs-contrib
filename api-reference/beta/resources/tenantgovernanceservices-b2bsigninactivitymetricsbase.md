@@ -24,10 +24,10 @@ Abstract base type that defines common properties for B2B sign-in activity metri
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundMonthlyTotalUsers | Decimal | The total number of unique inbound users with sign-in activity in the last month. |
-| inboundMonthlyTotalApplications | Decimal | The total number of applications accessed by inbound users in the last month. |
-| outboundMonthlyTotalUsers | Decimal | The total number of unique outbound users with sign-in activity in the last month. |
-| outboundMonthlyTotalApplications | Decimal | The total number of applications accessed by outbound users in the last month. |
+| inboundMonthlyTotalUsers | Int64 | The total number of unique inbound users with sign-in activity in the last month. |
+| inboundMonthlyTotalApplications | Int64 | The total number of applications accessed by inbound users in the last month. |
+| outboundMonthlyTotalUsers | Int64 | The total number of unique outbound users with sign-in activity in the last month. |
+| outboundMonthlyTotalApplications | Int64 | The total number of applications accessed by outbound users in the last month. |
 
 ## Relationships
 
@@ -49,9 +49,9 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalUsers": "Decimal",
-  "inboundMonthlyTotalApplications": "Decimal",
-  "outboundMonthlyTotalUsers": "Decimal",
-  "outboundMonthlyTotalApplications": "Decimal"
+  "inboundMonthlyTotalUsers": "Int64",
+  "inboundMonthlyTotalApplications": "Int64",
+  "outboundMonthlyTotalUsers": "Int64",
+  "outboundMonthlyTotalApplications": "Int64"
 }
 ```

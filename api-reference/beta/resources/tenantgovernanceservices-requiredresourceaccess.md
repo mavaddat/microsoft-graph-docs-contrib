@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the permissions required by an application to access a specific resource. This is used when [defining multi-tenant applications to provision in governed tenants](..resources/tenantgovernanceservices-multitenantapplicationstoprovisionsnapshot.md).
+Represents the permissions required by an application to access a specific resource. This is used when [defining multi-tenant applications to provision in governed tenants](../resources/tenantgovernanceservices-multitenantapplicationstoprovisionsnapshot.md).
 
 ## Properties
 |Property|Type|Description|

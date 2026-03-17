@@ -20,13 +20,13 @@ Represents billing metrics that show commerce and billing account connections be
 |Property|Type|Description|
 |:---|:---|:---|
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| localAssociatedTenantCount | Decimal | The total number of local associated tenants. |
-| localAssociatedTenantBillingManagementActiveCount | Decimal | The number of local associated tenants with active billing management. |
-| localAssociatedTenantProvisioningActiveCount | Decimal | The number of local associated tenants with active provisioning. |
+| localAssociatedTenantCount | Int64 | The total number of local associated tenants. |
+| localAssociatedTenantBillingManagementActiveCount | Int64 | The number of local associated tenants with active billing management. |
+| localAssociatedTenantProvisioningActiveCount | Int64 | The number of local associated tenants with active provisioning. |
 | localAssociatedTenantIds | Collection(String) | The list of local associated tenant IDs. |
-| foreignAssociatedTenantCount | Decimal | The total number of foreign associated tenants. |
-| foreignAssociatedTenantBillingManagementActiveCount | Decimal | The number of foreign associated tenants with active billing management. |
-| foreignAssociatedTenantProvisioningActiveCount | Decimal | The number of foreign associated tenants with active provisioning. |
+| foreignAssociatedTenantCount | Int64 | The total number of foreign associated tenants. |
+| foreignAssociatedTenantBillingManagementActiveCount | Int64 | The number of foreign associated tenants with active billing management. |
+| foreignAssociatedTenantProvisioningActiveCount | Int64 | The number of foreign associated tenants with active provisioning. |
 
 ## Relationships
 |Property|Type|Description|

@@ -20,10 +20,10 @@ Represents B2B sign-in activity metrics that track monthly active guest users an
 |Property|Type|Description|
 |:---|:---|:---|
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundMonthlyTotalUsers | Decimal | The total number of unique inbound users with sign-in activity in the last month. |
-| inboundMonthlyTotalApplications | Decimal | The total number of applications accessed by inbound users in the last month. |
-| outboundMonthlyTotalUsers | Decimal | The total number of unique outbound users with sign-in activity in the last month. |
-| outboundMonthlyTotalApplications | Decimal | The total number of applications accessed by outbound users in the last month. |
+| inboundMonthlyTotalUsers | Int64 | The total number of unique inbound users with sign-in activity in the last month. |
+| inboundMonthlyTotalApplications | Int64 | The total number of applications accessed by inbound users in the last month. |
+| outboundMonthlyTotalUsers | Int64 | The total number of unique outbound users with sign-in activity in the last month. |
+| outboundMonthlyTotalApplications | Int64 | The total number of applications accessed by outbound users in the last month. |
 
 ## Relationships
 |Property|Type|Description|

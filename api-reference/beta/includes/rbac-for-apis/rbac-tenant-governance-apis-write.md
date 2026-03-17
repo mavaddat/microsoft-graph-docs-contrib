@@ -4,5 +4,5 @@ ms.topic: include
 ---
 
 > [!IMPORTANT]
-> In delegated scenarios with work or school accounts where the signed-in user is acting on another user, they must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json). The following least privileged roles are supported for this operation.
+> In delegated scenarios with work or school accounts, the signed-in user must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json). The following least privileged roles are supported for this operation.
 > - Tenant Governance Administrator

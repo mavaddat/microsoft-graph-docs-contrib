@@ -21,7 +21,7 @@ Represents a permission required by an application to access a resource. This is
 |:---|:---|:---|
 |id|String|The unique identifier of the permission.|
 |name|String|The name of the permission.|
-|type|[permissionType](../resources/enums-tenantgovernance.md#permissiontype-values)|The type of permission. The possible values are: `role`, `scope`, `unknownFutureValue`.|
+|type|[permissionType](../resources/enums-tenantgovernanceservices.md#permissiontype-values)|The type of permission. The possible values are: `role`, `scope`, `unknownFutureValue`.|
 
 ## Relationships
 None.

@@ -55,7 +55,7 @@ You can specify the following properties when creating a **governanceRequest**.
 |Property|Type|Description|
 |:---|:---|:---|
 |governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant. Required.|
-|governancePolicyTemplate@odata.bind|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernanceservices-governancePolicyTemplate.md)|Provide the governance policy template ID that is used to generate the [microsoft.graph.tenantGovernanceServices.policySnapshot](../resources/tenantgovernanceservices-policySnapshot.md). Required.|
+|governancePolicyTemplate@odata.bind|[microsoft.graph.tenantGovernanceServices.governancePolicyTemplate](../resources/tenantgovernanceservices-governancePolicyTemplate.md)|Provide the governance policy template ID that is used to generate the `policySnapshot`. Required.|
 
 
 

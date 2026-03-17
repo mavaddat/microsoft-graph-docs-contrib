@@ -24,8 +24,8 @@ Abstract base type that defines common properties for multi-tenant application m
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
-| inboundMonthlyTotalApplications | Decimal | The total number of inbound multi-tenant applications in the last month. |
-| outboundMonthlyTotalApplications | Decimal | The total number of outbound multi-tenant applications in the last month. |
+| inboundMonthlyTotalApplications | Int64 | The total number of inbound multi-tenant applications in the last month. |
+| outboundMonthlyTotalApplications | Int64 | The total number of outbound multi-tenant applications in the last month. |
 
 ## Relationships
 
@@ -47,7 +47,7 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalApplications": "Decimal",
-  "outboundMonthlyTotalApplications": "Decimal"
+  "inboundMonthlyTotalApplications": "Int64",
+  "outboundMonthlyTotalApplications": "Int64"
 }
 ```

@@ -88,8 +88,8 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
-  "isRelatedTenantsEnabled": "true",
-  "canReceiveInvitations": "false"
+  "isRelatedTenantsEnabled": true,
+  "canReceiveInvitations": false
 }
 ```
 

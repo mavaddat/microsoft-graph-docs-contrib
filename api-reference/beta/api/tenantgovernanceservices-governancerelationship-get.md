@@ -89,7 +89,7 @@ Content-Type: application/json
 {
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.governanceRelationship",
   "createdType": "approvedByAdmin",
-  "creationDateTime": "2025-09-11T17:07:41.2019694Z"
+  "creationDateTime": "2025-09-11T17:07:41.2019694Z",
   "id": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
   "status": "Active",
   "governingTenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
