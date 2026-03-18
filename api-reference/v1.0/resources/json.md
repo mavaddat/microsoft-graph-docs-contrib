@@ -13,6 +13,7 @@ ms.date: 04/03/2024
 Namespace: microsoft.graph
 
 Represents data returned in JSON format for Excel.
+
 ## Properties
 None.
 
