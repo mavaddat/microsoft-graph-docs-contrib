@@ -42,7 +42,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.tenantGovernanceServices.billingMetricsInitial",
   "baseType": "microsoft.graph.tenantGovernanceServices.billingMetricsBase",
-  "openType": "id"
+  "openType": false
 }
 -->
 ``` json

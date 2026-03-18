@@ -37,7 +37,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent",
   "baseType": "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase",
-  "openType": "id"
+  "openType": false
 }
 -->
 ``` json

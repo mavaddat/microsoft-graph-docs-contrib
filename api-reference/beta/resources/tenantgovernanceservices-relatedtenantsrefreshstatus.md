@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the [status](../api/tenantgovernance-relatedtenant-refreshstatus.md) of a [related tenants refresh operation](../api/tenantgovernance-relatedtenant-refreshstatus.md), including the most recent refresh timestamp and current status of the operation.
+Represents the [status](../api/tenantgovernanceservices-relatedtenant-refreshstatus.md) of a [related tenants refresh operation](../api/tenantgovernanceservices-relatedtenant-refreshstatus.md), including the most recent refresh timestamp and current status of the operation.
 
 
 ## Properties
