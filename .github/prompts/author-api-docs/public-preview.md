@@ -308,7 +308,14 @@ When API changes involve adding new properties or relationships to an existing r
      - `api-reference/v1.0/includes/permissions/`
    - Do not make any changes to these permissions files
 
-4. **HTTP request section:**
+4. **RBAC include (optional — only when admin role info is provided):**
+   - If the documentation plan or author specifies required Entra admin roles for the API:
+     - Create the RBAC include file using the templates in [RBAC for APIs include file templates](../../../templates/rbac-for-apis-include.md)
+     - Place in `api-reference/{version}/includes/rbac-for-apis/`
+     - Add the include statement after the permissions table include, before `## HTTP request`
+   - If no admin role info is provided, skip this step
+
+5. **HTTP request section:**
    - Confirm the endpoint matches the endpoints in the API.md
    - Correct where you can
    - **For actions/functions in subnamespaces:** See [namespace qualification rules](common.md#namespace-qualification) for fully qualifying actions/functions
@@ -559,6 +566,7 @@ In addition to the [base quality checklist](common.md#base-quality-checklist), v
 - [ ] Description links back to parent resource (e.g. `Get a [user](../resources/user.md).`)
 - [ ] Permissions section unchanged
 - [ ] Permissions include file copied to correct includes folder
+- [ ] RBAC include file created and added if admin role info was provided
 - [ ] HTTP request: Endpoints confirmed against API.md
 - [ ] HTTP request: Endpoints match example URL in Examples section except relative URL
 - [ ] HTTP request: Actions/functions in subnamespaces are fully qualified
