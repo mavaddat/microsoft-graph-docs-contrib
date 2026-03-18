@@ -21,8 +21,8 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List recoveryJobBase](../api/entrarecoveryservices-recovery-list-jobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md)| Get a list of the recoveryJobBase objects and their properties.|
-|[cancel](../api/entrarecoveryservices-recoveryjobbase-cancel.md)|None|Cancel a running recovery or preview job.|
+|[List](../api/entrarecoveryservices-recovery-list-jobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md)| Get a list of the recoveryJobBase objects and their properties.|
+|[Cancel](../api/entrarecoveryservices-recoveryjobbase-cancel.md)|None|Cancel a running recovery or preview job.|
 
 ## Properties
 |Property|Type|Description|
