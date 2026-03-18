@@ -49,7 +49,7 @@ Don't supply a function parameter for this method.
 
 ## Optional query parameters
 
-This method supports the `$top`, `$skip`, and `$select` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$top`, `$skip`, and `$select` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters). The default and maximum page sizes are 100 and 999 failed change objects respectively.
 
 ## Request headers
 

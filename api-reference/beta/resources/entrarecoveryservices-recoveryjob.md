@@ -36,11 +36,11 @@ Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobBase](../resourc
 |jobStartDateTime|DateTimeOffset|The date and time when the job started. Inherited from [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md).|
 |status|[microsoft.graph.entraRecoveryServices.recoveryStatus](../resources/enums-entrarecoveryservices.md)|The current status of the job. Inherited from [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md). The possible values are: `initialized`, `running`, `successful`, `failed`, `abandoned`, `unknownFutureValue`, `calculating`, `loadingData`. You must use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `calculating`, `loadingData`.|
 |targetStateDateTime|DateTimeOffset|The target snapshot timestamp to which the tenant is being restored. Inherited from [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md).|
-|totalChangedLinksCalculated|Int32|The total count of changed directory object links (relationships) calculated by the job. `null` until the job completes calculation. Inherited from [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md).|
-|totalChangedObjectsCalculated|Int32|The total count of changed directory objects calculated by the job. `null` until the job completes calculation. Inherited from [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md).|
-|totalFailedChanges|Int32|The count of changes that failed to apply during recovery.|
-|totalLinksModified|Int32|The count of directory object links (relationships) that were modified during recovery.|
-|totalObjectsModified|Int32|The count of directory objects that were modified during recovery.|
+|totalChangedLinksCalculated|Int32|The total count of changed directory object links (relationships) calculated by the job. `null` until the job completes calculation. This value can differ from **totalLinksModified** because some link changes may fail to apply during recovery. Inherited from [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md).|
+|totalChangedObjectsCalculated|Int32|The total count of changed directory objects calculated by the job. `null` until the job completes calculation. This value can differ from **totalObjectsModified** because some object changes may fail to apply during recovery. Inherited from [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md).|
+|totalFailedChanges|Int32|The count of changes (including both objects and links) that failed to apply during recovery.|
+|totalLinksModified|Int32|The count of directory object links (relationships) that were successfully modified during recovery. This value may be less than **totalChangedLinksCalculated** if some link changes failed.|
+|totalObjectsModified|Int32|The count of directory objects that were successfully modified during recovery. This value may be less than **totalChangedObjectsCalculated** if some object changes failed.|
 
 ## Relationships
 None.

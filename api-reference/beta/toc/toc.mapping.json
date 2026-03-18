@@ -1221,13 +1221,19 @@
             "uxSetting",
             "deviceTemplate",
             "mutualTlsOauthConfiguration",
-            "entrarecoveryservices-recovery",
-            "entrarecoveryservices-recoveryjob",
-            "entrarecoveryservices-recoveryjobbase",
-            "entrarecoveryservices-recoverypreviewjob",
-            "entrarecoveryservices-snapshot"
+            "entrarecoveryservices-recovery"
           ],
           "childNodes": [
+            {
+              "name": "Backup and recovery",
+              "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
+              "resources": [
+                "entrarecoveryservices-recoveryjob",
+                "entrarecoveryservices-recoveryjobbase",
+                "entrarecoveryservices-recoverypreviewjob",
+                "entrarecoveryservices-snapshot"
+              ]
+            },
             {
               "name": "Mobility management policy",
               "resources": [

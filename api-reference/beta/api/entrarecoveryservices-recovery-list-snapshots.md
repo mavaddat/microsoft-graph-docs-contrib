@@ -42,7 +42,7 @@ GET /directory/recovery/snapshots
 
 ## Optional query parameters
 
-This method supports the `$select`, `$top`, and `$orderby` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select`, `$top`, and `$orderby` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters). The default and maximum page sizes are 100 and 999 snapshots objects respectively.
 
 ## Request headers
 

@@ -43,7 +43,7 @@ GET /directory/recovery/jobs
 
 ## Optional query parameters
 
-This method supports the `$select`, `$top`, `$filter`, and `$orderby` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select`, `$top`, `$filter`, and `$orderby` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters). The default and maximum page sizes are 100 and 999 job objects respectively.
 
 ## Request headers
 
