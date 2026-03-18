@@ -14,7 +14,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Abstract base complex type for filtering criteria used to scope recovery jobs to specific entity types or entity IDs. This type has no properties of its own.
+Abstract base complex type for filtering criteria used to scope [recovery jobs](../resources/entrarecoveryservices-recoveryjob.md) to specific entity types or entity IDs. This type has no properties of its own.
 
 Derived types:
 - [recoveryJobEntityNamesFilter](entrarecoveryservices-recoveryjobentitynamesfilter.md)
