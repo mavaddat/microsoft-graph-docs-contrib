@@ -50,6 +50,13 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a collection of [teamworkSection](../resources/teamworksection.md) objects in the response body.
 
+The response includes the following OData instance annotations on the collection:
+
+| Annotation | Type | Description |
+|:-----------|:-----|:------------|
+| @microsoft.graph.sectionsOrder | String collection | An ordered array of section IDs representing the user's preferred section order. |
+| @microsoft.graph.sectionsVersion | String | The current section hierarchy version. Use this value as the `If-Match` header for optimistic concurrency control on mutation operations (create, update, delete sections, and add, remove, or move items). |
+
 ## Examples
 
 ### Request
@@ -81,6 +88,11 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
+  "@microsoft.graph.sectionsOrder": [
+    "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "b2c3d4e5-f6a7-8901-bcde-f12345678901"
+  ],
+  "@microsoft.graph.sectionsVersion": "123456",
   "value": [
     {
       "@odata.type": "#microsoft.graph.teamworkSection",

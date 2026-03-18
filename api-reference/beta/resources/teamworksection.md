@@ -25,6 +25,10 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 | [Get](../api/teamworksection-get.md) | [teamworkSection](teamworksection.md) | Read the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
 | [Update](../api/teamworksection-update.md) | [teamworkSection](teamworksection.md) | Update the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
 | [Delete](../api/teamworksection-delete.md) | None | Delete a user-defined [section](../resources/teamworksection.md) from a user's [teamwork](../resources/userteamwork.md). |
+| [List items](../api/teamworksection-list-items.md) | [teamworkSectionItem](teamworksectionitem.md) collection | Get the list of [items](../resources/teamworksectionitem.md) in a [section](../resources/teamworksection.md). |
+| [Add item](../api/teamworksection-post-items.md) | [teamworkSectionItem](teamworksectionitem.md) | Add an [item](../resources/teamworksectionitem.md) to a [section](../resources/teamworksection.md). |
+| [Remove item](../api/teamworksection-delete-items.md) | None | Remove an [item](../resources/teamworksectionitem.md) from a [section](../resources/teamworksection.md). |
+| [Move item](../api/teamworksectionitem-move.md) | [teamworkSectionItem](teamworksectionitem.md) | Move an [item](../resources/teamworksectionitem.md) from one section to another. |
 
 ## Properties
 
@@ -63,7 +67,9 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 
 ## Relationships
 
-None.
+| Relationship | Type | Description |
+|:-------------|:-----|:------------|
+| items | [teamworkSectionItem](teamworksectionitem.md) collection | The items (chats, channels, meetings, communities) organized within the section. |
 
 ## JSON representation
 
@@ -110,4 +116,5 @@ The following JSON representation shows the resource type.
 
 ## Related content
 
+- [teamworkSectionItem resource type](teamworksectionitem.md)
 - [userTeamwork resource type](userteamwork.md)

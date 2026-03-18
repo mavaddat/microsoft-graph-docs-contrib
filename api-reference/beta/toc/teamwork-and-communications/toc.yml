@@ -1249,6 +1249,18 @@ items:
         href: ../../api/teamworksection-update.md
       - name: Delete
         href: ../../api/teamworksection-delete.md
+    - name: Teamwork section item
+      items:
+      - name: Teamwork section item
+        href: ../../resources/teamworksectionitem.md
+      - name: List
+        href: ../../api/teamworksection-list-items.md
+      - name: Add
+        href: ../../api/teamworksection-post-items.md
+      - name: Remove
+        href: ../../api/teamworksection-delete-items.md
+      - name: Move
+        href: ../../api/teamworksectionitem-move.md
     - name: Complex types
       items:
       - name: Section display icon

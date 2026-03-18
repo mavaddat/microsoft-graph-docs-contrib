@@ -3574,7 +3574,8 @@
             {
               "name": "Sections (preview)",
               "resources": [
-                "teamworkSection"
+                "teamworkSection",
+                "teamworkSectionItem"
               ],
               "complexTypes": [
                 "sectionDisplayIcon"

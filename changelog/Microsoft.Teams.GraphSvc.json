@@ -49,6 +49,30 @@
           "ChangeType": "Addition",
           "Description": "Added the **sectionIconSkinTone** enumeration.",
           "Target": "sectionIconSkinTone"
+        },
+        {
+          "Id": "d7a1b3c5-4e2f-8901-ab6d-ef2345678901",
+          "ApiChange": "Resource",
+          "ChangedApiName": "teamworkSectionItem",
+          "ChangeType": "Addition",
+          "Description": "Added the [teamworkSectionItem](https://learn.microsoft.com/en-us/graph/api/resources/teamworksectionitem?view=graph-rest-beta) resource and associated methods.",
+          "Target": "teamworkSectionItem"
+        },
+        {
+          "Id": "d7a1b3c5-4e2f-8901-ab6d-ef2345678901",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "items",
+          "ChangeType": "Addition",
+          "Description": "Added the **items** relationship to the [teamworkSection](https://learn.microsoft.com/en-us/graph/api/resources/teamworksection?view=graph-rest-beta) resource.",
+          "Target": "teamworkSection"
+        },
+        {
+          "Id": "d7a1b3c5-4e2f-8901-ab6d-ef2345678901",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "sectionItemType",
+          "ChangeType": "Addition",
+          "Description": "Added the **sectionItemType** enumeration.",
+          "Target": "sectionItemType"
         }
       ],
       "Id": "d7a1b3c5-4e2f-8901-ab6d-ef2345678901",
