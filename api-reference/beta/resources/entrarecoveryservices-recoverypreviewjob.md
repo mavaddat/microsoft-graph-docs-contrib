@@ -14,7 +14,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a preview job that calculates and enumerates the changes required to recover a tenant to a specific snapshot state. Inherits from [recoveryJobBase](entrarecoveryservices-recoveryjobbase.md). Use the `getChanges` function to retrieve the calculated changes after the job completes.
+Represents a preview job that calculates and enumerates the changes required to recover a tenant to a specific snapshot state. Inherits from [recoveryJobBase](entrarecoveryservices-recoveryjobbase.md). Use the [getChanges](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md) function to retrieve the calculated changes after the job completes.
 
 Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md).
 
