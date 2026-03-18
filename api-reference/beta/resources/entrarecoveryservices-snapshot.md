@@ -29,7 +29,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|The date and time when the snapshot was created.|
 |id|String|The unique identifier for the snapshot. This is the base64-encoded representation of the snapshot timestamp. Inherited from [entity](../resources/entity.md).|
-|totalChangedObjects|Int32|The total count of objects in this snapshot.|
+|totalChangedObjects|Int32|The total number of changed objects identified in this snapshot.|
 
 ## Relationships
 |Relationship|Type|Description|
