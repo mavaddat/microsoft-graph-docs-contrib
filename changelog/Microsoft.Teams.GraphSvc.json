@@ -73,6 +73,14 @@
           "ChangeType": "Addition",
           "Description": "Added the **sectionItemType** enumeration.",
           "Target": "sectionItemType"
+        },
+        {
+          "Id": "d7a1b3c5-4e2f-8901-ab6d-ef2345678901",
+          "ApiChange": "Method",
+          "ChangedApiName": "move",
+          "ChangeType": "Addition",
+          "Description": "Added the [move](https://learn.microsoft.com/en-us/graph/api/teamworksectionitem-move?view=graph-rest-beta) method to the [teamworkSectionItem](https://learn.microsoft.com/en-us/graph/api/resources/teamworksectionitem?view=graph-rest-beta) resource.",
+          "Target": "teamworkSectionItem"
         }
       ],
       "Id": "d7a1b3c5-4e2f-8901-ab6d-ef2345678901",
