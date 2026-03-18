@@ -38,7 +38,7 @@ POST /users/{user-id}/teamwork/sections
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | Content-Type | application/json. Required. |
-| If-Match | The ETag value of a previously retrieved **userTeamwork** resource. Required for optimistic concurrency control. |
+| If-Match | The value of the **@microsoft.graph.sectionsVersion** property previously retrieved from [listing sections](userteamwork-list-sections.md). Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -71,7 +71,7 @@ The following example shows a request.
 ```http
 POST https://graph.microsoft.com/beta/users/10f8c3a6-3e2a-4e8b-9c7d-5a4b6c8d9e0f/teamwork/sections
 Content-type: application/json
-If-Match: W/"123456"
+If-Match: "1742515200"
 
 {
   "displayName": "Project Alpha",
@@ -101,7 +101,7 @@ Location: https://graph.microsoft.com/beta/users/10f8c3a6-3e2a-4e8b-9c7d-5a4b6c8
 
 {
   "@odata.type": "#microsoft.graph.teamworkSection",
-  "@odata.etag": "W/\"123457\"",
+  "@odata.etag": "\"1742515210\"",
   "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
   "displayName": "Project Alpha",
   "displayIcon": {

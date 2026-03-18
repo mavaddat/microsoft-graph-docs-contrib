@@ -38,7 +38,7 @@ POST /users/{user-id}/teamwork/sections/{teamworkSection-id}/items
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | Content-Type | application/json. Required. |
-| If-Match | The ETag value of a previously retrieved **teamworkSectionItem**. Required for optimistic concurrency control. |
+| If-Match | The value of the **@microsoft.graph.sectionsVersion** property previously retrieved from [listing sections](userteamwork-list-sections.md). Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -78,7 +78,7 @@ The following example shows a request to add a chat to a section.
 ```http
 POST https://graph.microsoft.com/beta/users/10f8c3a6-3e2a-4e8b-9c7d-5a4b6c8d9e0f/teamwork/sections/a1b2c3d4-e5f6-7890-abcd-ef1234567890/items
 Content-type: application/json
-If-Match: W/"123456"
+If-Match: "1742515200"
 
 {
   "id": "19:d5b2c3a4-e6f7-8901-abcd-ef3456789012@thread.v2"
@@ -103,7 +103,7 @@ Location: https://graph.microsoft.com/beta/users/10f8c3a6-3e2a-4e8b-9c7d-5a4b6c8
 
 {
   "@odata.type": "#microsoft.graph.teamworkSectionItem",
-  "@odata.etag": "W/\"123457\"",
+  "@odata.etag": "\"1742515210\"",
   "id": "19:d5b2c3a4-e6f7-8901-abcd-ef3456789012@thread.v2",
   "itemType": "chat",
   "createdDateTime": "2026-03-08T10:00:00Z",

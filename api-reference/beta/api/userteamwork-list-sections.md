@@ -92,11 +92,11 @@ Content-type: application/json
     "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
     "b2c3d4e5-f6a7-8901-bcde-f12345678901"
   ],
-  "@microsoft.graph.sectionsVersion": "123456",
+  "@microsoft.graph.sectionsVersion": "1742515200",
   "value": [
     {
       "@odata.type": "#microsoft.graph.teamworkSection",
-      "@odata.etag": "W/\"123456\"",
+      "@odata.etag": "\"1742515200\"",
       "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
       "displayName": "Favorites",
       "displayIcon": {
@@ -114,7 +114,7 @@ Content-type: application/json
     },
     {
       "@odata.type": "#microsoft.graph.teamworkSection",
-      "@odata.etag": "W/\"123457\"",
+      "@odata.etag": "\"1742515200\"",
       "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
       "displayName": "Teams and Channels",
       "displayIcon": null,

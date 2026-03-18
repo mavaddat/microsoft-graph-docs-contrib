@@ -41,7 +41,7 @@ This method doesn't support [OData query parameters](/graph/query-parameters) to
 | Header | Value |
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| If-None-Match | The ETag value of a previously retrieved **teamworkSection**. If the resource didn't change, this header causes a `304 Not Modified` response. Optional. |
+| If-None-Match | The value of the **@microsoft.graph.sectionsVersion** property previously retrieved from [listing sections](userteamwork-list-sections.md). If the section hierarchy didn't change, this header causes a `304 Not Modified` response. Optional. |
 
 ## Request body
 
@@ -80,11 +80,11 @@ The following example shows the response.
 ```http
 HTTP/1.1 200 OK
 Content-type: application/json
-ETag: W/"123456"
+ETag: "1742515200"
 
 {
   "@odata.type": "#microsoft.graph.teamworkSection",
-  "@odata.etag": "W/\"123456\"",
+  "@odata.etag": "\"1742515200\"",
   "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
   "displayName": "Favorites",
   "displayIcon": {
