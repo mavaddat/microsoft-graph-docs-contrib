@@ -1018,7 +1018,10 @@
             "employeeExperienceUser",
             "engagementAsyncOperation",
             "engagementRole",
-            "engagementRoleMember"
+            "engagementRoleMember",
+            "storyline",
+            "storylineFollower",
+            "storylineFollowing"
           ],
           "complexTypes": [
             "engagementConversationMessageAttachment",
@@ -2512,6 +2515,9 @@
         "profileSource",
         "profilePropertySetting",
         "userAnalytics"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {

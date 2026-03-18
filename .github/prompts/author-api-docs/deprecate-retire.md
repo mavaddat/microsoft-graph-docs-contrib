@@ -184,22 +184,7 @@ If the author has already described the deprecation in sufficient detail (e.g., 
 
 ### To deprecate an enumeration
 
-1. **Update enumeration definition:**
-   - **In enums.md or parent resource:** Add "(deprecated)" to section title: `### emailType values (deprecated)`
-   - **In own topic (rare):** Add "(deprecated)" to H1 title and add deprecation banner
-
-2. **Update properties using the enum:**
-   - Update type, description, possible values with alternative/workaround
-
----
-
-### To deprecate enumeration members
-
-1. **Update member table:**
-   - Add "(deprecated)" to member name, specify alternative, move to end (see common pattern)
-
-2. **Update property descriptions:**
-   - Note which values are deprecated and provide guidance
+See [Deprecating enumerations](.github/prompts/author-api-docs/enumerations.md#deprecating-enumerations) in `enumerations.md` for detailed instructions on deprecating entire enumerations and individual enum members.
 
 ---
 
@@ -218,6 +203,106 @@ When combining deprecation with new APIs/promotions:
 2. Process non-deprecation tasks first (ensures alternatives are documented)
 3. Process deprecation tasks, referencing newly created alternatives
 4. Update changelog with both deprecation and addition/change entries
+
+---
+
+## Retirement (API removal)
+
+Retirement is the final stage of the API lifecycle — the deprecated API has reached its sunset date and is removed from the service. Documentation files for retired APIs must be **deleted** from the repository, with redirects added to guide users to alternatives.
+
+**Retirement vs. deprecation:** Deprecation marks an API as "going away in the future" — it adds notices with sunset dates and alternatives. Retirement removes the API entirely — files are deleted, not just annotated.
+
+### Inputs for retirement
+
+The Documentation Plan must explicitly identify:
+- Which resources (entity types, complex types) are being retired (marked as "Deleted" or "Removed")
+- Which API operation files are linked to the retired resources
+- **Dependency analysis for related types:** Complex types referenced as property return types and entity types referenced as relationship targets must be explicitly called out. The Documentation Plan must state whether each related type is also being retired or should be retained.
+
+### Retirement workflow
+
+#### Step 1: Delete retired files
+
+Based on the Documentation Plan, delete:
+
+1. **Resource files** for entity types and complex types explicitly marked as retired/deleted:
+   - `api-reference/{version}/resources/{namespace}-{resourcename}.md`
+
+2. **API operation files** linked to the retired resource:
+   - List files (GET collection): `{resource}-list-{entityType}.md`
+   - Get files (GET single): `{entityType}-get.md`
+   - Create files (POST): `{resource}-post-{entityType}.md`
+   - PUT files: `{resource}-put-{entityType}.md`
+   - Update files (PATCH): `{entityType}-update.md`
+   - Upsert files (PATCH): `{entityType}-upsert.md`
+   - Delete files (DELETE): `{entityType}-delete.md`
+   - Action files: `{entityType}-{actionName}.md`
+   - Function files: `{entityType}-{functionName}.md`
+
+3. **Permission include files** for the retired API operation files:
+   - `api-reference/{version}/includes/permissions/{operation}-permissions.md` (naming may vary — match the include reference in each API operation file)
+
+4. **Complex type files** explicitly called out as retired/deleted in the Documentation Plan:
+   - Only delete if the Documentation Plan explicitly marks the complex type as retired/deleted
+   - If not explicitly called out as retired, retain the file
+
+5. **Enum files or sections** explicitly called out as retired/deleted in the Documentation Plan:
+   - For standalone enum files: delete if explicitly marked as retired
+   - For H3 sections in parent resources: removed when parent resource is deleted
+   - For entries in global enums files (`enums.md`, `enums-{subnamespace}.md`): remove the enum section
+   - If not explicitly called out as retired, retain the file
+
+#### Step 2: Clean up references
+
+1. **Parent resource references:**
+   - Remove the retired resource from Methods tables, Relationships tables, and Properties tables of any parent or related resources that reference it
+
+2. **TOC updates:**
+   - Remove entries for deleted files from `toc.mapping.json`
+   - Remove entries from concept `toc.yml` if applicable
+
+3. **Concept topics:**
+   - Remove or update references to the retired API in overview and concept documentation
+   - If a concept topic is entirely about the retired feature, delete it
+
+#### Step 3: Add redirects
+
+Add redirects for **resource files that include Methods tables** (entity types) and **API operation files**. Complex types, enums, and permission include files do not need redirects.
+
+**Redirect file location:** The repo uses multiple redirect files in the `redirects/` folder at the root, following the pattern `.openpublishing.redirection.yyyy-mm.json`. Use the **latest** redirection file.
+
+**Redirect file format:**
+```json
+{
+    "redirections": [
+        {
+            "source_path": "api-reference/{version}/resources/{retired-resource}.md",
+            "redirect_url": "/graph/api/resources/{alternative-resource}",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "api-reference/{version}/api/{retired-operation}.md",
+            "redirect_url": "/graph/api/{alternative-operation}",
+            "redirect_document_id": false
+        }
+    ]
+}
+```
+
+**Field definitions:**
+- `source_path` — file path to the deleted file in the repo (relative to repo root)
+- `redirect_url` — relative URL to the alternative article on learn.microsoft.com (not a file path)
+- `redirect_document_id` — always `false`
+
+**Steps:**
+1. Identify the latest `.openpublishing.redirection.yyyy-mm.json` file in the `redirects/` folder
+2. Add redirect entries for each deleted resource file (entity types with Methods tables) and each deleted API operation file
+3. Set `redirect_url` to the alternative resource or operation specified in the Documentation Plan or the deprecation notice
+
+#### Step 4: Add changelog and What's New
+
+1. **Changelog:** Add entries with Change type "Deletion". See [Updating the Changelog](common.md#updating-the-changelog).
+2. **What's New:** Note the API retirement, link to the alternative API, and reference the original deprecation blog post. See [Updating What's New](common.md#updating-whats-new).
 
 ---
 
@@ -258,8 +343,7 @@ In addition to the [base quality checklist](common.md#base-quality-checklist), v
 - [ ] Description accuracy reviewed (e.g., "required" removed)
 
 **Enumerations:**
-- [ ] Section title or H1 title updated
-- [ ] Properties using enum updated with alternatives
+- [ ] See the [Quality checklist for enumerations](.github/prompts/author-api-docs/enumerations.md#for-deprecating-enumerations) in `enumerations.md`
 
 **Supporting updates:**
 - [ ] Changelog: Change type "Deprecation", links to topics/blog
@@ -277,3 +361,16 @@ In addition to the [base quality checklist](common.md#base-quality-checklist), v
 
 **Final — Scenario 3 specific:**
 - [ ] All deprecation items from Documentation Plan addressed
+- [ ] All retirement items from Documentation Plan addressed
+
+**Retirement-specific (if applicable):**
+- [ ] All resource files explicitly marked as retired/deleted are deleted
+- [ ] All API operation files linked to retired resources are deleted
+- [ ] All permission include files for retired operations are deleted
+- [ ] Complex types and enums only deleted if explicitly called out as retired in the Documentation Plan
+- [ ] References to retired resources removed from parent/related resource tables (Methods, Relationships, Properties)
+- [ ] TOC entries removed for deleted files
+- [ ] Concept topics updated or deleted as appropriate
+- [ ] Redirects added in latest `.openpublishing.redirection.yyyy-mm.json` for deleted resource files (with Methods tables) and API operation files
+- [ ] Changelog entries added with Change type "Deletion"
+- [ ] What's New updated with retirement notice and link to alternative
