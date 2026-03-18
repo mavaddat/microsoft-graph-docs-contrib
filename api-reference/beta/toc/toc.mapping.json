@@ -174,9 +174,6 @@
       ],
       "resources": [
         "backupRestoreRoot",
-        "browseSessionBase",
-        "oneDriveForBusinessBrowseSession",
-        "sharePointBrowseSession",
         "emailNotificationsSetting",
         "protectionPolicyBase",
         "protectionRuleBase",
@@ -188,6 +185,14 @@
         "serviceApp"
       ],
       "childNodes": [
+        {
+          "name": "Browse session",
+          "overview": "../../resources/browsesessionbase.md",
+          "resources": [
+            "oneDriveForBusinessBrowseSession",
+            "sharePointBrowseSession"
+          ]
+        },
         {
           "name": "Protection policy",
           "resources": [
@@ -612,6 +617,9 @@
             "cloudPcDisasterRecoveryNetworkSetting",
             "cloudPcDiscoveredApp",
             "cloudPcDomainJoinConfiguration",
+            "cloudpcexternalpartneractionreport",
+            "cloudpcexternalpartneractionresult",
+            "cloudpcexternalpartneragentsetting",
             "cloudPcForensicStorageAccount",
             "cloudPcFrontlineSharedDeviceDetail",
             "cloudPcHealthCheckItem",
@@ -1010,7 +1018,10 @@
             "employeeExperienceUser",
             "engagementAsyncOperation",
             "engagementRole",
-            "engagementRoleMember"
+            "engagementRoleMember",
+            "storyline",
+            "storylineFollower",
+            "storylineFollowing"
           ],
           "complexTypes": [
             "engagementConversationMessageAttachment",
@@ -2223,6 +2234,14 @@
               ]
             },
             {
+              "name": "Cloud firewall",
+              "resources": [
+                "microsoft.graph.networkaccess.cloudFirewallPolicy",
+                "microsoft.graph.networkaccess.cloudFirewallRule",
+                "microsoft.graph.networkaccess.cloudFirewallPolicyLink",
+              ]
+            },
+            {
               "name": "Remote network",
               "resources": [
                 "microsoft.graph.networkaccess.deviceLink",
@@ -2398,7 +2417,8 @@
         "mailFolderOperation",
         "mailSearchFolder",
         "messageRule",
-        "exchangeMessageTrace"
+        "exchangeMessageTrace",
+        "userConfiguration"
       ],
       "childNodes": [
         {
@@ -2495,6 +2515,9 @@
         "profileSource",
         "profilePropertySetting",
         "userAnalytics"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -2872,10 +2895,6 @@
           "resources": [
             "microsoft.graph.security.auditLogQuery",
             "microsoft.graph.security.auditLogRecord"
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.auditData",
-            "microsoft.graph.security.defaultAuditData"
           ]
         },
         {
@@ -2967,12 +2986,6 @@
                 "microsoft.graph.security.ediscoveryReviewSetQuery"
               ]
             }
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.ediscoveryAddToReviewSetOperation",
-            "microsoft.graph.security.ediscoveryEstimateOperation",
-            "microsoft.graph.security.ediscoveryPurgeDataOperation",
-            "microsoft.graph.security.reportFileMetadata"
           ]
         },
         {
@@ -3271,6 +3284,10 @@
         "plannerRuleOverride",
         "plannerSharedWithContainer",
         "plannerTaskCompletionRequirementDetails",
+        "plannerTaskChatMention",
+        "plannerTaskChatMessage",
+        "plannerTaskChatReaction",
+        "plannerTaskChatReactionEvent",
         "plannerTaskCreation",
         "plannerTaskPropertyRule",
         "plannerTaskRecurrence",
@@ -3766,3 +3783,4 @@
     }
   ]
 }
+

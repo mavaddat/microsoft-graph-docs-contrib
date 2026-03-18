@@ -578,6 +578,7 @@ Namespace: microsoft.graph
 | allDirectoryServicePrincipals |
 | allConfiguredConnectedOrganizationUsers |
 | allExternalUsers |
+| allDirectoryAgentIdentities |
 | unknownFutureValue |
 
 ### accessPackageAssignmentFilterByCurrentUserOptions values
@@ -2927,46 +2928,6 @@ Possible values for user account types (group membership), per Windows definitio
 | mfa |
 | unknownFutureValue |
 
-### authenticationMethodModes values
-
-| Member |
-| ---- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido2 |
-| windowsHelloForBusiness |
-| microsoftAuthenticatorPush |
-| deviceBasedPush |
-| temporaryAccessPassOneTime |
-| temporaryAccessPassMultiUse |
-| email |
-| x509CertificateSingleFactor |
-| x509CertificateMultiFactor |
-| federatedSingleFactor |
-| federatedMultiFactor |
-| unknownFutureValue |
-
-### baseAuthenticationMethod values
-
-| Member |
-| ---- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido |
-| microsoftAuthenticator |
-| windowsHelloForBusiness |
-| temporaryAccessPass |
-| email |
-| x509Certificate |
-| federation |
-| unknownFutureValue |
-
 ### browserSharedCookieSourceEnvironment values
 
 | Member |
@@ -3277,6 +3238,16 @@ Possible values for user account types (group membership), per Windows definitio
 | Active |
 | Disabled |
 | Paused |
+
+### scopeCollectionKind values 
+
+|Member|
+|:---|
+|allAllowed|
+|enumerated|
+|none|
+|scopeKindNotSet|
+|unknownFutureValue|
 
 ### scopeOperatorMultiValuedComparisonType values
 

@@ -490,6 +490,22 @@ Namespace: microsoft.graph
 | cancelled |
 | unknownFutureValue |
 
+### plannerTaskChatMentionType values
+
+| Member |
+| -------------------- |
+| user |
+| application |
+| unknownFutureValue |
+
+### plannerTaskChatMessageType values
+
+| Member |
+| -------------------- |
+| richTextHtml |
+| plainText |
+| unknownFutureValue |
+
 ### applicationKeyOrigin values
 
 | Member |
@@ -2707,6 +2723,14 @@ Namespace: microsoft.graph
 | declined |
 | notResponded |
 
+### privilegeLevel values
+
+|Member|
+|:---|
+|standard|
+|privileged|
+|unknownFutureValue|
+
 ### activityDomain values
 
 | Member |
@@ -4452,47 +4476,6 @@ Possible values for user account types (group membership), per Windows definitio
 | cannotSatisfy |
 | unknownFutureValue |
 
-### authenticationMethodModes values
-
-| Member |
-| --------------------------- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido2 |
-| windowsHelloForBusiness |
-| microsoftAuthenticatorPush |
-| deviceBasedPush |
-| temporaryAccessPassOneTime |
-| temporaryAccessPassMultiUse |
-| email |
-| x509CertificateSingleFactor |
-| x509CertificateMultiFactor |
-| federatedSingleFactor |
-| federatedMultiFactor |
-| unknownFutureValue |
-| qrCodePin |
-
-### baseAuthenticationMethod values
-
-| Member |
-| ----------------------- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido |
-| microsoftAuthenticator |
-| windowsHelloForBusiness |
-| temporaryAccessPass |
-| email |
-| x509Certificate |
-| federation |
-| unknownFutureValue |
-
 ### searchContent values
 
 | Member |
@@ -5084,6 +5067,8 @@ Possible values for user account types (group membership), per Windows definitio
 | samAccountName |
 | unknownFutureValue |
 
+
+
 ### samlAttributeNameFormat values
 
 | Member |
@@ -5412,16 +5397,6 @@ Possible values for user account types (group membership), per Windows definitio
 |phish|
 |unknownFutureValue|
 
-### errorCorrectionLevel values
-
-|Member|
-|:---|
-|l|
-|m|
-|q|
-|h|
-|unknownFutureValue|
-
 ### protectionSource values
 
 |Member|
@@ -5429,16 +5404,6 @@ Possible values for user account types (group membership), per Windows definitio
 |none|
 |manual|
 |dynamicRule|
-|unknownFutureValue|
-
-### organizationAllowedAudiences values
-
-|Member|
-|:---|
-|me|
-|organization|
-|federatedOrganizations|
-|everyone|
 |unknownFutureValue|
 
 ### educationSpeechType values
@@ -5986,3 +5951,21 @@ Possible values for user account types (group membership), per Windows definitio
 |failed|
 |unknownFutureValue|
 |partiallySuccessful|
+
+### contentCategory values 
+
+|Member|
+|:---|
+|none|
+|ai|
+|unknownFutureValue|
+
+### trafficRoutingMethod values 
+
+|Member|
+|:---|
+|none|
+|random|
+|sessionPersistence|
+|performance|
+|unknownFutureValue|

@@ -73,7 +73,7 @@ This resource supports:
 | appRoles | [appRole](approle.md) collection | The collection of roles defined for the application. With [app role assignments](approleassignment.md), these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable. |
 |authenticationBehaviors|[authenticationBehaviors](../resources/authenticationbehaviors.md)| The collection of breaking change behaviors related to token issuance that are configured for the application. Authentication behaviors are unset by default (`null`) and must be explicitly enabled or disabled. Nullable. Returned only on `$select`. <br/><br/> For more information about authentication behaviors, see [Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization](/graph/applications-authenticationbehaviors).|
 |certification|[certification](certification.md)|Specifies the certification status of the application.|
-|createdByAppId|String|The globally unique **appId** (called **Application (client) ID** on the Microsoft Entra admin center) of the application that created this application. Set internally by Microsoft Entra ID. Read-only.|
+|createdByAppId|String|The **appId** of the application that created this application. Set internally by Microsoft Entra ID. Read-only.|
 | createdDateTime | DateTimeOffset | The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Read-only. <br><br> Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, and `eq` on `null` values) and `$orderby`. |
 |defaultRedirectUri|String|The default redirect URI. If specified and there's no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.|
 | deletedDateTime | DateTimeOffset | The date and time the application was deleted. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Read-only. |
@@ -89,6 +89,7 @@ This resource supports:
 | isFallbackPublicClient | Boolean | Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is `false`, which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID can't determine the client application type. For example, the [ROPC](https://tools.ietf.org/html/rfc6749#section-4.3) flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.|
 | keyCredentials | [keyCredential](keycredential.md) collection | The collection of key credentials associated with the application. Not nullable. Supports `$filter` (`eq`, `not`, `ge`, `le`).|
 | logo | Stream | The main logo for the application. Not nullable. |
+| managerApplications | Guid collection | A collection of application IDs for applications designated as managers of this application. Manager applications can create service principals for the applications they manage. Currently, only Microsoft first-party application IDs can be set as values. Maximum of 10 values. Not nullable. Read-only for third-party (3P) callers; writes by 3P callers are rejected with a `400 Bad Request` error. Returned only on `$select`. |
 | nativeAuthenticationApisEnabled | nativeAuthenticationApisEnabled | Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: `none`and `all`. Default is `none`. For more information, see [Native Authentication](/entra/external-id/customers/concept-native-authentication). |
 | notes | String | Notes relevant for the management of the application. |
 | oauth2RequiredPostResponse | Boolean | Specifies whether, as part of OAuth 2.0 token requests, Microsoft Entra ID allows POST requests, as opposed to GET requests. The default is `false`, which specifies that only GET requests are allowed. |
@@ -114,6 +115,9 @@ This resource supports:
 | windows |[windowsApplication](windowsapplication.md)| Specifies settings for apps running Microsoft Windows and published in the Microsoft Store or Xbox games store.|
 
 ### signInAudience values
+
+> [!IMPORTANT]
+> Using the **signInAudience** and **signInAudienceRestrictions** properties to limit where an application can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
 
 | Value | Description |
 |:---------------|:--------|
@@ -181,6 +185,7 @@ The following JSON representation shows the resource type.
   "isFallbackPublicClient": false,
   "keyCredentials": [{"@odata.type": "microsoft.graph.keyCredential"}],
   "logo": "Stream",
+  "managerApplications": ["Guid"],
   "nativeAuthenticationApisEnabled": "String",
   "notes": "String",
   "oauth2RequiredPostResponse": false,
