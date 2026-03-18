@@ -21,7 +21,7 @@ Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobFilteringCriteri
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|filterValues|[microsoft.graph.entraRecoveryServices.entityTypeAndIds](../resources/entrarecoveryservices-entitytypeandids.md) collection|The list of entity type and ID pairs to include in the recovery job.|
+|filterValues|[microsoft.graph.entraRecoveryServices.entityTypeAndIds](../resources/entrarecoveryservices-entitytypeandids.md) collection|The list of entity type and ID pairs to include in the recovery job. Duplicate entity types are not allowed and return a `400 Bad Request` error.|
 
 ## Relationships
 None.
