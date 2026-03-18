@@ -124,6 +124,20 @@ Updated the admin consent requirement for the following delegated permissions re
 - Added the **resourceBehaviorOptions** and **resourceProvisioningOptions** properties to the [group](/graph/api/resources/group) resource. These properties enable you to specify group behaviors and associated resources for a Microsoft 365 group.
 - Added a known issue: For soft deleted security groups, the **securityEnabled** property returns `false` instead of `true`. To identify the group type, use the **groupTypes** property where `["Unified"]` indicates a Microsoft 365 group and an empty array (`[]`) indicates a security group. For more information, see [Get deleted item](/graph/api/directory-deleteditems-get) and [List deleted items](/graph/api/directory-deleteditems-list).
 
+### Tasks and plans
+
+Added support for chat messaging on Planner tasks, enabling users to create, update, delete, and react to messages directly on tasks. Use the following new resources and APIs:
+- [plannerTaskChatMessage](/graph/api/resources/plannertaskchatmessage?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatMention](/graph/api/resources/plannertaskchatmention?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatReaction](/graph/api/resources/plannertaskchatreaction?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatReactionEvent](/graph/api/resources/plannertaskchatreactionevent?view=graph-rest-beta&preserve-view=true)
+- [List messages](/graph/api/plannertask-list-messages?view=graph-rest-beta&preserve-view=true)
+- [Create message](/graph/api/plannertask-post-messages?view=graph-rest-beta&preserve-view=true)
+- [Update message](/graph/api/plannertaskchatmessage-update?view=graph-rest-beta&preserve-view=true)
+- [Delete message](/graph/api/plannertaskchatmessage-delete?view=graph-rest-beta&preserve-view=true)
+- [setReaction](/graph/api/plannertaskchatmessage-setreaction?view=graph-rest-beta&preserve-view=true)
+- [unsetReaction](/graph/api/plannertaskchatmessage-unsetreaction?view=graph-rest-beta&preserve-view=true)
+
 ### Identity and access | Identity and sign-in
 
 - QR code authentication method in Microsoft Entra ID lets you manage the QR code authentication method for users, and how they can sign in with a QR code and PIN. The following key resources support this capability:

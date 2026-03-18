@@ -490,6 +490,22 @@ Namespace: microsoft.graph
 | cancelled |
 | unknownFutureValue |
 
+### plannerTaskChatMentionType values
+
+| Member |
+| -------------------- |
+| user |
+| application |
+| unknownFutureValue |
+
+### plannerTaskChatMessageType values
+
+| Member |
+| -------------------- |
+| richTextHtml |
+| plainText |
+| unknownFutureValue |
+
 ### applicationKeyOrigin values
 
 | Member |
