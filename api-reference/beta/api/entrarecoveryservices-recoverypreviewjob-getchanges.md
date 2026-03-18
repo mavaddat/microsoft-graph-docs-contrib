@@ -97,8 +97,8 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {  
-   "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges$delta",
-   "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges$skiptoken=RFNwdAIAAQAAACA6X1NNVFBfYnJhemlsc291dGhAbWl",
+   "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges",
+   "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryPreviewJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getChanges?$skiptoken=RFNwdAIAAQAAACA6X1NNVFBfYnJhemlsc291dGhAbWl",
    "value":
     [
         {
