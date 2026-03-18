@@ -1,6 +1,6 @@
 ---
 title: "recovery resource type"
-description: "Represents the entry point for the Entra Backup and Recovery service for a tenant."
+description: "Represents the entry point for the Microsoft Entra Backup and Recovery service for a tenant."
 author: "mapamu"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the entry point for the Entra Backup and Recovery service. Accessed via the `recovery` navigation property on the [directory](../resources/directory.md) singleton. Provides access to snapshots and recovery jobs for a tenant, enabling administrators to restore directory objects to a previous state.
+Represents the entry point for the Microsoft Entra Backup and Recovery service. Provides access to snapshots and recovery jobs for a tenant, enabling administrators to restore directory objects to a previous state.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
