@@ -132,7 +132,7 @@ Content-Type: application/json
                 "mail": "jdoe@example.com",
                 "jobTitle": "Product Manager",
                 "department": "Management",
-                "officeLocation": "San Fransisco",
+                "officeLocation": "San Francisco",
                 "mobilePhone": "+1 999-999-9999",
                 "businessPhones": ["+1 555-888-5555"],
                 "preferredLanguage": "en-SP",
