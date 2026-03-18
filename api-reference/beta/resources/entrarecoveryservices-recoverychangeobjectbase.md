@@ -14,7 +14,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a single object change in the context of tenant recovery. Returned by the [getChanges](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md) function on preview jobs and [getFailedChanges](../api/entrarecoveryservices-recoverypreviewjob-getfailedchanges.md) function on recovery jobs. Each instance describes the entity being modified, the type of recovery action to be performed, and the delta between the current and target states.
+Represents a single object change in the context of tenant recovery. Returned by the [getChanges](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md) function on preview jobs and [getFailedChanges](../api/entrarecoveryservices-recoveryjob-getfailedchanges.md) function on recovery jobs. Each instance describes the entity being modified, the type of recovery action to be performed, and the delta between the current and target states.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
@@ -28,7 +28,7 @@ None.
 |:---|:---|:---|
 |displayName|String|The display name of the changed object in its current state, used to uniquely identify the object.|
 |entityTypeName|[microsoft.graph.entraRecoveryServices.resourceTypeName](../resources/enums-entrarecoveryservices.md)|The type of directory entity being modified. The possible values are: `user`, `group`, `conditionalAccessPolicy`, `namedLocationPolicy`, `authenticationMethodPolicy`, `authorizationPolicy`, `authenticationStrengthPolicy`, `application`, `servicePrincipal`, `unknownFutureValue`, `oAuth2PermissionGrant`, `appRoleAssignment`. You must use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `oAuth2PermissionGrant`, `appRoleAssignment`.|
-|failureMessage|String|The error message if the change failed to apply. Only populated in [getFailedChanges](../api/entrarecoveryservices-recoverypreviewjob-getfailedchanges.md) responses. `null` otherwise.|
+|failureMessage|String|The error message if the change failed to apply. Only populated in [getFailedChanges](../api/entrarecoveryservices-recoveryjob-getfailedchanges.md) responses. `null` otherwise.|
 |id|String|The unique identifier of the changed object. Inherited from [entity](../resources/entity.md).|
 |recoveryAction|[microsoft.graph.entraRecoveryServices.recoveryAction](../resources/enums-entrarecoveryservices.md)|The type of recovery action to be performed on this object. The possible values are: `softDelete`, `update`, `restore`, `unknownFutureValue`.|
 

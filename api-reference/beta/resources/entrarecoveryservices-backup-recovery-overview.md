@@ -30,7 +30,7 @@ The backup and recovery APIs support the following Microsoft Entra directory obj
 - [Service principals](../resources/serviceprincipal.md)
 - [Conditional Access policies](../resources/conditionalaccesspolicy.md)
 - [Named location policies](../resources/namedlocation.md)
-- [Authentication method policies](../resources/authenticationmethodpolicy.md)
+- [Authentication method policies](../resources/authenticationmethodspolicy.md)
 - [Authorization policies](../resources/authorizationpolicy.md)
 - [OAuth2 permission grants](../resources/oauth2permissiongrant.md)
 - [App role assignments](../resources/approleassignment.md)
@@ -71,7 +71,7 @@ A [recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)
 
 A preview job can be successfully completed, failed, or abandoned (canceled). 
 - After a preview job completes, call the [getChanges](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md) function to enumerate the objects that would be affected, along with the specific property changes.
-- If a preview job fails, call the [getFailedChanges](../api/entrarecoveryservices-recoverypreviewjob-getfailedchanges.md) function to review the error details and understand the failure reason.
+- If a preview job fails, call the [getFailedChanges](../api/entrarecoveryservices-recoveryjob-getfailedchanges.md) function to review the error details and understand the failure reason.
 - To cancel a preview job, call the [cancel](../api/entrarecoveryservices-recoveryjobbase-cancel.md) function. No results are available for an abandoned job.
 
 Each changed object returned by `getChanges` or `getFailedChanges` includes a **recoveryAction** property indicating what the recovery operation does to that object:
