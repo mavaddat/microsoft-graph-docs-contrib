@@ -68,6 +68,14 @@
         },
         {
           "Id": "7c4b9e2f-8a3d-4f1b-9c5e-6d2a8f3b1e4c",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "mailboxes",
+          "ChangeType": "Addition",
+          "Description": "Added the **mailboxes** relationship to the [exchangeAdmin](https://learn.microsoft.com/en-us/graph/api/resources/exchangeadmin?view=graph-rest-v1.0) resource.",
+          "Target": "exchangeAdmin"
+        },
+        {
+          "Id": "7c4b9e2f-8a3d-4f1b-9c5e-6d2a8f3b1e4c",
           "ApiChange": "Method",
           "ChangedApiName": "exportItems",
           "ChangeType": "Addition",
