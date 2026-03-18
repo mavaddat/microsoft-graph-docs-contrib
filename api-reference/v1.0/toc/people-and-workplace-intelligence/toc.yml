@@ -28,9 +28,9 @@ items:
     href: ../../api/peopleadminsettings-list-profilesources.md
   - name: Create profile source
     href: ../../api/peopleadminsettings-post-profilesources.md
-  - name: List profilePropertySettings
+  - name: List profile property settings
     href: ../../api/peopleadminsettings-list-profilepropertysettings.md
-  - name: Create profilePropertySetting
+  - name: Create profile property setting
     href: ../../api/peopleadminsettings-post-profilepropertysettings.md
 - name: Insights settings
   items:
