@@ -14,7 +14,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a single object change in the context of tenant recovery. Returned by the `getChanges` function on preview jobs and `getFailedChanges` function on recovery jobs. Each instance describes the entity being modified, the type of recovery action to be performed, and the delta between the current and target states.
+Represents a single object change in the context of tenant recovery. Returned by the [getChanges](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md) function on preview jobs and [getFailedChanges](../api/entrarecoveryservices-recoverypreviewjob-getfailedchanges.md) function on recovery jobs. Each instance describes the entity being modified, the type of recovery action to be performed, and the delta between the current and target states.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
