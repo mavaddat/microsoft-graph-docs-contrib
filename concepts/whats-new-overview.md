@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 03/04/2026
+ms.date: 03/18/2026
 ms.topic: whats-new
 ---
 
@@ -98,6 +98,10 @@ Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retention
 - Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
 - Added the [crossTenantAccessType](/graph/api/resources/networkaccess-crosstenantaccesstype?view=graph-rest-beta&preserve-view=true) enumeration type.
 - Added the [deviceJoinType](/graph/api/resources/networkaccess-devicejointype?view=graph-rest-beta&preserve-view=true) enumeration type.
+- Added the Cloud Firewall APIs to manage firewall policies, rules, and policy links for Microsoft Entra Global Secure Access. Use the following new resources and their associated APIs:
+  - Use the [cloudFirewallPolicy](/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta&preserve-view=true) resource and its associated methods to create and manage cloud firewall policies.
+  - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
+  - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
 
 ## February 2026: New and generally available
 
@@ -199,13 +203,13 @@ Added support for protection policy offboarding status and timestamp tracking in
 
 Use the new cloud licensing APIs to manage tenant, user, and group licensing data for Microsoft 365 services. These APIs provide programmatic access to allotments, assignments, assignment errors, subscription lifecycles, and waiting members. For more information, see [Use the cloud licensing API in Microsoft Graph (preview)](/graph/api/resources/cloud-licensing-api-overview?view=graph-rest-beta&preserve-view=true).
 
-### Identity and access | Directory management
-
-Added the **managerApplications** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint?view=graph-rest-beta&preserve-view=true) resources to specify applications designated as managers of an application. On the base **application** resource, this property is read-only for third-party (3P) callers. On the **agentIdentityBlueprint** resource, manager applications can create agent blueprint principals, agent identities, and agent users for their managed agent blueprints without requiring high-privileged permissions such as `AgentIdentityBlueprintPrincipal.ReadWrite.All`.
-
 ### Files
 
 Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&preserve-view=true) and [driveItem: unarchive](/graph/api/driveitem-unarchive?view=graph-rest-beta&preserve-view=true) to enable organizations to archive and unarchive [driveItem](/graph/api/resources/driveitem?view=graph-rest-beta&preserve-view=true) objects.
+
+### Identity and access | Directory management
+
+Added the **managerApplications** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint?view=graph-rest-beta&preserve-view=true) resources to specify applications designated as managers of an application. On the base **application** resource, this property is read-only for third-party (3P) callers. On the **agentIdentityBlueprint** resource, manager applications can create agent blueprint principals, agent identities, and agent users for their managed agent blueprints without requiring high-privileged permissions such as `AgentIdentityBlueprintPrincipal.ReadWrite.All`.
 
 ### Identity and access | Identity and sign-in
 

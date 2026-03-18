@@ -13,10 +13,10 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a [filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) object. The policy can be one of the following types:
-- [filteringPolicy](../resources/networkaccess-filteringpolicy.md)
-- [threatIntelligencePolicy](../resources/networkaccess-threatintelligencepolicy.md)
-- [tlsInspectionPolicy](../resources/networkaccess-tlsinspectionpolicy.md)
+Delete a [filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md) object. Use this operation to delete any derived type, including:
+- [cloudFirewallPolicyLink](../resources/networkaccess-cloudfirewallpolicylink.md)
+- [threatIntelligencePolicyLink](../resources/networkaccess-threatintelligencepolicylink.md)
+- [tlsInspectionPolicyLink](../resources/networkaccess-tlsinspectionpolicylink.md)
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
