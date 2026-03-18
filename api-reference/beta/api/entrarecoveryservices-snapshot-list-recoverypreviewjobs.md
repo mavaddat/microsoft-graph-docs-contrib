@@ -87,7 +87,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/recoveryPreviewJobs",  
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots('MjAyNC0wOC0yNlQwMjozMDowMFo=')/recoveryPreviewJobs",
   "value": 
   [
     {
