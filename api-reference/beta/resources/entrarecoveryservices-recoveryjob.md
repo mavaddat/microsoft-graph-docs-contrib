@@ -21,10 +21,10 @@ Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobBase](../resourc
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List recoveryJobs](../api/entrarecoveryservices-snapshot-list-recoveryjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md) collection|Get a list of the recoveryJob objects and their properties.|
-|[Create recoveryJob](../api/entrarecoveryservices-snapshot-post-recoveryjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md)|Create a new recoveryJob object.|
-|[Get recoveryJob](../api/entrarecoveryservices-recoveryjob-get.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md)|Read the properties and relationships of a recoveryJob object.|
-|[getFailedChanges](../api/entrarecoveryservices-recoveryjob-getfailedchanges.md)|[microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase](../resources/entrarecoveryservices-recoverychangeobjectbase.md) collection|Retrieve changes that failed to apply during recovery.|
+|[List](../api/entrarecoveryservices-snapshot-list-recoveryjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md) collection|Get a list of the recoveryJob objects and their properties.|
+|[Create](../api/entrarecoveryservices-snapshot-post-recoveryjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md)|Create a new recoveryJob object.|
+|[Get](../api/entrarecoveryservices-recoveryjob-get.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md)|Read the properties and relationships of a recoveryJob object.|
+|[Get failed changes](../api/entrarecoveryservices-recoveryjob-getfailedchanges.md)|[microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase](../resources/entrarecoveryservices-recoverychangeobjectbase.md) collection|Retrieve changes that failed to apply during recovery.|
  
 
 ## Properties
