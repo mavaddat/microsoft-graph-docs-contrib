@@ -14,7 +14,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Filters recovery jobs to only include changes for specific entities identified by type and ID. Used as `filteringCriteria` in POST request bodies for preview and recovery jobs. Duplicate entity types in `filterValues` are not allowed and will return a `400 Bad Request` error.
+Filters a [recovery job](../resources/entrarecoveryservices-recoveryjob.md) to only include changes for specific entities identified by type and ID. Used as **filteringCriteria** in [Create recoveryPreviewJob](../api/entrarecoveryservices-snapshot-post-recoverypreviewjobs.md) and [Create recoveryJob](../api/entrarecoveryservices-snapshot-post-recoveryjobs.md) operations. 
 
 Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobFilteringCriteriaBase](../resources/entrarecoveryservices-recoveryjobfilteringcriteriabase.md).
 
