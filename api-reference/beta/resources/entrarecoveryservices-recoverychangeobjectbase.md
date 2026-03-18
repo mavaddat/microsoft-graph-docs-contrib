@@ -32,6 +32,11 @@ None.
 |id|String|The unique identifier of the changed object. Inherited from [entity](../resources/entity.md).|
 |recoveryAction|[microsoft.graph.entraRecoveryServices.recoveryAction](../resources/enums-entrarecoveryservices.md)|The type of recovery action to be performed on this object. The possible values are: `softDelete`, `update`, `restore`, `unknownFutureValue`.|
 
+### Additional properties
+
+In addition to the properties listed above, the following dynamic properties are included in responses:
+- **deltaFromCurrent** - Contains the changes that will be applied during recovery, typed as the entity being modified (e.g., `microsoft.graph.user`).
+- **currentState** - Contains the current state of the object for comparison, typed as the entity being modified.
 ## Relationships
 None.
 
