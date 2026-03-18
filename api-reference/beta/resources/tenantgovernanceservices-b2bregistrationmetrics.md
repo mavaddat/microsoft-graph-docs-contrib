@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents B2B collaboration metrics that track guest registrations between the calling tenant and a related tenant. Includes both initial and recent snapshots showing inbound and outbound guest counts.
+Represents B2B collaboration metrics that track guest registrations between the calling tenant and a [related tenant](../resources/tenantgovernanceservices-relatedtenant.md). Includes both initial and recent snapshots showing inbound and outbound guest counts.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 

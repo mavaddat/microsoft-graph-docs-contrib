@@ -76,7 +76,7 @@ PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/governanceRequ
 Content-Type: application/json
 
 {
-  "status": "accepted",
+  "status": "accepted"
 }
 ```
 

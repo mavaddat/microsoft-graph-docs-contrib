@@ -14,8 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-> [!IMPORTANT]
-> This is an abstract base type and does not appear directly in API responses. Use the concrete types [b2BRegistrationMetricsInitial](tenantgovernanceservices-b2bregistrationmetricsinitial.md) or [b2BRegistrationMetricsRecent](tenantgovernanceservices-b2bregistrationmetricsrecent.md).
+This resource is an abstract base type and does not appear directly in API responses. Use the concrete types [b2BRegistrationMetricsInitial](tenantgovernanceservices-b2bregistrationmetricsinitial.md) or [b2BRegistrationMetricsRecent](tenantgovernanceservices-b2bregistrationmetricsrecent.md).
 
 Abstract base type that defines common properties for B2B registration metrics snapshots.
 

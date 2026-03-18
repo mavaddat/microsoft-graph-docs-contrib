@@ -34,14 +34,15 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|The date and time when the template was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
+|createdDateTime|DateTimeOffset|The date and time when the template was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
 |delegatedAdministrationRoleAssignments|[microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment](../resources/tenantgovernanceservices-delegatedadministrationroleassignment.md) collection|A collection of delegated administration role assignments to be applied in the governed tenant when the governance relationship is established.|
-|description|String|A description of the policy template.|
-|displayName|String|The display name of the policy template.|
-|id|String|The unique identifier for the policy template. Is `default` for the default template. Inherited from [entity](../resources/entity.md).|
-|lastModifiedDateTime|DateTimeOffset|The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
+|description|String|A description of the policy template.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|displayName|String|The display name of the policy template.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governedTenantCanTerminate|Boolean|Not implemented.|
+|id|String|The unique identifier for the policy template. Is `default` for the default template. Inherited from [entity](../resources/entity.md).<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|lastModifiedDateTime|DateTimeOffset|The date and time when the template was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
 |multiTenantApplicationsToProvision|[microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision](../resources/tenantgovernanceservices-multitenantapplicationstoprovision.md) collection|A collection of multi-tenant applications to be provisioned in the governed tenant when the governance relationship is established.|
-|version|String|The version of the policy template. Version count increased by 1 when updated.|
+|version|String|The version of the policy template. Version count increased by 1 when updated.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
 
 ## Relationships
 None.
@@ -62,6 +63,7 @@ The following JSON representation shows the resource type.
   "id": "String (identifier)",
   "displayName": "String",
   "description": "String",
+  "governedTenantCanTerminate": "Boolean",
   "createdDateTime": "String (timestamp)",
   "lastModifiedDateTime": "String (timestamp)",
   "version": "String",

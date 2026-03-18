@@ -93,14 +93,14 @@ Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retention
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
-### Identity and access | Multi-tenant management
+### Identity and access | Tenant governance
 
 Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
-- Use the [tenantGovernanceSetting](/graph/api/resources/tenantgovernance-tenantgovernancesetting?view=graph-rest-beta&preserve-view=true) singleton to manage tenant governance settings and enable related tenant discovery
-- Establish governance relationships using [governanceRequest](/graph/api/resources/tenantgovernance-governancerequest?view=graph-rest-beta&preserve-view=true) or [governanceInvitation](/graph/api/resources/tenantgovernance-governanceinvitation?view=graph-rest-beta&preserve-view=true) resources
+- Use the [tenantGovernanceSetting](/graph/api/resources/tenantgovernance-tenantgovernancesetting?view=graph-rest-beta&preserve-view=true) singleton to activate invitation reception and related tenant discovery
+- Establish governance relationships using [governanceRequest](/graph/api/resources/tenantgovernance-governancerequest?view=graph-rest-beta&preserve-view=true)and [governanceInvitation](/graph/api/resources/tenantgovernance-governanceinvitation?view=graph-rest-beta&preserve-view=true) resources
 - Track established relationships with [governanceRelationship](/graph/api/resources/tenantgovernance-governancerelationship?view=graph-rest-beta&preserve-view=true)
 - Configure relationship policies using [governancePolicyTemplate](/graph/api/resources/tenantgovernance-governancepolicytemplate?view=graph-rest-beta&preserve-view=true)
-- Discover related tenants with [relatedTenant](/graph/api/resources/tenantgovernance-relatedtenant?view=graph-rest-beta&preserve-view=true) and access relationship metrics
+- Discover related tenants with [relatedTenant](/graph/api/resources/tenantgovernance-relatedtenant?view=graph-rest-beta&preserve-view=true) and access discovery metrics
 
 ### Identity and access | Network access
 

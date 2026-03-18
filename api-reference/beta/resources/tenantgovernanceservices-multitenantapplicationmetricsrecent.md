@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the most recent snapshot of multi-tenant application metrics, showing current application usage across tenant boundaries.
+Represents the most recent snapshot of multi-tenant application metrics, showing current application usage across [related tenants](../resources/tenantgovernanceservices-relatedtenant.md).
 
 Inherits from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase](../resources/tenantgovernanceservices-multitenantapplicationmetricsbase.md).
 

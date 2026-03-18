@@ -31,15 +31,15 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|expirationDateTime|DateTimeOffset|The date and time when the request expires if not accepted or rejected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
-|governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant.|
-|governedTenantName|String|The display name of the governed tenant.|
-|governingTenantId|String|The Microsoft Entra tenant ID of the governing tenant.|
-|governingTenantName|String|The display name of the governing tenant.|
-|id|String|The unique identifier for the governance request. Inherited from [entity](../resources/entity.md).|
+|expirationDateTime|DateTimeOffset|The date and time when the request expires if not accepted or rejected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
+|governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governedTenantName|String|The display name of the governed tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governingTenantId|String|The Microsoft Entra tenant ID of the governing tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governingTenantName|String|The display name of the governing tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|id|String|The unique identifier for the governance request. Inherited from [entity](../resources/entity.md).<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
 |policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernanceservices-relationshippolicy.md)|A snapshot of the governance policy to be applied if the request is accepted, including delegated administration role assignments and multi-tenant applications to provision.|
-|requestDateTime|DateTimeOffset|The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
-|status|microsoft.graph.tenantGovernanceServices.requestStatus|The current status of the governance request. The possible values are: `pending`, `accepted`, `rejected`, `unknownFutureValue`.|
+|requestDateTime|DateTimeOffset|The date and time when the request was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
+|status|microsoft.graph.tenantGovernanceServices.requestStatus|The current status of the governance request. The possible values are: `pending`, `accepted`, `rejected`, `unknownFutureValue`.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
 
 ## Relationships
 |Relationship|Type|Description|

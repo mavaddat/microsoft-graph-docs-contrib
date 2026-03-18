@@ -14,9 +14,9 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents B2B sign-in activity metrics that track monthly active guest users and applications accessed between the calling tenant and a related tenant. Includes both initial and recent snapshots with inbound and outbound activity counts.
+Represents B2B sign-in activity metrics that track monthly active guest users and applications accessed between the calling tenant and a [related tenant](../resources/tenantgovernanceservices-relatedtenant.md). Includes both initial and recent snapshots with inbound and outbound activity counts.
 
-Inherits from [microsoft.graph.entity](../resources/entity.md).
+Inherits from [b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md)
 
 ## Properties
 |Property|Type|Description|

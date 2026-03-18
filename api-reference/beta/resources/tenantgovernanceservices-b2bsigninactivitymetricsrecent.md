@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the most recent snapshot of B2B sign-in activity metrics, showing current monthly active guests and application counts.
+Represents the most recent snapshot of B2B sign-in activity metrics for a [related tenant](../resources/tenantgovernanceservices-relatedtenant.md), showing current monthly active guests and application counts.
 
 Inherits from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).
 

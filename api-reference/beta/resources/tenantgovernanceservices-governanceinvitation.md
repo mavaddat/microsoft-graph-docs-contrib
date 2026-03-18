@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an invitation sent by a future governed tenant to establish a [governance relationship](../resources/tenantgovernanceservices-governanceinvitation.md) with a future governing tenant. 
+Represents an invitation sent by a future governed tenant to a future governing tenant. This invitation authorizes the governing tenant to send a [governance request](../resources/tenantgovernanceservices-governancerequest.md) to the governed tenant to establish a [governance relationship](../resources/tenantgovernanceservices-governanceinvitation.md). The invitation expires after 30 days.
 
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
@@ -31,13 +31,13 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|The date and time when the invitation was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
-|expirationDateTime|DateTimeOffset|The date and time when the invitation expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.|
-|governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant.|
-|governedTenantName|String|The display name of the governed tenant.|
-|governingTenantId|String|The Microsoft Entra tenant ID of the governing tenant.|
-|governingTenantName|String|The display name of the governing tenant.|
-|id|String|The unique identifier for the governance invitation. Inherited from [entity](../resources/entity.md)|
+|createdDateTime|DateTimeOffset|The date and time when the invitation was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
+|expirationDateTime|DateTimeOffset|The date and time when the invitation expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
+|governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governedTenantName|String|The display name of the governed tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governingTenantId|String|The Microsoft Entra tenant ID of the governing tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governingTenantName|String|The display name of the governing tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|id|String|The unique identifier for the governance invitation. Inherited from [entity](../resources/entity.md).<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
 
 ## Relationships
 None.

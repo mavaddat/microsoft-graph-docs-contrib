@@ -14,7 +14,11 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the **status** property of a [governanceRelationship](../resources/tenantgovernanceservices-governancerelationship.md) to initiate the termination process. 
+Update the **status** property of a [governanceRelationship](../resources/tenantgovernanceservices-governancerelationship.md) to initiate the termination process. There are two models for termination:
+1) Initiated by the governing tenant: After the governing tenant updates the `status` to `terminationRequestedByGoverningTenant`, the governed tenant may subsequently update the `status` to `terminated`.
+1) Directly terminated by the governed tenant: The governed tenant updates the `status` to `terminated` to immediately terminate the relationship.
+
+When the governed tenant updates the `status` to `terminated` in either model, the resources that were provisioned in the governed tenant upon relationship creation are deleted.
 
 ## Permissions
 
@@ -74,7 +78,7 @@ PATCH https://graph.microsoft.com/beta/directory/tenantGovernance/governanceRela
 Content-Type: application/json
 
 {
-  "status": "terminated",
+  "status": "terminated"
 }
 ```
 

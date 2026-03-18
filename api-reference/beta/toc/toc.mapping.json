@@ -1939,54 +1939,15 @@
             },
             {
               "name": "Tenant governance",
-              "childNodes": [
-                {
-                  "name": "Governance relationships",
                   "resources": [
                     "microsoft.graph.tenantGovernanceServices.governanceInvitation",
                     "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
                     "microsoft.graph.tenantGovernanceServices.governanceRelationship",
-                    "microsoft.graph.tenantGovernanceServices.governanceRequest"
-                  ],
-                  "complexTypes": [
-                    "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignment",
-                    "microsoft.graph.tenantGovernanceServices.delegatedAdministrationRoleAssignmentSnapshot",
-                    "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvision",
-                    "microsoft.graph.tenantGovernanceServices.multiTenantApplicationsToProvisionSnapshot",
-                    "microsoft.graph.tenantGovernanceServices.relationshipPolicy",
-                    "microsoft.graph.tenantGovernanceServices.requiredResourceAccess",
-                    "microsoft.graph.tenantGovernanceServices.resourcePermission",
-                    "microsoft.graph.tenantGovernanceServices.roleTemplate"
-                  ]
-                },
-                {
-                  "name": "Related tenants",
-                  "resources": [
+                    "microsoft.graph.tenantGovernanceServices.governanceRequest",
                     "microsoft.graph.tenantGovernanceServices.relatedTenant",
-                    "microsoft.graph.tenantGovernanceServices.relatedtenantsrefreshstatus"
-                  ],
-                  "complexTypes": [
-                    "microsoft.graph.tenantGovernanceServices.b2bRegistrationMetrics",
-                    "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsInitial",
-                    "microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsRecent",
-                    "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetrics",
-                    "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsInitial",
-                    "microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsRecent",
-                    "microsoft.graph.tenantGovernanceServices.billingMetrics",
-                    "microsoft.graph.tenantGovernanceServices.billingMetricsInitial",
-                    "microsoft.graph.tenantGovernanceServices.billingMetricsRecent",
-                    "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetrics",
-                    "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial",
-                    "microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsRecent"
-                  ]
-                },
-                {
-                  "name": "Settings",
-                  "resources": [
+                    "microsoft.graph.tenantGovernanceServices.relatedtenantsrefreshstatus",
                     "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting"
                   ]
-                }
-              ]
             },
             {
               "name": "Organizational branding",

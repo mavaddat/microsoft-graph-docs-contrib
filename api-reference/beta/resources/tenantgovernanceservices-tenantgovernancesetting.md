@@ -42,8 +42,7 @@ The following JSON representation shows the resource type.
   "blockType": "resource",
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
-  "baseType": "microsoft.graph.entity",
-  "openType": "false"
+  "baseType": "microsoft.graph.entity"
 }
 -->
 ``` json

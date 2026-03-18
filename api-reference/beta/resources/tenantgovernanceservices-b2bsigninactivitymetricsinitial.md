@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the initial snapshot of B2B sign-in activity metrics captured when the relationship was first discovered, establishing a baseline for monthly active guests and applications.
+Represents the initial snapshot of B2B sign-in activity metrics captured when the [related tenant](../resources/tenantgovernanceservices-relatedtenant.md) was first discovered, establishing a baseline for monthly active guests and applications.
 
 Inherits from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).
 

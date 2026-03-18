@@ -30,15 +30,15 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|createdType|microsoft.graph.tenantGovernanceServices.relationshipCreationType|Indicates how the relationship was created. The possible values are: `approvedByAdmin`, `addOnTenant`, `unknownFutureValue`.|
-|creationDateTime|DateTimeOffset|The date and time when the relationship was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is `2026-01-01T00:00:00Z`.|
-|governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant.|
-|governedTenantName|String|The display name of the governed tenant.|
-|governingTenantId|String|The Microsoft Entra tenant ID of the governing tenant.|
-|governingTenantName|String|The display name of the governing tenant.|
-|id|String|The unique identifier for the governance relationship. Inherited from [entity](../resources/entity.md).|
+|createdType|microsoft.graph.tenantGovernanceServices.relationshipCreationType|Indicates how the relationship was created. The possible values are: `approvedByAdmin`, `addOnTenant`, `unknownFutureValue`.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|creationDateTime|DateTimeOffset|The date and time when the relationship was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2026 is `2026-01-01T00:00:00Z`.<br></br> Supports `$filter` (`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderBy`.|
+|governedTenantId|String|The Microsoft Entra tenant ID of the governed tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governedTenantName|String|The display name of the governed tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governingTenantId|String|The Microsoft Entra tenant ID of the governing tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|governingTenantName|String|The display name of the governing tenant.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
+|id|String|The unique identifier for the governance relationship. Inherited from [entity](../resources/entity.md).<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
 |policySnapshot|[microsoft.graph.tenantGovernanceServices.relationshipPolicy](../resources/tenantgovernanceservices-relationshippolicy.md)|A snapshot of the governance policy applied to this relationship, including delegated administration role assignments and multi-tenant applications to provision.|
-|status|microsoft.graph.tenantGovernanceServices.relationshipStatus|The current status of the governance relationship. The possible values are: `active`, `terminated`, `terminationRequestedByGoverningTenant`, `unknownFutureValue`.|
+|status|microsoft.graph.tenantGovernanceServices.relationshipStatus|The current status of the governance relationship. The possible values are: `active`, `terminated`, `terminationRequestedByGoverningTenant`, `unknownFutureValue`.<br></br> Supports `$filter` (`eq`, `ne`) and `$orderBy`.|
 
 ## Relationships
 None.

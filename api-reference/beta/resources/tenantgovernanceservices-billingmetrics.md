@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents billing metrics that show commerce and billing account connections between the calling tenant and a related tenant. Tracks associated tenant relationships where one tenant manages billing or provisioning for another tenant's subscriptions. Includes both initial and recent snapshots with local (calling tenant as primary billing tenant) and foreign (related tenant as primary billing tenant) connection counts.
+Represents billing metrics that show commerce and billing account connections between the calling tenant and a [related tenant](../resources/tenantgovernanceservices-relatedtenant.md). Tracks associated billing relationships where one tenant manages billing or provisioning for another tenant's subscriptions. Includes both initial and recent snapshots with local (calling tenant as primary billing tenant) and foreign (related tenant as primary billing tenant) connection counts.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 

@@ -14,21 +14,13 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 ### permissionType values 
 
-
-
 |Member|
 |:---|
 |role|
 |scope|
 |unknownFutureValue|
 
-# Microsoft Graph tenant governance services enumeration values
-
-Namespace: microsoft.graph.tenantGovernanceServices
-
 ### relationshipCreationType values 
-
-
 
 |Member|
 |:---|
@@ -36,13 +28,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 |addOnTenant|
 |unknownFutureValue|
 
-# Microsoft Graph tenant governance services enumeration values
-
-Namespace: microsoft.graph.tenantGovernanceServices
-
 ### relationshipStatus values 
-
-
 
 |Member|
 |:---|
@@ -51,13 +37,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 |terminationRequestedByGoverningTenant|
 |unknownFutureValue|
 
-# Microsoft Graph tenant governance services enumeration values
-
-Namespace: microsoft.graph.tenantGovernanceServices
-
 ### requestStatus values 
-
-
 
 |Member|
 |:---|

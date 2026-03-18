@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the initial snapshot of multi-tenant application metrics captured when the relationship was first discovered, establishing a baseline for application usage across tenant boundaries.
+Represents the initial snapshot of multi-tenant application metrics captured when the [related tenant](../resources/tenantgovernanceservices-relatedtenant.md) was first discovered, establishing a baseline for application usage across tenant boundaries.
 
 Inherits from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase](../resources/tenantgovernanceservices-multitenantapplicationmetricsbase.md).
 
