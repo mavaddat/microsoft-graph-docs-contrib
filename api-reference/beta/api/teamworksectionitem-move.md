@@ -1,6 +1,6 @@
 ---
 title: "teamworkSectionItem: move"
-description: "Move an item from one section to another in a user's teamwork."
+description: "Move an item from one section to another in a user's teamwork. Each item can belong to only one section at a time. This action removes the item from its current section and adds it to the target section."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Move a [teamworkSectionItem](../resources/teamworksectionitem.md) from one [section](../resources/teamworksection.md) to another in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. This action removes the item from its current section and adds it to the target section.
+Move an [item](../resources/teamworksectionitem.md) from one [section](../resources/teamworksection.md) to another in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. This action removes the item from its current section and adds it to the target section.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -38,7 +38,7 @@ POST /users/{user-id}/teamwork/sections/{teamworkSection-id}/items/{teamworkSect
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | Content-Type | application/json. Required. |
-| If-Match | The ETag value of a previously retrieved **teamworkSection**. Required for optimistic concurrency control. |
+| If-Match | The ETag value of a previously retrieved **teamworkSectionItem**. Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -52,7 +52,7 @@ The following table lists the parameters that are required when you call this ac
 
 ## Response
 
-If successful, this action returns a `200 OK` response code and a [teamworkSectionItem](../resources/teamworksectionitem.md) in the response body representing the item in the target section.
+If successful, this action returns a `200 OK` response code and a [teamworkSectionItem](../resources/teamworksectionitem.md) in the response body that represents the item in the target section.
 
 ## Examples
 

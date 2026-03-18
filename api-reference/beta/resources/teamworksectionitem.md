@@ -1,6 +1,6 @@
 ---
 title: "teamworkSectionItem resource type"
-description: "Represents an item such as a chat, channel, meeting, or community that is organized within a section in a user's Microsoft Teams chat list."
+description: "Represents an item, such as a chat, channel, meeting, or community, that is organized within a section in a user's Microsoft Teams chat list."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an item such as a chat, channel, meeting, or community that is organized within a [section](teamworksection.md) in a user's Microsoft Teams chat list. Each item belongs to exactly one section at a time. Use the [move](../api/teamworksectionitem-move.md) action to relocate an item to a different section.
+Represents an item, such as a chat, channel, meeting, or community, that is organized within a [section](teamworksection.md) in a user's Microsoft Teams chat list. Each item belongs to exactly one section at a time. Use the [move](../api/teamworksectionitem-move.md) action to relocate an item to a different section.
 
 ## Methods
 
@@ -22,7 +22,7 @@ Represents an item such as a chat, channel, meeting, or community that is organi
 |:-------|:------------|:------------|
 | [List](../api/teamworksection-list-items.md) | [teamworkSectionItem](teamworksectionitem.md) collection | Get the list of items in a [section](../resources/teamworksection.md). |
 | [Add](../api/teamworksection-post-items.md) | [teamworkSectionItem](teamworksectionitem.md) | Add an item to a [section](../resources/teamworksection.md). |
-| [Remove](../api/teamworksection-delete-items.md) | None | Remove an item from a [section](../resources/teamworksection.md). |
+| [Remove](../api/teamworksectionitem-delete.md) | None | Remove an item from a [section](../resources/teamworksection.md). |
 | [Move](../api/teamworksectionitem-move.md) | [teamworkSectionItem](teamworksectionitem.md) | Move an item from one section to another. |
 
 ## Properties

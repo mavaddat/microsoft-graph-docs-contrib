@@ -1,6 +1,6 @@
 ---
-title: "Add item to section"
-description: "Add an item to a section in a user's teamwork."
+title: "Add teamworkSectionItem"
+description: "Add an item, such as a chat, channel, meeting, or community, to a section in a user's teamwork."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -8,13 +8,13 @@ doc_type: apiPageType
 ms.date: 03/08/2026
 ---
 
-# Add item to section
+# Add teamworkSectionItem
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Add an [item](../resources/teamworksectionitem.md) such as a chat, channel, meeting, or community to a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. If the item is already associated with another section, use the [move](teamworksectionitem-move.md) action instead.
+Add an [item](../resources/teamworksectionitem.md), such as a chat, channel, meeting, or community, to a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. If the item is already associated with another section, use the [move](teamworksectionitem-move.md) action instead.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -38,7 +38,7 @@ POST /users/{user-id}/teamwork/sections/{teamworkSection-id}/items
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | Content-Type | application/json. Required. |
-| If-Match | The ETag value of a previously retrieved **teamworkSection**. Required for optimistic concurrency control. |
+| If-Match | The ETag value of a previously retrieved **teamworkSectionItem**. Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -59,7 +59,7 @@ The following errors can occur:
 | Scenario | HTTP code | Error code | Message |
 |:---------|:----------|:-----------|:--------|
 | Item already exists in this section | `409 Conflict` | `conflict` | This item is already in this section. |
-| Item already exists in another section | `409 Conflict` | `conflict` | This item is already associated with another section. Use the move API to relocate it. |
+| Item already exists in another section | `409 Conflict` | `conflict` | This item is already associated with another section. Use the [move](teamworksectionitem-move.md) API to relocate it. |
 | Maximum items per section reached | `400 Bad Request` | `badRequest` | The maximum number of items in this section has been reached. |
 | Invalid item ID | `400 Bad Request` | `badRequest` | The specified item ID is not valid. Provide a valid chat, channel, meeting, or community ID. |
 | ETag version mismatch | `412 Precondition Failed` | `preconditionFailed` | The resource has been modified since it was last read. Read the latest version and retry. |
@@ -116,7 +116,7 @@ Location: https://graph.microsoft.com/beta/users/10f8c3a6-3e2a-4e8b-9c7d-5a4b6c8
 <!--
 {
   "type": "#page.annotation",
-  "description": "Add item to section",
+  "description": "Add teamworkSectionItem",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""

@@ -3897,16 +3897,6 @@ Possible values for user account types (group membership), per Windows definitio
 | dark |
 | unknownFutureValue |
 
-### sectionItemType values
-
-| Member |
-| ------------------ |
-| chat |
-| channel |
-| meeting |
-| community |
-| unknownFutureValue |
-
 ### serviceHealthClassificationType values
 
 | Member |

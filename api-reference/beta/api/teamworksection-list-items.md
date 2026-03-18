@@ -1,6 +1,6 @@
 ---
-title: "List section items"
-description: "Get the list of items in a section."
+title: "List items"
+description: "Get the list of items in a section of a user's teamwork."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -8,7 +8,7 @@ doc_type: apiPageType
 ms.date: 03/08/2026
 ---
 
-# List section items
+# List items
 
 Namespace: microsoft.graph
 

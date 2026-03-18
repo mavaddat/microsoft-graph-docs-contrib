@@ -27,7 +27,7 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 | [Delete](../api/teamworksection-delete.md) | None | Delete a user-defined [section](../resources/teamworksection.md) from a user's [teamwork](../resources/userteamwork.md). |
 | [List items](../api/teamworksection-list-items.md) | [teamworkSectionItem](teamworksectionitem.md) collection | Get the list of [items](../resources/teamworksectionitem.md) in a [section](../resources/teamworksection.md). |
 | [Add item](../api/teamworksection-post-items.md) | [teamworkSectionItem](teamworksectionitem.md) | Add an [item](../resources/teamworksectionitem.md) to a [section](../resources/teamworksection.md). |
-| [Remove item](../api/teamworksection-delete-items.md) | None | Remove an [item](../resources/teamworksectionitem.md) from a [section](../resources/teamworksection.md). |
+| [Remove item](../api/teamworksectionitem-delete.md) | None | Remove an [item](../resources/teamworksectionitem.md) from a [section](../resources/teamworksection.md). |
 | [Move item](../api/teamworksectionitem-move.md) | [teamworkSectionItem](teamworksectionitem.md) | Move an [item](../resources/teamworksectionitem.md) from one section to another. |
 
 ## Properties
@@ -69,7 +69,7 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 
 | Relationship | Type | Description |
 |:-------------|:-----|:------------|
-| items | [teamworkSectionItem](teamworksectionitem.md) collection | The items (chats, channels, meetings, communities) organized within the section. |
+| items | [teamworkSectionItem](teamworksectionitem.md) collection | The items (chats, channels, meetings, or communities) organized within the section. |
 
 ## JSON representation
 

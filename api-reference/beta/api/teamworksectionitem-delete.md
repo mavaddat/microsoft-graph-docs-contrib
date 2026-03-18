@@ -1,6 +1,6 @@
 ---
-title: "Remove item from section"
-description: "Remove an item from a section in a user's teamwork."
+title: "Remove teamworkSectionItem"
+description: "Remove an item from a section in a user's teamwork. This API doesn't delete the underlying chat, channel, meeting, or community; it only removes the item from the section."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -8,13 +8,13 @@ doc_type: apiPageType
 ms.date: 03/08/2026
 ---
 
-# Remove item from section
+# Remove teamworkSectionItem
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Remove an [item](../resources/teamworksectionitem.md) from a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). This doesn't delete the underlying chat, channel, meeting, or community; it only removes the item from the section.
+Remove an [item](../resources/teamworksectionitem.md) from a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). This API doesn't delete the underlying chat, channel, meeting, or community; it only removes the item from the section.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -22,8 +22,8 @@ Remove an [item](../resources/teamworksectionitem.md) from a [section](../resour
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "teamworksection_delete_items" } -->
-[!INCLUDE [permissions-table](../includes/permissions/teamworksection-delete-items-permissions.md)]
+<!-- { "blockType": "permissions", "name": "teamworksectionitem_delete" } -->
+[!INCLUDE [permissions-table](../includes/permissions/teamworksectionitem-delete-permissions.md)]
 
 ## HTTP request
 
@@ -37,7 +37,7 @@ DELETE /users/{user-id}/teamwork/sections/{teamworkSection-id}/items/{teamworkSe
 | Header | Value |
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| If-Match | The ETag value of a previously retrieved **teamworkSection**. Required for optimistic concurrency control. |
+| If-Match | The ETag value of a previously retrieved **teamworkSectionItem**. Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -80,7 +80,7 @@ HTTP/1.1 204 No Content
 <!--
 {
   "type": "#page.annotation",
-  "description": "Remove item from section",
+  "description": "Remove teamworkSectionItem",
   "keywords": "",
   "section": "documentation",
   "tocPath": ""
