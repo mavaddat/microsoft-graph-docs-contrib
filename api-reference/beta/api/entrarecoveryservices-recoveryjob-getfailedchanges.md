@@ -98,8 +98,8 @@ Content-Type: application/json
 
 {    
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getFailedChanges",
-    "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getFailedChanges$skiptoken=RFNwdAIAAQAAACA6X1NNVFBfYnJhemlsc291dGhAbWl",
-    "value": // this will enumerate over the changes we could not apply 
+    "@odata.nextLink": "https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=./recoveryJobs/d3f8e7e8-7e87-4a7f-9d2c-c1c2d7e8e1f1/getFailedChanges?$skiptoken=RFNwdAIAAQAAACA6X1NNVFBfYnJhemlsc291dGhAbWl",
+    "value":
       [
         {   
             "entityTypeName": "user",
@@ -145,7 +145,7 @@ Content-Type: application/json
                 }
             }
         }
-      ],
+      ]
 }
 ```
 
