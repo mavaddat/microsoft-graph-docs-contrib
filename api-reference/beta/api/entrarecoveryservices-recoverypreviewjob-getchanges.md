@@ -16,7 +16,7 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 Get a paginated collection of [recoveryChangeObjectBase](../resources/entrarecoveryservices-recoverychangeobjectbase.md) objects that will be applied if a recovery operation is executed for the same snapshot and filtering criteria.
 
-This method can only be called on a preview job that has a status of `successful`. The changes returned represent the differences between the current tenant state and the state at the time of the snapshot.
+This method can only be called on a [preview job](../resources/entrarecoveryservices-recoverypreviewjob.md) that has a status of `successful`. The changes returned represent the differences between the current tenant state and the state at the time of the snapshot.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
