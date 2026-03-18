@@ -23,10 +23,6 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |:---|:---|:---|
 |[List snapshots](../api/entrarecoveryservices-recovery-list-snapshots.md)|[microsoft.graph.entraRecoveryServices.snapshot](../resources/entrarecoveryservices-snapshot.md) collection|Get a list of the snapshot objects and their properties.|
 |[Get snapshot](../api/entrarecoveryservices-snapshot-get.md)|[microsoft.graph.entraRecoveryServices.snapshot](../resources/entrarecoveryservices-snapshot.md)|Read the properties and relationships of a snapshot object.|
-|[Create recoveryJob](../api/entrarecoveryservices-snapshot-post-recoveryjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md)|Create a new recovery job to restore directory objects to this snapshot's state.|
-|[Create recoveryPreviewJob](../api/entrarecoveryservices-snapshot-post-recoverypreviewjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)|Create a new preview job to enumerate changes required to restore to this snapshot's state.|
-|[List recoveryJobs](../api/entrarecoveryservices-snapshot-list-recoveryjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJob](../resources/entrarecoveryservices-recoveryjob.md) collection|Get a list of recovery jobs for this snapshot.|
-|[List recoveryPreviewJobs](../api/entrarecoveryservices-snapshot-list-recoverypreviewjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md) collection|Get a list of preview jobs for this snapshot.|
 
 ## Properties
 |Property|Type|Description|
