@@ -1,5 +1,5 @@
 ---
-title: "snapshot resource type"
+title: "Snapshot resource type"
 description: "Represents a backup snapshot of the tenant's directory data at a specific point in time."
 author: "mapamu"
 ms.date: 03/04/2026
@@ -8,13 +8,13 @@ ms.subservice: "entra-id"
 doc_type: resourcePageType
 ---
 
-# snapshot resource type
+# Snapshot resource type
 
 Namespace: microsoft.graph.entraRecoveryServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a backup snapshot of the tenant's directory data at a specific point in time. Snapshots define the timestamps to which a tenant's state can be recovered. The `id` property is a base64-encoded representation of the snapshot timestamp.
+Represents a backup snapshot of the tenant's directory data at a specific point in time. Each snapshot defines a timestamp to which a tenant's state can be recovered. The **id** property is a base64-encoded representation of the snapshot timestamp.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
