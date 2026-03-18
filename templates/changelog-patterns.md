@@ -1,3 +1,4 @@
+<!-- -This template file is consumed by the /authorAPIDocs prompt -->
 # Manual Changelog Authoring Guide
 
 This guide covers how to manually create changelog entries for changes that don't trigger automatic generation (e.g., throttling updates, query capability changes, page size limit changes).
