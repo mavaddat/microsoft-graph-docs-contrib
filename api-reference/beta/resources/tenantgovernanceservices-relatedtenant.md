@@ -31,6 +31,10 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |[refresh](../api/tenantgovernanceservices-relatedtenant-refresh.md)|None|Trigger a refresh operation to update the list of related tenants.|
 |[refreshStatus](../api/tenantgovernanceservices-relatedtenant-refreshstatus.md)|[microsoft.graph.tenantGovernanceServices.relatedTenantsRefreshStatus](../resources/tenantgovernanceservices-relatedtenantsrefreshstatus.md)|Check the status of a related tenants refresh operation.|
 
+## Optional query parameters
+
+This resource supports the `$filter`, `$orderby`, `$top`, `$skip`, and `$skiptoken` [OData query parameters](/graph/query-parameters) to help customize the response when listing related tenants.
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
