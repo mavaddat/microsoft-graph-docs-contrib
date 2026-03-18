@@ -16,8 +16,6 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 Abstract base type for recovery jobs. Defines common properties shared by [recoveryPreviewJob](entrarecoveryservices-recoverypreviewjob.md) and [recoveryJob](entrarecoveryservices-recoveryjob.md). Cannot be instantiated directly. Jobs follow the resource-based long running operation (RELO) pattern.
 
-This is an abstract type.
-
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
 ## Methods
