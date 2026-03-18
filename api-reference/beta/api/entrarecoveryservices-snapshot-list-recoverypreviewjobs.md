@@ -38,7 +38,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /directory/recovery/snapshots/{snapshotId}/recoveryPreviewJobs
+GET /directory/recovery/snapshots/{snapshot-id}/recoveryPreviewJobs
 ```
 
 ## Optional query parameters
@@ -100,7 +100,6 @@ Content-Type: application/json
       "totalChangedLinksCalculated": 1000,
       "filteringCriteria": null
     }
-    //this would be followed by the other preview jobs if they exist
   ]
 }
 ```

@@ -21,7 +21,6 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get recovery](../api/entrarecoveryservices-recoveryjob-get.md)|[microsoft.graph.entraRecoveryServices.recovery](../resources/entrarecoveryservices-recovery.md)|Get the recovery singleton for the tenant.|
 |[List jobs](../api/entrarecoveryservices-recovery-list-jobs.md)|[microsoft.graph.entraRecoveryServices.recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md) collection|Get a list of all recovery jobs (both preview and recovery) across all snapshots.|
 |[List snapshots](../api/entrarecoveryservices-recovery-list-snapshots.md)|[microsoft.graph.entraRecoveryServices.snapshot](../resources/entrarecoveryservices-snapshot.md) collection|Get a list of available backup snapshots for the tenant.|
 

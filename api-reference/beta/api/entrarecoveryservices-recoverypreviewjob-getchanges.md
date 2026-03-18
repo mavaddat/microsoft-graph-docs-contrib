@@ -40,7 +40,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /directory/recovery/snapshots/{snapshotId}/recoveryPreviewJobs/{jobId}/getChanges
+GET /directory/recovery/snapshots/{snapshot-id}/recoveryPreviewJobs/{job-id}/getChanges
 ```
 
 ## Function parameters
@@ -104,10 +104,9 @@ Content-Type: application/json
         {
             "entityTypeName": "user",
             "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
-            "displayName": "JD", //this will represent the display name in the current state and will help uniquely identify the object
+            "displayName": "JD",
             "recoveryAction": "update",
             "deltaFromCurrent": 
-            //this will be a delta from the current state describing the effective changes that will take place when you start the recovery 
             {  
                 "@odata.type": "#microsoft.graph.user",
                 "displayName": "John Doe",
@@ -117,19 +116,16 @@ Content-Type: application/json
                 "department": "Engineering",
                 "officeLocation": "Redmond",
                 "mobilePhone": "+1 555-555-5555",
-                "businessPhones": [
-                "+1 555-555-5555"
-                ],
+                "businessPhones": ["+1 555-555-5555"],
                 "preferredLanguage": "en-US",
                 "accountEnabled": true,
                 "passwordProfile": {
                 "forceChangePasswordNextSignIn": false
                 }
-                //this will be followed by the rest of the properties that will change as part of restoring to the snapshot state
             },
 
             "currentState":
-            { // this will describe how things look like in the current state. It will not include any delta annotations
+            {
                 "@odata.type": "#microsoft.graph.user",
                 "displayName": "JD",
                 "userPrincipalName": "johndoe@example2.com",
@@ -138,42 +134,36 @@ Content-Type: application/json
                 "department": "Management",
                 "officeLocation": "San Fransisco",
                 "mobilePhone": "+1 999-999-9999",
-                "businessPhones": [
-                "+1 555-888-5555"
-                ],
+                "businessPhones": ["+1 555-888-5555"],
                 "preferredLanguage": "en-SP",
                 "accountEnabled": false,
                 "passwordProfile": {
                 "forceChangePasswordNextSignIn": true
                 }
-                //this will be followed by the rest of the properties that have changed since the snapshotted state 
             }
         },
 
         {
-             // This example describes a scenario in which the user is soft deleted in the live container/current state.
-             // To rollback to the snapshot state, the user has to be restored
             "entityTypeName": "user",
             "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
             "displayName": "Test Display Name2",
             "recoveryAction": "restore",
             "deltaFromCurrent":
-            {   //since the user needs to be restored to recover, we will not use delta annotations
+            {
                 "@odata.type": "#microsoft.graph.user",
                 "displayName": "Test Display Name1", 
-                "deletedDateTime": null //a null deletedDateTime property will indicate that the user will not be in the deleted state after recovery
-                //this will be followed by the remaining properties that have changed 
+                "deletedDateTime": null
             },
 
             "currentState":
             {
                 "@odata.type": "#microsoft.graph.user",
                 "displayName": "Test Display Name2",
-                "deletedDateTime": "2024-08-20T00:00:00Z" // a non null deltedDateTime value indicates that the user is soft deleted in the current state
+                "deletedDateTime": "2024-08-20T00:00:00Z"
             }
         },
 
-        { // This example describes a scenario in which the user did not exist in the snapshot state and was created in the live container/current state. To recover, we will soft delete the user
+        {
             "entityTypeName": "user",
             "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
             "displayName": "Test Display Name2",
@@ -183,10 +173,9 @@ Content-Type: application/json
                 "@odata.type": "#microsoft.graph.user",
                 "displayName": "Test Display Name1",
                 "@removed": {
-                    "reason": "changed"  //annotation depicting soft deletion
+                    "reason": "changed"  
                 },
-                "deletedDateTime": "2024-08-26T00:00:00Z" //non null deletion time. This will be set to current time to indicate that we will
-                //delete this user as part of the recovery process
+                "deletedDateTime": "2024-08-26T00:00:00Z" 
             },
 
             "currentState":
@@ -196,8 +185,7 @@ Content-Type: application/json
                 "deletedDateTime": null
             }
         },
-
-        { // This example describes a scenario in which the user exists is soft deleted in the snapshot state and is restored in the current state/live container. We need to soft delete the user in such a situation 
+        {
             "entityTypeName": "user",
             "id": "36e07e06-72c1-4b2c-b547-c5084413b88b",
             "displayName": "testUser",
@@ -214,7 +202,7 @@ Content-Type: application/json
             "currentState":
             {
                 "@odata.type": "#microsoft.graph.user",
-                "deletedDateTime": null //We will only show this property in the current state unless more properties have changed
+                "deletedDateTime": null
             }
         },
 
@@ -231,32 +219,27 @@ Content-Type: application/json
                 "securityEnabled": true,
                 "visibility": "Private",
                 "renewedDateTime": "2023-06-01T00:00:00Z",
-                "members@delta": [ //member link change representation using delta
+                "members@delta": [ 
 
-                    { //user was soft deleted
+                    {
                         "@odata.type": "user",
                         "id": "632f6bb2-3ec8-4c1f-9073-0027a8c6859",
                         "@removed": {
                             "reason": "changed"}
                     },
                     { 
-                        //user was added to the group
                         "@odata.type": "user",
                         "id": "37de1ae3-408f-4702-8636-20824abda004"
                     }
                 ],
                 "owners@delta": [ 
-                    //owner link change representation
                     {
-                        //this user was added as an owner for the group
                         "id": "34567890-3456-3456-3456-3456789012cd",
                         "displayName": "John Miler",
                         "userPrincipalName": "johnmiller@example.com"
                     }
                 ]
-                //this will be followed by the properties that are different in the curent state
             },
-
             "currentState":
              {
                 "@odata.type": "#microsoft.graph.group",
@@ -265,11 +248,10 @@ Content-Type: application/json
                 "securityEnabled": false,
                 "visibility": "Public",
                 "renewedDateTime": "2023-07-01T00:00:00Z"
-                //this will be followed by the properties that are different in the target/snapshot state
              }
         },
 
-        {  // policies
+        {
             "entityTypeName": "conditionalAccessPolicy",
             "id": "863f9620-8b90-4296-b8dc-6ff480da5c8b",
             "displayName": "Require MFA for Admins",

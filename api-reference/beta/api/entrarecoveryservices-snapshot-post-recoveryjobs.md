@@ -38,7 +38,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-POST /directory/recovery/snapshots/{snapshotId}/recoveryJobs
+POST /directory/recovery/snapshots/{snapshot-id}/recoveryJobs
 ```
 
 ## Request headers

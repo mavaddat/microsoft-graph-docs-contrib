@@ -38,7 +38,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-POST /directory/recovery/jobs/{jobId}/cancel
+POST /directory/recovery/jobs/{job-id}/cancel
 ```
 
 ## Request headers

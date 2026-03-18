@@ -1222,10 +1222,10 @@
             "deviceTemplate",
             "mutualTlsOauthConfiguration",
             "entrarecoveryservices-recovery",
-            "entrarecoveryservices-snapshot",
+            "entrarecoveryservices-recoveryjob",
             "entrarecoveryservices-recoveryjobbase",
             "entrarecoveryservices-recoverypreviewjob",
-            "entrarecoveryservices-recoveryjob"
+            "entrarecoveryservices-snapshot"
           ],
           "childNodes": [
             {

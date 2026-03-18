@@ -38,7 +38,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /directory/recovery/snapshots/{snapshotId}/recoveryPreviewJobs/{jobId}
+GET /directory/recovery/snapshots/{snapshot-id}/recoveryPreviewJobs/{job-id}
 ```
 
 ## Optional query parameters
