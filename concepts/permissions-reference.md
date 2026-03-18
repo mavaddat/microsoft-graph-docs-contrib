@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.topic: reference
 ms.subservice: entra-applications
 ms.custom: graphiamtop20, scenarios:getting-started
-ms.date: 03/02/2026
+ms.date: 03/16/2026
 #Customer intent: As a developer, I want to learn more about the permissions available in Microsoft Graph, so that I understand the impact of granting specific permissions to my app.
 ---
 
@@ -3238,6 +3238,39 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 
 ---
 
+### EntraBackup.Read.All
+
+| Category | Application | Delegated |
+|--|--|--|
+| Identifier | 56eda3c5-3834-4815-bd41-6f8fa1295247 | a6ea9dd7-4dd9-4484-a80a-ac9ad981dcf1 |
+| DisplayText | Read Preview jobs and snapshots | Read Preview jobs and snapshots |
+| Description | Allows the app to list the all the snapshots, jobs and enumerate the changes of a specific preview job, on behalf of the signed-in user. | Allows the app to list the all the snapshots, jobs and enumerate the changes of a specific preview job, on behalf of the signed-in user. |
+| AdminConsentRequired | Yes | Yes |
+
+---
+
+### EntraBackup.ReadWrite.Preview
+
+| Category | Application | Delegated |
+|--|--|--|
+| Identifier | - | cef123a8-c18c-4eba-852e-d90cfbf67c91 |
+| DisplayText | - | Create a preview job, read preview job and snapshots |
+| Description | - | Allows the app to  list the all the snapshots, create a preview job and enumerate the changes of a specific preview job, on behalf of the signed-in user. |
+| AdminConsentRequired | - | Yes |
+
+---
+
+### EntraBackup.ReadWrite.Recovery
+
+| Category | Application | Delegated |
+|--|--|--|
+| Identifier | - | 8269c6ff-41d7-4172-a783-b2ce38322e42 |
+| DisplayText | - | Create preview and recovery job, read recovery job and snapshots |
+| Description | - | Allows the app to  list the all the snapshots, create a recovery job and enumerate the changes of a specific recovery job, on behalf of the signed-in user. |
+| AdminConsentRequired | - | Yes |
+
+---
+
 ### EventListener.Read.All
 
 | Category | Application | Delegated |
@@ -3527,7 +3560,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 | Identifier | 40dc41bc-0f7e-42ff-89bd-d9516947e474 | 085ca537-6565-41c2-aca7-db852babc212 |
 | DisplayText | Access selected file storage containers | Access selected file storage containers |
 | Description | Allows the application to utilize the file storage container platform to manage containers, without a signed-in user. The specific file storage containers and the permissions granted to them will be configured in Microsoft 365 by the developer of each container type. | Allows the application to utilize the file storage container platform to manage containers on behalf of the signed in user. The specific file storage containers and the permissions granted to them will be configured in Microsoft 365 by the developer of each container type. |
-| AdminConsentRequired | Yes | Yes |
+| AdminConsentRequired | Yes | No |
 
 ---
 
@@ -5483,6 +5516,17 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 
 ---
 
+### Policy.Read.B2BManagementPolicy
+
+| Category | Application | Delegated |
+|--|--|--|
+| Identifier | 227900ff-df89-40f8-90e2-8157cf6995d5 | 4b293250-121d-4cb4-acc7-5280438c18a6 |
+| DisplayText | Read your organization's B2BManagement policies | Read your organization's B2BManagement policies |
+| Description | Allows the app to read all your organization's B2BManagement policies without a signed in user. | Allows the app to read your organization's B2BManagement policies on behalf of the signed-in user. |
+| AdminConsentRequired | Yes | Yes |
+
+---
+
 ### Policy.Read.ConditionalAccess
 
 | Category | Application | Delegated |
@@ -5580,6 +5624,17 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 | Identifier | fb221be6-99f2-473f-bd32-01c6a0e9ca3b | edd3c878-b384-41fd-95ad-e7407dd775be |
 | DisplayText | Read and write your organization's authorization policy | Read and write your organization's authorization policy |
 | Description | Allows the app to read and write your organization's authorization policy without a signed in user. For example, authorization policies can control some of the permissions that the out-of-the-box user role has by default. | Allows the app to read and write your organization's authorization policy on behalf of the signed-in user.  For example, authorization policies can control some of the permissions that the out-of-the-box user role has by default. |
+| AdminConsentRequired | Yes | Yes |
+
+---
+
+### Policy.ReadWrite.B2BManagementPolicy
+
+| Category | Application | Delegated |
+|--|--|--|
+| Identifier | 886bd2d9-5b8b-4b49-adea-ca75fb50d9ef | 723c4a0c-85b0-4a02-bb2a-c9eb07959de9 |
+| DisplayText | Read and write your organization's B2BManagement policies | Read and write your organization's B2BManagement policies |
+| Description | Allows the app to read and write all your organization's B2BManagement policies without a signed in user. | Allows the app to read and write your organization's B2BManagement policies on behalf of the signed-in user. |
 | AdminConsentRequired | Yes | Yes |
 
 ---
@@ -8557,6 +8612,17 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000
 | DisplayText | Read all targeted messages of group chat or channel | - |
 | Description | Allows the app to read all group chat or channel targeted messages in Microsoft Teams. | - |
 | AdminConsentRequired | Yes | - |
+
+---
+
+### TeamworkTargetedMessage.ReadWrite
+
+| Category | Application | Delegated |
+|--|--|--|
+| Identifier | - | 162354de-2885-4e5a-94fb-2f03019a65a8 |
+| DisplayText | - | Update targeted messages belonging to the user |
+| Description | - | Allows the user to update group chat or channel targeted messages in Microsoft Teams. |
+| AdminConsentRequired | - | Yes |
 
 ---
 
