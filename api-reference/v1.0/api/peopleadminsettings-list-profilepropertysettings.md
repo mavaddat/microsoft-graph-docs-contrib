@@ -8,7 +8,7 @@ ms.subservice: "people"
 doc_type: apiPageType
 ---
 
-# List profilePropertySetting
+# List profilePropertySettings
 
 Namespace: microsoft.graph
 
