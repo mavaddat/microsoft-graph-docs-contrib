@@ -21,10 +21,10 @@ Inherits from [microsoft.graph.entraRecoveryServices.recoveryJobBase](../resourc
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List recoveryPreviewJobs](../api/entrarecoveryservices-snapshot-list-recoverypreviewjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md) collection|Get a list of the recoveryPreviewJob objects and their properties.|
-|[Create recoveryPreviewJob](../api/entrarecoveryservices-snapshot-post-recoverypreviewjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)|Create a new recoveryPreviewJob object.|
-|[Get recoveryPreviewJob](../api/entrarecoveryservices-recoverypreviewjob-get.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)|Read the properties and relationships of a recoveryPreviewJob object.|
-|[getChanges](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md)|[microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase](../resources/entrarecoveryservices-recoverychangeobjectbase.md) collection|Retrieve the collection of changes calculated by the preview job.|
+|[List](../api/entrarecoveryservices-snapshot-list-recoverypreviewjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md) collection|Get a list of the recoveryPreviewJob objects and their properties.|
+|[Create](../api/entrarecoveryservices-snapshot-post-recoverypreviewjobs.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)|Create a new recoveryPreviewJob object.|
+|[Get](../api/entrarecoveryservices-recoverypreviewjob-get.md)|[microsoft.graph.entraRecoveryServices.recoveryPreviewJob](../resources/entrarecoveryservices-recoverypreviewjob.md)|Read the properties and relationships of a recoveryPreviewJob object.|
+|[Get changes](../api/entrarecoveryservices-recoverypreviewjob-getchanges.md)|[microsoft.graph.entraRecoveryServices.recoveryChangeObjectBase](../resources/entrarecoveryservices-recoverychangeobjectbase.md) collection|Retrieve the collection of changes calculated by the preview job.|
 
 ## Properties
 |Property|Type|Description|
