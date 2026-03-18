@@ -1,6 +1,6 @@
 ---
 title: "Overview of Tenant Governance APIs in Microsoft Graph"
-description: "Discover, manage, and govern Microsoft Entra tenants at scale with Tenant Governance APIs in Microsoft Graph. Learn about delegated administration, multi-tenant apps, and governance relationships."
+description: "Discover, manage, and govern Microsoft Entra tenants at scale with Tenant Governance APIs in Microsoft Graph. Learn about related tenants, governance relationships and associated settings."
 author: "FaithOmbongi"
 ms.author: "ombongifaith"
 ms.reviewer: "hafowler,akhil.potturi,jeffsta"
@@ -9,7 +9,7 @@ ms.subservice: "entra-id-governance"
 doc_type: conceptualPageType
 ms.date: 03/18/2026
 ms.topic: overview
-#customer intent: As a developer, I want to learn how to use the tenant governance APIs in Microsoft Graph to programmatically discover related tenants, establish governance relationships, and manage cross-tenant delegated administration at scale.
+#customer intent: As a developer, I want to learn how to use the tenant governance APIs in Microsoft Graph to programmatically discover related tenants and establish governance relationships.
 ---
 
 # Overview of Tenant Governance APIs in Microsoft Graph
@@ -23,9 +23,9 @@ The tenant governance APIs in Microsoft Graph enable IT administrators to progra
 [Microsoft Entra Tenant Governance](/entra/id-governance/tenant-governance/overview) helps organizations centrally manage their tenant ecosystem through cross-tenant delegated administration and governance relationships. Use these APIs to programmatically manage the following capabilities:
 
 - Discover related tenants across your organization's tenant ecosystem.
-- Establish governance relationships between a governing tenant and governed tenants.
+- Establish governance relationships between governing tenant and governed tenants.
 - Configure cross-tenant delegated administration to centrally manage governed tenants.
-- Manage multi-tenant applications across governed tenants.
+- Provision and manage multi-tenant applications across governed tenants.
 - Define governance policy templates to enforce consistent governance.
 
 ## Discover related tenants
@@ -50,7 +50,7 @@ A *governance relationship* is a directional connection between two Microsoft En
 
 To establish a governance relationship, both tenants participate in a three-step handshake:
 
-1. The future **governed** tenant sends a [governance invitation](../resources/tenantgovernanceservices-governanceinvitation.md) to the future governing tenant. The future governed tenant must have enabled receiving governance invitations through the [Update tenantGovernanceSetting](../api/tenantgovernanceservices-tenantgovernancesetting-update.md) operation.
+1. The future **governed** tenant sends a [governance invitation](../resources/tenantgovernanceservices-governanceinvitation.md) to the future governing tenant. The future governing tenant must have enabled receiving governance invitations through the [Update tenantGovernanceSetting](../api/tenantgovernanceservices-tenantgovernancesetting-update.md) operation.
 2. The future **governing** tenant sends a [governance request](../resources/tenantgovernanceservices-governancerequest.md) to the future governed tenant, which includes a selected [governance policy template](../resources/tenantgovernanceservices-governancepolicytemplate.md).
 3. The future **governed** tenant reviews and accepts the request. Upon acceptance, a [governance relationship](../resources/tenantgovernanceservices-governancerelationship.md) is created.
 
@@ -66,6 +66,8 @@ The following governance models are supported:
 | One-to-many | ✅ Yes | A tenant can govern multiple tenants. |
 | Many-to-one | ✅ Yes | Multiple tenants can govern a single tenant. |
 | Multi-tier | ❌ No | A tenant can't be both a governing and governed tenant. For example, if Contoso governs Fabrikam, Fabrikam can't govern another tenant. |
+| Multiple | ❌ No | Multiple relationships between the same 2 tenants is not supported. |
+| Cloud solution providers | ❌ No | Coexistence of CSP relationships created through Partner center and tenant governance relationships is not supported. |
 
 When you create a new add-on tenant from an existing tenant, Tenant Governance automatically establishes a governance relationship between the parent (governing) tenant and the new (governed) tenant using a default [governance policy template](../resources/tenantgovernanceservices-governancepolicytemplate.md). This process ensures that newly created tenants are immediately under centralized governance.
 
@@ -84,15 +86,11 @@ A governance policy template defines which Microsoft Entra built-in roles are en
 
 Governed tenants have full visibility into governing tenant admin activity. The governed tenant's sign-in and audit logs capture all actions that delegated administrators perform.
 
-## Restrict multitenant applications to your governed ecosystem
+## Manage multitenant applications within your governed ecosystem
 
 Through governance policy templates, you can select custom, multi-tenant applications to provision across governed tenants. When a governance relationship is established, the system creates a service principal with the same permissions in the governed tenant.
 
 This capability enables centralized application management at scale from the governing tenant, eliminating the need to manage application access on a per-tenant basis. Configure multi-tenant applications through the **multiTenantApplicationsToProvision** property of the **governancePolicyTemplate** resource.
-
-### Restrict applications to specific tenants
-
-When registering a multi-tenant application, you can restrict access to specific tenants by configuring the application's **signInAudienceRestrictions** property to specific tenants, up to 20 tenants. Then, when provisioning the application through a governance policy template, you can specify which governed tenants receive the application. This approach allows you to maintain control over which tenants can access the application while still benefiting from centralized management.
 
 ## Maintain tenant configurations using Tenant Configuration Management APIs
 
@@ -102,12 +100,6 @@ In addition to the tenant governance APIs, you can use the [Tenant Configuration
 
 All tenant governance activities are logged in the Microsoft Entra [audit logs](../resources/directoryaudit.md) of both the governing and governed tenants, providing full visibility into governance actions and changes. This includes governance relationship creation and termination, policy template updates, delegated administration activities, and multi-tenant application provisioning.
 
-<!-- Add sample query to get TG-related logs -->
-
-## Limitations
-
-- Governance relationships aren't supported for cross-cloud tenants.
-
 ## Related content
 
 - [relatedTenant resource type](../resources/tenantgovernanceservices-relatedtenant.md)
@@ -115,3 +107,4 @@ All tenant governance activities are logged in the Microsoft Entra [audit logs](
 - [governanceRequest resource type](../resources/tenantgovernanceservices-governancerequest.md)
 - [governanceRelationship resource type ](../resources/tenantgovernanceservices-governancerelationship.md)
 - [governancePolicyTemplate resource type](../resources/tenantgovernanceservices-governancepolicytemplate.md)
+- [tenantgovernancesetting resource type](../resources/tenantgovernanceservices-tenantgovernancesetting.md)
