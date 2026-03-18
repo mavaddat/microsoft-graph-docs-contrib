@@ -18,7 +18,7 @@ Represents a single object change in the context of tenant recovery. Returned by
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
-This resource is an open type that supports additional dynamic properties `deltaFromCurrent` and `currentState` in responses.
+This resource is an open type that supports additional dynamic properties **deltaFromCurrent** and **currentState** in responses.
 
 ## Methods
 None.
