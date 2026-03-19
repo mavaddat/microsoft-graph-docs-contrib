@@ -1220,12 +1220,11 @@
             "organizationSettings",
             "uxSetting",
             "deviceTemplate",
-            "mutualTlsOauthConfiguration",
-            "entrarecoveryservices-recovery"
+            "mutualTlsOauthConfiguration"
           ],
           "childNodes": [
             {
-              "name": "Backup and recovery",
+              "name": "Entra backup and recovery",
               "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
               "resources": [
                 "entrarecoveryservices-recoveryjob",

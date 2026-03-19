@@ -38,16 +38,13 @@ Use the following new container columns APIs added to further support structured
 
 Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
 
+### Identity and access | Directory management
+
+Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. You can view snapshots and start preview jobs for analysis before running the recovery jobs. You can also monitor the status of recovery processes including successes and failures. For more information, see [Overview of Microsoft Entra Backup and Recovery APIs](/graph/api/resources/entrarecoveryservices-backup-recovery-overview)
+
 ### Identity and access | Governance
 
 Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
-
-### Identity and access | Directory management
-
-Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. Use the [recovery](/graph/api/resources/entrarecoveryservices-recovery?view=graph-rest-beta&preserve-view=true) resource to:
-- List available [snapshots](/graph/api/resources/entrarecoveryservices-snapshot?view=graph-rest-beta&preserve-view=true) captured at different points in time.
-- Create and monitor [recoveryPreviewJob](/graph/api/resources/entrarecoveryservices-recoverypreviewjob?view=graph-rest-beta&preserve-view=true) and [recoveryJob](/graph/api/resources/entrarecoveryservices-recoveryjob?view=graph-rest-beta&preserve-view=true) operations.
-- Retrieve detailed change information through the [getChanges](/graph/api/entrarecoveryservices-recoverypreviewjob-getchanges?view=graph-rest-beta&preserve-view=true) and [getFailedChanges](/graph/api/entrarecoveryservices-recoveryjob-getfailedchanges?view=graph-rest-beta&preserve-view=true) functions.
 
 ### Identity and access | Network access
 
