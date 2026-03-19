@@ -23,11 +23,13 @@ Before you begin, make sure you have the following:
   - **Cloud Application Administrator** and **Privileged Role Administrator** — required to create and configure the connector.
   - Appropriate  directory roles for the Graph operations your agent performs — required so the MCP Server can execute Graph API calls on behalf of the signed-in user.
   Sign in to both Copilot Studio and Power Apps with this tenant admin account.
-- Complete the MCP Server provisioning steps in [Get started with the Microsoft MCP Server for Enterprise](/graph/mcp-server/get-started), including assigning the `MCP.*` API permissions to your app registration and granting admin consent. For more information, see [MCP Server for Enterprise documentation](https://aka.ms/MCPServerForEnterprise).
+- Complete the MCP Server provisioning steps in [Get started with the Microsoft MCP Server for Enterprise](/graph/mcp-server/get-started). For more information, see [MCP Server for Enterprise documentation](https://aka.ms/MCPServerForEnterprise).
 - A [client app registration](/entra/identity-platform/quickstart-register-app) in Microsoft Entra. You need the following from your app registration:
   - **Application (client) ID**
   - **Federated credentials** (recommended) or a **client secret** (from **Certificates & secrets**). Federated credentials are more secure and don't require secret rotation. To use federated credentials, first create the custom connector to obtain the redirect URL, then create a managed identity and configure the federated credential on your app registration. If your organization permits client secrets, you can use a client secret as a simpler alternative.
+  - Assign the `MCP.*` API permissions to your app registration and grant admin consent. For more information, see [MCP Server for Enterprise documentation](https://aka.ms/MCPServerForEnterprise).
 - A Power Platform environment that isn't blocked by Data Loss Prevention (DLP) policies. Avoid using the default environment, as tenant-level DLP policies often restrict custom connectors there. Use a **Developer** or **Sandbox** environment instead. If needed, create one from the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com) > **Environments** > **+ New**.
+- A Copilot Studio agent. If you don't have one, [create an agent in Copilot Studio](/microsoft-copilot-studio/fundamentals-get-started).
 
 ## Create the MCP connector from Copilot Studio
 
@@ -36,7 +38,7 @@ Create a connector to the Microsoft MCP Server for Enterprise directly from Copi
 1. In [Copilot Studio](https://copilotstudio.microsoft.com), make sure you select the environment where you want to create the connector (for example, a Developer or Sandbox environment). Use the environment picker in the top-right corner.
 1. Open your agent and select the **Tools** tab.
 1. Select **+ Add a tool**.
-1. Select **+ New tool**, then select **Model Context Protocol**. The MCP onboarding wizard opens.
+1. Select **Model Context Protocol**. The MCP onboarding wizard opens.
 1. Fill in the following required fields:
 
     | Field | Value |
@@ -66,11 +68,12 @@ After you create the connector, add the redirect URL to your client app registra
 
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com), go to your client app registration.
 1. Select **Authentication**.
-1. Select **+ Add a platform** > **Web**. If the Web platform already exists, select **+ Add URI** instead. Don't add redirect URIs under **Mobile and Desktop applications**, as those indicate a public client and aren't supported.
+1. Under **Redirect URI Configuration**, select **+ Add Redirect URI**.
+1. In the **Select a platform** dialog, select **Web**. The app registration must be configured as a **confidential client** (Web App/API). Don't select **Mobile and Desktop applications**, as those indicate a public client and aren't supported.
 1. Paste the redirect URL you copied from Copilot Studio.
 1. Select **Configure**.
 1. Go back to Copilot Studio and select **Next**.
-1. In the **Add tool** dialog, select **Create new connection**. A sign-in pop-up appears.
+1. In the **Add tool** dialog, select **Create new connection**, then select **Create**. A sign-in pop-up appears.
 1. Sign in with your tenant admin account.
 1. After sign-in succeeds, select **Add and configure** to finish adding the MCP tool to your agent.
 
@@ -82,6 +85,7 @@ Connect the MCP tool to your agent so it can query Microsoft Graph data.
 1. Open your agent and go to **Tools** > **+ Add a tool**.
 1. In the **Add tool** dialog, select the **Model Context Protocol** filter tab (not **Connector**).
 1. Find your **MCP Server for Enterprise** connector and select it to add it to the agent.
+1. In the dialog, select **Create and Configure**.
 
 > [!TIP]
 > For testing purposes, you can instruct the agent to always use the custom connector so the MCP server is invoked for every request. Add this instruction to the agent's system instructions.
@@ -102,8 +106,9 @@ After you create the connector from Copilot Studio, finalize the configuration i
 ### Update the Security tab
 
 1. In the connector wizard, select the **2. Security** tab at the top.
+1. Under **Authentication type**, select **Edit**.
 1. Verify that the **Authentication type** is set to **OAuth 2.0** and **Identity Provider** is set to **Azure Active Directory**.
-1. Re-enter the **Client secret** value from your app registration. The client secret isn't persisted and must be re-entered each time you edit the connector.
+1. Select **Enable Service Principal Support** and choose **Use Managed Identity** to use federated credentials (recommended). If your organization uses client secrets instead, re-enter the **Client secret** value from your app registration. The client secret isn't persisted and must be re-entered each time you edit the connector.
 1. Update the following fields:
 
     | Field | Value |
@@ -111,7 +116,6 @@ After you create the connector from Copilot Studio, finalize the configuration i
     | **Resource URL** | `https://mcp.svc.cloud.microsoft/enterprise/` |
     | **Enable on-behalf-of login** | Set to **true**. |
 
-1. (Optional) If you use federated credentials instead of a client secret, select **Enable Service Principal Support** and choose **Use Managed Identity**.
 1. Select **Update Connector** in the top-right corner of the page. Wait for the update to complete before proceeding.
 
 ## Test the connection
@@ -121,7 +125,7 @@ Before you verify end-to-end functionality, confirm that the connector can estab
 1. Still in the connector wizard in Power Apps, select the **5. Test** tab at the top.
 1. Select **+ New connection**. A dialog box appears showing the connector name.
 1. Select **Create**. A sign-in pop-up appears. Sign in with your tenant admin account.
-1. After the connection is created, return to the **Test** tab. Select the refresh icon to update the connection information if needed.
+1. After the connection is created, return to the **5. Test** tab. Select the refresh icon to update the connection information if needed.
 1. Verify that the connection status shows **Connected**.
 
 > [!NOTE]
@@ -131,7 +135,7 @@ Before you verify end-to-end functionality, confirm that the connector can estab
 
 After you add the connector, test the agent by asking a tenant-specific question.
 
-1. In Copilot Studio, select **Test** to open a test session.
+1. In Copilot Studio, select **Test** in the upper-right corner to open a test session.
 1. Ask a question such as, "How many users are in my tenant?"
 1. The agent should:
     1. Invoke the MCP Server tools to understand the intent.
