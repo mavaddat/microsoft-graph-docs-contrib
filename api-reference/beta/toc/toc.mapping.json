@@ -1230,10 +1230,10 @@
               "name": "Entra Rackup and Recovery",
               "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
               "resources": [
-                "entrarecoveryservices-recoveryjob",
-                "entrarecoveryservices-recoveryjobbase",
-                "entrarecoveryservices-recoverypreviewjob",
-                "entrarecoveryservices-snapshot"
+                "microsoft.graph.entraRecoveryServices.recoveryJob",
+                "microsoft.graph.entraRecoveryServices.recoveryJobBase",
+                "microsoft.graph.entraRecoveryServices.recoveryPreviewJob",
+                "microsoft.graph.entraRecoveryServices.snapshot"
               ]
             },
             {
