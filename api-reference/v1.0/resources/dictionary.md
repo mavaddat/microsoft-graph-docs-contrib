@@ -1,5 +1,5 @@
 ---
-title: "dictionary resource type"
+title: "Dictionary resource type"
 description: "A dictionary of name-value pairs that allows arbitrary key-value pairs to be stored as open type properties."
 author: "miritsadon"
 ms.date: 07/17/2025
@@ -8,7 +8,7 @@ ms.subservice: "non-product-specific"
 doc_type: resourcePageType
 ---
 
-# dictionary resource type
+# Dictionary resource type
 
 Namespace: microsoft.graph
 
