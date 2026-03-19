@@ -1,7 +1,7 @@
 ---
 title: "recovery resource type"
 description: "Represents the entry point for the Microsoft Entra Backup and Recovery service for a tenant."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

@@ -1,7 +1,7 @@
 ---
 title: "List recoveryJobs"
 description: "Get a list of recovery jobs for a specific snapshot."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

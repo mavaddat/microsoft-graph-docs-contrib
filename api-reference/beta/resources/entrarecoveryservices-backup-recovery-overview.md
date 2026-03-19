@@ -3,7 +3,7 @@ title: "Overview of Microsoft Entra Backup and Recovery APIs"
 description: "Learn how to use Microsoft Entra Backup and Recovery APIs as part of your Business Continuity strategy to programmatically back up, preview, and restore directory objects."
 author: "FaithOmbongi"
 ms.author: "ombongifaith"
-ms.reviewer: "mapamu, yuhko-msft"
+ms.reviewer: "yuhko-msft, yuhko-msft"
 ms.localizationpriority: medium
 doc_type: conceptualPageType
 ms.topic: overview

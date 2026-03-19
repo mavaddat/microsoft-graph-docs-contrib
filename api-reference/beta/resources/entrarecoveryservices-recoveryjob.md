@@ -1,7 +1,7 @@
 ---
 title: "recoveryJob resource type"
 description: "Represents a recovery job that applies changes to restore a tenant's directory objects to a specific snapshot state."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

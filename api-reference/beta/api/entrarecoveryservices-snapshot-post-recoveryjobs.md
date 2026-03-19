@@ -1,7 +1,7 @@
 ---
 title: "Create recoveryJob"
 description: "Create a new recovery job to restore the tenant's directory objects to a snapshot state."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

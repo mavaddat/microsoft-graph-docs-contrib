@@ -1,7 +1,7 @@
 ---
 title: "recoveryPreviewJob resource type"
 description: "Represents a preview job that calculates and enumerates the changes required to recover a tenant to a specific snapshot state."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

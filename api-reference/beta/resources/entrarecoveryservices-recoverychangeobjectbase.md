@@ -1,7 +1,7 @@
 ---
 title: "recoveryChangeObjectBase resource type"
 description: "Represents a single object change in the context of tenant recovery."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

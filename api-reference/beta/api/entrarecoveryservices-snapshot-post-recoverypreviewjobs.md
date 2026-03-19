@@ -1,7 +1,7 @@
 ---
 title: "Create recoveryPreviewJob"
 description: "Create a new preview job to enumerate changes required to restore to a snapshot's state."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

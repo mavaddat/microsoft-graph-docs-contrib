@@ -1,7 +1,7 @@
 ---
 title: "List snapshots"
 description: "Get a list of available backup snapshots for the tenant."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/19/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"

@@ -1,7 +1,7 @@
 ---
 title: "recoveryPreviewJob: getChanges"
 description: "Get a paginated collection of change objects that will be applied if the recovery operation is executed."
-author: "mapamu"
+author: "yuhko-msft"
 ms.date: 03/04/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"
