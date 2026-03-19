@@ -1233,6 +1233,16 @@ items:
       href: ../../api/teamworktagmember-get.md
     - name: Delete
       href: ../../api/teamworktagmember-delete.md
+  - name: Activity feed
+    items:
+    - name: Send notification to user in chat
+      href: ../../api/chat-sendactivitynotification.md
+    - name: Send notification to user in team
+      href: ../../api/team-sendactivitynotification.md
+    - name: Send notification to user
+      href: ../../api/userteamwork-sendactivitynotification.md
+    - name: Send notification to multiple users in bulk
+      href: ../../api/teamwork-sendactivitynotificationtorecipients.md
   - name: Sections (preview)
     items:
     - name: Teamwork section
