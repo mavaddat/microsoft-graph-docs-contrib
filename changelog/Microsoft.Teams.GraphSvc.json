@@ -68,14 +68,6 @@
         },
         {
           "Id": "5775ca5d-09fc-4f68-bd66-de8b96668897",
-          "ApiChange": "Relationship",
-          "ChangedApiName": "items",
-          "ChangeType": "Addition",
-          "Description": "Added the **items** relationship to the [teamworkSection](https://learn.microsoft.com/en-us/graph/api/resources/teamworkSection?view=graph-rest-beta) resource.",
-          "Target": "teamworkSection"
-        },
-        {
-          "Id": "5775ca5d-09fc-4f68-bd66-de8b96668897",
           "ApiChange": "Method",
           "ChangedApiName": "move",
           "ChangeType": "Addition",
