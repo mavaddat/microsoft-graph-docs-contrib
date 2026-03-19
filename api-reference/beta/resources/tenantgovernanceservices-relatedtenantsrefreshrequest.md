@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a request to refresh related tenants data outside the regular refresh schedule.
+Represents a request to [refresh related tenants](../api/tenantgovernanceservices-relatedtenant-refresh.md) data outside the regular refresh schedule.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 

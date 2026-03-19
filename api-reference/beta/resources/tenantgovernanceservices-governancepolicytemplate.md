@@ -16,7 +16,6 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Represents a policy template that defines the configuration for governance relationships, including delegated administration role assignments and multi-tenant applications to provision. Policy templates are used when creating [governanceRequest](tenantgovernanceservices-governancerequest.md) objects and are stored as [snapshots](tenantgovernanceservices-relationshippolicy.md) in established [governanceRelationship](tenantgovernanceservices-governancerelationship.md) objects.
 
-
 The system provides a default policy template with the ID `default`. This template serves as a reusable configuration that is applied when governance relationships are automatically created for add-on tenants. The default template cannot be deleted.
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).

@@ -1939,15 +1939,14 @@
             },
             {
               "name": "Tenant governance",
-                  "resources": [
-                    "microsoft.graph.tenantGovernanceServices.governanceInvitation",
-                    "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
-                    "microsoft.graph.tenantGovernanceServices.governanceRelationship",
-                    "microsoft.graph.tenantGovernanceServices.governanceRequest",
-                    "microsoft.graph.tenantGovernanceServices.relatedTenant",
-                    "microsoft.graph.tenantGovernanceServices.relatedtenantsrefreshstatus",
-                    "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting"
-                  ]
+              "overview": "../../resources/tenantgovernanceservices-tenantgovernance-overview.md",
+              "resources": [
+                "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
+                "microsoft.graph.tenantGovernanceServices.relatedTenant",
+                "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+                "microsoft.graph.tenantGovernanceServices.governanceInvitation",
+                "microsoft.graph.tenantGovernanceServices.governanceRequest"
+              ]
             },
             {
               "name": "Organizational branding",
