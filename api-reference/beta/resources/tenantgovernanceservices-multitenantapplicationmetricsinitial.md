@@ -44,8 +44,8 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsInitial",
   "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalApplications": "Decimal",
-  "outboundMonthlyTotalApplications": "Decimal",
+  "inboundMonthlyTotalApplications": "String",
+  "outboundMonthlyTotalApplications": "String",
   "createdDateTime": "String (timestamp)"
 }
 ```

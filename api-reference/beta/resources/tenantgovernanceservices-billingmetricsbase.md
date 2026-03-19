@@ -59,12 +59,12 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.billingMetricsBase",
   "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "localAssociatedTenantCount": "Decimal",
-  "localAssociatedTenantBillingManagementActiveCount": "Decimal",
-  "localAssociatedTenantProvisioningActiveCount": "Decimal",
+  "localAssociatedTenantCount": "String",
+  "localAssociatedTenantBillingManagementActiveCount": "String",
+  "localAssociatedTenantProvisioningActiveCount": "String",
   "localAssociatedTenantIds": ["String"],
-  "foreignAssociatedTenantCount": "Decimal",
-  "foreignAssociatedTenantBillingManagementActiveCount": "Decimal",
-  "foreignAssociatedTenantProvisioningActiveCount": "Decimal"
+  "foreignAssociatedTenantCount": "String",
+  "foreignAssociatedTenantBillingManagementActiveCount": "String",
+  "foreignAssociatedTenantProvisioningActiveCount": "String"
 }
 ```

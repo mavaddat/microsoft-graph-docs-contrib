@@ -47,10 +47,10 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsRecent",
   "id": "String (identifier)",
   "watermarkDateTime": "String (timestamp)",
-  "inboundMonthlyTotalUsers": "Decimal",
-  "inboundMonthlyTotalApplications": "Decimal",
-  "outboundMonthlyTotalUsers": "Decimal",
-  "outboundMonthlyTotalApplications": "Decimal",
+  "inboundMonthlyTotalUsers": "String",
+  "inboundMonthlyTotalApplications": "String",
+  "outboundMonthlyTotalUsers": "String",
+  "outboundMonthlyTotalApplications": "String",
   "updateDateTime": "String (timestamp)"
 }
 ```
