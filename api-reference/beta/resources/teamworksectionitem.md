@@ -20,10 +20,10 @@ Represents an item, such as a chat, channel, meeting, or community, that is orga
 
 | Method | Return type | Description |
 |:-------|:------------|:------------|
-| [List](../api/teamworksection-list-items.md) | [teamworkSectionItem](teamworksectionitem.md) collection | Get the list of items in a [section](../resources/teamworksection.md). |
-| [Add](../api/teamworksection-post-items.md) | [teamworkSectionItem](teamworksectionitem.md) | Add an item to a [section](../resources/teamworksection.md). |
-| [Remove](../api/teamworksectionitem-delete.md) | None | Remove an item from a [section](../resources/teamworksection.md). |
-| [Move](../api/teamworksectionitem-move.md) | [teamworkSectionItem](teamworksectionitem.md) | Move an item from one section to another. |
+| [List](../api/teamworksection-list-items.md) | [teamworkSectionItem](teamworksectionitem.md) collection | Get the list of [items](../resources/teamworksectionitem.md) in a [section](../resources/teamworksection.md) of a user's [teamwork](../resources/userteamwork.md). |
+| [Add](../api/teamworksection-post-items.md) | [teamworkSectionItem](teamworksectionitem.md) | Add an [item](../resources/teamworksectionitem.md), such as a chat, channel, meeting, or community, to a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md).  |
+| [Remove](../api/teamworksectionitem-delete.md) | None | Remove an [item](../resources/teamworksectionitem.md) from a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
+| [Move](../api/teamworksectionitem-move.md) | [teamworkSectionItem](teamworksectionitem.md) | Move an [item](../resources/teamworksectionitem.md) from one [section](../resources/teamworksection.md) to another in a user's [teamwork](../resources/userteamwork.md). |
 
 ## Properties
 

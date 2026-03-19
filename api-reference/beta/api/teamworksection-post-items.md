@@ -38,7 +38,7 @@ POST /users/{user-id}/teamwork/sections/{teamworkSection-id}/items
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | Content-Type | application/json. Required. |
-| If-Match | The value of the **@microsoft.graph.sectionsVersion** annotation from [listing sections](userteamwork-list-sections.md), or equivalently the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). Required for optimistic concurrency control. |
+| If-Match | The value of the **@microsoft.graph.sectionsVersion** annotation returned when you [list sections](userteamwork-list-sections.md), or the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -57,15 +57,15 @@ If successful, this method returns a `201 Created` response code and a [teamwork
 > [!NOTE]
 > The response includes an updated **@odata.etag** value. Use this value as the `If-Match` header for any subsequent mutation operations.
 
-The following errors can occur:
+This method can also return the following errors.
 
 | Scenario | HTTP code | Error code | Message |
 |:---------|:----------|:-----------|:--------|
 | Item already exists in this section | `409 Conflict` | `conflict` | This item is already in this section. |
 | Item already exists in another section | `409 Conflict` | `conflict` | This item is already associated with another section. Use the [move](teamworksectionitem-move.md) API to relocate it. |
-| Maximum items per section reached | `400 Bad Request` | `badRequest` | The maximum number of items in this section has been reached. |
-| Invalid item ID | `400 Bad Request` | `badRequest` | The specified item ID is not valid. Provide a valid chat, channel, meeting, or community ID. |
-| ETag version mismatch | `412 Precondition Failed` | `preconditionFailed` | The resource has been modified since it was last read. Read the latest version and retry. |
+| Maximum items per section reached | `400 Bad Request` | `badRequest` | The maximum number of items in this section is reached. |
+| Invalid item ID | `400 Bad Request` | `badRequest` | The specified item ID isn't valid. Provide a valid chat, channel, meeting, or community ID. |
+| ETag version mismatch | `412 Precondition Failed` | `preconditionFailed` | The resource was modified after it was last read. Read the latest version and retry. |
 
 ## Examples
 

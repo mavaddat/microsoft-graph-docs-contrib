@@ -1,6 +1,6 @@
 ---
 title: "Remove teamworkSectionItem"
-description: "Remove an item from a section in a user's teamwork. This API doesn't delete the underlying chat, channel, meeting, or community; it only removes the item from the section."
+description: "Remove an item from a section in a user's teamwork."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
@@ -37,7 +37,7 @@ DELETE /users/{user-id}/teamwork/sections/{teamworkSection-id}/items/{teamworkSe
 | Header | Value |
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| If-Match | The value of the **@microsoft.graph.sectionsVersion** annotation from [listing sections](userteamwork-list-sections.md), or equivalently the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). Required for optimistic concurrency control. |
+| If-Match | The value of the **@microsoft.graph.sectionsVersion** annotation returned when you [list sections](userteamwork-list-sections.md), or the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). Required for optimistic concurrency control. |
 
 ## Request body
 

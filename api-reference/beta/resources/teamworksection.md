@@ -25,10 +25,7 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 | [Get](../api/teamworksection-get.md) | [teamworkSection](teamworksection.md) | Read the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
 | [Update](../api/teamworksection-update.md) | [teamworkSection](teamworksection.md) | Update the properties of a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). |
 | [Delete](../api/teamworksection-delete.md) | None | Delete a user-defined [section](../resources/teamworksection.md) from a user's [teamwork](../resources/userteamwork.md). |
-| [List items](../api/teamworksection-list-items.md) | [teamworkSectionItem](teamworksectionitem.md) collection | Get the list of [items](../resources/teamworksectionitem.md) in a [section](../resources/teamworksection.md). |
-| [Add item](../api/teamworksection-post-items.md) | [teamworkSectionItem](teamworksectionitem.md) | Add an [item](../resources/teamworksectionitem.md) to a [section](../resources/teamworksection.md). |
-| [Remove item](../api/teamworksectionitem-delete.md) | None | Remove an [item](../resources/teamworksectionitem.md) from a [section](../resources/teamworksection.md). |
-| [Move item](../api/teamworksectionitem-move.md) | [teamworkSectionItem](teamworksectionitem.md) | Move an [item](../resources/teamworksectionitem.md) from one section to another. |
+| [List items](../api/teamworksection-list-items.md) | [teamworkSectionItem](teamworksectionitem.md) collection | Get the list of [items](../resources/teamworksectionitem.md) in a [section](../resources/teamworksection.md) of a user's [teamwork](../resources/userteamwork.md). |
 
 ## Properties
 
@@ -64,6 +61,15 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 
 > [!NOTE]
 > The valid sort types for system-defined sections depend on the specific section. For example, the *Teams* and *Channels* sections support `nameAlphabetical`, but the *RecentChats* and *MutedChats* sections support only `mostRecent` and `unreadThenMostRecent`. When the property **isHierarchicalViewEnabled** is set to `true` for a *Teams* and *Channels* section, only `nameAlphabetical` is valid. Setting an unsupported sort type returns a `400 Bad Request` error.
+
+### Instance attributes
+
+Instance attributes are properties with special behaviors. These properties are temporary and either a) define behavior the service should perform or b) provide short-term property values, like a download URL for an item that expires.
+
+| Property name | Type | Description |
+|:-----------|:-----|:------------|
+| @microsoft.graph.sectionsOrder | String collection | An ordered array of section IDs that represent the user's preferred section order. |
+| @microsoft.graph.sectionsVersion | String | The current section hierarchy version. Use this value as the `If-Match` header for optimistic concurrency control on mutation operations (create, update, or delete sections, and add, remove, or move items). |
 
 ## Relationships
 

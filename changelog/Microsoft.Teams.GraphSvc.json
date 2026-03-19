@@ -47,7 +47,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "teamworkSection",
           "ChangeType": "Addition",
-          "Description": "Added the [teamworkSection](https://learn.microsoft.com/en-us/graph/api/resources/teamworkSection?view=graph-rest-beta) resource.",
+          "Description": "Added the [teamworkSection](https://learn.microsoft.com/en-us/graph/api/resources/teamworkSection?view=graph-rest-beta) resource and associated methods.",
           "Target": "teamworkSection"
         },
         {
@@ -55,7 +55,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "teamworkSectionItem",
           "ChangeType": "Addition",
-          "Description": "Added the [teamworkSectionItem](https://learn.microsoft.com/en-us/graph/api/resources/teamworkSectionItem?view=graph-rest-beta) resource.",
+          "Description": "Added the [teamworkSectionItem](https://learn.microsoft.com/en-us/graph/api/resources/teamworkSectionItem?view=graph-rest-beta) resource and associated methods.",
           "Target": "teamworkSectionItem"
         },
         {
@@ -87,16 +87,16 @@
           "ApiChange": "Term",
           "ChangedApiName": "sectionsOrder",
           "ChangeType": "Addition",
-          "Description": "Added the [sectionsOrder](https://learn.microsoft.com/en-us/?view=graph-rest-beta) resource.",
-          "Target": "Microsoft.Teams.GraphSvc"
+          "Description": "Added **sectionsOrder** as an instance attribute that you can use with the [teamworkSection](https://learn.microsoft.com/en-us/graph/api/resources/teamworkSection?view=graph-rest-beta) resource.",
+          "Target": "sectionsOrder"
         },
         {
           "Id": "5775ca5d-09fc-4f68-bd66-de8b96668897",
           "ApiChange": "Term",
           "ChangedApiName": "sectionsVersion",
           "ChangeType": "Addition",
-          "Description": "Added the [sectionsVersion](https://learn.microsoft.com/en-us/?view=graph-rest-beta) resource.",
-          "Target": "Microsoft.Teams.GraphSvc"
+          "Description": "Added **sectionsVersion** as an instance attribute that you can use with the [teamworkSection](https://learn.microsoft.com/en-us/graph/api/resources/teamworkSection?view=graph-rest-beta) resource.",
+          "Target": "sectionsVersion"
         }
       ],
       "Id": "5775ca5d-09fc-4f68-bd66-de8b96668897",
@@ -104,7 +104,7 @@
       "Version": "beta",
       "CreatedDateTime": "2026-03-18T02:51:14.1306785Z",
       "WorkloadArea": "Teamwork and communications",
-      "SubArea": "Microsoft.Teams.Shifts"
+      "SubArea": "Messaging"
     },
     {
       "ChangeList": [
