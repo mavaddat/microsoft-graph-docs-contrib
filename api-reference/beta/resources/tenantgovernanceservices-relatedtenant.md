@@ -2,7 +2,7 @@
 title: "relatedTenant resource type"
 description: "Represents a tenant that has been discovered as related to the current tenant through tenant discovery."
 author: "hafowler"
-ms.date: 03/10/2026
+ms.date: 03/19/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"
 doc_type: resourcePageType
@@ -17,7 +17,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 Represents a tenant that has been discovered as related to the current tenant through the tenant discovery feature. Related tenants are discovered based on B2B collaboration activity, billing relationships, multi-tenant application usage, and other indicators of inter-tenant relationships.
 
 > [!IMPORTANT]
-> The related tenants feature must be explicitly enabled before these APIs can be used. To enable related tenants, call the [enableRelatedTenants](../api/tenantgovernanceservices-tenantgovernancesetting-enablerelatedtenants.md) action.
+> The related tenants feature must be explicitly enabled before the tenant governance APIs can be used. To enable related tenants, call the [enableRelatedTenants](../api/tenantgovernanceservices-tenantgovernancesetting-enablerelatedtenants.md) action.
 
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
@@ -28,12 +28,8 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |:---|:---|:---|
 |[List](../api/tenantgovernanceservices-list-relatedtenants.md)|[microsoft.graph.tenantGovernanceServices.relatedTenant](../resources/tenantgovernanceservices-relatedtenant.md) collection|Get a list of the [relatedTenant](../resources/tenantgovernanceservices-relatedtenant.md) objects and their properties.|
 |[Get](../api/tenantgovernanceservices-relatedtenant-get.md)|[microsoft.graph.tenantGovernanceServices.relatedTenant](../resources/tenantgovernanceservices-relatedtenant.md)|Read the properties of a [relatedTenant](../resources/tenantgovernanceservices-relatedtenant.md) object.|
-|[refresh](../api/tenantgovernanceservices-relatedtenant-refresh.md)|None|Trigger a refresh operation to update the list of related tenants.|
-|[refreshStatus](../api/tenantgovernanceservices-relatedtenant-refreshstatus.md)|[microsoft.graph.tenantGovernanceServices.relatedTenantsRefreshStatus](../resources/tenantgovernanceservices-relatedtenantsrefreshstatus.md)|Check the status of a related tenants refresh operation.|
-
-## Optional query parameters
-
-This resource supports the `$filter`, `$orderby`, `$top`, `$skip`, and `$skiptoken` [OData query parameters](/graph/query-parameters) to help customize the response when listing related tenants.
+|[Refresh](../api/tenantgovernanceservices-relatedtenant-refresh.md)|None|Trigger a refresh operation to update the list of related tenants.|
+|[Refresh status](../api/tenantgovernanceservices-relatedtenant-refreshstatus.md)|[microsoft.graph.tenantGovernanceServices.relatedTenantsRefreshStatus](../resources/tenantgovernanceservices-relatedtenantsrefreshstatus.md)|Check the status of a related tenants refresh operation.|
 
 ## Properties
 |Property|Type|Description|
@@ -44,11 +40,11 @@ This resource supports the `$filter`, `$orderby`, `$top`, `$skip`, and `$skiptok
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|appB2BSignInActivityMetrics|[b2BSignInActivityMetrics](../resources/tenantgovernanceservices-b2bsigninactivitymetrics.md)|B2B sign-in activity metrics for this related tenant.|
-|b2BRegistrationMetrics|[b2bRegistrationMetrics](../resources/tenantgovernanceservices-b2bregistrationmetrics.md)|B2B registration metrics for this related tenant.|
-|b2BSignInActivityMetrics|[b2BSignInActivityMetrics](../resources/tenantgovernanceservices-b2bsigninactivitymetrics.md)|B2B sign-in activity metrics for this related tenant.|
-|billingMetrics|[billingMetrics](../resources/tenantgovernanceservices-billingmetrics.md)|Billing metrics for this related tenant.|
-|multiTenantApplicationMetrics|[multiTenantApplicationMetrics](../resources/tenantgovernanceservices-multitenantapplicationmetrics.md)|Multi-tenant application usage metrics for this related tenant.|
+|appB2BSignInActivityMetrics|[b2BSignInActivityMetrics](../resources/tenantgovernanceservices-b2bsigninactivitymetrics.md)|B2B sign-in activity metrics for this related tenant. Expanded by default.|
+|b2BRegistrationMetrics|[b2bRegistrationMetrics](../resources/tenantgovernanceservices-b2bregistrationmetrics.md)|B2B registration metrics for this related tenant. Expanded by default.|
+|b2BSignInActivityMetrics|[b2BSignInActivityMetrics](../resources/tenantgovernanceservices-b2bsigninactivitymetrics.md)|B2B sign-in activity metrics for this related tenant. Expanded by default.|
+|billingMetrics|[billingMetrics](../resources/tenantgovernanceservices-billingmetrics.md)|Billing metrics for this related tenant. Expanded by default.|
+|multiTenantApplicationMetrics|[multiTenantApplicationMetrics](../resources/tenantgovernanceservices-multitenantapplicationmetrics.md)|Multi-tenant application usage metrics for this related tenant. Expanded by default.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

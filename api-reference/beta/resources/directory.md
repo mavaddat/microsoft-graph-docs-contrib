@@ -72,6 +72,7 @@ Inherits from [entity](entity.md).
 | recommendations | [recommendation](../resources/recommendation.md) collection | List of recommended improvements to improve tenant posture. |
 | subscriptions | [companySubscription](companysubscription.md) collection | List of commercial subscriptions that an organization has. |
 |templates|[template](../resources/template.md) |A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID. |
+|tenantGovernance|[tenantGovernance](../resources/tenantgovernanceservices-tenantgovernance.md)|Container for Microsoft Entra Tenant Governance capabilities.|
 
 ## JSON representation
 

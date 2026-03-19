@@ -41,7 +41,7 @@ GET /directory/tenantGovernance/relatedTenants
 
 ## Optional query parameters
 
-This method supports `$filter`, `$orderby`, `$top`, `$skip` and `$skiptoken` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method doesn't support OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
