@@ -26,11 +26,11 @@ None.
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|The display name of the changed object in its current state, used to uniquely identify the object.|
-|entityTypeName|[microsoft.graph.entraRecoveryServices.resourceTypeName](../resources/enums-entrarecoveryservices.md)|The type of directory entity being modified. The possible values are: `user`, `group`, `conditionalAccessPolicy`, `namedLocationPolicy`, `authenticationMethodPolicy`, `authorizationPolicy`, `authenticationStrengthPolicy`, `application`, `servicePrincipal`, `unknownFutureValue`, `oAuth2PermissionGrant`, `appRoleAssignment`. You must use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `oAuth2PermissionGrant`, `appRoleAssignment`.|
+|displayName|String|The display name of the changed object in its current state, used to uniquely identify the object. Supports `$filter` (`eq`, `ne`, `startswith`).|
+|entityTypeName|[microsoft.graph.entraRecoveryServices.resourceTypeName](../resources/enums-entrarecoveryservices.md)|The type of directory entity being modified. The possible values are: `user`, `group`, `conditionalAccessPolicy`, `namedLocationPolicy`, `authenticationMethodPolicy`, `authorizationPolicy`, `authenticationStrengthPolicy`, `application`, `servicePrincipal`, `unknownFutureValue`, `oAuth2PermissionGrant`, `appRoleAssignment`. You must use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `oAuth2PermissionGrant`, `appRoleAssignment`. Supports `$filter` (`eq`, `ne`).|
 |failureMessage|String|The error message if the change failed to apply. Only populated in [getFailedChanges](../api/entrarecoveryservices-recoveryjob-getfailedchanges.md) responses. `null` otherwise.|
-|id|String|The unique identifier of the changed object. Inherited from [entity](../resources/entity.md).|
-|recoveryAction|[microsoft.graph.entraRecoveryServices.recoveryAction](../resources/enums-entrarecoveryservices.md)|The type of recovery action to be performed on this object. The possible values are: `softDelete`, `update`, `restore`, `unknownFutureValue`.|
+|id|String|The unique identifier of the changed object. Inherited from [entity](../resources/entity.md). Supports `$filter` (`eq`, `ne`).|
+|recoveryAction|[microsoft.graph.entraRecoveryServices.recoveryAction](../resources/enums-entrarecoveryservices.md)|The type of recovery action to be performed on this object. The possible values are: `softDelete`, `update`, `restore`, `unknownFutureValue`. Supports `$filter` (`eq`, `ne`).|
 
 ### Additional properties
 

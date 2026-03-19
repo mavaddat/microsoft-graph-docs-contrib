@@ -165,6 +165,11 @@ In addition to Microsoft Graph permissions, the signed-in user must be assigned 
 - On-premises Active Directory-synced objects can't be recovered through these APIs, though changes are visible in snapshots.
 - Job completion time depends on the volume of data and processing complexity. Allow at least 1 hour to complete.
 - Recovery to another tenant isn't supported.
+- Recovery operations don't generate change notifications through [subscriptions](/graph/api/resources/subscription) or delta records for [change tracking](/graph/delta-query-overview). Applications that rely on these mechanisms aren't notified of changes made by recovery jobs.
+
+## Throttling
+
+The backup and recovery APIs follow standard [Microsoft Graph service-specific throttling limits](/graph/throttling-limits). Monitor `429 Too Many Requests` responses and implement retry logic using the `Retry-After` header.
 
 ## Related content
 
