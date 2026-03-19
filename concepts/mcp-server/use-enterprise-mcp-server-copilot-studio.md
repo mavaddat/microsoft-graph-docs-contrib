@@ -12,7 +12,7 @@ ms.date: 03/12/2026
 
 # Use Microsoft MCP Server for Enterprise from Copilot Studio
 
-The [Microsoft MCP Server for Enterprise](/graph/mcp-server/overview) enables AI agents to query Microsoft Entra data in your tenant by using natural language. In this article, you learn how to connect a Microsoft Copilot Studio agent to the Microsoft MCP Server for Enterprise using a custom connector.
+The [Microsoft MCP Server for Enterprise](/graph/mcp-server/overview) enables AI agents to query enterprise data in your Microsoft Entra tenant by using natural language. In this article, you learn how to connect a Microsoft Copilot Studio agent to the Microsoft MCP Server for Enterprise using a custom connector.
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ After you create the connector, add the redirect URL to your client app registra
 
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com), go to your client app registration.
 1. Select **Authentication**.
-1. Select **+ Add a platform** > **Web**. If the Web platform already exists, select **+ Add URI** instead. The app registration must be configured as a **confidential client** (Web App/API). Don't add redirect URIs under **Mobile and Desktop applications**, as those indicate a public client and aren't supported.
+1. Select **+ Add a platform** > **Web**. If the Web platform already exists, select **+ Add URI** instead. Don't add redirect URIs under **Mobile and Desktop applications**, as those indicate a public client and aren't supported.
 1. Paste the redirect URL you copied from Copilot Studio.
 1. Select **Configure**.
 1. Go back to Copilot Studio and select **Next**.
@@ -82,7 +82,6 @@ Connect the MCP tool to your agent so it can query Microsoft Graph data.
 1. Open your agent and go to **Tools** > **+ Add a tool**.
 1. In the **Add tool** dialog, select the **Model Context Protocol** filter tab (not **Connector**).
 1. Find your **MCP Server for Enterprise** connector and select it to add it to the agent.
-1. In the side chat panel, test the connection by asking a simple question such as, "How many users are in my tenant?" to confirm the MCP tool is working.
 
 > [!TIP]
 > For testing purposes, you can instruct the agent to always use the custom connector so the MCP server is invoked for every request. Add this instruction to the agent's system instructions.
