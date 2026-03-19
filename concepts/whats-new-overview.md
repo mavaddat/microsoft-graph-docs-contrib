@@ -94,7 +94,7 @@ Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retention
 
 ### Identity and access | Directory management
 
-Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. You can view snapshots and start preview jobs for analysis before running the recovery jobs. You can also monitor the status of recovery processes including successes and failures. For more information, see [Overview of Microsoft Entra Backup and Recovery APIs](/graph/api/resources/entrarecoveryservices-backup-recovery-overview)
+Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. You can view snapshots and start preview jobs for analysis before running the recovery jobs. You can also monitor the status of recovery processes including successes and failures. For more information, see [Overview of Microsoft Entra Backup and Recovery APIs](/graph/api/resources/entrarecoveryservices-backup-recovery-overview).
 
 ### Identity and access | Governance
 

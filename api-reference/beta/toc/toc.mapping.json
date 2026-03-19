@@ -1227,7 +1227,7 @@
           ],
           "childNodes": [
             {
-              "name": "Entra Rackup and Recovery",
+              "name": "Entra Backup and Recovery",
               "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
               "resources": [
                 "microsoft.graph.entraRecoveryServices.recoveryJob",

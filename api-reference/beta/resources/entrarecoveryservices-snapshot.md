@@ -1,5 +1,5 @@
 ---
-title: "Snapshot resource type"
+title: "snapshot resource type"
 description: "Represents a backup snapshot of the tenant's directory data at a specific point in time."
 author: "mapamu"
 ms.date: 03/04/2026
@@ -8,7 +8,7 @@ ms.subservice: "entra-id"
 doc_type: resourcePageType
 ---
 
-# Snapshot resource type
+# snapshot resource type
 
 Namespace: microsoft.graph.entraRecoveryServices
 
