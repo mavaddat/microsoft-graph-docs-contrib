@@ -407,6 +407,7 @@ Fully qualify any type (including enum types) that is defined in a subnamespace 
 **Permissions:**
 - Must start with the standard boilerplate text
 - Must include link to a permissions table
+- **(Optional) RBAC include:** If the documentation plan or author specifies required Entra admin roles, add an RBAC include statement immediately after the permissions table include. See [RBAC for APIs include file templates](../../../templates/rbac-for-apis-include.md) for file conventions, naming, and content templates.
 
 **HTTP request:**
 - Use relative URLs (e.g., `/users` not `https://graph.microsoft.com/beta/users`)
@@ -691,6 +692,7 @@ After processing all files in a documentation session, verify cross-file consist
 2. **API file ↔ resource link:** Every API file's description should link back to its parent resource, and that resource file should exist
 3. **Enum references ↔ definitions:** Every enum type referenced in Properties tables should be defined in the appropriate enums file, parent resource, or separate topic
 4. **Permissions files:** Every permissions include reference in API files should have a corresponding file in the `includes/permissions/` folder
+5. **RBAC files:** If any API file has an RBAC include reference, verify the corresponding file exists in `includes/rbac-for-apis/`
 5. **JSON representation ↔ Properties table:** Properties listed in the JSON representation section should match the Properties table
 6. **Polymorphic collections:** If a Documentation Plan flagged polymorphic types, verify: (a) no operation files were created using derived type names, (b) all shared operation files use the base type name, (c) base type resource page has the Methods table (including base-type-only operations for concrete bases), (d) derived type resource pages have a `## Methods` section with only a polymorphic note (no Methods table — the table lives only on the base type page), (e) `@odata.type` guidance is included in POST/PATCH request body sections
 

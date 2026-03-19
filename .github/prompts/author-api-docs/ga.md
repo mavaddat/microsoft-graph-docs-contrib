@@ -111,6 +111,7 @@ The shortest route is to **copy the relevant beta topics** from the `api-referen
    - Copy resource files from `api-reference\beta\resources\` to `api-reference\v1.0\resources\`
    - Copy API method files from `api-reference\beta\api\` to `api-reference\v1.0\api\`
    - Copy permission include files from `api-reference\beta\includes\permissions\` to `api-reference\v1.0\includes\permissions\`
+   - Copy RBAC include files (if they exist) from `api-reference\beta\includes\rbac-for-apis\` to `api-reference\v1.0\includes\rbac-for-apis\`
 
 ### Step 2: Update copied files for v1.0
 
@@ -300,6 +301,10 @@ In addition to the [base quality checklist](common.md#base-quality-checklist), v
 **For permission include files:**
 - [ ] Files copied from beta\includes\permissions to v1.0\includes\permissions
 
+**For RBAC include files (if applicable):**
+- [ ] Files copied from beta\includes\rbac-for-apis to v1.0\includes\rbac-for-apis
+- [ ] If new RBAC info provided but no beta file exists, file created using [RBAC templates](../../../templates/rbac-for-apis-include.md)
+
 **For concept topics (if applicable):**
 - [ ] Code examples updated from /beta to /v1.0
 - [ ] All "(preview)" references removed from content
@@ -319,6 +324,7 @@ In addition to the [base quality checklist](common.md#base-quality-checklist), v
 - [ ] All resource files promoted and updated
 - [ ] All API method files promoted and updated
 - [ ] All permission files copied
+- [ ] All RBAC include files copied (if applicable)
 - [ ] All concept topics updated if applicable
 - [ ] All TOC entries updated
 - [ ] Changelog and What's new updated
