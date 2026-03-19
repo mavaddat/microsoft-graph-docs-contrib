@@ -1249,6 +1249,8 @@ items:
         href: ../../api/teamworksection-update.md
       - name: Delete
         href: ../../api/teamworksection-delete.md
+      - name: List items
+        href: ../../api/teamworksection-list-items.md
     - name: Teamwork section item
       items:
       - name: Teamwork section item
@@ -1258,7 +1260,7 @@ items:
       - name: Add
         href: ../../api/teamworksection-post-items.md
       - name: Remove
-        href: ../../api/teamworksection-delete-items.md
+        href: ../../api/teamworksectionitem-delete.md
       - name: Move
         href: ../../api/teamworksectionitem-move.md
     - name: Complex types
