@@ -97,6 +97,12 @@ Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retention
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
+### Identity and access | Identity and sign-in
+
+- Added the **blueprintId** property to the [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) resource.
+- Added the **source** property to the [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) resource.
+- Added the **blueprintId** property to the [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resource.
+
 ### Identity and access | Network access
 
 - Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
