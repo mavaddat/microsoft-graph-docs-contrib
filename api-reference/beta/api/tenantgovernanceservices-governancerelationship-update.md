@@ -4,7 +4,7 @@ description: "Update the status property to initiate termination of a governance
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-tenantgovernance"
+ms.subservice: "entra-id"
 doc_type: apiPageType
 ---
 

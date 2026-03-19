@@ -4,7 +4,7 @@ description: "Represents the most recent snapshot of multi-tenant application me
 author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-tenantgovernance"
+ms.subservice: "entra-id"
 doc_type: resourcePageType
 ---
 

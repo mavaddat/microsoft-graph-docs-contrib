@@ -4,7 +4,7 @@ description: "Represents the initial snapshot of B2B sign-in activity metrics."
 author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-tenantgovernance"
+ms.subservice: "entra-id"
 doc_type: resourcePageType
 ---
 

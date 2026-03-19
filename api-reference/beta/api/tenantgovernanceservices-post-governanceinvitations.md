@@ -4,7 +4,7 @@ description: "Create a new governance invitation to establish a relationship wit
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-tenantgovernance"
+ms.subservice: "entra-id"
 doc_type: apiPageType
 ---
 
