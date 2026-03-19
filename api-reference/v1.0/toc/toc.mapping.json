@@ -565,12 +565,6 @@
         "configurationDrift",
         "configurationSnapshotJob",
         "configurationBaseline"
-      ],
-      "complexTypes": [
-        "baselineParameter",
-        "baselineResource",
-        "driftedProperty",
-        "errorDetail"
       ]
     },
     {
