@@ -1227,7 +1227,7 @@
           ],
           "childNodes": [
             {
-              "name": "Entra backup and recovery",
+              "name": "Entra Rackup and Recovery",
               "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
               "resources": [
                 "entrarecoveryservices-recoveryjob",
