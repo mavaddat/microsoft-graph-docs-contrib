@@ -191,6 +191,9 @@ The following steps represent the flow of an authorization challenge for an acti
 
       You might retry these actions later, at any time, and succeed if the conditions of access change.
 
+> [!IMPORTANT]
+> Do not issue a reauthorize request (`POST /subscriptions/{id}/reauthorize`) and an update request (`PATCH /subscriptions/{id}`) for the same subscription within a 10-minute window. Sending both requests concurrently or in rapid succession can result in subscription state inconsistencies. If you need to both reauthorize and renew a subscription, use a single `PATCH` request with an updated `expirationDateTime`, which reauthorizes and renews the subscription in one operation.
+
 ### Additional information
 
 - Authorization challenges don't replace the need to renew a subscription before it expires.
