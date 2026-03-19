@@ -2,7 +2,7 @@
 title: "List snapshots"
 description: "Get a list of available backup snapshots for the tenant."
 author: "mapamu"
-ms.date: 03/04/2026
+ms.date: 03/19/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"
 doc_type: apiPageType
@@ -15,7 +15,6 @@ Namespace: microsoft.graph.entraRecoveryServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Get a list of available backup [snapshot](../resources/entrarecoveryservices-snapshot.md) objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
-
 
 ## Permissions
 
