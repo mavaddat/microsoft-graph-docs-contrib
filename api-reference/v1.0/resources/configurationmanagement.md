@@ -15,7 +15,9 @@ Namespace: microsoft.graph
 Represents an entity that acts as a container for Tenant Configuration Management functionality.
 
 ## Properties
-None.
+|Property|Type|Description|
+|:---|:---|:---|
+|id|String|identifier for the object. Inherited from [entity](../resources/entity.md). |
 
 ## Relationships
 
