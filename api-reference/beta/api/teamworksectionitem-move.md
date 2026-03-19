@@ -38,7 +38,7 @@ POST /users/{user-id}/teamwork/sections/{teamworkSection-id}/items/{teamworkSect
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | Content-Type | application/json. Required. |
-| If-Match | The value of the **@microsoft.graph.sectionsVersion** property previously retrieved from [listing sections](userteamwork-list-sections.md). Required for optimistic concurrency control. |
+| If-Match | The value of the **@microsoft.graph.sectionsVersion** annotation from [listing sections](userteamwork-list-sections.md), or equivalently the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -53,6 +53,9 @@ The following table lists the parameters that are required when you call this ac
 ## Response
 
 If successful, this action returns a `200 OK` response code and a [teamworkSectionItem](../resources/teamworksectionitem.md) in the response body that represents the item in the target section.
+
+> [!NOTE]
+> The response includes an updated **@odata.etag** value. Use this value as the `If-Match` header for any subsequent mutation operations.
 
 ## Examples
 

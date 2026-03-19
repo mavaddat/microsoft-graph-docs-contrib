@@ -37,7 +37,7 @@ DELETE /users/{user-id}/teamwork/sections/{teamworkSection-id}/items/{teamworkSe
 | Header | Value |
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| If-Match | The value of the **@microsoft.graph.sectionsVersion** property previously retrieved from [listing sections](userteamwork-list-sections.md). Required for optimistic concurrency control. |
+| If-Match | The value of the **@microsoft.graph.sectionsVersion** annotation from [listing sections](userteamwork-list-sections.md), or equivalently the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). Required for optimistic concurrency control. |
 
 ## Request body
 

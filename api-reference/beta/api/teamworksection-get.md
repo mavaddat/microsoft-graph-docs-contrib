@@ -41,7 +41,7 @@ This method doesn't support [OData query parameters](/graph/query-parameters) to
 | Header | Value |
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
-| If-None-Match | The value of the **@microsoft.graph.sectionsVersion** property previously retrieved from [listing sections](userteamwork-list-sections.md). If the section hierarchy didn't change, this header causes a `304 Not Modified` response. Optional. |
+| If-None-Match | The value of the **@microsoft.graph.sectionsVersion** annotation from [listing sections](userteamwork-list-sections.md), or equivalently the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). If the section hierarchy didn't change, this header causes a `304 Not Modified` response. Optional. |
 
 ## Request body
 

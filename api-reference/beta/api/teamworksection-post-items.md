@@ -38,7 +38,7 @@ POST /users/{user-id}/teamwork/sections/{teamworkSection-id}/items
 |:-------|:------|
 | Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts). |
 | Content-Type | application/json. Required. |
-| If-Match | The value of the **@microsoft.graph.sectionsVersion** property previously retrieved from [listing sections](userteamwork-list-sections.md). Required for optimistic concurrency control. |
+| If-Match | The value of the **@microsoft.graph.sectionsVersion** annotation from [listing sections](userteamwork-list-sections.md), or equivalently the **@odata.etag** value from any previously retrieved [section](../resources/teamworksection.md). Required for optimistic concurrency control. |
 
 ## Request body
 
@@ -53,6 +53,9 @@ The following table lists the properties that you can set when you add a **teamw
 ## Response
 
 If successful, this method returns a `201 Created` response code and a [teamworkSectionItem](../resources/teamworksectionitem.md) object in the response body.
+
+> [!NOTE]
+> The response includes an updated **@odata.etag** value. Use this value as the `If-Match` header for any subsequent mutation operations.
 
 The following errors can occur:
 
