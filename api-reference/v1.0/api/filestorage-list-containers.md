@@ -16,7 +16,7 @@ Get a list of [fileStorageContainer](../resources/filestoragecontainer.md) objec
 
 > [!IMPORTANT]
 > - Requests made on behalf of a user fail if the user doesn't have a OneDrive. This requirement doesn't apply when you call the endpoint without a user context (app-only authentication). The endpoint also only returns containers that the user is a direct member of. Containers that the user is a member of via a group aren't returned.
-> - Requests made without a user context (app-only authentication) is not currently supported for multi-geo tenants.
+> - Requests made without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
