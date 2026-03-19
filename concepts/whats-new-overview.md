@@ -26,10 +26,11 @@ Using the **signInAudience** property to limit where an [application](/graph/api
 
 ### Files
 
-Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
+- Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
   - [Get column](/graph/api/filestoragecontainer-get-column)
   - [Update column](/graph/api/filestoragecontainer-update-column)
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
+- Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
 ### Identity and access | Governance
 
@@ -45,6 +46,10 @@ Using the **signInAudience** and **signInAudienceRestrictions** properties to li
 ### Backup storage
 
 Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
+
+### Files
+
+Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
 ### Identity and access | Governance
 
