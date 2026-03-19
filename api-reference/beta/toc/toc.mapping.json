@@ -1018,7 +1018,10 @@
             "employeeExperienceUser",
             "engagementAsyncOperation",
             "engagementRole",
-            "engagementRoleMember"
+            "engagementRoleMember",
+            "storyline",
+            "storylineFollower",
+            "storylineFollowing"
           ],
           "complexTypes": [
             "engagementConversationMessageAttachment",
@@ -2231,6 +2234,14 @@
               ]
             },
             {
+              "name": "Cloud firewall",
+              "resources": [
+                "microsoft.graph.networkaccess.cloudFirewallPolicy",
+                "microsoft.graph.networkaccess.cloudFirewallRule",
+                "microsoft.graph.networkaccess.cloudFirewallPolicyLink",
+              ]
+            },
+            {
               "name": "Remote network",
               "resources": [
                 "microsoft.graph.networkaccess.deviceLink",
@@ -2504,6 +2515,9 @@
         "profileSource",
         "profilePropertySetting",
         "userAnalytics"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -3270,6 +3284,10 @@
         "plannerRuleOverride",
         "plannerSharedWithContainer",
         "plannerTaskCompletionRequirementDetails",
+        "plannerTaskChatMention",
+        "plannerTaskChatMessage",
+        "plannerTaskChatReaction",
+        "plannerTaskChatReactionEvent",
         "plannerTaskCreation",
         "plannerTaskPropertyRule",
         "plannerTaskRecurrence",

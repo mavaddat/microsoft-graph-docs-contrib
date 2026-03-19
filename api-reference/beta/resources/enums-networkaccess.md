@@ -636,6 +636,23 @@ Namespace: microsoft.graph.networkaccess
 |codeHosting|
 |unknownFutureValue|
 
+### cloudFirewallAction values
+
+|Member|
+|:---|
+|allow|
+|block|
+|unknownFutureValue|
+
+### cloudFirewallProtocol values
+
+
+|Member|
+|:---|
+|tcp|
+|udp|
+|unknownFutureValue|
+
 <!--
 {
   "type": "#page.annotation",
