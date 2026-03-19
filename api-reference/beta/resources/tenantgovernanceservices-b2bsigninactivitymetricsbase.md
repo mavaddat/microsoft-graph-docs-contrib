@@ -2,7 +2,7 @@
 title: "b2BSignInActivityMetricsBase resource type"
 description: "Abstract base type for B2B sign-in activity metrics."
 author: "akhil-potturi"
-ms.date: 03/16/2026
+ms.date: 03/19/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"
 doc_type: resourcePageType
@@ -14,8 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-> [!IMPORTANT]
-> This is an abstract base type and does not appear directly in API responses. Use the concrete types [b2BSignInActivityMetricsInitial](tenantgovernanceservices-b2bsigninactivitymetricsinitial.md) or [b2BSignInActivityMetricsRecent](tenantgovernanceservices-b2bsigninactivitymetricsrecent.md).
+This resource is an abstract base type and does not appear directly in API responses. Use the concrete types [b2BSignInActivityMetricsInitial](tenantgovernanceservices-b2bsigninactivitymetricsinitial.md) or [b2BSignInActivityMetricsRecent](tenantgovernanceservices-b2bsigninactivitymetricsrecent.md).
 
 Abstract base type that defines common properties for B2B sign-in activity metrics.
 

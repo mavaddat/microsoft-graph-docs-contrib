@@ -7,7 +7,7 @@ ms.reviewer: "hafowler,akhil.potturi,jeffsta"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: conceptualPageType
-ms.date: 03/18/2026
+ms.date: 03/19/2026
 ms.topic: overview
 #customer intent: As a developer, I want to learn how to use the tenant governance APIs in Microsoft Graph to programmatically discover related tenants and establish governance relationships.
 ---
@@ -67,7 +67,7 @@ The following governance models are supported:
 | Many-to-one | ✅ Yes | Multiple tenants can govern a single tenant. |
 | Multi-tier | ❌ No | A tenant can't be both a governing and governed tenant. For example, if Contoso governs Fabrikam, Fabrikam can't govern another tenant. |
 | Multiple | ❌ No | Multiple relationships between the same 2 tenants is not supported. |
-| Cloud solution providers | ❌ No | Coexistence of CSP relationships created through Partner center and tenant governance relationships is not supported. |
+| Cloud solution providers | ❌ No | Coexistence of CSP relationships created through Partner Center and tenant governance relationships is not supported. |
 
 When you create a new add-on tenant from an existing tenant, Tenant Governance automatically establishes a governance relationship between the parent (governing) tenant and the new (governed) tenant using a default [governance policy template](../resources/tenantgovernanceservices-governancepolicytemplate.md). This process ensures that newly created tenants are immediately under centralized governance.
 

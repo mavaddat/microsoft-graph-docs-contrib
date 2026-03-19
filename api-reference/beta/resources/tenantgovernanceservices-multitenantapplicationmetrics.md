@@ -2,7 +2,7 @@
 title: "multiTenantApplicationMetrics resource type"
 description: "Represents multi-tenant application usage metrics between two related tenants."
 author: "akhil-potturi"
-ms.date: 03/10/2026
+ms.date: 03/19/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id"
 doc_type: resourcePageType
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents multi-tenant application usage metrics that track the number of applications used across tenant boundaries. Includes both initial and recent snapshots showing monthly counts of inbound and outbound multi-tenant application usage associated with [related tenants](../resources/tenantgovernanceservices-related tenant.md).
+Represents multi-tenant application usage metrics that track the number of applications used across tenant boundaries. Includes both initial and recent snapshots showing monthly counts of inbound and outbound multi-tenant application usage associated with [related tenants](../resources/tenantgovernanceservices-relatedtenant.md).
 
 Inherits from [microsoft.graph.entity](../resources/entity.md).
 
