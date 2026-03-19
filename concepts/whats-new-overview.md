@@ -93,20 +93,21 @@ Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retention
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
-### Identity and access | Tenant governance
-
-Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
-- Use the [tenantGovernanceSetting](/graph/api/resources/tenantgovernance-tenantgovernancesetting?view=graph-rest-beta&preserve-view=true) singleton to activate invitation reception and related tenant discovery
-- Establish governance relationships using [governanceRequest](/graph/api/resources/tenantgovernance-governancerequest?view=graph-rest-beta&preserve-view=true)and [governanceInvitation](/graph/api/resources/tenantgovernance-governanceinvitation?view=graph-rest-beta&preserve-view=true) resources
-- Track established relationships with [governanceRelationship](/graph/api/resources/tenantgovernance-governancerelationship?view=graph-rest-beta&preserve-view=true)
-- Configure relationship policies using [governancePolicyTemplate](/graph/api/resources/tenantgovernance-governancepolicytemplate?view=graph-rest-beta&preserve-view=true)
-- Discover related tenants with [relatedTenant](/graph/api/resources/tenantgovernance-relatedtenant?view=graph-rest-beta&preserve-view=true) and access discovery metrics
-
 ### Identity and access | Network access
 
 - Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
 - Added the [crossTenantAccessType](/graph/api/resources/networkaccess-crosstenantaccesstype?view=graph-rest-beta&preserve-view=true) enumeration type.
 - Added the [deviceJoinType](/graph/api/resources/networkaccess-devicejointype?view=graph-rest-beta&preserve-view=true) enumeration type.
+
+### Identity and access | Tenant governance
+
+Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
+- Activating invitation reception and related tenant discovery
+- Establishing governance relationships between a governing tenant and a governed tenant
+- Tracking established relationships 
+- Configure relationship policies
+
+For more information, see [Overview of Tenant Governance](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
 ## February 2026: New and generally available
 
