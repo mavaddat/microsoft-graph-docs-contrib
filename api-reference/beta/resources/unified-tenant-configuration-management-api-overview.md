@@ -1,5 +1,5 @@
 ---
-title: "Use the Tenant Configuration Management APIs in Microsoft Graph (preview)"
+title: "Use the Tenant Configuration Management APIs in Microsoft Graph"
 description: "Learn how to use the Tenant Configuration Management APIs in Microsoft Graph to control and manage configuration settings for an entire organization."
 ms.localizationpriority: high
 author: "swatyario"
@@ -8,7 +8,7 @@ doc_type: conceptualPageType
 ms.date: 01/19/2026
 ---
 
-# Use the Tenant Configuration Management APIs in Microsoft Graph (preview)
+# Use the Tenant Configuration Management APIs in Microsoft Graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 

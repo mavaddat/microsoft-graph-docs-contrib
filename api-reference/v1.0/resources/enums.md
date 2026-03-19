@@ -1138,6 +1138,29 @@ Namespace: microsoft.graph
 | screenSharing |
 | unknownFutureValue |
 
+### monitorMode values
+
+| Member |
+| :--- |
+| monitorOnly |
+| unknownFutureValue |
+
+### monitorRunStatus values
+
+| Member |
+| :--- |
+| successful |
+| partiallySuccessful |
+| failed |
+| unknownFutureValue |
+
+### monitorStatus values
+
+| Member |
+| :--- |
+| active |
+| unknownFutureValue |
+
 ### endpointType values
 
 | Member |
@@ -2506,6 +2529,17 @@ Possible values for user account types (group membership), per Windows definitio
 | reported |
 | unknownFutureValue |
 
+### snapshotJobStatus values
+
+| Member |
+| :--- |
+| notStarted |
+| running |
+| succeeded |
+| failed |
+| partiallySuccessful |
+| unknownFutureValue |
+
 ### serviceUpdateCategory values
 
 | Member |
@@ -3058,6 +3092,14 @@ Possible values for user account types (group membership), per Windows definitio
 | AttributeReadOnly |
 | ReferenceAttributes |
 | UnknownFutureValue |
+
+### driftStatus values
+
+| Member |
+| :--- |
+| active |
+| fixed |
+| unknownFutureValue |
 
 ### attributeType values
 
