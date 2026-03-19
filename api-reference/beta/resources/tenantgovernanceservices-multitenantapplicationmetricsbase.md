@@ -25,8 +25,8 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
-| inboundMonthlyTotalApplications | Decimal | The total number of inbound multi-tenant applications in the last month. |
-| outboundMonthlyTotalApplications | Decimal | The total number of outbound multi-tenant applications in the last month. |
+| inboundMonthlyTotalApplications | String | The total number of inbound multi-tenant applications in the last month. |
+| outboundMonthlyTotalApplications | String | The total number of outbound multi-tenant applications in the last month. |
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
 
 ## Relationships

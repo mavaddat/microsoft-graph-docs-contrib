@@ -25,10 +25,10 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
-| inboundMonthlyTotalApplications | Decimal | The total number of applications accessed by inbound users in the last month. |
-| inboundMonthlyTotalUsers | Decimal | The total number of unique inbound users with sign-in activity in the last month. |
-| outboundMonthlyTotalApplications | Decimal | The total number of applications accessed by outbound users in the last month. |
-| outboundMonthlyTotalUsers | Decimal | The total number of unique outbound users with sign-in activity in the last month. |
+| inboundMonthlyTotalApplications | String | The total number of applications accessed by inbound users in the last month. |
+| inboundMonthlyTotalUsers | String | The total number of unique inbound users with sign-in activity in the last month. |
+| outboundMonthlyTotalApplications | String | The total number of applications accessed by outbound users in the last month. |
+| outboundMonthlyTotalUsers | String | The total number of unique outbound users with sign-in activity in the last month. |
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
 
 ## Relationships

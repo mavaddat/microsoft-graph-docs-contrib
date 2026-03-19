@@ -25,14 +25,14 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 
 | Property | Type | Description |
 |:---------|:-----|:------------|
-| foreignAssociatedTenantBillingManagementActiveCount | Decimal | The number of foreign associated tenants with active billing management. |
-| foreignAssociatedTenantCount | Decimal | The total number of foreign associated tenants. |
-| foreignAssociatedTenantProvisioningActiveCount | Decimal | The number of foreign associated tenants with active provisioning. |
+| foreignAssociatedTenantBillingManagementActiveCount | String | The number of foreign associated tenants with active billing management. |
+| foreignAssociatedTenantCount | String | The total number of foreign associated tenants. |
+| foreignAssociatedTenantProvisioningActiveCount | String | The number of foreign associated tenants with active provisioning. |
 | id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
-| localAssociatedTenantBillingManagementActiveCount | Decimal | The number of local associated tenants with active billing management. |
-| localAssociatedTenantCount | Decimal | The total number of local associated tenants. |
+| localAssociatedTenantBillingManagementActiveCount | String | The number of local associated tenants with active billing management. |
+| localAssociatedTenantCount | String | The total number of local associated tenants. |
 | localAssociatedTenantIds | Collection(String) | The list of local associated tenant IDs. |
-| localAssociatedTenantProvisioningActiveCount | Decimal | The number of local associated tenants with active provisioning. |
+| localAssociatedTenantProvisioningActiveCount | String | The number of local associated tenants with active provisioning. |
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
 
 ## Relationships

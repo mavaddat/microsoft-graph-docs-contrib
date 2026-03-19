@@ -23,10 +23,10 @@ Inherits from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetrics
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|Timestamp that represents when the time B2B sign-in activity content was initially aggregated for the related tenant.|
 |id|String|Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md).|
-|inboundMonthlyTotalApplications|Decimal|The total number of applications accessed by inbound users in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
-|inboundMonthlyTotalUsers|Decimal|The total number of unique inbound users with sign-in activity in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
-|outboundMonthlyTotalApplications|Decimal|The total number of applications accessed by outbound users in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
-|outboundMonthlyTotalUsers|Decimal|The total number of unique outbound users with sign-in activity in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
+|inboundMonthlyTotalApplications|String|The total number of applications accessed by inbound users in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
+|inboundMonthlyTotalUsers|String|The total number of unique inbound users with sign-in activity in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
+|outboundMonthlyTotalApplications|String|The total number of applications accessed by outbound users in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
+|outboundMonthlyTotalUsers|String|The total number of unique outbound users with sign-in activity in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
 |watermarkDateTime|DateTimeOffset|The date and time when the metrics snapshot was taken. Inherited from [microsoft.graph.tenantGovernanceServices.b2BSignInActivityMetricsBase](../resources/tenantgovernanceservices-b2bsigninactivitymetricsbase.md).|
 
 ## Relationships

@@ -23,8 +23,8 @@ Inherits from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMe
 |:---|:---|:---|
 |createdDateTime|DateTimeOffset|Timestamp that represents when multitenant application metrics are initially aggregated for the related tenant.|
 |id|String|Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md).|
-|inboundMonthlyTotalApplications|Decimal|The total number of inbound multi-tenant applications in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase](../resources/tenantgovernanceservices-multitenantapplicationmetricsbase.md).|
-|outboundMonthlyTotalApplications|Decimal|The total number of outbound multi-tenant applications in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase](../resources/tenantgovernanceservices-multitenantapplicationmetricsbase.md).|
+|inboundMonthlyTotalApplications|String|The total number of inbound multi-tenant applications in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase](../resources/tenantgovernanceservices-multitenantapplicationmetricsbase.md).|
+|outboundMonthlyTotalApplications|String|The total number of outbound multi-tenant applications in the last month. Inherited from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase](../resources/tenantgovernanceservices-multitenantapplicationmetricsbase.md).|
 |watermarkDateTime|DateTimeOffset|The date and time when the metrics snapshot was taken. Inherited from [microsoft.graph.tenantGovernanceServices.multiTenantApplicationMetricsBase](../resources/tenantgovernanceservices-multitenantapplicationmetricsbase.md).|
 ## Relationships
 None.

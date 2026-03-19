@@ -25,8 +25,8 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | id | String | Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md). |
-| inboundTotalUsers | Decimal | The total number of inbound B2B guest users registered. |
-| outboundTotalUsers | Decimal | The total number of outbound B2B users from this tenant registered in other tenants. |
+| inboundTotalUsers | String | The total number of inbound B2B guest users registered. |
+| outboundTotalUsers | String | The total number of outbound B2B users from this tenant registered in other tenants. |
 | watermarkDateTime | DateTimeOffset | The date and time when the metrics snapshot was taken. |
 
 ## Relationships

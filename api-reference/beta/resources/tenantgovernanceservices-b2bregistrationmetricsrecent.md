@@ -22,8 +22,8 @@ Inherits from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBa
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|Unique identifier for the metrics snapshot. Inherited from [microsoft.graph.entity](../resources/entity.md).|
-|inboundTotalUsers|Decimal|The total number of inbound B2B guest users registered. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
-|outboundTotalUsers|Decimal|The total number of outbound B2B users from this tenant registered in other tenants. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
+|inboundTotalUsers|String|The total number of inbound B2B guest users registered. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
+|outboundTotalUsers|String|The total number of outbound B2B users from this tenant registered in other tenants. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
 |updateDateTime|DateTimeOffset|Timestamp that represents the most recent time B2B registration data was aggregated and have sufficiently changed for the related tenant.|
 |watermarkDateTime|DateTimeOffset|The date and time when the metrics snapshot was taken. Inherited from [microsoft.graph.tenantGovernanceServices.b2BRegistrationMetricsBase](../resources/tenantgovernanceservices-b2bregistrationmetricsbase.md).|
 
