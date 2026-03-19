@@ -12,7 +12,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-Represents the information and properties of a [configurationMonitor](../resources/configurationmonitor.md) object. This resource allows administrators to create and manage monitors for tenant or drift monitoring across all workloads supported by Tenant Configuration Management, enabling periodic detection of deviations from the desired configuration state.
+Represents monitors for tenant or drift monitoring across all workloads supported by Tenant Configuration Management, enabling periodic detection of deviations from the desired configuration state.
 
 Inherits from [entity](../resources/entity.md).
 
