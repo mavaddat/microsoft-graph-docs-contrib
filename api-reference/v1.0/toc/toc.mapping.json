@@ -559,12 +559,11 @@
     {
       "name": "Tenant configuration management",
       "resources": [
-        "configurationManagement",
         "configurationMonitor",
         "configurationMonitoringResult",
-        "configurationDrift",
-        "configurationSnapshotJob",
         "configurationBaseline"
+        "configurationDrift",
+        "configurationSnapshotJob"
       ]
     },
     {
