@@ -107,7 +107,7 @@ Introduced the tenant governance API set to enable organizations to manage and g
 - Tracking established relationships 
 - Configure relationship policies
 
-For more information, see [Overview of Tenant Governance](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
+For more information, see [Overview of Tenant Governance APIs](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
 ## February 2026: New and generally available
 

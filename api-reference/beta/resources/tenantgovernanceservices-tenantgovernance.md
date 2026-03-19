@@ -35,7 +35,7 @@ None.
 |governanceRelationships|[microsoft.graph.tenantGovernanceServices.governanceRelationship](../resources/tenantgovernanceservices-governancerelationship.md) collection|Collection of governance relationships associated with the tenant.|
 |governanceRequests|[microsoft.graph.tenantGovernanceServices.governanceRequest](../resources/tenantgovernanceservices-governancerequest.md) collection|Collection of governance requests associated with the tenant.|
 |relatedTenants|[microsoft.graph.tenantGovernanceServices.relatedTenant](../resources/tenantgovernanceservices-relatedtenant.md) collection|Collection of related tenants associated with the tenant.|
-|settings|[tenantGovernanceSetting](../resources/tenantgovernanceservices-tenantgovernancesetting.md)|Settings for the tenant governance container.|
+|settings|[microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting](../resources/tenantgovernanceservices-tenantgovernancesetting.md)|Settings for the tenant governance container.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
