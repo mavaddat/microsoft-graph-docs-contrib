@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 A dictionary of name-value pairs that allows arbitrary key-value pairs to be stored as open type properties. This is a base type that other resources can inherit from to support extensible properties.
 
-Base type of [extendedProperties](../resources/networkaccess-extendedproperties.md).
+Base type of [openComplexDictionaryType](../resources/networkaccess-openComplexDictionaryType.md).
 
 ## Properties
 None.
