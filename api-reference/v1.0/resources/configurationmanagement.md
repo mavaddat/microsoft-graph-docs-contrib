@@ -31,12 +31,15 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
+  "keyProperty": "id",
   "@odata.type": "microsoft.graph.configurationManagement",
-  "openType": false
+  "baseType": "microsoft.graph.entity",
+  "openType": "id"
 }
 -->
 ``` json
 {
-  "@odata.type": "#microsoft.graph.configurationManagement"
+  "@odata.type": "#microsoft.graph.configurationManagement",
+  "id": "String (identifier)"
 }
 ```
