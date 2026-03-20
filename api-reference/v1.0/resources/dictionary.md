@@ -12,11 +12,9 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 A dictionary of name-value pairs that allows arbitrary key-value pairs to be stored as open type properties. This is a base type that other resources can inherit from to support extensible properties.
 
-Base type of [openComplexDictionaryType](../resources/networkaccess-openComplexDictionaryType.md).
+Base type of [openComplexDictionaryType](../resources/opencomplexdictionarytype.md).
 
 ## Properties
 None.
