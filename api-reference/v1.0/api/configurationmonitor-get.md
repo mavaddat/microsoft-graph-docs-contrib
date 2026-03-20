@@ -23,8 +23,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-To get the details of any particular monitor:
-
 <!-- {
   "blockType": "ignored"
 }
@@ -32,8 +30,6 @@ To get the details of any particular monitor:
 ``` http
 GET /admin/configurationManagement/configurationMonitors/{configurationMonitorId}
 ```
-
->**Note:** Replace `configurationMonitorId` with the monitor ID for which you want to get the details.
 
 ## Optional query parameters
 

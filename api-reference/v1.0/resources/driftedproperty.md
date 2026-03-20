@@ -12,7 +12,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-Represents properties that drift from their desired configuration, providing details about the current and desired values to help admins resolve configuration issues.
+Represents properties of the monitored resource that drift from their [desired configuration](../resources/configurationbaseline.md), providing details about the current and desired values to help admins resolve configuration issues. Defined in a [configurationDrift](../resources/configurationdrift.md) object.
 
 ## Properties
 |Property|Type|Description|

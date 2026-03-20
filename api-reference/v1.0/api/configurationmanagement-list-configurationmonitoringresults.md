@@ -33,7 +33,7 @@ GET /admin/configurationManagement/configurationMonitoringResults
 
 ## Optional query parameters
 
-This method supports the `$select`, `$filter`, `$orderBy`, and `$top` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select`, `$filter`, `$orderBy`, and `$top` OData query parameters to help customize the response. The default page size is 100 items and the maximum page size is 999 items. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 

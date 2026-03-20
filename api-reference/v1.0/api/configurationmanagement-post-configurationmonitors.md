@@ -14,6 +14,8 @@ Namespace: microsoft.graph
 
 Create a new [configurationMonitor](../resources/configurationmonitor.md) object that runs periodically in the background at a scheduled frequency.
 
+You can create up to 30 **configurationMonitor** objects per tenant. Each monitor runs at a fixed interval of 6 hours and cannot be configured to run at any other frequency. An administrator can monitor up to 800 configuration resources per day per tenant across all monitors.
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -46,7 +48,7 @@ You can specify the following properties when you create a **configurationMonito
 
 |Property|Type|Description|
 |:---|:---|:---|
-|baseline|[configurationBaseline](../resources/configurationbaseline.md)|A complex object that contains details of at least one resource and one property associated with the resource to be monitored. Required.|
+|baseline|[configurationBaseline](../resources/configurationbaseline.md)|This relationship defines details of at least one resource and one property associated with the resource to be monitored. Required.|
 |description|String| User-friendly description of the monitor given by the user. Optional.|
 |displayName|String| User-friendly name given by the user to the monitor. Required.|
 |parameters|[openComplexDictionaryType](../resources/opencomplexdictionarytype.md)|Key-value pairs that contain the values of parameters which might be used in the baseline. Optional.|

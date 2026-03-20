@@ -1,10 +1,10 @@
 ---
 title: "List configurationBaseline objects"
 description: "Get a list of the configurationBaseline objects and their properties."
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
-ms.date: 03/17/2026
+author: "swatyario"
+ms.date: 03/18/2026
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "tenant-administration"
 doc_type: apiPageType
 ---
 
@@ -12,9 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-
-
-Get a list of the configurationBaseline objects and their properties.
+Get a list of the [configurationBaseline](../resources/configurationbaseline.md) objects and their properties.
 
 ## Permissions
 

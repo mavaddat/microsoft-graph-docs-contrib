@@ -12,7 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Update the properties of a [configurationMonitor](../resources/configurationmonitor.md) object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
+Update the properties of a [configurationMonitor](../resources/configurationmonitor.md) object, including the monitor name, description, and baseline.
 
 ## Permissions
 
@@ -23,8 +23,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-To update the details of any particular monitor:
-
 <!-- {
   "blockType": "ignored"
 }
@@ -32,8 +30,6 @@ To update the details of any particular monitor:
 ``` http
 PATCH /admin/configurationManagement/configurationMonitors/{configurationMonitorId}
 ```
-
->**Note:** Replace `configurationMonitorId` with the monitor ID for which you want to update the details.
 
 ## Request headers
 
@@ -48,13 +44,11 @@ PATCH /admin/configurationManagement/configurationMonitors/{configurationMonitor
 
 |Property|Type|Description|
 |:---|:---|:---|
-|baseline|[configurationBaseline](../resources/configurationbaseline.md)|A complex object that contains details of at least one resource and one property associated with the resource to be monitored. Optional.|
+|baseline|[configurationBaseline](../resources/configurationbaseline.md)|This relationship defines details of at least one resource and one property associated with the resource to be monitored. When updating the baseline, you must provide the full baseline object. Optional.|
 |description|String| User-friendly description of the monitor given by the user. Optional.|
 |displayName|String| User-friendly name given by the user to the monitor. Optional.|
 |parameters|[openComplexDictionaryType](../resources/opencomplexdictionarytype.md)|Key-value pairs that contain the values of parameters which might be used in the baseline. Optional.|
 |status|monitorStatus|Status of the monitor. The possible values are: `active`, `inactive`, `unknownFutureValue`. Optional.|
-
->**Note**: The [configurationBaseline](../resources/configurationbaseline.md) resource is a contained entity. If an admin wants to update the **configurationBaseline**, they must provide the full monitor body, including values for all fields, particularly those that are relevant and can be updated.
 
 ## Response
 
@@ -97,7 +91,7 @@ HTTP/1.1 204 No Content
 
 ### Example 2: Update the baseline of a configurationMonitor
 
-The following example shows how to update the **baseline** property of a **configurationMonitor** object.
+The following example shows how to update the **baseline** property of a **configurationMonitor** object. You must supply the full baseline object.
 
 #### Request
 

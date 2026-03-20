@@ -55,7 +55,7 @@ Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable a
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
 
-### Unified Tenant Configuration Management
+### Tenant Configuration Management
 
 Introduced the Unified Tenant Configuration Management API to enable administrators to programmatically monitor tenant configuration drift against defined baselines. Use the following new resources to manage configuration monitoring:
 - [configurationManagement](/graph/api/resources/configurationmanagement) - The container entity for configuration management capabilities

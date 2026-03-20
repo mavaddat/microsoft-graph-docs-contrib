@@ -1159,6 +1159,7 @@ Namespace: microsoft.graph
 | Member |
 | :--- |
 | active |
+| inactive |
 | unknownFutureValue |
 
 ### endpointType values

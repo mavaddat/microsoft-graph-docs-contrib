@@ -12,7 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Delete a [configurationMonitor](../resources/configurationmonitor.md) object permanently. When deleted, the **configurationMonitor** data can't be restored.
+Delete a [configurationMonitor](../resources/configurationmonitor.md) object permanently. A deleted **configurationMonitor** can't be restored.
 
 ## Permissions
 

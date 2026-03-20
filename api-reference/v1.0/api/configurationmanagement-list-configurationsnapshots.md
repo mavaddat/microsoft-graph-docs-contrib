@@ -1,10 +1,10 @@
 ---
 title: "List configurationSnapshots"
-description: "**TODO: Add a useful description.**"
-author: "**TODO: Provide GitHub Name. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
-ms.date: 03/17/2026
+description: "Get a list of the configurationBaseline objects that represent configuration snapshots and their properties."
+author: "swatyario"
+ms.date: 03/18/2026
 ms.localizationpriority: medium
-ms.subservice: "**TODO: Add MS subservice. See [topic-level metadata reference](https://eng.ms/docs/products/microsoft-graph-service/microsoft-graph/document-apis/metadata)**"
+ms.subservice: "tenant-administration"
 doc_type: apiPageType
 ---
 
@@ -12,9 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-
-
-**TODO: Add a useful description.**
+Get a list of [configurationBaseline](../resources/configurationbaseline.md) objects that represent configuration snapshots and their properties.
 
 ## Permissions
 
@@ -39,7 +37,7 @@ GET /admin/configurationManagement/configurationSnapshots
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select`, `$filter`, `$orderBy`, and `$top` OData query parameters to help customize the response. The default page size is 100 items and the maximum page size is 999 items. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
