@@ -26,10 +26,11 @@ Using the **signInAudience** property to limit where an [application](/graph/api
 
 ### Files
 
-Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
+- Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
   - [Get column](/graph/api/filestoragecontainer-get-column)
   - [Update column](/graph/api/filestoragecontainer-update-column)
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
+- [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
 
 ### Identity and access | Directory management
 
@@ -86,7 +87,8 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 
 ### Files
 
-Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel`, `DELETE /me/drive/items/{item-id}/retentionLabel`, and `DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel` endpoints to the [driveItem: removeRetentionLabel](/graph/api/driveitem-removeretentionlabel?view=graph-rest-beta&preserve-view=true) API.
+- Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel`, `DELETE /me/drive/items/{item-id}/retentionLabel`, and `DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel` endpoints to the [driveItem: removeRetentionLabel](/graph/api/driveitem-removeretentionlabel?view=graph-rest-beta&preserve-view=true) API.
+- [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
 
 ### Files | File storage container
 
