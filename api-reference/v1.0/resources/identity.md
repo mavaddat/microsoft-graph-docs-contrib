@@ -1,6 +1,6 @@
 ---
 author: "spgraph-docs-team"
-title: "identity resource type"
+title: "identity resource type (actor)"
 ms.localizationpriority: medium
 description: "Represents an identity of an actor."
 ms.subservice: onedrive
@@ -8,7 +8,7 @@ doc_type: resourcePageType
 ms.date: 03/18/2026
 ---
 
-# identity resource type
+# identity resource type (actor)
 
 Namespace: microsoft.graph
 

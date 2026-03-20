@@ -8,7 +8,7 @@ doc_type: resourcePageType
 ms.date: 05/23/2024
 ---
 
-# identity resource type
+# identity resource type (external connectors)
 
 Namespace: microsoft.graph.externalConnectors
 
