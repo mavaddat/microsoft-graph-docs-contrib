@@ -67,6 +67,7 @@ If successful, this method returns a `201 Created` response code and a [cloudFir
 
 The following example shows a request that creates a rule to block specific traffic. The matching conditions use AND logic between properties (sources AND destinations must match), while items within collections use OR logic (any one address or port can match).
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_cloudfirewallrule"
@@ -108,6 +109,12 @@ Content-Type: application/json
   }
 }
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-cloudfirewallrule-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

@@ -60,6 +60,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_storyline_followers"
@@ -68,6 +69,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/users/b3c29da7-ff83-4a92-b14e-7c91fe830b96/employeeExperience/storyline/followers
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/list-storyline-followers-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
