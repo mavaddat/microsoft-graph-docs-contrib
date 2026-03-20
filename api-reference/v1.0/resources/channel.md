@@ -42,7 +42,8 @@ where files are shared, and where tabs are added.
 |[Unarchive channel](../api/channel-unarchive.md) | None | Restore an archived channel in a team.|
 |[Update channel member's role](../api/channel-update-members.md) | [conversationMember](conversationmember.md) | Update the properties of a member of the channel. Only supported for channels with a **membershipType** of `private` or `shared`.|
 |[Remove channel member](../api/channel-delete-members.md) | None | Delete a member from a channel. Only supported for channels with a **membershipType** of `private` or `shared`.|
-|[Complete migration](../api/channel-completemigration.md)|[channel](channel.md)| Removes the migration mode from the channel and makes the channel available to users to post and read messages.|
+|[Start migration](../api/channel-startmigration.md)|[channel](channel.md)| Start the migration of external messages by enabling migration mode in an existing [channel](../resources/channel.md).|
+|[Complete migration](../api/channel-completemigration.md)|[channel](channel.md)| Complete migration on existing [channels](../resources/channel.md) or new channels.|
 |[List tabs in channel](../api/channel-list-tabs.md) | [teamsTab](teamstab.md) | List tabs pinned to a channel.|
 |[Add tab to channel](../api/channel-post-tabs.md) | [teamsTab](teamstab.md) | Add (pin) a tab to a channel.|
 |[Get tab in channel](../api/channel-get-tabs.md) | [teamsTab](teamstab.md) | Get a specific tab pinned to a channel.|
@@ -69,6 +70,8 @@ where files are shared, and where tabs are added.
 |isArchived| Boolean | Indicates whether the channel is archived. Read-only. |
 |isFavoriteByDefault|Boolean|Indicates whether the channel should be marked as recommended for all members of the team to show in their channel list. **Note:** All recommended channels automatically show in the channels list for education and frontline worker users. The property can only be set programmatically via the [Create team](../api/team-post.md) method. The default value is `false`.|
 |membershipType|[channelMembershipType](../resources/channel.md#channelmembershiptype-values)|The type of the channel. Can be set during creation and can't be changed. The possible values are: `standard`, `private`, `unknownFutureValue`, `shared`. The default value is `standard`. Use the `Prefer: include-unknown-enum-members` request header to get the following members in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `shared`.|
+|migrationMode|[migrationMode](../resources/channel.md#migrationmode-values)|Indicates whether a channel is in migration mode. This value is `null` for channels that never entered migration mode. The possible values are: `inProgress`, `completed`, `unknownFutureValue`.|
+|originalCreatedDateTime|dateTimeOffset|Timestamp of the original creation time for the channel. The value is `null` if the channel never entered migration mode.|
 |tenantId |string | The ID of the Microsoft Entra tenant. |
 |webUrl|String|A hyperlink that will go to the channel in Microsoft Teams. This is the URL that you get when you right-click a channel in Microsoft Teams and select Get link to channel. This URL should be treated as an opaque blob, and not parsed. Read-only.|
 |summary|[channelSummary](../resources/channelsummary.md)|Contains summary information about the channel, including number of owners, members, guests, and an indicator for members from other tenants. The **summary** property will only be returned if it is specified in the `$select` clause of the [Get channel](../api/channel-get.md) method.|
@@ -82,6 +85,13 @@ where files are shared, and where tabs are added.
 | unknownFutureValue | Evolvable enumeration sentinel value. Do not use.                                 |
 | shared             | Members can be directly added to the channel without adding them to the team.     |
 
+### migrationMode values
+
+| Member             | Description                                                                       |
+|:-------------------|:----------------------------------------------------------------------------------|
+| inProgress           | The channel or chat entered migration mode.                          |
+| completed            | The channel or chat is out of migration mode. |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.                                 |
 
 ### Instance attributes
 
@@ -122,15 +132,18 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "createdDateTime": "String (timestamp)",
-  "description": "String",
-  "displayName": "String",
-  "email": "String",
-  "id": "String (identifier)",
-  "isArchived": "Boolean",
-  "isFavoriteByDefault": "Boolean",
+  "description": "string",
+  "displayName": "string",
+  "id": "string (identifier)",
+  "isFavoriteByDefault": true,
+  "email": "string",
+  "webUrl": "string",
   "membershipType": "String",
-  "webUrl": "String"
+  "migrationMode": "String",
+  "isArchived": false,
+  "createdDateTime": "string (timestamp)",
+  "originalCreatedDateTime": "String (timestamp)",
+  "moderationSettings": { "@odata.type": "microsoft.graph.channelModerationSettings" }
 }
 ```
 
