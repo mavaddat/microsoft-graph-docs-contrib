@@ -161,6 +161,7 @@ Content-Type: application/json
   "@microsoft.graph.tips": "This request only returns a subset of the resource's properties. Your app will need to use $select to return non-default properties. To find out what other properties are available for this resource see https://learn.microsoft.com/graph/api/resources/configurationSnapshotJob",
   "value": [
     {
+      "@odata.type": "#microsoft.graph.configurationSnapshotJob",
       "id": "f2a8c9d1-4e5f-4b3a-9c8d-1e2f3a4b5c6d",
       "displayName": "Failed Snapshot",
       "description": "Snapshot that failed due to authentication issues",
@@ -185,6 +186,7 @@ Content-Type: application/json
       }
     },
     {
+      "@odata.type": "#microsoft.graph.configurationSnapshotJob",
       "id": "a3b4c5d6-7e8f-9a0b-1c2d-3e4f5a6b7c8d",
       "displayName": "Partially Successful Snapshot",
       "description": "Snapshot with partial success",

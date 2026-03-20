@@ -205,6 +205,7 @@ Content-Type: application/json
   "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET admin/configurationManagement/configurationMonitors?$select=createdBy,createdDateTime",
   "value": [
     {
+      "@odata.type": "#microsoft.graph.configurationMonitor",
       "id": "a1cbec62-453e-421f-94b5-7a4288bc122a",
       "inactivationReason": "Service unavailable - unable to process monitor",
       "displayName": "Sample Monitor",
