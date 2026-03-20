@@ -37,6 +37,9 @@ When a monitor executes, it impersonates the TCM-specified principal. The TCM so
 03b07b79-c5bc-4b5e-9bfa-13acf4a99998
 ```
 
+> [!NOTE]
+> Customers should ensure that the M365Admin Services app SP [6b91db1b-f05b-405a-a0b2-e3f60b28d645] is also provisioned in their tenant.
+
 ## Set up the TCM service principal
 
 During public preview, organizations must add the TCM service principal to their tenant and grant it the required permissions.
