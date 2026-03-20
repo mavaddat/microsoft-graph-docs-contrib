@@ -1068,6 +1068,15 @@ Namespace: microsoft.graph
 | inactive |
 | unknownFutureValue |
 
+### baselineParameterType values 
+
+|Member|
+|:---|
+|string|
+|integer|
+|boolean|
+|unknownFutureValue|
+
 ### basicStatus values
 
 | Member |

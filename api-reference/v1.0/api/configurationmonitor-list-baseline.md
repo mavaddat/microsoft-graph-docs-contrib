@@ -75,7 +75,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.configurationBaseline"
+  "@odata.type": "Collection(microsoft.graph.configurationBaseline)"
 }
 -->
 ``` http

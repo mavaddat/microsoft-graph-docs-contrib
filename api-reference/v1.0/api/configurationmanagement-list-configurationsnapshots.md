@@ -60,7 +60,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows a request.
 <!-- {
   "blockType": "request",
-  "name": "list_configurationbaseline"
+  "name": "list_configurationsnapshots"
 }
 -->
 ``` http
@@ -75,7 +75,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.configurationBaseline"
+  "@odata.type": "Collection(microsoft.graph.configurationBaseline)"
 }
 -->
 ``` http
