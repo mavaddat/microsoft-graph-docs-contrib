@@ -490,6 +490,22 @@ Namespace: microsoft.graph
 | cancelled |
 | unknownFutureValue |
 
+### plannerTaskChatMentionType values
+
+| Member |
+| -------------------- |
+| user |
+| application |
+| unknownFutureValue |
+
+### plannerTaskChatMessageType values
+
+| Member |
+| -------------------- |
+| richTextHtml |
+| plainText |
+| unknownFutureValue |
+
 ### applicationKeyOrigin values
 
 | Member |
@@ -2706,6 +2722,14 @@ Namespace: microsoft.graph
 | accepted |
 | declined |
 | notResponded |
+
+### privilegeLevel values
+
+|Member|
+|:---|
+|standard|
+|privileged|
+|unknownFutureValue|
 
 ### activityDomain values
 
@@ -5934,4 +5958,14 @@ Possible values for user account types (group membership), per Windows definitio
 |:---|
 |none|
 |ai|
+|unknownFutureValue|
+
+### trafficRoutingMethod values 
+
+|Member|
+|:---|
+|none|
+|random|
+|sessionPersistence|
+|performance|
 |unknownFutureValue|
