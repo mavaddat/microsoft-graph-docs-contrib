@@ -55,6 +55,12 @@ Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable a
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
 
+### Teamwork and communications | Messaging
+
+- [Start](/graph/api/channel-startmigration) the migration of external messages by enabling migration mode in an existing channel.
+- [Start](/graph/api/chat-startmigration) the migration of external messages by enabling migration mode in an existing chat.
+- [Complete](/graph/api/chat-completemigration) the migration of external messages by removing migration mode from a chat.
+
 ## March 2026: New in preview only
 
 ### Backup storage
