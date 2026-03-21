@@ -84,6 +84,10 @@ GET https://graph.microsoft.com/beta/networkAccess/reports/getEnterpriseApplicat
 [!INCLUDE [sample-code](../includes/snippets/php/reportsthisgetenterpriseapplicationreport-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/reportsthisgetenterpriseapplicationreport-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/reportsthisgetenterpriseapplicationreport-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
