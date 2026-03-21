@@ -32,6 +32,10 @@ Using the **signInAudience** property to limit where an [application](/graph/api
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
 - [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
 
+### Files | File storage container
+
+Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
+
 ### Identity and access | Directory management
 
 Introduced the Agent Identity API to support registration and management of AI agents in Microsoft Entra ID. This API enables agent builders and tenant admins to:
@@ -92,7 +96,8 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 
 ### Files | File storage container
 
-[Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
+- [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
+- Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
 ### Identity and access | Governance
 

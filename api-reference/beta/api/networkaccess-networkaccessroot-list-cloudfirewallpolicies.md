@@ -59,6 +59,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_cloudfirewallpolicy"
@@ -67,6 +68,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/networkAccess/cloudFirewallPolicies
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/list-cloudfirewallpolicy-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
