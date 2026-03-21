@@ -59,6 +59,7 @@ If successful, this method returns a `204 No Content` response code and a suppor
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_agent_identity_blueprint_sponsor"
@@ -72,6 +73,12 @@ Content-Type: application/json
   "@odata.id": "https://graph.microsoft.com/beta/directoryObjects/{sponsor-object-id}"
 }
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-agent-identity-blueprint-sponsor-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response
