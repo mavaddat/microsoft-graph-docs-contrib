@@ -160,7 +160,10 @@ The following steps represent the flow of an authorization challenge for an acti
 1. Acknowledge receipt of the lifecycle notification by responding to the POST call with `202 - Accepted` response code.
 2. Validate the authenticity of the lifecycle notification.
 3. Ensure that the app has a valid access token to take the next step.
-4. Call either of the following two APIs. If the API call succeeds, the change notification flow resumes.
+4. Call *either* of the following two APIs. If the API call succeeds, the change notification flow resumes.
+
+    > [!IMPORTANT]
+    > Don't issue a reauthorize request (`POST /subscriptions/{id}/reauthorize`) and an update request (`PATCH /subscriptions/{id}`) for the same subscription within a 10-minute window. Sending these requests concurrently or in rapid succession can result in subscription state inconsistencies. If you need to reauthorize and renew a subscription, use a single PATCH request with an updated **expirationDateTime**, which performs both actions in one operation.
 
     - Call the `/reauthorize` action to reauthorize the subscription without extending its expiration date.
         
@@ -190,9 +193,6 @@ The following steps represent the flow of an authorization challenge for an acti
       Renewing might fail if the app is no longer authorized to access to the resource. It might then be necessary for the app to obtain a new access token to successfully reauthorize a subscription.
 
       You might retry these actions later, at any time, and succeed if the conditions of access change.
-
-> [!IMPORTANT]
-> Do not issue a reauthorize request (`POST /subscriptions/{id}/reauthorize`) and an update request (`PATCH /subscriptions/{id}`) for the same subscription within a 10-minute window. Sending both requests concurrently or in rapid succession can result in subscription state inconsistencies. If you need to both reauthorize and renew a subscription, use a single `PATCH` request with an updated `expirationDateTime`, which reauthorizes and renews the subscription in one operation.
 
 ### Additional information
 
