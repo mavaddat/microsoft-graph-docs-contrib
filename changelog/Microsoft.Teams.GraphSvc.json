@@ -3397,6 +3397,14 @@
           "ChangeType": "Addition",
           "Description": "Added the [chat: completeMigration](https://learn.microsoft.com/en-us/graph/api/chat-completemigration?view=graph-rest-beta) method to the [chat](https://learn.microsoft.com/en-us/graph/api/resources/chat?view=graph-rest-beta) resource.",
           "Target": "chat"
+        },
+        {
+          "Id": "3e5eeaf8-7046-4713-ac62-2ddf24eb26f0",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "migrationMode",
+          "ChangeType": "Addition",
+          "Description": "Added the **migrationMode** enumeration type.",
+          "Target": "migrationMode"
         }
       ],
       "Id": "3e5eeaf8-7046-4713-ac62-2ddf24eb26f0",
