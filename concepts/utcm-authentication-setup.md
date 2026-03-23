@@ -1,6 +1,6 @@
 ---
 title: "Set up authentication for Tenant Configuration Management APIs"
-description: "Learn how to authenticate and configure the Tenant Configuration Management service principal in Microsoft Graph."
+description: "Learn how to authenticate to the Tenant Configuration Management (TCM) APIs and configure the TCM service principal."
 author: "NikCharlebois"
 ms.date: 03/23/2026
 ms.localizationpriority: medium
