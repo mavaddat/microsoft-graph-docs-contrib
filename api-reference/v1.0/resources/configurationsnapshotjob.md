@@ -19,9 +19,10 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/configurationmanagement-list-configurationsnapshotjobs.md)|[configurationSnapshotJob](../resources/configurationsnapshotjob.md) collection|Get a list of the [configurationSnapshotJob](../resources/configurationsnapshotjob.md) objects and their properties.|
-|[Get](../api/configurationsnapshotjob-get.md)|[configurationSnapshotJob](../resources/configurationsnapshotjob.md)|Read the properties and relationships of a [configurationSnapshotJob](../resources/configurationsnapshotjob.md) object.|
-|[Delete](../api/configurationsnapshotjob-delete.md)|None|Delete a [configurationSnapshotJob](../resources/configurationsnapshotjob.md) object.|
+|[Create snapshot](../api/configurationbaseline-createsnapshot.md)|[configurationSnapshotJob](../resources/configurationsnapshotjob.md)|Create a [configurationSnapshotJob](../resources/configurationsnapshotjob.md) asynchronously.|
+|[List snapshot jobs](../api/configurationmanagement-list-configurationsnapshotjobs.md)|[configurationSnapshotJob](../resources/configurationsnapshotjob.md) collection|Get a list of the [configurationSnapshotJob](../resources/configurationsnapshotjob.md) objects and their properties.|
+|[Get snapshot job](../api/configurationsnapshotjob-get.md)|[configurationSnapshotJob](../resources/configurationsnapshotjob.md)|Read the properties and relationships of a [configurationSnapshotJob](../resources/configurationsnapshotjob.md) object.|
+|[Delete snapshot job](../api/configurationsnapshotjob-delete.md)|None|Delete a [configurationSnapshotJob](../resources/configurationsnapshotjob.md) object.|
 
 ## Properties
 |Property|Type|Description|
