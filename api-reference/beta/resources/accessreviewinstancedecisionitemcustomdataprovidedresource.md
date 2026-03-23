@@ -28,6 +28,9 @@ Inherits from [accessReviewInstanceDecisionItemResource](../resources/accessrevi
 |displayName|String|The display name of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
 |id|String|The identifier of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
 |type|String|The type of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
+|customData|String|Custom data to include with the decision.|
+|scopeDisplayName|String|The name of the scope for the decision.|
+|scopeId|String|The id of the scope for the decision.|
 
 ## Relationships
 None.
@@ -45,7 +48,10 @@ The following JSON representation shows the resource type.
   "id": "String",
   "displayName": "String",
   "type": "String",
-  "description": "String"
+  "description": "String",
+  "customData": "String",
+  "scopeId": "String",
+  "scopeDisplayName": "String"
 }
 ```
 
