@@ -21,24 +21,6 @@
     {
       "ChangeList": [
         {
-          "Id": "a3b7c9d1-4e6f-4a2b-8c5d-1f9e0d3b7a62",
-          "ApiChange": "Property",
-          "ChangedApiName": "content",
-          "ChangeType": "Change",
-          "Description": "Added new `<codeblock><code></code></codeblock>` tag support to the message body **content** of the [itemBody](https://learn.microsoft.com/graph/api/resources/itembody?view=graph-rest-1.0) resource to represent a code block in the message body in a [chatMessage](https://learn.microsoft.com/en-us/graph/api/resources/chatmessage?view=graph-rest-1.0). This change shows up in the actual **content** property of the message body when you [get a chat message in a channel or chat](https://learn.microsoft.com/en-us/graph/api/chatmessage-get?view=graph-rest-1.0).",
-          "Target": "itemBody"
-        }
-      ],
-      "Id": "a3b7c9d1-4e6f-4a2b-8c5d-1f9e0d3b7a62",
-      "Cloud": "Prod",
-      "Version": "v1.0",
-      "CreatedDateTime": "2026-03-16T00:00:00.0000000Z",
-      "WorkloadArea": "Teamwork and communications",
-      "SubArea": "Messaging"
-    },
-    {
-      "ChangeList": [
-        {
           "Id": "ce1c767e-c906-4117-bb0f-80a11b8949f0",
           "ApiChange": "Resource",
           "ChangedApiName": "adhocCall",
