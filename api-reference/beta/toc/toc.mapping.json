@@ -3635,7 +3635,7 @@
       ]
     },
     {
-      "name": "Tenant administration (preview)",
+      "name": "Tenant management",
       "childNodes": [
         {
           "name": "Configuration management",
@@ -3647,14 +3647,6 @@
             "configurationMonitor",
             "configurationMonitoringResult",
             "configurationSnapshotJob"
-          ],
-          "complexTypes": [
-            "baselineParameter",
-            "baselineResource",
-            "clientCredentials",
-            "driftedProperty",
-            "errorDetail",
-            "openComplexDictionaryType"
           ]
         }
       ]
