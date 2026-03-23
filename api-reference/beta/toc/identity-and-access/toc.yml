@@ -296,7 +296,7 @@ items:
       href: ../../api/domain-list-serviceconfigurationrecords.md
     - name: List verification DNS records
       href: ../../api/domain-list-verificationdnsrecords.md
-  - name: Entra Backup and Recovery (recovery)
+  - name: Entra Backup and Recovery
     items:
     - name: Overview
       href: ../../resources/entrarecoveryservices-backup-recovery-overview.md
@@ -3585,70 +3585,6 @@ items:
       href: ../../resources/upnsigninidentifier.md
     - name: Username sign-in identifier
       href: ../../resources/usernamesigninidentifier.md
-  - name: Tenant governance (preview)
-    items:
-    - name: Overview
-      href: ../../resources/tenantgovernanceservices-tenantgovernance-overview.md
-    - name: Tenant governance setting
-      items:
-      - name: Tenant governance setting
-        href: ../../resources/tenantgovernanceservices-tenantgovernancesetting.md
-      - name: Get
-        href: ../../api/tenantgovernanceservices-tenantgovernancesetting-get.md
-      - name: Update
-        href: ../../api/tenantgovernanceservices-tenantgovernancesetting-update.md
-      - name: enableRelatedTenants
-        href: ../../api/tenantgovernanceservices-tenantgovernancesetting-enablerelatedtenants.md
-    - name: Related tenant
-      items:
-      - name: Related tenant
-        href: ../../resources/tenantgovernanceservices-relatedtenant.md
-      - name: List
-        href: ../../api/tenantgovernanceservices-list-relatedtenants.md
-      - name: Get
-        href: ../../api/tenantgovernanceservices-relatedtenant-get.md
-      - name: Refresh
-        href: ../../api/tenantgovernanceservices-relatedtenant-refresh.md
-      - name: Refresh status
-        href: ../../api/tenantgovernanceservices-relatedtenant-refreshstatus.md
-    - name: Governance policy template
-      items:
-      - name: Governance policy template
-        href: ../../resources/tenantgovernanceservices-governancepolicytemplate.md
-      - name: List
-        href: ../../api/tenantgovernanceservices-list-governancepolicytemplates.md
-      - name: Create
-        href: ../../api/tenantgovernanceservices-post-governancepolicytemplates.md
-      - name: Get
-        href: ../../api/tenantgovernanceservices-governancepolicytemplate-get.md
-      - name: Update
-        href: ../../api/tenantgovernanceservices-governancepolicytemplate-update.md
-      - name: Delete
-        href: ../../api/tenantgovernanceservices-delete-governancepolicytemplates.md
-    - name: Governance invitation
-      items:
-      - name: Governance invitation
-        href: ../../resources/tenantgovernanceservices-governanceinvitation.md
-      - name: List
-        href: ../../api/tenantgovernanceservices-list-governanceinvitations.md
-      - name: Create
-        href: ../../api/tenantgovernanceservices-post-governanceinvitations.md
-      - name: Get
-        href: ../../api/tenantgovernanceservices-governanceinvitation-get.md
-      - name: Delete
-        href: ../../api/tenantgovernanceservices-governanceinvitation-delete.md
-    - name: Governance request
-      items:
-      - name: Governance request
-        href: ../../resources/tenantgovernanceservices-governancerequest.md
-      - name: List
-        href: ../../api/tenantgovernanceservices-list-governancerequests.md
-      - name: Create
-        href: ../../api/tenantgovernanceservices-post-governancerequests.md
-      - name: Get
-        href: ../../api/tenantgovernanceservices-governancerequest-get.md
-      - name: Update
-        href: ../../api/tenantgovernanceservices-governancerequest-update.md
   - name: Trusted certificate authorities for apps (preview)
     items:
     - name: Certificate-based application configuration
