@@ -31,10 +31,7 @@ Using the **signInAudience** property to limit where an [application](/graph/api
   - [Update column](/graph/api/filestoragecontainer-update-column)
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
 - [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
-
-### Files | File storage container
-
-Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
+- Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
 ### Identity and access | Directory management
 
@@ -77,10 +74,6 @@ The new Tenant Configuration Management APIs in Microsoft Graph allow administra
 
 ## March 2026: New in preview only
 
-### Backup storage
-
-Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get the retention period of the backup, in days.
-
 ### Applications
 
 - Using the **signInAudience** and **signInAudienceRestrictions** properties to limit where an [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
@@ -88,7 +81,8 @@ Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph
 
 ### Backup storage
 
-Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
+- Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get the retention period of the backup, in days.
+- Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
 
 ### Device and app management | Cloud PC
 
@@ -109,12 +103,13 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 
 - Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel`, `DELETE /me/drive/items/{item-id}/retentionLabel`, and `DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel` endpoints to the [driveItem: removeRetentionLabel](/graph/api/driveitem-removeretentionlabel?view=graph-rest-beta&preserve-view=true) API.
 - [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
-- Use the list, create, get, and delete APIs to manage user permissions for SharePoint Embedded [file storage container types](/graph/api/resources/filestoragecontainertype?view=graph-rest-beta&preserve-view=true).
-
-### Files | File storage container
-
+- Use the [list](/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta&preserve-view=true), [create](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta&preserve-view=true), [get](/graph/api/filestoragecontainertype-get-permission?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/filestoragecontainertype-delete-permissions?view=graph-rest-beta&preserve-view=true) APIs to manage user permissions for SharePoint Embedded [file storage container types](/graph/api/resources/filestoragecontainertype?view=graph-rest-beta&preserve-view=true).
 - [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
 - Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
+
+### Groups
+
+Added the [ownerlessGroupPolicy](/graph/api/resources/ownerlessgrouppolicy?view=graph-rest-beta&preserve-view=true) resource and related API operations to enable IT administrators to configure policies for managing groups that have lost their sole owner. Use this API to send actionable notification emails to active members of ownerless groups to accept ownership.
 
 ### Identity and access | Directory management
 
@@ -135,7 +130,7 @@ Introduced the Entra Backup and Recovery APIs to enable IT administrators to bac
   - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
   - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
 
-### Identity and access | Tenant governance
+### Tenant management | Governance
 
 Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
 - Activating invitation reception and related tenant discovery
@@ -266,10 +261,6 @@ Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&pre
 ### Identity and access | Directory management
 
 Added the **managerApplications** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint?view=graph-rest-beta&preserve-view=true) resources to specify applications designated as managers of an application. On the base **application** resource, this property is read-only for third-party (3P) callers. On the **agentIdentityBlueprint** resource, manager applications can create agent blueprint principals, agent identities, and agent users for their managed agent blueprints without requiring high-privileged permissions such as `AgentIdentityBlueprintPrincipal.ReadWrite.All`.
-
-### Groups
-
-Added the [ownerlessGroupPolicy](/graph/api/resources/ownerlessgrouppolicy?view=graph-rest-beta&preserve-view=true) resource and related API operations to enable IT administrators to configure policies for managing groups that have lost their sole owner. Use this API to send actionable notification emails to active members of ownerless groups to accept ownership.
 
 ### Identity and access | Identity and sign-in
 
