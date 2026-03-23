@@ -68,6 +68,10 @@ Added [ad hoc call](/graph/api/resources/adhoccall) support to change notificati
 
 For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
 
+### Tenant management | Configuration management
+
+The new Tenant Configuration Management APIs in Microsoft Graph allow administrators to control and manage configuration settings across a single workload or multiple workloads within an organization. To learn more about supported use cases, see [Use the Tenant Configuration Management APIs in Microsoft Graph](/graph/api/resources/unified-tenant-configuration-management-api-overview).
+
 ## March 2026: New in preview only
 
 ### Applications
