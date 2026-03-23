@@ -1302,7 +1302,7 @@
               ]
             },
             {
-              "name": "Backup and Recovery",
+              "name": "Entra Backup and Recovery (recovery)",
               "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
               "resources": [
                 "microsoft.graph.entraRecoveryServices.recoveryJob",
@@ -1953,7 +1953,7 @@
               ]
             },
             {
-              "name": "Tenant governance",
+              "name": "Tenant governance (preview)",
               "overview": "../../resources/tenantgovernanceservices-tenantgovernance-overview.md",
               "resources": [
                 "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
