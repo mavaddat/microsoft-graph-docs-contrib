@@ -100,6 +100,10 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 - [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
 - Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
+### Identity and access | Directory management
+
+Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. You can view snapshots and start preview jobs for analysis before running the recovery jobs. You can also monitor the status of recovery processes including successes and failures. For more information, see [Overview of Microsoft Entra Backup and Recovery APIs](/graph/api/resources/entrarecoveryservices-backup-recovery-overview).
+
 ### Identity and access | Governance
 
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.

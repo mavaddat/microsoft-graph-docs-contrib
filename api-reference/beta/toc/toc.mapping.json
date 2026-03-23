@@ -1295,6 +1295,16 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "Backup and Recovery",
+              "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
+              "resources": [
+                "microsoft.graph.entraRecoveryServices.recoveryJob",
+                "microsoft.graph.entraRecoveryServices.recoveryJobBase",
+                "microsoft.graph.entraRecoveryServices.recoveryPreviewJob",
+                "microsoft.graph.entraRecoveryServices.snapshot"
+              ]
             }
           ]
         },
