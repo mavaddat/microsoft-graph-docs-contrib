@@ -198,9 +198,9 @@
       "Id": "2fc5b50d-d6c8-4be6-8fad-4531174bca8d",
       "Cloud": "Prod",
       "Version": "v1.0",
-      "CreatedDateTime": "2026-03-17T20:55:07.1059858Z",
-      "WorkloadArea": "Tenant Configuration Management",
-      "SubArea": ""
+      "CreatedDateTime": "2026-03-23T20:55:07.1059858Z",
+      "WorkloadArea": "Tenant management",
+      "SubArea": "Configuration management"
     },
     {
       "ChangeList": [
@@ -369,7 +369,7 @@
       "Cloud": "Prod",
       "Version": "beta",
       "CreatedDateTime": "2026-01-23T05:11:09.4766745Z",
-      "WorkloadArea": "tenant-administration",
+      "WorkloadArea": "Tenant management",
       "SubArea": "Configuration management"
     }
   ]

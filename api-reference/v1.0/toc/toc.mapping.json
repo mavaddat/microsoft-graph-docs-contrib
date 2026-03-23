@@ -557,16 +557,6 @@
       ]
     },
     {
-      "name": "Tenant configuration management",
-      "resources": [
-        "configurationMonitor",
-        "configurationMonitoringResult",
-        "configurationBaseline"
-        "configurationDrift",
-        "configurationSnapshotJob"
-      ]
-    },
-    {
       "name": "Education",
       "overview": "../../resources/education-overview.md",
       "resources": [
@@ -2252,6 +2242,21 @@
             "timeRange",
             "userSolutionRoot",
             "workforceIntegrationEncryption"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenant management",
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "resources": [
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationSnapshotJob"
           ]
         }
       ]
