@@ -60,6 +60,17 @@ Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable a
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
 
+### Teamwork and communications | Calls and online meetings
+
+Added [ad hoc call](/graph/api/resources/adhoccall) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
+
+- `communications/adhocCalls/{adhocCallId}/transcripts`
+- `users/{userId}/adhocCalls/getAllTranscripts`
+- `communications/adhocCalls/{adhocCallId}/recordings`
+- `users/{userId}/adhocCalls/getAllRecordings`
+
+For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
+
 ## March 2026: New in preview only
 
 ### Backup storage
