@@ -31,10 +31,7 @@ Using the **signInAudience** property to limit where an [application](/graph/api
   - [Update column](/graph/api/filestoragecontainer-update-column)
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
 - [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
-
-### Files | File storage container
-
-Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
+- Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
 ### Identity and access | Directory management
 
@@ -60,11 +57,22 @@ Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable a
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
 
+### Teamwork and communications | Calls and online meetings
+
+Added [ad hoc call](/graph/api/resources/adhoccall) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
+
+- `communications/adhocCalls/{adhocCallId}/transcripts`
+- `users/{userId}/adhocCalls/getAllTranscripts`
+- `communications/adhocCalls/{adhocCallId}/recordings`
+- `users/{userId}/adhocCalls/getAllRecordings`
+
+For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
+
+### Tenant management | Configuration management
+
+The new Tenant Configuration Management APIs in Microsoft Graph allow administrators to control and manage configuration settings across a single workload or multiple workloads within an organization. To learn more about supported use cases, see [Use the Tenant Configuration Management APIs in Microsoft Graph](/graph/api/resources/unified-tenant-configuration-management-api-overview).
+
 ## March 2026: New in preview only
-
-### Backup storage
-
-Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get the retention period of the backup, in days.
 
 ### Applications
 
@@ -73,7 +81,8 @@ Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph
 
 ### Backup storage
 
-Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
+- Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get the retention period of the backup, in days.
+- Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
 
 ### Device and app management | Cloud PC
 
@@ -94,11 +103,17 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 
 - Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel`, `DELETE /me/drive/items/{item-id}/retentionLabel`, and `DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel` endpoints to the [driveItem: removeRetentionLabel](/graph/api/driveitem-removeretentionlabel?view=graph-rest-beta&preserve-view=true) API.
 - [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
-
-### Files | File storage container
-
+- Use the [list](/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta&preserve-view=true), [create](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta&preserve-view=true), [get](/graph/api/filestoragecontainertype-get-permission?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/filestoragecontainertype-delete-permissions?view=graph-rest-beta&preserve-view=true) APIs to manage user permissions for SharePoint Embedded [file storage container types](/graph/api/resources/filestoragecontainertype?view=graph-rest-beta&preserve-view=true).
 - [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
 - Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
+
+### Groups
+
+Added the [ownerlessGroupPolicy](/graph/api/resources/ownerlessgrouppolicy?view=graph-rest-beta&preserve-view=true) resource and related API operations to enable IT administrators to configure policies for managing groups that have lost their sole owner. Use this API to send actionable notification emails to active members of ownerless groups to accept ownership.
+
+### Identity and access | Directory management
+
+Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. You can view snapshots and start preview jobs for analysis before running the recovery jobs. You can also monitor the status of recovery processes including successes and failures. For more information, see [Overview of Microsoft Entra Backup and Recovery APIs](/graph/api/resources/entrarecoveryservices-backup-recovery-overview).
 
 ### Identity and access | Governance
 
@@ -114,6 +129,16 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
   - Use the [cloudFirewallPolicy](/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta&preserve-view=true) resource and its associated methods to create and manage cloud firewall policies.
   - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
   - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
+
+### Tenant management | Governance
+
+Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
+- Activating invitation reception and related tenant discovery
+- Establishing governance relationships between a governing tenant and a governed tenant
+- Tracking established relationships 
+- Configure relationship policies
+
+For more information, see [Overview of Tenant Governance APIs](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
 ## February 2026: New and generally available
 

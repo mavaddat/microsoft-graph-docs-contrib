@@ -2247,6 +2247,21 @@
       ]
     },
     {
+      "name": "Tenant management",
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "resources": [
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationSnapshotJob"
+          ]
+        }
+      ]
+    },
+    {
       "name": "To-do tasks",
       "overview": "../../resources/todo-overview.md",
       "keywords": [
