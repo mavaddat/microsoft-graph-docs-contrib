@@ -119,6 +119,16 @@ Introduced the Entra Backup and Recovery APIs to enable IT administrators to bac
   - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
   - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
 
+### Identity and access | Tenant governance
+
+Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
+- Activating invitation reception and related tenant discovery
+- Establishing governance relationships between a governing tenant and a governed tenant
+- Tracking established relationships 
+- Configure relationship policies
+
+For more information, see [Overview of Tenant Governance APIs](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
+
 ## February 2026: New and generally available
 
 ### External data connections

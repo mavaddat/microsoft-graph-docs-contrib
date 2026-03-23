@@ -73,6 +73,7 @@ Inherits from [entity](entity.md).
 | recovery | [microsoft.graph.entraRecoveryServices.recovery](entrarecoveryservices-recovery.md) | Represents the Entra backup and recovery service for the tenant. |
 | subscriptions | [companySubscription](companysubscription.md) collection | List of commercial subscriptions that an organization has. |
 |templates|[template](../resources/template.md) |A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID. |
+|tenantGovernance|[microsoft.graph.tenantGovernanceServices.tenantGovernance](../resources/tenantgovernanceservices-tenantgovernance.md)|Container for Microsoft Entra Tenant Governance capabilities.|
 
 ## JSON representation
 

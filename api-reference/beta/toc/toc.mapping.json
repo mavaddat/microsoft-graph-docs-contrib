@@ -1953,6 +1953,17 @@
               ]
             },
             {
+              "name": "Tenant governance",
+              "overview": "../../resources/tenantgovernanceservices-tenantgovernance-overview.md",
+              "resources": [
+                "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
+                "microsoft.graph.tenantGovernanceServices.relatedTenant",
+                "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+                "microsoft.graph.tenantGovernanceServices.governanceInvitation",
+                "microsoft.graph.tenantGovernanceServices.governanceRequest"
+              ]
+            },
+            {
               "name": "Organizational branding",
               "keywords": [
                 "Tenant branding",
