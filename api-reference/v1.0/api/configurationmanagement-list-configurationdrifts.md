@@ -102,20 +102,25 @@ Content-Type: application/json
     },
     {
       "id": "f30f8d6b-ea1e-4e1e-995e-341735ea01f4",
-      "monitorId": "b166c9cb-db29-438b-95fb-247da1dc72c3",
+      "monitorId": "a7d89e42-1c3f-4b8e-9f2a-8c5d7e6f4a3b",
       "tenantId": "96bf81b4-2694-42bb-9204-70081135ca61",
-      "resourceType": "microsoft.exchange.accepteddomain",
-      "baselineResourceDisplayName": "Accepted Domain",
+      "resourceType": "microsoft.aad.conditionalaccesspolicy",
+      "baselineResourceDisplayName": "Corporate Network Access Policy",
       "firstReportedDateTime": "2024-12-12T06:00:39.2072475Z",
       "status": "active",
       "resourceInstanceIdentifier": {
-        "Identity": "contoso.onmicrosoft.com"
+        "DisplayName": "Block access from untrusted locations"
       },
       "driftedProperties": [
         {
-          "propertyName": "Ensure",
-          "currentValue": "Absent",
-          "desiredValue": "Present"
+          "propertyName": "State",
+          "currentValue": "Disabled",
+          "desiredValue": "Enabled"
+        },
+        {
+          "propertyName": "IncludeLocations",
+          "currentValue": "All",
+          "desiredValue": "AllTrusted"
         }
       ]
     },
@@ -123,18 +128,23 @@ Content-Type: application/json
       "id": "9d43b643-71ab-4415-8d98-ca28c7cf0df4",
       "monitorId": "69b6b9ba-20c9-4ffb-beef-263c07063222",
       "tenantId": "96bf81b4-2694-42bb-9204-70081135ca61",
-      "resourceType": "microsoft.exchange.mailcontact",
-      "baselineResourceDisplayName": "Mail Contact Resource",
+      "resourceType": "microsoft.compliance.retentionpolicy",
+      "baselineResourceDisplayName": "Financial Records Retention",
       "firstReportedDateTime": "2024-12-12T06:00:38.1402661Z",
       "status": "active",
       "resourceInstanceIdentifier": {
-        "Name": "Chris"
+        "Name": "Finance-7YearRetention"
       },
       "driftedProperties": [
         {
-          "propertyName": "Ensure",
-          "currentValue": "Absent",
-          "desiredValue": "Present"
+          "propertyName": "RetentionDuration",
+          "currentValue": "1825",
+          "desiredValue": "2555"
+        },
+        {
+          "propertyName": "Enabled",
+          "currentValue": "False",
+          "desiredValue": "True"
         }
       ]
     }

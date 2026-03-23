@@ -1,6 +1,6 @@
 ---
 title: "List configurationSnapshots"
-description: "Get a list of the configurationSnapshot objects."
+description: "Get a list of the configurationBaseline objects that represent configuration snapshots."
 author: "swatyario"
 ms.date: 03/23/2026
 ms.localizationpriority: medium
@@ -12,7 +12,9 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get a list of [configurationSnapshot](../resources/configurationsnapshot.md) objects.
+Get a list of [configurationBaseline](../resources/configurationbaseline.md) objects that represent configuration snapshots and their properties.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -83,20 +85,101 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#admin/configurationManagement/configurationSnapshots",
+  "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET admin/configurationManagement/configurationSnapshots?$select=description,displayName",
   "value": [
     {
-      "@odata.type": "#microsoft.graph.configurationBaseline",
-      "id": "51511c1b-8700-1ba8-d667-0891eda8015f",
-      "displayName": "String",
-      "description": "String",
+      "id": "5b15be20-897f-4b79-85a6-97871c708f6f",
+      "displayName": "Exchange Configuration Baseline",
+      "description": "Baseline capturing Exchange shared mailbox and accepted domain settings",
+      "parameters": [],
+      "resources": [
+        {
+          "displayName": "TestSharedMailbox Resource",
+          "resourceType": "microsoft.exchange.sharedmailbox",
+          "properties": {
+            "DisplayName": "TestSharedMailbox",
+            "Alias": "testSharedMailbox",
+            "Identity": "TestSharedMailbox",
+            "Ensure": "Present",
+            "PrimarySmtpAddress": "testSharedMailbox@contoso.onmicrosoft.com",
+            "EmailAddresses": [
+              "abc@contoso.onmicrosoft.com"
+            ]
+          }
+        },
+        {
+          "displayName": "Accepted Domain",
+          "resourceType": "microsoft.exchange.accepteddomain",
+          "properties": {
+            "Identity": "contoso.onmicrosoft.com",
+            "DomainType": "InternalRelay",
+            "Ensure": "Present"
+          }
+        }
+      ]
+    },
+    {
+      "id": "a8c3f2e1-4b9d-4c7a-9e2f-6d8b5a7c3e1f",
+      "displayName": "Entra ID Security Baseline",
+      "description": "Baseline for conditional access and authentication policies",
       "parameters": [
         {
-          "@odata.type": "microsoft.graph.baselineParameter"
+          "displayName": "TenantId",
+          "description": "Target tenant identifier",
+          "parameterType": "string"
         }
       ],
       "resources": [
         {
-          "@odata.type": "microsoft.graph.baselineResource"
+          "displayName": "Corporate Network Access Policy",
+          "resourceType": "microsoft.aad.conditionalaccesspolicy",
+          "properties": {
+            "DisplayName": "Block access from untrusted locations",
+            "State": "Enabled",
+            "IncludeLocations": "AllTrusted",
+            "ExcludeLocations": [],
+            "IncludeUsers": "All",
+            "GrantControlsOperator": "OR"
+          }
+        },
+        {
+          "displayName": "MFA Registration Policy",
+          "resourceType": "microsoft.aad.authenticationmethodspolicy",
+          "properties": {
+            "PolicyName": "MFARegistrationCampaign",
+            "State": "Enabled",
+            "IncludeTargets": "All",
+            "SnoozeDurationInDays": "14"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c2d5e8f1-9a3b-4e6c-8f2d-1a7b9c4e6f3a",
+      "displayName": "Compliance Retention Baseline",
+      "description": "Baseline for retention policies and labels",
+      "parameters": [],
+      "resources": [
+        {
+          "displayName": "Financial Records Retention",
+          "resourceType": "microsoft.compliance.retentionpolicy",
+          "properties": {
+            "Name": "Finance-7YearRetention",
+            "RetentionDuration": "2555",
+            "Enabled": "True",
+            "Comment": "Regulatory requirement for financial documents"
+          }
+        },
+        {
+          "displayName": "Legal Hold Label",
+          "resourceType": "microsoft.compliance.retentionlabel",
+          "properties": {
+            "Name": "LegalHold",
+            "RetentionDuration": "Unlimited",
+            "RetentionAction": "Keep",
+            "Comment": "Applied to items under legal review"
+          }
         }
       ]
     }
