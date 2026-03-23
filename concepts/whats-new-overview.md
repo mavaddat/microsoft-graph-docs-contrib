@@ -109,7 +109,7 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 
 ### Groups
 
-Use the [ownerlessGroupPolicy](/graph/api/resources/ownerlessgrouppolicy?view=graph-rest-beta&preserve-view=true) resource to enable IT administrators to configure policies for managing groups that have lost their sole owner and send actionable notification emails to active members of ownerless groups to accept ownership.
+Use the ownerless group policy resource to enable IT administrators to configure policies for managing groups that have lost their sole owner and send actionable notification emails to active members of ownerless groups to accept ownership.
 
 ### Identity and access | Directory management
 
