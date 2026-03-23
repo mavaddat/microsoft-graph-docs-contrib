@@ -2,7 +2,7 @@
 title: "configurationMonitor resource type"
 description: "Represents the information and properties of a configurationMonitor object."
 author: "swatyario"
-ms.date: 03/18/2026
+ms.date: 03/23/2026
 ms.localizationpriority: medium
 ms.subservice: "tenant-administration"
 doc_type: resourcePageType
@@ -46,7 +46,7 @@ Inherits from [entity](../resources/entity.md).
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|baseline|[configurationBaseline](../resources/configurationbaseline.md)|A complex object that contains details of at least one resource and one property associated with the resource to be monitored. Returned only with `$select`. Supports `$expand`.|
+|baseline|[configurationBaseline](../resources/configurationbaseline.md)|A relationship that contains details of at least one resource and one property associated with the resource to be monitored. Returned only with `$select`. Supports `$expand`.|
 
 ## JSON representation
 The following JSON representation shows the resource type.

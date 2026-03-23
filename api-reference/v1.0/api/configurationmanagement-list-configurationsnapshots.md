@@ -1,8 +1,8 @@
 ---
 title: "List configurationSnapshots"
-description: "Get a list of the configurationBaseline objects that represent configuration snapshots and their properties."
+description: "Get a list of the configurationSnapshot objects."
 author: "swatyario"
-ms.date: 03/18/2026
+ms.date: 03/23/2026
 ms.localizationpriority: medium
 ms.subservice: "tenant-administration"
 doc_type: apiPageType
@@ -12,7 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Get a list of [configurationBaseline](../resources/configurationbaseline.md) objects that represent configuration snapshots and their properties.
+Get a list of [configurationSnapshot](../resources/configurationsnapshot.md) objects.
 
 ## Permissions
 
