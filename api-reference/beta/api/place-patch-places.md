@@ -71,6 +71,7 @@ The following example shows a request that combines multiple operations, includi
 - Create a new workspace in reservable mode under an existing parent.
 - Update the display name of an existing section.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "mixed_create_update"
@@ -138,6 +139,12 @@ OData-Version: 4.01
   ]
 }
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/mixed-create-update-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 The following example shows the response.

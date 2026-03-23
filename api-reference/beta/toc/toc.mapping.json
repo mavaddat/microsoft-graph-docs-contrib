@@ -13,7 +13,12 @@
       "overview": "../../resources/groups-overview.md",
       "resources": [
         "group",
-        "groupLifecyclePolicy"
+        "groupLifecyclePolicy",
+        "ownerlessGroupPolicy"
+      ],
+      "complexTypes": [
+        "emailDetails",
+        "targetOwners"
       ]
     },
     {
@@ -1295,6 +1300,16 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "Backup and Recovery",
+              "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
+              "resources": [
+                "microsoft.graph.entraRecoveryServices.recoveryJob",
+                "microsoft.graph.entraRecoveryServices.recoveryJobBase",
+                "microsoft.graph.entraRecoveryServices.recoveryPreviewJob",
+                "microsoft.graph.entraRecoveryServices.snapshot"
+              ]
             }
           ]
         },
@@ -1938,6 +1953,17 @@
               ]
             },
             {
+              "name": "Tenant governance",
+              "overview": "../../resources/tenantgovernanceservices-tenantgovernance-overview.md",
+              "resources": [
+                "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
+                "microsoft.graph.tenantGovernanceServices.relatedTenant",
+                "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+                "microsoft.graph.tenantGovernanceServices.governanceInvitation",
+                "microsoft.graph.tenantGovernanceServices.governanceRequest"
+              ]
+            },
+            {
               "name": "Organizational branding",
               "keywords": [
                 "Tenant branding",
@@ -2231,6 +2257,14 @@
                 "microsoft.graph.networkAccess.threatIntelligencePolicyLink",
                 "microsoft.graph.networkAccess.threatIntelligenceRule"
 
+              ]
+            },
+            {
+              "name": "Cloud firewall",
+              "resources": [
+                "microsoft.graph.networkaccess.cloudFirewallPolicy",
+                "microsoft.graph.networkaccess.cloudFirewallRule",
+                "microsoft.graph.networkaccess.cloudFirewallPolicyLink",
               ]
             },
             {
@@ -3276,6 +3310,10 @@
         "plannerRuleOverride",
         "plannerSharedWithContainer",
         "plannerTaskCompletionRequirementDetails",
+        "plannerTaskChatMention",
+        "plannerTaskChatMessage",
+        "plannerTaskChatReaction",
+        "plannerTaskChatReactionEvent",
         "plannerTaskCreation",
         "plannerTaskPropertyRule",
         "plannerTaskRecurrence",
@@ -3623,7 +3661,7 @@
       ]
     },
     {
-      "name": "Tenant administration (preview)",
+      "name": "Tenant management",
       "childNodes": [
         {
           "name": "Configuration management",
@@ -3635,14 +3673,6 @@
             "configurationMonitor",
             "configurationMonitoringResult",
             "configurationSnapshotJob"
-          ],
-          "complexTypes": [
-            "baselineParameter",
-            "baselineResource",
-            "clientCredentials",
-            "driftedProperty",
-            "errorDetail",
-            "openComplexDictionaryType"
           ]
         }
       ]
