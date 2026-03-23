@@ -3,6 +3,32 @@
     {
       "ChangeList": [
         {
+          "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "ApiChange": "Member",
+          "ChangedApiName": "underServiceMaintenance",
+          "ChangeType": "Addition",
+          "Description": "Added the `underServiceMaintenance` member to the **cloudPcConnectivityStatus** enumeration.",
+          "Target": "cloudPcConnectivityStatus"
+        },
+        {
+          "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+          "ApiChange": "Member",
+          "ChangedApiName": "inUse",
+          "ChangeType": "Addition",
+          "Description": "Added the `inUse` member to the **cloudPcConnectivityStatus** enumeration.",
+          "Target": "cloudPcConnectivityStatus"
+        }
+      ],
+      "Id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-03-20T00:00:00.0000000Z",
+      "WorkloadArea": "Devices and app management",
+      "SubArea": "Cloud PC"
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "831c4b73-6002-4d78-b864-807c21b14f39",
           "ApiChange": "Enumeration",
           "ChangedApiName": "cloudPcExternalPartnerActionErrorCode",

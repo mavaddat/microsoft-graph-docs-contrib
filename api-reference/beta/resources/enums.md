@@ -13,6 +13,15 @@ ms.custom: sfi-ropc-nochange
 
 Namespace: microsoft.graph
 
+### notifyMembers values
+
+|Member|
+|:---|
+|all|
+|allowSelected|
+|blockSelected|
+|unknownFutureValue|
+
 ### structuredDataEntryValueType values
 
 |Member|
@@ -488,6 +497,22 @@ Namespace: microsoft.graph
 | approved |
 | rejected |
 | cancelled |
+| unknownFutureValue |
+
+### plannerTaskChatMentionType values
+
+| Member |
+| -------------------- |
+| user |
+| application |
+| unknownFutureValue |
+
+### plannerTaskChatMessageType values
+
+| Member |
+| -------------------- |
+| richTextHtml |
+| plainText |
 | unknownFutureValue |
 
 ### applicationKeyOrigin values
@@ -2706,6 +2731,14 @@ Namespace: microsoft.graph
 | accepted |
 | declined |
 | notResponded |
+
+### privilegeLevel values
+
+|Member|
+|:---|
+|standard|
+|privileged|
+|unknownFutureValue|
 
 ### activityDomain values
 
@@ -5934,4 +5967,14 @@ Possible values for user account types (group membership), per Windows definitio
 |:---|
 |none|
 |ai|
+|unknownFutureValue|
+
+### trafficRoutingMethod values 
+
+|Member|
+|:---|
+|none|
+|random|
+|sessionPersistence|
+|performance|
 |unknownFutureValue|

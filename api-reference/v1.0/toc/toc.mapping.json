@@ -107,6 +107,21 @@
       ]
     },
     {
+      "name": "Agents",
+      "overview": "",
+      "resources": [],
+      "childNodes": [
+          {
+            "name": "Agent identities",
+            "resources": [
+              "agentIdentityBlueprint",
+              "agentIdentityBlueprintPrincipal",
+              "agentIdentity"
+            ]
+          }
+      ]
+    },
+    {
       "name": "Backup storage",
       "shouldSort": true,
       "keywords": [
@@ -1426,7 +1441,12 @@
         "person",
         "peopleAdminSettings",
         "insightsSettings",
+        "profileCardProperty",
+        "profileSource",
         "pronounsSettings"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -2222,6 +2242,21 @@
             "timeRange",
             "userSolutionRoot",
             "workforceIntegrationEncryption"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenant management",
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "resources": [
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationSnapshotJob"
           ]
         }
       ]
