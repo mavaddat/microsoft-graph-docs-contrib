@@ -23,7 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "place_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/place-update-permissions.md)]
 
->**Note**: Exchange Admin role is requied to update places.
+[!INCLUDE [rbac-places-apis-update-known-issue](../includes/rbac-for-apis/rbac-places-apis-update-known-issue.md)]
 
 ## HTTP request
 
@@ -503,7 +503,7 @@ Content-Type: application/json
     "city": "Buffalo",
     "state": "NY",
     "postalCode": "98052",
-    "countryOrRegion": "USA"
+    "countryOrRegion": "US"
   },
   "geoCoordinates": {
     "latitude": 47.0,
@@ -614,7 +614,7 @@ Content-Type: application/json
     "city": "Buffalo",
     "state": "NY",
     "postalCode": "98052",
-    "countryOrRegion": "USA"
+    "countryOrRegion": "US"
   },
   "geoCoordinates": {
     "latitude": 47.0,
@@ -662,7 +662,7 @@ Content-Type: application/json
     "city": "Buffalo",
     "state": "NY",
     "postalCode": "98052",
-    "countryOrRegion": "USA"
+    "countryOrRegion": "US"
   },
   "geoCoordinates": {
     "altitude": null,
@@ -732,7 +732,7 @@ Content-Type: application/json
     "city": "Buffalo",
     "state": "NY",
     "postalCode": "98052",
-    "countryOrRegion": "USA"
+    "countryOrRegion": "US"
   },
   "geoCoordinates": {
     "altitude": null,
