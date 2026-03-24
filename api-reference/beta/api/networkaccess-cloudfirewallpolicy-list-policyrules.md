@@ -16,15 +16,13 @@ Namespace: microsoft.graph.networkaccess
 
 Get a list of the [cloudFirewallRule](../resources/networkaccess-cloudfirewallrule.md) objects and their properties for a [cloudFirewallPolicy](../resources/networkaccess-cloudfirewallpolicy.md).
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "networkaccess-cloudfirewallpolicy-list-policyrules-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "networkaccess_cloudfirewallpolicy_list_policyrules" } -->
 [!INCLUDE [permissions-table](../includes/permissions/networkaccess-cloudfirewallpolicy-list-policyrules-permissions.md)]
 
 [!INCLUDE [rbac-global-secure-access-apis-read](../includes/rbac-for-apis/rbac-global-secure-access-apis-read.md)]
@@ -63,6 +61,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_cloudfirewallrule"
@@ -71,6 +70,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/networkAccess/cloudFirewallPolicies/80b58b7d-572f-4457-8944-c804fcf3b694/policyRules
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/list-cloudfirewallrule-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
