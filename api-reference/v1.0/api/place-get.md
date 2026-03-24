@@ -366,7 +366,6 @@ GET https://graph.microsoft.com/v1.0/places/dc404124-302a-92aa-f98d-7b4deb0c1705
 
 ---
 
-
 #### Response
 The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
