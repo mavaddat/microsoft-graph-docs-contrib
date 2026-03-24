@@ -18,6 +18,7 @@ Create a new [customAuthenticationExtension](../resources/customauthenticationex
 - [onAttributeCollectionStartCustomExtension](../resources/onattributecollectionstartcustomextension.md) resource type.
 - [onAttributeCollectionSubmitCustomExtension](../resources/onattributecollectionsubmitcustomextension.md) resource type.
 - [onOtpSendCustomExtension](../resources/onOtpSendCustomExtension.md) resource type.
+- [onPasswordSubmitCustomExtension](../resources/onpasswordsubmitcustomextension.md) resource type.
 
 > [!NOTE]
 >
@@ -501,3 +502,74 @@ Content-Type: application/json
 }
 ```
 
+
+
+### Example 5: Create an onPasswordSubmitCustomExtension object
+
+#### Request
+
+The following example shows a request.
+
+<!-- {
+  "blockType": "request",
+  "name": "create_customauthenticationextension_onpasswordsubmitcustomextension"
+}
+-->
+```msgraph-interactive
+POST https://graph.microsoft.com/v1.0/identity/customAuthenticationExtensions
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.onPasswordSubmitCustomExtension",
+  "displayName": "Legacy password validator",
+  "description": "Validates passwords against a legacy authentication system for JIT migration",
+  "endpointConfiguration": {
+    "@odata.type": "#microsoft.graph.httpRequestEndpoint",
+    "targetUrl": "https://api.contoso.com/passwordvalidation"
+  },
+  "authenticationConfiguration": {
+    "@odata.type": "#microsoft.graph.azureAdTokenAuthentication",
+    "resourceId": "api://api.contoso.com/passwordvalidation"
+  },
+  "clientConfiguration": {
+    "timeoutInMilliseconds": 2000,
+    "maximumRetries": 1
+  }
+}
+```
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.customAuthenticationExtension"
+}
+-->
+``` http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/customAuthenticationExtensions/$entity",
+  "@odata.type": "#microsoft.graph.onPasswordSubmitCustomExtension",
+  "id": "6fc5012e-7665-43d6-9708-4370863f4e6e",
+  "displayName": "Legacy password validator",
+  "description": "Validates passwords against a legacy authentication system for JIT migration",
+  "behaviorOnError": null,
+  "authenticationConfiguration": {
+    "@odata.type": "#microsoft.graph.azureAdTokenAuthentication",
+    "resourceId": "api://api.contoso.com/passwordvalidation"
+  },
+  "clientConfiguration": {
+    "timeoutInMilliseconds": 2000,
+    "maximumRetries": 1
+  },
+  "endpointConfiguration": {
+    "@odata.type": "#microsoft.graph.httpRequestEndpoint",
+    "targetUrl": "https://api.contoso.com/passwordvalidation"
+  }
+}
+```
