@@ -22,7 +22,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Applications
 
-Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
+- Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
 
 ### Files
 
@@ -41,6 +41,8 @@ Introduced the Agent Identity API to support registration and management of AI a
   - Manage sponsors who can authorize and manage agent lifecycles
 
 The API also introduces supporting types including [inheritableScopes](/graph/api/resources/inheritablescopes), [allAllowedScopes](/graph/api/resources/allallowedscopes), [enumeratedScopes](/graph/api/resources/enumeratedscopes), [noScopes](/graph/api/resources/noscopes), and the **scopeCollectionKind** enumeration.
+
+Added the **createdByAppId** property to the [application](/graph/api/resources/application) and [servicePrincipal](/graph/api/resources/serviceprincipal) resources.
 
 ### Identity and access | Governance
 

@@ -15217,6 +15217,32 @@
       "CreatedDateTime": "2026-03-13T23:43:59.6139755Z",
       "WorkloadArea": "Applications",
       "SubArea": ""
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "8a034d71-45f2-4a04-a9db-90572afe81fc",
+          "ApiChange": "Property",
+          "ChangedApiName": "createdByAppId",
+          "ChangeType": "Addition",
+          "Description": "Added the **createdByAppId** property to the [application](https://learn.microsoft.com/en-us/graph/api/resources/application?view=graph-rest-1.0) resource.",
+          "Target": "application"
+        },
+        {
+          "Id": "8a034d71-45f2-4a04-a9db-90572afe81fc",
+          "ApiChange": "Property",
+          "ChangedApiName": "createdByAppId",
+          "ChangeType": "Addition",
+          "Description": "Added the **createdByAppId** property to the [servicePrincipal](https://learn.microsoft.com/en-us/graph/api/resources/servicePrincipal?view=graph-rest-1.0) resource.",
+          "Target": "servicePrincipal"
+        }
+      ],
+      "Id": "8a034d71-45f2-4a04-a9db-90572afe81fc",
+      "Cloud": "Prod",
+      "Version": "v1.0",
+      "CreatedDateTime": "2026-03-24T15:28:36.2770719Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Directory management"
     }
   ]
 }
