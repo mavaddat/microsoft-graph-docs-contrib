@@ -123,7 +123,7 @@ Missing or mismatched items → flag.
 
 ---
 
-## Phase B — Structural Integrity (BLOCKER if failing)
+## Phase B — Structural integrity (BLOCKER if failing)
 
 For EACH file:
 
@@ -146,7 +146,7 @@ Any violation = **BLOCKER**
 
 ---
 
-## Phase C — Completeness (Scope Coverage)
+## Phase C — Completeness (scope coverage)
 
 Validate against PLAN.md (or fallback):
 
@@ -166,7 +166,7 @@ Severity:
 
 ---
 
-## Phase D — Source-of-Truth Validation (Technical Accuracy)
+## Phase D — Source-of-truth validation (technical accuracy)
 
 Cross-check against CSDL/TypeSpec + API.md:
 
@@ -193,7 +193,7 @@ Severity:
 
 ---
 
-## Phase E — Examples Validation (No Hallucinations)
+## Phase E — Examples validation (No hallucinations)
 
 For each example:
 
@@ -230,7 +230,7 @@ Severity:
 
 ---
 
-## Phase G — Lint & Repo Quality
+## Phase G — Lint & repo quality
 
 - Fix markdown lint issues (if safe)
 - Remove extra blank lines
@@ -243,9 +243,9 @@ Severity:
 
 ---
 
-# Output Format (MANDATORY)
+# Output format (Mandatory)
 
-## 1. Gate Decision
+## 1. Gate decision
 
 Choose ONE:
 
