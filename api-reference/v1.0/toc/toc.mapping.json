@@ -107,6 +107,21 @@
       ]
     },
     {
+      "name": "Agents",
+      "overview": "",
+      "resources": [],
+      "childNodes": [
+          {
+            "name": "Agent identities",
+            "resources": [
+              "agentIdentityBlueprint",
+              "agentIdentityBlueprintPrincipal",
+              "agentIdentity"
+            ]
+          }
+      ]
+    },
+    {
       "name": "Backup storage",
       "shouldSort": true,
       "keywords": [
@@ -1115,7 +1130,8 @@
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
                 "onTokenIssuanceStartListener",
-                "onUserCreateStartListener"
+                "onUserCreateStartListener",
+                "onPasswordSubmitListener"
               ]
             },
             {
@@ -1210,7 +1226,8 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
-                "onTokenIssuanceStartCustomExtension"
+                "onTokenIssuanceStartCustomExtension",
+                "onPasswordSubmitCustomExtension"
               ]
             },
             {
@@ -1426,7 +1443,12 @@
         "person",
         "peopleAdminSettings",
         "insightsSettings",
+        "profileCardProperty",
+        "profileSource",
         "pronounsSettings"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -1721,7 +1743,6 @@
             "microsoft.graph.security.ediscoveryCustodian",
             "microsoft.graph.security.ediscoveryNoncustodialDataSource",
             "microsoft.graph.security.ediscoveryHoldPolicy",
-            "microsoft.graph.security.ediscoveryPurgeDataOperation",
             "microsoft.graph.security.ediscoverySearch",
             "microsoft.graph.security.ediscoveryReviewSet",
             "microsoft.graph.security.ediscoveryReviewTag",
@@ -1734,11 +1755,6 @@
                 "microsoft.graph.security.ediscoveryReviewSetQuery"
               ]
             }
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.ediscoveryAddToReviewSetOperation",
-            "microsoft.graph.security.ediscoveryEstimateOperation",
-            "microsoft.graph.security.reportFileMetadata"
           ]
         },
         {
@@ -2228,6 +2244,21 @@
             "timeRange",
             "userSolutionRoot",
             "workforceIntegrationEncryption"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenant management",
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "resources": [
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationSnapshotJob"
           ]
         }
       ]
