@@ -274,9 +274,14 @@ Use the new cloud licensing APIs to manage tenant, user, and group licensing dat
 
 Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&preserve-view=true) and [driveItem: unarchive](/graph/api/driveitem-unarchive?view=graph-rest-beta&preserve-view=true) to enable organizations to archive and unarchive [driveItem](/graph/api/resources/driveitem?view=graph-rest-beta&preserve-view=true) objects.
 
+### Identity and access | Governance
+
+Added the [previewScope](/graph/api/resources/identityGovernance-workflow?view=graph-rest-beta&preserve-view=true) relationship, [previewTaskFailures](/graph/api/identityGovernance-workflow-previewtaskfailures?view=graph-rest-beta&preserve-view=true) method, and [previewWorkflow](/graph/api/identityGovernance-workflow-previewworkflow?view=graph-rest-beta&preserve-view=true) method to the [workflow](/graph/api/resources/identitygovernance-workflow?view=graph-rest-beta&preserve-view=true) resource to support previewing Lifecycle Workflows before running them in production.
+
 ### Identity and access | Directory management
 
 Added the **managerApplications** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint?view=graph-rest-beta&preserve-view=true) resources to specify applications designated as managers of an application. On the base **application** resource, this property is read-only for third-party (3P) callers. On the **agentIdentityBlueprint** resource, manager applications can create agent blueprint principals, agent identities, and agent users for their managed agent blueprints without requiring high-privileged permissions such as `AgentIdentityBlueprintPrincipal.ReadWrite.All`.
+
 
 ### Identity and access | Identity and sign-in
 
