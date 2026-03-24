@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 Represents a handler that invokes a custom authentication extension API to validate user credentials against a legacy authentication system during the sign-in process. This handler enables Just-In-Time (JIT) migration scenarios where passwords can't be exported from the legacy system.
 
 When triggered, this handler:
-1. Checks if the user requires migration based on the specified `migrationPropertyId` custom attribute
+1. Checks if the user requires migration based on the specified **migrationPropertyI** custom attribute
 2. If migration is needed, calls the configured custom extension API with the user's credentials
 3. Upon successful validation, persists the credentials in Microsoft Entra ID and updates the migration status
 
