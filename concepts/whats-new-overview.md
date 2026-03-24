@@ -121,6 +121,11 @@ Added the [ownerlessGroupPolicy](/graph/api/resources/ownerlessgrouppolicy?view=
 
 Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. You can view snapshots and start preview jobs for analysis before running the recovery jobs. You can also monitor the status of recovery processes including successes and failures. For more information, see [Overview of Microsoft Entra Backup and Recovery APIs](/graph/api/resources/entrarecoveryservices-backup-recovery-overview).
 
+### Device and app management | Cloud PC
+
+- [Retry the upload](/graph/api/cloudpcdeviceimage-retryupload?view=graph-rest-beta&preserve-view=true) of a [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage?view=graph-rest-beta&preserve-view=true) object that previously failed.
+- Deprecated the [reupload](/graph/api/cloudpcdeviceimage-reupload?view=graph-rest-beta&preserve-view=true) method in favor of [retryUpload](/graph/api/cloudpcdeviceimage-retryupload?view=graph-rest-beta&preserve-view=true).
+
 ### Identity and access | Governance
 
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
