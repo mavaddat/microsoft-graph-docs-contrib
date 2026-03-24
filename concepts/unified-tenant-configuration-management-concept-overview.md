@@ -1,5 +1,5 @@
 ---
-title: "Overview of the Tenant Configuration Management APIs in Microsoft Graph (preview)"
+title: "Overview of the Tenant Configuration Management APIs in Microsoft Graph"
 description: "Use the Tenant Configuration Management APIs in Microsoft Graph to control and manage configuration settings for an entire organization."
 author: "swatyario"
 ms.date: 01/19/2026
@@ -8,7 +8,7 @@ doc_type: conceptual
 ms.subservice: "tenant-administration"
 ---
 
-# Overview of the Tenant Configuration Management APIs in Microsoft Graph (preview)
+# Overview of the Tenant Configuration Management APIs in Microsoft Graph
 
 In traditional Tenant Configuration Management, any administrator within an organization uses their credentials to access the resources to which they have access. However, administrators don't have full control over the tenant configuration and lack visibility into whether it deviates from the desired configuration state.
 
@@ -40,5 +40,5 @@ Looking for the API reference for this service, see [Tenant Configuration Manage
 ## Next steps
 
 - To learn how to authenticate and set up the TCM service principal, see [Set up authentication for Tenant Configuration Management APIs](/graph/utcm-authentication-setup).
-- To learn more about the Tenant Configuration Management APIs, see [Tenant Configuration Management APIs in Microsoft Graph (preview)](/graph/api/resources/unified-tenant-configuration-management-api-overview?view=graph-rest-beta&preserve-view=true).
+- To learn more about the Tenant Configuration Management APIs, see [Tenant Configuration Management APIs in Microsoft Graph](/graph/api/resources/unified-tenant-configuration-management-api-overview?view=graph-rest-beta&preserve-view=true).
 - Try the Tenant Configuration Management APIs in [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
