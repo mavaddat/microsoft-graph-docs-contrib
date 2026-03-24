@@ -15,10 +15,6 @@
         "group",
         "groupLifecyclePolicy",
         "ownerlessGroupPolicy"
-      ],
-      "complexTypes": [
-        "emailDetails",
-        "targetOwners"
       ]
     },
     {
