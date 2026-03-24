@@ -255,7 +255,7 @@ Choose ONE:
 
 ---
 
-## 2. Findings by Severity
+## 2. Findings by severity
 
 ### BLOCKER
 - [File path] — [Section]
@@ -271,7 +271,7 @@ Choose ONE:
 
 ---
 
-## 3. Actionable Feedback Rules
+## 3. Actionable feedback rules
 
 Every finding MUST include:
 
@@ -286,7 +286,7 @@ No generic suggestions.
 
 ---
 
-## 4. Mechanical Fixes (Optional)
+## 4. Mechanical fixes (optional)
 
 List ONLY safe fixes performed:
 
@@ -297,7 +297,7 @@ List ONLY safe fixes performed:
 
 ---
 
-# Final Behavior Constraints
+# Final behavior constraints
 
 - Be deterministic and strict
 - Do not speculate
