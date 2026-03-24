@@ -86,14 +86,6 @@ A chat is a collection of [chatMessages](chatmessage.md) between one or more par
 |meeting             | Indicates that the chat is associated with an online meeting. This type of chat is only created as part of the creation of an online meeting.|
 |unknownFutureValue  | Evolvable enumeration sentinel value. Don't use. |
 
-### migrationMode values
-
-| Member             | Description                                                                       |
-|:-------------------|:----------------------------------------------------------------------------------|
-| inProgress           | Chat has entered migration mode.                          |
-| completed            | Chat is out of migration mode. |
-| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.     |
-
 ## Relationships
 
 | Relationship | Type |Description|

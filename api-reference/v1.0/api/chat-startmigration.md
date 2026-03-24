@@ -19,6 +19,8 @@ You can define a minimum timestamp for content migration that enables the import
 - The **createdDateTime** can only be moved towards the past.
 - The **createdDateTime** can't be updated to a value newer than the current **createdDateTime**.
 
+[!INCLUDE [chat-support](../../includes/supported-chats-for-import.md)]
+
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
@@ -131,7 +133,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: completeMigration](chat-completemigration.md)
-- [Import message with older timestamp](channel-post-messages.md#example-2-import-messages)
+- [Import messages with an older timestamp](channel-post-messages.md#example-2-import-messages)
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)

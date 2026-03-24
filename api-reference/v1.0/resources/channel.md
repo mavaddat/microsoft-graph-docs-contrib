@@ -132,18 +132,17 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-  "description": "string",
-  "displayName": "string",
-  "id": "string (identifier)",
-  "isFavoriteByDefault": true,
-  "email": "string",
-  "webUrl": "string",
+  "createdDateTime": "String (timestamp)",
+  "description": "String",
+  "displayName": "String",
+  "email": "String",
+  "id": "String (identifier)",
+  "isArchived": "Boolean",
+  "isFavoriteByDefault": "Boolean",
   "membershipType": "String",
+  "webUrl": "String",
   "migrationMode": "String",
-  "isArchived": false,
-  "createdDateTime": "string (timestamp)",
-  "originalCreatedDateTime": "String (timestamp)",
-  "moderationSettings": { "@odata.type": "microsoft.graph.channelModerationSettings" }
+  "originalCreationDateTime": "String (timestamp)"
 }
 ```
 

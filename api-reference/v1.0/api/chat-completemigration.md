@@ -16,6 +16,8 @@ Complete the migration of external messages by removing migration mode from a [c
 
 After a **completeMigration** request is made for an existing or new chat, you can start a migration session by calling [chat: startMigration](chat-startmigration.md).
 
+[!INCLUDE [chat-support](../../includes/supported-chats-for-import.md)]
+
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
@@ -123,7 +125,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: startMigration](chat-startmigration.md)
-- [Import message with older timestamp](channel-post-messages.md#example-2-import-messages)
+- [Import messages with an older timestamp](channel-post-messages.md#example-2-import-messages)
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)
