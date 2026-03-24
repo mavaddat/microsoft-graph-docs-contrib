@@ -24,6 +24,11 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
 
+### Device and app management | Cloud PC
+
+- Use the **osVersionNumber** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) and [cloudPcGalleryImage](/graph/api/resources/cloudpcgalleryimage) resources to get the operating system version of an image.
+- Use the **sizeInGB** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) to get the size of the image in GB.
+
 ### Files
 
 - Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
