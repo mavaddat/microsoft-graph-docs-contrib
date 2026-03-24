@@ -32,7 +32,7 @@ Inherits from [microsoft.graph.entity](../resources/entity.md).
 |id| String                                                               | The unique identifier for the sensor candidate. Inherited from [microsoft.graph.entity](../resources/entity.md). Inherits from [entity](../resources/entity.md) |
 |lastSeenDateTime| DateTimeOffset                                                       | The date and time when the sensor was last seen.                                                                                                                |
 |senseClientVersion| String                                                               | The version of the Defender for Identity sensor client.  Supports `$filter` (`eq`).                                                                             |
-|sensorTypes| [microsoft.graph.security.sensorType](#sensorType-values) collection | The type of the sensor type. The possible values are: `domainController`, `adfs`,, `adcs`, `entraConnect` `unknownFutureValue`.                                 |
+|sensorTypes| [microsoft.graph.security.sensorType](#sensortype-values) collection | The type of the sensor type. The possible values are: `domainController`, `adfs`,, `adcs`, `entraConnect` `unknownFutureValue`.                                 |
 
 ### sensorType values
 
