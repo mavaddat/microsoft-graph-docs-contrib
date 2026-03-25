@@ -72,13 +72,7 @@
       "Version": "v1.0",
       "CreatedDateTime": "2026-03-20T00:00:00.0000000Z",
       "WorkloadArea": "Teamwork and communications",
-      "SubArea": "Messaging",
-      "Id": "4fbecd5b-cada-4fc2-9c1d-20e4f47a980b",
-      "ApiChange": "Method",
-      "ChangedApiName": "getAllRecordings",
-      "ChangeType": "Addition",
-      "Description": "Added the [getAllRecordings](https://learn.microsoft.com/en-us/graph/api/adhocCall-getAllRecordings?view=graph-rest-1.0) method to the [adhocCall](https://learn.microsoft.com/en-us/graph/api/resources/adhocCall?view=graph-rest-1.0) resource.",
-      "Target": "adhocCall"
+      "SubArea": "Messaging"
     },
     {
       "ChangeList": [
