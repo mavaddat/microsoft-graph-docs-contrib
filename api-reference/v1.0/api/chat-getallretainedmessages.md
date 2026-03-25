@@ -42,13 +42,6 @@ GET /users/{id}/chats/getAllRetainedMessages
 
 ## Optional query parameters
 
-The following example shows how to use the `model` query parameter with values `A` or `B` to select the preferred [licensing and payment model](/graph/teams-licenses). If you don't specify a payment model, [evaluation mode](/graph/teams-licenses#evaluation-mode-default-requirements) is used by default.
-
-```http
-GET /users/{id}/chats/getAllRetainedMessages?model=A
-GET /users/{id}/chats/getAllRetainedMessages?model=B
-```
-
 This method supports the following OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 | Name    |Description|
