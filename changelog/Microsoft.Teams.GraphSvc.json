@@ -30,34 +30,58 @@
       "ChangeList": [
         {
           "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
-          "ApiChange": "Method",
-          "ChangedApiName": "getAllRetainedMessages",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the [update](https://learn.microsoft.com/en-us/graph/api/chatmessage-update?view=graph-rest-1.0) operation of the [chatMessage](https://learn.microsoft.com/en-us/graph/api/resources/chatmessage?view=graph-rest-1.0).",
           "Target": "chatMessage"
         },
         {
           "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
-          "ApiChange": "Method",
-          "ChangedApiName": "getAllMessges",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the chat [getAllMessages](https://learn.microsoft.com/en-us/graph/api/chats-getallmessages?view=graph-rest-1.0).",
           "Target": "chatMessage"
         },
         {
           "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
-          "ApiChange": "Method",
-          "ChangedApiName": "PATCH",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the chat [getAllRetainedMessages](https://learn.microsoft.com/en-us/graph/api/chat-getallretainedmessages?view=graph-rest-1.0).",
           "Target": "chatMessage"
         },
         {
           "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
-          "ApiChange": "Method",
-          "ChangedApiName": "POST",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the channel [getAllMessages](https://learn.microsoft.com/en-us/graph/api/channel-getallmessages?view=graph-rest-1.0).",
+          "Target": "chatMessage"
+        },
+        {
+          "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
+          "ChangeType": "Deletion",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the channel [getAllRetainedMessages](https://learn.microsoft.com/en-us/graph/api/channel-getallretainedmessages?view=graph-rest-1.0).",
+          "Target": "chatMessage"
+        },
+        {
+          "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
+          "ChangeType": "Deletion",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the deletedTeam [getAllMessages](https://learn.microsoft.com/en-us/graph/api/deletedteam-getallmessages?view=graph-rest-1.0).",
+          "Target": "chatMessage"
+        },
+        {
+          "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
+          "ChangeType": "Deletion",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the [create](https://learn.microsoft.com/en-us/graph/api/subscription-post-subscriptions?view=graph-rest-1.0) operation of the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/subscription?view=graph-rest-1.0).",
           "Target": "subscription"
         }
       ],
@@ -72,34 +96,58 @@
       "ChangeList": [
         {
           "Id": "673000ad-a1e9-4103-9313-4f9e9ea9bda5",
-          "ApiChange": "Method",
-          "ChangedApiName": "getAllRetainedMessages",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) resource is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the [update](https://learn.microsoft.com/en-us/graph/api/chatmessage-update?view=graph-rest-beta) operation of the [chatMessage](https://learn.microsoft.com/en-us/graph/api/resources/chatmessage?view=graph-rest-beta).",
           "Target": "chatMessage"
         },
         {
           "Id": "673000ad-a1e9-4103-9313-4f9e9ea9bda5",
-          "ApiChange": "Method",
-          "ChangedApiName": "getAllMessges",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) resource is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the chat [getAllMessages](https://learn.microsoft.com/en-us/graph/api/chats-getallmessages?view=graph-rest-beta).",
           "Target": "chatMessage"
         },
         {
           "Id": "673000ad-a1e9-4103-9313-4f9e9ea9bda5",
-          "ApiChange": "Method",
-          "ChangedApiName": "PATCH",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) resource is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the chat [getAllRetainedMessages](https://learn.microsoft.com/en-us/graph/api/chat-getallretainedmessages?view=graph-rest-beta).",
           "Target": "chatMessage"
         },
         {
           "Id": "673000ad-a1e9-4103-9313-4f9e9ea9bda5",
-          "ApiChange": "Method",
-          "ChangedApiName": "POST",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "The [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter to the [Metered APIs](https://learn.microsoft.com/en-us/graph/teams-licenses) resource is deprecated.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the channel [getAllMessages](https://learn.microsoft.com/en-us/graph/api/channel-getallmessages?view=graph-rest-beta).",
+          "Target": "chatMessage"
+        },
+        {
+          "Id": "673000ad-a1e9-4103-9313-4f9e9ea9bda5",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
+          "ChangeType": "Deletion",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the channel [getAllRetainedMessages](https://learn.microsoft.com/en-us/graph/api/channel-getallretainedmessages?view=graph-rest-beta).",
+          "Target": "chatMessage"
+        },
+        {
+          "Id": "673000ad-a1e9-4103-9313-4f9e9ea9bda5",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
+          "ChangeType": "Deletion",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the deletedTeam [getAllMessages](https://learn.microsoft.com/en-us/graph/api/deletedteam-getallmessages?view=graph-rest-beta).",
+          "Target": "chatMessage"
+        },
+        {
+          "Id": "673000ad-a1e9-4103-9313-4f9e9ea9bda5",
+          "ApiChange": "Parameter",
+          "ChangedApiName": "model",
+          "ChangeType": "Deletion",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) parameter from the [create](https://learn.microsoft.com/en-us/graph/api/subscription-post-subscriptions?view=graph-rest-beta) operation of the [subscription](https://learn.microsoft.com/en-us/graph/api/resources/subscription?view=graph-rest-beta).",
           "Target": "subscription"
         }
       ],
