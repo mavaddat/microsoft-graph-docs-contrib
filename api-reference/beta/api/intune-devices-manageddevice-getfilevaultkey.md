@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getFileVaultKey function"
 description: "Intune Devices Manageddevice Getfilevaultkey Api ."
 author: "jaiprakashmb"

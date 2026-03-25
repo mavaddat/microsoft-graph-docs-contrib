@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List iosVppEBookAssignments"
 description: "List properties and relationships of the iosVppEBookAssignment objects."
 author: "jaiprakashmb"

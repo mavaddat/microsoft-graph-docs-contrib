@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsScoreHistories"
 description: "List properties and relationships of the userExperienceAnalyticsScoreHistory objects."
 author: "jaiprakashmb"

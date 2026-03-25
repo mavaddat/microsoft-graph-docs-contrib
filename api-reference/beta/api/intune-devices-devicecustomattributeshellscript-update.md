@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update deviceCustomAttributeShellScript"
 description: "Update the properties of a deviceCustomAttributeShellScript object."
 author: "jaiprakashmb"

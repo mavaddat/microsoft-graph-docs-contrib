@@ -1,4 +1,4 @@
-﻿---
+---
 title: "updateRelationships action"
 description: "Intune Apps Mobileapp Updaterelationships Api ."
 author: "jaiprakashmb"

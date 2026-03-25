@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create managedDeviceCleanupRule"
 description: "Create a new managedDeviceCleanupRule object."
 author: "jaiprakashmb"

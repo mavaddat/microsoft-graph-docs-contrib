@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete deviceManagementScript"
 description: "Deletes a deviceManagementScript."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List mdmWindowsInformationProtectionPolicies"
 description: "List properties and relationships of the mdmWindowsInformationProtectionPolicy objects."
 author: "jaiprakashmb"

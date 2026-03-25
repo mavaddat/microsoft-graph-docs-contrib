@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get androidManagedStoreWebApp"
 description: "Read properties and relationships of the androidManagedStoreWebApp object."
 author: "jaiprakashmb"

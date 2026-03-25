@@ -13,6 +13,15 @@ ms.custom: sfi-ropc-nochange
 
 Namespace: microsoft.graph
 
+### notifyMembers values
+
+|Member|
+|:---|
+|all|
+|allowSelected|
+|blockSelected|
+|unknownFutureValue|
+
 ### structuredDataEntryValueType values
 
 |Member|
@@ -488,6 +497,22 @@ Namespace: microsoft.graph
 | approved |
 | rejected |
 | cancelled |
+| unknownFutureValue |
+
+### plannerTaskChatMentionType values
+
+| Member |
+| -------------------- |
+| user |
+| application |
+| unknownFutureValue |
+
+### plannerTaskChatMessageType values
+
+| Member |
+| -------------------- |
+| richTextHtml |
+| plainText |
 | unknownFutureValue |
 
 ### applicationKeyOrigin values

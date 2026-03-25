@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceEnrollmentNotificationConfigurations"
 description: "List properties and relationships of the deviceEnrollmentNotificationConfiguration objects."
 author: "jaiprakashmb"

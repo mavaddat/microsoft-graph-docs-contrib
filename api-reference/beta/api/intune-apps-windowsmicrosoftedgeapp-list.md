@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List windowsMicrosoftEdgeApps"
 description: "List properties and relationships of the windowsMicrosoftEdgeApp objects."
 author: "jaiprakashmb"

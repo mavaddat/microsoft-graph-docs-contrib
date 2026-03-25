@@ -1,4 +1,4 @@
-﻿---
+---
 title: "deviceConfigurationUserActivity function"
 description: "Metadata for the device configuration user activity report"
 author: "jaiprakashmb"

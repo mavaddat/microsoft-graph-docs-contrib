@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update macOSMicrosoftDefenderApp"
 description: "Update the properties of a macOSMicrosoftDefenderApp object."
 author: "jaiprakashmb"

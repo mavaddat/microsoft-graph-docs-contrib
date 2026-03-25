@@ -1,4 +1,4 @@
-﻿---
+---
 title: "assign action"
 description: "Intune Apps Ioslobappprovisioningconfiguration Assign Api ."
 author: "jaiprakashmb"

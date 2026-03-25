@@ -1,4 +1,4 @@
-﻿---
+---
 title: "syncInventory action"
 description: "Sync the driver inventory of a WindowsDriverUpdateProfile."
 author: "jaiprakashmb"

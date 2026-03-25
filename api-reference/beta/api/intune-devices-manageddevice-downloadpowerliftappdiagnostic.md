@@ -1,4 +1,4 @@
-﻿---
+---
 title: "downloadPowerliftAppDiagnostic action"
 description: "Intune Devices Manageddevice Downloadpowerliftappdiagnostic Api ."
 author: "jaiprakashmb"

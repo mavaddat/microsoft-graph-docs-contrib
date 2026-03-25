@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete mobileAppCategory"
 description: "Deletes a mobileAppCategory."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "rotateRecoveryLockPasscode action"
 description: "Rotates the recovery lock passcode for the specified macOS device"
 author: "jaiprakashmb"

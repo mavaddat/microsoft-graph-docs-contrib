@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List androidForWorkMobileAppConfigurations"
 description: "List properties and relationships of the androidForWorkMobileAppConfiguration objects."
 author: "jaiprakashmb"

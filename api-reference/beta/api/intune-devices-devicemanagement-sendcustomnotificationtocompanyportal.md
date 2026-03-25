@@ -1,4 +1,4 @@
-﻿---
+---
 title: "sendCustomNotificationToCompanyPortal action"
 description: "Intune Devices Devicemanagement Sendcustomnotificationtocompanyportal Api ."
 author: "jaiprakashmb"

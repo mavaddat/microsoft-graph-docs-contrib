@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete macOSDmgApp"
 description: "Deletes a macOSDmgApp."
 author: "jaiprakashmb"

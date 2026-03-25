@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete macOSLobApp"
 description: "Deletes a macOSLobApp."
 author: "jaiprakashmb"

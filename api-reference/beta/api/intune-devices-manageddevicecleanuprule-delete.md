@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete managedDeviceCleanupRule"
 description: "Deletes a managedDeviceCleanupRule."
 author: "jaiprakashmb"

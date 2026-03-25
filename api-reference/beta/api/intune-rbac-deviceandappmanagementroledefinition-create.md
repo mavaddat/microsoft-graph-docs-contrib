@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create deviceAndAppManagementRoleDefinition"
 description: "Create a new deviceAndAppManagementRoleDefinition object."
 author: "jaiprakashmb"

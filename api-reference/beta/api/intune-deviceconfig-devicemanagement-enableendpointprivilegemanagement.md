@@ -1,4 +1,4 @@
-﻿---
+---
 title: "enableEndpointPrivilegeManagement action"
 description: "DEPRECATED - DO NOT USE. (Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C))."
 author: "jaiprakashmb"

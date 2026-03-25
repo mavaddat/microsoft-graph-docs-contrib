@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create macOSMicrosoftEdgeApp"
 description: "Create a new macOSMicrosoftEdgeApp object."
 author: "jaiprakashmb"
