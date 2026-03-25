@@ -13,7 +13,7 @@ ms.date: 03/25/2026
 
 # Use Microsoft MCP Server for Enterprise from Copilot Studio
 
-The [Microsoft MCP Server for Enterprise](/graph/mcp-server/overview) enables AI agents to query enterprise data in your Microsoft Entra tenant by using natural language. In this article, you learn how to connect a Microsoft Copilot Studio agent to the Microsoft MCP Server for Enterprise using a custom connector.
+The [Microsoft MCP Server for Enterprise](/graph/mcp-server/overview) enables AI agents to query enterprise data in your Microsoft Entra tenant by using natural language. Learn how to connect a Microsoft Copilot Studio agent to the Microsoft MCP Server for Enterprise using a custom connector.
 
 ## Prerequisites
 
@@ -125,9 +125,6 @@ Configure federated credentials on your app registration so the custom connector
     | **Name** | Use the exact name of the custom connector (for example, `MCP-Server-for-Enterprise`). |
 
 1. Select **Add**.
-
-> [!IMPORTANT]
-> If any of the federated credential fields are set incorrectly, the connection fails. Verify that the **Issuer**, **Subject**, and **Name** values match the managed identity values exactly.
 
 ## Test the connection
 
