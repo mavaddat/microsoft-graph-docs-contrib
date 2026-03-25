@@ -30,12 +30,12 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|defaultPasskeyProfile|String|The non-deletable baseline passkey profile, within the passkey profile collection. It is automatically created when migrating to passkey profiles and initially mirrors the tenant's legacy global passkey (FIDO2) authentication methods policy settings.|
+|defaultPasskeyProfile|String|The non-deletable baseline passkey profile, within the passkey profile collection. It's automatically created when migrating to passkey profiles and initially mirrors the tenant's legacy global passkey (FIDO2) authentication methods policy settings.|
 |excludeTargets|[excludeTarget](../resources/excludetarget.md) collection|Groups of users that are excluded from the policy.|
 |id|String|The authentication method policy identifier.|
-|isAttestationEnforced|Boolean|Determines whether attestation must be enforced for passkey (FIDO2) registration. This property is deprecated and will be removed in October 2027. Please use **passkeyProfiles** property.|
+|isAttestationEnforced|Boolean|Determines whether attestation must be enforced for passkey (FIDO2) registration. This property is deprecated and will be removed in October 2027. Use **passkeyProfiles** property.|
 |isSelfServiceRegistrationAllowed|Boolean|Determines if users can register new passkeys (FIDO2).|
-|keyRestrictions|[fido2KeyRestrictions](../resources/fido2keyrestrictions.md)|Controls whether key restrictions are enforced on passkeys (FIDO2), either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator. This property is deprecated and will be removed in October 2027. Please use **passkeyProfiles** property.|
+|keyRestrictions|[fido2KeyRestrictions](../resources/fido2keyrestrictions.md)|Controls whether key restrictions are enforced on passkeys (FIDO2), either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (for example, make and model) of the authenticator. This property is deprecated and will be removed in October 2027. Use the **passkeyProfiles** property.|
 |state|authenticationMethodState|The possible values are: `enabled`, `disabled`.|
 
 ## Relationships
