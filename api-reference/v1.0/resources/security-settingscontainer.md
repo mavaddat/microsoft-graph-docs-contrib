@@ -34,7 +34,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.security.settingsContainer",
   "baseType": "microsoft.graph.entity",
-  "openType": "id"
+  "openType": false
 }
 -->
 ``` json
