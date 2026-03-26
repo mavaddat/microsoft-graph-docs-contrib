@@ -53,6 +53,7 @@ Represents a defined collection of Azure resource information that can be used t
 |subscriptionName|String|The name of the Azure subscription is used to create an Azure network connection. Read-only.|
 |virtualNetworkId|String|The unique identifier of the target virtual network used associated with the on-premises network connectivity for Cloud PCs. Required format: “/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}” |
 |virtualNetworkLocation|String|Indicates the resource location of the target virtual network. For example, the location can be eastus2, westeurope, etc. Read-only (computed value). |
+|scopeIds|String collection|The scope IDs of corresponding permission. Currently, it's Intune scope tag ID.|
 
 ### cloudPcManagementService values
 
@@ -132,12 +133,16 @@ The following example shows the resource type.
   },
   "id": "String (identifier)",
   "inUse": "Boolean",
+  "inUseByCloudPc": "Boolean",
+  "healthCheckPaused": "Boolean",
+  "managedBy": "String",
   "organizationalUnit": "String",
   "resourceGroupId": "String",
   "subnetId": "String",
   "subscriptionId": "String",
   "subscriptionName": "String",
   "connnecetionType": "String",
-  "virtualNetworkId": "String"
+  "virtualNetworkId": "String",
+  "scopeIds": ["String"]
 }
 ```
