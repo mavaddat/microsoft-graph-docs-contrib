@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 03/04/2026
+ms.date: 03/18/2026
 ms.topic: whats-new
 ---
 
@@ -22,20 +22,42 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Applications
 
-- Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
-- Added the **trafficRoutingMethod** property to the [onPremisesPublishing](/graph/api/resources/onpremisespublishing?view=graph-rest-beta&preserve-view=true) resource to control how traffic is distributed across multiple connectors in a connector group in Microsoft Entra app proxy.
+Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
+
+### Calendars | Places
+
+Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+
+### Device and app management | Cloud PC
+
+- Use the **osVersionNumber** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) and [cloudPcGalleryImage](/graph/api/resources/cloudpcgalleryimage) resources to get the operating system version of an image.
+- Use the **sizeInGB** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) to get the size of the image in GB.
 
 ### Files
 
-Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
+- Use the following new container columns APIs added to further support structured file storage in SharePoint Embedded applications:
   - [Get column](/graph/api/filestoragecontainer-get-column)
   - [Update column](/graph/api/filestoragecontainer-update-column)
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
+- [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
+- Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
-### Identity and access | Governance
+### Identity and access | Directory management
 
-- Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
-- Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
+Introduced the Agent Identity API to support registration and management of AI agents in Microsoft Entra ID. This API enables agent builders and tenant admins to:
+  - Create [agent identity blueprints](/graph/api/resources/agentidentityblueprint) as base definitions for agents
+  - Configure [inheritable permissions](/graph/api/resources/inheritablepermission) that control which scopes can be inherited by agent instances
+  - Create [agent identity blueprint principals](/graph/api/resources/agentidentityblueprintprincipal) as tenant-specific representations
+  - Create multiple [agent identity](/graph/api/resources/agentidentity) instances from a single blueprint for multi-instancing scenarios
+  - Manage sponsors who can authorize and manage agent lifecycles
+
+The API also introduces supporting types including [inheritableScopes](/graph/api/resources/inheritablescopes), [allAllowedScopes](/graph/api/resources/allallowedscopes), [enumeratedScopes](/graph/api/resources/enumeratedscopes), [noScopes](/graph/api/resources/noscopes), and the **scopeCollectionKind** enumeration.
+
+### Identity and access | Identity and sign-in
+
+- Added new authentication event resources to support Just-In-Time (JIT) user migration scenarios from legacy authentication systems:
+  - Use the [onPasswordSubmitListener](/graph/api/resources/onpasswordsubmitlistener) resource to configure authentication event listeners that trigger during password submission.
+  - Use the [onPasswordSubmitCustomExtension](/graph/api/resources/onpasswordsubmitcustomextension) resource to configure custom extensions that validate passwords against external legacy authentication systems.
 
 ### People and workplace intelligence | People admin settings
 
@@ -45,37 +67,95 @@ Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable a
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
 
+### Teamwork and communications | Calls and online meetings
+
+Added [ad hoc call](/graph/api/resources/adhoccall) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
+
+- `communications/adhocCalls/{adhocCallId}/transcripts`
+- `users/{userId}/adhocCalls/getAllTranscripts`
+- `communications/adhocCalls/{adhocCallId}/recordings`
+- `users/{userId}/adhocCalls/getAllRecordings`
+
+For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
+
+### Tenant management | Configuration management
+
+The new Tenant Configuration Management APIs in Microsoft Graph allow administrators to control and manage configuration settings across a single workload or multiple workloads within an organization. To learn more about supported use cases, see [Use the Tenant Configuration Management APIs in Microsoft Graph](/graph/api/resources/unified-tenant-configuration-management-api-overview).
+
 ## March 2026: New in preview only
-
-### Employee experience | Employee engagement
-
-Introducing new [Follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [Unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [List Followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), [List Following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.
 
 ### Applications
 
-Using the **signInAudience** and **signInAudienceRestrictions** properties to limit where an [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
+- Using the **signInAudience** and **signInAudienceRestrictions** properties to limit where an [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
+- Added the **trafficRoutingMethod** property to the [onPremisesPublishing](/graph/api/resources/onpremisespublishing?view=graph-rest-beta&preserve-view=true) resource to control how traffic is distributed across multiple connectors in a connector group in Microsoft Entra app proxy.
 
 ### Backup storage
 
-Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
+- Use the **backupRetentionPeriodInDays** property on [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get the retention period of the backup, in days.
+- Added the `includeNewerItems` member as supported value for the **tags** property on [restorePoint](/graph/api/resources/restorepoint?view=graph-rest-beta&preserve-view=true) to get a restore point within a specified time period that includes any newer items created during that period.
+
+### Calendars | Places
+
+Added a known issue of RBAC in [Places update API](/graph/api/place-update?view=graph-rest-beta&preserve-view=true): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+
+### Device and app management | Cloud PC
+
+- Added `underServiceMaintenance` and `inUse` as new supported values for the **cloudPcConnectivityStatus** enumeration. Use these values with the **status** property on [cloudPcConnectivityResult](/graph/api/resources/cloudpcconnectivityresult?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is temporarily unavailable for service-initiated maintenance or is currently in use by a user.
+- Added [configureAgent](/graph/api/cloudpcexternalpartner-configureagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+- Added [deployAgent](/graph/api/cloudpcexternalpartner-deployagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+- Added [retrieveDeployAgentActionResults](/graph/api/cloudpcexternalpartner-retrievedeployagentactionresults?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+- Added [retrieveActionReports](/graph/api/cloudpcexternalpartner-retrieveactionreports?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+- Added [cloudPcExternalPartnerAgentSetting](/graph/api/resources/cloudpcexternalpartneragentsetting?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+- Added [cloudPcExternalPartnerActionResult](/graph/api/resources/cloudpcexternalpartneractionresult?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+- Added [cloudPcExternalPartnerActionReport](/graph/api/resources/cloudpcexternalpartneractionreport?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
+- [Retry the upload](/graph/api/cloudpcdeviceimage-retryupload?view=graph-rest-beta&preserve-view=true) of a [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage?view=graph-rest-beta&preserve-view=true) object that previously failed.
+- Deprecated the [reupload](/graph/api/cloudpcdeviceimage-reupload?view=graph-rest-beta&preserve-view=true) method in favor of [retryUpload](/graph/api/cloudpcdeviceimage-retryupload?view=graph-rest-beta&preserve-view=true).
+
+### Employee experience | Employee engagement
+
+Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [list followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), and [list following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.
 
 ### Files
 
-Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel`, `DELETE /me/drive/items/{item-id}/retentionLabel`, and `DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel` endpoints to the [driveItem: removeRetentionLabel](/graph/api/driveitem-removeretentionlabel?view=graph-rest-beta&preserve-view=true) API.
+- Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel`, `DELETE /me/drive/items/{item-id}/retentionLabel`, and `DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel` endpoints to the [driveItem: removeRetentionLabel](/graph/api/driveitem-removeretentionlabel?view=graph-rest-beta&preserve-view=true) API.
+- [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
+- Use the [list](/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta&preserve-view=true), [create](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta&preserve-view=true), [get](/graph/api/filestoragecontainertype-get-permission?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/filestoragecontainertype-delete-permissions?view=graph-rest-beta&preserve-view=true) APIs to manage user permissions for SharePoint Embedded [file storage container types](/graph/api/resources/filestoragecontainertype?view=graph-rest-beta&preserve-view=true).
+- [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
+- Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
 
-### Files | File storage container
+### Groups
 
-[Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
+Added the [ownerlessGroupPolicy](/graph/api/resources/ownerlessgrouppolicy?view=graph-rest-beta&preserve-view=true) resource and related API operations to enable IT administrators to configure policies for managing groups that have lost their sole owner. Use this API to send actionable notification emails to active members of ownerless groups to accept ownership.
+
+### Identity and access | Directory management
+
+Introduced the Entra Backup and Recovery APIs to enable IT administrators to back up and restore Microsoft Entra ID tenant data. You can view snapshots and start preview jobs for analysis before running the recovery jobs. You can also monitor the status of recovery processes including successes and failures. For more information, see [Overview of Microsoft Entra Backup and Recovery APIs](/graph/api/resources/entrarecoveryservices-backup-recovery-overview).
 
 ### Identity and access | Governance
 
-Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
+Use the **administrationScopeTargets** relationship on the [workflowBase](/graph/api/resources/identitygovernance-workflowbase), [workflow](/graph/api/resources/identitygovernance-workflow), and [workflowVersion](/graph/api/resources/identitygovernance-workflowversion) resources to specify the [administrative units](/graph/api/resources/administrativeunit) in the scope of a lifecycle workflow.
+- Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
+- Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
 ### Identity and access | Network access
 
 - Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
 - Added the [crossTenantAccessType](/graph/api/resources/networkaccess-crosstenantaccesstype?view=graph-rest-beta&preserve-view=true) enumeration type.
 - Added the [deviceJoinType](/graph/api/resources/networkaccess-devicejointype?view=graph-rest-beta&preserve-view=true) enumeration type.
+- Added the Cloud Firewall APIs to manage firewall policies, rules, and policy links for Microsoft Entra Global Secure Access. Use the following new resources and their associated APIs:
+  - Use the [cloudFirewallPolicy](/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta&preserve-view=true) resource and its associated methods to create and manage cloud firewall policies.
+  - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
+  - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
+
+### Tenant management | Governance
+
+Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
+- Activating invitation reception and related tenant discovery
+- Establishing governance relationships between a governing tenant and a governed tenant
+- Tracking established relationships 
+- Configure relationship policies
+
+For more information, see [Overview of Tenant Governance APIs](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
 ## February 2026: New and generally available
 
@@ -94,24 +174,10 @@ Updated the admin consent requirement for the following delegated permissions re
 - Added the **resourceBehaviorOptions** and **resourceProvisioningOptions** properties to the [group](/graph/api/resources/group) resource. These properties enable you to specify group behaviors and associated resources for a Microsoft 365 group.
 - Added a known issue: For soft deleted security groups, the **securityEnabled** property returns `false` instead of `true`. To identify the group type, use the **groupTypes** property where `["Unified"]` indicates a Microsoft 365 group and an empty array (`[]`) indicates a security group. For more information, see [Get deleted item](/graph/api/directory-deleteditems-get) and [List deleted items](/graph/api/directory-deleteditems-list).
 
-### Device and app management | Cloud PC
-
-- Added [configureAgent](/graph/api/cloudpcexternalpartner-configureagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-- Added [deployAgent](/graph/api/cloudpcexternalpartner-deployagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-
-- Added [retrieveDeployAgentActionResults](/graph/api/cloudpcexternalpartner-retrievedeployagentactionresults?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-
-- Added [retrieveActionReports](/graph/api/cloudpcexternalpartner-retrieveactionreports?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-
-- Added [cloudPcExternalPartnerAgentSetting](/graph/api/resources/cloudpcexternalpartneragentsetting?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-
-- Added [cloudPcExternalPartnerActionResult](/graph/api/resources/cloudpcexternalpartneractionresult?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-
-- Added [cloudPcExternalPartnerActionReport](/graph/api/resources/cloudpcexternalpartneractionreport?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
-
 ### Identity and access | Governance
 
-- Added `privilegeLevel` as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
+- Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
+- Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
 
 ### Identity and access | Identity and sign-in
 
@@ -141,6 +207,20 @@ Use the message trace API to track the flow of email messages through your Excha
 Updated the admin consent requirement for the following delegated permissions related to threat submissions:
 - The `ThreatSubmission.Read` delegated permission now requires admin consent.
 - The `ThreatSubmission.ReadWrite` delegated permission now requires admin consent.
+
+### Tasks and plans
+
+Added support for chat messaging on Planner tasks, enabling users to create, update, delete, and react to messages directly on tasks. Use the following new resources and APIs:
+- [plannerTaskChatMessage](/graph/api/resources/plannertaskchatmessage?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatMention](/graph/api/resources/plannertaskchatmention?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatReaction](/graph/api/resources/plannertaskchatreaction?view=graph-rest-beta&preserve-view=true)
+- [plannerTaskChatReactionEvent](/graph/api/resources/plannertaskchatreactionevent?view=graph-rest-beta&preserve-view=true)
+- [List messages](/graph/api/plannertask-list-messages?view=graph-rest-beta&preserve-view=true)
+- [Create message](/graph/api/plannertask-post-messages?view=graph-rest-beta&preserve-view=true)
+- [Update message](/graph/api/plannertaskchatmessage-update?view=graph-rest-beta&preserve-view=true)
+- [Delete message](/graph/api/plannertaskchatmessage-delete?view=graph-rest-beta&preserve-view=true)
+- [setReaction](/graph/api/plannertaskchatmessage-setreaction?view=graph-rest-beta&preserve-view=true)
+- [unsetReaction](/graph/api/plannertaskchatmessage-unsetreaction?view=graph-rest-beta&preserve-view=true)
 
 ### Teamwork and communications | Administration
 
@@ -184,6 +264,10 @@ The granular restore process is designed to be simple and efficient and consists
   - Only the selected items are restored to their previous state, leaving the rest of the site or drive unchanged.  
   - You can create a [SharePoint granular restore session](/graph/api/backuprestoreroot-post-sharepointrestoresessions?view=graph-rest-beta&preserve-view=true#example-2-create-a-granular-restore-session) or a [OneDrive for Business granular restore session](/graph/api/backuprestoreroot-post-onedriveforbusinessrestoresessions?view=graph-rest-beta&preserve-view=true#example-2-create-a-granular-restore-session).
 
+### Device and app management | Cloud licensing
+
+Use the new cloud licensing APIs to manage tenant, user, and group licensing data for Microsoft 365 services. These APIs provide programmatic access to allotments, assignments, assignment errors, subscription lifecycles, and waiting members. For more information, see [Use the cloud licensing API in Microsoft Graph (preview)](/graph/api/resources/cloud-licensing-api-overview?view=graph-rest-beta&preserve-view=true).
+
 ### Files
 
 - Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&preserve-view=true) and [driveItem: unarchive](/graph/api/driveitem-unarchive?view=graph-rest-beta&preserve-view=true) to enable organizations to archive/unarchive driveItems.
@@ -192,13 +276,14 @@ Added support for protection policy offboarding status and timestamp tracking in
 - Added the **offboardRequestedDateTime** property to the [protectionPolicyBase](/graph/api/resources/protectionpolicybase?view=graph-rest-beta&preserve-view=true) resource.
 - Added the `offboardRequested` and `offboarded` values to the [protectionPolicyStatus](/graph/api/resources/protectionpolicybase?view=graph-rest-beta&preserve-view=true#protectionpolicystatus-values) enumeration.
 
-### Device and app management | Cloud licensing
+### Identity and access | Directory management
 
-Use the new cloud licensing APIs to manage tenant, user, and group licensing data for Microsoft 365 services. These APIs provide programmatic access to allotments, assignments, assignment errors, subscription lifecycles, and waiting members. For more information, see [Use the cloud licensing API in Microsoft Graph (preview)](/graph/api/resources/cloud-licensing-api-overview?view=graph-rest-beta&preserve-view=true).
+Added the **managerApplications** property to the [application](/graph/api/resources/application?view=graph-rest-beta&preserve-view=true) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint?view=graph-rest-beta&preserve-view=true) resources to specify applications designated as managers of an application. On the base **application** resource, this property is read-only for third-party (3P) callers. On the **agentIdentityBlueprint** resource, manager applications can create agent blueprint principals, agent identities, and agent users for their managed agent blueprints without requiring high-privileged permissions such as `AgentIdentityBlueprintPrincipal.ReadWrite.All`.
 
-### Files
 
-Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&preserve-view=true) and [driveItem: unarchive](/graph/api/driveitem-unarchive?view=graph-rest-beta&preserve-view=true) to enable organizations to archive and unarchive [driveItem](/graph/api/resources/driveitem?view=graph-rest-beta&preserve-view=true) objects.
+### Identity and access | Governance
+
+Added the [previewScope](/graph/api/resources/identityGovernance-workflow?view=graph-rest-beta&preserve-view=true) relationship, [previewTaskFailures](/graph/api/identityGovernance-workflow-previewtaskfailures?view=graph-rest-beta&preserve-view=true) method, and [previewWorkflow](/graph/api/identityGovernance-workflow-previewworkflow?view=graph-rest-beta&preserve-view=true) method to the [workflow](/graph/api/resources/identitygovernance-workflow?view=graph-rest-beta&preserve-view=true) resource to support previewing Lifecycle Workflows before running them in production.
 
 ### Identity and access | Identity and sign-in
 
@@ -212,10 +297,6 @@ Added [driveItem: archive](/graph/api/driveitem-archive?view=graph-rest-beta&pre
 ### Search
 
 Added the **principal** and **principalCollection** data types to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) resource to specify the data type for people‑related property items in the external connection.
-
-### Tasks and plans
-
-Use the extended properties API to store or get custom data in the [todoTaskList](/graph/api/resources/todotasklist?view=graph-rest-beta&preserve-view=true#methods) resource.
 
 ### Security | Data security and compliance
 
@@ -237,15 +318,11 @@ Enhancements to the [detonationDetails](/graph/api/resources/security-detonation
 - The **detonationBehaviourDetails** property is deprecated and will stop returning data in March 2026. Use the **detonationBehaviourDetailsV2** property instead.
 - Added the `moveToQuarantine` member to the **remediationAction** enumeration. Use the `Prefer: include-unknown-enum-members` request header to access this evolvable enum member.
 
-### Search
+### Tasks and plans
 
-Added **Principal** and  **PrincipalCollection** data types to the [externalConnection](/graph/api/resources/externalconnectors-externalconnection?view=graph-rest-beta&preserve-view=true) to specify as the data type people property related items in the external connection.
+Use the extended properties API to store or get custom data in the [todoTaskList](/graph/api/resources/todotasklist?view=graph-rest-beta&preserve-view=true#methods) resource.
 
 ## January 2026: New and generally available
-
-### Identity and access | Governance
-
-Use the **administrationScopeTargets** relationship on the [workflowBase](/graph/api/resources/identitygovernance-workflowbase), [workflow](/graph/api/resources/identitygovernance-workflow), and [workflowVersion](/graph/api/resources/identitygovernance-workflowversion) resources to specify the [administrative units](/graph/api/resources/administrativeunit) in the scope of a lifecycle workflow.
 
 ### Identity and access | Identity and sign-in
 
@@ -299,14 +376,6 @@ The **allowedTenantIds** property on [allowedTenantsAudience](/graph/api/resourc
 - Added the [entraIdProtectionRiskyUserApproval](/graph/api/resources/entraidprotectionriskyuserapproval) resource to represent the approval configuration for risky users detected by Microsoft Entra ID Protection.
 - Added the [insiderRiskyUserApproval](/graph/api/resources/insiderriskyuserapproval) resource to represent the approval configuration for risky users detected by Microsoft Purview Insider Risk Management.
 
-### Identity and access | Identity and sign-in
-
-Added the `microsoftRevokedSessions` value to the [riskDetail](/graph/api/resources/riskdetail) enumeration to indicate that Microsoft revoked sessions. This enumeration member applies to the following Microsoft Entra Identity Protection resources: [riskDetection](/graph/api/resources/riskdetection?view=graph-rest-beta&preserve-view=true), [riskUserActivity](/graph/api/resources/riskuseractivity), [riskyUser](/graph/api/resources/riskyuser?view=graph-rest-beta&preserve-view=true), and [signIn](/graph/api/resources/signin?view=graph-rest-beta&preserve-view=true).
-- Added `mexico` as a new supported value for the **cloudPcGeographicLocationType** enumeration type. This enum is the return type for the **geographicLocationType** property on [cloudPcDomainJoinConfiguration](/graph/api/resources/cloudpcdomainjoinconfiguration?view=graph-rest-beta&preserve-view=true) and [cloudPcSupportedRegion](/graph/api/resources/cloudpcsupportedregion?view=graph-rest-beta&preserve-view=true).
-- Added the `cloudPCInventoryReport` member to the **cloudPcReportName** enumeration type. This enum is the return type for the **reportName** property on [cloudPcExportJob](/graph/api/resources/cloudPcExportJob?view=graph-rest-beta&preserve-view=true),  [getFrontlineReport action](/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta&preserve-view=true), and [getCloudPcRecommendationReports action](/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-beta&preserve-view=true).
-- Use the **category** property on [cloudPcSourceDeviceImage](/graph/api/resources/cloudpcsourcedeviceimage?view=graph-rest-beta&preserve-view=true) to get the category of the source image that is requested. For more information, see [Get cloudPcSourceDeviceImage objects with a specific category](/graph/api/cloudpcdeviceimage-getsourceimages?view=graph-rest-beta&preserve-view=true#example-2-get-cloudpcsourcedeviceimage-objects-with-a-specific-category).
-- Added `refreshPolicyConfiguration` as a supported value for the **status** property on the [cloudPC](/graph/api/resources/cloudpc?view=graph-rest-beta&preserve-view=true) and [cloudPcStatusSummary](/graph/api/resources/cloudpcstatussummary?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is in the process of refreshing the new policy configurations.
-
 ### Device and app management | Device updates
 
 Added a new approval and deployment management model for Windows quality updates in Autopatch-managed environments. You can now define quality update policies with customizable approval rules, assign deployment rings to group devices for phased rollout, and manage the approval status of update content before deploying to devices. The following resources provide more information:
@@ -322,6 +391,11 @@ Use the **welcomeMessageEnabled** property on the [group](/graph/api/resources/g
 
 ### Identity and access | Identity and sign-in
 
+Added the `microsoftRevokedSessions` value to the [riskDetail](/graph/api/resources/riskdetail) enumeration to indicate that Microsoft revoked sessions. This enumeration member applies to the following Microsoft Entra Identity Protection resources: [riskDetection](/graph/api/resources/riskdetection?view=graph-rest-beta&preserve-view=true), [riskUserActivity](/graph/api/resources/riskuseractivity), [riskyUser](/graph/api/resources/riskyuser?view=graph-rest-beta&preserve-view=true), and [signIn](/graph/api/resources/signin?view=graph-rest-beta&preserve-view=true).
+- Added `mexico` as a new supported value for the **cloudPcGeographicLocationType** enumeration type. This enum is the return type for the **geographicLocationType** property on [cloudPcDomainJoinConfiguration](/graph/api/resources/cloudpcdomainjoinconfiguration?view=graph-rest-beta&preserve-view=true) and [cloudPcSupportedRegion](/graph/api/resources/cloudpcsupportedregion?view=graph-rest-beta&preserve-view=true).
+- Added the `cloudPCInventoryReport` member to the **cloudPcReportName** enumeration type. This enum is the return type for the **reportName** property on [cloudPcExportJob](/graph/api/resources/cloudPcExportJob?view=graph-rest-beta&preserve-view=true),  [getFrontlineReport action](/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta&preserve-view=true), and [getCloudPcRecommendationReports action](/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-beta&preserve-view=true).
+- Use the **category** property on [cloudPcSourceDeviceImage](/graph/api/resources/cloudpcsourcedeviceimage?view=graph-rest-beta&preserve-view=true) to get the category of the source image that is requested. For more information, see [Get cloudPcSourceDeviceImage objects with a specific category](/graph/api/cloudpcdeviceimage-getsourceimages?view=graph-rest-beta&preserve-view=true#example-2-get-cloudpcsourcedeviceimage-objects-with-a-specific-category).
+- Added `refreshPolicyConfiguration` as a supported value for the **status** property on the [cloudPC](/graph/api/resources/cloudpc?view=graph-rest-beta&preserve-view=true) and [cloudPcStatusSummary](/graph/api/resources/cloudpcstatussummary?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is in the process of refreshing the new policy configurations.
 - Added `riskRemediation` as a new member to the [conditionalAccessGrantControl](/graph/api/resources/conditionalaccessgrantcontrols?view=graph-rest-beta&preserve-view=true#builtincontrols-property) enumeration. This value allows users to self-remediate their user risk through conditional access policies.
 - Use the **groupSyncInbound** property on [crossTenantIdentitySyncPolicyPartner](/graph/api/resources/crosstenantidentitysyncpolicypartner?view=graph-rest-beta&preserve-view=true) to define whether groups can be synchronized from a partner tenant in cross-tenant access policy settings.
 
@@ -333,9 +407,6 @@ Use the [userConfiguration](/graph/api/resources/userconfiguration) resource and
 
 Removed the **conditionalAccessAudience** resource type. The return type of the **conditionalAccessAudiences** property of the [signIn resource type](/graph/api/resources/signin) is a collection of String objects and not the **conditionalAccessAudience** complex type.
 Use the message trace API to track the flow of email messages through your Exchange Online organization. For more information, see [exchangeMessageTrace](/graph/api/resources/exchangemessagetrace?view=graph-rest-beta&preserve-view=true).
-
-### Reports | Identity and access reports
-
 Added `qrCode` as a new supported value for the **usageAuthMethod** enumeration which is the type for the **authMethod** property on [credentialUsageSummary](/graph/api/resources/credentialusagesummary?view=graph-rest-beta&preserve-view=true), [userCredentialUsageDetails](/graph/api/resources/usercredentialusagedetails?view=graph-rest-beta&preserve-view=true), [userEventsSummary](/graph/api/resources/usereventssummary?view=graph-rest-beta&preserve-view=true), and [userRegistrationActivitySummary](/graph/api/resources/userregistrationactivitysummary?view=graph-rest-beta&preserve-view=true) resources. This value represents the use of the [QR code](/graph/api/resources/qrcodepinauthenticationmethod?view=graph-rest-beta&preserve-view=true) as an authentication method.
 
 ### Security | Alerts and incidents
