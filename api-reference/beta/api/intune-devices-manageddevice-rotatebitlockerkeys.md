@@ -1,4 +1,4 @@
-﻿---
+---
 title: "rotateBitLockerKeys action"
 description: "Rotate BitLockerKeys"
 author: "jaiprakashmb"

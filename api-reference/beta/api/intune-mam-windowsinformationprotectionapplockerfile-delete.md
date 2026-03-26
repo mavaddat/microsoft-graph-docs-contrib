@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete windowsInformationProtectionAppLockerFile"
 description: "Deletes a windowsInformationProtectionAppLockerFile."
 author: "jaiprakashmb"

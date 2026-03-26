@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete macOSMicrosoftDefenderApp"
 description: "Deletes a macOSMicrosoftDefenderApp."
 author: "jaiprakashmb"

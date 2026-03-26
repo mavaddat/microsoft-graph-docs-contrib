@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceComplianceScripts"
 description: "List properties and relationships of the deviceComplianceScript objects."
 author: "jaiprakashmb"

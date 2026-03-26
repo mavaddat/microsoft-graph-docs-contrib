@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get deviceCustomAttributeShellScript"
 description: "Read properties and relationships of the deviceCustomAttributeShellScript object."
 author: "jaiprakashmb"

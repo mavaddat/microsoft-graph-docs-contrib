@@ -1,4 +1,4 @@
-﻿---
+---
 title: "areGlobalScriptsAvailable function"
 description: "Intune Devices Devicehealthscript Areglobalscriptsavailable Api ."
 author: "jaiprakashmb"

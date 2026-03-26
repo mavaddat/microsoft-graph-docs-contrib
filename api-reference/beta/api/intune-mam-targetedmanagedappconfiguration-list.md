@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List targetedManagedAppConfigurations"
 description: "List properties and relationships of the targetedManagedAppConfiguration objects."
 author: "jaiprakashmb"

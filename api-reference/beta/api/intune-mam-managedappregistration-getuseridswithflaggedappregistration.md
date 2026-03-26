@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getUserIdsWithFlaggedAppRegistration function"
 description: "Intune Mam Managedappregistration Getuseridswithflaggedappregistration Api ."
 author: "jaiprakashmb"

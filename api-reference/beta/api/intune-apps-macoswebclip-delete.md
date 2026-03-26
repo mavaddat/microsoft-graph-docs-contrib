@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete macOSWebClip"
 description: "Deletes a macOSWebClip."
 author: "jaiprakashmb"

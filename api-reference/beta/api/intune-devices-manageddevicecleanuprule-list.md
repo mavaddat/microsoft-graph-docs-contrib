@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List managedDeviceCleanupRules"
 description: "List properties and relationships of the managedDeviceCleanupRule objects."
 author: "jaiprakashmb"

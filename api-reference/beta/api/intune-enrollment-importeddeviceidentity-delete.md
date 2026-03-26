@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete importedDeviceIdentity"
 description: "Deletes a importedDeviceIdentity."
 author: "jaiprakashmb"

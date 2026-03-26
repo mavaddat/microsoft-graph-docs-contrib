@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsBaselines"
 description: "List properties and relationships of the userExperienceAnalyticsBaseline objects."
 author: "jaiprakashmb"

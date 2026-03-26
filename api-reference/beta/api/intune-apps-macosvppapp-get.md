@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get macOsVppApp"
 description: "Read properties and relationships of the macOsVppApp object."
 author: "jaiprakashmb"

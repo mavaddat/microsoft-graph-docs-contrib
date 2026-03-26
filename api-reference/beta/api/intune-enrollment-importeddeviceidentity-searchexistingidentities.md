@@ -1,4 +1,4 @@
-﻿---
+---
 title: "searchExistingIdentities action"
 description: "Intune Enrollment Importeddeviceidentity Searchexistingidentities Api ."
 author: "jaiprakashmb"

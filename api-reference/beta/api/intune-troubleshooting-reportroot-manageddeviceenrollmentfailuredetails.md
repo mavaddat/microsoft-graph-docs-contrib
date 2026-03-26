@@ -1,4 +1,4 @@
-﻿---
+---
 title: "managedDeviceEnrollmentFailureDetails function"
 description: "Intune Troubleshooting Reportroot Manageddeviceenrollmentfailuredetails Api ."
 author: "jaiprakashmb"

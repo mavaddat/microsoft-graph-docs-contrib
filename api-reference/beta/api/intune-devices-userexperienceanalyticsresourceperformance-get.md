@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get userExperienceAnalyticsResourcePerformance"
 description: "Read properties and relationships of the userExperienceAnalyticsResourcePerformance object."
 author: "jaiprakashmb"

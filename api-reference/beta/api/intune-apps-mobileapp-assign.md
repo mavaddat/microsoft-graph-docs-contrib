@@ -1,4 +1,4 @@
-﻿---
+---
 title: "assign action"
 description: "Intune Apps Mobileapp Assign Api ."
 author: "jaiprakashmb"

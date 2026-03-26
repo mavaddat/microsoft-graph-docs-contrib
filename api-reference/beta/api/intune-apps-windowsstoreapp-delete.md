@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete windowsStoreApp"
 description: "Deletes a windowsStoreApp."
 author: "jaiprakashmb"

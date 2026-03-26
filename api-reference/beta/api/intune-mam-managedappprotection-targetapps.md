@@ -1,4 +1,4 @@
-﻿---
+---
 title: "targetApps action"
 description: "Intune Mam Managedappprotection Targetapps Api ."
 author: "jaiprakashmb"

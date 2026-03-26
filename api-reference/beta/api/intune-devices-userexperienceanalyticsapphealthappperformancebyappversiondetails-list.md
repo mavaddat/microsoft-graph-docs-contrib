@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetailses"
 description: "List properties and relationships of the userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails objects."
 author: "jaiprakashmb"

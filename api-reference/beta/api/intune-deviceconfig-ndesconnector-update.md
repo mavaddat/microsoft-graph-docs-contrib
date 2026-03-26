@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update ndesConnector"
 description: "Update the properties of a ndesConnector object."
 author: "jaiprakashmb"

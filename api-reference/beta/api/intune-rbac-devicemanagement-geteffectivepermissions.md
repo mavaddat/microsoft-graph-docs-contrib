@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getEffectivePermissions function"
 description: "Intune Rbac Devicemanagement Geteffectivepermissions Api ."
 author: "jaiprakashmb"

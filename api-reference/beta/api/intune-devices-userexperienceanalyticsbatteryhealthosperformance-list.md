@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsBatteryHealthOsPerformances"
 description: "List properties and relationships of the userExperienceAnalyticsBatteryHealthOsPerformance objects."
 author: "jaiprakashmb"

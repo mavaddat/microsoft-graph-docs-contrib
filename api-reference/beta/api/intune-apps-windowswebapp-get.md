@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get windowsWebApp"
 description: "Read properties and relationships of the windowsWebApp object."
 author: "jaiprakashmb"

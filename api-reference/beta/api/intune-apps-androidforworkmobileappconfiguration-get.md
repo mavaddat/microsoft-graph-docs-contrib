@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get androidForWorkMobileAppConfiguration"
 description: "Read properties and relationships of the androidForWorkMobileAppConfiguration object."
 author: "jaiprakashmb"

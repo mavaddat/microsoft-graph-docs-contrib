@@ -1,4 +1,4 @@
-﻿---
+---
 title: "revoke action"
 description: "Intune Epmgraphapiservice Privilegemanagementelevationrequest Revoke Api ."
 author: "jaiprakashmb"

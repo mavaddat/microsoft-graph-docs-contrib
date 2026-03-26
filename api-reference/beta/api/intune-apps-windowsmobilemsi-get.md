@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get windowsMobileMSI"
 description: "Read properties and relationships of the windowsMobileMSI object."
 author: "jaiprakashmb"

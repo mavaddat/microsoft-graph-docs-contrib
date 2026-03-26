@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getTargetedUsersAndDevices action"
 description: "Intune Deviceconfig Deviceconfiguration Gettargetedusersanddevices Api ."
 author: "jaiprakashmb"

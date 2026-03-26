@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get mobileAppCategory"
 description: "Read properties and relationships of the mobileAppCategory object."
 author: "jaiprakashmb"

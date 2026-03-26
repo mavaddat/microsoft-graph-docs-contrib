@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get userExperienceAnalyticsBatteryHealthDevicePerformance"
 description: "Read properties and relationships of the userExperienceAnalyticsBatteryHealthDevicePerformance object."
 author: "jaiprakashmb"

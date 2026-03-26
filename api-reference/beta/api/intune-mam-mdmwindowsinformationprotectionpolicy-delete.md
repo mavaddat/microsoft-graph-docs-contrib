@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete mdmWindowsInformationProtectionPolicy"
 description: "Deletes a mdmWindowsInformationProtectionPolicy."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List macOSLobApps"
 description: "List properties and relationships of the macOSLobApp objects."
 author: "jaiprakashmb"
