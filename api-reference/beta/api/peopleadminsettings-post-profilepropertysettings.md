@@ -53,10 +53,9 @@ You can specify the following properties when you create a **profilePropertySett
 
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|organizationAllowedAudiences|A privacy setting that reflects the allowed audience for the configured property. The possible values are: `me`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
-|isUserOverrideForAudienceEnabled|Boolean|Defines whether a user is allowed to override the tenant admin privacy setting.|
-|name|String|Name of the property-level setting.|
+|name|String|Other name of the property-level setting. For backward compatibility.|
 |prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization.|
+|displayName|String|Name of the property-level setting.|
 
 ## Response
 
@@ -115,6 +114,8 @@ Content-Type: application/json
 
 ---
 
+---
+
 ### Response
 
 The following example shows the response.
@@ -133,12 +134,11 @@ Content-Type: application/json
   "@odata.type": "#microsoft.graph.profilePropertySetting",
   "id": "00000000-0000-0000-0000-000000000001",
   "name": null,
-  "userOverridePrivacy": null,
-  "allowedAudiences": null,
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')",
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
-  ]
+  ],
+  "displayName" : null
 }
 ```
 

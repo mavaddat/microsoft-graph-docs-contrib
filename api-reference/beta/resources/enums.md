@@ -5,13 +5,22 @@ doc_type: enumPageType
 ms.localizationpriority: medium
 ms.subservice: "non-product-specific"
 author: "MSGraphDocsvTeam"
-ms.date: 12/02/2025
+ms.date: 01/28/2026
 ms.custom: sfi-ropc-nochange
 ---
 
 # Enum values
 
 Namespace: microsoft.graph
+
+### notifyMembers values
+
+|Member|
+|:---|
+|all|
+|allowSelected|
+|blockSelected|
+|unknownFutureValue|
 
 ### structuredDataEntryValueType values
 
@@ -490,6 +499,22 @@ Namespace: microsoft.graph
 | cancelled |
 | unknownFutureValue |
 
+### plannerTaskChatMentionType values
+
+| Member |
+| -------------------- |
+| user |
+| application |
+| unknownFutureValue |
+
+### plannerTaskChatMessageType values
+
+| Member |
+| -------------------- |
+| richTextHtml |
+| plainText |
+| unknownFutureValue |
+
 ### applicationKeyOrigin values
 
 | Member |
@@ -944,7 +969,7 @@ Namespace: microsoft.graph
 | remoteDesktopToken |
 | refreshToken       |
 
-### approverInformationVisibilityvalues
+### approverInformationVisibility values
 
 | Member |
 | ---- |
@@ -2707,6 +2732,14 @@ Namespace: microsoft.graph
 | declined |
 | notResponded |
 
+### privilegeLevel values
+
+|Member|
+|:---|
+|standard|
+|privileged|
+|unknownFutureValue|
+
 ### activityDomain values
 
 | Member |
@@ -3238,6 +3271,7 @@ Possible values for user account types (group membership), per Windows definitio
 | compliantApplication |
 | passwordChange |
 | unknownFutureValue |
+| riskRemediation |
 
 ### perUserMfaState values
 
@@ -4451,47 +4485,6 @@ Possible values for user account types (group membership), per Windows definitio
 | cannotSatisfy |
 | unknownFutureValue |
 
-### authenticationMethodModes values
-
-| Member |
-| --------------------------- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido2 |
-| windowsHelloForBusiness |
-| microsoftAuthenticatorPush |
-| deviceBasedPush |
-| temporaryAccessPassOneTime |
-| temporaryAccessPassMultiUse |
-| email |
-| x509CertificateSingleFactor |
-| x509CertificateMultiFactor |
-| federatedSingleFactor |
-| federatedMultiFactor |
-| unknownFutureValue |
-| qrCodePin |
-
-### baseAuthenticationMethod values
-
-| Member |
-| ----------------------- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido |
-| microsoftAuthenticator |
-| windowsHelloForBusiness |
-| temporaryAccessPass |
-| email |
-| x509Certificate |
-| federation |
-| unknownFutureValue |
-
 ### searchContent values
 
 | Member |
@@ -5083,6 +5076,8 @@ Possible values for user account types (group membership), per Windows definitio
 | samAccountName |
 | unknownFutureValue |
 
+
+
 ### samlAttributeNameFormat values
 
 | Member |
@@ -5360,6 +5355,7 @@ Possible values for user account types (group membership), per Windows definitio
 |standard|
 |bulk|
 |unknownFutureValue|
+|granular|
 
 ### cloudPcPolicyApplyActionStatus values
 
@@ -5410,16 +5406,6 @@ Possible values for user account types (group membership), per Windows definitio
 |phish|
 |unknownFutureValue|
 
-### errorCorrectionLevel values
-
-|Member|
-|:---|
-|l|
-|m|
-|q|
-|h|
-|unknownFutureValue|
-
 ### protectionSource values
 
 |Member|
@@ -5427,16 +5413,6 @@ Possible values for user account types (group membership), per Windows definitio
 |none|
 |manual|
 |dynamicRule|
-|unknownFutureValue|
-
-### organizationAllowedAudiences values
-
-|Member|
-|:---|
-|me|
-|organization|
-|federatedOrganizations|
-|everyone|
 |unknownFutureValue|
 
 ### educationSpeechType values
@@ -5731,7 +5707,6 @@ Possible values for user account types (group membership), per Windows definitio
 |Member|
 |:---|
 |sitepagepublishing|
-|group|
 |sts|
 |unknownFutureValue|
 
@@ -5885,6 +5860,55 @@ Possible values for user account types (group membership), per Windows definitio
 |allowedTenants|
 |unknownFutureValue|
 
+### browsableResourceType values 
+
+|Member|
+|:---|
+|none|
+|site|
+|documentLibrary|
+|folder|
+|unknownFutureValue|
+
+### browseQueryOrder values 
+
+|Member|
+|:---|
+|pathAsc|
+|pathDsc|
+|nameAsc|
+|nameDsc|
+|unknownFutureValue|
+
+### browseQueryResponseItemType values 
+
+|Member|
+|:---|
+|none|
+|site|
+|documentLibrary|
+|folder|
+|file|
+|unknownFutureValue|
+
+### browseSessionStatus values 
+
+|Member|
+|:---|
+|creating|
+|created|
+|failed|
+|unknownFutureValue|
+
+### fileArchiveStatus values 
+
+|Member|
+|:---|
+|notArchived|
+|fullyArchived|
+|reactivating|
+|unknownFutureValue|
+
 ### baselineParameterType values 
 
 |Member|
@@ -5936,3 +5960,21 @@ Possible values for user account types (group membership), per Windows definitio
 |failed|
 |unknownFutureValue|
 |partiallySuccessful|
+
+### contentCategory values 
+
+|Member|
+|:---|
+|none|
+|ai|
+|unknownFutureValue|
+
+### trafficRoutingMethod values 
+
+|Member|
+|:---|
+|none|
+|random|
+|sessionPersistence|
+|performance|
+|unknownFutureValue|

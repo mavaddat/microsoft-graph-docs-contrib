@@ -90,12 +90,15 @@ GET https://graph.microsoft.com/beta/identityProtection/riskyAgents
 [!INCLUDE [sample-code](../includes/snippets/php/list-riskyagent-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/list-riskyagent-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/list-riskyagent-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
-
 
 ### Response
 
@@ -117,6 +120,7 @@ Content-Type: application/json
       "@odata.type": "#microsoft.graph.riskyAgentUser",
       "id": "ccdc88ee-d0bb-86b5-3500-1d38195c4d6f",
       "agentDisplayName": "RiskyUserFirstPartyApp2",
+      "identityType": "agentUser",
       "isDeleted": false,
       "isEnabled": true,
       "isProcessing": true,
@@ -129,6 +133,7 @@ Content-Type: application/json
       "@odata.type": "#microsoft.graph.riskyAgentIdentity",
       "id": "ccdc88ee-d0bb-86b5-3500-1d38195c4d6f",
       "agentDisplayName": "AgentIdentityBot",
+      "identityType": "agentIdentity",
       "isDeleted": false,
       "isEnabled": true,
       "isProcessing": true,

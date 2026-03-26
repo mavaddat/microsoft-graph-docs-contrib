@@ -13,7 +13,8 @@
       "overview": "../../resources/groups-overview.md",
       "resources": [
         "group",
-        "groupLifecyclePolicy"
+        "groupLifecyclePolicy",
+        "ownerlessGroupPolicy"
       ]
     },
     {
@@ -186,6 +187,14 @@
       ],
       "childNodes": [
         {
+          "name": "Browse session",
+          "overview": "../../resources/browsesessionbase.md",
+          "resources": [
+            "oneDriveForBusinessBrowseSession",
+            "sharePointBrowseSession"
+          ]
+        },
+        {
           "name": "Protection policy",
           "resources": [
             "exchangeProtectionPolicy",
@@ -223,8 +232,10 @@
           "resources": [
             "granularMailBoxRestoreArtifact",
             "driveRestoreArtifact",
+            "granularDriveRestoreArtifact",
             "mailboxRestoreArtifact",
-            "siteRestoreArtifact"
+            "siteRestoreArtifact",
+            "granularSiteRestoreArtifact"
           ]
         },
         {
@@ -246,6 +257,7 @@
       ],
       "complexTypes": [
         "artifactQuery",
+        "browseQueryResponseItem",
         "notificationRecipients",
         "protectionPolicyArtifactCount",
         "restorePointSearchResponse",
@@ -525,15 +537,23 @@
           "overview": "../../resources/cloud-licensing-api-overview.md",
           "keywords": [
             "Cloud licensing",
-            "Microsoft Cloud Licensing"
+            "Microsoft Cloud Licensing",
+            "licensing",
+            "license assignment",
+            "allotment"
           ],
           "resources": [
-            "microsoft.graph.cloudLicensing.usageRight"
+            "microsoft.graph.cloudLicensing.allotment",
+            "microsoft.graph.cloudLicensing.assignment",
+            "microsoft.graph.cloudLicensing.assignmentError",
+            "microsoft.graph.cloudLicensing.usageRight",          
+            "microsoft.graph.cloudLicensing.waitingMember"
           ],
           "complexTypes": [
             "microsoft.graph.cloudLicensing.groupCloudLicensing",
-            "microsoft.graph.cloudLicensing.userCloudLicensing",
-            "microsoft.graph.cloudLicensing.service"
+            "microsoft.graph.cloudLicensing.service",
+            "microsoft.graph.cloudLicensing.subscription",
+            "microsoft.graph.cloudLicensing.userCloudLicensing"
           ],
           "childNodes": []
         },
@@ -598,6 +618,9 @@
             "cloudPcDisasterRecoveryNetworkSetting",
             "cloudPcDiscoveredApp",
             "cloudPcDomainJoinConfiguration",
+            "cloudpcexternalpartneractionreport",
+            "cloudpcexternalpartneractionresult",
+            "cloudpcexternalpartneragentsetting",
             "cloudPcForensicStorageAccount",
             "cloudPcFrontlineSharedDeviceDetail",
             "cloudPcHealthCheckItem",
@@ -996,7 +1019,10 @@
             "employeeExperienceUser",
             "engagementAsyncOperation",
             "engagementRole",
-            "engagementRoleMember"
+            "engagementRoleMember",
+            "storyline",
+            "storylineFollower",
+            "storylineFollowing"
           ],
           "complexTypes": [
             "engagementConversationMessageAttachment",
@@ -1051,6 +1077,7 @@
         "microsoft.graph.externalConnectors.itemIdResolver",
         "microsoft.graph.externalConnectors.property",
         "microsoft.graph.externalConnectors.propertyRule",
+        "microsoft.graph.externalConnectors.principal",
         "publicError",
         "publicErrorDetail",
         "publicInnerError",
@@ -1268,6 +1295,16 @@
                     "unifiedRbacResourceAction"
                   ]
                 }
+              ]
+            },
+            {
+              "name": "Entra Backup and Recovery",
+              "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
+              "resources": [
+                "microsoft.graph.entraRecoveryServices.recoveryJob",
+                "microsoft.graph.entraRecoveryServices.recoveryJobBase",
+                "microsoft.graph.entraRecoveryServices.recoveryPreviewJob",
+                "microsoft.graph.entraRecoveryServices.snapshot"
               ]
             }
           ]
@@ -1656,6 +1693,14 @@
               ]
             },
             {
+              "name": "Fraud protection provider",
+              "resources": [
+                "fraudProtectionProvider",
+                "arkoseFraudProtectionProvider",
+                "humanSecurityFraudProtectionProvider"
+              ]
+            },
+            {
               "name": "Web application firewall",
               "resources": [
                 "webApplicationFirewallProvider",
@@ -1685,6 +1730,7 @@
                 "onEmailOtpSendListener",
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
+                "onPasswordSubmitListener",
                 "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
@@ -1815,6 +1861,7 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
+                "onPasswordSubmitCustomExtension",
                 "onTokenIssuanceStartCustomExtension"
               ]
             },
@@ -1841,11 +1888,8 @@
                 "riskyAgent",
                 "riskyUser",
                 "riskyUserHistoryItem",
-                "servicePrincipalRiskDetection",
                 "riskyServicePrincipal",
-                "fraudProtectionProvider",
-                "arkoseFraudProtectionProvider",
-                "humanSecurityFraudProtectionProvider"
+                "servicePrincipalRiskDetection"
               ]
             },
             {
@@ -2201,6 +2245,14 @@
               ]
             },
             {
+              "name": "Cloud firewall",
+              "resources": [
+                "microsoft.graph.networkaccess.cloudFirewallPolicy",
+                "microsoft.graph.networkaccess.cloudFirewallRule",
+                "microsoft.graph.networkaccess.cloudFirewallPolicyLink"
+              ]
+            },
+            {
               "name": "Remote network",
               "resources": [
                 "microsoft.graph.networkaccess.deviceLink",
@@ -2376,7 +2428,8 @@
         "mailFolderOperation",
         "mailSearchFolder",
         "messageRule",
-        "exchangeMessageTrace"
+        "exchangeMessageTrace",
+        "userConfiguration"
       ],
       "childNodes": [
         {
@@ -2473,6 +2526,9 @@
         "profileSource",
         "profilePropertySetting",
         "userAnalytics"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -2850,10 +2906,6 @@
           "resources": [
             "microsoft.graph.security.auditLogQuery",
             "microsoft.graph.security.auditLogRecord"
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.auditData",
-            "microsoft.graph.security.defaultAuditData"
           ]
         },
         {
@@ -2945,11 +2997,6 @@
                 "microsoft.graph.security.ediscoveryReviewSetQuery"
               ]
             }
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.ediscoveryAddToReviewSetOperation",
-            "microsoft.graph.security.ediscoveryEstimateOperation",
-            "microsoft.graph.security.reportFileMetadata"
           ]
         },
         {
@@ -3248,6 +3295,10 @@
         "plannerRuleOverride",
         "plannerSharedWithContainer",
         "plannerTaskCompletionRequirementDetails",
+        "plannerTaskChatMention",
+        "plannerTaskChatMessage",
+        "plannerTaskChatReaction",
+        "plannerTaskChatReactionEvent",
         "plannerTaskCreation",
         "plannerTaskPropertyRule",
         "plannerTaskRecurrence",
@@ -3595,26 +3646,29 @@
       ]
     },
     {
-      "name": "Tenant administration (preview)",
+      "name": "Tenant management",
+      "shouldSort": true,
       "childNodes": [
         {
           "name": "Configuration management",
           "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
-          "shouldSort": true,
           "resources": [
             "configurationBaseline",
             "configurationDrift",
             "configurationMonitor",
             "configurationMonitoringResult",
             "configurationSnapshotJob"
-          ],
-          "complexTypes": [
-            "baselineParameter",
-            "baselineResource",
-            "clientCredentials",
-            "driftedProperty",
-            "errorDetail",
-            "openComplexDictionaryType"
+          ]
+        },
+        {
+          "name": "Governance (preview)",
+          "overview": "../../resources/tenantgovernanceservices-tenantgovernance-overview.md",
+          "resources": [
+            "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
+            "microsoft.graph.tenantGovernanceServices.relatedTenant",
+            "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+            "microsoft.graph.tenantGovernanceServices.governanceInvitation",
+            "microsoft.graph.tenantGovernanceServices.governanceRequest"
           ]
         }
       ]
