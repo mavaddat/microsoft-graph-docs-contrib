@@ -63,6 +63,10 @@ Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable a
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
 
+### Security | Microsoft Defender for Identity
+
+The sensor candidate entity now contains a new **sensorTypes** property. See [microsoft.graph.security.sensorCandidate](../api-reference/beta/resources/security-sensorcandidate.md)
+
 ### Teamwork and communications | Calls and online meetings
 
 Added [ad hoc call](/graph/api/resources/adhoccall) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
@@ -81,10 +85,6 @@ The new Tenant Configuration Management APIs in Microsoft Graph allow administra
 ### Calendars | Places
 
 Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
-
-### Microsoft Defender for identities
-
-The sensor candidate entity will now contains a new property: the sensorTypes
 
 ## March 2026: New in preview only
 

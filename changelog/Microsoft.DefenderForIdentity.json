@@ -357,8 +357,7 @@
       "CreatedDateTime": "2026-01-13T12:59:27.0649263Z",
       "WorkloadArea": "Security",
       "SubArea": ""
-      }
-    ,{
+      }, {
       "ChangeList": [
         {
           "Id": "13cabf61-b38c-4c61-ba01-487282745e3a",
