@@ -6,8 +6,8 @@
           "Id": "3c6e3081-1ae2-4f9d-bd88-242f194293de",
           "ApiChange": "Member",
           "ChangedApiName": "canceling",
-          "ChangeType": "Deletion",
-          "Description": "Removed the `canceling` member from the **lifecycleWorkflowProcessingStatus** enumeration.",
+          "ChangeType": "Addition",
+          "Description": "Added the `canceling` member from the **lifecycleWorkflowProcessingStatus** enumeration.",
           "Target": "lifecycleWorkflowProcessingStatus"
         },
         {
