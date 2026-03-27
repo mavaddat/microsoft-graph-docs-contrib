@@ -80,7 +80,6 @@ The following example shows a request that successfully cancels a single workflo
 
 The following example shows a request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "lifecycleworkflows_workflow_cancelprocessing_success"
