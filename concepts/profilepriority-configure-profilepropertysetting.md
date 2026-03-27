@@ -17,7 +17,11 @@ This administrator guide explains how to configure profile source precedence in 
 
 The priority source URLs are arranged according to data precedence, with the first item in the collection having the highest priority.
 
->**Note:** The **name** property *must* be empty to differentiate it from other property-level settings in the collection that have a **name** property. Only one configuration without a name is allowed per profile property settings collection.
+> [!NOTE]
+> The **name** property *must* be empty to differentiate it from other property-level settings in the collection that have a **name** property. Only one configuration without a name is allowed per profile property settings collection.
+
+> [!NOTE]
+> In prioritizedSourceUrls, it does not matter whether the URLs listed use the /beta or /v1.0 endpoint. The profile property priority configuration and the underlying data are shared across both endpoints, so specifying either value has the same effect.
 
 > [!IMPORTANT]
 > Setting a new profile source as a priority changes the values of properties that users in your organization see on their profiles. 
