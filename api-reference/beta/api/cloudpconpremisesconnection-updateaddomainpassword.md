@@ -71,11 +71,11 @@ The following example shows a request.
 -->
 
 ``` http
-POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/onPremisesConnections/{Id}/UpdateAdDomainPassword
+POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/onPremisesConnections/{OnPremisesConnectionId}/UpdateAdDomainPassword
 Content-Type: application/json
 
 {
-  "adDomainPassword": "AdDomainPassword value"
+  "adDomainPassword": "AdDomainPassword_XXXX"
 }
 ```
 

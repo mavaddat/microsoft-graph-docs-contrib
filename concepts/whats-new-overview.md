@@ -30,6 +30,14 @@ Added a known issue of RBAC in [Places update API](/graph/api/place-update): upd
 
 ### Device and app management | Cloud PC
 
+- Added [updateAdDomainPassword](/graph/api/cloudpconpremisesconnection-updateaddomainpassword) as a new action for [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) resource.
+- Added the **inUseByCloudPc** property to the [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) resource to indicate whether the on-premises connection is currently in use by a Cloud PC.
+- Added the **healthCheckPaused** property to the [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) resource to indicate whether the health check is currently paused.
+- Added the **managedBy** property to the [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) resource to specify which services manage the Azure network connection.
+- Added the **scopeIds** property to the [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) resource to specify the scope identifiers.
+
+### Device and app management | Cloud PC
+
 - Use the **osVersionNumber** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) and [cloudPcGalleryImage](/graph/api/resources/cloudpcgalleryimage) resources to get the operating system version of an image.
 - Use the **sizeInGB** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) to get the size of the image in GB.
 
@@ -110,7 +118,6 @@ Added a known issue of RBAC in [Places update API](/graph/api/place-update?view=
 - Added [cloudPcExternalPartnerActionReport](/graph/api/resources/cloudpcexternalpartneractionreport?view=graph-rest-beta&preserve-view=true) as a new complex type for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
 - [Retry the upload](/graph/api/cloudpcdeviceimage-retryupload?view=graph-rest-beta&preserve-view=true) of a [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage?view=graph-rest-beta&preserve-view=true) object that previously failed.
 - Deprecated the [reupload](/graph/api/cloudpcdeviceimage-reupload?view=graph-rest-beta&preserve-view=true) method in favor of [retryUpload](/graph/api/cloudpcdeviceimage-retryupload?view=graph-rest-beta&preserve-view=true).
-
 ### Employee experience | Employee engagement
 
 Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [list followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), and [list following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.

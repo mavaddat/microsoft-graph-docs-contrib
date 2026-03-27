@@ -43,17 +43,17 @@ Represents a defined collection of Azure resource information that can be used t
 |healthCheckStatusDetail|[cloudPcOnPremisesConnectionStatusDetail](../resources/cloudpconpremisesconnectionstatusdetail.md)| Indicates the results of health checks performed on the on-premises connection. Read-only. Returned only on `$select`. For an example that shows how to get the **inUse** property, see [Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail](../api/cloudpconpremisesconnection-get.md). Read-only.|
 |id|String|Unique identifier for the Azure network connection. Read-only.|
 |inUse|Boolean|When `true`, the Azure network connection is in use. When `false`, the connection isn't in use. You can't delete a connection that’s in use. Returned only on `$select`. For an example that shows how to get the **inUse** property, see [Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail](../api/cloudpconpremisesconnection-get.md). Read-only.|
-|inUseByCloudPc|Boolean| Indicates whether a Cloud PC is using this on-premises network connection. `true` if at least one Cloud PC is using it. Otherwise, `false`. Read-only. Default is false. |
-|healthCheckPaused|Boolean| `false` if the regular health checks on the network/domain configuration are currently active. `true` if the checks are paused. If you perform a create or update operation on a **onPremisesNetworkConnection** resource, this value is set to `false` for 4 weeks. If you retry a health check on network/domain configuration, this value is set to `false` for two weeks. If the **onPremisesNetworkConnection** resource is attached in a **provisioningPolicy** or used by a Cloud PC in the past 4 weeks, `healthCheckPaused` is set to `false`. Read-only. Default is `false`.|
-|managedBy|[cloudPcManagementService](#cloudpcmanagementservice-values)|Specifies which services manage the Azure network connection. The possible values are: `windows365`, `devBox`, `unknownFutureValue`, `rpaBox`, `microsoft365Opal`, `microsoft365BizChat`. Use the `Prefer: include-unknown-enum-members` request header to get the following members in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `rpaBox`. Read-only.|
+|inUseByCloudPc|Boolean| Indicates whether a Cloud PC is using this on-premises network connection. `true` if at least one Cloud PC is using it. Otherwise, `false`. Read-only. Default is `false`. |
+|healthCheckPaused|Boolean| `false` if the regular health checks on the network or domain configuration are currently active. `true` if the checks are paused. If you perform a create or update operation on a **onPremisesNetworkConnection** resource, this value is set to `false` for four weeks. If you retry a health check on network or domain configuration, this value is set to `false` for two weeks. If the **onPremisesNetworkConnection** resource is attached in a **provisioningPolicy** or used by a Cloud PC in the past four weeks, `healthCheckPaused` is set to `false`. Read-only. Default is `false`.|
+|managedBy|[cloudPcManagementService](#cloudpcmanagementservice-values)|Specifies which services manage the Azure network connection. The possible values are: `windows365`, `devBox`, `unknownFutureValue`, `rpaBox`, `microsoft365Opal`, `microsoft365BizChat`. Use the `Prefer: include-unknown-enum-members` request header to get the following members in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `rpaBox`, `microsoft365Opal`, `microsoft365BizChat`. Read-only.|
 |organizationalUnit|String|The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant's Active Directory domain (OU) is used. Optional.|
 |resourceGroupId|String|The unique identifier of the target resource group used associated with the on-premises network connectivity for Cloud PCs. Required format: “/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}” |
+|scopeIds|String collection|The scope Ids of corresponding permission. Currently, it's Intune scope tag Id.|
 |subnetId|String|The unique identifier of the target subnet used associated with the on-premises network connectivity for Cloud PCs. Required format: “/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}” |
 |subscriptionId|String|The unique identifier of the Azure subscription associated with the tenant.|
 |subscriptionName|String|The name of the Azure subscription is used to create an Azure network connection. Read-only.|
 |virtualNetworkId|String|The unique identifier of the target virtual network used associated with the on-premises network connectivity for Cloud PCs. Required format: “/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}” |
 |virtualNetworkLocation|String|Indicates the resource location of the target virtual network. For example, the location can be eastus2, westeurope, etc. Read-only (computed value). |
-|scopeIds|String collection|The scope IDs of corresponding permission. Currently, it's Intune scope tag ID.|
 
 ### cloudPcManagementService values
 
@@ -63,8 +63,8 @@ Represents a defined collection of Azure resource information that can be used t
 | devBox             | Azure network connection was successfully created through Project Fidalgo.                        |
 | unknownFutureValue | Evolvable enumeration sentinel value. Don't use.                                                  |
 | rpaBox             | The Azure network connection was successfully created through the Power Automate project.         |
-| microsoft365Opal   | Indicates the Cloud PC Azure network connection was successfully created through Project Opal.    |
-| microsoft365BizChat| Indicates the Cloud PC Azure network connection was successfully created through Project Biz Chat.|
+| microsoft365Opal   | Indicates that the Cloud PC Azure network connection was successfully created through the Project Opal.    |
+| microsoft365BizChat| Indicates that the Cloud PC Azure network connection was successfully created through the Project Biz Chat.|
 
 
 ### cloudPcOnPremisesConnectionType values
