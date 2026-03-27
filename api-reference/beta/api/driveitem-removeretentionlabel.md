@@ -60,14 +60,6 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `204 No Content` response code. It doesn't return anything in the response body.
 
-### Error responses
-
-| Error code       | HTTP status | Description                                                        |
-|:-----------------|:------------|:-------------------------------------------------------------------|
-| notSupported     | 400         | App-only callers aren't supported for SharePoint Embedded containers. |
-| accessDenied     | 403         | The caller doesn't have permission to remove the retention label.  |
-| itemNotFound     | 404         | The item can't be found or is no longer accessible.             |
-
 ## Examples
 
 ### Example 1: Remove the retention label from a driveItem
