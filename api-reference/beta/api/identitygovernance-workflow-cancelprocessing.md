@@ -14,11 +14,7 @@ Namespace: microsoft.graph.identityGovernance
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Cancel one or more [workflow](../resources/identitygovernance-workflow.md) runs that are currently in progress or queued. This action allows administrators to stop processing of workflow runs on demand.
-
-Only runs in `queued` or `inProgress` status can be canceled. Completed, failed, or already canceled runs can't be canceled. Currently limited to canceling one run per request.
-
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+Cancel one or more [workflow](../resources/identitygovernance-workflow.md) runs that are currently in `queued` or `inProgress` status. Currently limited to canceling one run per request.
 
 ## Permissions
 
