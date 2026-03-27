@@ -28,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 [!INCLUDE [permissions-table](../includes/permissions/driveitem-removeretentionlabel-permissions.md)]
 
 > [!NOTE]
-> * `Sites.FullControl.All` is the least privileged permission required to remove retention labels that classify the content as records.
+> * `Sites.FullControl.All` is the least privileged permission required to remove retention labels that classify the content as records. This applies to only SPO and OneDrive.
 > * The removal of a *Record* retention label isn't supported when using app-only authentication. This operation requires a delegated user context.
 
 [!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-driveitem-permissions.md)]
