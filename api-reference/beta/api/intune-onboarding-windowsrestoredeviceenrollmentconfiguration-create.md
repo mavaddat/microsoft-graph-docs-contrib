@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create windowsRestoreDeviceEnrollmentConfiguration"
 description: "Create a new windowsRestoreDeviceEnrollmentConfiguration object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete windowsInformationProtectionWipeAction"
 description: "Deletes a windowsInformationProtectionWipeAction."
 author: "jaiprakashmb"

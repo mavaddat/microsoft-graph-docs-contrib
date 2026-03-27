@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete winGetApp"
 description: "Deletes a winGetApp."
 author: "jaiprakashmb"

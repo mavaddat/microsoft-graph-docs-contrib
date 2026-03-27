@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List macOSWebClips"
 description: "List properties and relationships of the macOSWebClip objects."
 author: "jaiprakashmb"

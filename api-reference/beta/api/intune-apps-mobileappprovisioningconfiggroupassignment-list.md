@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List mobileAppProvisioningConfigGroupAssignments"
 description: "List properties and relationships of the mobileAppProvisioningConfigGroupAssignment objects."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "enable action"
 description: "Intune Devices Tenantattachrbac Enable Api ."
 author: "jaiprakashmb"

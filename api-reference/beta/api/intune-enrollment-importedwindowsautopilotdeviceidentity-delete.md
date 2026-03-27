@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete importedWindowsAutopilotDeviceIdentity"
 description: "Deletes a importedWindowsAutopilotDeviceIdentity."
 author: "jaiprakashmb"

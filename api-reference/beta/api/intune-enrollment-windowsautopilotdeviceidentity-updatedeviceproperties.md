@@ -1,4 +1,4 @@
-﻿---
+---
 title: "updateDeviceProperties action"
 description: "Updates properties on Autopilot devices."
 author: "jaiprakashmb"

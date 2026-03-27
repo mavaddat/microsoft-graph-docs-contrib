@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get eBookInstallSummary"
 description: "Read properties and relationships of the eBookInstallSummary object."
 author: "jaiprakashmb"

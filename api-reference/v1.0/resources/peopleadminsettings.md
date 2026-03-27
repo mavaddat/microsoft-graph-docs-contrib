@@ -27,8 +27,8 @@ Inherits from [entity](../resources/entity.md).
 |[Create profile card property](../api/peopleadminsettings-post-profilecardproperties.md) | [profileCardProperty](profilecardproperty.md) | Create a new [profileCardProperty](../resources/profilecardproperty.md) for an organization. |
 |[List profile sources](../api/peopleadminsettings-list-profilesources.md)|[profileSource](../resources/profilesource.md) collection|Get a list of the [profileSource](../resources/profilesource.md) objects and their properties, which represent both external data sources and out-of-the-box Microsoft data sources configured for user profiles in an organization.|
 |[Create profile source](../api/peopleadminsettings-post-profilesources.md)|[profileSource](../resources/profilesource.md)|Create a new [profileSource](../resources/profilesource.md) object.|
-|[List profilePropertySettings](../api/peopleadminsettings-list-profilepropertysettings.md)|[profilePropertySetting](../resources/profilepropertysetting.md) collection|Get a collection of [profilePropertySetting](../resources/profilepropertysetting.md) objects that define the configuration for user profile properties in an organization.|
-|[Create profilePropertySetting](../api/peopleadminsettings-post-profilepropertysettings.md)|[profilePropertySetting](../resources/profilepropertysetting.md)|Create a new profilePropertySetting object.|
+|[List profile property settings](../api/peopleadminsettings-list-profilepropertysettings.md)|[profilePropertySetting](../resources/profilepropertysetting.md) collection|Get a collection of [profilePropertySetting](../resources/profilepropertysetting.md) objects that define the configuration for user profile properties in an organization.|
+|[Create profile property setting](../api/peopleadminsettings-post-profilepropertysettings.md)|[profilePropertySetting](../resources/profilepropertysetting.md)|Create a new [profilePropertySetting](../resources/profilepropertysetting.md) object.|
 
 ## Properties
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsNotAutopilotReadyDevices"
 description: "List properties and relationships of the userExperienceAnalyticsNotAutopilotReadyDevice objects."
 author: "jaiprakashmb"

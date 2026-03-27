@@ -1,4 +1,4 @@
-﻿---
+---
 title: "unassignResourceAccountFromDevice action"
 description: "Unassigns the resource account from an Autopilot device."
 author: "jaiprakashmb"

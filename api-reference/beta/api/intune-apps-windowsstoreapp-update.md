@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update windowsStoreApp"
 description: "Update the properties of a windowsStoreApp object."
 author: "jaiprakashmb"

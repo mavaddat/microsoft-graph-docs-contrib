@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete enrollmentProfile"
 description: "Deletes a enrollmentProfile."
 author: "jaiprakashmb"

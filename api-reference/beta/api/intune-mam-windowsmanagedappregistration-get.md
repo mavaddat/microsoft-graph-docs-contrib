@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get windowsManagedAppRegistration"
 description: "Read properties and relationships of the windowsManagedAppRegistration object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get mdmWindowsInformationProtectionPolicy"
 description: "Read properties and relationships of the mdmWindowsInformationProtectionPolicy object."
 author: "jaiprakashmb"

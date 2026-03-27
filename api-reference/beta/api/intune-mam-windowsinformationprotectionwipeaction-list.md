@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List windowsInformationProtectionWipeActions"
 description: "List properties and relationships of the windowsInformationProtectionWipeAction objects."
 author: "jaiprakashmb"

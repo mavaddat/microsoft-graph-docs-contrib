@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update deviceShellScript"
 description: "Update the properties of a deviceShellScript object."
 author: "jaiprakashmb"

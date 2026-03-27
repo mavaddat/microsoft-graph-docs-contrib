@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create macOSDmgApp"
 description: "Create a new macOSDmgApp object."
 author: "jaiprakashmb"

@@ -15,14 +15,14 @@
           "ApiChange": "Resource",
           "ChangedApiName": "profilePropertySetting",
           "ChangeType": "Addition",
-          "Description": "Added the [profilePropertySetting](https://learn.microsoft.com/en-us/graph/api/resources/profilePropertySetting?view=graph-rest-1.0) resource.",
+          "Description": "Added the [profilePropertySetting](https://learn.microsoft.com/en-us/graph/api/resources/profilePropertySetting?view=graph-rest-1.0) resource and associated methods.",
           "Target": "profilePropertySetting"
         }
       ],
       "Id": "e8083562-3402-4ba6-8a2f-58fee02a363b",
       "Cloud": "Prod",
       "Version": "v1.0",
-      "CreatedDateTime": "2026-03-16T12:36:55.4568918Z",
+      "CreatedDateTime": "2026-03-26T12:36:55.4568918Z",
       "WorkloadArea": "People and workplace intelligence",
       "SubArea": "People"
     },

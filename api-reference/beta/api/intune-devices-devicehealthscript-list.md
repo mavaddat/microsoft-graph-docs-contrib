@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceHealthScripts"
 description: "List properties and relationships of the deviceHealthScript objects."
 author: "jaiprakashmb"

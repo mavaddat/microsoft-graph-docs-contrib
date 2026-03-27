@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List intuneBrandingProfileAssignments"
 description: "List properties and relationships of the intuneBrandingProfileAssignment objects."
 author: "jaiprakashmb"

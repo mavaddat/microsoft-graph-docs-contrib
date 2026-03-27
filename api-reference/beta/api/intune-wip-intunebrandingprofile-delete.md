@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete intuneBrandingProfile"
 description: "Deletes a intuneBrandingProfile."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create depTvOSEnrollmentProfile"
 description: "Create a new depTvOSEnrollmentProfile object."
 author: "jaiprakashmb"

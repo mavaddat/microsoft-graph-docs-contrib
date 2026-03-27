@@ -1,4 +1,4 @@
-﻿---
+---
 title: "retrieveStoreLayout function"
 description: "Gets the Managed Google Play store layout type from Google EMM API."
 author: "jaiprakashmb"

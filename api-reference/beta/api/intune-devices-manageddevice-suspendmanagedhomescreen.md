@@ -1,4 +1,4 @@
-﻿---
+---
 title: "suspendManagedHomeScreen action"
 description: "Temporarily suspend Managed Home Screen"
 author: "jaiprakashmb"

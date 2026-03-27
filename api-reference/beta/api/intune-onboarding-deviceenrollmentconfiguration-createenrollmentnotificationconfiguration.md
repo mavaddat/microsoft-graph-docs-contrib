@@ -1,4 +1,4 @@
-﻿---
+---
 title: "createEnrollmentNotificationConfiguration action"
 description: "Intune Onboarding Deviceenrollmentconfiguration Createenrollmentnotificationconfiguration Api ."
 author: "jaiprakashmb"

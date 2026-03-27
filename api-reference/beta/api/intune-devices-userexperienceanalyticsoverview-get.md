@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get userExperienceAnalyticsOverview"
 description: "Read properties and relationships of the userExperienceAnalyticsOverview object."
 author: "jaiprakashmb"

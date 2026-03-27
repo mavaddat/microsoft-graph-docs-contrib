@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getRemoteAssistanceSessionsReport action"
 description: "Intune Remoteassistance Devicemanagementreports Getremoteassistancesessionsreport Api ."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update macOsVppApp"
 description: "Update the properties of a macOsVppApp object."
 author: "jaiprakashmb"
