@@ -1,5 +1,5 @@
 ---
-title: "Workflow: cancelProcessing"
+title: "workflow: cancelProcessing"
 description: "Cancel workflow runs that are currently in progress or queued."
 author: "KristinaSmith"
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ doc_type: apiPageType
 ms.date: 03/26/2026
 ---
 
-# Workflow: cancelProcessing
+# workflow: cancelProcessing
 
 Namespace: microsoft.graph.identityGovernance
 
