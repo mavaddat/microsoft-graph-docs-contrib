@@ -34,7 +34,8 @@ The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.identityGovernance.cancelRunsScope"
+  "@odata.type": "microsoft.graph.identityGovernance.cancelRunsScope",
+  "baseType": "microsoft.graph.identityGovernance.cancelScope"
 }
 -->
 ```json
