@@ -1,14 +1,14 @@
 ---
-title: "workflow: cancelProcessing"
+title: "Workflow: cancelProcessing"
 description: "Cancel workflow runs that are currently in progress or queued."
-author: "AlexFilipin"
+author: "KristinaSmith"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
 ms.date: 03/26/2026
 ---
 
-# workflow: cancelProcessing
+# Workflow: cancelProcessing
 
 Namespace: microsoft.graph.identityGovernance
 
@@ -16,7 +16,7 @@ Namespace: microsoft.graph.identityGovernance
 
 Cancel one or more [workflow](../resources/identitygovernance-workflow.md) runs that are currently in progress or queued. This action allows administrators to stop processing of workflow runs on demand.
 
-Only runs in `queued` or `inProgress` status can be cancelled. Completed, failed, or already cancelled runs cannot be cancelled. Currently limited to cancelling 1 run per request.
+Only runs in `queued` or `inProgress` status can be canceled. Completed, failed, or already canceled runs can't be canceled. Currently limited to canceling one run per request.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -64,7 +64,7 @@ When using [cancelRunsScope](../resources/identitygovernance-cancelrunsscope.md)
 |Property|Type|Description|
 |:---|:---|:---|
 |@odata.type|String|Must be `#microsoft.graph.identityGovernance.cancelRunsScope`. Required.|
-|runs|[microsoft.graph.identityGovernance.run](../resources/identitygovernance-run.md) collection|The workflow runs to cancel. Currently limited to 1 run per request. Required.|
+|runs|[microsoft.graph.identityGovernance.run](../resources/identitygovernance-run.md) collection|The workflow runs to cancel. Currently limited to one run per request. Required.|
 
 ## Response
 
@@ -266,9 +266,9 @@ Content-Type: application/json
 }
 ```
 
-### Example 5: Run not in cancellable state
+### Example 5: Run not in cancelable state
 
-The following example shows a request where the run isn't in a cancellable state. Only runs with status `queued` or `inProgress` can be cancelled.
+The following example shows a request where the run isn't in a cancelable state. Only runs with status `queued` or `inProgress` can be canceled.
 
 #### Request
 
@@ -317,7 +317,7 @@ Content-Type: application/json
 
 ### Example 6: Too many runs
 
-The following example shows a request that exceeds the maximum number of runs allowed per request. Currently, only 1 run can be cancelled per request.
+The following example shows a request that exceeds the maximum number of runs allowed per request. Currently, only one run can be canceled per request.
 
 #### Request
 

@@ -1,7 +1,7 @@
 ---
 title: "cancelScope resource type"
-description: "An abstract base type that defines the scope for cancelling workflow processing."
-author: "AlexFilipin"
+description: "An abstract base type that defines the scope for canceling workflow processing."
+author: "KristinaSmith"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.identityGovernance
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-An abstract base type that defines the scope for cancelling workflow processing when using the [cancelProcessing](../api/identitygovernance-workflow-cancelprocessing.md) action. This type cannot be instantiated directly; use one of the derived types such as [cancelRunsScope](identitygovernance-cancelrunsscope.md) instead.
+An abstract base type that defines the scope for canceling workflow processing when using the [cancelProcessing](../api/identitygovernance-workflow-cancelprocessing.md) action. This type can't be instantiated directly; use one of the derived types such as [cancelRunsScope](identitygovernance-cancelrunsscope.md) instead.
 
 Base type of [cancelRunsScope](identitygovernance-cancelrunsscope.md).
 
