@@ -20,13 +20,13 @@ Inherits from [cancelScope](identitygovernance-cancelscope.md).
 
 ## Properties
 
-|Property|Type|Description|
-|:---|:---|:---|
-|runs|[microsoft.graph.identityGovernance.run](identitygovernance-run.md) collection|The workflow runs to cancel. Currently limited to 1 run per request. Required.|
+None.
 
 ## Relationships
 
-None.
+|Property|Type|Description|
+|:---|:---|:---|
+|runs|[microsoft.graph.identityGovernance.run](identitygovernance-run.md) collection|The workflow runs to cancel. Currently limited to 1 run per request. Required.|
 
 ## JSON representation
 
@@ -40,11 +40,6 @@ The following JSON representation shows the resource type.
 -->
 ```json
 {
-  "@odata.type": "#microsoft.graph.identityGovernance.cancelRunsScope",
-  "runs": [
-    {
-      "id": "String"
-    }
-  ]
+  "@odata.type": "#microsoft.graph.identityGovernance.cancelRunsScope"
 }
 ```
