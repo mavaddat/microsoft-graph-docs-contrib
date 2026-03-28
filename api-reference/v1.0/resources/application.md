@@ -19,6 +19,8 @@ Inherits from [directoryObject](directoryobject.md).
 
 This resource is an open type that allows additional properties beyond those documented here.
 
+The [agentIdentityBlueprint](../resources/agentidentityblueprint.md) resource inherits from this object.
+
 This resource supports:
 
 - Adding your own data to custom properties as [extensions](/graph/extensibility-overview).
@@ -103,6 +105,9 @@ This resource supports:
 | web |[webApplication](webapplication.md)| Specifies settings for a web application. |
 
 ### signInAudience values
+
+> [!IMPORTANT]
+> Using the **signInAudience** property to limit where an application can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
 
 | Value | Description |
 |:---------------|:--------|

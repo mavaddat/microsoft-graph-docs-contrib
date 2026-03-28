@@ -745,7 +745,7 @@ items:
       href: social-intel-concept-overview.md
     - name: Microsoft 365 Copilot connectors for people data
       href: peopleconnectors.md
-    - name: Configure profile source precedence (preview)
+    - name: Configure profile source precedence
       href: profilepriority-configure-profilepropertysetting.md
     - name: Customize item insights privacy
       href: insights-customize-item-insights-privacy.md
@@ -753,7 +753,7 @@ items:
       href: insights-customize-people-insights-privacy.md
     - name: Customize the profile card
       href: add-properties-profilecard.md
-    - name: Customize profile source (preview)
+    - name: Customize profile source
       href: profilesource-configure-settings.md
     - name: Enable or disable pronouns
       href: pronouns-configure-pronouns-availability.md
