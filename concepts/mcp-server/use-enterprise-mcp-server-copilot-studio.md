@@ -20,7 +20,7 @@ The [Microsoft MCP Server for Enterprise](/graph/mcp-server/overview) enables AI
 - A Microsoft Entra tenant.
 - An admin user account in the tenant with the following roles assigned in the [Microsoft Entra admin center](https://entra.microsoft.com):
   - **Cloud Application Administrator** — required to create and configure the connector.
-  - Appropriate  directory roles for the Graph operations your agent performs — required so the MCP Server can execute Graph API calls on behalf of the signed-in user.
+  - Appropriate directory roles for the Graph operations your agent performs — required so the MCP Server can execute Graph API calls on behalf of the signed-in user.
   Sign in to both Copilot Studio and Power Apps with this tenant admin account.
 - Complete the MCP Server provisioning steps in [Get started with the Microsoft MCP Server for Enterprise](/graph/mcp-server/get-started). For more information, see [MCP Server for Enterprise documentation](https://aka.ms/MCPServerForEnterprise).
 - A [client app registration](/entra/identity-platform/quickstart-register-app) in Microsoft Entra. You need the following from your app registration:
