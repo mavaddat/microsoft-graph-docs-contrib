@@ -93,7 +93,7 @@ The following JSON representation shows the resource type.
   "lastModifiedBy": { "@odata.type": "microsoft.graph.identitySet" },
   "lastModifiedDateTime": "String (timestamp)",
   "list": { "@odata.type": "microsoft.graph.listInfo" },
-  "itemCount": 1024,
+  "itemCount": "Int32",
   "name": "String",
   "parentReference": { "@odata.type": "microsoft.graph.itemReference" },
   "sharepointIds": { "@odata.type": "microsoft.graph.sharepointIds" },
