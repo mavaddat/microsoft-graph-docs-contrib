@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: resourcePageType
 ms.date: 03/23/2026
+toc.title: "SharePoint group identity"
 ---
 
 # sharePointGroupIdentity resource type
