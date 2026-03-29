@@ -16,7 +16,6 @@ Get all [messages](../resources/chatmessage.md) from all [chats](../resources/ch
 
 To learn more about how to use the Microsoft Teams export APIs to export content, see [Export content with the Microsoft Teams export APIs](/microsoftteams/export-teams-content).
 
-[!INCLUDE [teams-metered-apis](../../includes/teams-metered-apis.md)]
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

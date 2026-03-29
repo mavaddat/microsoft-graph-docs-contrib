@@ -40,8 +40,8 @@ GET /teamwork/deletedTeams/{deletedTeamId}/channels/getAllMessages
 
 ## Optional query parameters
 
-You can use the [$top](/graph/query-parameters#top-parameter) query parameter to control the number of items per response.
-Additionally, [$filter](/graph/query-parameters#filter-parameter) is supported with **dateTime** range query on **lastModifiedDateTime**. The other [OData query parameters](/graph/query-parameters) are not currently supported.
+This method supports the [$top](/graph/query-parameters#top-parameter) query parameter to control the number of items per response and the [$filter](/graph/query-parameters#filter-parameter) query parameter with the **dateTime** range query on **lastModifiedDateTime**. Other [OData query parameters](/graph/query-parameters) are currently not supported.
+
 
 ## Request body
 Don't supply a request body for this method.
