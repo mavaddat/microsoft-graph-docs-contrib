@@ -39,12 +39,12 @@ Represents a defined collection of Azure resource information that can be used t
 |alternateResourceUrl|String|The interface URL of the partner service's resource that links to this Azure network connection. Returned only on `$select`.|
 |connectionType|[cloudPcOnPremisesConnectionType](#cloudpconpremisesconnectiontype-values)|Specifies how the provisioned Cloud PC joins to Microsoft Entra. It includes different types, one is Microsoft Entra ID join, which means there's no on-premises Active Directory (AD) in the current tenant, and the Cloud PC device is joined by Microsoft Entra. Another one is hybridAzureADJoin, which means there's also an on-premises Active Directory (AD) in the current tenant and the Cloud PC device joins to on-premises Active Directory (AD) and Microsoft Entra. The type also determines which types of users can be assigned and can sign into a Cloud PC. The azureADJoin type indicates that cloud-only and hybrid users can be assigned and signed into the Cloud PC. hybridAzureADJoin indicates only hybrid users can be assigned and signed into the Cloud PC. The default value is `hybridAzureADJoin`.|
 |displayName|String|The display name for the Azure network connection.|
+|healthCheckPaused|Boolean| Indicates whether regular health checks on the network or domain configuration are paused or active. `false` if the regular health checks on the network or domain configuration are currently active. `true` if the checks are paused. If you perform a create or update operation on a **onPremisesNetworkConnection** resource, this value is set to `false` for four weeks. If you retry a health check on network or domain configuration, this value is set to `false` for two weeks. If the **onPremisesNetworkConnection** resource is attached in a **provisioningPolicy** or used by a Cloud PC in the past four weeks, `healthCheckPaused` is set to `false`. Read-only. Default is `false`.|
 |healthCheckStatus|[cloudPcOnPremisesConnectionStatus](#cloudpconpremisesconnectionstatus-values)|  The status of the most recent health check done on the on-premises connection. For example, if the status is `passed`, the on-premises connection passed all checks run by the service. Possible values: `pending`, `running`, `passed`, `failed`, `warning`, `informational`. Default is `pending`. Read-only. |
 |healthCheckStatusDetail|[cloudPcOnPremisesConnectionStatusDetail](../resources/cloudpconpremisesconnectionstatusdetail.md)| Indicates the results of health checks performed on the on-premises connection. Read-only. Returned only on `$select`. For an example that shows how to get the **inUse** property, see [Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail](../api/cloudpconpremisesconnection-get.md). Read-only.|
 |id|String|Unique identifier for the Azure network connection. Read-only.|
 |inUse|Boolean|When `true`, the Azure network connection is in use. When `false`, the connection isn't in use. You can't delete a connection that’s in use. Returned only on `$select`. For an example that shows how to get the **inUse** property, see [Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail](../api/cloudpconpremisesconnection-get.md). Read-only.|
 |inUseByCloudPc|Boolean| Indicates whether a Cloud PC is using this on-premises network connection. `true` if at least one Cloud PC is using it. Otherwise, `false`. Read-only. Default is `false`. |
-|healthCheckPaused|Boolean| Indicates whether regular health checks on the network or domain configuration are paused or active. `false` if the regular health checks on the network or domain configuration are currently active. `true` if the checks are paused. If you perform a create or update operation on a **onPremisesNetworkConnection** resource, this value is set to `false` for four weeks. If you retry a health check on network or domain configuration, this value is set to `false` for two weeks. If the **onPremisesNetworkConnection** resource is attached in a **provisioningPolicy** or used by a Cloud PC in the past four weeks, `healthCheckPaused` is set to `false`. Read-only. Default is `false`.|
 |managedBy|[cloudPcManagementService](#cloudpcmanagementservice-values)|Specifies which services manage the Azure network connection. The possible values are: `windows365`, `devBox`, `unknownFutureValue`, `rpaBox`, `microsoft365Opal`, `microsoft365BizChat`. Use the `Prefer: include-unknown-enum-members` request header to get the following members in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `rpaBox`, `microsoft365Opal`, `microsoft365BizChat`. Read-only.|
 |organizationalUnit|String|The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant's Active Directory domain (OU) is used. Optional.|
 |resourceGroupId|String|The unique identifier of the target resource group used associated with the on-premises network connectivity for Cloud PCs. Required format: “/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}” |
@@ -65,7 +65,6 @@ Represents a defined collection of Azure resource information that can be used t
 | rpaBox             | The Azure network connection was successfully created through the Power Automate project.         |
 | microsoft365Opal   | Indicates that the Cloud PC Azure network connection was successfully created through the Project Opal.    |
 | microsoft365BizChat| Indicates that the Cloud PC Azure network connection was successfully created through the Project Biz Chat.|
-
 
 ### cloudPcOnPremisesConnectionType values
 
@@ -111,38 +110,21 @@ The following example shows the resource type.
   "adDomainPassword": "String",
   "adDomainUsername": "String",
   "alternateResourceUrl": "String",
+  "connnecetionType": "String",
   "displayName": "String",
+  "healthCheckPaused": "Boolean",
   "healthCheckStatus": "String",
-  "healthCheckStatusDetail": {
-    "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionStatusDetail",
-    "endDateTime": "String (timestamp)",
-    "healthChecks": [
-      {
-        "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionHealthCheck",
-        "additionalDetail": "String",
-        "displayName": "String",
-        "endDateTime": "String (timestamp)",
-        "errorType": "String",
-        "recommendedAction": "String",
-        "correlationId": "String",
-        "startDateTime": "String (timestamp)",
-        "status": "String"
-      }
-    ],
-    "startDateTime": "String (timestamp)"
-  },
+  "healthCheckStatusDetail": { "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionStatusDetail" },
   "id": "String (identifier)",
   "inUse": "Boolean",
   "inUseByCloudPc": "Boolean",
-  "healthCheckPaused": "Boolean",
   "managedBy": "String",
   "organizationalUnit": "String",
   "resourceGroupId": "String",
+  "scopeIds": ["String"],
   "subnetId": "String",
   "subscriptionId": "String",
   "subscriptionName": "String",
-  "connnecetionType": "String",
-  "virtualNetworkId": "String",
-  "scopeIds": ["String"]
+  "virtualNetworkId": "String"
 }
 ```
