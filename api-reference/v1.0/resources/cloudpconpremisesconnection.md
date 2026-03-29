@@ -110,7 +110,7 @@ The following example shows the resource type.
   "adDomainPassword": "String",
   "adDomainUsername": "String",
   "alternateResourceUrl": "String",
-  "connnecetionType": "String",
+  "connectionType": "String",
   "displayName": "String",
   "healthCheckPaused": "Boolean",
   "healthCheckStatus": "String",
