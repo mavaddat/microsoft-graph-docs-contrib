@@ -23,6 +23,7 @@ Inherits from [protectionUnitBase](../resources/protectionunitbase.md).
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List](../api/backuprestoreroot-list-driveprotectionunits.md)|[driveProtectionUnit](../resources/driveprotectionunit.md) collection|Get a list of the [driveProtectionUnit](../resources/driveprotectionunit.md) objects and their properties.|
+|[Update](../api/driveprotectionunit-update.md)|[driveProtectionUnit](../resources/driveprotectionunit.md)|Update the properties of a [driveProtectionUnit](../resources/driveprotectionunit.md) object.|
 
 ## Properties
 |Property|Type|Description|

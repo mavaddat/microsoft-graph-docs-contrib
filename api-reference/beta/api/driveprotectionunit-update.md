@@ -1,6 +1,6 @@
 ---
-title: "Update protectionUnitBase"
-description: "Update the properties of a protectionUnitBase object."
+title: "Update driveProtectionUnit"
+description: "Update the properties of a driveProtectionUnit object."
 author: "abbhadauria"
 ms.reviewer: "haputta"
 ms.localizationpriority: medium
@@ -9,13 +9,13 @@ doc_type: apiPageType
 ms.date: 03/04/2026
 ---
 
-# Update protectionUnitBase
+# Update driveProtectionUnit
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [protectionUnitBase](../resources/protectionunitbase.md) object.
+Update the properties of a [driveProtectionUnit](../resources/driveprotectionunit.md) object.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -23,8 +23,8 @@ Update the properties of a [protectionUnitBase](../resources/protectionunitbase.
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "protectionunitbase_update" } -->
-[!INCLUDE [permissions-table](../includes/permissions/protectionunitbase-update-permissions.md)]
+<!-- { "blockType": "permissions", "name": "driveprotectionunit_update" } -->
+[!INCLUDE [permissions-table](../includes/permissions/driveprotectionunit-update-permissions.md)]
 
 ## HTTP request
 
@@ -33,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ```http
-PATCH /solutions/backupRestore/protectionUnits/{protectionUnitBaseId}
+PATCH /backupRestore/driveProtectionUnits/{driveProtectionUnitId}
 ```
 
 ## Request headers
@@ -57,7 +57,7 @@ In the request body, provide a JSON representation of the following property.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [protectionUnitBase](../resources/protectionunitbase.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [driveProtectionUnit](../resources/driveprotectionunit.md) object in the response body.
 
 For a list of more possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
 
@@ -73,11 +73,11 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "protectionunitbase_update_unattached_policy"
+  "name": "driveprotectionunit_update_unattached_policy"
 }
 -->
 ```msgraph-interactive
-PATCH https://graph.microsoft.com/beta/solutions/backupRestore/protectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
+PATCH https://graph.microsoft.com/beta/backupRestore/driveProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
 Content-Type: application/json
 
 {
@@ -91,7 +91,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.protectionUnitBase"
+  "@odata.type": "microsoft.graph.driveProtectionUnit"
 }
 -->
 ```http
@@ -99,7 +99,11 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
+  "@odata.type": "#microsoft.graph.driveProtectionUnit",
   "id": "2b8180db-48ec-4ea3-af9f-4da73f24b9cb",
+  "directoryObjectId": "1f14e9e5-5b63-4e42-8a6c-4c2322ba21e1",
+  "displayName": "User1",
+  "email": "user1@contoso.com",
   "policyId": "",
   "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",
   "status": "unprotected",
@@ -118,11 +122,11 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "protectionunitbase_update_attached_policy_error"
+  "name": "driveprotectionunit_update_attached_policy_error"
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/beta/solutions/backupRestore/protectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
+PATCH https://graph.microsoft.com/beta/backupRestore/driveProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
 Content-Type: application/json
 
 {
@@ -161,4 +165,4 @@ Content-Type: application/json
 
 ## Related content
 
-- [protectionUnitBase](../resources/protectionunitbase.md)
+- [driveProtectionUnit](../resources/driveprotectionunit.md)

@@ -23,6 +23,7 @@ Inherits from [protectionUnitBase](../resources/protectionunitbase.md).
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List](../api/backuprestoreroot-list-mailboxprotectionunits.md)|[mailboxProtectionUnit](../resources/mailboxprotectionunit.md) collection|Get a list of the [mailboxProtectionUnit](../resources/mailboxprotectionunit.md) objects and their properties.|
+|[Update](../api/mailboxprotectionunit-update.md)|[mailboxProtectionUnit](../resources/mailboxprotectionunit.md)|Update the properties of a [mailboxProtectionUnit](../resources/mailboxprotectionunit.md) object.|
 
 ## Properties
 |Property|Type|Description|

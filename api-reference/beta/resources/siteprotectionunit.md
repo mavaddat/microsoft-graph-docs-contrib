@@ -24,6 +24,7 @@ Inherits from [protectionUnitBase](../resources/protectionunitbase.md).
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List](../api/backuprestoreroot-list-siteprotectionunits.md)|[siteProtectionUnit](../resources/siteprotectionunit.md) collection|Get a list of [siteProtectionUnit](../resources/siteprotectionunit.md) objects and their properties.|
+|[Update](../api/siteprotectionunit-update.md)|[siteProtectionUnit](../resources/siteprotectionunit.md)|Update the properties of a [siteProtectionUnit](../resources/siteprotectionunit.md) object.|
 
 ## Properties
 
