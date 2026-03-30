@@ -1,6 +1,6 @@
 ---
-title: "Known issues in Microsoft Graph"
-description: "Learn about known issues and limitations in Microsoft Graph APIs."
+title: "Known issues with Microsoft Graph APIs"
+description: "Learn about known issues with and limitations of Microsoft Graph APIs."
 author: ombongifaith
 ms.author: ombongifaith
 ms.topic: concept-article
