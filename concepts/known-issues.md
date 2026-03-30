@@ -10,6 +10,8 @@ ms.date: 02/06/2026
 
 # Known issues in Microsoft Graph
 
+This article provides information about known issues related to Microsoft Graph APIs.
+
 ## Authentication
 
 [!INCLUDE [authentication](includes/known-issues/authentication.md)]
@@ -69,3 +71,8 @@ ms.date: 02/06/2026
 ## Users
 
 [!INCLUDE [users](includes/known-issues/users.md)]
+
+## Related content
+
+- [Microsoft Graph changelog](https://developer.microsoft.com/graph/changelog)
+- [Microsoft Graph errors](errors.md)
