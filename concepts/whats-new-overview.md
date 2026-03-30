@@ -20,12 +20,6 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## March 2026: New and generally available
 
-### Teamwork and communications | Messaging
-
-- [StartChannelMigration](/graph/api/channel-startmigration) the migration of external messages by enabling migration mode in an existing channel.
-- [StartChatMigration](/graph/api/chat-startmigration) the migration of external messages by enabling migration mode in an existing chat.
-- [CompleteChatMigration](/graph/api/chat-completemigration) the migration of external messages by removing migration mode from a chat.
-
 ### Applications
 
 Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
@@ -84,6 +78,12 @@ Added [ad hoc call](/graph/api/resources/adhoccall) support to change notificati
 - `users/{userId}/adhocCalls/getAllRecordings`
 
 For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
+
+### Teamwork and communications | Messaging
+
+- [StartChannelMigration](/graph/api/channel-startmigration) the migration of external messages by enabling migration mode in an existing channel.
+- [StartChatMigration](/graph/api/chat-startmigration) the migration of external messages by enabling migration mode in an existing chat.
+- [CompleteChatMigration](/graph/api/chat-completemigration) the migration of external messages by removing migration mode from a chat.
 
 ### Tenant management | Configuration management
 
