@@ -52,6 +52,11 @@ In the request body, supply a JSON representation of the following parameters.
 
 If successful, this method returns a `204 No Content` response code. It doesn't return anything in the response body.
 
+## Notes
+
+- The application that calls **startMigration** owns the migration session end-to-end. The same app must call **importMessage** and **completeMigration** for the same thread. No other app can invoke these APIs on the thread until the owning app completes migration.
+- Once a channel enters migration mode, a banner is displayed in the Teams client indicating that the conversation is in import mode. This banner remains visible until migration is completed by calling [completeMigration](channel-completemigration.md).
+
 ## Examples
 
 ### Example 1: Start the migration on an existing channel with a specific timestamp
