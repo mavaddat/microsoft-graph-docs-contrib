@@ -20,6 +20,12 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## March 2026: New and generally available
 
+### Teamwork and communications | Messaging
+
+- [StartChannelMigration](/graph/api/channel-startmigration) the migration of external messages by enabling migration mode in an existing channel.
+- [StartChatMigration](/graph/api/chat-startmigration) the migration of external messages by enabling migration mode in an existing chat.
+- [CompleteChatMigration](/graph/api/chat-completemigration) the migration of external messages by removing migration mode from a chat.
+
 ### Applications
 
 Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
@@ -61,19 +67,12 @@ The API also introduces supporting types including [inheritableScopes](/graph/ap
 
 ### People and workplace intelligence | People admin settings
 
-Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable administrators to customize the display information of a profile source seen by users across an organization in Microsoft 365 experiences.
+- Use the new [profileSource](/graph/api/resources/profilesource) APIs to enable administrators to customize the display information of a profile source seen by users across an organization in Microsoft 365 experiences.
+- Use the new [profilePropertySetting](/graph/api/resources/profilepropertysetting) APIs to configure tenant-level settings for profile properties.
 
 ### Personal contacts
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
-
-### Teamwork and communications | Messaging
-
-- [StartChannelMigration](/graph/api/channel-startmigration) the migration of external messages by enabling migration mode in an existing channel.
-- [StartChatMigration](/graph/api/chat-startmigration) the migration of external messages by enabling migration mode in an existing chat.
-- [CompleteChatMigration](/graph/api/chat-completemigration) the migration of external messages by removing migration mode from a chat.
-
-## March 2026: New in preview only
 
 ### Teamwork and communications | Calls and online meetings
 
@@ -90,9 +89,17 @@ For more information, see [Get change notifications for transcripts and recordin
 
 The new Tenant Configuration Management APIs in Microsoft Graph allow administrators to control and manage configuration settings across a single workload or multiple workloads within an organization. To learn more about supported use cases, see [Use the Tenant Configuration Management APIs in Microsoft Graph](/graph/api/resources/unified-tenant-configuration-management-api-overview).
 
-### Calendars | Places
+### Identity and access | Identity and sign-in
 
-Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and app service connect settings:
+- Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting) resource type that represents the inbound app service connect settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting) resource type that represents the inbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting) resource type that represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Use the **appServiceConnectInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for inbound app service connect settings.
+- Use the **m365CollaborationInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for inbound Microsoft 365 collaboration settings.
+- Use the **m365CollaborationOutbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for outbound Microsoft 365 collaboration settings.
+
+## March 2026: New in preview only
 
 ### Applications
 
@@ -147,15 +154,31 @@ Use the **administrationScopeTargets** relationship on the [workflowBase](/graph
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
+### Identity and access | Identity and sign-in
+
+Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and app service connect settings:
+- Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the inbound app service connect settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the inbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy.
+- Use the **appServiceConnectInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for inbound app service connect settings.
+- Use the **m365CollaborationInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for inbound Microsoft 365 collaboration settings.
+- Use the **m365CollaborationOutbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for outbound Microsoft 365 collaboration settings.
+
 ### Identity and access | Network access
 
 - Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
 - Added the [crossTenantAccessType](/graph/api/resources/networkaccess-crosstenantaccesstype?view=graph-rest-beta&preserve-view=true) enumeration type.
 - Added the [deviceJoinType](/graph/api/resources/networkaccess-devicejointype?view=graph-rest-beta&preserve-view=true) enumeration type.
+- Added the [List generativeAIInsights](/graph/api/networkaccess-logs-list-generativeaiinsights?view=graph-rest-beta&preserve-view=true) method to retrieve generative AI prompt and MCP activity insights from Global Secure Access traffic logs. Use this method to monitor AI activity patterns, investigate destination context, and correlate user sessions for security and compliance analysis.
 - Added the Cloud Firewall APIs to manage firewall policies, rules, and policy links for Microsoft Entra Global Secure Access. Use the following new resources and their associated APIs:
   - Use the [cloudFirewallPolicy](/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta&preserve-view=true) resource and its associated methods to create and manage cloud firewall policies.
   - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
   - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
+
+### Security | Alerts and incidents
+
+- Added the [alert: moveAlerts](/graph/api/security-alert-movealerts?view=graph-rest-beta&preserve-view=true) and [incident: mergeIncidents](/graph/api/security-incident-mergeincidents?view=graph-rest-beta&preserve-view=true) actions to support moving alerts and merging incidents in Microsoft Defender.
+- Added the [correlationReason](/graph/api/resources/security-correlationreason?view=graph-rest-beta&preserve-view=true) enumeration and [mergeResponse](/graph/api/resources/security-mergeresponse?view=graph-rest-beta&preserve-view=true) resource type.
 
 ### Tenant management | Governance
 
