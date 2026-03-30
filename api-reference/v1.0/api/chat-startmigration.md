@@ -57,7 +57,7 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 ## Notes
 
-- The application that calls **startMigration** owns the migration session end-to-end. The same app must call **importMessage** and **completeMigration** for the same thread. No other app can invoke these APIs on the thread until the owning app completes migration.
+- The application that calls **startMigration** owns the migration session end-to-end. The same app must call [importMessage](chat-post-messages.md#import-message) and [completeMigration](chat-completemigration.md) for the same thread. No other app can invoke these APIs on the thread until the owning app completes migration.
 - Once a chat enters migration mode, a banner is displayed in the Teams client indicating that the conversation is in import mode. This banner remains visible until migration is completed by calling [completeMigration](chat-completemigration.md).
 
 ## Examples
@@ -138,7 +138,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: completeMigration](chat-completemigration.md)
-- [Import messages with an older timestamp](channel-post-messages.md#example-2-import-messages)
+- [importMessage](channel-post-messages.md#import-message)
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)

@@ -14,11 +14,32 @@ Namespace: microsoft.graph
 
 Send a new [chatMessage](../resources/chatmessage.md) in the specified [chat](../resources/chat.md). This API can't create a new chat; you must use the [list chats](chat-list.md) method to retrieve the ID of an existing chat before you can create a chat message.
 
-> **Note**: We don't recommend that you use this API for data migration. It doesn't have the throughput necessary for a typical migration.
+> **Note**: Using the regular create message flow for data migration is not recommended. For data migration scenarios, use the [import messages](#import-message) flow instead.
 
 > **Note**: It is a violation of the [terms of use](/legal/microsoft-apis/terms-of-use) to use Microsoft Teams as a log file. Only send messages that people will read.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
+### Import message
+
+This API can also be used to import messages into an existing chat during a migration session. To use this API as an import message API, the following conditions must be met:
+
+- The request must be made in application context (app-only) with the **Teamwork.Migrate.All** application permission.
+- The target chat must be in migration mode. To put a chat in migration mode, call [chat: startMigration](chat-startmigration.md).
+- The **from** property must be specified to attribute the message to a user who belongs to the same tenant as the authenticated application.
+- The **createdDateTime** property can be specified to set a custom timestamp for the imported message, subject to the following constraints:
+  - The value must be greater than the **createdDateTime** of the target chat.
+  - The value must not be in the future.
+
+> [!NOTE]
+> Only the application that called [startMigration](chat-startmigration.md) on the target chat can import messages into it. No other application can invoke this API on the chat until the owning application completes migration by calling [completeMigration](chat-completemigration.md).
+
+> [!NOTE]
+> Some imported messages may not be visible in the Teams client until migration is completed by calling [completeMigration](chat-completemigration.md) on the target chat.
+
+For more information, see [Import third-party platform messages to Teams using Microsoft Graph](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -156,6 +177,90 @@ Content-type: application/json
     "mentions": [],
     "reactions": [],
     "messageHistory": []
+}
+```
+
+### Example 2: Import message
+
+> **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target chat must be in migration mode.
+
+#### Request
+
+The following example shows how to import a message into a chat on behalf of a user using the `createdDateTime` and `from` keys in the request body.
+
+<!-- {
+  "blockType": "request",
+  "name": "import_chatmessage",
+  "sampleKeys": ["19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2"]
+}-->
+
+```http
+POST https://graph.microsoft.com/v1.0/chats/19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2/messages
+
+{
+   "createdDateTime": "2019-02-04T19:58:15.511Z",
+   "from": {
+      "user": {
+         "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
+         "displayName": "Robin Kline",
+         "userIdentityType": "aadUser"
+      }
+   },
+   "body": {
+      "contentType": "html",
+      "content": "Hello World"
+   }
+}
+```
+
+#### Response
+
+The following example shows the response.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.chatMessage"
+} -->
+
+```http
+HTTP/1.1 200 OK
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#chats('19%3A4b6bed8d24574f6a9e436813cb2617d8%40thread.tacv2')/messages/$entity",
+    "id": "1616991463150",
+    "replyToId": null,
+    "etag": "1616991463150",
+    "messageType": "message",
+    "createdDateTime": "2019-02-04T19:58:15.511Z",
+    "lastModifiedDateTime": null,
+    "deletedDateTime": null,
+    "subject": null,
+    "summary": null,
+    "chatId": "19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2",
+    "importance": "normal",
+    "locale": "en-us",
+    "webUrl": null,
+    "channelIdentity": null,
+    "policyViolation": null,
+    "eventDetail": null,
+    "from": {
+        "application": null,
+        "device": null,
+        "conversation": null,
+        "user": {
+            "id": "8ea0e38b-efb3-4757-924a-5f94061cf8c2",
+            "displayName": "Robin Kline",
+            "userIdentityType": "aadUser"
+        }
+    },
+    "body": {
+        "contentType": "html",
+        "content": "Hello World"
+    },
+    "attachments": [],
+    "mentions": [],
+    "reactions": []
 }
 ```
 

@@ -49,7 +49,7 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 ## Notes
 
-- The application that calls **completeMigration** must be the same application that initiated the migration session by calling [startMigration](chat-startmigration.md) on the target chat.
+- The application that calls **completeMigration** must be the same application that initiated the migration session by calling [startMigration](chat-startmigration.md) on the target chat. This is the same application which is allowed to call [importMessage](chat-post-messages.md#import-message) during the migration session.
 - Calling **completeMigration** removes the import mode banner visible to Teams client users, making the chat fully available again.
 
 ## Examples
@@ -130,7 +130,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: startMigration](chat-startmigration.md)
-- [Import messages with an older timestamp](channel-post-messages.md#example-2-import-messages)
+- [importMessage](chat-post-messages.md#import-message)
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)
