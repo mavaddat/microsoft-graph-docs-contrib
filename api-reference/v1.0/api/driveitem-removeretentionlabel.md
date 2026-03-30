@@ -140,8 +140,7 @@ DELETE https://graph.microsoft.com/v1.0/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkF
 The following example shows the response.
 <!-- {
   "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.error"
+  "truncated": true
 } -->
 
 ```http
