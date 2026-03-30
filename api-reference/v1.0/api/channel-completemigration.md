@@ -122,16 +122,24 @@ HTTP/1.1 400 Bad Request
   "description": "completeMigration_ channel",
   "keywords": "",
   "section": "documentation",
-  "tocPath": "",
-  "suppressions": [
-  ]
-}
--->
-
 ## Related content
 
 - [channel: startMigration](channel-startmigration.md)
-- [Import message with older timestamp](channel-post-messages.md#example-2-import-messages).
+- [Import messages with an older timestamp](channel-post-messages.md#example-2-import-messages).
 - [Get channel migration status](channel-get.md#example-1-get-a-channel).
 - [chat: completeMigration](chat-completemigration.md)
 - [chat: startMigration](chat-startmigration.md)
+
+<!-- uuid: 5793eec6-0e5a-11eb-adc1-0242ac120002
+2020-10-14 20:22:11 UTC -->
+<!--
+{
+ "type": "#page.annotation",
+ "description": "completeMigration_ channel",
+ "keywords": "",
+ "section": "documentation",
+ "tocPath": "",
+ "suppressions": [
+ ]
+}
+-->
