@@ -16,9 +16,13 @@ Start the migration of external messages by enabling migration mode in an existi
 
 Users are also allowed to define a minimum timestamp for content to be migrated, allowing them to import messages from the past. The provided timestamp must be older than the current **createdDateTime** for a [channel](../resources/channel.md). The provided timestamp is used to replace the existing **createdDateTime** of the [channel](../resources/channel.md).
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+> [!NOTE]
+> - The application that calls **startMigration** owns the migration session end to end. The same application must call **importMessage** and **completeMigration** for the same thread. No other application can invoke these APIs on the thread until the owning application completes the migration.
+> - Once a channel enters migration mode, a banner is displayed in the Teams client that indicates the conversation is in import mode. This banner remains visible until migration is completed by [completeMigration](channel-completemigration.md).
 
 [!INCLUDE [channel-support](../../includes/supported-channels-for-import.md)]
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 

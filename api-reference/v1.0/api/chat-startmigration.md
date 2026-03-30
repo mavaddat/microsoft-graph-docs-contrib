@@ -19,6 +19,10 @@ You can define a minimum timestamp for content migration that enables the import
 - The **createdDateTime** can only be moved towards the past.
 - The **createdDateTime** can't be updated to a value newer than the current **createdDateTime**.
 
+> [!NOTE]
+> - The application that calls **startMigration** owns the migration session end to end. The same application must call **importMessage** and **completeMigration** for the same thread. No other application can invoke these APIs on the thread until the owning application completes the migration.
+> - Once a chat enters migration mode, a banner is displayed in the Teams client that indicates the conversation is in import mode. This banner remains visible until migration is completed by [completeMigration](chat-completemigration.md).
+
 [!INCLUDE [chat-support](../../includes/supported-chats-for-import.md)]
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
