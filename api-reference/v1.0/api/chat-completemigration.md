@@ -16,6 +16,10 @@ Complete the migration of external messages by removing migration mode from a [c
 
 After a **completeMigration** request is made for an existing or new chat, you can start a migration session by calling [chat: startMigration](chat-startmigration.md).
 
+> [!NOTE]
+> - The application that calls **completeMigration** must be the same application that initiated the migration session by calling [startMigration](chat-startmigration.md) on the target chat.
+> - Calling **completeMigration** removes the import mode banner visible to Teams client users, making the chat fully available again.
+
 [!INCLUDE [chat-support](../../includes/supported-chats-for-import.md)]
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
@@ -46,11 +50,6 @@ Don't supply a request body for this method.
 ## Response
 
 If successful, this method returns a `204 No Content` response code. It doesn't return anything in the response body.
-
-## Notes
-
-- The application that calls **completeMigration** must be the same application that initiated the migration session by calling [startMigration](chat-startmigration.md) on the target chat.
-- Calling **completeMigration** removes the import mode banner visible to Teams client users, making the chat fully available again.
 
 ## Examples
 
