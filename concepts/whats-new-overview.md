@@ -69,7 +69,7 @@ Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailA
 
 ### Security | Microsoft Defender for Identity
 
-The sensor candidate entity now contains a new **sensorTypes** property. See [microsoft.graph.security.sensorCandidate](../api-reference/beta/resources/security-sensorcandidate.md)
+Added the **sensorTypes** property to the [sensorCandidate](../api-reference/beta/resources/security-sensorcandidate.md) resource type.
 
 ### Teamwork and communications | Calls and online meetings
 
