@@ -169,6 +169,11 @@ Added the following resources and properties to the cross-tenant access policy A
   - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
   - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
 
+### Security | Alerts and incidents
+
+- Added the [alert: moveAlerts](/graph/api/security-alert-movealerts?view=graph-rest-beta&preserve-view=true) and [incident: mergeIncidents](/graph/api/security-incident-mergeincidents?view=graph-rest-beta&preserve-view=true) actions to support moving alerts and merging incidents in Microsoft Defender.
+- Added the [correlationReason](/graph/api/resources/security-correlationreason?view=graph-rest-beta&preserve-view=true) enumeration and [mergeResponse](/graph/api/resources/security-mergeresponse?view=graph-rest-beta&preserve-view=true) resource type.
+
 ### Tenant management | Governance
 
 Introduced the tenant governance API set to enable organizations to manage and govern relationships with other tenants. Key capabilities include:
