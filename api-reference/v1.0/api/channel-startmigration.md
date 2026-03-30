@@ -18,7 +18,7 @@ Users are also allowed to define a minimum timestamp for content to be migrated,
 
 > [!NOTE]
 > - The application that calls **startMigration** owns the migration session end to end. The same application must call **importMessage** and **completeMigration** for the same thread. No other application can invoke these APIs on the thread until the owning application completes the migration.
-> - Once a chat enters migration mode, a banner is displayed in the Teams client that indicates the conversation is in import mode. This banner remains visible until migration is completed by [completeMigration](chat-completemigration.md).
+> - Once a channel enters migration mode, a banner is displayed in the Teams client that indicates the conversation is in import mode. This banner remains visible until migration is completed by [completeMigration](channel-completemigration.md).
 
 [!INCLUDE [channel-support](../../includes/supported-channels-for-import.md)]
 
