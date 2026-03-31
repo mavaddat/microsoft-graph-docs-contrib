@@ -1,6 +1,6 @@
 ---
 title: "teamworkSectionItem: move"
-description: "Move an item from one section to another in a user's teamwork."
+description: "Move an item from one user-defined section to another user-defined section in a user's teamwork."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"

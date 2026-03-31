@@ -1,6 +1,6 @@
 ---
 title: "Add teamworkSectionItem"
-description: "Add an item, such as a chat, channel, meeting, or community, to a section in a user's teamwork."
+description: "Add an item, such as a chat, channel, meeting, or community, to a user-defined section in a user's teamwork."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"

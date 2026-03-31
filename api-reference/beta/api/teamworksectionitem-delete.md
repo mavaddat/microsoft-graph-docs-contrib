@@ -1,6 +1,6 @@
 ---
 title: "Remove teamworkSectionItem"
-description: "Remove an item from a section in a user's teamwork."
+description: "Remove an item from a user-defined section in a user's teamwork."
 author: "jsinghmokha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
