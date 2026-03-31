@@ -252,7 +252,7 @@ Content-type: application/json
   "membershipType": "private",
   "isArchived": false,
   "createdDateTime": "2020-05-27T19:22:25.692Z",
-  "migrationMode": "InProgress",
+  "migrationMode": "inProgress",
   "originalCreatedDateTime": "2020-05-28T10:00:00+00:00"
 }
 ```

@@ -588,7 +588,7 @@ Content-type: application/json
     "lastMessageReadDateTime": "2021-05-06T23:55:07.191Z"
   },
   "isHiddenForAllMembers": false,
-  "migrationMode": "InProgress",
+  "migrationMode": "inProgress",
   "originalCreatedDateTime": "2022-05-28T10:00:00+00:00"
 }
 ```

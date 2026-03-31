@@ -35,12 +35,12 @@ To use the Teams messaging API to import messages, the following conditions must
   - The value must *not* be in the future.
 
 > [!NOTE]
-> - Only the application that called [startMigration](/graph/api/channel-startmigration) on the target channel or [startMigration](/graph/api/chat-startmigrationd) on the target chat can import messages into it. No other application can request this API on the channel or chat until the owning application completes the migration by calling [channel: completeMigration](channel-completemigration.md) or [chat: completeMigration](chat-completemigration.md).
+> - Only the application that called [startMigration](/graph/api/channel-startmigration) on the target channel or [startMigration](/graph/api/chat-startmigration) on the target chat can import messages into it. No other application can request this API on the channel or chat until the owning application completes the migration by calling [channel: completeMigration](/graph/api/channel-completemigration) or [chat: completeMigration](/graph/api/chat-completemigration).
 > - Some imported messages may not be visible in the Teams client until migration is completed by calling [completeMigration](/graph/api/channel-completemigration) on the target channel or [completeMigration](/graph/api/chat-completemigration) on the target chat.
 
 ## Related content
 
 - [Import third-party platform messages to Teams using Microsoft Graph](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
 - [Send a message in a channel](/graph/api/channel-post-messages)
-- [Send a message in a chat](/graph/api/chat-post-message)
+- [Send a message in a chat](/graph/api/chat-post-messages)
 - [Send a message in a channel or a chat](/graph/api/chatmessage-post)

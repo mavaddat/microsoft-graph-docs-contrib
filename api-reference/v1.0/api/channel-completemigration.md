@@ -125,7 +125,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [channel: startMigration](channel-startmigration.md)
-- [importMessage](channel-post-messages.md#import-message)
+- [importMessage](channel-post-messages.md#example-2-import-a-message)
 - [Get channel migration status](channel-get.md#example-1-get-a-channel).
 - [chat: completeMigration](chat-completemigration.md)
 - [chat: startMigration](chat-startmigration.md)

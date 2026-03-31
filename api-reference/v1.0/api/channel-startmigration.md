@@ -34,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST  /teams/{team-id}/channels/{channel-id}/startMigration
+POST /teams/{team-id}/channels/{channel-id}/startMigration
 ```
 
 ## Request headers

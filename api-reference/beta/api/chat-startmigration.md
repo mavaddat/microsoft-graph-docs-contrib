@@ -55,7 +55,7 @@ In the request body, supply a JSON representation of the following parameters.
 
 | Parameter       | Type | Description |
 |:---------------|:--------|:--------|
-|conversationCreationDateTime|DateTimeOffset|The minimum timestamp for the messages to be migrated. The timestamp must be older than the current **createdDateTime** of the channel. If not provided, the current date and time is used. Optional.|
+|conversationCreationDateTime|DateTimeOffset|The minimum timestamp for the messages to be migrated. The timestamp must be older than the current **createdDateTime** of the chat. If not provided, the current date and time is used. Optional.|
 
 ## Response
 
@@ -201,7 +201,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: completeMigration](chat-completemigration.md)
-- [Import a message](channel-post-messages.md#example-2-import-a-message).
+- [Import a message](chat-post-messages.md#example-2-import-a-message).
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)

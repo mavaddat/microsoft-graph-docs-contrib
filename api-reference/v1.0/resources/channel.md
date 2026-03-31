@@ -142,7 +142,7 @@ The following JSON representation shows the resource type.
   "membershipType": "String",
   "webUrl": "String",
   "migrationMode": "String",
-  "originalCreationDateTime": "String (timestamp)"
+  "originalCreatedDateTime": "String (timestamp)"
 }
 ```
 
