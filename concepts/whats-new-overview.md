@@ -89,9 +89,9 @@ For more information, see [Get change notifications for transcripts and recordin
 
 ### Teamwork and communications | Messaging
 
-- [StartChannelMigration](/graph/api/channel-startmigration) the migration of external messages by enabling migration mode in an existing channel.
-- [StartChatMigration](/graph/api/chat-startmigration) the migration of external messages by enabling migration mode in an existing chat.
-- [CompleteChatMigration](/graph/api/chat-completemigration) the migration of external messages by removing migration mode from a chat.
+- [Start](/graph/api/channel-startmigration) the channel migration of external messages by enabling migration mode in an existing channel.
+- [Start](/graph/api/chat-startmigration) the chat migration of external messages by enabling migration mode in an existing chat.
+- [Complete](/graph/api/chat-completemigration) the chat migration of external messages by removing migration mode from a chat.
 
 ### Tenant management | Configuration management
 
