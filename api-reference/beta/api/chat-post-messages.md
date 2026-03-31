@@ -16,9 +16,9 @@ Namespace: microsoft.graph
 
 Send a new [chatMessage](../resources/chatmessage.md) in the specified [chat](../resources/chat.md). This API cannot create a new chat; you must use the [list chats](chat-list.md) method to retrieve the ID of an existing chat before creating a chat message.
 
-> **Note**: Using the regular create message flow for data migration is not recommended. For data migration scenarios, use the [import messages](#import-message) flow instead.
-
-> **Note**: It is a violation of the [terms of use](/legal/microsoft-apis/terms-of-use) to use Microsoft Teams as a log file. Only send messages that people will read.
+> **Notes**: 
+> - We don't recommend that you use this API for data migration via the standard create message flow. For data migration scenarios, use the [import messages](/graph/teams-import-messages) flow instead.
+> - It's a violation of the [terms of use](/legal/microsoft-apis/terms-of-use) to use Microsoft Teams as a log file. Only send messages that people will read.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -183,13 +183,15 @@ Content-type: application/json
 }
 ```
 
-### Example 2: Import message
+### Example 2: Import a message
+
+The following example shows how to import a message. For more information, see [Import messages into Microsoft Teams chats and channels using Microsoft Graph](/graph/teams-import-messages).
 
 > **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target chat must be in migration mode.
 
 #### Request
 
-The following example shows how to import a message into a chat on behalf of a user using the `createdDateTime` and `from` keys in the request body.
+The following example shows how to import a message into a chat on behalf of a user using the **createdDateTime** and **from** properties in the request body.
 
 <!-- {
   "blockType": "request",

@@ -17,31 +17,10 @@ Namespace: microsoft.graph
 Send a new [chatMessage](../resources/chatmessage.md) in the specified [channel](../resources/channel.md) or a [chat](../resources/chat.md).
 
 > [!NOTE]
-> - Using the regular create message flow for data migration is not recommended. For data migration scenarios, use the [import messages](#import-message) flow instead.
-> - It is a violation of the [terms of use](/legal/microsoft-apis/terms-of-use) to use Microsoft Teams as a log file. Only send messages that people will read.
+> - We don't recommend that you use this API for data migration via the standard create message flow. For data migration scenarios, use the [import messages](/graph/teams-import-messages) flow instead.
+> - It's a violation of the [terms of use](/legal/microsoft-apis/terms-of-use) to use Microsoft Teams as a log file. Only send messages that people will read.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-### Import message
-
-This API can also be used to import messages into an existing channel or chat during a migration session. To use this API as an import message API, the following conditions must be met:
-
-- The request must be made in application context (app-only) with the **Teamwork.Migrate.All** application permission.
-- The target channel or chat must be in migration mode. To put a channel in migration mode, call [channel: startMigration](channel-startmigration.md). To put a chat in migration mode, call [chat: startMigration](chat-startmigration.md).
-- The **from** property must be specified to attribute the message to a user who belongs to the same tenant as the authenticated application.
-- The **createdDateTime** property can be specified to set a custom timestamp for the imported message, subject to the following constraints:
-  - The value must be greater than the **createdDateTime** of the target channel or chat.
-  - The value must not be in the future.
-
-> [!NOTE]
-> Only the application that called [startMigration](channel-startmigration.md) on the target channel or [startMigration](chat-startmigration.md) on the target chat can import messages into it. No other application can invoke this API on the channel or chat until the owning application completes migration by calling [completeMigration](channel-completemigration.md) or [completeMigration](chat-completemigration.md).
-
-> [!NOTE]
-> Some imported messages may not be visible in the Teams client until migration is completed by calling [completeMigration](channel-completemigration.md) on the target channel or [completeMigration](chat-completemigration.md) on the target chat.
-
-For more information, see [Import third-party platform messages to Teams using Microsoft Graph](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
-
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -2084,7 +2063,7 @@ Content-Type: application/json
 
 ### Example 16: Import a message into a chat
 
-The following example shows how to import a message into a chat on behalf of a user during a migration session. The target chat must be in migration mode. For more information, see [Import messages](#import-message).
+The following example shows how to import a message into a chat on behalf of a user during a migration session. The target chat must be in migration mode. For more information, see [Import messages into Microsoft Teams chats and channels using Microsoft Graph](/graph/teams-import-messages).
 
 > [!NOTE]
 > The permission scope `Teamwork.Migrate.All` is required for this scenario.
@@ -2172,7 +2151,7 @@ Content-type: application/json
 
 ### Example 17: Import a message into a channel
 
-The following example shows how to import a message into a channel on behalf of a user during a migration session. The target channel must be in migration mode. For more information, see [Import messages](#import-message).
+The following example shows how to import a message into a channel on behalf of a user during a migration session. The target channel must be in migration mode. For more information, see [Import messages into Microsoft Teams chats and channels using Microsoft Graph](/graph/teams-import-messages).
 
 > [!NOTE]
 > The permission scope `Teamwork.Migrate.All` is required for this scenario.
