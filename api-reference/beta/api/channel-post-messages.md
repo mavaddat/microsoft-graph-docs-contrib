@@ -16,31 +16,11 @@ Namespace: microsoft.graph
 
 Send a new [chatMessage](../resources/chatmessage.md) in the specified [channel](../resources/channel.md).
 
-> **Note**: Using the regular create message flow for data migration is not recommended. For data migration scenarios, use the [import messages](#import-message) flow instead.
-> **Note**: It is a violation of the [terms of use](/legal/microsoft-apis/terms-of-use) to use Microsoft Teams as a log file. Only send messages that people will read.
+> **Notes**: 
+> - We don't recommend that you use this API for data migration via the standard create message flow. For data migration scenarios, use the [import messages](/graph/teams-import-messages) flow instead.
+> - It's a violation of the [terms of use](/legal/microsoft-apis/terms-of-use) to use Microsoft Teams as a log file. Only send messages that people will read.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-### Import message
-
-This API can also be used to import messages into an existing channel during a migration session. To use this API as an import message API, the following conditions must be met:
-
-- The request must be made in application context (app-only) with the **Teamwork.Migrate.All** application permission.
-- The target channel must be in migration mode. To put a channel in migration mode, call [channel: startMigration](channel-startmigration.md).
-- The **from** property must be specified to attribute the message to a user who belongs to the same tenant as the authenticated application.
-- The **createdDateTime** property can be specified to set a custom timestamp for the imported message, subject to the following constraints:
-  - The value must be greater than the **createdDateTime** of the target channel.
-  - The value must not be in the future.
-
-> [!NOTE]
-> Only the application that called [startMigration](channel-startmigration.md) on the target channel can import messages into it. No other application can invoke this API on the channel until the owning application completes migration by calling [completeMigration](channel-completemigration.md).
-
-> [!NOTE]
-> Some imported messages may not be visible in the Teams client until migration is completed by calling [completeMigration](channel-completemigration.md) on the target channel.
-
-For more information, see [Import third-party platform messages to Teams using Microsoft Graph](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
-
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -194,13 +174,13 @@ Content-type: application/json
 }
 ```
 
-### Example 2: Import message
+### Example 2: Import a message
 
-> **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target channel must be in migration mode. The **from** property attributes the message to a user in the same tenant as the authenticated application. The **createdDateTime** value must be greater than the channel's **createdDateTime** and must not be in the future.
+> **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target channel must be in migration mode. The **from** property attributes the message to a user in the same tenant as the authenticated application. The **createdDateTime** value must be later than the channel **createdDateTime** and must not be in the future.
 
 #### Request
 
-The following example shows how to import back-in-time messages using the `createdDateTime` and `from` keys in the request body.
+The following example shows how to import back-in-time messages using the **createdDateTime** and **from** properties in the request body.
 
 
 # [HTTP](#tab/http)
@@ -305,7 +285,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### Example 3: Import message with inline images
+### Example 3: Import a message with inline images
 
 > [!NOTE]
 > Currently, inline images are the only media type supported by the import message API schema.

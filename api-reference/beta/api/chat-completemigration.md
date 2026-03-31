@@ -19,7 +19,7 @@ Complete the migration of external messages by removing migration mode from a [c
 After a **completeMigration** request is made for an existing or new chat, you can start a migration session by calling [chat: startMigration](chat-startmigration.md).
 
 > [!NOTE]
-> - The application that calls **completeMigration** must be the same application that initiated the migration session by calling [startMigration](chat-startmigration.md) on the target chat.
+> - The application that calls **completeMigration** must be the same application that initiated the migration session by calling [startMigration](chat-startmigration.md) on the target chat. This is the same application that is allowed to call [import message](chat-post-messages.md#example-2-import-a-message) during the migration session.
 > - Calling **completeMigration** removes the import mode banner visible to Teams client users, making the chat fully available again.
 
 [!INCLUDE [chat-support](../../includes/supported-chats-for-import.md)]
@@ -52,11 +52,6 @@ Don't supply a request body for this method.
 ## Response
 
 If successful, this method returns a `204 No Content` response code. It doesn't return anything in the response body.
-
-## Notes
-
-- The application that calls **completeMigration** must be the same application that initiated the migration session by calling [startMigration](chat-startmigration.md) on the target chat. This is the same application which is allowed call [importMessage](chat-post-messages.md#import-message) during the migration session.
-- Calling **completeMigration** removes the import mode banner visible to Teams client users, making the chat fully available again.
 
 ## Examples
 
@@ -198,7 +193,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: startMigration](chat-startmigration.md)
-- [importMessage](chat-post-messages.md#import-message)
+- [Import a message](chat-post-messages.md#example-2-import-a-message).
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)
