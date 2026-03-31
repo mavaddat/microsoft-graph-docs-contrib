@@ -26,7 +26,8 @@ Using the **signInAudience** property to limit where an [application](/graph/api
 
 ### Calendars | Places
 
-Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- When using *application permissions* with the [Create place](/graph/api/place-post), [Upsert places](/graph/api/place-patch-places), [Update place](/graph/api/place-update), and [Delete place](/graph/api/place-delete) APIs, you must configure the required `TenantPlacesManagement` role (to manage Places) and the `MailRecipient` role (to manage users and mailboxes). For more information on how to configure these roles, see [Role Based Access Control for Applications in Exchange Online](/exchange/permissions-exo/application-rbac).
 
 ### Device and app management | Cloud PC
 
@@ -52,6 +53,8 @@ Introduced the Agent Identity API to support registration and management of AI a
   - Manage sponsors who can authorize and manage agent lifecycles
 
 The API also introduces supporting types including [inheritableScopes](/graph/api/resources/inheritablescopes), [allAllowedScopes](/graph/api/resources/allallowedscopes), [enumeratedScopes](/graph/api/resources/enumeratedscopes), [noScopes](/graph/api/resources/noscopes), and the **scopeCollectionKind** enumeration.
+
+Added the **createdByAppId** property to the [application](/graph/api/resources/application) and [servicePrincipal](/graph/api/resources/serviceprincipal) resources.
 
 ### Identity and access | Identity and sign-in
 
@@ -104,7 +107,8 @@ The new Tenant Configuration Management APIs in Microsoft Graph allow administra
 
 ### Calendars | Places
 
-Added a known issue of RBAC in [Places update API](/graph/api/place-update?view=graph-rest-beta&preserve-view=true): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- Added a known issue of RBAC in [Places update API](/graph/api/place-update?view=graph-rest-beta&preserve-view=true): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- When using *application permissions* with the [Create place](/graph/api/place-post?view=graph-rest-beta&preserve-view=true), [Upsert places](/graph/api/place-patch-places?view=graph-rest-beta&preserve-view=true), [Update place](/graph/api/place-update?view=graph-rest-beta&preserve-view=true), and [Delete place](/graph/api/place-delete?view=graph-rest-beta&preserve-view=true) APIs, you must configure the required `TenantPlacesManagement` role (to manage Places) and the `MailRecipient` role (to manage users and mailboxes). For more information on how to configure these roles, see [Role Based Access Control for Applications in Exchange Online](/exchange/permissions-exo/application-rbac).
 
 ### Device and app management | Cloud PC
 
@@ -130,6 +134,9 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 - Use the [list](/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta&preserve-view=true), [create](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta&preserve-view=true), [get](/graph/api/filestoragecontainertype-get-permission?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/filestoragecontainertype-delete-permissions?view=graph-rest-beta&preserve-view=true) APIs to manage user permissions for SharePoint Embedded [file storage container types](/graph/api/resources/filestoragecontainertype?view=graph-rest-beta&preserve-view=true).
 - [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
 - Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
+- Use the **itemCount** property on the [list](/graph/api/resources/list?view=graph-rest-beta&preserve-view=true) resource to quickly access the total number of items in a SharePoint list without retrieving all items or making additional queries.
+- Use the **principalId** property on [sharePointGroup](/graph/api/resources/sharepointgroup?view=graph-rest-beta&preserve-view=true) to get the principal ID of the SharePoint group in the tenant.
+- Use the **sharePointGroup** property on [sharePointIdentitySet](/graph/api/resources/sharepointidentityset?view=graph-rest-beta&preserve-view=true) to get the SharePoint group associated with a **sharePointIdentitySet** object.
 
 ### Groups
 
