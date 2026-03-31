@@ -18,6 +18,14 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## April 2026: New and generally available
+
+### Teamwork and communications | Messaging
+
+- [Start](/graph/api/channel-startmigration) the channel migration of external messages by enabling migration mode in an existing channel.
+- [Start](/graph/api/chat-startmigration) the chat migration of external messages by enabling migration mode in an existing chat.
+- [Complete](/graph/api/chat-completemigration) the chat migration of external messages by removing migration mode from a chat.
+
 ## March 2026: New and generally available
 
 ### Applications
@@ -86,12 +94,6 @@ Added [ad hoc call](/graph/api/resources/adhoccall) support to change notificati
 - `users/{userId}/adhocCalls/getAllRecordings`
 
 For more information, see [Get change notifications for transcripts and recordings using Microsoft Graph](teams-changenotifications-callrecording-and-calltranscript.md).
-
-### Teamwork and communications | Messaging
-
-- [Start](/graph/api/channel-startmigration) the channel migration of external messages by enabling migration mode in an existing channel.
-- [Start](/graph/api/chat-startmigration) the chat migration of external messages by enabling migration mode in an existing chat.
-- [Complete](/graph/api/chat-completemigration) the chat migration of external messages by removing migration mode from a chat.
 
 ### Tenant management | Configuration management
 
