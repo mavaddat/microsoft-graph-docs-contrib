@@ -114,9 +114,6 @@ The following example shows the response.
 HTTP/1.1 400 Bad Request
 ```
 
-<!-- uuid: 5793eec6-0e5a-11eb-adc1-0242ac120002
-2020-10-14 20:22:11 UTC -->
-<!--
 ## Related content
 
 - [channel: startMigration](channel-startmigration.md)
