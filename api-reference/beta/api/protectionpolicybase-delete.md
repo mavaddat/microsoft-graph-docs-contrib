@@ -14,7 +14,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a protection policy. Read the properties and relationships of a [protectionPolicyBase](../resources/protectionpolicybase.md) object.
+Delete a [protectionPolicyBase](../resources/protectionpolicybase.md) object.
+
+The policy must be in an `inactive` state before it can be deleted. When deleted, the policy transitions to `deleted` and all associated protection units transition to `removed` or `completed`. Protection units then enter a ~90-day offboarding pipeline: after 30 days billing stops, and after 60 more days the units reach `offboardCompleted` and are permanently deleted. If billing remains healthy, the policy and its protection units can be recovered before offboarding completes; unhealthy billing accelerates the offboarding process.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
