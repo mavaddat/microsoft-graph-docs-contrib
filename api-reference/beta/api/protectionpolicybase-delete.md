@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Delete a [protectionPolicyBase](../resources/protectionpolicybase.md) object.
 
-A protection policy can only be deleted after it has been deactivated. Deleting a policy permanently removes backup protection for all resources that were associated with that policy. Existing backups then move through an offboarding flow and are permanently deleted after about 90 days (30 days, then an additional 60 days).
+A protection policy can only be deleted after it has been deactivated. When you delete a policy, the policy is marked as deleted, all associated protection units are removed, and backup protection stops for the resources that were covered by that policy. Existing backup data is retained for 365 days. Offboarding is a separate process and isn't automatically triggered by deletion.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
