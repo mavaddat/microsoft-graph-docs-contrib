@@ -4,7 +4,7 @@ description: "Get the properties and relationships of a configurationMonitor obj
 author: "swatyario"
 ms.date: 03/18/2026
 ms.localizationpriority: medium
-ms.subservice: "tenant-administration"
+ms.subservice: "tenant-configuration-management"
 doc_type: apiPageType
 ---
 
@@ -13,6 +13,8 @@ doc_type: apiPageType
 Namespace: microsoft.graph
 
 Get the properties and relationships of a [configurationMonitor](../resources/configurationmonitor.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -54,6 +56,7 @@ If successful, this method returns a `200 OK` response code and a [configuration
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_configurationmonitor"
@@ -62,6 +65,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/v1.0/admin/configurationManagement/configurationMonitors/b166c9cb-db29-438b-95fb-247da1dc72c3
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-configurationmonitor-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

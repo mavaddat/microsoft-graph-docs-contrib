@@ -4,7 +4,7 @@ description: "Update the properties of a governance policy template."
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -15,6 +15,8 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Update the properties of a [governancePolicyTemplate](../resources/tenantgovernanceservices-governancepolicytemplate.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -68,6 +70,7 @@ If successful, this method returns a `200 OK` response code and an updated [micr
 #### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_governancepolicytemplate"
@@ -117,6 +120,12 @@ Content-Type: application/json
   ]
 }
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/update-governancepolicytemplate-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 #### Response
@@ -186,6 +195,7 @@ Content-Type: application/json
 #### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_governancepolicytemplate_default"
@@ -235,6 +245,12 @@ Content-Type: application/json
   ]
 }
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/update-governancepolicytemplate-default-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 #### Response

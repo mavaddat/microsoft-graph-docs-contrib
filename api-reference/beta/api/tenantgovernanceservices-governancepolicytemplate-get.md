@@ -4,7 +4,7 @@ description: "Read the properties of a governance policy template."
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -15,6 +15,8 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Read the properties of a [governancePolicyTemplate](../resources/tenantgovernanceservices-governancepolicytemplate.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -61,6 +63,7 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 #### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_governancepolicytemplate"
@@ -69,6 +72,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicyTemplates/aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-governancepolicytemplate-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 #### Response
@@ -138,6 +147,7 @@ Content-Type: application/json
 #### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_governancepolicytemplate_default"
@@ -146,6 +156,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/directory/tenantGovernance/governancePolicyTemplates/default
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-governancepolicytemplate-default-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 #### Response

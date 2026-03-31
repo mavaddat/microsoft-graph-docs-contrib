@@ -4,7 +4,7 @@ description: "Get a list of governance relationships."
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -15,6 +15,8 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Get a list of the [governanceRelationship](../resources/tenantgovernanceservices-governancerelationship.md) objects and their properties. This API method returns all governance relationships where the calling tenant is either the governing tenant or the governed tenant.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -58,6 +60,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_governancerelationship"
@@ -66,6 +69,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/directory/tenantGovernance/governanceRelationships
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/list-governancerelationship-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response

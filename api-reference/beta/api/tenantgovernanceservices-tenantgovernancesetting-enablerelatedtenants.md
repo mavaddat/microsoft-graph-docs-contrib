@@ -4,7 +4,7 @@ description: "Enable the related tenants feature for tenant discovery."
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -18,6 +18,8 @@ Enable the related tenants feature for tenant discovery. After calling this acti
 
 > [!IMPORTANT]
 > This action must be called before using any related tenant APIs. Related tenant APIs won't run successfully unless this feature is explicitly enabled.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -57,6 +59,7 @@ If successful, this action returns a `204 No Content` response code.
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "tenantgovernancesettingthis.enablerelatedtenants"
@@ -65,6 +68,12 @@ The following example shows a request.
 ``` http
 POST https://graph.microsoft.com/beta/directory/tenantGovernance/settings/enableRelatedTenants
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/tenantgovernancesettingthisenablerelatedtenants-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response

@@ -4,7 +4,7 @@ description: "Update the canReceiveInvitations property of the tenant governance
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -15,6 +15,8 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Update the **canReceiveInvitations** property of the [tenantGovernanceSetting](../resources/tenantgovernanceservices-tenantgovernancesetting.md) singleton. This property controls whether the tenant can receive governance invitations.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -62,6 +64,7 @@ If successful, this method returns a `200 OK` response code and an updated [micr
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_tenantgovernancesetting"
@@ -75,6 +78,12 @@ Content-Type: application/json
   "canReceiveInvitations": true
 }
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/update-tenantgovernancesetting-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response

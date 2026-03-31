@@ -4,7 +4,7 @@ description: "Delete a configurationSnapshotJob object."
 author: "swatyario"
 ms.date: 03/18/2026
 ms.localizationpriority: medium
-ms.subservice: "tenant-administration"
+ms.subservice: "tenant-configuration-management"
 doc_type: apiPageType
 ---
 
@@ -13,6 +13,8 @@ doc_type: apiPageType
 Namespace: microsoft.graph
 
 Delete a [configurationSnapshotJob](../resources/configurationsnapshotjob.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -54,6 +56,7 @@ If successful, this method returns a `204 No Content` response code.
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "delete_configurationsnapshotjob"
@@ -62,6 +65,12 @@ The following example shows a request.
 ``` http
 DELETE https://graph.microsoft.com/v1.0/admin/configurationManagement/configurationSnapshotJobs/c91a1470-acc9-4585-bc03-522ae898f82f
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/delete-configurationsnapshotjob-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

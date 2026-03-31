@@ -4,7 +4,7 @@ description: "Get the status of the related tenants refresh action"
 author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -15,6 +15,8 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Get the status of the [related tenants refresh action](../api/tenantgovernanceservices-relatedtenant-refresh.md).
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -54,6 +56,7 @@ If successful, this function returns a `200 OK` response code and a [relatedTena
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "relatedtenantthis.refreshstatus"
@@ -62,6 +65,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/directory/tenantGovernance/relatedTenants/refreshStatus
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/relatedtenantthisrefreshstatus-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response

@@ -4,7 +4,7 @@ description: "Create a new governance invitation to establish a relationship wit
 author: "hafowler"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -15,6 +15,8 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Create a new [governanceInvitation](../resources/tenantgovernanceservices-governanceinvitation.md) to establish a governance relationship with a governed tenant. Invitations provide an alternative mechanism to governance requests for initiating relationships.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -63,6 +65,7 @@ If successful, this method returns a `201 Created` response code and a [microsof
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_governanceinvitation"
@@ -76,6 +79,12 @@ Content-Type: application/json
   "governingTenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee"
 }
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-governanceinvitation-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response

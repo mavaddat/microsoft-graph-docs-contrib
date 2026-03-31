@@ -4,7 +4,7 @@ description: "Refresh the related tenants list"
 author: "akhil-potturi"
 ms.date: 03/10/2026
 ms.localizationpriority: medium
-ms.subservice: "entra-id"
+ms.subservice: "entra-tenant-governance"
 doc_type: apiPageType
 ---
 
@@ -15,6 +15,8 @@ Namespace: microsoft.graph.tenantGovernanceServices
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Manually refresh the list of [related tenants](../resources/tenantgovernanceservices-relatedtenant.md). The list is also automatically refreshed daily.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -54,6 +56,7 @@ If successful, this action returns a `204 No Content` response code.
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "relatedtenantthis.refresh"
@@ -62,6 +65,12 @@ The following example shows a request.
 ``` http
 POST https://graph.microsoft.com/beta/directory/tenantGovernance/relatedTenants/refresh
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/relatedtenantthisrefresh-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 
 ### Response
