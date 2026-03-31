@@ -19,27 +19,6 @@ Send a new [chatMessage](../resources/chatmessage.md) in the specified [channel]
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
-### Import message
-
-This API can also be used to import messages into an existing channel during a migration session. To use this API as an import message API, the following conditions must be met:
-
-- The request must be made in application context (app-only) with the **Teamwork.Migrate.All** application permission.
-- The target channel must be in migration mode. To put a channel in migration mode, call [channel: startMigration](channel-startmigration.md).
-- The **from** property must be specified to attribute the message to a user who belongs to the same tenant as the authenticated application.
-- The **createdDateTime** property can be specified to set a custom timestamp for the imported message, subject to the following constraints:
-  - The value must be greater than the **createdDateTime** of the target channel.
-  - The value must not be in the future.
-
-> [!NOTE]
-> Only the application that called [startMigration](channel-startmigration.md) on the target channel can import messages into it. No other application can invoke this API on the channel until the owning application completes migration by calling [completeMigration](channel-completemigration.md).
-
-> [!NOTE]
-> Some imported messages may not be visible in the Teams client until migration is completed by calling [completeMigration](channel-completemigration.md) on the target channel.
-
-For more information, see [Import third-party platform messages to Teams using Microsoft Graph](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
-
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
-
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
