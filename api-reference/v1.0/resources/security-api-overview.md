@@ -145,7 +145,8 @@ The Defender for Identity sensors management APIs allows you to:
 - Enable or disable the automatic activation of eligible servers for the unified agent.
 - Activate or deactivate the unified agent on eligible servers.
 - Enable or disable the automatic enabling of the required events auditing configuration during the sensor’s activation.
-- 
+
+
 ### identityAccounts
 The [identityAccounts resource and related APIs](../resources/security-identityaccounts.md) allows you to retrieve details of users that are flagged by Microsoft Defender for Identity alerts, and apply actions such as disabling accounts and resetting the user password for the compromised user.
 

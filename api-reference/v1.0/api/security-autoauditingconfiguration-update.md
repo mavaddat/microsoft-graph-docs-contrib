@@ -12,8 +12,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph.security
 
-
-Update the properties of a autoAuditingConfiguration object.
+Update the properties of an [autoAuditingConfiguration](../resources/security-autoauditingconfiguration.md) object.
 
 ## Permissions
 
