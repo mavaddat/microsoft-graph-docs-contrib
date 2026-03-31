@@ -47,14 +47,6 @@
         {
           "Id": "3c1f6194-c245-45fd-952e-3721cd1c76ef",
           "ApiChange": "Property",
-          "ChangedApiName": "managedBy",
-          "ChangeType": "Addition",
-          "Description": "Added the **managedBy** property to the [cloudPcOnPremisesConnection](https://learn.microsoft.com/en-us/graph/api/resources/cloudPcOnPremisesConnection?view=graph-rest-1.0) resource.",
-          "Target": "cloudPcOnPremisesConnection"
-        },
-        {
-          "Id": "3c1f6194-c245-45fd-952e-3721cd1c76ef",
-          "ApiChange": "Property",
           "ChangedApiName": "scopeIds",
           "ChangeType": "Addition",
           "Description": "Added the **scopeIds** property to the [cloudPcOnPremisesConnection](https://learn.microsoft.com/en-us/graph/api/resources/cloudPcOnPremisesConnection?view=graph-rest-1.0) resource.",

@@ -33,7 +33,6 @@ Added a known issue of RBAC in [Places update API](/graph/api/place-update): upd
 - [Update](/graph/api/cloudpconpremisesconnection-updateaddomainpassword) the Active Directory domain password for a successful [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection).
 - Use the **inUseByCloudPc** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the on-premises connection is currently in use by a Cloud PC.
 - Use the **healthCheckPaused** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the health check is currently paused.
-- Use the **managedBy** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to specify which services manage the Azure network connection.
 - Use the **scopeIds** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to specify the scope identifiers.
 - Use the **osVersionNumber** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) and [cloudPcGalleryImage](/graph/api/resources/cloudpcgalleryimage) resources to get the operating system version of an image.
 - Use the **sizeInGB** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) to get the size of the image in GB.

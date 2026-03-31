@@ -45,7 +45,6 @@ Represents a defined collection of Azure resource information that can be used t
 |id|String|Unique identifier for the Azure network connection. Read-only.|
 |inUse|Boolean|When `true`, the Azure network connection is in use. When `false`, the connection isn't in use. You can't delete a connection that’s in use. Returned only on `$select`. For an example that shows how to get the **inUse** property, see [Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetail](../api/cloudpconpremisesconnection-get.md). Read-only.|
 |inUseByCloudPc|Boolean| Indicates whether a Cloud PC is using this on-premises network connection. `true` if at least one Cloud PC is using it. Otherwise, `false`. Read-only. Default is `false`. |
-|managedBy|[cloudPcManagementService](#cloudpcmanagementservice-values)|Specifies which services manage the Azure network connection. The possible values are: `windows365`, `devBox`, `unknownFutureValue`, `rpaBox`, `microsoft365Opal`, `microsoft365BizChat`. Use the `Prefer: include-unknown-enum-members` request header to get the following members in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `rpaBox`, `microsoft365Opal`, `microsoft365BizChat`. Read-only.|
 |organizationalUnit|String|The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in the tenant's Active Directory domain (OU) is used. Optional.|
 |resourceGroupId|String|The unique identifier of the target resource group used associated with the on-premises network connectivity for Cloud PCs. Required format: “/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}” |
 |scopeIds|String collection|The scope IDs of the corresponding permission. Currently, it's the Intune scope tag ID.|
@@ -54,17 +53,6 @@ Represents a defined collection of Azure resource information that can be used t
 |subscriptionName|String|The name of the Azure subscription is used to create an Azure network connection. Read-only.|
 |virtualNetworkId|String|The unique identifier of the target virtual network used associated with the on-premises network connectivity for Cloud PCs. Required format: “/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}” |
 |virtualNetworkLocation|String|Indicates the resource location of the target virtual network. For example, the location can be eastus2, westeurope, etc. Read-only (computed value). |
-
-### cloudPcManagementService values
-
-| Member             | Description                                                                                       |
-|:-------------------|:--------------------------------------------------------------------------------------------------|
-| windows365         | Azure network connection was successfully created through Windows 365.                            |
-| devBox             | Azure network connection was successfully created through Project Fidalgo.                        |
-| unknownFutureValue | Evolvable enumeration sentinel value. Don't use.                                                  |
-| rpaBox             | The Azure network connection was successfully created through the Power Automate project.         |
-| microsoft365Opal   | Indicates that the Cloud PC Azure network connection was successfully created through the Project Opal.    |
-| microsoft365BizChat| Indicates that the Cloud PC Azure network connection was successfully created through the Project Biz Chat.|
 
 ### cloudPcOnPremisesConnectionType values
 
