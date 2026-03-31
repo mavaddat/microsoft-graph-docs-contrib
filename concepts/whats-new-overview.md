@@ -54,6 +54,8 @@ Introduced the Agent Identity API to support registration and management of AI a
 
 The API also introduces supporting types including [inheritableScopes](/graph/api/resources/inheritablescopes), [allAllowedScopes](/graph/api/resources/allallowedscopes), [enumeratedScopes](/graph/api/resources/enumeratedscopes), [noScopes](/graph/api/resources/noscopes), and the **scopeCollectionKind** enumeration.
 
+Added the **createdByAppId** property to the [application](/graph/api/resources/application) and [servicePrincipal](/graph/api/resources/serviceprincipal) resources.
+
 ### Identity and access | Identity and sign-in
 
 - Added new authentication event resources to support Just-In-Time (JIT) user migration scenarios from legacy authentication systems:
