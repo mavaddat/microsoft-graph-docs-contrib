@@ -171,7 +171,8 @@ Content-type: application/json
 }
 ```
 
-### Example 2: Import message
+### Example 2: Import a message
+The following example shows how to import a message. For more information, see [Import messages into Microsoft Teams chats and channels using Microsoft Graph](/graph/teams-import-messages).
 
 > **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target channel must be in migration mode. The **from** property attributes the message to a user in the same tenant as the authenticated application. The **createdDateTime** value must be greater than the channel's **createdDateTime** and must not be in the future.
 
