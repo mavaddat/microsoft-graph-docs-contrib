@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Delete a [protectionPolicyBase](../resources/protectionpolicybase.md) object.
 
-The policy must be in an `inactive` state before it can be deleted. When deleted, the policy transitions to `deleted` and all associated protection units transition to `removed` or `completed`. Protection units then enter a ~90-day offboarding pipeline: after 30 days billing stops, and after 60 more days the units reach `offboardCompleted` and are permanently deleted. If billing remains healthy, the policy and its protection units can be recovered before offboarding completes; unhealthy billing accelerates the offboarding process.
+A protection policy can only be deleted after it has been deactivated. Deleting a policy permanently removes backup protection for all resources that were associated with that policy. Existing backups then move through an offboarding flow and are permanently deleted after about 90 days (30 days, then an additional 60 days).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 

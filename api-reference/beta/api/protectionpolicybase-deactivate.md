@@ -17,7 +17,7 @@ Namespace: microsoft.graph
 
 Deactivate a [protectionPolicyBase](../resources/protectionpolicybase.md).
 
-When a protection policy is deactivated, the policy transitions to `inactive` and all associated protection units transition to `unprotected`. No new backups are taken. Existing backup data is retained indefinitely until offboarding is explicitly triggered or initiated automatically by a lifecycle event, such as the billing becoming unhealthy.
+When a protection policy is deactivated, backup activity stops immediately — no new backups are taken and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained for 365 days, after which they are permanently deleted.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
