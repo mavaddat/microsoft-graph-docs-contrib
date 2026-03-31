@@ -283,7 +283,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-### Example 3: Import message with inline images
+### Example 3: Import a message with inline images
 
 > [!NOTE]
 > Currently, inline images are the only media type supported by the import message API schema.
