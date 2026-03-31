@@ -174,11 +174,11 @@ Content-type: application/json
 ### Example 2: Import a message
 The following example shows how to import a message. For more information, see [Import messages into Microsoft Teams chats and channels using Microsoft Graph](/graph/teams-import-messages).
 
-> **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target channel must be in migration mode. The **from** property attributes the message to a user in the same tenant as the authenticated application. The **createdDateTime** value must be greater than the channel's **createdDateTime** and must not be in the future.
+> **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target channel must be in migration mode. The **from** property attributes the message to a user in the same tenant as the authenticated application. The **createdDateTime** value must be later than the channel **createdDateTime** and must not be in the future.
 
 #### Request
 
-The following example shows how to import back-in-time messages using the `createdDateTime` and `from` keys in the request body.
+The following example shows how to import back-in-time messages using the **createdDateTime** and **from** properties in the request body.
 
 
 # [HTTP](#tab/http)
