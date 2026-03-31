@@ -26,7 +26,8 @@ Using the **signInAudience** property to limit where an [application](/graph/api
 
 ### Calendars | Places
 
-Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- When using *application permissions* with the [Create place](/graph/api/place-post), [Upsert places](/graph/api/place-patch-places), [Update place](/graph/api/place-update), and [Delete place](/graph/api/place-delete) APIs, you must configure the required `TenantPlacesManagement` role (to manage Places) and the `MailRecipient` role (to manage users and mailboxes). For more information on how to configure these roles, see [Role Based Access Control for Applications in Exchange Online](/exchange/permissions-exo/application-rbac).
 
 ### Device and app management | Cloud PC
 
@@ -104,7 +105,8 @@ The new Tenant Configuration Management APIs in Microsoft Graph allow administra
 
 ### Calendars | Places
 
-Added a known issue of RBAC in [Places update API](/graph/api/place-update?view=graph-rest-beta&preserve-view=true): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- Added a known issue of RBAC in [Places update API](/graph/api/place-update?view=graph-rest-beta&preserve-view=true): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
+- When using *application permissions* with the [Create place](/graph/api/place-post?view=graph-rest-beta&preserve-view=true), [Upsert places](/graph/api/place-patch-places?view=graph-rest-beta&preserve-view=true), [Update place](/graph/api/place-update?view=graph-rest-beta&preserve-view=true), and [Delete place](/graph/api/place-delete?view=graph-rest-beta&preserve-view=true) APIs, you must configure the required `TenantPlacesManagement` role (to manage Places) and the `MailRecipient` role (to manage users and mailboxes). For more information on how to configure these roles, see [Role Based Access Control for Applications in Exchange Online](/exchange/permissions-exo/application-rbac).
 
 ### Device and app management | Cloud PC
 
