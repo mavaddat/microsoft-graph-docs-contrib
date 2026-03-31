@@ -40,4 +40,7 @@ To use the Teams messaging API to import messages, the following conditions must
 
 ## Related content
 
-[Import third-party platform messages to Teams using Microsoft Graph](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
+- [Import third-party platform messages to Teams using Microsoft Graph](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
+- [Send a message in a channel](/graph/api/channel-post-messages)
+- [Send a message in a chat](/graph/api/chat-post-message)
+- [Send a message in a channel or a chat](/graph/api/chatmessage-post)
