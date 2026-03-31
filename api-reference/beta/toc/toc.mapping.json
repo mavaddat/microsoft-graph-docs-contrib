@@ -1130,7 +1130,8 @@
       "complexTypes": [
         "fileStorageContainerTypeRegistrationSettings",
         "fileStorageContainerTypeAgentSettings",
-        "fileStorageContainerTypeSettings"
+        "fileStorageContainerTypeSettings",
+        "sharePointGroupIdentity"
       ],
       "childNodes": [
         {
