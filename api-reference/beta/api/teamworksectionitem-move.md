@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Move an [item](../resources/teamworksectionitem.md) from one [section](../resources/teamworksection.md) to another in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. This action removes the item from its current section and adds it to the target section.
+Move an [item](../resources/teamworksectionitem.md) from one user-defined [section](../resources/teamworksection.md) to another user-defined section in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. This action removes the item from its current section and adds it to the target section. Use this action instead of [add](teamworksection-post-items.md) when the item is already in a user-defined section.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 

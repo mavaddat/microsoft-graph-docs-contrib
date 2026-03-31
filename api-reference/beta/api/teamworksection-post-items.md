@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Add an [item](../resources/teamworksectionitem.md), such as a chat, channel, meeting, or community, to a [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. If the item is already associated with another section, use the [move](teamworksectionitem-move.md) action instead.
+Add an [item](../resources/teamworksectionitem.md), such as a chat, channel, meeting, or community, to a user-defined [section](../resources/teamworksection.md) in a user's [teamwork](../resources/userteamwork.md). Each item can belong to only one section at a time. You can only add items that are currently in a system-defined section. If the item is already in another user-defined section, use the [move](teamworksectionitem-move.md) action to relocate it.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -62,7 +62,7 @@ This method can also return the following errors.
 | Scenario | HTTP code | Error code | Message |
 |:---------|:----------|:-----------|:--------|
 | Item already exists in this section | `409 Conflict` | `conflict` | This item is already in this section. |
-| Item already exists in another section | `409 Conflict` | `conflict` | This item is already associated with another section. Use the [move](teamworksectionitem-move.md) API to relocate it. |
+| Item already exists in another user-defined section | `409 Conflict` | `conflict` | This item is already associated with another section. Use the [move](teamworksectionitem-move.md) API to relocate it. |
 | Maximum items per section reached | `400 Bad Request` | `badRequest` | The maximum number of items in this section is reached. |
 | Invalid item ID | `400 Bad Request` | `badRequest` | The specified item ID isn't valid. Provide a valid chat, channel, meeting, or community ID. |
 | ETag version mismatch | `412 Precondition Failed` | `preconditionFailed` | The resource was modified after it was last read. Read the latest version and retry. |
