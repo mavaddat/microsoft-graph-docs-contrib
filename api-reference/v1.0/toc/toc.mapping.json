@@ -1765,8 +1765,7 @@
             "microsoft.graph.security.sensor",
             "microsoft.graph.security.sensorCandidate",
             "microsoft.graph.security.sensorCandidateActivationConfiguration",
-            "microsoft.graph.security.identityAccounts",
-            "microsoft.graph.security.autoAuditingConfiguration"
+            "microsoft.graph.security.identityAccounts"
           ],
           "complexTypes": [
             "microsoft.graph.security.deploymentAccessKeyType",
