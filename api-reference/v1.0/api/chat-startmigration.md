@@ -20,7 +20,7 @@ You can define a minimum timestamp for content migration that enables the import
 - The **createdDateTime** can't be updated to a value newer than the current **createdDateTime**.
 
 > [!NOTE]
-> - The application that calls **startMigration** owns the migration session end to end. The same application must call **importMessage** and **completeMigration** for the same thread. No other application can invoke these APIs on the thread until the owning application completes the migration.
+> - The application that calls **startMigration** owns the migration session end to end. The same application must call [import message](chat-post-messages.md#example-2-import-a-message) and [completeMigration](chat-completemigration.md) for the same thread. No other application can invoke these APIs on the thread until the owning application completes the migration.
 > - Once a chat enters migration mode, a banner is displayed in the Teams client that indicates the conversation is in import mode. This banner remains visible until migration is completed by [completeMigration](chat-completemigration.md).
 
 [!INCLUDE [chat-support](../../includes/supported-chats-for-import.md)]
@@ -59,10 +59,6 @@ In the request body, supply a JSON representation of the following parameters.
 
 If successful, this method returns a `204 No Content` response code. It doesn't return anything in the response body.
 
-## Notes
-
-- The application that calls **startMigration** owns the migration session end-to-end. The same app must call [importMessage](chat-post-messages.md#import-message) and [completeMigration](chat-completemigration.md) for the same thread. No other app can invoke these APIs on the thread until the owning app completes migration.
-- Once a chat enters migration mode, a banner is displayed in the Teams client indicating that the conversation is in import mode. This banner remains visible until migration is completed by calling [completeMigration](chat-completemigration.md).
 
 ## Examples
 
@@ -142,7 +138,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: completeMigration](chat-completemigration.md)
-- [importMessage](channel-post-messages.md#import-message)
+- [Import a message](channel-post-messages.md#example-2-import-a-message)
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)
