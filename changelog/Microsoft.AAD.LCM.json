@@ -7,7 +7,7 @@
           "ApiChange": "Member",
           "ChangedApiName": "canceling",
           "ChangeType": "Addition",
-          "Description": "Added the `canceling` member from the **lifecycleWorkflowProcessingStatus** enumeration.",
+          "Description": "Added the `canceling` member to the **lifecycleWorkflowProcessingStatus** enumeration.",
           "Target": "lifecycleWorkflowProcessingStatus"
         },
         {
