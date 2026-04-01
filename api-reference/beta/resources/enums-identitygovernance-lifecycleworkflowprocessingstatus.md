@@ -21,9 +21,9 @@ Namespace: microsoft.graph.identityGovernance
 |completed|
 |completedWithErrors|
 |canceled|
-|canceling|
 |failed|
 |unknownFutureValue|
+|canceling|
 
 <!--
 {
