@@ -1,4 +1,4 @@
-﻿---
+---
 title: "enableLegacyPcManagement action"
 description: "Intune Deviceconfig Devicemanagement Enablelegacypcmanagement Api ."
 author: "jaiprakashmb"

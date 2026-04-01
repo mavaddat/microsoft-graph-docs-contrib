@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create iosiPadOSWebClip"
 description: "Create a new iosiPadOSWebClip object."
 author: "jaiprakashmb"

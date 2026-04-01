@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List mobileApps"
 description: "List properties and relationships of the mobileApp objects."
 author: "jaiprakashmb"

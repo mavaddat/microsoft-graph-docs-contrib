@@ -1,4 +1,4 @@
-﻿---
+---
 title: "hasCustomRoleScopeTag function"
 description: "Intune Rbac Rolescopetag Hascustomrolescopetag Api ."
 author: "jaiprakashmb"

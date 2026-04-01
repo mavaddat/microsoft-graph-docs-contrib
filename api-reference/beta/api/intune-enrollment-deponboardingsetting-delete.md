@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete depOnboardingSetting"
 description: "Deletes a depOnboardingSetting."
 author: "jaiprakashmb"

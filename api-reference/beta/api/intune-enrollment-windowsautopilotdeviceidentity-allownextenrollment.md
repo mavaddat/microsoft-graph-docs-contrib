@@ -1,4 +1,4 @@
-﻿---
+---
 title: "allowNextEnrollment action"
 description: "Unblocks next autopilot enrollment."
 author: "jaiprakashmb"

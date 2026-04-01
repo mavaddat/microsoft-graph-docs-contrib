@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete managedAppOperation"
 description: "Deletes a managedAppOperation."
 author: "jaiprakashmb"

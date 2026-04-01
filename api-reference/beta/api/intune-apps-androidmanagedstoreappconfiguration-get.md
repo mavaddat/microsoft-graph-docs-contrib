@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get androidManagedStoreAppConfiguration"
 description: "Read properties and relationships of the androidManagedStoreAppConfiguration object."
 author: "jaiprakashmb"

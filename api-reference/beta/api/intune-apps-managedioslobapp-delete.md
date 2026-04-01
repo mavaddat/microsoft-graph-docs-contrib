@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete managedIOSLobApp"
 description: "Deletes a managedIOSLobApp."
 author: "jaiprakashmb"

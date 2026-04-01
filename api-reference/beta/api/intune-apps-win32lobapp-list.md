@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List win32LobApps"
 description: "List properties and relationships of the win32LobApp objects."
 author: "jaiprakashmb"

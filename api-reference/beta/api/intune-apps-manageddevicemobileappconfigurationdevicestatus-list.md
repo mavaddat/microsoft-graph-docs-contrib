@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List managedDeviceMobileAppConfigurationDeviceStatuses"
 description: "List properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus objects."
 author: "jaiprakashmb"

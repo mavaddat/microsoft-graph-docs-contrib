@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete cartToClassAssociation"
 description: "Deletes a cartToClassAssociation."
 author: "jaiprakashmb"

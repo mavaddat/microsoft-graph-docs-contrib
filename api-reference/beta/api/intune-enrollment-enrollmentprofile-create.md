@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create enrollmentProfile"
 description: "Create a new enrollmentProfile object."
 author: "jaiprakashmb"

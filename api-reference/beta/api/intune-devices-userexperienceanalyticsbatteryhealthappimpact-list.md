@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsBatteryHealthAppImpacts"
 description: "List properties and relationships of the userExperienceAnalyticsBatteryHealthAppImpact objects."
 author: "jaiprakashmb"

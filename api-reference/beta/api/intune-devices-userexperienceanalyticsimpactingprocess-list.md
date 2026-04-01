@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List userExperienceAnalyticsImpactingProcesses"
 description: "List properties and relationships of the userExperienceAnalyticsImpactingProcess objects."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete windowsManagedDevice"
 description: "Deletes a windowsManagedDevice."
 author: "jaiprakashmb"

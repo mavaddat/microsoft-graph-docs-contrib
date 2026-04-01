@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create deviceEnrollmentNotificationConfiguration"
 description: "Create a new deviceEnrollmentNotificationConfiguration object."
 author: "jaiprakashmb"

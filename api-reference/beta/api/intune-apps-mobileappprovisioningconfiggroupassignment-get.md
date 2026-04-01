@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get mobileAppProvisioningConfigGroupAssignment"
 description: "Read properties and relationships of the mobileAppProvisioningConfigGroupAssignment object."
 author: "jaiprakashmb"

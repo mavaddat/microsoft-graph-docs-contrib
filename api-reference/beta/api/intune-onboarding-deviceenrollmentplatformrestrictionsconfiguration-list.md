@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceEnrollmentPlatformRestrictionsConfigurations"
 description: "List properties and relationships of the deviceEnrollmentPlatformRestrictionsConfiguration objects."
 author: "jaiprakashmb"

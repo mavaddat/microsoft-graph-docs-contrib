@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceManagementConfigurationSettings"
 description: "List properties and relationships of the deviceManagementConfigurationSetting objects."
 author: "jaiprakashmb"

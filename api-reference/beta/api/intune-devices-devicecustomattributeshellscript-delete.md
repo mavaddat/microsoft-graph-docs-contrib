@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete deviceCustomAttributeShellScript"
 description: "Deletes a deviceCustomAttributeShellScript."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "wipe action"
 description: "Intune Mam Windowsinformationprotectiondeviceregistration Wipe Api ."
 author: "jaiprakashmb"

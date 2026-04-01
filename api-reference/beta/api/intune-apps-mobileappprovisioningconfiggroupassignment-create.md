@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create mobileAppProvisioningConfigGroupAssignment"
 description: "Create a new mobileAppProvisioningConfigGroupAssignment object."
 author: "jaiprakashmb"

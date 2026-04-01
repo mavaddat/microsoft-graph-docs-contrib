@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List macOSMicrosoftDefenderApps"
 description: "List properties and relationships of the macOSMicrosoftDefenderApp objects."
 author: "jaiprakashmb"

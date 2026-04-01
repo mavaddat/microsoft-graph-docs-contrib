@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update macOSWebClip"
 description: "Update the properties of a macOSWebClip object."
 author: "jaiprakashmb"

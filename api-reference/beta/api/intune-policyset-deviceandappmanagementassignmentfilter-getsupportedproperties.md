@@ -1,4 +1,4 @@
-﻿---
+---
 title: "getSupportedProperties function"
 description: "Intune Policyset Deviceandappmanagementassignmentfilter Getsupportedproperties Api ."
 author: "jaiprakashmb"

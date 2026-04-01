@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create windowsAutoUpdateCatalogApp"
 description: "Create a new windowsAutoUpdateCatalogApp object."
 author: "jaiprakashmb"

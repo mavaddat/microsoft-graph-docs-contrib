@@ -1,4 +1,4 @@
-﻿---
+---
 title: "userExperienceAnalyticsSummarizedDeviceScopes function"
 description: "Intune Devices Devicemanagement Userexperienceanalyticssummarizeddevicescopes Api ."
 author: "jaiprakashmb"

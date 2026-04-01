@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update managedDeviceCleanupRule"
 description: "Update the properties of a managedDeviceCleanupRule object."
 author: "jaiprakashmb"

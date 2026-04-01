@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete vppToken"
 description: "Deletes a vppToken."
 author: "jaiprakashmb"

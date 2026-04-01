@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List deviceManagementScriptDeviceStates"
 description: "List properties and relationships of the deviceManagementScriptDeviceState objects."
 author: "jaiprakashmb"

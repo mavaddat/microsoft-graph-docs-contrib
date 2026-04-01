@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete iosMobileAppConfiguration"
 description: "Deletes a iosMobileAppConfiguration."
 author: "jaiprakashmb"

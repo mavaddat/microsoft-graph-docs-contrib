@@ -1,4 +1,4 @@
-﻿---
+---
 title: "List mobileAppDependencies"
 description: "List properties and relationships of the mobileAppDependency objects."
 author: "jaiprakashmb"

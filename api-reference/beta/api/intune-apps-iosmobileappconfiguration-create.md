@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create iosMobileAppConfiguration"
 description: "Create a new iosMobileAppConfiguration object."
 author: "jaiprakashmb"

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Update defaultManagedAppProtection"
 description: "Update the properties of a defaultManagedAppProtection object."
 author: "jaiprakashmb"

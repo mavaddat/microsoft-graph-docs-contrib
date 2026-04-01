@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Create appleUserInitiatedEnrollmentProfile"
 description: "Create a new appleUserInitiatedEnrollmentProfile object."
 author: "jaiprakashmb"

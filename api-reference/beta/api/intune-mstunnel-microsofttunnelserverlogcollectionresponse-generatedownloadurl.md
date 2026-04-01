@@ -1,4 +1,4 @@
-﻿---
+---
 title: "generateDownloadUrl action"
 description: "Intune Mstunnel Microsofttunnelserverlogcollectionresponse Generatedownloadurl Api ."
 author: "jaiprakashmb"

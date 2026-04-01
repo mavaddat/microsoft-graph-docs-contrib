@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Delete macOSOfficeSuiteApp"
 description: "Deletes a macOSOfficeSuiteApp."
 author: "jaiprakashmb"

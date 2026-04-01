@@ -1,4 +1,4 @@
-﻿---
+---
 title: "exportMobileConfig function"
 description: "Exports the mobile configuration"
 author: "jaiprakashmb"

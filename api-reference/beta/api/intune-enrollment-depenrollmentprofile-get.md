@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Get depEnrollmentProfile"
 description: "Read properties and relationships of the depEnrollmentProfile object."
 author: "jaiprakashmb"
