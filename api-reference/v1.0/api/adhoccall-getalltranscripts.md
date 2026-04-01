@@ -1,8 +1,7 @@
 ---
-title: "Get all ad hoc call transcripts - Microsoft Graph"
-description: "Learn how to retrieve all transcripts from ad hoc calls initiated by a specific user using the Microsoft Graph API. Includes request examples and response formats."
+title: "adhocCall: getAllTranscripts"
+description: "Get all callTranscript objects from ad hoc call instances that a specific user initiates."
 author: "kanchm"
-#customer intent: As a developer, I want to retrieve all transcripts from ad hoc calls initiated by a specific user so that I can analyze the meeting content programmatically.
 ms.reviewer: v-sukanyadas
 ms.date: 02/27/2026
 ms.localizationpriority: medium
@@ -14,7 +13,7 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Use the [adhocCall](../resources/adhoccall.md) getAllTranscripts API to retrieve all transcripts from ad hoc call instances that a specific user initiates. This API enables you to programmatically access and analyze meeting transcripts for calls organized by a given user, filtered by optional date ranges.
+Get all [callTranscript](../resources/calltranscript.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates. This API enables you to programmatically access and analyze meeting transcripts for calls organized by a given user, filtered by optional date ranges.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -23,7 +22,7 @@ Use the [adhocCall](../resources/adhoccall.md) getAllTranscripts API to retrieve
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "adhoccall_getalltranscripts" } -->
-[!INCLUDE [permissions-table](../../beta/includes/permissions/adhoccall-getalltranscripts-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/adhoccall-getalltranscripts-permissions.md)]
 
 ## HTTP request
 
@@ -41,9 +40,9 @@ In the request URL, provide the following function parameters with values.
 
 | Parameter      | Type           | Description |
 | :------------- | :------------- | :---------- |
+| endDateTime    | DateTimeOffset | Optional. Filter for artifacts created before the given end date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. |
+| startDateTime  | DateTimeOffset | Optional. Filter for artifacts created after the given start date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. |
 | userId         | String         | The user identifier of the meeting organizer to filter for artifacts for meetings organized by the given user identifier. Required. |
-| startDateTime  | DateTimeOffset | Filter for artifacts created after the given start date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. Optional. |
-| endDateTime    | DateTimeOffset | Filter for artifacts created before the given end date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2025 is `2025-01-01T00:00:00Z`. Optional. |
 
 ## Request headers
 
@@ -73,8 +72,6 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/v1.0/adhocCalls/getAllTranscripts(userId=d4220f1b-4c12-436c-8a03-dc3e362f9d54,startDateTime=2025-10-07T07:25:21.9730833Z,endDateTime=2025-10-07T07:25:52.4130833Z)
 ```
-
----
 
 ### Response
 
