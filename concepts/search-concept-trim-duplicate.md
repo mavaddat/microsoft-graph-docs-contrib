@@ -4,7 +4,7 @@ description: "You can use the Microsoft Search API trimDuplicates property in Mi
 author: "yiwenwang"
 ms.localizationpriority: medium
 ms.subservice: "search"
-ms.date: 11/07/2024
+ms.date: 04/01/2026
 ms.topic: how-to
 ---
 
@@ -140,7 +140,7 @@ Content-type: application/json
 
 The **trimDuplicates** property is not supported for the following resources: **message**, **event**, and **externalItem**.
 
-By default, search results are sorted by relevance. Because relevance scores are calculated dynamically, the same item may occasionally appear on more than one page during pagination.
+By default, search results are sorted by relevance. Because relevance scores are calculated dynamically, the same item might appear on more than one page during pagination.
 
 To ensure consistent results and avoid duplicates, we recommend using a deterministic sort order, such as sorting by **LastModifiedTime**.
 
