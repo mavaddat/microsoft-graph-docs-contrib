@@ -42,9 +42,9 @@ GET /drive/root:/{path and filename}:/content?format={format}
 
 | Parameter      | Type  | Description                                                    |
 |:----------|:-------|:---------------------------------------------------------------|
-| _format_  | string | Specify the format the item's content should be downloaded as. |
-| _width_   | Int32  | The desired width of the converted image in pixels. Required when `format=jpg`. |
-| _height_  | Int32  | The desired height of the converted image in pixels. Required when `format=jpg`. |
+| format | String | Specify the format the item's content should be downloaded as. |
+| height | Int32  | The desired height of the converted image in pixels. Required when `format=jpg`. |
+| width | Int32  | The desired width of the converted image in pixels. Required when `format=jpg`. |
 
 The following values are valid for the **format** parameter:
 
