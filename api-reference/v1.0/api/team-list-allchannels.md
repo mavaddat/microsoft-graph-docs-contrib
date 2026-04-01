@@ -126,6 +126,7 @@ Content-Type: application/json
       "displayName": "General",
       "description": "AutoTestTeam_20210311_150740.2550_fim3udfdjen9",
       "membershipType": "standard",
+      "layoutType": null,
       "tenantId": "b3246f44-b4gb-4627-96c6-25b18fa2c910",
       "isArchived": false
     },
@@ -135,6 +136,7 @@ Content-Type: application/json
       "createdDateTime": "2020-05-27T19:22:25.692Z",
       "displayName": "Shared channel from Contoso",
       "membershipType": "shared",
+      "layoutType": null,
       "tenantId": "b3246f44-b4gb-5678-96c6-25b18fa2c910",
       "isArchived": false
     }
@@ -142,6 +144,8 @@ Content-Type: application/json
 }
 ```
 
+> [!NOTE]
+> This API has a known issue related to listing channels. The **layoutType** property returns `null` when listing channels. To get the layout type of a specific channel, use the [Get channel](../api/channel-get.md) API. Full support for **layoutType** in list operations is planned for a future release.
 
 ### Example 2: List all shared channels
 
@@ -211,6 +215,7 @@ Content-Type: application/json
       "createdDateTime": "2020-05-27T19:22:25.692Z",
       "displayName": "Shared channel from Contoso",
       "membershipType": "shared",
+      "layoutType": null,
       "tenantId": "b3246f44-b4gb-5678-96c6-25b18fa2c910",
       "isArchived": false
     }

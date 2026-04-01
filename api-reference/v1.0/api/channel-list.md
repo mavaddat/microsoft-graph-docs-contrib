@@ -133,11 +133,15 @@ Content-type: application/json
       "displayName": "General",
       "description": "AutoTestTeam_20210311_150740.2550_fim3udfdjen9",
       "membershipType": "standard",
+      "layoutType": null,
       "isArchived": false
     }
   ]
 }
 ```
+
+> [!NOTE]
+> This API has a known issue related to listing channels. The **layoutType** property returns `null` when listing channels. To get the layout type of a specific channel, use the [Get channel](../api/channel-get.md) API. Full support for **layoutType** in list operations is planned for a future release.
 
 ### Example 2: List all private channels
 
@@ -212,6 +216,7 @@ Content-type: application/json
       "displayName": "General",
       "description": "test private team",
       "membershipType": "private",
+      "layoutType": null,
       "isArchived": false
     }
   ]
@@ -295,6 +300,7 @@ Content-length: 262
             "email": "",
             "webUrl": "https://teams.microsoft.com/l/channel/19%3ALpxShHZZh9utjNcEmUS5aOEP9ASw85OUn05NcWYAhX81%40thread.tacv2/shared%20channel-01?groupId=6a720ba5-7373-463b-bc9f-4cd04b5c6742&tenantId=df81db53-c7e2-418a-8803-0e68d4b88607",
             "membershipType": "shared",
+            "layoutType": null,
             "moderationSettings": null,
             "isArchived": false
         }
