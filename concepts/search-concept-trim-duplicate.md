@@ -140,6 +140,8 @@ Content-type: application/json
 
 The **trimDuplicates** property is not supported for the following resources: **message**, **event**, and **externalItem**.
 
+When using Relevance (Score) sort, pagination is stateless and offset‑based. Each page request is handled independently using the From value in the request, and the service does not track which items were returned on previous pages. Because relevance scores are dynamically calculated and not guaranteed to be stable near page boundaries, the same item may appear on multiple pages.
+
 ## Next steps
 
 - [Use the Microsoft Search API to query data](/graph/api/resources/search-api-overview)
