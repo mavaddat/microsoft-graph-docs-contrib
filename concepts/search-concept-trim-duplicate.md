@@ -138,11 +138,8 @@ Content-type: application/json
 
 ## Known limitations
 
-The **trimDuplicates** property is not supported for the following resources: **message**, **event**, and **externalItem**.
-
-By default, search results are sorted by relevance. Because relevance scores are calculated dynamically, the same item might appear on more than one page during pagination.
-
-To ensure consistent results and avoid duplicates, we recommend using a deterministic sort order, such as sorting by **LastModifiedTime**.
+- The **trimDuplicates** property is not supported for the following resources: **message**, **event**, and **externalItem**.
+- By default, search results are sorted by relevance. Because relevance scores are calculated dynamically, the same item might appear on more than one page during pagination. To ensure consistent results and avoid duplicates, we recommend using a deterministic sort order, such as sorting by **LastModifiedTime**.
 
 ## Next steps
 
