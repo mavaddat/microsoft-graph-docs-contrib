@@ -214,10 +214,15 @@ Retirement is the final stage of the API lifecycle — the deprecated API has re
 
 ### Inputs for retirement
 
-The Documentation Plan must explicitly identify:
-- Which resources (entity types, complex types) are being retired (marked as "Deleted" or "Removed")
-- Which API operation files are linked to the retired resources
-- **Dependency analysis for related types:** Complex types referenced as property return types and entity types referenced as relationship targets must be explicitly called out. The Documentation Plan must state whether each related type is also being retired or should be retained.
+Retirement can be triggered by:
+- **Schema change:** A Documentation Plan or changelog showing `ChangeType: "Deletion"` for entities, complex types, properties, relationships, actions, or functions
+- **Endpoint removal:** The product stops supporting an endpoint — this may not appear in the schema. The author will specify which endpoints are removed and the affected version(s).
+
+The Documentation Plan or author prompt must identify:
+- Which resources (entity types, complex types) are being retired
+- Which version(s): beta, v1.0, or both
+- The alternative API or resource (for redirects)
+- **Dependency analysis for related types:** Complex types referenced as property return types and entity types referenced as relationship targets may still be in use by other APIs. Only delete a related type if it is explicitly called out as retired — otherwise retain it.
 
 ### Retirement workflow
 
@@ -242,11 +247,14 @@ Based on the Documentation Plan, delete:
 3. **Permission include files** for the retired API operation files:
    - `api-reference/{version}/includes/permissions/{operation}-permissions.md` (naming may vary — match the include reference in each API operation file)
 
-4. **Complex type files** explicitly called out as retired/deleted in the Documentation Plan:
+4. **RBAC include files** for the retired API operation files (if they exist and not in use by other APIs):
+   - `api-reference/{version}/includes/rbac-for-apis/{rbac-file}.md` (match the include reference in each API operation file)
+
+5. **Complex type files** explicitly called out as retired/deleted in the Documentation Plan:
    - Only delete if the Documentation Plan explicitly marks the complex type as retired/deleted
    - If not explicitly called out as retired, retain the file
 
-5. **Enum files or sections** explicitly called out as retired/deleted in the Documentation Plan:
+6. **Enum files or sections** explicitly called out as retired/deleted in the Documentation Plan:
    - For standalone enum files: delete if explicitly marked as retired
    - For H3 sections in parent resources: removed when parent resource is deleted
    - For entries in global enums files (`enums.md`, `enums-{subnamespace}.md`): remove the enum section
@@ -277,12 +285,12 @@ Add redirects for **resource files that include Methods tables** (entity types) 
     "redirections": [
         {
             "source_path": "api-reference/{version}/resources/{retired-resource}.md",
-            "redirect_url": "/graph/api/resources/{alternative-resource}",
+            "redirect_url": "/graph/api/resources/{alternative-resource}?view=graph-rest-{version}",
             "redirect_document_id": false
         },
         {
             "source_path": "api-reference/{version}/api/{retired-operation}.md",
-            "redirect_url": "/graph/api/{alternative-operation}",
+            "redirect_url": "/graph/api/{alternative-operation}?view=graph-rest-{version}",
             "redirect_document_id": false
         }
     ]
@@ -367,6 +375,7 @@ In addition to the [base quality checklist](common.md#base-quality-checklist), v
 - [ ] All resource files explicitly marked as retired/deleted are deleted
 - [ ] All API operation files linked to retired resources are deleted
 - [ ] All permission include files for retired operations are deleted
+- [ ] All RBAC include files for retired operations are deleted (if they existed and not in use by other APIs)
 - [ ] Complex types and enums only deleted if explicitly called out as retired in the Documentation Plan
 - [ ] References to retired resources removed from parent/related resource tables (Methods, Relationships, Properties)
 - [ ] TOC entries removed for deleted files
