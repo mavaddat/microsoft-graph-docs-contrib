@@ -1,8 +1,8 @@
 ---
 title: "customDataProvidedResourceUploadSession resource type"
 description: "An upload session within which multiple files can be uploaded for this resource."
-author: "pratima-cloudknox"
-ms.date: 10/29/2025
+author: "jaylenemartinez0"
+ms.date: 04/01/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
@@ -21,12 +21,14 @@ Inherits from [entity](../resources/entity.md).
 
 
 ## Methods
-|Method|Return type| Description|
-|:---|:---|:--------------|
-|[Create](../api/customdataprovidedresource-post-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)| Create a new customDataProvidedResourceUploadSession object.|
-|[Get](../api/customdataprovidedresourceuploadsession-get.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)| Read the properties and relationships of [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) object.|
-|[Update](../api/customdataprovidedresourceuploadsession-update.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)| Update the properties of a customDataProvidedResourceUploadSession object.|
-|[uploadFile](../api/customdataprovidedresourceuploadsession-uploadfile.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)| Upload a file in this upload session.|
+|Method|Return type|Description|
+|:---|:---|:---|
+|[Create](../api/accesspackageresource-post-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Create a new customDataProvidedResourceUploadSession object.|
+|[List](../api/accesspackageresource-list-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) collection|Get a list of the customDataProvidedResourceUploadSession objects and their properties.|
+|[Get](../api/customdataprovidedresourceuploadsession-get.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Read the properties and relationships of [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) object.|
+|[uploadFile](../api/customdataprovidedresourceuploadsession-uploadfile.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|**TODO: Add Description**|
+|[Update](../api/customdataprovidedresourceuploadsession-update.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Update the properties of a customDataProvidedResourceUploadSession object.|
+|[Delete](../api/accesspackageresource-delete-uploadsessions.md)|None|Delete a customDataProvidedResourceUploadSession object.|
 
 ## Properties
 |Property|Type| Description |
@@ -35,6 +37,7 @@ Inherits from [entity](../resources/entity.md).
 |data|[customExtensionData](../resources/customextensiondata.md)|An object containing the context for which this data is being uploaded. Currently the only possible concrete type is [accessReviewResourceDataUploadSessionContextData](../resources/accessreviewresourcedatauploadsessioncontextdata.md)|
 |id|String| Unique identifier of the upload session. Read-only.|
 |isUploadDone|Boolean| Indicates if all the necessary files have been uploaded to this session.|
+|referenceId|String|Refers to the ID representing the context for which data is being uploaded (i.e. Access Review instance ID)|
 |source|String| The source of the access data. This should be set to the customdataprovidedresource's name when creating the session.|
 |stats|[customDataProvidedResourceUploadStats](../resources/customdataprovidedresourceuploadstats.md)| Metadata about the files uploaded in this upload session thus far.|
 |status|customDataProvidedResourceUploadStatus| Status of the upload session. The possible values are: `active`, `complete`, `expired`, `unknownFutureValue`.|
@@ -50,7 +53,7 @@ The following JSON representation shows the resource type.
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.customDataProvidedResourceUploadSession",
   "baseType": "microsoft.graph.entity",
-  "openType": false
+  "openType": "id"
 }
 -->
 ``` json
@@ -65,6 +68,7 @@ The following JSON representation shows the resource type.
   "createdDateTime": "String (timestamp)",
   "source": "String",
   "type": "String",
+  "referenceId": "String",
   "data": {
     "@odata.type": "microsoft.graph.customExtensionData"
   }
