@@ -52,9 +52,7 @@ integratedAppMetadata.setName("PC Purview API Explorer");
 integratedAppMetadata.setVersion("0.2");
 contentToProcess.setIntegratedAppMetadata(integratedAppMetadata);
 processContentPostRequestBody.setContentToProcess(contentToProcess);
-var result = graphClient.me().dataSecurityAndGovernance().processContent().post(processContentPostRequestBody, requestConfiguration -> {
-	requestConfiguration.headers.add("Client-Request-Id", "50dc805c-3af4-42d9-ad16-a746235cc736");
-});
+var result = graphClient.me().dataSecurityAndGovernance().processContent().post(processContentPostRequestBody);
 
 
 ```

@@ -29,7 +29,7 @@ state := "NY"
 address.SetState(&state) 
 postalCode := "98052"
 address.SetPostalCode(&postalCode) 
-countryOrRegion := "US"
+countryOrRegion := "USA"
 address.SetCountryOrRegion(&countryOrRegion) 
 requestBody.SetAddress(address)
 geoCoordinates := graphmodels.NewOutlookGeoCoordinates()

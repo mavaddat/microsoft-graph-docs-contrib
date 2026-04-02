@@ -11,7 +11,7 @@ using Microsoft.Graph.Drives.Item.Items.Item.Workbook.Names.Item.RangeNamespace.
 
 var requestBody = new DeletePostRequestBody
 {
-	Shift = "Up",
+	Shift = "shift-value",
 };
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=csharp

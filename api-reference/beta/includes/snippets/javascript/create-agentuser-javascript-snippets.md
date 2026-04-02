@@ -16,7 +16,10 @@ const user = {
   displayName: 'Adele Vance',
   mailNickname: 'AdeleV',
   userPrincipalName: 'AdeleV@contoso.com',
-  identityParentId: ''
+  passwordProfile: {
+    forceChangePasswordNextSignIn: true,
+    password: 'xWwvJ]6NMw+bWH-d'
+  }
 };
 
 await client.api('/users')

@@ -8,6 +8,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 // Dependencies
 using Microsoft.Graph.Beta.Models;
+using Microsoft.Kiota.Abstractions.Serialization;
 
 var requestBody = new EmailNotificationsSetting
 {
@@ -15,20 +16,38 @@ var requestBody = new EmailNotificationsSetting
 	AdditionalEvents = NotificationEventsType.RestoreAndPolicyUpdates,
 	Recipients = new NotificationRecipients
 	{
-		Role = NotificationRecipientsType.Custom,
-		CustomRecipients = new List<EmailIdentity>
+		AdditionalData = new Dictionary<string, object>
 		{
-			new EmailIdentity
 			{
-				Email = "amala@contoso.com",
-			},
-			new EmailIdentity
-			{
-				Email = "conrad@contoso.com",
-			},
-			new EmailIdentity
-			{
-				Email = "lothar@contoso.com",
+				"recipients" , new UntypedObject(new Dictionary<string, UntypedNode>
+				{
+					{
+						"role", new UntypedString("custom")
+					},
+					{
+						"customRecipients", new UntypedArray(new List<UntypedNode>
+						{
+							new UntypedObject(new Dictionary<string, UntypedNode>
+							{
+								{
+									"email", new UntypedString("amala@contoso.com")
+								},
+							}),
+							new UntypedObject(new Dictionary<string, UntypedNode>
+							{
+								{
+									"email", new UntypedString("conrad@contoso.com")
+								},
+							}),
+							new UntypedObject(new Dictionary<string, UntypedNode>
+							{
+								{
+									"email", new UntypedString("lothar@contoso.com")
+								},
+							}),
+						})
+					},
+				})
 			},
 		},
 	},

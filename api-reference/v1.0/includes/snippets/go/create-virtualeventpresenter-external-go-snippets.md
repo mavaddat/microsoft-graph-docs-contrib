@@ -19,8 +19,10 @@ requestBody := graphmodels.NewVirtualEventPresenter()
 identity := graphmodels.NewCommunicationsGuestIdentity()
 displayName := "Guest Speaker"
 identity.SetDisplayName(&displayName) 
-email := "guest.speaker@fabrikam.com"
-identity.SetEmail(&email) 
+additionalData := map[string]interface{}{
+	"email" : "guest.speaker@fabrikam.com", 
+}
+identity.SetAdditionalData(additionalData)
 requestBody.SetIdentity(identity)
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go

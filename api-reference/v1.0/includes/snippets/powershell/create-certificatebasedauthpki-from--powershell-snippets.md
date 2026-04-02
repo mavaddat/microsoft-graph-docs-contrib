@@ -4,12 +4,12 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```powershell
 
-Import-Module Microsoft.Graph.Identity.DirectoryManagement
+Import-Module Microsoft.Graph.Beta.Identity.DirectoryManagement
 
 $params = @{
 	displayName = "Contoso PKI"
 }
 
-New-MgDirectoryPublicKeyInfrastructureCertificateBasedAuthConfiguration -BodyParameter $params
+New-MgBetaDirectoryPublicKeyInfrastructureCertificateBasedAuthConfiguration -BodyParameter $params
 
 ```

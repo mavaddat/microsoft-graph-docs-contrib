@@ -7,7 +7,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 Import-Module Microsoft.Graph.Beta.Files
 
 $params = @{
-	grantedToV2 = @{
+	grantedToIdentitiesV2 = @{
 		siteGroup = @{
 			id = "10"
 			displayName = "Internal Collaborators"

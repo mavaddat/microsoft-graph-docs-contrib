@@ -25,8 +25,7 @@ const processContentResponse = {
              sequenceNumber: 0, 
              isTruncated: false,
              createdDateTime: '2025-05-27T17:23:20',
-             modifiedDateTime: '2025-05-27T17:23:20',
-             contentCategory: 'ai'
+             modifiedDateTime: '2025-05-27T17:23:20'
           }
        ],
        activityMetadata: { 

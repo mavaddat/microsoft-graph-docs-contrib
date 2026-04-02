@@ -12,8 +12,7 @@ ms.date: 04/03/2024
 
 Namespace: microsoft.graph
 
-Represents data returned in JSON format by Microsoft Graph. This object is a shared resource.
-
+Represents data returned in JSON format for Excel.
 ## Properties
 None.
 

@@ -12,8 +12,6 @@ const client = Client.init(options);
 
 const profilePropertySetting = {
   '@odata.type': '#microsoft.graph.profilePropertySetting',
-  displayName: 'Profile priority config',
-  name: 'Profile priority config',
   prioritizedSourceUrls: [
     'https://graph.microsoft.com/beta/admin/people/profileSources(sourceId=\'contosohr1\')'
   ]

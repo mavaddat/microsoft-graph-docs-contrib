@@ -1,7 +1,8 @@
 ---
-title: "adhocCall resource type"
-description: "Represents an ad hoc call, including PSTN calls, one-to-one calls, and group calls."
+title: "adhocCall resource type - Microsoft Graph"
+description: "Learn about the adhocCall resource type in Microsoft Graph API for PSTN calls, one-to-one calls, and group calls. Includes properties and relationships."
 author: "kanchm"
+#customer intent: As a developer, I want to understand the properties of the `adhocCall` resource type so that I can integrate it into my application.
 ms.reviewer: v-sukanyadas
 ms.date: 02/27/2026
 ms.localizationpriority: medium
@@ -14,24 +15,15 @@ toc.title: "Ad hoc call"
 
 Namespace: microsoft.graph
 
-Represents an ad hoc call, including PSTN calls, one-to-one calls, and group calls. Use this resource to manage call recordings and transcripts through the Microsoft Graph communications API.
+The adhocCall resource type represents an ad hoc call in Microsoft Graph API, including PSTN calls, one-to-one calls, and group calls. Use this resource to manage call recordings and transcripts through the Microsoft Graph communications API.
 
 This resource supports subscribing to [change notifications](/graph/change-notifications-overview).
-
-## Methods
-
-| Method | Return Type |Description |
-| :------ | :----------- | :---------- |
-|[Get all recordings](../api/adhoccall-getallrecordings.md)|[callRecording](callrecording.md) collection|Get the [callRecording](callrecording.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates. |
-|[Get all transcripts](../api/adhoccall-getalltranscripts.md)|[callTranscript](calltranscript.md) collection|Get all [callTranscript](calltranscript.md) objects from [ad hoc call](../resources/adhoccall.md) instances that a specific user initiates.|
 
 ## Properties
 
 |Property|Type|Description|
 |:---|:---|:---|
-| endDateTime | DateTime | The meeting end time in UTC. Required when an ad hoc call is ended. |
-| id | String | The unique identifier for the call, including PSTN, 1:1, and group calls. Read-only. |
-| startDateTime | DateTime | The meeting start time in UTC. Required when the call is started. |
+| ID |String|The unique identifier for the ad hoc call. Read-only.|
 
 ## Relationships
 

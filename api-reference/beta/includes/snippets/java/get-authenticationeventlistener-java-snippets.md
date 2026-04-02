@@ -8,7 +8,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 GraphServiceClient graphClient = new GraphServiceClient(requestAdapter);
 
-AuthenticationEventListener result = graphClient.identity().authenticationEventListeners().byAuthenticationEventListenerId("{authenticationEventListener-id}").get();
+CustomAuthenticationExtension result = graphClient.identity().customAuthenticationExtensions().byCustomAuthenticationExtensionId("{customAuthenticationExtension-id}").get();
 
 
 ```

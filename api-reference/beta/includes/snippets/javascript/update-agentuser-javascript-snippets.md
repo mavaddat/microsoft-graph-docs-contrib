@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-const agentUser = {
+const response = {
   '@odata.type': '#microsoft.graph.agentUser',
   accountEnabled: true,
   assignedLicenses: [
@@ -56,6 +56,6 @@ const agentUser = {
 
 await client.api('/users/microsoft.graph.agentUser/{userId}')
 	.version('beta')
-	.update(agentUser);
+	.update(response);
 
 ```

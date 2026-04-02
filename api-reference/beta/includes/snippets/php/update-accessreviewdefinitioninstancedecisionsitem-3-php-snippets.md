@@ -13,7 +13,10 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 $requestBody = new AccessReviewInstanceDecisionItem();
 $requestBody->setApplyResult('AppliedSuccessfully');
-$requestBody->setApplyDescription('Completed by John Doe');
+$additionalData = [
+	'applyDescription' => 'Completed by John Doe',
+];
+$requestBody->setAdditionalData($additionalData);
 
 $result = $graphServiceClient->identityGovernance()->accessReviews()->definitions()->byAccessReviewScheduleDefinitionId('accessReviewScheduleDefinition-id')->instances()->byAccessReviewInstanceId('accessReviewInstance-id')->decisions()->byAccessReviewInstanceDecisionItemId('accessReviewInstanceDecisionItem-id')->patch($requestBody)->wait();
 

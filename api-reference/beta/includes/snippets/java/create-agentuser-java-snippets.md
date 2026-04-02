@@ -8,13 +8,16 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 GraphServiceClient graphClient = new GraphServiceClient(requestAdapter);
 
-AgentUser user = new AgentUser();
+User user = new User();
 user.setOdataType("#microsoft.graph.agentUser");
 user.setAccountEnabled(true);
 user.setDisplayName("Adele Vance");
 user.setMailNickname("AdeleV");
 user.setUserPrincipalName("AdeleV@contoso.com");
-user.setIdentityParentId("");
+PasswordProfile passwordProfile = new PasswordProfile();
+passwordProfile.setForceChangePasswordNextSignIn(true);
+passwordProfile.setPassword("xWwvJ]6NMw+bWH-d");
+user.setPasswordProfile(passwordProfile);
 User result = graphClient.users().post(user);
 
 

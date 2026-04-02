@@ -105,6 +105,7 @@ GET https://graph.microsoft.com/beta/users/microsoft.graph.agentUser
 
 ---
 
+
 ### Response
 
 The following example shows the response.

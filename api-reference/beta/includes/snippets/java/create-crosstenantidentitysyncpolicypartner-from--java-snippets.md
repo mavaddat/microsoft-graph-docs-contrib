@@ -10,9 +10,6 @@ GraphServiceClient graphClient = new GraphServiceClient(requestAdapter);
 
 CrossTenantIdentitySyncPolicyPartner crossTenantIdentitySyncPolicyPartner = new CrossTenantIdentitySyncPolicyPartner();
 crossTenantIdentitySyncPolicyPartner.setDisplayName("Fabrikam");
-CrossTenantGroupSyncInbound groupSyncInbound = new CrossTenantGroupSyncInbound();
-groupSyncInbound.setIsSyncAllowed(true);
-crossTenantIdentitySyncPolicyPartner.setGroupSyncInbound(groupSyncInbound);
 CrossTenantUserSyncInbound userSyncInbound = new CrossTenantUserSyncInbound();
 userSyncInbound.setIsSyncAllowed(true);
 crossTenantIdentitySyncPolicyPartner.setUserSyncInbound(userSyncInbound);

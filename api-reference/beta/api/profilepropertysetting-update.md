@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Update the properties of a [profilePropertySetting](../resources/profilepropertysetting.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -50,9 +50,9 @@ PATCH /admin/people/profilePropertySettings/{profilePropertySettingId}
 
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|Name of the property-level setting. Optional.|
-|name|String|Other name of the property-level setting. For backward compatibility. Optional.|
-|prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization. Required.|
+|name|String|Other name of the property-level setting. For backward compatibility.|
+|prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization.|
+|displayName|String|Name of the property-level setting.|
 
 ## Response
 
@@ -63,7 +63,6 @@ If successful, this method returns a `200 OK` response code and an updated [prof
 ### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_profilepropertysetting"
@@ -81,36 +80,6 @@ Content-Type: application/json
   ]
 }
 ```
-
-# [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/update-profilepropertysetting-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/update-profilepropertysetting-go-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/update-profilepropertysetting-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/update-profilepropertysetting-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/update-profilepropertysetting-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/update-profilepropertysetting-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/update-profilepropertysetting-python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ---
 
@@ -131,13 +100,12 @@ Content-Type: application/json
 {
   "@odata.type": "#microsoft.graph.profilePropertySetting",
   "id": "00000000-0000-0000-0000-000000000001",
-  "displayName": "Profile priority config",
-  "name": "Profile priority config",
+  "name": null,
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')",
-    "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr2')",
-    "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
-  ]
+    "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr2')"
+  ],
+  "displayName": "null"
 }
 ```
 

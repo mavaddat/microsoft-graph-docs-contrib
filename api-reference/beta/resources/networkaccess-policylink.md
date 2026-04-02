@@ -15,9 +15,8 @@ Namespace: microsoft.graph.networkaccess
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 This is an abstract type from which the following resource types are derived:
-- [cloudFirewallPolicyLink](../resources/networkaccess-cloudfirewallpolicylink.md)
-- [filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md)
 - [forwardingPolicyLink](../resources/networkaccess-forwardingpolicylink.md)
+- [filteringPolicyLink](../resources/networkaccess-filteringpolicylink.md)
 - [threatIntelligencePolicyLink](../resources/networkaccess-threatintelligencepolicylink.md)
 - [tlsInspectionPolicyLink](../resources/networkaccess-tlsinspectionpolicylink.md)
 

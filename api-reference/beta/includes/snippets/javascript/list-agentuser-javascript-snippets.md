@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-let agentUser = await client.api('/users/microsoft.graph.agentUser')
+let user = await client.api('/users/microsoft.graph.agentUser')
 	.version('beta')
 	.get();
 

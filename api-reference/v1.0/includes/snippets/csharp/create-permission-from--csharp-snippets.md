@@ -15,15 +15,11 @@ var requestBody = new Permission
 	{
 		"write",
 	},
-	GrantedToIdentities = new List<IdentitySet>
+	GrantedTo = new IdentitySet
 	{
-		new IdentitySet
+		Application = new Identity
 		{
-			Application = new Identity
-			{
-				Id = "89ea5c94-7736-4e25-95ad-3fa95f62b66e",
-				DisplayName = "Contoso Time Manager App",
-			},
+			Id = "89ea5c94-7736-4e25-95ad-3fa95f62b66e",
 		},
 	},
 };

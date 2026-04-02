@@ -126,7 +126,6 @@ Content-Type: application/json
   "sizeInGB": 64,
   "startDate": "2024-9-30",
   "endDate": "2027-10-11",
-  "expirationDate": "2028-04-11",
-  "osVersionNumber": "10.0.26100.0"
+  "expirationDate": "2028-04-11"
 }
 ```

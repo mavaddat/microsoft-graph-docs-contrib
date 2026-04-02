@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Create a new [profilePropertySetting](../resources/profilepropertysetting.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -53,9 +53,9 @@ You can specify the following properties when you create a **profilePropertySett
 
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|Name of the property-level setting. Optional.|
-|name|String|Other name of the property-level setting. For backward compatibility. Optional.|
-|prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization. Required.|
+|name|String|Other name of the property-level setting. For backward compatibility.|
+|prioritizedSourceUrls|String collection|A collection of prioritized profile source URLs ordered by data precedence within an organization.|
+|displayName|String|Name of the property-level setting.|
 
 ## Response
 
@@ -66,7 +66,6 @@ If successful, this method returns a `201 Created` response code and a [profileP
 ### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_profilepropertysetting_from_"
@@ -78,43 +77,11 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.profilePropertySetting",
-  "displayName": "Profile priority config",
-  "name": "Profile priority config",
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')"
   ]
 }
 ```
-
-# [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/create-profilepropertysetting-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/create-profilepropertysetting-from--go-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/create-profilepropertysetting-from--java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-profilepropertysetting-from--javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/create-profilepropertysetting-from--php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/create-profilepropertysetting-from--powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/create-profilepropertysetting-from--python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ---
 
@@ -135,12 +102,12 @@ Content-Type: application/json
 {
   "@odata.type": "#microsoft.graph.profilePropertySetting",
   "id": "00000000-0000-0000-0000-000000000001",
-  "displayName": "Profile priority config",
-  "name": "Profile priority config",
+  "name": null,
   "prioritizedSourceUrls": [
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='contosohr1')",
     "https://graph.microsoft.com/beta/admin/people/profileSources(sourceId='4ce763dd-9214-4eff-af7c-da491cc3782d')"
-  ]
+  ],
+  "displayName" : null
 }
 ```
 

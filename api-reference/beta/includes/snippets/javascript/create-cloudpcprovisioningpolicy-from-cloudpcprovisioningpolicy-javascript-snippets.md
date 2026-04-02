@@ -41,7 +41,6 @@ const cloudPcProvisioningPolicy = {
         locale: 'en-US'
     },
     provisioningType: 'dedicated',
-    userExperienceType: 'cloudPc',
     userSettingsPersistenceConfiguration: {
         userSettingsPersistenceEnabled: true,
         userSettingsPersistenceStorageSizeCategory: 'fourGB'

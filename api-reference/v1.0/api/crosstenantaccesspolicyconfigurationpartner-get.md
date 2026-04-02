@@ -163,9 +163,6 @@ Content-Type: application/json
         }
       ]
     }
-  },
-  "m365CollaborationInbound": null,
-  "m365CollaborationOutbound": null,
-  "appServiceConnectInbound": null
+  }
 }
 ```

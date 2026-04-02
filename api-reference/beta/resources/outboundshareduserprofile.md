@@ -53,7 +53,7 @@ The following JSON representation shows the resource type.
 
 ``` json
 {
-  "@odata.type": "#microsoft.graph.outboundSharedUserProfile",
+  "@odata.type": "#microsoft.graph.inboundSharedUserProfile",
   "userId": "String"
 }
 ```

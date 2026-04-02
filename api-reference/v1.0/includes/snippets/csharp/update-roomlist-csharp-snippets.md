@@ -20,7 +20,7 @@ var requestBody = new RoomList
 		City = "Buffalo",
 		State = "NY",
 		PostalCode = "98052",
-		CountryOrRegion = "US",
+		CountryOrRegion = "USA",
 	},
 	GeoCoordinates = new OutlookGeoCoordinates
 	{

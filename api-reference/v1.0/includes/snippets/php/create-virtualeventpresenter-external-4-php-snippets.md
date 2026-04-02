@@ -16,7 +16,10 @@ $requestBody = new VirtualEventPresenter();
 $identity = new CommunicationsGuestIdentity();
 $identity->setOdataType('#microsoft.graph.communicationsGuestIdentity');
 $identity->setDisplayName('Guest Speaker');
-$identity->setEmail('guest.speaker@fabrikam.com');
+$additionalData = [
+	'email' => 'guest.speaker@fabrikam.com',
+];
+$identity->setAdditionalData($additionalData);
 $requestBody->setIdentity($identity);
 
 $result = $graphServiceClient->solutions()->virtualEvents()->townhalls()->byVirtualEventTownhallId('virtualEventTownhall-id')->presenters()->post($requestBody)->wait();

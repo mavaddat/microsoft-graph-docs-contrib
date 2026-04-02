@@ -17,6 +17,7 @@ const certificateAuthorityDetail = {
 };
 
 await client.api('/directory/publicKeyInfrastructure/certificateBasedAuthConfigurations/{certificateBasedAuthPkiId}/certificateAuthorities/{certificateAuthorityDetailId}')
+	.version('beta')
 	.update(certificateAuthorityDetail);
 
 ```

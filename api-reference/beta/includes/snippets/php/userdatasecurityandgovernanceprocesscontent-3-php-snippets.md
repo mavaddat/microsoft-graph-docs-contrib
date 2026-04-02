@@ -47,10 +47,6 @@ $additionalData = [
 ];
 $contentEntriesProcessContentMetadataBase1CustomProperties->setAdditionalData($additionalData);
 $contentEntriesProcessContentMetadataBase1->setCustomProperties($contentEntriesProcessContentMetadataBase1CustomProperties);
-$additionalData = [
-	'contentCategory' => 'none',
-];
-$contentEntriesProcessContentMetadataBase1->setAdditionalData($additionalData);
 $contentEntriesArray []= $contentEntriesProcessContentMetadataBase1;
 $contentToProcess->setContentEntries($contentEntriesArray);
 

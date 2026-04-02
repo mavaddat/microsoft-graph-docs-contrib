@@ -12,7 +12,9 @@ VirtualEventPresenter virtualEventPresenter = new VirtualEventPresenter();
 CommunicationsGuestIdentity identity = new CommunicationsGuestIdentity();
 identity.setOdataType("#microsoft.graph.communicationsGuestIdentity");
 identity.setDisplayName("Guest Speaker");
-identity.setEmail("guest.speaker@fabrikam.com");
+HashMap<String, Object> additionalData = new HashMap<String, Object>();
+additionalData.put("email", "guest.speaker@fabrikam.com");
+identity.setAdditionalData(additionalData);
 virtualEventPresenter.setIdentity(identity);
 VirtualEventPresenter result = graphClient.solutions().virtualEvents().webinars().byVirtualEventWebinarId("{virtualEventWebinar-id}").presenters().post(virtualEventPresenter);
 

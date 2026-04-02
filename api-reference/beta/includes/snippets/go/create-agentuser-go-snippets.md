@@ -24,8 +24,12 @@ mailNickname := "AdeleV"
 requestBody.SetMailNickname(&mailNickname) 
 userPrincipalName := "AdeleV@contoso.com"
 requestBody.SetUserPrincipalName(&userPrincipalName) 
-identityParentId := ""
-requestBody.SetIdentityParentId(&identityParentId) 
+passwordProfile := graphmodels.NewPasswordProfile()
+forceChangePasswordNextSignIn := true
+passwordProfile.SetForceChangePasswordNextSignIn(&forceChangePasswordNextSignIn) 
+password := "xWwvJ]6NMw+bWH-d"
+passwordProfile.SetPassword(&password) 
+requestBody.SetPasswordProfile(passwordProfile)
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go
 users, err := graphClient.Users().Post(context.Background(), requestBody, nil)

@@ -11,6 +11,7 @@ const options = {
 const client = Client.init(options);
 
 let bundles = await client.api('/drive/bundles')
+	.version('beta')
 	.get();
 
 ```

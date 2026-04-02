@@ -16,7 +16,7 @@ import (
 )
 
 requestBody := graphdrives.NewCalculatePostRequestBody()
-calculationType := "FullRebuild"
+calculationType := "calculationType-value"
 requestBody.SetCalculationType(&calculationType) 
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go

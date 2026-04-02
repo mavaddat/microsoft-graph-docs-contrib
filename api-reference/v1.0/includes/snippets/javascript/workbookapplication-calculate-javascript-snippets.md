@@ -11,7 +11,7 @@ const options = {
 const client = Client.init(options);
 
 const calculate = {
-  calculationType: 'FullRebuild'
+  calculationType: 'calculationType-value'
 };
 
 await client.api('/me/drive/items/{id}/workbook/application/calculate')

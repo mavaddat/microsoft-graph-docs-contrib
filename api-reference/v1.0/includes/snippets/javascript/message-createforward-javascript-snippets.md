@@ -10,22 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-const message = {
-  message: {
-    isDeliveryReceiptRequested: true,
-    toRecipients: [
-      {
-        emailAddress: {
-          address: 'danas@contoso.com',
-          name: 'Dana Swope'
-        }
-      }
-     ]
-  },
-  comment: 'Dana, just want to make sure you get this; you\'ll need this if the project gets approved.'
-};
-
-await client.api('/me/messages/AAMkADA1MTAAAH5JaLAAA=/createForward')
-	.post(message);
+await client.api('/me/messages/{id}/createForward')
+	.post();
 
 ```

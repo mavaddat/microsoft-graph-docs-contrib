@@ -282,9 +282,9 @@ items:
       items:
       - name: Ad hoc call
         href: ../../resources/adhoccall.md
-      - name: Get all recordings
+      - name: getAllRecordings
         href: ../../api/adhoccall-getallrecordings.md
-      - name: Get all transcripts
+      - name: getAllTranscripts
         href: ../../api/adhoccall-getalltranscripts.md
   - name: Calls
     items:

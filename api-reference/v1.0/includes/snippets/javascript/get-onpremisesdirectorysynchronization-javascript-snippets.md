@@ -11,6 +11,7 @@ const options = {
 const client = Client.init(options);
 
 let onPremisesDirectorySynchronization = await client.api('/directory/onPremisesSynchronization/{id}')
+	.version('beta')
 	.get();
 
 ```

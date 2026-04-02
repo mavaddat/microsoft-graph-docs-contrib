@@ -11,6 +11,7 @@ const options = {
 const client = Client.init(options);
 
 let devices = await client.api('/devices')
+	.version('beta')
 	.select('id,extensionAttributes')
 	.get();
 

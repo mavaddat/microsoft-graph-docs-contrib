@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-await client.api('/me/calendars/{id}')
+await client.api('/me/calendar')
 	.delete();
 
 ```

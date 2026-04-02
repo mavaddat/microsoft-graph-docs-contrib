@@ -19,6 +19,7 @@ const retentionLabel = {
 };
 
 await client.api('/security/labels/retentionLabels/9563a605-e827-4324-a5a9-09efddff1e50')
+	.version('beta')
 	.update(retentionLabel);
 
 ```

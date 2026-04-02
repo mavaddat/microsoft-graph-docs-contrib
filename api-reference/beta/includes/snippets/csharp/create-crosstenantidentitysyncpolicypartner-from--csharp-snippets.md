@@ -12,10 +12,6 @@ using Microsoft.Graph.Beta.Models;
 var requestBody = new CrossTenantIdentitySyncPolicyPartner
 {
 	DisplayName = "Fabrikam",
-	GroupSyncInbound = new CrossTenantGroupSyncInbound
-	{
-		IsSyncAllowed = true,
-	},
 	UserSyncInbound = new CrossTenantUserSyncInbound
 	{
 		IsSyncAllowed = true,

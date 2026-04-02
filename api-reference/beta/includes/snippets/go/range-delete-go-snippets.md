@@ -16,7 +16,7 @@ import (
 )
 
 requestBody := graphdrives.NewDeletePostRequestBody()
-shift := "Up"
+shift := "shift-value"
 requestBody.SetShift(&shift) 
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go

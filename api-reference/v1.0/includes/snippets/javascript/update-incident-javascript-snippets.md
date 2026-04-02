@@ -18,7 +18,7 @@ const incident = {
     ]
 };
 
-await client.api('/security/incidents/29')
+await client.api('/security/incidents/2972395')
 	.update(incident);
 
 ```

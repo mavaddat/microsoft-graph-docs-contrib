@@ -64,7 +64,6 @@ If successful, this method returns a `201 Created` response code and a new [chat
 
 The following example shows a request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "chatmessage.replyWithQuote",
@@ -86,13 +85,6 @@ Content-Type: application/json
   }
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/chatmessagereplywithquote-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
 ---
 
 ### Response

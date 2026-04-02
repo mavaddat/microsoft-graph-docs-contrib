@@ -11,6 +11,7 @@ const options = {
 const client = Client.init(options);
 
 await client.api('/identity/b2xUserFlows/B2X_1_Partner/userAttributeAssignments/City')
+	.version('beta')
 	.delete();
 
 ```

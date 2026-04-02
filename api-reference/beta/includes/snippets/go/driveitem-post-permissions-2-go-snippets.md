@@ -16,14 +16,14 @@ import (
 )
 
 requestBody := graphmodels.NewPermission()
-grantedToV2 := graphmodels.NewSharePointIdentitySet()
+grantedToIdentitiesV2 := graph.NewSharePointIdentitySet()
 siteGroup := graphmodels.NewSharePointIdentity()
 id := "10"
 siteGroup.SetId(&id) 
 displayName := "Internal Collaborators"
 siteGroup.SetDisplayName(&displayName) 
-grantedToV2.SetSiteGroup(siteGroup)
-requestBody.SetGrantedToV2(grantedToV2)
+grantedToIdentitiesV2.SetSiteGroup(siteGroup)
+requestBody.SetGrantedToIdentitiesV2(grantedToIdentitiesV2)
 roles := []string {
 	"write",
 }

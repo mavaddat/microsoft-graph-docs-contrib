@@ -9,12 +9,12 @@ description: "Automatically generated file. DO NOT MODIFY"
 GraphServiceClient graphClient = new GraphServiceClient(requestAdapter);
 
 Permission permission = new Permission();
-SharePointIdentitySet grantedToV2 = new SharePointIdentitySet();
+SharePointIdentitySet grantedToIdentitiesV2 = new SharePointIdentitySet();
 SharePointIdentity siteGroup = new SharePointIdentity();
 siteGroup.setId("10");
 siteGroup.setDisplayName("Internal Collaborators");
-grantedToV2.setSiteGroup(siteGroup);
-permission.setGrantedToV2(grantedToV2);
+grantedToIdentitiesV2.setSiteGroup(siteGroup);
+permission.setGrantedToIdentitiesV2(grantedToIdentitiesV2);
 LinkedList<String> roles = new LinkedList<String>();
 roles.add("write");
 permission.setRoles(roles);

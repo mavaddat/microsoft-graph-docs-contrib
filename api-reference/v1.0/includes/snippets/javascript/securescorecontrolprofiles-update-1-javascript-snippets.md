@@ -12,7 +12,6 @@ const client = Client.init(options);
 
 const secureScoreControlProfile = {
   vendorInformation: {
-
     provider: 'SecureScore',
     providerVersion: null,
     subProvider: null,

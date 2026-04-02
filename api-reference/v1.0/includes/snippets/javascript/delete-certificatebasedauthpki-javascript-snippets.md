@@ -11,6 +11,7 @@ const options = {
 const client = Client.init(options);
 
 await client.api('/directory/publicKeyInfrastructure/certificateBasedAuthConfigurations/{certificateBasedAuthPkiId}')
+	.version('beta')
 	.delete();
 
 ```

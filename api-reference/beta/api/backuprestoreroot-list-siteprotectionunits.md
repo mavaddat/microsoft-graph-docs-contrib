@@ -125,7 +125,6 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDC", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
-      "backupRetentionPeriodInDays": 180,
       "status": "unprotected",
       "protectionSources": "none",
       "createdBy": {
@@ -162,7 +161,6 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC - 1", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCOne", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
-      "backupRetentionPeriodInDays": 180,
       "status": "unprotectRequested",
       "protectionSources": "none",
       "createdBy": {
@@ -199,7 +197,6 @@ HTTP/1.1 200 OK
       "siteId": "contoso-jpn.sharepoint.com,da60e844-ba1d-49bc-b4d4-d5e36bae9019,0271110f-634f-4300-a841-3a8a2e8517765",
       "siteName": "Enhanced Restore IDC - 2", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCTwo", // Newly Added
-      "backupRetentionPeriodInDays": 180,
       "status": "protected",
       "protectionSources": "manual",
       "createdBy": {
@@ -235,7 +232,6 @@ HTTP/1.1 200 OK
       "siteId": "contoso-jpn.sharepoint.com,da60e844-ba1d-49bc-b4d4-d5e36bae9019,0271110f-634f-4300-a841-3a8a2e850987",
       "siteName": "Enhanced Restore IDC - 3", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCThree", // Newly Added
-      "backupRetentionPeriodInDays": 180,
       "status": "unprotected",
       "protectionSources": "none",
       "createdBy": {
@@ -272,7 +268,6 @@ HTTP/1.1 200 OK
       "siteId": "contoso-jpn.sharepoint.com,da60e844-ba1d-49bc-b4d4-d5e36bae9019,1111110f-634f-4300-a841-3a8a2e851851",
       "siteName": "Who+", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/Whoplus", // Newly Added
-      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -376,7 +371,6 @@ HTTP/1.1 200 OK
       "siteName": "Who+", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/Whoplus", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
-      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -413,7 +407,6 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDC", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
-      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -450,7 +443,6 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC - 1", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCOne", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
-      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -487,7 +479,6 @@ HTTP/1.1 200 OK
       "siteId": "contoso.sharepoint.com,fd1a778f-263e-4c43-acdf-d5c2519d80eb,c06016db-dfec-4f79-83a1-09c6dbfd5432",
       "siteName": "Enhanced Restore IDC - 2", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCTwo", // Newly Added
-      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -524,7 +515,6 @@ HTTP/1.1 200 OK
       "siteId": "contoso.sharepoint.com,fd1a778f-263e-4c43-acdf-d5c2519d80eb,c06016db-dfec-4f79-83a1-09c6dbfd8765",
       "siteName": "Enhanced Restore IDC - 3", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCThree", // Newly Added
-      "backupRetentionPeriodInDays": 180,
       "status": "protected",
       "protectionSources": "manual",
       "createdBy": {

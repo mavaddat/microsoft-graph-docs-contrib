@@ -59,7 +59,6 @@ If successful, this method returns a `201 Created` response code.
 #### Request
 The following example shows how to create a custom property called `clientUniqueId` for a container.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "post_filestoragecontainer_customproperty_1"
@@ -75,12 +74,6 @@ Content-Type: application/json
   }
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/post-filestoragecontainer-customproperty-1-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ---
 
@@ -99,7 +92,6 @@ HTTP/1.1 201 Created
 #### Request
 The following example shows how to create a searchable custom property called `clientUniqueId` for a container.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "post_filestoragecontainer_customproperty_2"
@@ -116,12 +108,6 @@ Content-Type: application/json
   }
 }
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/post-filestoragecontainer-customproperty-2-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ---
 

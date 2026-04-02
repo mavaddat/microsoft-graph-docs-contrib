@@ -9,9 +9,9 @@ description: "Automatically generated file. DO NOT MODIFY"
 // Dependencies
 using Microsoft.Graph.Beta.Models;
 
-var requestBody = new MobileDeviceManagementPolicy
+var requestBody = new MobilityManagementPolicy
 {
-	OdataType = "#microsoft.graph.mobileDeviceManagementPolicy",
+	OdataType = "#microsoft.graph.mobilityManagementPolicy",
 	ComplianceUrl = "https://portal.uem.contoso.com/?portalAction=Compliance",
 	DiscoveryUrl = "https://enrollment.uem.contoso.com/enrollmentserver/discovery.svc",
 	TermsOfUseUrl = "https://portal.uem.contoso.com/TermsofUse.aspx",

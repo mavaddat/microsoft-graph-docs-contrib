@@ -22,7 +22,6 @@ Get a list of the [authenticationEventListener](../resources/authenticationevent
 - [onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)
 - [onEmailOtpSendListener](../resources/onemailotpsendlistener.md)
 - [onFraudProtectionLoadStartListener](../resources/onfraudprotectionloadstartlistener.md)
-- [onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md)
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 

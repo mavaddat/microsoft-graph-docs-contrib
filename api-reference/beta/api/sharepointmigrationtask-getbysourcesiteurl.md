@@ -65,7 +65,6 @@ If successful, this function returns a `200 OK` response code and a [sharePointM
 ### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "sharepointmigrationtaskthis.getbysourcesiteurl"
@@ -74,12 +73,6 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/solutions/sharePoint/migrations/crossOrganizationMigrationTasks/getBySourceSiteUrl(sourceSiteUrl='https://contoso.sharepoint.com/sites/IT')
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/sharepointmigrationtaskthisgetbysourcesiteurl-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 

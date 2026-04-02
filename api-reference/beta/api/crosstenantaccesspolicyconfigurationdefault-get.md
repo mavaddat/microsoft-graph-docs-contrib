@@ -114,17 +114,21 @@ Content-Type: application/json
 
 {
   "isServiceDefault": true,
-  "inboundTrust": {
+  "inboundTrust":
+  {
     "isMfaAccepted": false,
     "isCompliantDeviceAccepted": false,
-    "isHybridAzureADJoinedDeviceAccepted": false
+    "isHybridAzureADJoinedDeviceAccepted": false,
   },
-  "automaticUserConsentSettings": {
+  "automaticUserConsentSettings":
+  {
     "inboundAllowed": false,
     "outboundAllowed": false
   },
-  "b2bCollaborationOutbound": {
-    "usersAndGroups": {
+  "b2bCollaborationOutbound":
+  {
+    "usersAndGroups":
+    {
       "accessType": "allowed",
       "targets": [
         {
@@ -133,27 +137,8 @@ Content-Type: application/json
         }
       ]
     },
-    "applications": {
-      "accessType": "allowed",
-      "targets": [
-        {
-          "target": "AllApplications",
-          "targetType": "application"
-        }
-      ]
-    }
-  },
-  "b2bCollaborationInbound": {
-    "usersAndGroups": {
-      "accessType": "allowed",
-      "targets": [
-        {
-          "target": "AllUsers",
-          "targetType": "user"
-        }
-      ]
-    },
-    "applications": {
+    "applications":
+    {
       "accessType": "allowed",
       "targets": [
         {
@@ -163,8 +148,33 @@ Content-Type: application/json
       ]
     }
   },
-  "b2bDirectConnectOutbound": {
-    "usersAndGroups": {
+  "b2bCollaborationInbound":
+  {
+    "usersAndGroups":
+    {
+      "accessType": "allowed",
+      "targets": [
+        {
+          "target": "AllUsers",
+          "targetType": "user"
+        }
+      ]
+    },
+    "applications":
+    {
+      "accessType": "allowed",
+      "targets": [
+        {
+          "target": "AllApplications",
+          "targetType": "application"
+        }
+      ]
+    }
+  },
+  "b2bDirectConnectOutbound":
+  {
+    "usersAndGroups":
+    {
       "accessType": "blocked",
       "targets": [
         {
@@ -173,7 +183,8 @@ Content-Type: application/json
         }
       ]
     },
-    "applications": {
+    "applications":
+    {
       "accessType": "blocked",
       "targets": [
         {
@@ -183,8 +194,10 @@ Content-Type: application/json
       ]
     }
   },
-  "b2bDirectConnectInbound": {
-    "usersAndGroups": {
+  "b2bDirectConnectInbound":
+  {
+    "usersAndGroups":
+    {
       "accessType": "blocked",
       "targets": [
         {
@@ -193,7 +206,8 @@ Content-Type: application/json
         }
       ]
     },
-    "applications": {
+    "applications":
+    {
       "accessType": "blocked",
       "targets": [
         {
@@ -203,8 +217,10 @@ Content-Type: application/json
       ]
     }
   },
-  "tenantRestrictions": {
-    "usersAndGroups": {
+  "tenantRestrictions":
+  {
+    "usersAndGroups":
+    {
       "accessType": "blocked",
       "targets": [
         {
@@ -213,7 +229,8 @@ Content-Type: application/json
         }
       ]
     },
-    "applications": {
+    "applications":
+    {
       "accessType": "blocked",
       "targets": [
         {
@@ -223,46 +240,14 @@ Content-Type: application/json
       ]
     }
   },
-  "invitationRedemptionIdentityProviderConfiguration": {
-    "primaryIdentityProviderPrecedenceOrder": [
-      "externalFederation",
-      "azureActiveDirectory",
-      "socialIdentityProviders"
-    ],
-    "fallbackIdentityProvider": "defaultConfiguredIdp"
-  },
-  "m365CollaborationInbound": {
-    "users": {
-      "accessType": "blocked",
-      "targets": [
-        {
-          "target": "AllUsers",
-          "targetType": "user"
-        }
-      ]
-    }
-  },
-  "m365CollaborationOutbound": {
-    "usersAndGroups": {
-      "accessType": "blocked",
-      "targets": [
-        {
-          "target": "AllUsers",
-          "targetType": "user"
-        }
-      ]
-    }
-  },
-  "appServiceConnectInbound": {
-    "applications": {
-      "accessType": "blocked",
-      "targets": [
-        {
-          "target": "AllApplications",
-          "targetType": "application"
-        }
-      ]
-    }
+  "invitationRedemptionIdentityProviderConfiguration": 
+  { 
+        "primaryIdentityProviderPrecedenceOrder": [ 
+            "externalFederation", 
+            "azureActiveDirectory", 
+            "socialIdentityProviders" 
+        ],
+        "fallbackIdentityProvider": "defaultConfiguredIdp" 
   }
 }
 ```

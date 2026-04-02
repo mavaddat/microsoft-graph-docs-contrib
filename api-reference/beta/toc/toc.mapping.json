@@ -13,8 +13,7 @@
       "overview": "../../resources/groups-overview.md",
       "resources": [
         "group",
-        "groupLifecyclePolicy",
-        "ownerlessGroupPolicy"
+        "groupLifecyclePolicy"
       ]
     },
     {
@@ -141,41 +140,28 @@
       ]
     },
     {
-      "name": "Agents",
+      "name": "Agents (preview)",
       "overview": "../../resources/agentid-platform-overview.md",
+      "resources": ["agentUser"],
       "shouldSort": true,
-      "childNodes": [ 
-        {
-          "name": "Agent identities",
-          "resources": [
-            "agentIdentityBlueprint",
-            "agentIdentityBlueprintPrincipal",
-            "agentIdentity"
-          ],
-          "childNodes": [
-            {
-              "name": "Agent identity blueprint",
-              "resources": [
-                "inheritablePermission"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Agent user (preview)",
-          "resources": [
-            "agentUser"
-          ]
-        },
-        {
-          "name": "Agent registry (preview)",
-          "resources": [
-            "agentRegistry",
-            "agentInstance",
-            "agentCardManifest",
-            "agentCollection"
-          ]
-        }
+      "childNodes": [
+          {
+            "name": "Agent identities",
+            "resources": [
+              "agentIdentityBlueprint",
+              "agentIdentityBlueprintPrincipal",
+              "agentIdentity"
+            ]
+          },
+          {
+            "name": "Agent registry",
+            "resources": [
+              "agentRegistry",
+              "agentInstance",
+              "agentCardManifest",
+              "agentCollection"
+            ]
+          }
       ]
     },
     {
@@ -1032,10 +1018,7 @@
             "employeeExperienceUser",
             "engagementAsyncOperation",
             "engagementRole",
-            "engagementRoleMember",
-            "storyline",
-            "storylineFollower",
-            "storylineFollowing"
+            "engagementRoleMember"
           ],
           "complexTypes": [
             "engagementConversationMessageAttachment",
@@ -1130,8 +1113,7 @@
       "complexTypes": [
         "fileStorageContainerTypeRegistrationSettings",
         "fileStorageContainerTypeAgentSettings",
-        "fileStorageContainerTypeSettings",
-        "sharePointGroupIdentity"
+        "fileStorageContainerTypeSettings"
       ],
       "childNodes": [
         {
@@ -1310,16 +1292,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "name": "Entra Backup and Recovery",
-              "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
-              "resources": [
-                "microsoft.graph.entraRecoveryServices.recoveryJob",
-                "microsoft.graph.entraRecoveryServices.recoveryJobBase",
-                "microsoft.graph.entraRecoveryServices.recoveryPreviewJob",
-                "microsoft.graph.entraRecoveryServices.snapshot"
-              ]
             }
           ]
         },
@@ -1432,8 +1404,6 @@
                 "endUserSettings",
                 "entitlementManagementSettings",
                 "customAccessPackageWorkflowExtension",
-                "customDataProvidedResourceUploadSession",
-                "externalOriginResourceConnector",
                 "controlConfiguration",
                 "insiderRiskyUserApproval",
                 "entraIdProtectionRiskyUserApproval",
@@ -2261,14 +2231,6 @@
               ]
             },
             {
-              "name": "Cloud firewall",
-              "resources": [
-                "microsoft.graph.networkaccess.cloudFirewallPolicy",
-                "microsoft.graph.networkaccess.cloudFirewallRule",
-                "microsoft.graph.networkaccess.cloudFirewallPolicyLink"
-              ]
-            },
-            {
               "name": "Remote network",
               "resources": [
                 "microsoft.graph.networkaccess.deviceLink",
@@ -2542,9 +2504,6 @@
         "profileSource",
         "profilePropertySetting",
         "userAnalytics"
-      ],
-      "complexTypes": [
-        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -3311,10 +3270,6 @@
         "plannerRuleOverride",
         "plannerSharedWithContainer",
         "plannerTaskCompletionRequirementDetails",
-        "plannerTaskChatMention",
-        "plannerTaskChatMessage",
-        "plannerTaskChatReaction",
-        "plannerTaskChatReactionEvent",
         "plannerTaskCreation",
         "plannerTaskPropertyRule",
         "plannerTaskRecurrence",
@@ -3662,30 +3617,26 @@
       ]
     },
     {
-      "name": "Tenant management",
-      "shouldSort": true,
+      "name": "Tenant administration (preview)",
       "childNodes": [
         {
           "name": "Configuration management",
           "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
+          "shouldSort": true,
           "resources": [
             "configurationBaseline",
             "configurationDrift",
             "configurationMonitor",
             "configurationMonitoringResult",
             "configurationSnapshotJob"
-          ]
-        },
-        {
-          "name": "Governance (preview)",
-          "overview": "../../resources/tenantgovernanceservices-tenantgovernance-overview.md",
-          "resources": [
-            "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
-            "microsoft.graph.tenantGovernanceServices.relatedTenant",
-            "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
-            "microsoft.graph.tenantGovernanceServices.governanceInvitation",
-            "microsoft.graph.tenantGovernanceServices.governanceRequest",
-            "microsoft.graph.tenantGovernanceServices.governanceRelationship"
+          ],
+          "complexTypes": [
+            "baselineParameter",
+            "baselineResource",
+            "clientCredentials",
+            "driftedProperty",
+            "errorDetail",
+            "openComplexDictionaryType"
           ]
         }
       ]

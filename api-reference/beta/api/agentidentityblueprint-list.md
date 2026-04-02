@@ -102,6 +102,7 @@ GET https://graph.microsoft.com/beta/applications/microsoft.graph.agentIdentityB
 
 ---
 
+
 ### Response
 
 The following example shows the response.

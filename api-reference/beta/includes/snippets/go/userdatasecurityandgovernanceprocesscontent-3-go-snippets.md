@@ -50,10 +50,6 @@ additionalData := map[string]interface{}{
 }
 customProperties.SetAdditionalData(additionalData)
 processContentMetadataBase.SetCustomProperties(customProperties)
-additionalData := map[string]interface{}{
-	"contentCategory" : "none", 
-}
-processContentMetadataBase.SetAdditionalData(additionalData)
 
 contentEntries := []graphmodels.ProcessContentMetadataBaseable {
 	processContentMetadataBase,

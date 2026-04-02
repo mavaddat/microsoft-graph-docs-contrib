@@ -14,18 +14,20 @@ const emailNotificationsSetting = {
   isEnabled: 'true',
   additionalEvents: 'restoreAndPolicyUpdates',
   recipients: {
-    role: 'custom',
-    customRecipients: [
-      {
-        email: 'amala@contoso.com'
-      },
-      {
-        email: 'conrad@contoso.com'
-      },
-      {
-        email: 'lothar@contoso.com'
-      }
-    ]
+    recipients: {
+      role: 'custom',
+      customRecipients: [
+        {
+          email: 'amala@contoso.com'
+        },
+        {
+          email: 'conrad@contoso.com'
+        },
+        {
+          email: 'lothar@contoso.com'
+        }
+      ]
+    }
   }
 };
 

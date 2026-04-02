@@ -11,6 +11,7 @@ const options = {
 const client = Client.init(options);
 
 let certificateBasedAuthPki = await client.api('/directory/publicKeyInfrastructure/certificateBasedAuthConfigurations/{certificateBasedAuthPkiId}')
+	.version('beta')
 	.get();
 
 ```

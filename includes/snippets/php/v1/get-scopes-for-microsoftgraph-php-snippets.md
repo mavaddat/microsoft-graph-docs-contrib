@@ -13,7 +13,7 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 $requestConfiguration = new ServicePrincipalsRequestBuilderGetRequestConfiguration();
 $queryParameters = ServicePrincipalsRequestBuilderGetRequestConfiguration::createQueryParameters();
-$queryParameters->filter = "appId eq '00000003-0000-0000-c000-000000000000'";
+$queryParameters->filter = "displayName eq 'Microsoft Graph'";
 $queryParameters->select = ["id","displayName","appId","oauth2PermissionScopes"];
 $requestConfiguration->queryParameters = $queryParameters;
 

@@ -42,7 +42,6 @@ var requestBody = new CloudPcProvisioningPolicy
 		Locale = "en-US",
 	},
 	ProvisioningType = CloudPcProvisioningType.Dedicated,
-	UserExperienceType = CloudPcUserExperienceType.CloudPc,
 	UserSettingsPersistenceConfiguration = new CloudPcUserSettingsPersistenceConfiguration
 	{
 		UserSettingsPersistenceEnabled = true,

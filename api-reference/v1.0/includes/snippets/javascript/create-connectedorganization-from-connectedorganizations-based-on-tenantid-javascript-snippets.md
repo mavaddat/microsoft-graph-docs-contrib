@@ -24,6 +24,7 @@ const connectedOrganization = {
 };
 
 await client.api('/identityGovernance/entitlementManagement/connectedOrganizations/')
+	.version('beta')
 	.post(connectedOrganization);
 
 ```

@@ -27,7 +27,6 @@ Inherits from [protectionUnitBase](../resources/protectionunitbase.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|backupRetentionPeriodInDays|Int32|The retention period of the backup, in days. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |createdBy|[identitySet](../resources/identityset.md)|The identity of person who created the protection unit. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |createdDateTime|DateTimeOffset|The time of creation of the protection unit. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |directoryObjectId|String|ID of the directory object.|
@@ -58,7 +57,6 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.driveProtectionUnit",
-  "backupRetentionPeriodInDays": "Int32",
   "createdBy": {"@odata.type": "microsoft.graph.identitySet"},
   "createdDateTime": "String (timestamp)",
   "directoryObjectId": "String",
@@ -68,10 +66,10 @@ The following JSON representation shows the resource type.
   "id": "String (identifier)",
   "lastModifiedBy": {"@odata.type": "microsoft.graph.identitySet"},
   "lastModifiedDateTime": "String (timestamp)",
-  "offboardRequestedDateTime": "String (timestamp)",
   "policyId": "String",
   "protectionSources": "String",
-  "status": "String"
+  "status": "String",
+  "offboardRequestedDateTime": "String (timestamp)",
 }
 ```
 

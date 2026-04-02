@@ -16,11 +16,11 @@ import (
 )
 
 requestBody := graphmodels.NewWorkbookWorksheet()
-position := int32(0)
+position := int32(99)
 requestBody.SetPosition(&position) 
-name := "Sheet2"
+name := "name-value"
 requestBody.SetName(&name) 
-visibility := "Hidden"
+visibility := "visibility-value"
 requestBody.SetVisibility(&visibility) 
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go

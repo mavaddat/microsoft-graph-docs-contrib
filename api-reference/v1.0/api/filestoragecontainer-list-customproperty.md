@@ -48,7 +48,6 @@ If successful, this method returns a `200 OK` response code.
 #### Request
 The following example shows how to get a custom property named `clientUniquieId`.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_filestoragecontainer_customproperty_1"
@@ -57,13 +56,6 @@ The following example shows how to get a custom property named `clientUniquieId`
 ``` http
 GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/customProperties/clientUniqueId
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/list-filestoragecontainer-customproperty-1-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
 ---
 
 #### Response
@@ -87,7 +79,6 @@ Content-type: application/json
 ### Example 2
 #### Request
 The following example shows how to get all the custom properties of a **fileStorageContainer**.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_filestoragecontainer_customproperty_2"
@@ -96,13 +87,6 @@ The following example shows how to get all the custom properties of a **fileStor
 ``` http
 GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/customProperties/
 ```
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/list-filestoragecontainer-customproperty-2-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
 ---
 
 #### Response

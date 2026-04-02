@@ -7,9 +7,8 @@ description: "Automatically generated file. DO NOT MODIFY"
 # Code snippets are only available for the latest version. Current version is 1.x
 from msgraph_beta import GraphServiceClient
 from msgraph_beta.generated.models.access_review_schedule_definition import AccessReviewScheduleDefinition
-from msgraph_beta.generated.models.access_review_resource_scope import AccessReviewResourceScope
+from msgraph_beta.generated.models.access_review_scope import AccessReviewScope
 from msgraph_beta.generated.models.access_review_reviewer_scope import AccessReviewReviewerScope
-from msgraph_beta.generated.models.access_review_reviewer_scope_type import AccessReviewReviewerScopeType
 from msgraph_beta.generated.models.access_review_schedule_settings import AccessReviewScheduleSettings
 from msgraph_beta.generated.models.patterned_recurrence import PatternedRecurrence
 from msgraph_beta.generated.models.recurrence_pattern import RecurrencePattern
@@ -21,7 +20,7 @@ request_body = AccessReviewScheduleDefinition(
 	display_name = "Review of catalog",
 	description_for_admins = "Review of all resources in a catalog",
 	description_for_reviewers = "If you have any questions, contact jerry@contoso.com",
-	scope = AccessReviewResourceScope(
+	scope = AccessReviewScope(
 		odata_type = "#microsoft.graph.accessReviewResourceScope",
 		additional_data = {
 				"resource_scopes" : [
@@ -42,7 +41,9 @@ request_body = AccessReviewScheduleDefinition(
 	reviewers = [
 		AccessReviewReviewerScope(
 			odata_type = "#microsoft.graph.accessReviewReviewerScope",
-			scope_type = AccessReviewReviewerScopeType.ResourceOwner,
+			additional_data = {
+					"scope_type" : "resourceOwner",
+			}
 		),
 	],
 	settings = AccessReviewScheduleSettings(

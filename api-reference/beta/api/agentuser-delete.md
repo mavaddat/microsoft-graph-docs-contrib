@@ -84,6 +84,7 @@ DELETE https://graph.microsoft.com/beta/users/microsoft.graph.agentUser/ba9a3254
 
 ---
 
+
 ### Response
 
 The following example shows the response.

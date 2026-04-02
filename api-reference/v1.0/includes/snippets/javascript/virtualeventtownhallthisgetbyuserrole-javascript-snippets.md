@@ -11,6 +11,7 @@ const options = {
 const client = Client.init(options);
 
 let getByUserRole = await client.api('/solutions/virtualEvents/townhalls/getByUserRole(role='organizer')')
+	.version('beta')
 	.get();
 
 ```

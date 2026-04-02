@@ -16,6 +16,7 @@ const upload = {
 };
 
 await client.api('/directory/publicKeyInfrastructure/certificateBasedAuthConfigurations/{certificateBasedAuthPkiId}/upload')
+	.version('beta')
 	.post(upload);
 
 ```

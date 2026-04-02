@@ -10,7 +10,7 @@ const options = {
 
 const client = Client.init(options);
 
-let applicationTemplates = await client.api('/applicationTemplates')
+let applicationTemplates = await client.api('/applicationTemplates/')
 	.version('beta')
 	.select('id,displayName,riskScore,riskFactors')
 	.get();
