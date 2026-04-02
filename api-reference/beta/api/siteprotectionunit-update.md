@@ -59,7 +59,7 @@ In the request body, provide a JSON representation of the following property.
 
 If successful, this method returns a `200 OK` response code and an updated [siteProtectionUnit](../resources/siteprotectionunit.md) object in the response body.
 
-For a list of more possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
+For a list of possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
 
 ## Examples
 
@@ -114,7 +114,7 @@ Content-Type: application/json
 
 ### Example 2: Update the billing policy when the protection unit is attached to a protection policy
 
-The following example shows the response when you try to update the **billingPolicyId** property while the protection unit is attached to a protection policy.
+The following example shows the response you get if you try to update the **billingPolicyId** property when the protection unit is attached to a protection policy.
 
 #### Request
 

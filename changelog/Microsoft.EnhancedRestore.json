@@ -2113,10 +2113,10 @@
         {
           "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
           "ApiChange": "Method",
-          "ChangedApiName": "update",
+          "ChangedApiName": "PATCH",
           "ChangeType": "Addition",
-          "Description": "Added the [update](https://learn.microsoft.com/en-us/graph/api/protectionunitbase-update?view=graph-rest-beta) method to the [protectionUnitBase](https://learn.microsoft.com/en-us/graph/api/resources/protectionUnitBase?view=graph-rest-beta) resource.",
-          "Target": "protectionUnitBase"
+          "Description": "Added the [update](https://learn.microsoft.com/en-us/graph/api/driveprotectionunit-update?view=graph-rest-beta) method to the [driveProtectionUnit](https://learn.microsoft.com/en-us/graph/api/resources/driveProtectionUnit?view=graph-rest-beta) resource.",
+          "Target": "driveProtectionUnit"
         }
       ],
       "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
