@@ -66,6 +66,8 @@ items:
       href: ../../resources/simulation.md
     - name: List simulations
       href: ../../api/attacksimulationroot-list-simulations.md
+    - name: List simulation users
+      href: ../../api/usersimulationdetails-list.md
     - name: Create simulation
       href: ../../api/attacksimulationroot-post-simulation.md
     - name: Get simulation
