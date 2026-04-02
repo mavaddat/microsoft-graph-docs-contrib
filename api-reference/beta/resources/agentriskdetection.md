@@ -31,7 +31,7 @@ Inherits from [entity](../resources/entity.md).
 |additionalInfo|String|Additional information associated with the risk detection.|
 |agentDisplayName|String|Name of the agent. <br/><br/> Supports `$filter` (`eq`, `startsWith`).|
 |agentId|String|The unique identifier for the agent. This is equivalent to 'id' to the specific agent type. See [riskyAgentIdentity](../resources/riskyagentidentity.md), [riskyAgentIdentityBlueprintPrincipal](../resources/riskyagentidentityblueprintprincipal.md), and [riskyAgentUser](../resources/riskyagentuser.md). <br/><br/> Supports `$filter` (`eq`, `startsWith`).|
-|blueprintId|String|The identifier of the blueprint associated with the agent. Nullable.|
+|blueprintId|String|The identifier of the [blueprint](../resources/agentidentityblueprint.md) associated with the agent. Nullable.|
 |detectedDateTime|DateTimeOffset|Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. <br/><br/> Supports `$filter` (`eq`, `le`, and `ge`).|
 |detectionTimingType|riskDetectionTimingType|Timing of the detected risk (real-time/offline). The possible values are: `notDefined`, `realtime`, `nearRealtime`, `offline`, `unknownFutureValue`.|
 |id|String| Unique ID of the risk detection. Inherited from [entity](../resources/entity.md).
