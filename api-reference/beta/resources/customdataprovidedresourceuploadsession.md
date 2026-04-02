@@ -23,7 +23,7 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Create](../api/accesspackageresource-post-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Create a new customDataProvidedResourceUploadSession object.|
+|[Create](../api/customdataprovidedresource-post-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Create a new customDataProvidedResourceUploadSession object.|
 |[List](../api/accesspackageresource-list-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) collection|Get a list of the customDataProvidedResourceUploadSession objects and their properties.|
 |[Get](../api/customdataprovidedresourceuploadsession-get.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Read the properties and relationships of [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) object.|
 |[uploadFile](../api/customdataprovidedresourceuploadsession-uploadfile.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|**TODO: Add Description**|
