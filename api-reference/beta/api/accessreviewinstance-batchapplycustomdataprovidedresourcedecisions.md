@@ -77,7 +77,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinitionId}/instances/{accessReviewInstanceId}/microsoft.graph.batchApplyCustomDataProvidedResourceDecisions
+POST https://graph.microsoft.com/beta/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinitionId}/instances/{accessReviewInstanceId}/batchApplyCustomDataProvidedResourceDecisions
 Content-Type: application/json
 
 {
