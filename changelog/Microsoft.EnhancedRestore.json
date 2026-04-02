@@ -2117,6 +2117,22 @@
           "ChangeType": "Addition",
           "Description": "Added the [update](https://learn.microsoft.com/en-us/graph/api/driveprotectionunit-update?view=graph-rest-beta) method to the [driveProtectionUnit](https://learn.microsoft.com/en-us/graph/api/resources/driveProtectionUnit?view=graph-rest-beta) resource.",
           "Target": "driveProtectionUnit"
+        },
+        {
+          "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
+          "ApiChange": "Method",
+          "ChangedApiName": "PATCH",
+          "ChangeType": "Addition",
+          "Description": "Added the [update](https://learn.microsoft.com/en-us/graph/api/mailboxProtectionUnit-update?view=graph-rest-beta) method to the [mailboxProtectionUnit](https://learn.microsoft.com/en-us/graph/api/resources/mailboxProtectionUnit?view=graph-rest-beta) resource.",
+          "Target": "mailboxProtectionUnit"
+        },
+        {
+          "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
+          "ApiChange": "Method",
+          "ChangedApiName": "PATCH",
+          "ChangeType": "Addition",
+          "Description": "Added the [update](https://learn.microsoft.com/en-us/graph/api/siteProtectionUnit-update?view=graph-rest-beta) method to the [siteProtectionUnit](https://learn.microsoft.com/en-us/graph/api/resources/siteProtectionUnit?view=graph-rest-beta) resource.",
+          "Target": "siteProtectionUnit"
         }
       ],
       "Id": "2f6f6625-a925-4757-bf90-93b8a8ce9d40",
