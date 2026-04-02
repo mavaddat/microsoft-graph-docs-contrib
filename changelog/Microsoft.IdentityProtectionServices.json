@@ -7,7 +7,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "blueprintId",
           "ChangeType": "Addition",
-          "Description": "Added the **blueprintId** property to the [agentRiskDetection](https://learn.microsoft.com/en-us/graph/api/resources/agentRiskDetection?view=graph-rest-beta) resource.",
+          "Description": "Added the **blueprintId** property to the [agentRiskDetection](https://learn.microsoft.com/en-us/graph/api/resources/agentriskdetection?view=graph-rest-beta) resource.",
           "Target": "agentRiskDetection"
         },
         {
@@ -15,7 +15,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "source",
           "ChangeType": "Addition",
-          "Description": "Added the **source** property to the [agentRiskDetection](https://learn.microsoft.com/en-us/graph/api/resources/agentRiskDetection?view=graph-rest-beta) resource.",
+          "Description": "Added the **source** property to the [agentRiskDetection](https://learn.microsoft.com/en-us/graph/api/resources/agentriskdetection?view=graph-rest-beta) resource.",
           "Target": "agentRiskDetection"
         },
         {
@@ -23,7 +23,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "blueprintId",
           "ChangeType": "Addition",
-          "Description": "Added the **blueprintId** property to the [riskyAgent](https://learn.microsoft.com/en-us/graph/api/resources/riskyAgent?view=graph-rest-beta) resource.",
+          "Description": "Added the **blueprintId** property to the [riskyAgent](https://learn.microsoft.com/en-us/graph/api/resources/riskyagent?view=graph-rest-beta) resource.",
           "Target": "riskyAgent"
         }
       ],

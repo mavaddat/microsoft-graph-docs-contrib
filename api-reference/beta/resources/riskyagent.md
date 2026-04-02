@@ -31,7 +31,7 @@ Inherits from [entity](../resources/entity.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |agentDisplayName|String|Name of the agent. <br/><br/> Supports `$filter` (`eq`, `startsWith`).
-|blueprintId|String|The identifier of the blueprint associated with the agent. Nullable.|
+|blueprintId|String|The identifier of the [blueprint](../resources/agentidentityblueprint.md) associated with the agent. Nullable.|
 |id|String|The object **id** of the [riskyAgentIdentity](../resources/riskyagentidentity.md), [riskyAgentIdentityBlueprintPrincipal](../resources/riskyagentidentityblueprintprincipal.md) or [riskyAgentUser](../resources/riskyagentuser.md). Inherited from [entity](../resources/entity.md). <br/><br/> Supports `$filter` (`eq`, `startsWith`).
 |identityType|[agentIdentityType](agentidentitytype.md)|The type of agent identity. The possible values are: `agentIdentity`, `agentUser`, `unknownFutureValue`, `agentIdentityBlueprintPrincipal`. You must use the `Prefer: include-unknown-enum-members` request header to get the following value in this evolvable enum: `agentIdentityBlueprintPrincipal`. Required. <br/><br/> Supports `$filter` (`eq`).|
 |isDeleted|Boolean|Indicates whether the agent is deleted.|
