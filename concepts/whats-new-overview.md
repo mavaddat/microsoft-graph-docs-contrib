@@ -24,6 +24,15 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
 
+## April 2026: New in preview only
+
+### Identity and access | Directory management
+
+- Use the **billingPolicyId** property on [protectionUnitBase](/graph/api/resources/protectionunitbase?view=graph-rest-beta&preserve-view=true), [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get the unique identifier of the billing policy assigned to the protection unit for cost allocation.
+- [Update](/graph/api/driveprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+- [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+- [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+
 ## March 2026: New and generally available
 
 ### Applications
@@ -192,8 +201,6 @@ Introduced the Entra Backup and Recovery APIs to enable IT administrators to bac
 - Use **keyCredentials** as a property on [appManagementConfiguration](/graph/api/resources/appmanagementconfiguration?view=graph-rest-beta&preserve-view=true) to get a collection of certificate restrictions settings to be applied to an application or service principal.
 - Use **passwordCredentials** as a property on [appManagementConfiguration](/graph/api/resources/appmanagementconfiguration?view=graph-rest-beta&preserve-view=true) to get a collection of password restrictions settings to be applied to an application or service principal.
 - Use **customSecurityAttributes** as a property on [appManagementPolicyActorExemptions](/graph/api/resources/appmanagementpolicyactorexemptions?view=graph-rest-beta&preserve-view=true) to get a collection of [customSecurityAttributeExemption](/graph/api/resources/customsecurityattributeexemption?view=graph-rest-beta&preserve-view=true) objects to exempt from the policy enforcement.
-
-Added [Update protectionUnitBase](/graph/api/protectionunitbase-update?view=graph-rest-beta&preserve-view=true) and the **billingPolicyId** property on [protectionUnitBase](/graph/api/resources/protectionunitbase?view=graph-rest-beta&preserve-view=true), [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true).
 
 ### Identity and access | Governance
 
