@@ -42,14 +42,6 @@ Use the targeted messages APIs to manage messages in Microsoft Teams that are vi
 
 - Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
 
-### Teamwork and communications | Apps
-
-Manage Teams apps at the channel level within a team using the following APIs:
-- [List apps](/graph/api/channel-list-enabledapps) in a channel.
-- [Get an app](/graph/api/teamsapp-get) in a channel.
-- [Enable a new Teams app](/graph/api/channel-post-enabledapps) in a channel.
-- [Disable an app](/graph/api/channel-delete-enabledapps) in a channel.
-
 ### Calendars | Places
 
 - Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
@@ -103,6 +95,15 @@ Added the **createdByAppId** property to the [application](/graph/api/resources/
 ### Personal contacts
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
+
+
+### Teamwork and communications | Apps
+
+Manage Teams apps at the channel level within a team using the following APIs:
+- [List apps](/graph/api/channel-list-enabledapps) in a channel.
+- [Get an app](/graph/api/teamsapp-get) in a channel.
+- [Enable a new Teams app](/graph/api/channel-post-enabledapps) in a channel.
+- [Disable an app](/graph/api/channel-delete-enabledapps) in a channel.
 
 ### Teamwork and communications | Calls and online meetings
 
