@@ -2,7 +2,7 @@
 title: "accessReviewInstance: batchApplyCustomDataProvidedResourceDecisions"
 description: "Set the apply result on a custom data provided resource decision in a batch."
 author: "dotnet-enthusiast"
-ms.date: 03/23/2026
+ms.date: 04/01/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Enables reviewers to set the `applyResult` and `applyDescription` on all [accessReviewInstanceDecisionItem](../resources/accessreviewinstancedecisionitem.md) objects in batches by using **customDataProvidedResourceId**.
 
-**NOTE:** The access review instance must be in an 'Applying` state.
+**NOTE:** The access review instance must be in an `Applying` state.
 
 ## Permissions
 
@@ -29,6 +29,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/accessreviewinstance-batchapplycustomdataprovidedresourcedecisions-permissions.md)]
 
+[!INCLUDE [rbac-access-reviews-apis-write](../includes/rbac-for-apis/rbac-access-reviews-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
@@ -36,7 +38,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-POST /definitions/{accessReviewScheduleDefinitionId}/instances/{accessReviewInstanceId}/batchApplyCustomDataProvidedResourceDecisions
+POST /identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinitionId}/instances/{accessReviewInstanceId}/batchApplyCustomDataProvidedResourceDecisions
 ```
 
 ## Request headers
@@ -55,9 +57,9 @@ The following table lists the parameters that are required when you call this ac
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|applyResult|accessReviewInstanceDecisionItemApplyResult|The `applyResult` for the entity being reviewed. The possible values are: `new`, `appliedSuccessfully`, `appliedWithUnknownFailure`, `appliedSuccessfullyButObjectNotFound`, `applyNotSupported`. Required.  |
-|applyDescription|String|A description for the `applyResult`.|
-|customDataProvidedResourceId|String|The `applyResult` on all the **accessReviewInstanceDecisionItems** with matching **resourceId** will be set.|
+|applyResult|[accessReviewInstanceDecisionItemApplyResult](../resources/enums.md)|The `applyResult` for the entity being reviewed. The possible values are: `new`, `appliedSuccessfully`, `appliedWithUnknownFailure`, `appliedSuccessfullyButObjectNotFound`, `applyNotSupported`. Required.  |
+|applyDescription|String|If supplied, a description for the `applyResult`. Optional. |
+|customDataProvidedResourceId|String|The `applyResult` on all the **accessReviewInstanceDecisionItems** with matching **resourceId** will be set. Required. |
 
 
 ## Response
@@ -79,9 +81,9 @@ POST https://graph.microsoft.com/beta/identityGovernance/accessReviews/definitio
 Content-Type: application/json
 
 {
-  "applyResult": "String",
-  "applyDescription": "String",
-  "customDataProvidedResourceId": "String"
+  "applyResult": "appliedSuccessfully",
+  "applyDescription": "Access was removed from production application: Github-app.",
+  "customDataProvidedResourceId": "5c728447-be5c-4565-b4d3-cb248b609891"
 }
 ```
 

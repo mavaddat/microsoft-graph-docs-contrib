@@ -2,7 +2,7 @@
 title: "accessReviewInstanceDecisionItemCustomDataProvidedResource resource type"
 description: "Represents custom data provided resources for which access is represented through an accessReviewInstanceDecisionItem object."
 author: "dotnet-enthusiast"
-ms.date: 11/05/2025
+ms.date: 04/01/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
@@ -24,13 +24,13 @@ Inherits from [accessReviewInstanceDecisionItemResource](../resources/accessrevi
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
+|customData|String|Custom data to include with the decision.|
 |description|String|The description of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
 |displayName|String|The display name of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
 |id|String|The identifier of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
-|type|String|The type of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
-|customData|String|Custom data to include with the decision.|
 |scopeDisplayName|String|The name of the scope for the decision.|
 |scopeId|String|The id of the scope for the decision.|
+|type|String|The type of the custom data provided resource. Inherited from [accessReviewInstanceDecisionItemResource](../resources/accessreviewinstancedecisionitemresource.md).|
 
 ## Relationships
 None.
