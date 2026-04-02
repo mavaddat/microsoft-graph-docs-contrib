@@ -5,6 +5,7 @@ author: "jaylenemartinez0"
 ms.date: 04/01/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
+doc_type: apiPageType
 ---
 
 # Update customDataProvidedResourceUploadSession
