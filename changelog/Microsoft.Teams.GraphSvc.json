@@ -181,7 +181,7 @@
           "ApiChange": "Parameter",
           "ChangedApiName": "model",
           "ChangeType": "Deletion",
-          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/api/channel-getallretainedmessages?view=graph-rest-beta) method.",
+          "Description": "Deleted the [model](https://learn.microsoft.com/en-us/graph/teams-licenses#payment-models) query parameter from the [channel: getAllRetainedMessages](https://learn.microsoft.com/en-us/graph/api/channel-getallretainedmessages?view=graph-rest-beta) method.",
           "Target": "chatMessage"
         },
         {

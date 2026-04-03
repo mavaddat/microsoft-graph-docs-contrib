@@ -153,7 +153,7 @@ Content-Type: application/json
       "recipient": {
         "@odata.type": "#microsoft.graph.identity",
         "id": "1273a016-201d-4f95-8083-1b7f99b3edeb",
-        "displayName": "Graph TestingAdmin"
+        "displayName": "Adele Vance"
       }
     }
   ]
