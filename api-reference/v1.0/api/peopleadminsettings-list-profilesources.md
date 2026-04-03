@@ -14,17 +14,13 @@ Namespace: microsoft.graph
 
 Get a list of the [profileSource](../resources/profilesource.md) objects and their properties, which represent both external data sources and out-of-the-box Microsoft data sources configured for user profiles in an organization.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "peopleadminsettings-list-profilesources-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "peopleadminsettings_list_profilesources" } -->
 [!INCLUDE [permissions-table](../includes/permissions/peopleadminsettings-list-profilesources-permissions.md)]
 
 ## HTTP request
@@ -60,6 +56,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_profilesource"
@@ -69,6 +66,11 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/admin/people/profileSources
 ```
 
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/list-profilesource-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
