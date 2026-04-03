@@ -53,6 +53,8 @@ For siteSource use `"dataSource" : { "@odata.type" : "microsoft.graph.security.s
 Alternatively use the webUrl directly, "dataSource": {"@odata.type": "microsoft.graph.security.siteSource","site": {"webUrl": `https://m365x809305.sharepoint.com/sites/Design-topsecret`}}
 
 
+Note: adding SPO site as non-custodian data source requires the URL to follow the standard SharePoint format (.sharepoint.com)
+
 ## Response
 
 If successful, this method returns a `201 Created` response code and an [microsoft.graph.security.ediscoveryNoncustodialDataSource](../resources/security-ediscoverynoncustodialdatasource.md) object in the response body.
