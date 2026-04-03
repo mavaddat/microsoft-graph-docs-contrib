@@ -65,6 +65,33 @@ Manage Teams apps at the channel level within a team using the following APIs:
 
 Introducing new [Follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-view=true), [Unfollow user](/graph/api/storyline-unfollow?view=graph-rest-beta&preserve-view=true), [List Followers](/graph/api/storyline-list-followers?view=graph-rest-beta&preserve-view=true), [List Following](/graph/api/storyline-list-followings?view=graph-rest-beta&preserve-view=true) APIs for Viva Engage to manage storyline following relationships.
 
+Added support for the `DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel`, `DELETE /me/drive/items/{item-id}/retentionLabel`, and `DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel` endpoints to the [driveItem: removeRetentionLabel](/graph/api/driveitem-removeretentionlabel?view=graph-rest-beta&preserve-view=true) API.
+
+### Files | File storage container
+
+[Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
+
+### Identity and access | Governance
+
+- Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
+- Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
+
+### Identity and access | Identity and sign-in
+
+- Added the **blueprintId** property to the [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) resource.
+- Added the **source** property to the [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) resource.
+- Added the **blueprintId** property to the [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resource.
+
+### Identity and access | Network access
+
+- Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
+- Added the [crossTenantAccessType](/graph/api/resources/networkaccess-crosstenantaccesstype?view=graph-rest-beta&preserve-view=true) enumeration type.
+- Added the [deviceJoinType](/graph/api/resources/networkaccess-devicejointype?view=graph-rest-beta&preserve-view=true) enumeration type.
+- Added the Cloud Firewall APIs to manage firewall policies, rules, and policy links for Microsoft Entra Global Secure Access. Use the following new resources and their associated APIs:
+  - Use the [cloudFirewallPolicy](/graph/api/resources/networkaccess-cloudfirewallpolicy?view=graph-rest-beta&preserve-view=true) resource and its associated methods to create and manage cloud firewall policies.
+  - Use the [cloudFirewallRule](/graph/api/resources/networkaccess-cloudfirewallrule?view=graph-rest-beta&preserve-view=true) resource and its associated methods to define firewall rules with source and destination matching conditions.
+  - Use the [cloudFirewallPolicyLink](/graph/api/resources/networkaccess-cloudfirewallpolicylink?view=graph-rest-beta&preserve-view=true) resource and its associated methods to link cloud firewall policies to filtering profiles.
+
 ### Calendars | Places
 
 - Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
