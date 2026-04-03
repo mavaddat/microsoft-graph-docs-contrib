@@ -110,7 +110,7 @@ Content-Type: application/json
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#Collection(targetedChatMessage)",
   "@odata.count": 1,
-  "@odata.nextLink": "https://graph.microsoft.com/beta/users/f47b5f54-6968-4706-a522-31e842b12345/teamwork/getAllRetainedTargetedMessages?model=B&$top=1&$skiptoken=Token",
+  "@odata.nextLink": "https://graph.microsoft.com/beta/users/f47b5f54-6968-4706-a522-31e842b12345/teamwork/getAllRetainedTargetedMessages?$top=1&$skiptoken=Token",
   "value": [
     {
       "@odata.type": "#microsoft.graph.targetedChatMessage",
