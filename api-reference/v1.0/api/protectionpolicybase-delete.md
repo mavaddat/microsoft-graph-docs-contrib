@@ -12,7 +12,9 @@ ms.date: 09/10/2024
 
 Namespace: microsoft.graph
 
-Delete a protection policy. Read the properties and relationships of a [protectionPolicyBase](../resources/protectionpolicybase.md) object.
+Delete a [protectionPolicyBase](../resources/protectionpolicybase.md) object.
+
+A protection policy can only be deleted after it has been deactivated. When you delete a policy, all associated protection units are removed, and backup protection stops for the resources that were covered by that policy. Existing backup data is retained as per the retention policy before being offboarded. You can restore data using previous restore points even after deletion.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
