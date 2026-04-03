@@ -33,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ```http
-PATCH /backupRestore/mailboxProtectionUnits/{mailboxProtectionUnitId}
+PATCH /solutions/backupRestore/protectionUnits/{protectionUnitBaseId}
 ```
 
 ## Request headers
