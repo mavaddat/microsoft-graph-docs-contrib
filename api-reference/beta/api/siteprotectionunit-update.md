@@ -77,7 +77,7 @@ The following example shows a request.
 }
 -->
 ```msgraph-interactive
-PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
+PATCH https://graph.microsoft.com/beta/solutions/backupRestore/siteProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
 Content-Type: application/json
 
 {
@@ -126,7 +126,7 @@ The following example shows a request.
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
+PATCH https://graph.microsoft.com/beta/solutions/backupRestore/siteProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
 Content-Type: application/json
 
 {
