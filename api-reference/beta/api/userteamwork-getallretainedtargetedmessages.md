@@ -56,7 +56,7 @@ The following filter expressions are supported:
 
 You can combine multiple filter expressions using the `and` operator. For example:
 ```http
-GET /users/{id}/teamwork/getAllRetainedTargetedMessages?$filter=lastModifiedDateTime gt 2024-01-01T00:00:00Z and lastModifiedDateTime lt 2024-12-31T23:59:59Z
+GET /users/{user-id | userPrincipalName}/teamwork/getAllRetainedTargetedMessages?$filter=lastModifiedDateTime gt 2024-01-01T00:00:00Z and lastModifiedDateTime lt 2024-12-31T23:59:59Z
 ```
 
 ## Request headers
