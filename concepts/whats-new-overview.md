@@ -35,7 +35,8 @@ Manage Teams apps at the channel level within a team using the following APIs:
 
 ### Teamwork and communications | Messaging
 
-Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
+- Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
+- Use the **layoutType** property on the [channel](/graph/api/resources/channel) resource to create channels with different conversation experiences and switch between them at any time. The property supports two values: `post` for traditional post-reply format and `chat` for a chat-like threading experience. You can set the layout type when you [create a channel](/graph/api/channel-post) and [update](/graph/api/channel-patch) it later to switch between layouts.
 
 ## April 2026: New in preview only
 
@@ -117,10 +118,6 @@ Added the **createdByAppId** property to the [application](/graph/api/resources/
 ### Personal contacts
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
-
-### Teamwork and communications | Messaging
-
-Use the **layoutType** property on the [channel](/graph/api/resources/channel) resource to create channels with different conversation experiences and switch between them at any time. The property supports two values: `post` for traditional post-reply format and `chat` for a chat-like threading experience. You can set the layout type when you [create a channel](/graph/api/channel-post) and [update](/graph/api/channel-patch) it later to switch between layouts.
 
 ### Teamwork and communications | Calls and online meetings
 
