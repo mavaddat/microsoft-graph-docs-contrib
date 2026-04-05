@@ -3443,28 +3443,12 @@
           "Target": "channel"
         },
         {
-          "Id": "f2a3b4c5-6d7e-8f9a-0b1c-d2e3f4a5b6c7",
+          "Id": "e1f2a3b4-5c6d-7e8f-9a0b-c1d2e3f4a5b6",
           "ApiChange": "Enumeration",
           "ChangedApiName": "channelLayoutType",
           "ChangeType": "Addition",
-          "Description": "Added the **channelLayoutType** enumeration to the [channel](https://learn.microsoft.com/en-us/graph/api/resources/channel?view=graph-rest-1.0) resource. The enumeration defines layout types for channels with values `post` (traditional post-reply), `chat` (chat-like threading), and `unknownFutureValue`.",
-          "Target": "channel"
-        },
-        {
-          "Id": "a3b4c5d6-7e8f-9a0b-1c2d-e3f4a5b6c7d8",
-          "ApiChange": "Method",
-          "ChangedApiName": "Create channel",
-          "ChangeType": "Change",
-          "Description": "Updated the [Create channel](https://learn.microsoft.com/en-us/graph/api/channel-post?view=graph-rest-1.0) method to support the **layoutType** optional property in the request body. Users can now specify the channel layout type during creation.",
-          "Target": "channel"
-        },
-        {
-          "Id": "b4c5d6e7-8f9a-0b1c-2d3e-f4a5b6c7d8e9",
-          "ApiChange": "Method",
-          "ChangedApiName": "Update channel",
-          "ChangeType": "Change",
-          "Description": "Updated the [Update channel](https://learn.microsoft.com/en-us/graph/api/channel-patch?view=graph-rest-1.0) method to support updating the **layoutType** property. Users can switch between `post` and `chat` layouts at any time.",
-          "Target": "channel"
+          "Description": "Added the **channelLayoutType** enumeration type.",
+          "Target": "channelLayoutType"
         }
       ],
       "Id": "e1f2a3b4-5c6d-7e8f-9a0b-c1d2e3f4a5b6",

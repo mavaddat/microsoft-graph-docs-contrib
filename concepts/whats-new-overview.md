@@ -121,7 +121,7 @@ Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailA
 
 ### Teamwork and communications | Messaging
 
-Use the **layoutType** property on the [channel](/graph/api/resources/channel?view=graph-rest-1.0&preserve-view=true) resource to create channels with different conversation experiences and switch between them at any time. The property supports two values: `post` for traditional post-reply format and `chat` for a chat-like threading experience. You can set the layout type when [creating a channel](/graph/api/channel-post?view=graph-rest-1.0&preserve-view=true) and [update it](/graph/api/channel-patch?view=graph-rest-1.0&preserve-view=true) later to switch between layouts.
+Use the **layoutType** property on the [channel](/graph/api/resources/channel) resource to create channels with different conversation experiences and switch between them at any time. The property supports two values: `post` for traditional post-reply format and `chat` for a chat-like threading experience. You can set the layout type when you [create a channel](/graph/api/channel-post) and [update](/graph/api/channel-patch) it later to switch between layouts.
 
 ### Teamwork and communications | Calls and online meetings
 

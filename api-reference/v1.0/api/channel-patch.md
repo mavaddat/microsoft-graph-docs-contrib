@@ -55,7 +55,7 @@ If successful, this method returns a `204 No Content` response code.
 ## Examples
 
 ### Example 1: Update a channel
-
+The following example shows how to update a channel.
 #### Request
 
 The following example shows a request.
@@ -108,13 +108,13 @@ The following example shows the response.
 HTTP/1.1 204 No Content
 ```
 
-### Example 2: Update a channel's layout type
+### Example 2: Update the layout type of a channel
 
-This example shows how to update an existing channel's layout type from post to chat.
+The following example shows how to update the existing layout type of a channel from post to chat.
 
 #### Request
 
-The following example shows a request to change a channel's layout from the traditional post-reply format to a chat-like threading experience.
+The following example shows a request to change the layout of a channel from the traditional post-reply format to a chat-like threading experience.
 
 <!-- {
   "blockType": "request",
@@ -144,10 +144,10 @@ HTTP/1.1 204 No Content
 
 ### Example 3: Switch a channel back to post layout type
 
-This example shows how to convert a chat-layout channel back to the traditional post-reply format.
+The following example shows how to convert a chat-layout channel back to the traditional post-reply format.
 
 #### Request
-
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "update_channel_layouttype_to_post",

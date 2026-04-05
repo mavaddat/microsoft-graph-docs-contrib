@@ -147,7 +147,9 @@ Content-type: application/json
 
 #### Request
 
-The following example shows a request to list all private channels.
+The following example shows how to list all private channels.
+#### Request
+The following example shows a request.
 
 
 

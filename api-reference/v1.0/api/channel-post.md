@@ -229,11 +229,11 @@ Content-type: application/json
 
 ### Example 3: Create a channel with chat layout type
 
-This example shows how to create a channel with the chat layout type, which provides a chat-like threading experience similar to group chats.
+The following example shows how to create a channel with the chat layout type that provides a chat-like threading experience similar to group chats.
 
 #### Request
 
-The following example shows a request to create a channel with `layoutType` set to `chat`.
+The following example shows a request to create a channel with **layoutType** set to `chat`.
 
 <!-- {
   "blockType": "request",
@@ -288,7 +288,10 @@ Content-type: application/json
 
 #### Request
 
-The following example shows how to create a channel that will be used for importing messages.
+The following example shows how to create a channel that is used for importing messages.
+#### Request
+
+The following example shows a request.
 
 
 
@@ -373,7 +376,13 @@ Location: /teams('57fb72d0-d811-46f4-8947-305e6072eaa5')/channels('19:4b6bed8d24
 
 #### Request
 
-The following example shows a request to create a private channel and add a user as a team owner.
+### Example 5: Create a private channel on behalf of a user using the user principal name
+
+The following example shows how to create a private channel and add a user as a team owner.
+
+#### Request
+
+The following example shows a request.
 
 
 # [HTTP](#tab/http)
@@ -465,7 +474,10 @@ Content-type: application/json
 
 #### Request
 
+### Example 6: Create a shared channel on behalf of a user
 The following example shows how to create a shared channel.
+#### Request
+The following example shows a request.
 
 
 
