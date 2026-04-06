@@ -1168,7 +1168,6 @@ Namespace: microsoft.graph.security
 |oSOverride|
 |processNonExistent|
 |other|
-|unknownFutureValue|
 
 ### serviceSource values
 
