@@ -48,15 +48,15 @@ PATCH /backupRestore/mailboxProtectionUnits/{mailboxProtectionUnitId}
 
 ## Request body
 
-This API supports updates only to the **billingPolicyId** property, and only for protection units removed from backup policies (**policyId** is empty or `null`).
+This API supports updates only to the **billingPolicyId** property, and only for protection units removed from backup policies (**policyId** is an empty string `""` or `null`).
 
 In the request body, provide a JSON representation of the following property.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit. Optional. You can update this property only when the protection unit isn't attached to a protection policy (**policyId** is empty or `null`).|
+|billingPolicyId|String|Optional. The unique identifier of the billing policy assigned to the protection unit. You can update this property only when **policyId** is `null` or an empty string (`""`).|
 
-> **Note:** You can't update the **billingPolicyId** property when the protection unit is attached to a protection policy (**policyId** has a value).
+> **Note:** If **policyId** has a value, the protection unit is attached to a protection policy and **billingPolicyId** can't be updated.
 
 ## Response
 
@@ -80,7 +80,7 @@ The following example shows a request.
 }
 -->
 ```msgraph-interactive
-PATCH https://graph.microsoft.com/beta/backupRestore/mailboxProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
+PATCH https://graph.microsoft.com/beta/backupRestore/mailboxProtectionUnits/MjUyZTc3ZDEtM2IyYS00ZGMwLTkzYTMtMjkxZDI3NWZlY2YzXzM=
 Content-Type: application/json
 
 {
@@ -103,16 +103,28 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.mailboxProtectionUnit",
-  "id": "2b8180db-48ec-4ea3-af9f-4da73f24b9cb",
-  "directoryObjectId": "1f14e9e5-5b63-4e42-8a6c-4c2322ba21e1",
-  "displayName": "Meghan Vance",
-  "email": "meghan.vance@contoso.com",
+  "id": "MjUyZTc3ZDEtM2IyYS00ZGMwLTkzYTMtMjkxZDI3NWZlY2YzXzM=",
+  "directoryObjectId": "bb1b5307-d650-49cf-88cf-05eaf1b3bb33",
+  "displayName": "Exo admin",
+  "email": "exoadmin@m365backupbamivikas.onmicrosoft.com",
   "mailboxType": "user",
   "policyId": "",
   "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",
+  "createdDateTime": "2026-02-04T06:24:19.5736657Z",
+  "createdBy": {
+    "user": {
+      "identity": "6294dedc-d456-4c78-9b2f-b4bae765fb09"
+    }
+  },
   "status": "unprotected",
   "protectionSources": "none",
-  "lastModifiedDateTime": "2026-03-05T08:30:00Z"
+  "lastModifiedDateTime": "2026-02-24T06:44:53.6014453Z",
+  "lastModifiedBy": {
+    "user": {
+      "identity": "6294dedc-d456-4c78-9b2f-b4bae765fb09"
+    }
+  },
+  "offboardRequestedDateTime": "0001-01-01T00:00:00Z"
 }
 ```
 
@@ -130,7 +142,7 @@ The following example shows a request.
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/beta/backupRestore/mailboxProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
+PATCH https://graph.microsoft.com/beta/backupRestore/mailboxProtectionUnits/NmFmNTQ2NTUtNTkwYS00YWU2LThkMDQtODRmNDI0OGMwZjU0XzE=
 Content-Type: application/json
 
 {

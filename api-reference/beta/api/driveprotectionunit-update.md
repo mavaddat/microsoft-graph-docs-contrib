@@ -48,15 +48,15 @@ PATCH /backupRestore/driveProtectionUnits/{driveProtectionUnitId}
 
 ## Request body
 
-This API supports updates only to the **billingPolicyId** property, and only for protection units removed from backup policies (**policyId** is empty or `null`).
+This API supports updates only to the **billingPolicyId** property, and only for protection units removed from backup policies (**policyId** is an empty string `""` or `null`).
 
 In the request body, provide a JSON representation of the following property.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit. Optional. You can update this property only when the protection unit isn't attached to a protection policy (**policyId** is empty or `null`).|
+|billingPolicyId|String|Optional. The unique identifier of the billing policy assigned to the protection unit. You can update this property only when **policyId** is `null` or an empty string (`""`).|
 
-> **Note:** You can't update the **billingPolicyId** property when the protection unit is attached to a protection policy (**policyId** has a value).
+> **Note:** If **policyId** has a value, the protection unit is attached to a protection policy then **billingPolicyId** can't be updated.
 
 ## Response
 
@@ -80,7 +80,7 @@ The following example shows a request.
 }
 -->
 ```msgraph-interactive
-PATCH https://graph.microsoft.com/beta/backupRestore/driveProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
+PATCH https://graph.microsoft.com/beta/backupRestore/driveProtectionUnits/MGRkM2E3MTYtNGQ0Yi00MTIzLWEyMDUtN2EyYTgxMTNjMzYzXzQ=
 Content-Type: application/json
 
 {
@@ -103,15 +103,27 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.driveProtectionUnit",
-  "id": "2b8180db-48ec-4ea3-af9f-4da73f24b9cb",
-  "directoryObjectId": "1f14e9e5-5b63-4e42-8a6c-4c2322ba21e1",
-  "displayName": "Meghan Vance",
-  "email": "meghan.vance@contoso.com",
+  "id": "MGRkM2E3MTYtNGQ0Yi00MTIzLWEyMDUtN2EyYTgxMTNjMzYzXzQ=",
+  "directoryObjectId": "6b4a7195-59a5-4a31-ab17-1e73973d992e",
+  "displayName": "global Admin",
+  "email": "gadmin@m365backupbamivikas.onmicrosoft.com",
   "policyId": "",
   "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",
+  "createdDateTime": "2026-03-05T11:07:57.7038797Z",
+  "createdBy": {
+    "user": {
+      "identity": "6b4a7195-59a5-4a31-ab17-1e73973d992e"
+    }
+  },
   "status": "unprotected",
   "protectionSources": "none",
-  "lastModifiedDateTime": "2026-03-05T08:30:00Z"
+  "lastModifiedDateTime": "2026-03-09T05:46:56.8235422Z",
+  "lastModifiedBy": {
+    "user": {
+      "identity": "6b4a7195-59a5-4a31-ab17-1e73973d992e"
+    }
+  },
+  "offboardRequestedDateTime": "0001-01-01T00:00:00Z"
 }
 ```
 
@@ -129,7 +141,7 @@ The following example shows a request.
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/beta/backupRestore/driveProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
+PATCH https://graph.microsoft.com/beta/backupRestore/driveProtectionUnits/NmFmNTQ2NTUtNTkwYS00YWU2LThkMDQtODRmNDI0OGMwZjU0XzE=
 Content-Type: application/json
 
 {

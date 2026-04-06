@@ -48,15 +48,15 @@ PATCH /backupRestore/siteProtectionUnits/{siteProtectionUnitId}
 
 ## Request body
 
-This API supports updates only to the **billingPolicyId** property, and only for protection units removed from backup policies (**policyId** is empty or `null`).
+This API supports updates only to the **billingPolicyId** property, and only for protection units removed from backup policies (**policyId** is an empty string `""` or `null`).
 
 In the request body, provide a JSON representation of the following property.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit. Optional. You can update this property only when the protection unit isn't attached to a protection policy (**policyId** is empty or `null`).|
+|billingPolicyId|String|Optional. The unique identifier of the billing policy assigned to the protection unit. You can update this property only when **policyId** is `null` or an empty string (`""`).|
 
-> **Note:** You can't update the **billingPolicyId** property when the protection unit is attached to a protection policy (**policyId** has a value).
+> **Note:** If **policyId** has a value, the protection unit is attached to a protection policy and **billingPolicyId** can't be updated.
 
 ## Response
 
@@ -80,7 +80,7 @@ The following example shows a request.
 }
 -->
 ```msgraph-interactive
-PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
+PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/ZTIxZDVmN2ItZWQ3My00M2NkLWE4YzMtYmUyOGYzYTYyNWIzXzE=
 Content-Type: application/json
 
 {
@@ -103,15 +103,27 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.siteProtectionUnit",
-  "id": "2b8180db-48ec-4ea3-af9f-4da73f24b9cb",
-  "siteId": "contoso.sharepoint.com,da60e844-ba1d-49bc-b4d4-d5e36bae9019,712a596e-90a1-49e3-9b48-bfa80bee4532",
-  "siteName": "Enhanced Restore IDC",
-  "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDC",
+  "id": "ZTIxZDVmN2ItZWQ3My00M2NkLWE4YzMtYmUyOGYzYTYyNWIzXzE=",
+  "siteId": "4205A6B4-B210-4739-B5E0-FA8FC9213719",
+  "siteName": "Contoso M365Backup",
+  "siteWebUrl": "https://m365backupbamivikas.sharepoint.com/sites/ContosoM365Backup941",
   "policyId": "",
   "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",
+  "createdDateTime": "2026-02-02T09:21:52.594531Z",
+  "createdBy": {
+    "user": {
+      "identity": "6b4a7195-59a5-4a31-ab17-1e73973d992e"
+    }
+  },
   "status": "unprotected",
   "protectionSources": "none",
-  "lastModifiedDateTime": "2026-03-05T08:30:00Z"
+  "lastModifiedDateTime": "2026-02-23T07:23:09.6805688Z",
+  "lastModifiedBy": {
+    "user": {
+      "identity": "6b4a7195-59a5-4a31-ab17-1e73973d992e"
+    }
+  },
+  "offboardRequestedDateTime": "0001-01-01T00:00:00Z"
 }
 ```
 
@@ -129,7 +141,7 @@ The following example shows a request.
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
+PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/NmFmNTQ2NTUtNTkwYS00YWU2LThkMDQtODRmNDI0OGMwZjU0XzE=
 Content-Type: application/json
 
 {
