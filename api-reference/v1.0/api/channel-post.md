@@ -286,9 +286,8 @@ Content-type: application/json
 
 ### Example 4: Create a channel in migration mode
 
-#### Request
-
 The following example shows how to create a channel that is used for importing messages.
+
 #### Request
 
 The following example shows a request.
@@ -371,10 +370,6 @@ Location: /teams('57fb72d0-d811-46f4-8947-305e6072eaa5')/channels('19:4b6bed8d24
     "moderationSettings": null
 }
 ```
-
-### Example 5: Create private channel on behalf of user using user principal name
-
-#### Request
 
 ### Example 5: Create a private channel on behalf of a user using the user principal name
 
@@ -472,11 +467,10 @@ Content-type: application/json
 
 ### Example 6: Create a shared channel on behalf of a user
 
+The following example shows how to create a shared channel.
+
 #### Request
 
-### Example 6: Create a shared channel on behalf of a user
-The following example shows how to create a shared channel.
-#### Request
 The following example shows a request.
 
 
