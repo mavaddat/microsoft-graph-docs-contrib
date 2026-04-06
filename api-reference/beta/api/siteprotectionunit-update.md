@@ -17,6 +17,9 @@ Namespace: microsoft.graph
 
 Update the properties of a [siteProtectionUnit](../resources/siteprotectionunit.md) object.
 
+> [!NOTE]
+> This API is currently available only through the Microsoft Graph PowerShell SDK.
+
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
@@ -33,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ```http
-PATCH /solutions/backupRestore/protectionUnits/{protectionUnitBaseId}
+PATCH /backupRestore/siteProtectionUnits/{siteProtectionUnitId}
 ```
 
 ## Request headers
@@ -77,7 +80,7 @@ The following example shows a request.
 }
 -->
 ```msgraph-interactive
-PATCH https://graph.microsoft.com/beta/solutions/backupRestore/siteProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
+PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/2b8180db-48ec-4ea3-af9f-4da73f24b9cb
 Content-Type: application/json
 
 {
@@ -126,7 +129,7 @@ The following example shows a request.
 }
 -->
 ```http
-PATCH https://graph.microsoft.com/beta/solutions/backupRestore/siteProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
+PATCH https://graph.microsoft.com/beta/backupRestore/siteProtectionUnits/6af54655-590a-4ae6-8d04-84f4248c0f54
 Content-Type: application/json
 
 {
