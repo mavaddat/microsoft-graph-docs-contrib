@@ -141,14 +141,14 @@ Content-type: application/json
 ```
 
 > [!NOTE]
-> This API has a known issue related to listing channels. The **layoutType** property returns `null` when listing channels. To get the layout type of a specific channel, use the [Get channel](../api/channel-get.md) API. Full support for **layoutType** in list operations is planned for a future release.
+> This API has a [known issue](/graph/known-issues#layouttype-property-returns-null-when-listing-all-channels) related to listing channels. The **layoutType** property returns `null` when listing channels. To get the layout type of a specific channel, use the [Get channel](../api/channel-get.md) API.
 
 ### Example 2: List all private channels
 
+The following example shows how to list all private channels.
+
 #### Request
 
-The following example shows how to list all private channels.
-#### Request
 The following example shows a request.
 
 
