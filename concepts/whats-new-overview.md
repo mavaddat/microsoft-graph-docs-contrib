@@ -20,25 +20,6 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## April 2026: New and generally available
 
-### Teamwork and communications | Messaging
-
-Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
-
-## April 2026: New in preview only
-
-### Backup storage
-
-- Use the **billingPolicyId** property on [protectionUnitBase](/graph/api/resources/protectionunitbase?view=graph-rest-beta&preserve-view=true), [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get or set the unique identifier of the billing policy assigned to the protection unit for cost allocation.
-- [Update](/graph/api/driveprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true) object.
-- [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
-- [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
-
-## March 2026: New and generally available
-
-### Applications
-
-- Using the **signInAudience** property to limit where an [application](/graph/api/resources/application) can be used **isn't** a replacement for proper tenant validation and authorization enforcement in your application code. If your application expects access only in specific tenants, you *must* enforce that validation in your application code. To learn more, see [Secure applications and APIs by validating claims](/entra/identity-platform/claims-validation).
-- Added the **trafficRoutingMethod** property to the [onPremisesPublishing](/graph/api/resources/onpremisespublishing?view=graph-rest-beta&preserve-view=true) resource to control how traffic is distributed across multiple connectors in a connector group in Microsoft Entra app proxy.
 ### Backup storage
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
@@ -62,6 +43,11 @@ Removed the `model` parameters and payment-model guidance from Microsoft Teams e
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate?view=graph-rest-beta&preserve-view=true), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
 - A [protection policy can be deleted](/graph/api/protectionpolicybase-delete?view=graph-rest-beta&preserve-view=true) only after it was [deactivated](/graph/api/protectionpolicybase-deactivate?view=graph-rest-beta&preserve-view=true). When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
+- Use the **billingPolicyId** property on [protectionUnitBase](/graph/api/resources/protectionunitbase?view=graph-rest-beta&preserve-view=true), [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get or set the unique identifier of the billing policy assigned to the protection unit for cost allocation.
+- [Update](/graph/api/driveprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+- [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+- [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+
 
 ### Teamwork and communications | Messaging
 
