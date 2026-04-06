@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 03/18/2026
+ms.date: 03/31/2026
 ms.topic: whats-new
 ---
 
@@ -172,6 +172,8 @@ Added the following resources and properties to the cross-tenant access policy A
 
 - Added the [alert: moveAlerts](/graph/api/security-alert-movealerts?view=graph-rest-beta&preserve-view=true) and [incident: mergeIncidents](/graph/api/security-incident-mergeincidents?view=graph-rest-beta&preserve-view=true) actions to support moving alerts and merging incidents in Microsoft Defender.
 - Added the [correlationReason](/graph/api/resources/security-correlationreason?view=graph-rest-beta&preserve-view=true) enumeration and [mergeResponse](/graph/api/resources/security-mergeresponse?view=graph-rest-beta&preserve-view=true) resource type.
+- Added the **categories** property to the [alert](/graph/api/resources/security-alert?view=graph-rest-beta&preserve-view=true) resource.
+- Deprecated the [alert](/graph/api/resources/security-alert?view=graph-rest-beta&preserve-view=true) resource.
 
 ### Tenant management | Governance
 
