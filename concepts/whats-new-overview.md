@@ -25,6 +25,10 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
 - A [protection policy can be deleted](/graph/api/protectionpolicybase-delete) only after it was [deactivated](/graph/api/protectionpolicybase-deactivate). When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
 
+### Files
+
+Use the **height** and **width** parameters on the [driveItem](/graph/api/resources/driveitem) method to [download a file in another format](/graph/api/driveitem-get-content-format) when `format=jpg`.
+
 ### Teamwork and communications | Apps
 
 Manage Teams apps at the channel level within a team using the following APIs:
@@ -43,6 +47,10 @@ Removed the `model` parameters and payment-model guidance from Microsoft Teams e
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate?view=graph-rest-beta&preserve-view=true), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
 - A [protection policy can be deleted](/graph/api/protectionpolicybase-delete?view=graph-rest-beta&preserve-view=true) only after it was [deactivated](/graph/api/protectionpolicybase-deactivate?view=graph-rest-beta&preserve-view=true). When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
+
+### Files
+
+Use the **height** and **width** parameters on the [driveItem](/graph/api/resources/driveitem?view=graph-rest-beta&preserve-view=true) method to [download a file in another format](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) when `format=jpg`.
 
 ### Teamwork and communications | Messaging
 
