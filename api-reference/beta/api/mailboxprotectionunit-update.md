@@ -106,7 +106,7 @@ Content-Type: application/json
   "id": "MjUyZTc3ZDEtM2IyYS00ZGMwLTkzYTMtMjkxZDI3NWZlY2YzXzM=",
   "directoryObjectId": "bb1b5307-d650-49cf-88cf-05eaf1b3bb33",
   "displayName": "Exo admin",
-  "email": "exoadmin@m365backupbamivikas.onmicrosoft.com",
+  "email": "exoadmin@contoso.com",
   "mailboxType": "user",
   "policyId": "",
   "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",

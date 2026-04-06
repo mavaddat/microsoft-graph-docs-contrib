@@ -56,7 +56,7 @@ In the request body, provide a JSON representation of the following property.
 |:---|:---|:---|
 |billingPolicyId|String|Optional. The unique identifier of the billing policy assigned to the protection unit. You can update this property only when **policyId** is `null` or an empty string (`""`).|
 
-> **Note:** If **policyId** has a value, the protection unit is attached to a protection policy then **billingPolicyId** can't be updated.
+> **Note:** If **policyId** has a value, the protection unit is attached to a protection policy and **billingPolicyId** can't be updated.
 
 ## Response
 
@@ -105,8 +105,8 @@ Content-Type: application/json
   "@odata.type": "#microsoft.graph.driveProtectionUnit",
   "id": "MGRkM2E3MTYtNGQ0Yi00MTIzLWEyMDUtN2EyYTgxMTNjMzYzXzQ=",
   "directoryObjectId": "6b4a7195-59a5-4a31-ab17-1e73973d992e",
-  "displayName": "global Admin",
-  "email": "gadmin@m365backupbamivikas.onmicrosoft.com",
+  "displayName": "Global Admin",
+  "email": "gadmin@contoso.com",
   "policyId": "",
   "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",
   "createdDateTime": "2026-03-05T11:07:57.7038797Z",

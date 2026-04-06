@@ -106,7 +106,7 @@ Content-Type: application/json
   "id": "ZTIxZDVmN2ItZWQ3My00M2NkLWE4YzMtYmUyOGYzYTYyNWIzXzE=",
   "siteId": "4205A6B4-B210-4739-B5E0-FA8FC9213719",
   "siteName": "Contoso M365Backup",
-  "siteWebUrl": "https://m365backupbamivikas.sharepoint.com/sites/ContosoM365Backup941",
+  "siteWebUrl": "https://contoso.sharepoint.com/sites/ContosoM365Backup941",
   "policyId": "",
   "billingPolicyId": "fa3d95b5-2878-4de7-94f5-157f4b7607aa",
   "createdDateTime": "2026-02-02T09:21:52.594531Z",
