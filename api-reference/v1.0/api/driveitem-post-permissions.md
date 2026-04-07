@@ -128,76 +128,7 @@ Content-Type: application/json
 }
 ```
 
-<<<<<<< HEAD
-### Example 2: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using principalId
-
-The following example shows how to add a `write` [permission](../resources/permission.md) for the `internal collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
-
-#### Request
-
-The following example shows a request.
-
-<!-- {
-  "blockType": "request",
-  "name": "driveitem-post-permissions-2",
-  "scopes": "filestoragecontainer.selected",
-  "target": "action"
-} -->
-```http
-POST https://graph.microsoft.com/v1.0/drives/b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop/items/01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU/permissions
-Content-Type: application/json
-
-{
-  "grantedToV2": {
-    "siteGroup": {
-      "id": "10",
-      "displayName": "Internal Collaborators"
-    }
-  },
-  "roles": ["write"]
-}
-```
-
----
-
-#### Response
-
-The following example shows the response.
-
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.permission"
-}
--->
-``` http
-HTTP/1.1 201 Created
-Content-Type: application/json
-
-{
-  "id": "aTowaS50fG1zLnNwLmV4dHwxMEBkOWNlMGZjMS02MWQ4LTRhMmUtYjVkMy0xODc3MGRmMDY3MmM=",
-  "roles": [
-    "write"
-  ],
-  "grantedToV2": {
-    "siteGroup": {
-      "id": "10",
-      "displayName": "Internal Collaborators"
-    }
-  },
-  "grantedTo": {
-    "siteGroup": {
-      "id": "10",
-      "displayName": "Internal Collaborators"
-    }
-  }
-}
-```
-
-### Example 3: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using its Id
-=======
 ### Example 2: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using its Id
->>>>>>> 1bd9fe24d7ab5a79ec6322a0df4c009953aea321
 
 The following example shows how to add a `write` [permission](../resources/permission.md) for the `internal collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
 
@@ -266,8 +197,6 @@ Content-Type: application/json
 }
 ```
 
-<<<<<<< HEAD
-=======
 ### Example 3: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using principalId
 
 The following example shows how to add a `write` [permission](../resources/permission.md) for the `internal collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
@@ -333,9 +262,6 @@ Content-Type: application/json
 }
 ```
 
->>>>>>> 1bd9fe24d7ab5a79ec6322a0df4c009953aea321
 <!-- {
-  "type": "#page.annotation",
-  "section": "documentation",
   "tocPath": "Items/Permissions/Create driveitem permissions"
 } -->
