@@ -26,7 +26,7 @@ Inherits from [entity](../resources/entity.md).
 |[Create](../api/customdataprovidedresource-post-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Create a new customDataProvidedResourceUploadSession object.|
 |[List](../api/accesspackageresource-list-uploadsessions.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) collection|Get a list of the customDataProvidedResourceUploadSession objects and their properties.|
 |[Get](../api/customdataprovidedresourceuploadsession-get.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Read the properties and relationships of [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) object.|
-|[uploadFile](../api/customdataprovidedresourceuploadsession-uploadfile.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Upload a file to a customDataProvidedResourceUploadSession object.|
+|[Upload file](../api/customdataprovidedresourceuploadsession-uploadfile.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Upload a file to a customDataProvidedResourceUploadSession object.|
 |[Update](../api/customdataprovidedresourceuploadsession-update.md)|[customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md)|Update the properties of a customDataProvidedResourceUploadSession object.|
 |[Delete](../api/accesspackageresource-delete-uploadsessions.md)|None|Delete a customDataProvidedResourceUploadSession object.|
 

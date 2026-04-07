@@ -5,7 +5,7 @@ author: "jaylenemartinez0"
 ms.date: 04/01/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
-doc_type: resourcePageType
+doc_type: apiPageType
 ---
 
 # List customDataProvidedResourceUploadSession objects
@@ -41,7 +41,7 @@ GET /identityGovernance/catalogs/{catalogId}/accessPackageResources/{accessPacka
 
 ## Optional query parameters
 
-This method supports the `$expand`, `$filter`, `$top`, `$skip`, `$orderBy`, `$count` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$expand`, `$filter`, `$top`, `$skip`, `$orderby`, `$count` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -140,7 +140,7 @@ Content-Type: application/json
           "uploadedDateTime": "2026-03-27T21:02:58.9849683Z"
         }
       ]
-    },
+    }
   ]
 }
 ```
