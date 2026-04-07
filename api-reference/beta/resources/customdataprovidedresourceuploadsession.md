@@ -37,7 +37,7 @@ Inherits from [entity](../resources/entity.md).
 |data|[customExtensionData](../resources/customextensiondata.md)|An object containing the context for which this data is being uploaded. Currently the only possible concrete type is [accessReviewResourceDataUploadSessionContextData](../resources/accessreviewresourcedatauploadsessioncontextdata.md)|
 |id|String| Unique identifier of the upload session. Read-only.|
 |isUploadDone|Boolean| Indicates if all the necessary files have been uploaded to this session.|
-|referenceId|String|Refers to the ID representing the context for which data is being uploaded (i.e. access review instance ID). Supports `$filter (`eq`).|
+|referenceId|String|The ID of the context for which data is being uploaded, for example, the Access Review instance ID. Supports `$filter (`eq`)`.|
 |source|String| The source of the access data. This should be set to the customdataprovidedresource's name when creating the session.|
 |stats|[customDataProvidedResourceUploadStats](../resources/customdataprovidedresourceuploadstats.md)| Metadata about the files uploaded in this upload session thus far.|
 |status|customDataProvidedResourceUploadStatus| Status of the upload session. The possible values are: `active`, `complete`, `expired`, `unknownFutureValue`. Supports `$filter (`eq`).|
