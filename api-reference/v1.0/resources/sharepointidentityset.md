@@ -17,15 +17,15 @@ For usage information, see [driveItem][].
 
 ## Properties
 
-| Property    | Type                   | Description |
-|:------------|:-----------------------|:----------------------------------------------------------- |
-| application | [identity][]           | The application associated with this action. Optional. |
-| device      | [identity][]           | The device associated with this action. Optional. |
-| group       | [identity][]           | The group associated with this action. Optional. |
-| user        | [identity][]           | The user associated with this action. Optional. |
-| siteGroup   | [sharePointIdentity][] | The SharePoint group associated with this action. Optional. |
-| siteUser    | [sharePointIdentity][] | The SharePoint user associated with this action. Optional. |
-| sharePointGroup   | [sharePointGroupIdentity][] | The SharePoint group entity associated with this action. Optional. |
+| Property | Type | Description |
+|:---|:---|:---|
+| application | [identity][] | The application associated with this action. Optional. |
+| device | [identity][] | The device associated with this action. Optional. |
+| group | [identity][] | The group associated with this action. Optional. |
+| sharePointGroup | [sharePointGroupIdentity][] | The SharePoint group associated with this action. Optional. |
+| siteGroup | [sharePointIdentity][] | The SharePoint group associated with this action. Optional. |
+| siteUser | [sharePointIdentity][] | The SharePoint user associated with this action. Optional. |
+| user | [identity][] | The user associated with this action. Optional. |
 
 ## JSON representation
 

@@ -10,28 +10,60 @@ description: "Represents an identity of type sharePointGroup"
 
 # sharePointGroupIdentity resource type
 
-Represents the identity of a sharePointGroup resource. It provides capability to expose sharePointGroup specific information, for the principalId and title properties.
-It provides capability to expose sharePointGroup specific information, for the principalId and title properties.
+Namespace: microsoft.graph
+
+[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+Represents the identity of a SharePoint group. Extends the [identity](identity.md) type with SharePoint-specific properties.
+
+Inherits from [identity](identity.md).
 
 ## Properties
 
-| Property              | Type                        | Description                      |
-|:----------------------|:----------------------------|:---------------------------------|
-| title                 | String                      | Title of the sharePointGroup.|
-| principalId           | String                      | The identifier of the principal corresponding to the sharePointGroup.|
-| id                    | String                      | Unique identifier for the identity. Represents the ID field of the relevant sharePointGroup entity.|
+| Property     | Type   | Description                                                                                      |
+|:-------------|:-------|:-------------------------------------------------------------------------------------------------|
+| displayName  | String | The display name of the SharePoint group. Inherited from [identity](identity.md). Read-only.     |
+| id           | String | The unique identifier of the SharePoint group. Inherited from [identity](identity.md). Read-only. |
+| principalId  | String | The principal ID of the SharePoint group in the tenant. Read-only.                               |
+| title        | String | The title of the SharePoint group. Read-only.                                                    |
+
+## Relationships
+
+None.
 
 ## JSON representation
 
-<!-- { "blockType": "resource", "@odata.type": "microsoft.graph.sharePointGroupIdentity",
-  "openType": true 
-} -->
+The following JSON representation shows the resource type.
+
+<!-- {
+  "blockType": "resource",
+  "optionalProperties": [],
+  "@odata.type": "microsoft.graph.sharePointGroupIdentity"
+}-->
 
 ```json
 {
-  "principalId": "string",
-  "title": "string",
-  "id": "string",
-  "@odata.type": "#microsoft.graph.sharePointGroupIdentity"
+  "@odata.type": "#microsoft.graph.sharePointGroupIdentity",
+  "displayName": "String",
+  "id": "String",
+  "principalId": "String",
+  "title": "String"
 }
 ```
+
+## Related content
+
+- [sharePointIdentitySet resource type](sharepointidentityset.md)
+- [identity resource type](identity.md)
+- [sharePointGroup resource type](sharepointgroup.md)
+
+<!--
+{
+  "type": "#page.annotation",
+  "description": "The sharePointGroupIdentity resource represents the identity of a SharePoint group.",
+  "keywords": "identity,sharepoint,group",
+  "section": "documentation",
+  "tocPath": "Resources/SharePointGroupIdentity",
+  "suppressions": []
+}
+-->

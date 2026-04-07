@@ -107,6 +107,29 @@
       ]
     },
     {
+      "name": "Agents",
+      "overview": "",
+      "resources": [],
+      "childNodes": [
+        {
+          "name": "Agent identities",
+          "resources": [
+            "agentIdentityBlueprint",
+            "agentIdentityBlueprintPrincipal",
+            "agentIdentity"
+          ],
+          "childNodes": [
+            {
+              "name": "Agent identity blueprint",
+              "resources": [
+                "inheritablePermission"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "Backup storage",
       "shouldSort": true,
       "keywords": [
@@ -938,6 +961,7 @@
                 "singleUser",
                 "socialIdentitySource",
                 "subjectSet",
+                "targetAgentIdentitySponsorsOrOwners",
                 "targetApplicationOwners",
                 "targetManager",
                 "targetUserSponsors"
@@ -1118,7 +1142,8 @@
                 "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
                 "onTokenIssuanceStartListener",
-                "onUserCreateStartListener"
+                "onUserCreateStartListener",
+                "onPasswordSubmitListener"
               ]
             },
             {
@@ -1213,7 +1238,8 @@
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
-                "onTokenIssuanceStartCustomExtension"
+                "onTokenIssuanceStartCustomExtension",
+                "onPasswordSubmitCustomExtension"
               ]
             },
             {
@@ -1429,7 +1455,13 @@
         "person",
         "peopleAdminSettings",
         "insightsSettings",
+        "profileCardProperty",
+        "profilePropertySetting",
+        "profileSource",
         "pronounsSettings"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -2225,6 +2257,22 @@
             "timeRange",
             "userSolutionRoot",
             "workforceIntegrationEncryption"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenant management",
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
+          "resources": [
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationSnapshotJob"
           ]
         }
       ]
