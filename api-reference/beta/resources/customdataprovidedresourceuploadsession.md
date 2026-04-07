@@ -33,7 +33,7 @@ Inherits from [entity](../resources/entity.md).
 ## Properties
 |Property|Type| Description |
 |:---|:---|:------------|
-|createdDateTime|DateTimeOffset| DateTime when the upload session was created. Read-only.|
+|createdDateTime|DateTimeOffset| DateTime when the upload session was created. Read-only. Supports `$orderby`.|
 |data|[customExtensionData](../resources/customextensiondata.md)|An object containing the context for which this data is being uploaded. Currently the only possible concrete type is [accessReviewResourceDataUploadSessionContextData](../resources/accessreviewresourcedatauploadsessioncontextdata.md)|
 |id|String| Unique identifier of the upload session. Read-only.|
 |isUploadDone|Boolean| Indicates if all the necessary files have been uploaded to this session.|
