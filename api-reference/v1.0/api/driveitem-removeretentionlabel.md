@@ -62,6 +62,7 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 ### Example 1: Remove the retention label from a driveItem
 The following example shows how to remove the retention label from a **driveItem** object.
+
 #### Request
 
 The following example shows a request.
@@ -123,10 +124,10 @@ HTTP/1.1 204 No Content
 
 ### Example 2: Remove the retention label from a driveItem that fails due to insufficient permissions
 The following example shows how to remove the retention label from a **driveItem** object that fails due to insufficient permissions.
+
 #### Request
 The following example shows a request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "driveItem_removeRetentionLabel_spe_permissions_error",
