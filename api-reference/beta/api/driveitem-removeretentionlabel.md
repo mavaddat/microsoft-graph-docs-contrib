@@ -184,7 +184,7 @@ Content-Type: application/json
 {
   "error": {
     "code": "accessDenied",
-    "message": "Access Denied: Do not have enough permission.",
+    "message": "Access denied. You do not have sufficient permissions to perform this action.",
     "innerError": {
       "request-id": "12345678-1234-1234-1234-123456789012",
       "date": "2025-02-03T10:30:00"
