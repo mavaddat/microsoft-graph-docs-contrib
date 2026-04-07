@@ -41,7 +41,7 @@ GET /identityGovernance/catalogs/{catalogId}/accessPackageResources/{accessPacka
 
 ## Optional query parameters
 
-This method supports the `$filter`, `$orderby`, `$select`, and `$top` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$expand`, `$filter`, and `$orderby` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
