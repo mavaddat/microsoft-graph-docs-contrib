@@ -41,7 +41,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-POST /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
+POST /identityGovernance/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
 ```
 
 ## Request headers
@@ -79,7 +79,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
+POST https://graph.microsoft.com/beta/identityGovernance/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
 Content-Type: application/json
 
 {

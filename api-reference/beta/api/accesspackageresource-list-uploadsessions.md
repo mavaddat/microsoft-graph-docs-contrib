@@ -36,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
+GET /identityGovernance/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
 ```
 
 ## Optional query parameters
@@ -68,7 +68,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
+GET https://graph.microsoft.com/beta/identityGovernance/catalogs/{catalogId}/accessPackageResources/{accessPackageResourceId}/uploadSessions
 ```
 
 
