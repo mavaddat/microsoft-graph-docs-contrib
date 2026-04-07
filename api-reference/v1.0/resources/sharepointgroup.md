@@ -1,6 +1,6 @@
 ---
 title: "sharePointGroup resource type"
-description: "Represents a cohort of users or Microsoft 365 groups that are localized to a SharePoint Embedded container or SharePoint site."
+description: "Represents a cohort of users or Microsoft 365 groups that are localized to a SharePoint Embedded container."
 author: "humbertorMSFT"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
@@ -13,7 +13,7 @@ ms.date: 1/31/2025
 
 Namespace: microsoft.graph
 
-Represents a cohort of users or Microsoft 365 groups that are localized to a SharePoint Embedded container or SharePoint site.
+Represents a cohort of users or Microsoft 365 groups that are localized to a SharePoint Embedded container.
 
 ## Methods
 |Method|Return type|Description|

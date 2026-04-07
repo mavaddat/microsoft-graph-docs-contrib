@@ -56,7 +56,7 @@ In the request body, supply a JSON representation of the [permission](../resourc
 > [!IMPORTANT]
 >
 > - This API only accepts `grantedToV2` as input for the **permission** object. Other properties such as `grantedToIdentitiesV2` or the deprecated `grantedTo` and `grantedToIdentities` are not accepted.
-> - For SharePoint Embedded, when creating a new [sharePointGroup](../resources/sharepointgroup.md) permission, the request body must include both the `id` and `displayName` of the **sharePointGroup** referenced in the `grantedToV2.siteGroup` property. For more information, see [Example 2](#example-2-add-a-sharepoint-group-permission-to-a-driveitem-in-a-sharepoint-embedded-container-using-principalid).
+> - For SharePoint Embedded, when creating a new [sharePointGroup](../resources/sharepointgroup.md) permission, the recommended approach is to reference the **sharePointGroup** using the `grantedToV2.sharePointGroup.id` property in the request body. This should map to the **sharePointGroup**'s `id` property. For more information, see [Example 2](#example-2-add-a-sharepoint-group-permission-to-a-driveitem-in-a-sharepoint-embedded-container-using-its-id). Referencing a **sharePointGroup** using its `principalId` is supported but discouraged. In that case, the request body must include both `id` and `displayName` in the `grantedToV2.siteGroup` property. The `id` must point to the **sharePointGroup**'s `principalId` and the `displayName` must point to the **sharePointGroup**'s `title`. For more information, see [Example 3](#example-3-add-a-sharepoint-group-permission-to-a-driveitem-in-a-sharepoint-embedded-container-using-principalid).
 
 ## Response
 
@@ -128,6 +128,7 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 ### Example 2: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using principalId
 
 The following example shows how to add a `write` [permission](../resources/permission.md) for the `internal collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
@@ -194,6 +195,9 @@ Content-Type: application/json
 ```
 
 ### Example 3: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using its Id
+=======
+### Example 2: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using its Id
+>>>>>>> 1bd9fe24d7ab5a79ec6322a0df4c009953aea321
 
 The following example shows how to add a `write` [permission](../resources/permission.md) for the `internal collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
 
@@ -262,6 +266,74 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
+=======
+### Example 3: Add a SharePoint group permission to a driveItem in a SharePoint Embedded container using principalId
+
+The following example shows how to add a `write` [permission](../resources/permission.md) for the `internal collaborators` [sharePointGroup](../resources/sharepointgroup.md) on a [driveItem](../resources/driveitem.md) identified by `01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU` in a SharePoint Embedded [fileStorageContainer](../resources/filestoragecontainer.md) identified by `b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop`.
+
+#### Request
+
+The following example shows a request.
+
+<!-- {
+  "blockType": "request",
+  "name": "driveitem-post-permissions-2",
+  "scopes": "filestoragecontainer.selected",
+  "target": "action"
+} -->
+```http
+POST https://graph.microsoft.com/v1.0/drives/b!s8RqPCGh0ESQS2EYnKM0IKS3lM7GxjdAviiob7oc5pXv_0LiL-62Qq3IXyrXnEop/items/01V4EPHZNV2OJQJNBPWNCKDTXCQ5TSVBJU/permissions
+Content-Type: application/json
+
+{
+  "grantedToV2": {
+    "siteGroup": {
+      "id": "10",
+      "displayName": "Internal Collaborators"
+    }
+  },
+  "roles": ["write"]
+}
+```
+
+---
+
+#### Response
+
+The following example shows the response.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.permission"
+}
+-->
+``` http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "id": "aTowaS50fG1zLnNwLmV4dHwxMEBkOWNlMGZjMS02MWQ4LTRhMmUtYjVkMy0xODc3MGRmMDY3MmM=",
+  "roles": [
+    "write"
+  ],
+  "grantedToV2": {
+    "siteGroup": {
+      "id": "10",
+      "displayName": "Internal Collaborators"
+    }
+  },
+  "grantedTo": {
+    "siteGroup": {
+      "id": "10",
+      "displayName": "Internal Collaborators"
+    }
+  }
+}
+```
+
+>>>>>>> 1bd9fe24d7ab5a79ec6322a0df4c009953aea321
 <!-- {
   "type": "#page.annotation",
   "section": "documentation",
