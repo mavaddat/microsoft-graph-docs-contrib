@@ -40,7 +40,7 @@ Inherits from [entity](../resources/entity.md).
 |referenceId|String|Refers to the ID representing the context for which data is being uploaded (i.e. Access Review instance ID)|
 |source|String| The source of the access data. This should be set to the customdataprovidedresource's name when creating the session.|
 |stats|[customDataProvidedResourceUploadStats](../resources/customdataprovidedresourceuploadstats.md)| Metadata about the files uploaded in this upload session thus far.|
-|status|customDataProvidedResourceUploadStatus| Status of the upload session. The possible values are: `active`, `complete`, `expired`, `unknownFutureValue`.|
+|status|customDataProvidedResourceUploadStatus| Status of the upload session. The possible values are: `active`, `complete`, `expired`, `unknownFutureValue`. Supports `$filter (`eq`).|
 |type|String| Schematized form of the expected CSV columns in the uploaded file. The only possible value currently is: `accessReviewDataUploadTriggerCallbackData`|
 
 ## Relationships
