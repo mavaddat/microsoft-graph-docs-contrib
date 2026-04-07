@@ -5,7 +5,7 @@ author: "jaylenemartinez0"
 ms.date: 04/01/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
-doc_type: resourcePageType
+doc_type: apiPageType
 ---
 
 # Delete customDataProvidedResourceUploadSession
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a customDataProvidedResourceUploadSession object.
+Delete a [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) object.
 
 ## Permissions
 

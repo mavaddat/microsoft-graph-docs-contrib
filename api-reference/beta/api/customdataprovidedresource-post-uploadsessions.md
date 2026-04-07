@@ -14,12 +14,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) object.
+Create a [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md) object. Only one upload session is allowed per reference instance (for example, access review instance) and [customDataProvidedResource](../resources/customdataprovidedresource.md) pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can [delete the active upload session](accesspackageresource-delete-uploadsessions.md) to create a new one.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
-
-> [!NOTE]
-> Only one upload session is allowed per reference instance (for example, access review instance) and [customDataProvidedResource](../resources/customdataprovidedresource.md) pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can [delete the active upload session](accesspackageresource-delete-uploadsessions.md) to create a new one.
 
 ## Permissions
 
