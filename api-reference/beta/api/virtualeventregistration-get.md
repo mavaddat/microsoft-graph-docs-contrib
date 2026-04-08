@@ -1,3 +1,4 @@
+
 ---
 title: "Get virtualEventRegistration"
 description: "Get the properties and relationships of a virtualEventRegistration object."
@@ -264,4 +265,3 @@ Content-Type: application/json
   ]
 }
 ```
-
