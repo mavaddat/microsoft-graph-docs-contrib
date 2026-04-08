@@ -70,7 +70,7 @@ Content-Type: application/json
 
 {
     "email": "admin@contoso.com",
-    "includedSources": "mailbox, site"
+    "includedSources": "mailbox"
 }
 ```
 
@@ -96,7 +96,7 @@ Content-Type: application/json
     "holdStatus": "applied",
     "id": "c25c3914-f9f7-43ee-9cba-a25377e0cec6",
     "email": "admin@contoso.com",
-    "includedSources": "mailbox,site",
+    "includedSources": "mailbox",
     "siteWebUrl": "",
     "createdBy": {
         "user": {
