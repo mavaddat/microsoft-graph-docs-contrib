@@ -1130,7 +1130,8 @@
       "complexTypes": [
         "fileStorageContainerTypeRegistrationSettings",
         "fileStorageContainerTypeAgentSettings",
-        "fileStorageContainerTypeSettings"
+        "fileStorageContainerTypeSettings",
+        "sharePointGroupIdentity"
       ],
       "childNodes": [
         {
@@ -3580,6 +3581,7 @@
             "chatMessage",
             "pinnedChatMessageInfo",
             "deletedChat",
+            "targetedChatMessage",
             "team",
             "teamworkTag",
             "teamworkTagMember"
