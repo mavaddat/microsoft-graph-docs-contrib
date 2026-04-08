@@ -12,10 +12,10 @@
         },
         {
           "Id": "8379ddd0-e101-4994-994f-36d29a65811d",
-          "ApiChange": "Resource",
-          "ChangedApiName": "alert",
+          "ApiChange": "Property",
+          "ChangedApiName": "category",
           "ChangeType": "Deprecation",
-          "Description": "Deprecated the [alert](https://learn.microsoft.com/en-us/graph/api/resources/security-alert?view=graph-rest-beta) resource.",
+          "Description": "Deprecated the **category** property on the [alert](https://learn.microsoft.com/en-us/graph/api/resources/security-alert?view=graph-rest-beta) resource. Use the **categories** property instead.",
           "Target": "alert"
         }
       ],
@@ -38,10 +38,10 @@
         },
         {
           "Id": "fecc7d38-924a-4137-a934-8d0d83035f20",
-          "ApiChange": "Resource",
-          "ChangedApiName": "alert",
+          "ApiChange": "Property",
+          "ChangedApiName": "category",
           "ChangeType": "Deprecation",
-          "Description": "Deprecated the [alert](https://learn.microsoft.com/en-us/graph/api/resources/security-alert?view=graph-rest-1.0) resource.",
+          "Description": "Deprecated the **category** property on the [alert](https://learn.microsoft.com/en-us/graph/api/resources/security-alert?view=graph-rest-1.0) resource. Use the **categories** property instead.",
           "Target": "alert"
         }
       ],

@@ -36,7 +36,7 @@ When a security provider detects a threat, it creates an alert in the system. Mi
 |alertPolicyId|String| The ID of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built-in policy.|
 |alertWebUrl|String|URL for the Microsoft 365 Defender portal alert page.|
 |assignedTo|String| Owner of the **alert**, or null if no owner is assigned.|
-|category (deprecated)|String| The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework. This property is in the process of being deprecated. Use the  **categories** property instead.|
+|category (deprecated)|String| The attack kill-chain category that the alert belongs to. Aligned with the MITRE ATT&CK framework. This property is in the process of being deprecated. Use the **categories** property instead.|
 |categories|String collection| The attack kill-chain categories that the alert belongs to. Aligned with the MITRE ATT&CK framework.|
 |classification|[microsoft.graph.security.alertClassification](#alertclassification-values)| Specifies whether the alert represents a true threat. The possible values are: `unknown`, `falsePositive`, `truePositive`, `informationalExpectedActivity`, `unknownFutureValue`.|
 |comments|[microsoft.graph.security.alertComment](security-alertComment.md) collection| Array of comments created by the Security Operations (SecOps) team during the alert management process.|
@@ -158,6 +158,7 @@ The following JSON representation shows the resource type.
   "alertWebUrl": "String",
   "assignedTo": "String",
   "category": "String",
+  "categories": ["String"],
   "classification": "String",
   "comments": [{"@odata.type": "microsoft.graph.security.alertComment"}],
   "createdDateTime": "String (timestamp)",
