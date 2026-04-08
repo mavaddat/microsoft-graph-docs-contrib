@@ -157,7 +157,7 @@ People data is stored as long as the end user is active and has a valid Microsof
 
 ### Data residency
 
-When you upload people data, each end user's data attributes are scoped to their Microsoft 365 user profile and stored in the user's Exchange Online mailbox. For information on data residency for Exchange Online, see [Data residency for Exchange Online - Microsoft 365 Enterprise](/microsoft-365/enterprise/m365-dr-workload-exo\&preserve-view=true).
+When you upload people data, each end user's data attributes are scoped to their Microsoft 365 user profile and stored in the user's Exchange Online mailbox. For information on data residency for Exchange Online, see [Data residency for Exchange Online - Microsoft 365 Enterprise](/microsoft-365/enterprise/m365-dr-workload-exo).
 
 ### Removing a connector
 
