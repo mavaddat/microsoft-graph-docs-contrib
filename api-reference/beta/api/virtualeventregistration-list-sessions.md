@@ -35,6 +35,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
+```http
+GET /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}/sessions
+```
 
 ## Request headers
 |Name|Description|
