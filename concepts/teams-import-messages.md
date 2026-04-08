@@ -37,6 +37,7 @@ To use the Teams messaging API to import messages, the following conditions must
 > [!NOTE]
 > - Only the application that called [startMigration](/graph/api/channel-startmigration) on the target channel or [startMigration](/graph/api/chat-startmigration) on the target chat can import messages into it. No other application can request this API on the channel or chat until the owning application completes the migration by calling [channel: completeMigration](/graph/api/channel-completemigration) or [chat: completeMigration](/graph/api/chat-completemigration).
 > - Some imported messages may not be visible in the Teams client until migration is completed by calling [completeMigration](/graph/api/channel-completemigration) on the target channel or [completeMigration](/graph/api/chat-completemigration) on the target chat.
+> - Reactions in imported messages may not display as expected. We recommend that you do not include reactions in messages that you import.
 
 ## Related content
 
