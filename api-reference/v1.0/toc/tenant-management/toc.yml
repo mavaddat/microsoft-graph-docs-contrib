@@ -4,8 +4,11 @@
 items:
 - name: Configuration management
   items:
+<<<<<<< HEAD
   - name: Overview
     href: ../../resources/unified-tenant-configuration-management-api-overview.md
+=======
+>>>>>>> 71f0e15f205 (head commits)
   - name: Configuration monitor
     items:
     - name: Configuration monitor

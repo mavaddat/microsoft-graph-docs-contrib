@@ -16,8 +16,11 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Create a new [governancePolicyTemplate](../resources/tenantgovernanceservices-governancepolicytemplate.md) that defines the configuration for establishing governance relationships, including role assignments and applications to provision.
 
+<<<<<<< HEAD
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -68,7 +71,10 @@ If successful, this method returns a `201 Created` response code and a [microsof
 ### Request
 
 The following example shows a request.
+<<<<<<< HEAD
 # [HTTP](#tab/http)
+=======
+>>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "create_governancepolicytemplate"
@@ -121,11 +127,14 @@ Content-Type: application/json
   }
 ```
 
+<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/create-governancepolicytemplate-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
+=======
+>>>>>>> 71f0e15f205 (head commits)
 
 ### Response
 

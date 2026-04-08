@@ -79,6 +79,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/places/ca147fcf-ae27-43bb-9d91-f11e626e58bf
 ```
 
+<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -91,10 +92,13 @@ GET https://graph.microsoft.com/v1.0/places/ca147fcf-ae27-43bb-9d91-f11e626e58bf
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/get-building-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+<<<<<<< HEAD
 # [PHP](#tab/php)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -107,6 +111,8 @@ GET https://graph.microsoft.com/v1.0/places/ca147fcf-ae27-43bb-9d91-f11e626e58bf
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ---
 
 #### Response
@@ -163,6 +169,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/places/49558ad4-6ede-46d7-8254-3ca9f90fc4e2
 ```
 
+<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -175,10 +182,13 @@ GET https://graph.microsoft.com/v1.0/places/49558ad4-6ede-46d7-8254-3ca9f90fc4e2
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/get-floor-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+<<<<<<< HEAD
 # [PHP](#tab/php)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -191,6 +201,8 @@ GET https://graph.microsoft.com/v1.0/places/49558ad4-6ede-46d7-8254-3ca9f90fc4e2
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ---
 
 #### Response
@@ -231,6 +243,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/places/ca163ae1-14a3-4e2a-8a97-5f82d672186f
 ```
 
+<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -243,10 +256,13 @@ GET https://graph.microsoft.com/v1.0/places/ca163ae1-14a3-4e2a-8a97-5f82d672186f
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/place-get-section-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+<<<<<<< HEAD
 # [PHP](#tab/php)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -259,6 +275,8 @@ GET https://graph.microsoft.com/v1.0/places/ca163ae1-14a3-4e2a-8a97-5f82d672186f
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ---
 
 #### Response
@@ -297,6 +315,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/places/df7dd4ef-04c4-41dd-816e-35475f4dd546
 ```
 
+<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -309,10 +328,13 @@ GET https://graph.microsoft.com/v1.0/places/df7dd4ef-04c4-41dd-816e-35475f4dd546
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/get-desk-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+<<<<<<< HEAD
 # [PHP](#tab/php)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -325,6 +347,8 @@ GET https://graph.microsoft.com/v1.0/places/df7dd4ef-04c4-41dd-816e-35475f4dd546
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ---
 
 #### Response
@@ -364,6 +388,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/places/0be387a4-d53b-410f-9daf-f4fa07e5b05a
 ```
 
+<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -376,10 +401,13 @@ GET https://graph.microsoft.com/v1.0/places/0be387a4-d53b-410f-9daf-f4fa07e5b05a
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/get-room-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+<<<<<<< HEAD
 # [PHP](#tab/php)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -392,6 +420,8 @@ GET https://graph.microsoft.com/v1.0/places/0be387a4-d53b-410f-9daf-f4fa07e5b05a
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ---
 
 #### Response
@@ -435,6 +465,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/places/ec10ce32-2065-40ba-aa2f-ecd5ea175420
 ```
 
+<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -447,10 +478,13 @@ GET https://graph.microsoft.com/v1.0/places/ec10ce32-2065-40ba-aa2f-ecd5ea175420
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/get-workspace-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+<<<<<<< HEAD
 # [PHP](#tab/php)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -463,6 +497,8 @@ GET https://graph.microsoft.com/v1.0/places/ec10ce32-2065-40ba-aa2f-ecd5ea175420
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ---
 
 #### Response
@@ -504,6 +540,7 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/places/dc404124-302a-92aa-f98d-7b4deb0c1705/microsoft.graph.roomList
 ```
 
+<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-roomlist-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -516,10 +553,13 @@ GET https://graph.microsoft.com/v1.0/places/dc404124-302a-92aa-f98d-7b4deb0c1705
 [!INCLUDE [sample-code](../includes/snippets/java/get-roomlist-java-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/get-roomlist-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+<<<<<<< HEAD
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/get-roomlist-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -532,6 +572,8 @@ GET https://graph.microsoft.com/v1.0/places/dc404124-302a-92aa-f98d-7b4deb0c1705
 [!INCLUDE [sample-code](../includes/snippets/python/get-roomlist-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ---
 
 #### Response

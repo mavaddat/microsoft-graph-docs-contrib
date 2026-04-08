@@ -16,13 +16,24 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 Get a list of available backup [snapshot](../resources/entrarecoveryservices-snapshot.md) objects for the tenant. Snapshots represent points in time to which the tenant can be restored.
 
+<<<<<<< HEAD
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
+<<<<<<< HEAD
 <!-- { "blockType": "permissions", "name": "entrarecoveryservices_recovery_list_snapshots" } -->
+=======
+<!-- {
+  "blockType": "permissions",
+  "name": "entrarecoveryservices-recovery-list-snapshots-permissions"
+}
+-->
+>>>>>>> 71f0e15f205 (head commits)
 [!INCLUDE [permissions-table](../includes/permissions/entrarecoveryservices-recovery-list-snapshots-permissions.md)]
 
 [!INCLUDE [rbac-entrarecoveryservices-apis-read](../includes/rbac-for-apis/rbac-entrarecoveryservices-apis-read.md)]
@@ -60,7 +71,10 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 
 The following example shows a request.
+<<<<<<< HEAD
 # [HTTP](#tab/http)
+=======
+>>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "list_snapshot"
@@ -70,12 +84,15 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/directory/recovery/snapshots
 ```
 
+<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/list-snapshot-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ### Response
 
 The following example shows the response.

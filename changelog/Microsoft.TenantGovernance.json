@@ -319,8 +319,13 @@
       "Cloud": "Prod",
       "Version": "beta",
       "CreatedDateTime": "2026-03-12T18:25:50.8142806Z",
+<<<<<<< HEAD
       "WorkloadArea": "Tenant management",
       "SubArea": "Governance"
+=======
+      "WorkloadArea": "Microsoft.TenantGovernance",
+      "SubArea": ""
+>>>>>>> 71f0e15f205 (head commits)
     },
     {
       "ChangeList": [
@@ -341,4 +346,8 @@
       "SubArea": "Governance"
     }
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 71f0e15f205 (head commits)

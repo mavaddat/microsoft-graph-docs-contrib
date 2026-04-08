@@ -16,8 +16,11 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Get a list of [relatedTenant](../resources/tenantgovernanceservices-relatedtenant.md) objects and their properties, including relationship metrics.
 
+<<<<<<< HEAD
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -60,7 +63,10 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 
 The following example shows a request.
+<<<<<<< HEAD
 # [HTTP](#tab/http)
+=======
+>>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "list_relatedtenants"
@@ -70,12 +76,15 @@ The following example shows a request.
 GET https://graph.microsoft.com/beta/directory/tenantGovernance/relatedTenants
 ```
 
+<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/list-relatedtenants-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ### Response
 
 The following example shows the response.

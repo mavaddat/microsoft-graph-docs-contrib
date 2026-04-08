@@ -16,8 +16,11 @@ Namespace: microsoft.graph.tenantGovernanceServices
 
 Update the **status** property of a [governanceRequest](../resources/tenantgovernanceservices-governancerequest.md) to accept or reject the governance request. Only the governed tenant can update the request status.
 
+<<<<<<< HEAD
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -64,7 +67,10 @@ If successful, this method returns a `200 OK` response code and an updated [micr
 ### Request
 
 The following example shows a request.
+<<<<<<< HEAD
 # [HTTP](#tab/http)
+=======
+>>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "update_governancerequest"
@@ -79,11 +85,14 @@ Content-Type: application/json
 }
 ```
 
+<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/update-governancerequest-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
+=======
+>>>>>>> 71f0e15f205 (head commits)
 
 ### Response
 

@@ -16,8 +16,11 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 Cancel a running [recoveryJobBase](../resources/entrarecoveryservices-recoveryjobbase.md) object (either a preview or recovery job). The job must be in a non-terminal state (`initialized`, `calculating`, `loadingData`, or `running`). After cancellation, the job status changes to `abandoned`.
 
+<<<<<<< HEAD
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -60,7 +63,10 @@ If successful, this method returns a `202 Accepted` response code with a `Locati
 ### Request
 
 The following example shows a request.
+<<<<<<< HEAD
 # [HTTP](#tab/http)
+=======
+>>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "recoveryjobbase_cancel"
@@ -70,12 +76,15 @@ The following example shows a request.
 POST https://graph.microsoft.com/beta/directory/recovery/jobs/3f4a6b60-7c1e-4e7c-9c7b-13f8d44b20c4/cancel
 ```
 
+<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/recoveryjobbase-cancel-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
+=======
+>>>>>>> 71f0e15f205 (head commits)
 ### Response
 
 The following example shows the response.

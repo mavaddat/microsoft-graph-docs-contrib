@@ -31,7 +31,10 @@ Inherits from [protectionUnitBase](../resources/protectionunitbase.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |backupRetentionPeriodInDays|Int32|The retention period of the backup, in days. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
+<<<<<<< HEAD
 |billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit for cost allocation. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
+=======
+>>>>>>> 71f0e15f205 (head commits)
 |createdBy|[identitySet](../resources/identityset.md)|The identity of person who created the protection unit. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |createdDateTime|DateTimeOffset|The time of creation of the protection unit. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
 |error|[publicError](../resources/publicerror.md)|Contains error details if enabling or disabling the protection unit fails. Inherited from [protectionUnitBase](../resources/protectionunitbase.md).|
@@ -65,7 +68,10 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.siteProtectionUnit",
   "backupRetentionPeriodInDays": "Int32",
+<<<<<<< HEAD
   "billingPolicyId": "String",
+=======
+>>>>>>> 71f0e15f205 (head commits)
   "createdBy": {"@odata.type": "microsoft.graph.identitySet"},
   "createdDateTime": "String (timestamp)",
   "error": {"@odata.type": "microsoft.graph.publicError"},

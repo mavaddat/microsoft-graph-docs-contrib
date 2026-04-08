@@ -2,7 +2,11 @@
 title: "agentIdentityBlueprint resource type"
 description: "An agent identity blueprint is a specialized application type that serves as the template for creating agent identity instances within the Microsoft Entra ID ecosystem."
 author: "zallison22"
+<<<<<<< HEAD
 ms.date: 03/31/2026
+=======
+ms.date: 02/26/2026
+>>>>>>> 71f0e15f205 (head commits)
 ms.localizationpriority: medium
 ms.subservice: "entra-agent-id"
 doc_type: resourcePageType
@@ -54,6 +58,13 @@ This resource is an open type that allows additional properties beyond those doc
 |**Verified publisher**| | |
 |[Set](../api/agentidentityblueprint-setverifiedpublisher.md)| None | Set the verified publisher of an application.|
 |[Unset](../api/agentidentityblueprint-unsetverifiedpublisher.md)| None | Unset the verified publisher of an application.|
+<<<<<<< HEAD
+=======
+|**Inheritable permissions**|||
+|[List inheritable permissions](../api/agentidentityblueprint-list-inheritablepermissions.md)|[inheritablePermission](../resources/inheritablepermission.md) collection|Get a list of the inheritablePermission objects and their properties.|
+|[Add inheritable permission](../api/agentidentityblueprint-post-inheritablepermissions.md)|[inheritablePermission](../resources/inheritablepermission.md)|Create a new inheritablePermission object.|
+|[Delete inheritable permission](../api/agentidentityblueprint-delete-inheritablepermissions.md)|None|Delete an inheritablePermission object.|
+>>>>>>> 71f0e15f205 (head commits)
 
 ## Properties
 
@@ -104,7 +115,11 @@ This resource is an open type that allows additional properties beyond those doc
 |sponsors|[directoryObject](../resources/directoryobject.md) collection|The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances. Required during the create operation.|
 
 ## JSON representation
+<<<<<<< HEAD
 The following JSON representation shows the resource type.
+=======
+The following JSON representation shows the resource type. Only a subset of all properties are returned by default. All other properties can only be retrieved using `$select`.
+>>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

@@ -104,6 +104,10 @@ Content-Type: application/json
 
 ---
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 71f0e15f205 (head commits)
 ### Response
 
 The following example shows the response.
