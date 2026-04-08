@@ -11,7 +11,7 @@ ms.subservice: developer
 
 # Use people data connectors with Microsoft 365 Copilot
 
-Use people data connectors to bring authoritative people information from external systems such as HR, recruiting, talent, and people platforms into Microsoft 365. These connectors help Microsoft 365 Copilot, Microsoft Search, [profile cards](/microsoft-365/admin/manage/customize-profile-cards?view=o365-worldwide), and Org Explorer show richer and more useful people context.
+Use people data connectors to bring authoritative people information from external systems such as HR, recruiting, talent, and people platforms into Microsoft 365. These connectors help Microsoft 365 Copilot, Microsoft Search, [profile cards](/microsoft-365/admin/manage/customize-profile-cards), and Org Explorer show richer and more useful people context.
 
 If your organization stores important people data outside Microsoft 365, you can use people data connectors to improve profile completeness, discoverability, and organizational context while keeping the source system authoritative. You can also control how overlapping profile values are composed when multiple systems contribute data.
 
@@ -23,7 +23,7 @@ Start with the path that best matches your scenario, then plan how profile data 
    - **Option A: Use a supported, prebuilt connector.** Browse the **Human resources & recruiting** category in the [Connectors gallery in the Microsoft 365 admin center](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add). For example, you can [use the BambooHR connector](/microsoft-365/copilot/connectors/bamboohr-connector).
    - **Option B: Build your own connector.** If you need to connect another HR, talent, or custom people system, [build your own people data connector](/microsoft-365/copilot/extensibility/build-connectors-with-people-data).
 2. If more than one source can provide the same profile property, [manage profile source precedence settings](/graph/profilepriority-configure-profilepropertysetting) so Microsoft 365 composes the final profile the way you expect.
-3. Review how connected data is shown to users by learning how to [customize profile cards](/microsoft-365/admin/manage/customize-profile-cards?view=o365-worldwide).
+3. Review how connected data is shown to users by learning how to [customize profile cards](/microsoft-365/admin/manage/customize-profile-cards).
 4. Before rollout, confirm governance, privacy, and admin requirements for your connector and pilot with a limited audience.
 
 ## Why use people data connectors?
@@ -46,7 +46,7 @@ Use the option that best matches your scenario.
 |Use a Microsoft-built connector for people data|Browse the [Connectors gallery in the Microsoft 365 admin center](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add) and check the **Human resources & recruiting** category. For example, you can use the [BambooHR Microsoft 365 Copilot connector](/microsoft-365/copilot/connectors/bamboohr-connector).|
 |Connect another HR, talent, or people system|[Build Microsoft 365 Copilot connectors for people data](/microsoft-365/copilot/extensibility/build-connectors-with-people-data)|
 |Control which source is authoritative for overlapping profile properties|[Manage profile source precedence settings](/graph/profilepriority-configure-profilepropertysetting)|
-|Control what users see on profile cards|[Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards?view=o365-worldwide)|
+|Control what users see on profile cards|[Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards)|
 
 ## How people data connectors work
 
@@ -61,7 +61,7 @@ The connector doesn't change the external source into a replacement for your sys
 
 A typical flow looks like this:
 
-![People Connectors data flow](../concepts/images/peopleconnectors/peopleconnectors-flow.svg)
+![People Connectors data flow](../concepts/images/people-connectors/people-connectors-flow.svg)
 
 ## Common scenarios
 
@@ -104,7 +104,7 @@ Source precedence is the key configuration step for scenarios where:
 - an external source also provides a value for that same property
 - you want to control which value appears in Microsoft 365 experiences
 
-You can also use [Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards?view=o365-worldwide) to control what profile information is presented to users.
+You can also use [Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards) to control what profile information is presented to users.
 
 ## Compliance, privacy, and data usage
 
@@ -157,7 +157,7 @@ People data is stored as long as the end user is active and has a valid Microsof
 
 ### Data residency
 
-When you upload people data, each end user's data attributes are scoped to their Microsoft 365 user profile and stored in the user's Exchange Online mailbox. For information on data residency for Exchange Online, see [Data residency for Exchange Online - Microsoft 365 Enterprise](/microsoft-365/enterprise/m365-dr-workload-exo?view=o365-worldwide\&preserve-view=true).
+When you upload people data, each end user's data attributes are scoped to their Microsoft 365 user profile and stored in the user's Exchange Online mailbox. For information on data residency for Exchange Online, see [Data residency for Exchange Online - Microsoft 365 Enterprise](/microsoft-365/enterprise/m365-dr-workload-exo\&preserve-view=true).
 
 ### Removing a connector
 
@@ -175,5 +175,5 @@ For more information, see [Manage your connectors](/microsoftsearch/manage-conne
 - [Set up the BambooHR Microsoft 365 Copilot connector](/microsoft-365/copilot/connectors/bamboohr-connector)
 - [Build Microsoft 365 Copilot connectors for people data](/microsoft-365/copilot/extensibility/build-connectors-with-people-data)
 - [Manage profile source precedence settings](/graph/profilepriority-configure-profilepropertysetting)
-- [Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards?view=o365-worldwide)
+- [Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards)
 - [Learn more about Microsoft 365 Copilot architecture](/copilot/microsoft-365/microsoft-365-copilot-architecture)
