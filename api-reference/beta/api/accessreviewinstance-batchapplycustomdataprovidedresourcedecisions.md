@@ -53,7 +53,7 @@ POST /identityGovernance/accessReviews/definitions/{accessReviewScheduleDefiniti
 
 In the request body, supply a JSON representation of the parameters.
 
-The following table lists the parameters that are required when you call this action.
+The following table lists the parameters when you call this action.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
