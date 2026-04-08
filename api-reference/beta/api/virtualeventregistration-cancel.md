@@ -30,9 +30,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-To cancel a registrant's registration record for a webinar.
-
-<!-- { "blockType": "ignored" } -->
+<!-- {
+  "blockType": "ignored"
+}
+-->
 ```http
 POST /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}/cancel
 ```

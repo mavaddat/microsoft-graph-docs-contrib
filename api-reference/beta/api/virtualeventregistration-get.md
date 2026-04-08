@@ -31,12 +31,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-To get a **virtualEventRegistration** for a webinar.
-
-<!-- { "blockType": "ignored" } -->
-```http
-GET /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}
-```
+<!-- {
+  "blockType": "ignored"
+}
+-->
 
 ## Optional query parameters
 

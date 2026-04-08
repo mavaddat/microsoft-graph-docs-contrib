@@ -31,12 +31,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
-To list sessions that a registrant registered for a webinar.
-
-<!-- { "blockType": "ignored" } -->
-```http
-GET /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}/sessions
-```
+<!-- {
+  "blockType": "ignored"
+}
+-->
 
 ## Request headers
 |Name|Description|
