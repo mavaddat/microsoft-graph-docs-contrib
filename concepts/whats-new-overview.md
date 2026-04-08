@@ -20,6 +20,12 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## April 2026: New and generally available
 
+### Teamwork and communications | Messaging
+
+- [Start](/graph/api/channel-startmigration) the channel migration of external messages by enabling migration mode in an existing channel.
+- [Start](/graph/api/chat-startmigration) the chat migration of external messages by enabling migration mode in an existing chat.
+- [Complete](/graph/api/chat-completemigration) the chat migration of external messages by removing migration mode from a chat.
+
 ### Backup storage
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
