@@ -83,10 +83,6 @@ GET https://graph.microsoft.com/beta/storage/fileStorage/containerTypes/de988700
 
 ---
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 71f0e15f205 (head commits)
 ### Response
 
 The following example shows the response.

@@ -59,10 +59,7 @@ If successful, this action returns a `200 OK` response code and a [configuration
 ### Request
 
 The following example shows a request that creates a snapshot with two Exchange resources.
-<<<<<<< HEAD
 # [HTTP](#tab/http)
-=======
->>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "configurationbaselinethis.createsnapshot"
@@ -82,15 +79,12 @@ Content-Type: application/json
 }
 ```
 
-<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/configurationbaselinethiscreatesnapshot-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
-=======
->>>>>>> 71f0e15f205 (head commits)
 ### Response
 
 The following example shows the response.

@@ -3685,12 +3685,8 @@
             "microsoft.graph.tenantGovernanceServices.relatedTenant",
             "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
             "microsoft.graph.tenantGovernanceServices.governanceInvitation",
-<<<<<<< HEAD
             "microsoft.graph.tenantGovernanceServices.governanceRequest",
             "microsoft.graph.tenantGovernanceServices.governanceRelationship"
-=======
-            "microsoft.graph.tenantGovernanceServices.governanceRequest"
->>>>>>> 71f0e15f205 (head commits)
           ]
         }
       ]

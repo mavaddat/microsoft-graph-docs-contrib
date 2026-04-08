@@ -74,7 +74,6 @@ items:
         href: ../../api/agentidentityblueprint-setverifiedpublisher.md
       - name: Unset
         href: ../../api/agentidentityblueprint-unsetverifiedpublisher.md
-<<<<<<< HEAD
     - name: Inheritable permission
       items:
       - name: Inheritable permission
@@ -88,15 +87,6 @@ items:
       - name: Update
         href: ../../api/inheritablepermission-update.md
       - name: Delete
-=======
-    - name: Inheritable permissions
-      items:
-      - name: List inheritable permissions
-        href: ../../api/agentidentityblueprint-list-inheritablepermissions.md
-      - name: Add inheritable permission
-        href: ../../api/agentidentityblueprint-post-inheritablepermissions.md
-      - name: Delete inheritable permission
->>>>>>> 71f0e15f205 (head commits)
         href: ../../api/agentidentityblueprint-delete-inheritablepermissions.md
   - name: Agent identity blueprint principal
     items:
@@ -178,11 +168,8 @@ items:
       href: ../../api/agentidentity-get.md
     - name: Update
       href: ../../api/agentidentity-update.md
-<<<<<<< HEAD
     - name: Delete
       href: ../../api/agentidentity-delete.md
-=======
->>>>>>> 71f0e15f205 (head commits)
     - name: App role assignments
       items:
       - name: List appRoleAssignedTo

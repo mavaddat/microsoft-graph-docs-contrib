@@ -54,10 +54,7 @@ If successful, this method returns a `204 No Content` response code.
 
 ### Request
 The following example shows a request.
-<<<<<<< HEAD
 # [HTTP](#tab/http)
-=======
->>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "retryupload_deviceimages_from_virtualendpoint"
@@ -68,15 +65,12 @@ The following example shows a request.
 POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/deviceImages/594e2046-2a4f-43d3-829c-be36bb984f11/retryUpload
 ```
 
-<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/retryupload-deviceimages-from-virtualendpoint-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
-=======
->>>>>>> 71f0e15f205 (head commits)
 ### Response
 The following example shows the response.
 <!-- {

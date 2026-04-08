@@ -3,7 +3,6 @@
     {
       "ChangeList": [
         {
-<<<<<<< HEAD
           "Id": "4e6379bf-f90c-46c4-a4f8-f5336fcd31f6",
           "ApiChange": "Relationship",
           "ChangedApiName": "targetedMessages",
@@ -54,8 +53,6 @@
     {
       "ChangeList": [
         {
-=======
->>>>>>> 71f0e15f205 (head commits)
           "Id": "4fbecd5b-cada-4fc2-9c1d-20e4f47a980b",
           "ApiChange": "Method",
           "ChangedApiName": "getAllRecordings",
@@ -82,7 +79,6 @@
     {
       "ChangeList": [
         {
-<<<<<<< HEAD
           "Id": "cf252805-cd5c-47e9-b6d7-b946f98d8bca",
           "ApiChange": "Parameter",
           "ChangedApiName": "model",
@@ -215,8 +211,6 @@
     {
       "ChangeList": [
         {
-=======
->>>>>>> 71f0e15f205 (head commits)
           "Id": "f8c2d4a1-9e7b-4f3c-a526-8d1e0b9f7c62",
           "ApiChange": "Method",
           "ChangedApiName": "replyWithQuote",

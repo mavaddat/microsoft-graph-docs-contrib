@@ -20,15 +20,7 @@ Create a new [recoveryJob](../resources/entrarecoveryservices-recoveryjob.md) ob
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<<<<<<< HEAD
 <!-- { "blockType": "permissions", "name": "entrarecoveryservices_snapshot_post_recoveryjobs" } -->
-=======
-<!-- {
-  "blockType": "permissions",
-  "name": "entrarecoveryservices-snapshot-post-recoveryjobs-permissions"
-}
--->
->>>>>>> 71f0e15f205 (head commits)
 [!INCLUDE [permissions-table](../includes/permissions/entrarecoveryservices-snapshot-post-recoveryjobs-permissions.md)]
 
 [!INCLUDE [rbac-entrarecoveryservices-apis-write](../includes/rbac-for-apis/rbac-entrarecoveryservices-apis-write.md)]
@@ -69,10 +61,7 @@ If successful, this method returns a `202 Accepted` response code with a `Locati
 The following example creates a recovery job for all changes.
 
 #### Request
-<<<<<<< HEAD
 # [HTTP](#tab/http)
-=======
->>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "create_recoveryjob_nofilter"
@@ -82,15 +71,12 @@ The following example creates a recovery job for all changes.
 POST https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=/recoveryJobs
 ```
 
-<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/create-recoveryjob-nofilter-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
-=======
->>>>>>> 71f0e15f205 (head commits)
 #### Response
 <!-- {
   "blockType": "response",
@@ -107,10 +93,7 @@ Location: https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0w
 The following example creates a recovery job for only user entity changes.
 
 #### Request
-<<<<<<< HEAD
 # [HTTP](#tab/http)
-=======
->>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "create_recoveryjob_entitytypes"
@@ -130,15 +113,12 @@ Content-Type: application/json
 }
 ```
 
-<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/create-recoveryjob-entitytypes-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
-=======
->>>>>>> 71f0e15f205 (head commits)
 #### Response
 <!-- {
   "blockType": "response",
@@ -155,10 +135,7 @@ Location: https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0w
 The following example creates a recovery job for specific users and groups.
 
 #### Request
-<<<<<<< HEAD
 # [HTTP](#tab/http)
-=======
->>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "create_recoveryjob_entityids"
@@ -191,15 +168,12 @@ Content-Type: application/json
 }
 ```
 
-<<<<<<< HEAD
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/create-recoveryjob-entityids-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
-=======
->>>>>>> 71f0e15f205 (head commits)
 #### Response
 <!-- {
   "blockType": "response",

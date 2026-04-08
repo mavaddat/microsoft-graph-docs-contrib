@@ -1814,10 +1814,7 @@ The following example shows a request.
 > [!NOTE]
 > - Highlighted code isn't supported when sending chat messages with code blocks
 
-<<<<<<< HEAD
 # [HTTP](#tab/http)
-=======
->>>>>>> 71f0e15f205 (head commits)
 <!-- {
   "blockType": "request",
   "name": "post_chatmessage_14",
@@ -1836,7 +1833,6 @@ Content-type: application/json
 }
 ```
 
-<<<<<<< HEAD
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/post-chatmessage-14-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -1867,8 +1863,6 @@ Content-type: application/json
 
 ---
 
-=======
->>>>>>> 71f0e15f205 (head commits)
 #### Response
 
 The following example shows the response.

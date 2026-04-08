@@ -122,7 +122,6 @@ items:
       href: ../../api/tenantgovernanceservices-governancerequest-get.md
     - name: Update
       href: ../../api/tenantgovernanceservices-governancerequest-update.md
-<<<<<<< HEAD
   - name: Governance relationship
     items:
     - name: Governance relationship
@@ -133,5 +132,3 @@ items:
       href: ../../api/tenantgovernanceservices-governancerelationship-get.md
     - name: Update
       href: ../../api/tenantgovernanceservices-governancerelationship-update.md
-=======
->>>>>>> 71f0e15f205 (head commits)

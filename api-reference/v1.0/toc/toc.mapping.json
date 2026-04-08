@@ -111,7 +111,6 @@
       "overview": "",
       "resources": [],
       "childNodes": [
-<<<<<<< HEAD
         {
           "name": "Agent identities",
           "resources": [
@@ -128,16 +127,6 @@
             }
           ]
         }
-=======
-          {
-            "name": "Agent identities",
-            "resources": [
-              "agentIdentityBlueprint",
-              "agentIdentityBlueprintPrincipal",
-              "agentIdentity"
-            ]
-          }
->>>>>>> 71f0e15f205 (head commits)
       ]
     },
     {
@@ -2274,10 +2263,7 @@
       "childNodes": [
         {
           "name": "Configuration management",
-<<<<<<< HEAD
           "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
-=======
->>>>>>> 71f0e15f205 (head commits)
           "resources": [
             "configurationMonitor",
             "configurationMonitoringResult",

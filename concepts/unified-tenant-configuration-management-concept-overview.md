@@ -40,9 +40,5 @@ Looking for the API reference for this service, see [Tenant Configuration Manage
 ## Next steps
 
 - To learn how to authenticate and set up the TCM service principal, see [Set up authentication for Tenant Configuration Management APIs](/graph/utcm-authentication-setup).
-<<<<<<< HEAD
 - To learn more about the Tenant Configuration Management APIs, see [Tenant Configuration Management APIs in Microsoft Graph](/graph/api/resources/unified-tenant-configuration-management-api-overview).
-=======
-- To learn more about the Tenant Configuration Management APIs, see [Tenant Configuration Management APIs in Microsoft Graph](/graph/api/resources/unified-tenant-configuration-management-api-overview?view=graph-rest-beta&preserve-view=true).
->>>>>>> 71f0e15f205 (head commits)
 - Try the Tenant Configuration Management APIs in [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
