@@ -20,11 +20,7 @@ Delete a specific [targeted message](../resources/targetedchatmessage.md) from a
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "chat-delete-targetedmessages-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "chat_delete_targetedmessages" } -->
 [!INCLUDE [permissions-table](../includes/permissions/chat-delete-targetedmessages-permissions.md)]
 
 ## HTTP request
@@ -65,6 +61,7 @@ If successful, this method returns a `204 No Content` response code.
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "delete_targetedchatmessage",
@@ -74,6 +71,12 @@ The following example shows a request.
 ``` http
 DELETE https://graph.microsoft.com/beta/users/f47b5f54-6968-4706-a522-31e842b12345/chats/19:eeaa4e946d674c4f8d4dded613780f45@thread.v2/targetedMessages/1580849738240
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/delete-targetedchatmessage-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
