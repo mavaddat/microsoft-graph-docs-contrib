@@ -73,8 +73,6 @@ Inherits from [virtualEvent](../resources/virtualevent.md).
 |:---|:---|:---|
 | presenters | [virtualEventPresenter](../resources/virtualeventpresenter.md) collection | Presenters' information of the town hall. Inherited from [virtualEvent](../resources/virtualevent.md).|
 | sessions | [virtualEventSession](../resources/virtualeventsession.md)  collection | Sessions of the town hall. Inherited from [virtualEvent](../resources/virtualevent.md). |
-| registrationConfiguration | [virtualEventRegistrationConfiguration](../resources/virtualeventregistrationconfiguration.md) | Registration configuration of the townhall. |
-| registrations | [virtualEventRegistration](../resources/virtualeventregistration.md) collection | Registration records of the townhall. |
 
 ## JSON representation
 

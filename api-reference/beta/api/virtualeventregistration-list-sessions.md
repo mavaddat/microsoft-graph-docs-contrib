@@ -1,6 +1,6 @@
 ---
 title: "List sessions for a virtual event registration"
-description: "Get a list of sessions that a registrant registered for a webinar or town hall."
+description: "Get a list of sessions that a registrant registered for in a webinar."
 author: "halleclottey-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
@@ -14,7 +14,11 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of [sessions](../resources/virtualeventsession.md) that a registrant registered for a [webinar](../resources/virtualeventwebinar.md) or [town hall](../resources/virtualeventtownhall.md).
+Get a list of [sessions](../resources/virtualeventsession.md) that a registrant registered for in a [webinar](../resources/virtualeventwebinar.md).
+
+> [!NOTE]
+> 
+> Currently, this API only supports single session webinars and returns a single session. 
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -32,13 +36,6 @@ To list sessions that a registrant registered for a webinar.
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}/sessions
-```
-
-To list sessions that a registrant registered for a town hall.
-
-<!-- { "blockType": "ignored" } -->
-```http
-GET /solutions/virtualEvents/townmhalls/{townhallId}/registrations/{registrationId}/sessions
 ```
 
 ## Request headers

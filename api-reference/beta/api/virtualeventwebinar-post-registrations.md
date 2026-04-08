@@ -1,6 +1,6 @@
 ---
 title: "Create virtualEventRegistration"
-description: "Create a registration record for a virtual event registrant."
+description: "Create a registration record for a webinar registrant."
 author: "halleclottey-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a [registration record](../resources/virtualeventregistration.md) for a registrant of a [webinar](../resources/virtualeventwebinar.md) or a [townhall](../resources/virtualeventtownhall.md). This method registers the person for the webinar or townhall. 
+Create a [registration record](../resources/virtualeventregistration.md) for a registrant of a [webinar](../resources/virtualeventwebinar.md). This method registers the person for the webinar. 
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -32,7 +32,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ```http
 POST /solutions/virtualEvents/webinars/{webinarId}/registrations
-POST /solutions/virtualEvents/townhalls/{townhallId}/registrations
 ```
 
 ## Request headers
@@ -77,7 +76,7 @@ If successful, this method returns one of the following results:
 Use delegated permission to create a registration record for a person who has a [Microsoft Entra ID](/entra/fundamentals/whatis) as a way to register a Microsoft Entra user to a webinar.
 
 #### Request
-The following example shows a request for a webinar.
+The following example shows a request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -313,150 +312,4 @@ The following example shows the response.
 -->
 ```http
 HTTP/1.1 204 No Content
-```
-
-
-### Example 3: Creating registration record for a townhall
-
-Create a registration record for a person who has a [Microsoft Entra ID](/entra/fundamentals/whatis) as a way to register a Microsoft Entra user to a townhall.
-
-#### Request
-The following example shows a request for a townhall.
-
-# [HTTP](#tab/http)
-<!-- {
-  "blockType": "request",
-  "name": "create-virtualeventregistration-delegated-townhall",
-  "@odata.type": "microsoft.graph.virtualEventRegistration"
-}
--->
-```http
-POST https://graph.microsoft.com/beta/solutions/virtualEvents/townhall/e8bf1376-0522-4d84-8f3d-76e935448205@a1a56d21-a8a6-4a6b-97f8-ced53d30f143/registrations
-Content-Type: application/json
-
-{
-  "externalRegistrationInformation": {
-    "referrer": "Fabrikam",
-    "registrationId": "myExternalRegistrationId"
-  },
-  "preferredTimezone":"Pacific Standard Time",
-  "preferredLanguage":"en-us",
-  "registrationQuestionAnswers": [
-    {
-      "questionId": "95320781-96b3-4b8f-8cf8-e6561d23447a",
-      "value": null,
-      "booleanValue": null,
-      "multiChoiceValues": [
-        "Seattle"
-      ]
-    },
-    {
-      "questionId": "4577afdb-8bee-4219-b482-04b52c6b855c",
-      "value": null,
-      "booleanValue": true,
-      "multiChoiceValues": []
-    },
-    {
-      "questionId": "80fefcf1-caf7-4cd3-b8d7-159e17c47f20",
-      "value": null,
-      "booleanValue": null,
-      "multiChoiceValues": [
-        "Cancun",
-        "Hoboken",
-        "Beijing"
-      ]
-    }
-  ]
-}
-```
-
-# [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/create-virtualeventregistration-delegated-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/create-virtualeventregistration-delegated-go-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/create-virtualeventregistration-delegated-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-virtualeventregistration-delegated-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/create-virtualeventregistration-delegated-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/create-virtualeventregistration-delegated-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/create-virtualeventregistration-delegated-python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
-#### Response
-The following example shows the response.
->**Note:** The response object shown here might be shortened for readability.
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.virtualEventRegistration"
-}
--->
-```http
-HTTP/1.1 201 Created
-Content-Type: application/json
-
-{
-  "@odata.type": "#microsoft.graph.virtualEventRegistration",
-  "id": "41a3c9e0-1c20-4de3-ac3e-bdda88886221",
-  "userId": "String",
-  "firstName": "John",
-  "lastName": "Vazquez",
-  "email": "John@contoso.com",
-  "externalRegistrationInformation": {
-    "referrer": "Fabrikam",
-    "registrationId": "myExternalRegistrationId"
-  },
-  "status": "registered",
-  "registrationDateTime": "2025-01-17T22:04:17",
-  "cancelationDateTime": null,
-  "preferredTimezone":"Pacific Standard Time",
-  "preferredLanguage":"en-us",
-  "registrationQuestionAnswers": [
-    {
-      "questionId": "95320781-96b3-4b8f-8cf8-e6561d23447a",
-      "displayName": "Which city do you currently work in?",
-      "value": null,
-      "booleanValue": null,
-      "multiChoiceValues": [
-        "Seattle"
-      ]
-    },
-    {
-      "questionId": "4577afdb-8bee-4219-b482-04b52c6b855c",
-      "displayName": "Do you live in the same city where you work?",
-      "value": null,
-      "booleanValue": true,
-      "multiChoiceValues": []
-    },
-    {
-      "questionId": "80fefcf1-caf7-4cd3-b8d7-159e17c47f20",
-      "displayName": "Which cities have you worked in?",
-      "value": null,
-      "booleanValue": null,
-      "multiChoiceValues": [
-        "Cancun",
-        "Hoboken",
-        "Beijing"
-      ]
-    }
-  ]
-}
 ```

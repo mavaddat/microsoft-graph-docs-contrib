@@ -1,6 +1,6 @@
 ---
 title: "List questions"
-description: "Get a list of all registration questions for a virtual event."
+description: "Get a list of all registration questions for a webinar."
 author: "halleclottey-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
@@ -11,7 +11,7 @@ ms.date: 08/13/2024
 # List questions
 Namespace: microsoft.graph
 
-Get a list of all [registration](../resources/virtualeventregistration.md) questions for a [webinar](../resources/virtualeventwebinar.md) or a [townhall](../resources/virtualeventtownhall.md).
+Get a list of all [registration](../resources/virtualeventregistration.md) questions for a [webinar](../resources/virtualeventwebinar.md).
 
 The list can include either [predefined registration questions](../resources/virtualeventregistrationpredefinedquestion.md) or [custom registration questions](../resources/virtualeventregistrationcustomquestion.md).
 
@@ -36,8 +36,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 ```http
 GET /solutions/virtualEvents/webinars/{webinarId}/registrationConfiguration/questions
-
-GET /solutions/virtualEvents/townhalls/{townhallId}/registrationConfiguration/questions
 ```
 
 ## Optional query parameters

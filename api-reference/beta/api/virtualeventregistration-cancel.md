@@ -1,6 +1,6 @@
 ---
 title: "virtualEventRegistration: cancel"
-description: "Cancel a registrant's registration record for a webinar or town hall."
+description: "Cancel a registrant's registration record for a webinar."
 author: "halleclottey-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Cancel a registrant's [registration record](../resources/virtualeventregistration.md) for a [webinar](../resources/virtualeventwebinar.md) or [town hall](../resources/virtualeventtownhall.md). 
+Cancel a registrant's [registration record](../resources/virtualeventregistration.md) for a [webinar](../resources/virtualeventwebinar.md). 
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -35,13 +35,6 @@ To cancel a registrant's registration record for a webinar.
 <!-- { "blockType": "ignored" } -->
 ```http
 POST /solutions/virtualEvents/webinars/{webinarId}/registrations/{registrationId}/cancel
-```
-
-To cancel a registrant's registration record for a town hall. 
-
-<!-- { "blockType": "ignored" } -->
-```http
-POST /solutions/virtualEvents/townhalls/{townhallId}/registrations/{registrationId}/cancel
 ```
 
 ## Request headers

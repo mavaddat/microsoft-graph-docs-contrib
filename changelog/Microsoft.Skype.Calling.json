@@ -3,32 +3,6 @@
     {
       "ChangeList": [
         {
-          "Id": "2fbaf69e-0bf5-400b-b8cd-d492dde26991",
-          "ApiChange": "Relationship",
-          "ChangedApiName": "registrationConfiguration",
-          "ChangeType": "Addition",
-          "Description": "Added the **registrationConfiguration** relationship to the [virtualEventTownhall](https://learn.microsoft.com/en-us/graph/api/resources/virtualEventTownhall?view=graph-rest-beta) resource.",
-          "Target": "virtualEventTownhall"
-        },
-        {
-          "Id": "2fbaf69e-0bf5-400b-b8cd-d492dde26991",
-          "ApiChange": "Relationship",
-          "ChangedApiName": "registrations",
-          "ChangeType": "Addition",
-          "Description": "Added the **registrations** relationship to the [virtualEventTownhall](https://learn.microsoft.com/en-us/graph/api/resources/virtualEventTownhall?view=graph-rest-beta) resource.",
-          "Target": "virtualEventTownhall"
-        }
-      ],
-      "Id": "2fbaf69e-0bf5-400b-b8cd-d492dde26991",
-      "Cloud": "Review",
-      "Version": "beta",
-      "CreatedDateTime": "2026-01-15T00:25:14.4855516Z",
-      "WorkloadArea": "Cloud communications",
-      "SubArea": "Call"
-    },
-    {
-      "ChangeList": [
-        {
           "Id": "94772378-a35f-46e1-a514-13e6a88982a0",
           "ApiChange": "Property",
           "ChangedApiName": "meetingSpokenLanguageTag",
