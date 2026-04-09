@@ -32,6 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 > [!NOTE]
 > This API isn't supported for Microsoft SharePoint Embedded containers.
+
 ## HTTP request
 
 <!-- {

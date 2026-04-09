@@ -32,6 +32,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "driveitem_assignsensitivitylabel" } -->
 [!INCLUDE [permissions-table](../includes/permissions/driveitem-assignsensitivitylabel-permissions.md)]
 
+> [!NOTE]
+> This API isn't supported for Microsoft SharePoint Embedded containers.
+
 ## HTTP request
 
 <!-- {
