@@ -62,7 +62,7 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 ## Examples
 
-### Example 1: Remove the retention label from a driveItem
+## Example 1: Remove the retention label from a driveItem
 
 The following example shows how to remove the retention label from a **driveItem** object.
 
@@ -77,9 +77,10 @@ The following example shows a request.
 }
 -->
 
+
 ```http
-DELETE https://graph.microsoft.com/beta/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabel
-```
+DELETE https://graph.microsoft.com/v1.0/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo7
+
 ---
 
 #### Response
@@ -110,8 +111,9 @@ The following example shows a request.
 }
 -->
 
+
 ```http
-DELETE https://graph.microsoft.com/beta/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabel
+DELETE https://graph.microsoft.com/v1.0/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabelE https://graph.microsoft.com/beta/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabel
 ```
 ---
 
