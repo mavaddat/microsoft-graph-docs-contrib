@@ -163,7 +163,7 @@ When you upload people data, each end user's data attributes are scoped to their
 
 To delete a Copilot connector for people data, an admin should follow these steps:
 
-1. Go to the Microsoft 365 Admin Center and navigate to the connectors section.
+1. Go to the Microsoft 365 admin center and navigate to the connectors section.
 2. Locate the connector you want to delete.
 3. Use the `delete` operation available for both Microsoft-built and partner-built connectors.
 
