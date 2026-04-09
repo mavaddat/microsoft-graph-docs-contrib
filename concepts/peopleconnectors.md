@@ -28,7 +28,7 @@ Start with the path that best matches your scenario, then plan how profile data 
 
 ## Why use people data connectors?
 
-People data connectors help you extend Microsoft 365 with authoritative people information that may not exist in Microsoft Entra ID or other native Microsoft 365 profile sources.
+People data connectors help you extend Microsoft 365 with authoritative people information that might not exist in Microsoft Entra ID or other Microsoft 365 profile sources.
 
 People data connectors create value in several ways:
 
