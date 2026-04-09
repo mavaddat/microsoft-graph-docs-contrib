@@ -83,7 +83,7 @@ Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.sharePointGroupMember",
-  "id": "aTowIy5mfG1lbWJlcnNoaXB8YWRtaW5AYTgzMGVkYWQ5MDUwODQ5c3Bncm91cHRlc3QyLm9ubWljcm9zb2Z0LmNvbQ7",
+  "id": "aTowIy5mfG1lbWJlcnNoaXB8YWRtaW5AYTgzMGVkYWQ5MDUwODQ5c3Bncm91cHRlc3QyLm9ubWljcm9zb2Z0LmNvbQ",
   "identity": {
     "@odata.type": "microsoft.graph.sharePointIdentitySet",
     "user": {
