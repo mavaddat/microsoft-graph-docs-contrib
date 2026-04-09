@@ -124,7 +124,7 @@ People data imported via Copilot connectors is considered customer content and i
 
 ### Editing incorrect profile information
 
-To update incorrect information on a profile card, you need to submit a request to your administrator.
+To update incorrect information on a profile card, submit a request to your administrator.
 
 1. [Export your profile data](https://support.microsoft.com/office/export-data-from-your-profile-card-d809f83f-c077-4a95-9b6c-4f093305163d) from your profile card. This export includes the source ID of the information you wish to correct.
 2. Contact your tenant administrator with these details to identify the appropriate connector within the Microsoft 365 admin center by matching it to the connector ID of the configured connector.
