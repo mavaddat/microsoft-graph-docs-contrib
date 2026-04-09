@@ -128,7 +128,7 @@ To update incorrect information on a profile card, submit a request to your admi
 
 1. [Export your profile data](https://support.microsoft.com/office/export-data-from-your-profile-card-d809f83f-c077-4a95-9b6c-4f093305163d) from your profile card. This export includes the source ID of the information you wish to correct.
 2. Contact your tenant administrator with these details to identify the appropriate connector within the Microsoft 365 admin center by matching it to the connector ID of the configured connector.
-3. The administrator can update the information directly in the third-party source system.
+3. The administrator can update the information directly in the source system.
 4. Once the connector performs its next scheduled crawl, the updated data is reflected on the user's profile card.
 
 ### Deleting profile information
