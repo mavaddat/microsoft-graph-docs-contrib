@@ -20,8 +20,8 @@ If your organization stores important people data outside Microsoft 365, you can
 Start with the path that best matches your scenario, then plan how profile data is composed and governed in Microsoft 365.
 
 1. Choose how you want to connect your people data:
-   - **Option A: Use a supported, prebuilt connector.** Browse the **Human resources & recruiting** category in the [Connectors gallery in the Microsoft 365 admin center](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add). For example, you can [use the BambooHR connector](/microsoft-365/copilot/connectors/bamboohr-connector).
-   - **Option B: Build your own connector.** If you need to connect another HR, talent, or custom people system, [build your own people data connector](/microsoft-365/copilot/extensibility/build-connectors-with-people-data).
+   - **Use a supported, prebuilt connector.** Learn mode about the **Human resources & recruiting** [connector gallery](/microsoft-365/copilot/connectors/connectors-gallery-microsoft#human-resources-and-recruiting). For example, you can [use the BambooHR connector](/microsoft-365/copilot/connectors/bamboohr-connector).
+   - **Build your own connector.** If you need to connect another HR, talent, or custom people system, [build your own people data connector](/microsoft-365/copilot/extensibility/build-connectors-with-people-data).
 2. If more than one source can provide the same profile property, [manage profile source precedence settings](/graph/profilepriority-configure-profilepropertysetting) so Microsoft 365 composes the final profile the way you expect.
 3. Review how connected data is shown to users by learning how to [customize profile cards](/microsoft-365/admin/manage/customize-profile-cards).
 4. Before rollout, confirm governance, privacy, and admin requirements for your connector and pilot with a limited audience.
@@ -67,10 +67,10 @@ A typical flow looks like this:
 
 People data connectors are most useful when you want to:
 
-- bring HR or recruiting data into Microsoft 365 so profiles are more complete
-- help users discover people, skills, and organizational context more easily
-- improve people-related grounding in Microsoft 365 Copilot prompts and responses
-- control how profile cards, Search, and Org Explorer use connected people data
+- Bring HR or recruiting data into Microsoft 365 so profiles are more complete
+- Help users discover people, skills, and organizational context more easily
+- Improve people-related grounding in Microsoft 365 Copilot prompts and responses
+- Control how profile cards, Search, and Org Explorer use connected people data
 
 > [!NOTE]
 > The exact experience depends on the data you connect, how you map it, and how your tenant is configured.
@@ -87,10 +87,10 @@ If you need to connect another HR, talent, or custom people system, you can buil
 
 Use [Build Microsoft 365 Copilot connectors for people data](/microsoft-365/copilot/extensibility/build-connectors-with-people-data) to learn how to:
 
-- connect external systems that aren't covered by a prebuilt connector
-- map supported people data into Microsoft 365
-- design a connector for your organization's profile and people-data requirements
-- build with full flexibility for how and when data is ingested
+- Connect external systems that aren't covered by a prebuilt connector
+- Map supported people data into Microsoft 365
+- Design a connector for your organization's profile and people-data requirements
+- Build with full flexibility for how and when data is ingested
 
 ## Configure profile composition and precedence
 
@@ -129,7 +129,7 @@ To update incorrect information on a profile card, submit a request to your admi
 1. [Export your profile data](https://support.microsoft.com/office/export-data-from-your-profile-card-d809f83f-c077-4a95-9b6c-4f093305163d) from your profile card. This export includes the source ID of the information you wish to correct.
 2. Contact your tenant administrator with these details to identify the appropriate connector within the Microsoft 365 admin center by matching it to the connector ID of the configured connector.
 3. The administrator can update the information directly in the source system.
-4. Once the connector performs its next scheduled crawl, the updated data is reflected on the user's profile card.
+4. After the connector performs its next scheduled crawl, the updated data is reflected on the user's profile card. 
 
 ### Deleting profile information
 
@@ -147,7 +147,7 @@ For more on DSRs, see Microsoft's guidance on [GDPR and CCPA compliance](https:/
 Microsoft is committed to ensuring the highest standards of security by only supporting the most secure authentication protocols, such as OpenID Connect (OIDC) and OAuth 2.0. These protocols are integral to our security strategy, providing robust and reliable authentication mechanisms that safeguard user identities and data. To set up people connectors, OAuth 2.0 authentication is required.
 
 > [!IMPORTANT]
-> Only Global Admins and Copilot Admins can configure people connectors.
+> Only users with Global Administrator and Copilot Administrator roles can configure people connectors.
 
 ## Data refresh and accuracy
 
@@ -157,22 +157,21 @@ People data is stored as long as the end user is active and has a valid Microsof
 
 ### Data residency
 
-When you upload people data, each end user's data attributes are scoped to their Microsoft 365 user profile and stored in the user's Exchange Online mailbox. For information on data residency for Exchange Online, see [Data residency for Exchange Online - Microsoft 365 Enterprise](/microsoft-365/enterprise/m365-dr-workload-exo).
+When you upload people data, each user's data attributes are scoped to their Microsoft 365 user profile and stored in the user's Exchange Online mailbox. For information about data residency for Exchange Online, see [Data residency for Exchange Online - Microsoft 365 Enterprise](/microsoft-365/enterprise/m365-dr-workload-exo).
 
 ### Removing a connector
 
 To delete a Copilot connector for people data, an admin should follow these steps:
 
 1. Go to the Microsoft 365 admin center and navigate to the connectors section.
-2. Locate the connector you want to delete.
-3. Use the `delete` operation available for both Microsoft-built and partner-built connectors.
+2. On the **Your Connections** tab, select the connector you want to delete.  
+3. Select the **Delete** option.  
 
 For more information, see [Manage connectors](/microsoft-365/copilot/connectors/manage-connector).
 
 ## Related content
 
 - [Browse Microsoft-built connectors in the Connectors gallery](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
-- [Set up the BambooHR Microsoft 365 Copilot connector](/microsoft-365/copilot/connectors/bamboohr-connector)
 - [Build Microsoft 365 Copilot connectors for people data](/microsoft-365/copilot/extensibility/build-connectors-with-people-data)
 - [Manage profile source precedence settings](/graph/profilepriority-configure-profilepropertysetting)
 - [Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards)
