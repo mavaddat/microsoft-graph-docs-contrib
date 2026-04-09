@@ -51,8 +51,7 @@ The following JSON representation shows the resource type.
   "group": {"@odata.type": "microsoft.graph.identity"},
   "sharePointGroup": {"@odata.type": "microsoft.graph.sharePointGroupIdentity"},
   "siteUser": {"@odata.type": "microsoft.graph.sharePointIdentity"},
-  "siteGroup":{"@odata.type": "microsoft.graph.sharePointIdentity"},
-  "sharePointGroup": {"@odata.type": "microsoft.graph.sharePointGroupIdentity"}
+  "siteGroup":{"@odata.type": "microsoft.graph.sharePointIdentity"}
 }
 ```
 
