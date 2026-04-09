@@ -169,7 +169,7 @@ To delete a Copilot connector for people data, an admin should follow these step
 
 For more information, see [Manage connectors](/microsoft-365/copilot/connectors/manage-connector).
 
-## Next steps
+## Related content
 
 - [Browse Microsoft-built connectors in the Connectors gallery](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
 - [Set up the BambooHR Microsoft 365 Copilot connector](/microsoft-365/copilot/connectors/bamboohr-connector)
