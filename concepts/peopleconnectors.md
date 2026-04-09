@@ -110,7 +110,7 @@ You can also use [Customize profile cards](/microsoft-365/admin/manage/customize
 
 ### Data visibility
 
-By default, people data provided via a Copilot connector is visible to all users in the tenant. This connector data is stored in the user's Microsoft 365 profile. Data is retained as long as the user is active and licensed, unless deleted by an admin or the user via a Data Subject Request (DSR). DSRs allow users to [export their profile data](https://support.microsoft.com/office/export-data-from-your-profile-card-d809f83f-c077-4a95-9b6c-4f093305163d?preview=true).
+By default, people data provided via a Copilot connector is visible to all users in the tenant. This connector data is stored in the user's Microsoft 365 profile. Data is retained as long as the user is active and licensed, unless deleted by an admin or the user via a Data Subject Request (DSR). DSRs allow users to [export their profile data](https://support.microsoft.com/office/export-data-from-your-profile-card-d809f83f-c077-4a95-9b6c-4f093305163d).
 
 #### Information barriers
 
