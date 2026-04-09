@@ -26,8 +26,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+<!-- { "blockType": "ignored" } -->
 ```http
-DELETE /storage/fileStorage/containers/{containerId}/sharePointGroups/{sharePointGroupId}/members/{groupMemberId}
+DELETE /storage/fileStorage/containers/{fileStorageContainerId}/sharePointGroups/{sharePointGroupId}/members/{sharePointGroupMemberId}
 ```
 
 ## Request headers
