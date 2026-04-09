@@ -176,4 +176,4 @@ For more information, see [Manage your connectors](/microsoftsearch/manage-conne
 - [Build Microsoft 365 Copilot connectors for people data](/microsoft-365/copilot/extensibility/build-connectors-with-people-data)
 - [Manage profile source precedence settings](/graph/profilepriority-configure-profilepropertysetting)
 - [Customize profile cards](/microsoft-365/admin/manage/customize-profile-cards)
-- [Learn more about Microsoft 365 Copilot architecture](/copilot/microsoft-365/microsoft-365-copilot-architecture)
+- [Microsoft 365 Copilot architecture](/microsoft-365/copilot/microsoft-365-copilot-architecture)
