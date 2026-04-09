@@ -922,6 +922,8 @@ items:
         href: ../../resources/socialidentitysource.md
       - name: Subject set
         href: ../../resources/subjectset.md
+      - name: Target agent identity sponsors or owners
+        href: ../../resources/targetagentidentitysponsorsorowners.md
       - name: Target application owners
         href: ../../resources/targetapplicationowners.md
       - name: Target manager
@@ -1495,6 +1497,8 @@ items:
       href: ../../resources/ontokenissuancestartlistener.md
     - name: On user create start listener
       href: ../../resources/onusercreatestartlistener.md
+    - name: On password submit listener
+      href: ../../resources/onpasswordsubmitlistener.md
   - name: Authentication methods
     items:
     - name: Overview
@@ -1519,9 +1523,9 @@ items:
         href: ../../api/emailauthenticationmethod-update.md
       - name: Delete
         href: ../../api/emailauthenticationmethod-delete.md
-    - name: External authentication method
+    - name: External MFA
       items:
-      - name: External authentication method
+      - name: External MFA
         href: ../../resources/externalauthenticationmethod.md
       - name: List
         href: ../../api/authentication-list-externalauthenticationmethods.md
@@ -1679,9 +1683,9 @@ items:
         href: ../../api/emailauthenticationmethodconfiguration-update.md
       - name: Delete
         href: ../../api/emailauthenticationmethodconfiguration-delete.md
-    - name: External authentication method
+    - name: External MFA
       items:
-      - name: External authentication method
+      - name: External MFA
         href: ../../resources/externalauthenticationmethodconfiguration.md
       - name: Get
         href: ../../api/externalauthenticationmethodconfiguration-get.md
@@ -1987,6 +1991,8 @@ items:
       href: ../../resources/onotpsendcustomextension.md
     - name: On token issuance start custom extension
       href: ../../resources/ontokenissuancestartcustomextension.md
+    - name: On password submit custom extension
+      href: ../../resources/onpasswordsubmitcustomextension.md
   - name: Data policy operation
     items:
     - name: Data policy operation
