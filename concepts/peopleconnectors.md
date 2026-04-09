@@ -167,7 +167,7 @@ To delete a Copilot connector for people data, an admin should follow these step
 2. Locate the connector you want to delete.
 3. Use the `delete` operation available for both Microsoft-built and partner-built connectors.
 
-For more information, see [Manage your connectors](/microsoftsearch/manage-connector).
+For more information, see [Manage connectors](/microsoft-365/copilot/connectors/manage-connector).
 
 ## Next steps
 
