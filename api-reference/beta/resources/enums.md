@@ -973,9 +973,9 @@ Namespace: microsoft.graph
 
 | Member |
 | ---- |
-| no |
-| yes |
 | default |
+| notVisible |
+| visible |
 | unknownFutureValue |
 
 ### protocolType values
