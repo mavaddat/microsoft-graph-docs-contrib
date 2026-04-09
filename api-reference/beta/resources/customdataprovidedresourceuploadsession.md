@@ -31,16 +31,17 @@ Inherits from [entity](../resources/entity.md).
 |[Delete](../api/accesspackageresource-delete-uploadsessions.md)|None|Delete a customDataProvidedResourceUploadSession object.|
 
 ## Properties
-|Property|Type| Description |
-|:---|:---|:------------|
-|createdDateTime|DateTimeOffset| DateTime when the upload session was created. Read-only. Supports `$orderby`.|
+
+|Property|Type|Description|
+|:---|:---|:---|
+|createdDateTime|DateTimeOffset|DateTime when the upload session was created. Read-only. Supports `$orderby`.|
 |data|[customExtensionData](../resources/customextensiondata.md)|An object containing the context for which this data is being uploaded. Currently the only possible concrete type is [accessReviewResourceDataUploadSessionContextData](../resources/accessreviewresourcedatauploadsessioncontextdata.md)|
 |id|String| Unique identifier of the upload session. Read-only.|
 |isUploadDone|Boolean| Indicates if all the necessary files have been uploaded to this session.|
 |referenceId|String|The ID of the context for which data is being uploaded, for example, the Access Review instance ID. Supports `$filter (`eq`)`.|
 |source|String| The source of the access data. This should be set to the customdataprovidedresource's name when creating the session.|
 |stats|[customDataProvidedResourceUploadStats](../resources/customdataprovidedresourceuploadstats.md)| Metadata about the files uploaded in this upload session thus far.|
-|status|customDataProvidedResourceUploadStatus| Status of the upload session. The possible values are: `active`, `complete`, `expired`, `unknownFutureValue`. Supports `$filter (`eq`).|
+|status|customDataProvidedResourceUploadStatus| Status of the upload session. The possible values are: `active`, `complete`, `expired`, `unknownFutureValue`. Supports `$filter (`eq`)`.|
 |type|String| Schematized form of the expected CSV columns in the uploaded file. The only possible value currently is: `accessReviewDataUploadTriggerCallbackData`|
 
 ## Relationships
