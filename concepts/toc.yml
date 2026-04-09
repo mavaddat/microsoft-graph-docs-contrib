@@ -247,6 +247,8 @@ items:
       href: mcp-server/overview.md
     - name: Get started
       href: mcp-server/get-started.md
+    - name: Use from Copilot Studio
+      href: mcp-server/use-enterprise-mcp-server-copilot-studio.md
     - name: Sample prompts
       href: mcp-server/mcp-server-sample-prompts.md
     - name: Explore the repository
@@ -350,6 +352,8 @@ items:
       href: backup-storage-concept-overview.md
     - name: Managing information barriers for file storage containers
       href: information-barrier-for-file-storage-containers.md
+    - name: Filtering mailbox artifacts with granular search queries
+      href: backup-restore-granular-search.md
     - name: Error codes
       href: backup-storage-error-codes.md
   - name: Calendar
@@ -743,7 +747,7 @@ items:
       href: social-intel-concept-overview.md
     - name: Microsoft 365 Copilot connectors for people data
       href: peopleconnectors.md
-    - name: Configure profile source precedence (preview)
+    - name: Configure profile source precedence
       href: profilepriority-configure-profilepropertysetting.md
     - name: Customize item insights privacy
       href: insights-customize-item-insights-privacy.md
@@ -751,7 +755,7 @@ items:
       href: insights-customize-people-insights-privacy.md
     - name: Customize the profile card
       href: add-properties-profilecard.md
-    - name: Customize profile source (preview)
+    - name: Customize profile source
       href: profilesource-configure-settings.md
     - name: Enable or disable pronouns
       href: pronouns-configure-pronouns-availability.md
@@ -968,7 +972,7 @@ items:
       href: teams-licenses.md
     - name: Implementation differences in national clouds
       href: teamwork-national-cloud-differences.md
-  - name: Tenant administration (preview)
+  - name: Tenant management
     items:
     - name: Configuration management
       items:
@@ -1111,6 +1115,8 @@ items:
     - name: Overview
       href: change-notifications-overview.md
       displayName: change notifications, rich notifications, basic notifications, subscriptions, webhooks, Azure Event Hub, Azure Event Grid
+    - name: Rich notifications
+      href: change-notifications-with-resource-data.md
     - name: Notifications delivery channels
       items:
       - name: Notifications through webhooks
@@ -1121,8 +1127,6 @@ items:
         href: /azure/event-grid/subscribe-to-graph-api-events?context=graph%2Fcontext
     - name: Lifecycle notifications for subscriptions
       href: change-notifications-lifecycle-events.md
-    - name: Rich notifications
-      href: change-notifications-with-resource-data.md
     - name: Notifications for cloud printing
       href: universal-print-webhook-notifications.md
     - name: Notifications for Microsoft Teams resources
@@ -1178,7 +1182,7 @@ items:
     href: best-practices-concept.md
     displayName: Microsoft Graph, Best practices for working with Microsoft Graph
   - name: Known issues
-    href: https://developer.microsoft.com/graph/known-issues
+    href: known-issues.md
     displayName: Microsoft Graph, Known issues with Microsoft Graph
   - name: Errors
     href: errors.md
