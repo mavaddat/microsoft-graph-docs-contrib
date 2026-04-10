@@ -127,6 +127,10 @@ Added the **createdByAppId** property to the [application](/graph/api/resources/
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
 
+### Security | Microsoft Defender for Identity
+
+Added the **sensorTypes** property to the [sensorCandidate](../api-reference/beta/resources/security-sensorcandidate.md) resource type.
+
 ### Teamwork and communications | Calls and online meetings
 
 Added [ad hoc call](/graph/api/resources/adhoccall) support to change notifications for transcripts and recordings in Microsoft Teams. You can now subscribe to the following resources to get notified when a transcript or recording is available for an ad hoc call:
