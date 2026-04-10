@@ -1,8 +1,8 @@
 ---
 title: "customDataProvidedResourceFile resource type"
 description: "Represents a file that is uploaded in a customDataProvidedResourceUploadSession"
-author: "pratima-cloudknox"
-ms.date: 10/29/2025
+author: "jaylenemartinez0"
+ms.date: 04/10/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
@@ -14,28 +14,37 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a file that is uploaded in a [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md).
+Represents a file uploaded as part of a custom data provided resource upload session for Access Reviews with bring-your-own-data (BYOD) capabilities. This resource contains metadata about uploaded CSV files including the file name, size, and upload timestamp.
 
+Files are uploaded via the [uploadFile](../api/customdataprovidedresourceuploadsession-uploadfile.md) action on an upload session and are accessible by expanding the **files** navigation property on a [customDataProvidedResourceUploadSession](customdataprovidedresourceuploadsession.md).
 
 ## Methods
+
+This resource doesn't have direct methods. Access files through the **files** navigation property on [customDataProvidedResourceUploadSession](customdataprovidedresourceuploadsession.md) using `$expand=files`.
+
 |Method|Return type|Description|
 |:---|:---|:---|
+|[List files](../api/customdataprovidedresourceuploadsession-get.md)|[customDataProvidedResourceFile](../resources/customdataprovidedresourcefile.md) collection|Get the files associated with an upload session by using `$expand=files`.|
 
 ## Properties
+
 |Property|Type|Description|
 |:---|:---|:---|
-|name|String|Name of the file that was uploaded.|
-|size|Int64|Size of the uploaded file in bytes.|
-|uploadedDateTime|DateTimeOffset|Time at which the file was uploaded.|
+|id|String|Unique identifier for the file. Read-only.|
+|name|String|Name of the uploaded file, including the file extension. Required.|
+|size|Int64|Size of the file in bytes. Read-only.|
+|uploadedDateTime|DateTimeOffset|Timestamp when the file was uploaded. Read-only.|
 
 ## Relationships
+
 None.
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "keyProperty": "name",
+  "keyProperty": "id",
   "@odata.type": "microsoft.graph.customDataProvidedResourceFile",
   "openType": false
 }
@@ -43,9 +52,40 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.customDataProvidedResourceFile",
-  "name": "String (identifier)",
-  "size": "Integer",
+  "id": "String (identifier)",
+  "name": "String",
+  "size": "Int64",
   "uploadedDateTime": "String (timestamp)"
 }
 ```
 
+## Query capabilities
+
+The **files** collection supports filtering and sorting when accessed via `$expand` on an upload session.
+
+### Supported $filter operators
+
+|Property|Operators|Example|
+|:---|:---|:---|
+|name|`eq`, `ne`|`$expand=files($filter=name eq 'building-a-access.csv')`|
+|size|`eq`, `ne`, `gt`, `ge`, `lt`, `le`|`$expand=files($filter=size gt 1000000)`|
+|uploadedDateTime|`eq`, `ne`, `gt`, `ge`, `lt`, `le`|`$expand=files($filter=uploadedDateTime ge 2026-01-01T00:00:00Z)`|
+
+### Supported $orderby properties
+
+- `name`
+- `size`
+- `uploadedDateTime`
+
+### Examples
+
+```http
+# Get upload session with files sorted by uploadedDateTime
+GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($orderby=uploadedDateTime desc)
+
+# Get upload session with files filtered by size (larger than 1MB)
+GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($filter=size gt 1000000)
+
+# Get upload session with files sorted by name
+GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($orderby=name asc)
+```

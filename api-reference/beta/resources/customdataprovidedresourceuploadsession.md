@@ -45,7 +45,10 @@ Inherits from [entity](../resources/entity.md).
 |type|String| Schematized form of the expected CSV columns in the uploaded file. The only possible value currently is: `accessReviewDataUploadTriggerCallbackData`|
 
 ## Relationships
-None.
+
+|Relationship|Type|Description|
+|:---|:---|:---|
+|files|[customDataProvidedResourceFile](../resources/customdataprovidedresourcefile.md) collection|The files uploaded during this upload session. Supports `$expand`, `$filter`, and `$orderby`.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
@@ -72,7 +75,11 @@ The following JSON representation shows the resource type.
   "referenceId": "String",
   "data": {
     "@odata.type": "microsoft.graph.customExtensionData"
-  }
+  },
+  "files": [
+    {
+      "@odata.type": "microsoft.graph.customDataProvidedResourceFile"
+    }
+  ]
 }
 ```
-

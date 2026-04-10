@@ -67,6 +67,14 @@
           "ChangeType": "Addition",
           "Description": "Added the **referenceId** property to the [customDataProvidedResourceUploadSession](https://learn.microsoft.com/en-us/graph/api/resources/customdataprovidedresourceuploadsession?view=graph-rest-beta) resource.",
           "Target": "customDataProvidedResourceUploadSession"
+        },
+        {
+          "Id": "4dde66d4-12cd-41fb-8d1f-c08fb9aac323",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "files",
+          "ChangeType": "Addition",
+          "Description": "Added the **files** relationship to the [customDataProvidedResourceUploadSession](https://learn.microsoft.com/en-us/graph/api/resources/customDataProvidedResourceUploadSession?view=graph-rest-beta) resource.",
+          "Target": "customDataProvidedResourceUploadSession"
         }
       ],
       "Id": "b662cbca-b2f7-4eff-8724-40ef66005822",
