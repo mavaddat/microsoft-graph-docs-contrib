@@ -133,7 +133,7 @@ Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailA
 
 ### Security | Microsoft Defender for Identity
 
-Added the **sensorTypes** property to the [sensorCandidate](../api-reference/beta/resources/security-sensorcandidate.md) resource type.
+Added the **sensorTypes** property to the [sensorCandidate](/graph/api/resources/security-sensorcandidate) resource type.
 
 ### Teamwork and communications | Calls and online meetings
 
