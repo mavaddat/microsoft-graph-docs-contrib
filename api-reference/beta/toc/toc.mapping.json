@@ -2520,6 +2520,16 @@
       ]
     },
     {
+      "name": "Notes (preview)",
+      "keywords": [
+        "Outlook",
+        "Notes"
+      ],
+      "resources": [
+        "note"
+      ]
+    },
+    {
       "name": "Notifications (deprecated)",
       "overview": "../../resources/notifications-api-overview.md",
       "resources": [

@@ -49,6 +49,10 @@ Removed the `model` parameters and payment-model guidance from Microsoft Teams e
 - [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 
 
+### Calendar, mail, personal contacts
+
+- Added the **bodyPreview** property to the [note](/graph/api/resources/note?view=graph-rest-beta&preserve-view=true) resource type.
+
 ### Teamwork and communications | Messaging
 
 Use the targeted messages APIs to manage messages in Microsoft Teams that are visible only to specified recipients within group chats or channels:
