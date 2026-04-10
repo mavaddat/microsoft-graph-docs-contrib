@@ -16,15 +16,13 @@ Namespace: microsoft.graph.entraRecoveryServices
 
 Read the properties and relationships of a [snapshot](../resources/entrarecoveryservices-snapshot.md) object.
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "entrarecoveryservices-snapshot-get-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "entrarecoveryservices_snapshot_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/entrarecoveryservices-snapshot-get-permissions.md)]
 
 [!INCLUDE [rbac-entrarecoveryservices-apis-read](../includes/rbac-for-apis/rbac-entrarecoveryservices-apis-read.md)]
@@ -62,6 +60,7 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_snapshot"
@@ -70,6 +69,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/directory/recovery/snapshots/MjAyNC0wOC0yNlQwMjozMDowMFo=
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-snapshot-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
