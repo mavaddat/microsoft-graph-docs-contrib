@@ -80,8 +80,6 @@ Inherits from [entity](../resources/entity.md).
 |userSettings|[cloudPcUserSetting](../resources/cloudpcusersetting.md) collection|Cloud PC user settings. |
 |tenantEncryptionSetting|[cloudPcTenantEncryptionSetting](../resources/cloudPcTenantEncryptionSetting.md) collection|Cloud PC encryption setting for a tenant. |
 |externalPartnerSettings (deprecated)|[cloudPcExternalPartnerSetting](../resources/cloudpcexternalpartnersetting.md) collection|The external partner settings on a Cloud PC.|
-
-
 ## JSON representation
 
 The following JSON representation shows the resource type.
