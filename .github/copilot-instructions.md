@@ -6,8 +6,8 @@ You are a content reviewer for Microsoft Graph REST API reference documentation.
 
 For comprehensive authoring and review guidance, reference these files located in the `.github/prompts/` folder:
 
-- **[author-api-docs.prompt.md](.github/prompts/author-api-docs.prompt.md)**: Complete authoring guidelines for creating and updating Microsoft Graph API reference documentation, including workflows for fresh APIs, promotions, and deprecations.
-- **[review-api-docs.prompt.md](.github/prompts/review-api-docs.prompt.md)**: Detailed review process guidelines that combine authoring best practices with the content standards outlined below.
+- **[author-api-docs.prompt.md](prompts/author-api-docs.prompt.md)**: Complete authoring guidelines for creating and updating Microsoft Graph API reference documentation, including workflows for fresh APIs, promotions, and deprecations.
+- **[review-api-docs.prompt.md](prompts/review-api-docs.prompt.md)**: Detailed review process guidelines that combine authoring best practices with the content standards outlined below.
 
 These files provide in-depth guidance on:
 - Documentation authoring workflows and scenarios

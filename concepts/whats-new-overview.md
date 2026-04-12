@@ -20,6 +20,66 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## April 2026: New and generally available
 
+### Identity and access | Governance
+
+Added the `approverRemove` member to the **accessPackageRequestType** enumeration. For more information, see [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest).
+
+## February 2026: New and generally available
+
+### Search
+
+- Added the **Principal** and **principalCollection** data types to the [externalConnection](graph/api/resources/resources/externalconnectors-principal) to specify as the data type people property related items in the external connection.
+
+- Added the **description** property to the [externalConnection properties](graph/api/resources/externalconnectors-property) to be add description to the schema properties in the external connection.
+
+- Added more tags or semantic labels that can be added to **labels** [externalConnection property](graph/api/resources/externalconnectors-property) in the external connection schema. Labels help Microsoft 365 Copilot understand the semantics of the data in the connection and provide more relevant results. 
+
+- Added the **contentCategory** property to the [externalConnection](graph/api/resources/resources/externalconnectors-externalconnection) to specify the domain category of the content associated with the external connection for improved relevance and ranking.
+
+### Files
+
+Updated the admin consent requirement for the following delegated permissions related to SharePoint Embedded file storage container management:
+- The `FileStorageContainerType.Manage.All` delegated permission no longer requires admin consent.
+- The `FileStorageContainerTypeReg.Manage.All` delegated permission no longer requires admin consent.
+
+### Groups
+
+- Added the **resourceBehaviorOptions** and **resourceProvisioningOptions** properties to the [group](/graph/api/resources/group) resource. These properties enable you to specify group behaviors and associated resources for a Microsoft 365 group.
+- Added a known issue: For soft deleted security groups, the **securityEnabled** property returns `false` instead of `true`. To identify the group type, use the **groupTypes** property where `["Unified"]` indicates a Microsoft 365 group and an empty array (`[]`) indicates a security group. For more information, see [Get deleted item](/graph/api/directory-deleteditems-get) and [List deleted items](/graph/api/directory-deleteditems-list).
+
+### Identity and access | Identity and sign-in
+
+- QR code authentication method in Microsoft Entra ID lets you manage the QR code authentication method for users, and how they can sign in with a QR code and PIN. The following key resources support this capability:
+   - The [qrCodePinAuthenticationMethod](/graph/api/resources/qrcodepinauthenticationmethod) resource and related APIs for managing QR code PIN authentication methods for users. This single-factor authentication method is designed for frontline workers and combines a QR code with a PIN. The following related resources were also added: [qrCode](/graph/api/resources/qrcode), [qrPin](/graph/api/resources/qrpin), and [qrCodeImageDetails](/graph/api/resources/qrcodeimagedetails).
+   - The [qrCodePinAuthenticationMethodConfiguration](/graph/api/resources/qrcodepinauthenticationmethodconfiguration) resource for managing the QR code authentication method policy for a tenant.
+   - Updated the [authenticationMethodModes](/graph/api/resources/authenticationmethodmodes) and [baseAuthenticationMethod](/graph/api/resources/baseauthenticationmethod) enumerations to add the `qrCodePin` member to support this new authentication method.
+
+### Message trace
+
+Use the message trace API to track the flow of email messages through your Exchange Online organization. For more information, see [exchangeMessageTrace](/graph/api/resources/exchangemessagetrace).
+
+### Security | Data security and compliance
+
+Added the `restrictWebGrounding` member to the [dlpAction](/graph/api/resources/enums-security#dlpaction-values) enumeration to support restricting web grounding actions in data loss prevention policies in Microsoft Purview.
+
+### Security | Threat protection
+
+Updated the admin consent requirement for the following delegated permissions related to threat submissions:
+- The `ThreatSubmission.Read` delegated permission now requires admin consent.
+- The `ThreatSubmission.ReadWrite` delegated permission now requires admin consent.
+
+### Teamwork and communications | Administration
+
+- [Get the policy ID](/graph/api/teamsadministration-teamspolicyassignment-getpolicyid) for a given policy name and policy type within Teams administration.
+- [Assign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-assign) to a user using the user ID, policy type, and policy ID.
+- [Unassign a Teams policy](/graph/api/teamsadministration-teamspolicyuserassignment-unassign) from a user using the user ID and policy type.
+
+## February 2026: New in preview only
+
+### Applications
+
+Use the **requiredResourceAccess** property on [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint?view=graph-rest-beta&preserve-view=true) to specify the Microsoft Graph permissions (delegated scopes and app roles) required by the agent.
+
 ### Backup storage
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
@@ -42,6 +102,10 @@ Manage Teams apps at the channel level within a team using the following APIs:
 Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
 
 ## April 2026: New in preview only
+
+### Applications
+
+Added the **deprecationDate** property to the [applicationTemplate](/graph/api/resources/applicationtemplate?view=graph-rest-beta&preserve-view=true) resource to indicate when an application will be removed from the Microsoft Entra application gallery.
 
 ### Backup storage
 
@@ -130,6 +194,10 @@ Added the **createdByAppId** property to the [application](/graph/api/resources/
 ### Personal contacts
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
+
+### Security | Microsoft Defender for Identity
+
+Added the **sensorTypes** property to the [sensorCandidate](../api-reference/beta/resources/security-sensorcandidate.md) resource type.
 
 ### Teamwork and communications | Calls and online meetings
 
@@ -231,6 +299,11 @@ Introduced the tenant governance API set to enable organizations to manage and g
 - Establishing governance relationships between a governing tenant and a governed tenant
 - Tracking established relationships 
 - Configure relationship policies
+
+### Security | Microsoft Defender for Identities
+
+- Added migration guidance for Microsoft Defender for Endpoint (MDE) advanced hunting APIs to help organizations transition from the retired APIs that were available through the `https://api.securitycenter.microsoft.com` endpoint to the advanced hunting APIs available in Microsoft Graph. For more information, see [Migrate from the older APIs](/graph/api/resources/security-api-overview#migrate-from-older-apis).
+- The Defender for Identity sensor management APIs let you discover eligible servers, control automatic onboarding, activate or deactivate the unified agent, and manage required auditing settings during activation—all through a single management interface.
 
 For more information, see [Overview of Tenant Governance APIs](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
