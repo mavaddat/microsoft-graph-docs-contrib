@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 Get an [enabled app](../resources/teamsapp.md) in the specified [channel](../resources/channel.md) within a [team](../resources/team.md).
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
