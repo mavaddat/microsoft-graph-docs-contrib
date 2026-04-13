@@ -61,7 +61,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and collection of [Channel](../resources/channel.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [Channel](../resources/channel.md) objects in the response body. The response may include an `@odata.nextLink` property with a URL for retrieving the next page of results. For details about how to page through results, see [Paging Microsoft Graph data in your app](/graph/paging).
 
 ## Examples
 
