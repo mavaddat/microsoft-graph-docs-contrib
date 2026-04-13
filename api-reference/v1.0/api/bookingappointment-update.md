@@ -117,8 +117,7 @@ Content-type: application/json
 
 The following example shows the response.
 <!-- {
-  "blockType": "response",
-  "truncated": true
+  "blockType": "response"
 } -->
 ```http
 HTTP/1.1 204 No Content
