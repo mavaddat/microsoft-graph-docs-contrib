@@ -112,7 +112,10 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 - [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 - [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 
-<<<<<<< notes-api-beta-docs
+### Identity and access | Identity and sign-in
+
+Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
+
 ### Notes
 
 Introduced the Notes API that enables users to create and manage simple notes in their Notes folder. Notes support text content with optional inline image attachments, and are suitable for quick capture scenarios. Use the [note](/graph/api/resources/note?view=graph-rest-beta&preserve-view=true) resource and the following APIs:
@@ -125,11 +128,6 @@ Introduced the Notes API that enables users to create and manage simple notes in
 - [List attachments](/graph/api/note-list-attachments?view=graph-rest-beta&preserve-view=true) for a note.
 - [Create an attachment](/graph/api/note-post-attachments?view=graph-rest-beta&preserve-view=true) on a note.
 - [Delete an attachment](/graph/api/note-delete-attachments?view=graph-rest-beta&preserve-view=true) from a note.
-=======
-### Identity and access | Identity and sign-in
-
-Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
->>>>>>> main
 
 ### Teamwork and communications | Messaging
 
