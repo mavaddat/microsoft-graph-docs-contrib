@@ -22,7 +22,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Teamwork and communications | Copilot AI Insights Change Notifications API
 
-Added new Copilot Graph Change Notifications API for Meetings AI Insights. This new capability allows developers to subscribe to notifications for the generation of meeting AI summaries and receive a Graph notification as soon as the summaries are fully generated and available. For more information, see [AI Insights Change Notifications](https://learn.microsoft.com/microsoft-365/copilot/extensibility/api/ai-services/change-notifications/aiinsights-changenotifications).
+Added new Copilot Graph Change Notifications API for Meetings AI Insights. This new capability allows developers to subscribe to notifications for the generation of meeting AI summaries and receive a Graph notification as soon as the summaries are fully generated and available. For more information, see [AI Insights Change Notifications](/microsoft-365/copilot/extensibility/api/ai-services/change-notifications/aiinsights-changenotifications).
 
 ### Identity and access | Governance
 
