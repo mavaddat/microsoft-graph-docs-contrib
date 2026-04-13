@@ -5,7 +5,7 @@ ms.reviewer: ric.lewis
 ms.subservice: change-notifications
 ms.topic: include
 ms.localizationpriority: high
-ms.date: 04/02/2026
+ms.date: 04/13/2026
 ---
 
 <!-- markdownlint-disable MD041-->
@@ -57,7 +57,7 @@ An app can subscribe to changes on the Microsoft Graph resources listed in the t
 Some of these resources support rich notifications (notifications with resource data). For their details, see [Set up change notifications that include resource data](/graph/change-notifications-with-resource-data#supported-resources).
 
 [aiInteraction]: /graph/api/resources/aiinteraction
-[aiInsights]: /graph/api/resources/aiinsights
+[aiInsights]: /microsoft-365/copilot/extensibility/copilot-apis-overview
 [channel]: /graph/api/resources/channel
 [chat]: /graph/api/resources/chat
 [contact]: /graph/api/resources/contact

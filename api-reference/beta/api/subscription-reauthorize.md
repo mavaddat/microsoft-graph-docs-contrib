@@ -5,7 +5,7 @@ author: "jessieli-ad"
 ms.localizationpriority: medium
 ms.subservice: change-notifications
 doc_type: apiPageType
-ms.date: 04/02/2026
+ms.date: 04/13/2026
 ---
 
 # subscription: reauthorize
@@ -28,8 +28,8 @@ Depending on the resource and the permission type (delegated or application) req
 |:-----|:-----|:-----|:-----|
 |[aiInteraction](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/resources/aiinteraction)  <br /> `copilot/users/{userId}/interactionHistory/getAllEnterpriseInteractions`  <br /> Copilot AI interactions that a particular user is part of. | AiEnterpriseInteraction.Read  | Not supported.  | AiEnterpriseInteraction.Read.All, AiEnterpriseInteraction.Read.User  |
 |[aiInteraction](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/resources/aiinteraction)  <br /> `copilot/interactionHistory/getAllEnterpriseInteractions`  <br /> Copilot AI interactions in an organization. | Not supported.  | Not supported.  | AiEnterpriseInteraction.Read.All  |
-|[aiInsights](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/resources/aiinsights)  <br /> `/copilot/users/{userId}/onlineMeetings/getAllAiInsights` <br /> Copilot AI insights from meetings that a particular user is part of. | OnlineMeetingAiInsight.Read.All    | Not supported.  | OnlineMeetingAiInsight.Read.All |
-|[aiInsights](/microsoft-365-copilot/extensibility/api/ai-services/interaction-export/resources/aiinsights)  <br/> `/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights` <br/> Copilot AI insights for a particular meeting. | OnlineMeetingAiInsight.Read.All    | Not supported.  | OnlineMeetingAiInsight.Read.All |
+|[aiInsights](/microsoft-365-copilot/extensibility/copilot-apis-overview) <br /> `/copilot/users/{userId}/onlineMeetings/getAllAiInsights` <br /> Copilot AI insights from meetings that a particular user is part of. | OnlineMeetingAiInsight.Read.All    | Not supported.  | OnlineMeetingAiInsight.Read.All |
+|[aiInsights](/microsoft-365-copilot/extensibility/copilot-apis-overview)  <br/> `/copilot/users/{userId}/onlineMeetings/{onlineMeetingId}/aiInsights` <br/> Copilot AI insights for a particular meeting. | OnlineMeetingAiInsight.Read.All    | Not supported.  | OnlineMeetingAiInsight.Read.All |
 |[approvals](../resources/approvalitem.md) | Not supported. | Not supported. | ApprovalSolution.ReadWrite.All  |
 |[callRecord](../resources/callrecords-callrecord.md) | Not supported. | Not supported. | CallRecords.Read.All  |
 |[callRecording](../resources/callrecording.md) <br /> `communications/onlineMeetings/getAllRecordings` <br /> Any recording becomes available in the tenant. | Not supported. | Not supported. | OnlineMeetingRecording.Read.All |
