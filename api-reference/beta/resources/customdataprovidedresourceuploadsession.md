@@ -48,7 +48,7 @@ Inherits from [entity](../resources/entity.md).
 
 |Relationship|Type|Description|
 |:---|:---|:---|
-|files|[customDataProvidedResourceFile](../resources/customdataprovidedresourcefile.md) collection|The files uploaded during this upload session. Supports `$expand`, `$filter`, and `$orderby`.|
+|files|[customDataProvidedResourceFile](../resources/customdataprovidedresourcefile.md) collection|The files uploaded during this upload session. Supports `$expand` and `$expand` with nested `$filter` and `$orderby`.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
