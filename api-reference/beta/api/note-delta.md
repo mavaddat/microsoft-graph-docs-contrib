@@ -1,6 +1,6 @@
 ---
-title: "note: delta"
-description: "Get a set of notes that have been added, updated, or deleted since the last delta query."
+title: "Note: delta"
+description: "Get a set of notes that were added, updated, or deleted since the last delta query."
 author: "rajeshvulla"
 ms.date: 04/07/2026
 ms.localizationpriority: medium
@@ -8,13 +8,13 @@ ms.subservice: "outlook"
 doc_type: apiPageType
 ---
 
-# note: delta
+# Note: delta
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a set of [note](../resources/note.md) objects that have been added, updated, or deleted in the user's Notes folder since the last delta query. A **delta** function call for notes is similar to a GET request, except that by appropriately applying [state tokens](/graph/delta-query-overview) in one or more of these calls, you can query for incremental changes in the notes.
+Get a set of [note](../resources/note.md) objects that were added, updated, or deleted in the user's Notes folder since the last delta query. A **delta** function call for notes is similar to a GET request, except that by appropriately applying [state tokens](/graph/delta-query-overview) in one or more of these calls, you can query for incremental changes in the notes.
 
 ## Permissions
 
