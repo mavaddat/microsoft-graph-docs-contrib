@@ -83,12 +83,15 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 ## Examples
 
-### Request
+### Example 1: Change the date of service
+
+#### Request
 
 The following example changes the date of service by a day.
 
 <!-- {
   "blockType": "request",
+  "name": "update_bookingappointment_date",
   "sampleKeys": ["AAMkADKnAAA=", "Contosolunchdelivery@contoso.com"]
 }-->
 ```http
@@ -110,7 +113,59 @@ Content-type: application/json
 }
 ```
 
-### Response
+#### Response
+
+The following example shows the response.
+<!-- {
+  "blockType": "response"
+} -->
+```http
+HTTP/1.1 204 No Content
+```
+
+### Example 2: Update the customers for an appointment
+
+The following example updates the customers array for a multi-customer appointment. The **customers** property is a full replacement array — include all customers that should be part of the appointment, not just the new ones.
+
+> [!NOTE]
+> - Each object in the **customers** array must include `@odata.type` set to `#microsoft.graph.bookingCustomerInformation`. Omitting this property causes the request to fail.
+> - Include customer details such as **name**, **emailAddress**, and **phone** for each entry. The API does not automatically populate these fields from the **customerId** — if omitted, they will be blank on the appointment.
+> - The **customerId** must reference a valid [bookingCustomer](../resources/bookingcustomer.md) that exists in the Booking Calendar. If it doesn't exist, create one using the [Create bookingCustomer](bookingbusiness-post-customers.md) operation.
+> - The associated [bookingService](../resources/bookingservice.md) must have **maximumAttendeesCount** greater than 1 to support multiple customers.
+
+#### Request
+
+<!-- {
+  "blockType": "request",
+  "name": "update_bookingappointment_customers",
+  "sampleKeys": ["AAMkADKoAAA=", "Contosolunchdelivery@contoso.com"]
+}-->
+```http
+PATCH https://graph.microsoft.com/v1.0/solutions/bookingBusinesses/Contosolunchdelivery@contoso.com/appointments/AAMkADKoAAA=
+Content-type: application/json
+
+{
+    "@odata.type":"#microsoft.graph.bookingAppointment",
+    "customers": [
+        {
+            "@odata.type": "#microsoft.graph.bookingCustomerInformation",
+            "customerId": "cd56bb19-c348-42c6-af5c-09818c87fb8c",
+            "name": "John Doe",
+            "emailAddress": "john.doe@example.com",
+            "phone": "313-555-5555"
+        },
+        {
+            "@odata.type": "#microsoft.graph.bookingCustomerInformation",
+            "customerId": "72f148fa-9a86-4c59-b277-f5089d9ea0e7",
+            "name": "Jane Smith",
+            "emailAddress": "jane.smith@example.com",
+            "phone": "248-555-5678"
+        }
+    ]
+}
+```
+
+#### Response
 
 The following example shows the response.
 <!-- {
