@@ -35,6 +35,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/agentidentity-list-inheritedoauth2permissiongrants-permissions.md)]
 
+[!INCLUDE [rbac-oauth2permissiongrant-serviceprincipal-apis-read](../includes/rbac-for-apis/rbac-oauth2permissiongrant-serviceprincipal-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
@@ -93,17 +95,16 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#oAuth2PermissionGrants",
   "value": [
     {
-      "id": "abc123def456",
-      "clientId": "b3f37624-8113-471c-9de3-0234828e3ca2",
-      "consentType": "AllPrincipals",
-      "expiryTime": "2027-06-15T00:00:00Z",
-      "principalId": null,
-      "resourceId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
-      "scope": "User.Read Mail.Read",
-      "startTime": "2026-06-15T00:00:00Z"
+      "id": "id-value",
+      "clientId": "clientId-value",
+      "consentType": "consentType-value",
+      "principalId": "principalId-value",
+      "resourceId": "resourceId-value",
+      "scope": "scope-value",
+      "startTime": "datetime-value",
+      "expiryTime": "datetime-value"
     }
   ]
 }

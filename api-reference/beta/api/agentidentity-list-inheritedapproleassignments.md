@@ -33,6 +33,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/agentidentity-list-inheritedapproleassignments-permissions.md)]
 
+[!INCLUDE [rbac-approleassignments-apis-read](../includes/rbac-for-apis/rbac-approleassignments-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
@@ -88,32 +90,19 @@ The following example shows the response.
 -->
 ``` http
 HTTP/1.1 200 OK
-Content-Type: application/json
+Content-type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#appRoleAssignments",
   "value": [
     {
-      "id": "aabbccdd-1122-3344-5566-778899001122",
-      "deletedDateTime": null,
-      "appRoleId": "11112222-aaaa-3333-bbbb-4444cccc5555",
-      "createdDateTime": "2026-01-15T10:30:00Z",
-      "principalDisplayName": "My Agent Identity",
-      "principalId": "b3f37624-8113-471c-9de3-0234828e3ca2",
-      "principalType": "ServicePrincipal",
-      "resourceDisplayName": "Microsoft Graph",
-      "resourceId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
-    },
-    {
-      "id": "eeff0011-2233-4455-6677-889900aabbcc",
-      "deletedDateTime": null,
-      "appRoleId": "66667777-aaaa-8888-bbbb-9999cccc0000",
-      "createdDateTime": "2026-02-01T14:00:00Z",
-      "principalDisplayName": "My Agent Identity",
-      "principalId": "b3f37624-8113-471c-9de3-0234828e3ca2",
-      "principalType": "ServicePrincipal",
-      "resourceDisplayName": "SharePoint Online",
-      "resourceId": "bbbbbbbb-cccc-dddd-eeee-ffffffffffff"
+      "id": "id-value",
+      "creationTimestamp": "datetime-value",
+      "appRoleId": "appRoleId-value",
+      "principalDisplayName": "principalDisplayName-value",
+      "principalId": "principalId-value",
+      "principalType": "principalType-value",
+      "resourceDisplayName": "resourceDisplayName-value",
+      "resourceId": "resourceId-value"
     }
   ]
 }
