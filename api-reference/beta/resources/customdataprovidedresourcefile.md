@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Represents a file uploaded as part of a custom data provided resource upload session for Access Reviews with bring-your-own-data (BYOD) capabilities. This resource contains metadata about uploaded CSV files including the file name, size, and upload timestamp.
 
-Files are uploaded via the [uploadFile](../api/customdataprovidedresourceuploadsession-uploadfile.md) action on an upload session and are accessible by expanding the **files** navigation property on a [customDataProvidedResourceUploadSession](customdataprovidedresourceuploadsession.md).
+Files are uploaded via the [uploadFile](../api/customdataprovidedresourceuploadsession-uploadfile.md) action on an upload session and are accessible by expanding the **files** navigation property on a [customDataProvidedResourceUploadSession](../resources/customdataprovidedresourceuploadsession.md).
 
 ## Methods
 
