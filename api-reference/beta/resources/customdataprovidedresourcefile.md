@@ -22,10 +22,6 @@ Files are uploaded via the [uploadFile](../api/customdataprovidedresourceuploads
 
 This resource doesn't have direct methods. Access files through the **files** navigation property on [customDataProvidedResourceUploadSession](customdataprovidedresourceuploadsession.md) using `$expand=files`.
 
-|Method|Return type|Description|
-|:---|:---|:---|
-|[List files](../api/customdataprovidedresourceuploadsession-get.md)|[customDataProvidedResourceFile](../resources/customdataprovidedresourcefile.md) collection|Get the files associated with an upload session by using `$expand=files`.|
-
 ## Properties
 
 |Property|Type|Description|
