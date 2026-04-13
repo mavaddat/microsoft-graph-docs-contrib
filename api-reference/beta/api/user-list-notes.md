@@ -1,5 +1,5 @@
 ---
-title: "List notes"
+title: "List User's notes"
 description: "Get a list of the note objects in the user's Notes folder."
 author: "rajeshvulla"
 ms.date: 04/07/2026
