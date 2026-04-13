@@ -59,9 +59,14 @@ The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
+  "optionalProperties": [
+    "attachments",
+    "extensions",
+    "singleValueExtendedProperties",
+    "multiValueExtendedProperties"
+  ],
   "@odata.type": "microsoft.graph.note",
-  "baseType": "microsoft.graph.outlookItem",
-  "openType": "id"
+  "baseType": "microsoft.graph.outlookItem"
 }
 -->
 ``` json
