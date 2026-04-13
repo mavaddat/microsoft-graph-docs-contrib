@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 03/18/2026
+ms.date: 04/13/2026
 ms.topic: whats-new
 ---
 
@@ -19,6 +19,10 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
 ## April 2026: New and generally available
+
+### Teamwork and communications | Copilot AI Insights Change Notifications API
+
+Added new Copilot Graph Change Notifications API for Meetings AI Insights. This new capability allows developers to subscribe to notifications for the generation of meeting AI summaries and receive a Graph notification as soon as the summaries are fully generated and available. For more information, see [Get change notifications for meeting AI insights using Microsoft Graph](/graph/teams-changenotifications-meetingaiinsights.md) and [Microsoft 365 Copilot APIs overview](/microsoft-365/copilot/extensibility/copilot-apis-overview).
 
 ### Identity and access | Governance
 
