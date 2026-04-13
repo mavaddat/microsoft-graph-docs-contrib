@@ -20,11 +20,7 @@ Get all [targeted messages](../resources/targetedchatmessage.md) sent to a speci
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "userteamwork-getalltargetedmessages-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "userteamwork_getalltargetedmessages" } -->
 [!INCLUDE [permissions-table](../includes/permissions/userteamwork-getalltargetedmessages-permissions.md)]
 
 ## HTTP request
@@ -85,6 +81,7 @@ The following example shows how to retrieve all targeted messages for a user.
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "userteamwork_getalltargetedmessages",
@@ -94,6 +91,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/users/f47b5f54-6968-4706-a522-31e842b12345/teamwork/getAllTargetedMessages
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/userteamwork-getalltargetedmessages-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 
@@ -209,6 +212,7 @@ The following example shows how to retrieve targeted messages within a specific 
 
 #### Request
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "userteamwork_getalltargetedmessages_filter",
@@ -218,6 +222,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/users/f47b5f54-6968-4706-a522-31e842b12345/teamwork/getAllTargetedMessages?$filter=lastModifiedDateTime gt 2024-01-01T00:00:00Z and lastModifiedDateTime lt 2024-12-31T23:59:59Z
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/userteamwork-getalltargetedmessages-filter-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 #### Response
 
