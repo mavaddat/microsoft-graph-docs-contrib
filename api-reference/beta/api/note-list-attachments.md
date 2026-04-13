@@ -1,5 +1,5 @@
 ---
-title: "List attachments"
+title: "List Note attachments"
 description: "Get the list of file attachments associated with a note."
 author: "rajeshvulla"
 ms.date: 04/07/2026

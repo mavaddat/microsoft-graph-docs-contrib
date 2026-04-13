@@ -1,5 +1,5 @@
 ---
-title: "Create attachment"
+title: "Create Note attachment"
 description: "Add an inline image attachment to a note."
 author: "rajeshvulla"
 ms.date: 04/07/2026
