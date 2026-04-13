@@ -48,10 +48,18 @@ Removed the `model` parameters and payment-model guidance from Microsoft Teams e
 - [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 - [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 
-
 ### Notes
 
-- Added the **bodyPreview** property to the [note](/graph/api/resources/note?view=graph-rest-beta&preserve-view=true) resource type.
+Introduced the Notes API that enables users to create and manage simple notes in their Notes folder. Notes support text content with optional inline image attachments, and are suitable for quick capture scenarios. Use the [note](/graph/api/resources/note?view=graph-rest-beta&preserve-view=true) resource and the following APIs:
+- [List notes](/graph/api/user-list-notes?view=graph-rest-beta&preserve-view=true) in the user's Notes folder.
+- [Create a note](/graph/api/user-post-notes?view=graph-rest-beta&preserve-view=true) in the user's Notes folder.
+- [Get a note](/graph/api/note-get?view=graph-rest-beta&preserve-view=true).
+- [Update a note](/graph/api/note-update?view=graph-rest-beta&preserve-view=true).
+- [Delete a note](/graph/api/note-delete?view=graph-rest-beta&preserve-view=true).
+- [Get delta](/graph/api/note-delta?view=graph-rest-beta&preserve-view=true) to track changes to notes.
+- [List attachments](/graph/api/note-list-attachments?view=graph-rest-beta&preserve-view=true) for a note.
+- [Create an attachment](/graph/api/note-post-attachments?view=graph-rest-beta&preserve-view=true) on a note.
+- [Delete an attachment](/graph/api/note-delete-attachments?view=graph-rest-beta&preserve-view=true) from a note.
 
 ### Teamwork and communications | Messaging
 

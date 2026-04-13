@@ -8,7 +8,7 @@ ms.subservice: "outlook"
 doc_type: apiPageType
 ---
 
-# List notes
+# List User's notes
 
 Namespace: microsoft.graph
 
