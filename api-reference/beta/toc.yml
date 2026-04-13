@@ -90,6 +90,9 @@ items:
   - name: Notes
     href: toc/notes/toc.yml
     displayName: OneNote
+  - name: User Notes
+    href: toc/user-notes/toc.yml
+    displayName: Notes
   - name: Notifications (deprecated)
     href: toc/notifications-(deprecated)/toc.yml
   - name: People and workplace intelligence
