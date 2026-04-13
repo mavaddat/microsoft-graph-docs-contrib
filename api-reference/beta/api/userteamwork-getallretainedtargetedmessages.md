@@ -16,6 +16,8 @@ Namespace: microsoft.graph
 
 Get all retained [targeted messages](../resources/targetedchatmessage.md) sent to a specific user in group chats and channels.
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -77,6 +79,7 @@ The response includes the **@odata.nextLink** property for pagination, when appl
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "userteamwork_getallretainedtargetedmessages",
@@ -86,6 +89,12 @@ The following example shows a request.
 ``` http
 GET https://graph.microsoft.com/beta/users/f47b5f54-6968-4706-a522-31e842b12345/teamwork/getAllRetainedTargetedMessages
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/userteamwork-getallretainedtargetedmessages-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
