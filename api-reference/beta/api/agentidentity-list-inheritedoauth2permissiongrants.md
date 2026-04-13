@@ -1,8 +1,8 @@
 ---
 title: "List inherited OAuth2 permission grants for an agent identity"
-description: "Retrieve the delegated permission grants (oAuth2PermissionGrant objects) that an agent identity inherits from its parent Agent Identity Blueprint Service Principal."
+description: "Retrieve the delegated permission grants (oAuth2PermissionGrant objects) that an agent identity inherits from its parent agent identity blueprint principal."
 author: "mvoznyarskiy"
-ms.date: 04/08/2026
+ms.date: 04/13/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-agent-id"
 doc_type: apiPageType
@@ -14,19 +14,15 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Retrieve the delegated permission grants ([oAuth2PermissionGrant](../resources/oauth2permissiongrant.md) objects) that an [agent identity](../resources/agentidentity.md) inherits from its parent Agent Identity Blueprint Service Principal. These inherited grants are computed at runtime and represent the effective delegated permissions as applied by ESTS when issuing tokens.
+Retrieve the delegated permission grants ([oAuth2PermissionGrant](../resources/oauth2permissiongrant.md) objects) that an [agent identity](../resources/agentidentity.md) inherits from its parent agent identity blueprint principal. These inherited grants represent the effective delegated permissions applied at token issuance time.
 
-This method returns only inherited grants of `consentType` **AllPrincipals** (tenant-wide, admin-consented grants). Grants of `consentType` **Principal** (user-specific grants) aren't returned by this method.
+This endpoint returns only inherited grants where `consentType` is `AllPrincipals` (admin-consented, tenant-wide grants). Grants where `consentType` is `Principal` (user-specific grants) are not returned by this endpoint.
 
-## Key behaviors
+The inherited collection is strictly read-only. POST, PATCH, and DELETE requests return `405 Method Not Allowed`. To modify the permissions that agent identities inherit, update the parent agent identity blueprint principal's `oauth2PermissionGrants` instead.
 
-- The `clientId` on each returned grant is set to the agent identity's service principal ID, not the parent ABSP ID.
-- The `id` of each inherited grant matches the `id` of the original grant on the parent ABSP, enabling correlation.
-- All other properties (`consentType`, `principalId`, `resourceId`, `scope`) are copied from the parent ABSP grant.
-- The inherited collection is strictly read-only. POST, PATCH, and DELETE requests return `405 Method Not Allowed`. To modify inherited grants, update the parent ABSP's `oauth2PermissionGrants` instead.
-- Pagination isn't supported. All results are returned in a single response, capped at 1,000 items.
-- Calling this method on a service principal that isn't an agent identity returns `404 Not Found`.
-- The `Directory.ReadWrite.All` scope is excluded from inheritance per ESTS runtime rules.
+Pagination is not supported. All results are returned in a single response. `$top`, `$skip`, and `$skiptoken` are not supported.
+
+Calling this endpoint on a service principal that is not an agent identity returns `404 Not Found`.
 
 ## Permissions
 
@@ -46,12 +42,12 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-GET /servicePrincipals/{agentIdentity-id}/inheritedOauth2PermissionGrants
+GET /servicePrincipals/microsoft.graph.agentIdentity/{agentIdentity-id}/inheritedOauth2PermissionGrants
 ```
 
 ## Optional query parameters
 
-This method doesn't support OData query parameters. The `$filter`, `$top`, `$skip`, `$count`, `$orderBy`, `$expand`, and `$select` query parameters aren't supported.
+This method does not support OData query parameters.
 
 ## Request headers
 
@@ -78,7 +74,7 @@ The following example shows a request.
 }
 -->
 ``` http
-GET https://graph.microsoft.com/beta/servicePrincipals/00001111-aaaa-2222-bbbb-3333cccc4444/inheritedOauth2PermissionGrants
+GET https://graph.microsoft.com/beta/servicePrincipals/microsoft.graph.agentIdentity/b3f37624-8113-471c-9de3-0234828e3ca2/inheritedOauth2PermissionGrants
 ```
 
 
@@ -101,11 +97,13 @@ Content-Type: application/json
   "value": [
     {
       "id": "abc123def456",
-      "clientId": "00001111-aaaa-2222-bbbb-3333cccc4444",
+      "clientId": "b3f37624-8113-471c-9de3-0234828e3ca2",
       "consentType": "AllPrincipals",
+      "expiryTime": "2027-06-15T00:00:00Z",
       "principalId": null,
       "resourceId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
-      "scope": "User.Read Mail.Read"
+      "scope": "User.Read Mail.Read",
+      "startTime": "2026-06-15T00:00:00Z"
     }
   ]
 }
