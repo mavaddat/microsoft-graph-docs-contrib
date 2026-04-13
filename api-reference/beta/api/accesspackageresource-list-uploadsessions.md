@@ -43,6 +43,20 @@ GET /identityGovernance/catalogs/{catalogId}/accessPackageResources/{accessPacka
 
 This method supports the `$expand`, `$filter`, `$top`, `$skip`, `$orderby`, `$count` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
+** Example queries for nested `$filter` and `$orderby` supported for the **files** relationship of type **customDataProvidedResourceUploadSession**.
+
+|Property|Operators|Example|
+|:---|:---|:---|
+|name|`eq`, `ne`|`$expand=files($filter=name eq 'building-a-access.csv')`|
+|size|`eq`, `ne`, `gt`, `ge`, `lt`, `le`|`$expand=files($filter=size gt 1000000)`|
+|uploadedDateTime|`eq`, `ne`, `gt`, `ge`, `lt`, `le`|`$expand=files($filter=uploadedDateTime ge 2026-01-01T00:00:00Z)`|
+
+The **name**, **size**, and **uploadedDateTime** proeprties also support `$orderby` as shown in the following examples: 
+
+Get upload session with files sorted by **uploadedDateTime**:
+```http
+GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($orderby=uploadedDateTime desc)
+
 ## Request headers
 
 |Name|Description|
