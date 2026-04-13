@@ -60,6 +60,10 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 
 Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
 
+### Security | Microsoft Defender for Identity
+
+Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true) to get the list of device types for the sensor.
+
 ### Teamwork and communications | Messaging
 
 Use the targeted messages APIs to manage messages in Microsoft Teams that are visible only to specified recipients within group chats or channels:
@@ -130,10 +134,6 @@ Added the **createdByAppId** property to the [application](/graph/api/resources/
 ### Personal contacts
 
 Use the **primaryEmailAddress**, **secondaryEmailAddress**, and **tertiaryEmailAddress** properties on [contact](/graph/api/resources/contact) to get or set the primary, secondary, or tertiary email address of a contact.
-
-### Security | Microsoft Defender for Identity
-
-Added the **sensorTypes** property to the [sensorCandidate](../api-reference/beta/resources/security-sensorcandidate.md) resource type.
 
 ### Teamwork and communications | Calls and online meetings
 
