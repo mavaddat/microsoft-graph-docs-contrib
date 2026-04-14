@@ -75,11 +75,5 @@ The following JSON representation shows the resource type.
   "referenceId": "String",
   "data": {
     "@odata.type": "microsoft.graph.customExtensionData"
-  },
-  "files": [
-    {
-      "@odata.type": "microsoft.graph.customDataProvidedResourceFile"
-    }
-  ]
 }
 ```
