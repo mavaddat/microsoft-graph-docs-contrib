@@ -5903,7 +5903,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "List allChannels",
           "ChangeType": "Change",
-          "Description": "Updated the [List allChannels](https://learn.microsoft.com/en-us/graph/api/team-list-allchannels?view=graph-rest-beta) method on the [team](https://learn.microsoft.com/en-us/graph/api/resources/team?view=graph-rest-beta) resource to support **@odata.nextLink** pagination. With increased channel limits, responses might span multiple pages. Use `@odata.nextLink` to retrieve all results.",
+          "Description": "Updated the [List allChannels](https://learn.microsoft.com/en-us/graph/api/team-list-allchannels?view=graph-rest-beta) method on the [team](https://learn.microsoft.com/en-us/graph/api/resources/team?view=graph-rest-beta) resource to support **@odata.nextLink** pagination. With increased channel limits, responses might span multiple pages. Use **@odata.nextLink** to retrieve all results.",
           "Target": "team"
         }
       ],
