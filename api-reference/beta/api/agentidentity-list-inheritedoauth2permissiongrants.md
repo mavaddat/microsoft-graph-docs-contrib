@@ -97,14 +97,14 @@ Content-Type: application/json
 {
   "value": [
     {
-      "id": "id-value",
-      "clientId": "clientId-value",
-      "consentType": "consentType-value",
-      "principalId": "principalId-value",
-      "resourceId": "resourceId-value",
-      "scope": "scope-value",
-      "startTime": "datetime-value",
-      "expiryTime": "datetime-value"
+      "id": "abc123def456",
+      "clientId": "b3f37624-8113-471c-9de3-0234828e3ca2",
+      "consentType": "AllPrincipals",
+      "principalId": null,
+      "resourceId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+      "scope": "User.Read Mail.Read",
+      "startTime": "2026-06-15T00:00:00Z",
+      "expiryTime": "2027-06-15T00:00:00Z"
     }
   ]
 }

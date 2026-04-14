@@ -95,14 +95,14 @@ Content-type: application/json
 {
   "value": [
     {
-      "id": "id-value",
-      "creationTimestamp": "datetime-value",
-      "appRoleId": "appRoleId-value",
-      "principalDisplayName": "principalDisplayName-value",
-      "principalId": "principalId-value",
-      "principalType": "principalType-value",
-      "resourceDisplayName": "resourceDisplayName-value",
-      "resourceId": "resourceId-value"
+      "id": "aabbccdd-1122-3344-5566-778899001122",
+      "creationTimestamp": "2026-01-15T10:30:00Z",
+      "appRoleId": "11112222-aaaa-3333-bbbb-4444cccc5555",
+      "principalDisplayName": "My Agent Identity",
+      "principalId": "b3f37624-8113-471c-9de3-0234828e3ca2",
+      "principalType": "ServicePrincipal",
+      "resourceDisplayName": "Microsoft Graph",
+      "resourceId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
     }
   ]
 }
