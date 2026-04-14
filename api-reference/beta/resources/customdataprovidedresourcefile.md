@@ -55,33 +55,3 @@ The following JSON representation shows the resource type.
 }
 ```
 
-## Query capabilities
-
-The **files** collection supports filtering and sorting when accessed via `$expand` on an upload session.
-
-### Supported $filter operators
-
-|Property|Operators|Example|
-|:---|:---|:---|
-|name|`eq`, `ne`|`$expand=files($filter=name eq 'building-a-access.csv')`|
-|size|`eq`, `ne`, `gt`, `ge`, `lt`, `le`|`$expand=files($filter=size gt 1000000)`|
-|uploadedDateTime|`eq`, `ne`, `gt`, `ge`, `lt`, `le`|`$expand=files($filter=uploadedDateTime ge 2026-01-01T00:00:00Z)`|
-
-### Supported $orderby properties
-
-- `name`
-- `size`
-- `uploadedDateTime`
-
-### Examples
-
-```http
-# Get upload session with files sorted by uploadedDateTime
-GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($orderby=uploadedDateTime desc)
-
-# Get upload session with files filtered by size (larger than 1MB)
-GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($filter=size gt 1000000)
-
-# Get upload session with files sorted by name
-GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($orderby=name asc)
-```
