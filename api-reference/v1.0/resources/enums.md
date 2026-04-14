@@ -3883,3 +3883,10 @@ Possible values for user account types (group membership), per Windows definitio
 |write|
 |create|
 |unknownFutureValue|
+
+### customSecurityAttributeComparisonOperator values 
+
+|Member|
+|:---|
+|equals|
+|unknownFutureValue|

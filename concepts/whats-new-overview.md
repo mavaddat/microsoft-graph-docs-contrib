@@ -25,6 +25,11 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 - Added the [approvedClientApp](/graph/api/resources/approvedclientapp) resource type for managing approved client applications for [remote desktop access](/graph/api/resources/remotedesktopsecurityconfiguration).
 - Added the **managerApplications** property to the [application](/graph/api/resources/application) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint) resources to enable Microsoft first-party applications to be designated as managers of agent blueprints.
 
+### Identity and access | Directory management
+Added [Idenifier URI restrictions](/graph/api/resources/identifieruriconfiguration) of Application management policies, allowing tenant administrators to enforce [secure settings of Application ID URIs](/entra/identity-platform/identifier-uri-restrictions)
+
+Added [excluded actors](/graph/api/resources/appmanagementpolicyactorexemptions) feature to all restrictions of Application management policies. This feature allows tenant administrators to specify set of users and service principals, who are allowed to modify properties that would be otherwise restricted by the policy.
+
 ### Backup storage
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
