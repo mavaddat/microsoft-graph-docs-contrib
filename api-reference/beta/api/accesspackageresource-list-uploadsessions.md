@@ -55,7 +55,20 @@ The **name**, **size**, and **uploadedDateTime** proeprties also support `$order
 
 Get upload session with files sorted by **uploadedDateTime**:
 ```http
+Get upload session with files sorted by **uploadedDateTime**:
+```http
 GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($orderby=uploadedDateTime desc)
+```
+
+Get upload session with files filtered by **size** (larger than 1MB)@
+```http
+GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($filter=size gt 1000000)
+```
+
+Get upload session with files sorted by **name**:
+```http
+GET /identityGovernance/entitlementManagement/catalogs/{catalogId}/accessPackageResources/{resourceId}/uploadSessions/{sessionId}?$expand=files($orderby=name asc)
+```
 
 ## Request headers
 
