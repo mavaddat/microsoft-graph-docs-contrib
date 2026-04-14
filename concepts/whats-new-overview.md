@@ -127,7 +127,7 @@ Use the targeted messages APIs to manage messages in Microsoft Teams that are vi
 
 ### Identity and access | Governance
 
-Added the **referenceId** property to the [customDataProvidedResourceUploadSession](/graph/api/resources/customdataprovidedresourceuploadsession?view=graph-rest-beta&preserve-view=true) resource to identify the context for which data is being uploaded, such as an access review instance ID. Also added support to [list](/graph/api/accesspackageresource-list-uploadsessions?view=graph-rest-beta&preserve-view=true) and [delete](/graph/api/accesspackageresource-delete-uploadsessions?view=graph-rest-beta&preserve-view=true) upload sessions, and the ability to use `$expand`, `$filter`, `$top`, `$skip`, `$orderby`, and `$count` OData query parameters with list and get operations.
+Added the **referenceId** property and the **files** relationship to [customDataProvidedResourceUploadSession](/graph/api/resources/customdataprovidedresourceuploadsession?view=graph-rest-beta&preserve-view=true) resource to identify the context for which data is being uploaded, such as an access review instance ID, and identify files uploaded during an upload session, respectively. Also added enhanced support for query capabilities for the  [List customDataProvidedResourceUploadSession objects](/graph/api/accesspackageresource-list-uploadsessions?view=graph-rest-beta&preserve-view=true) API operation.
 
 ## March 2026: New and generally available
 
