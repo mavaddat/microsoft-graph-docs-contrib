@@ -14,7 +14,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Add sponsors to an [agent identity blueprint principal](../resources/agentidentityblueprintprincipal.md) by posting to the sponsors collection. A single blueprint principal may have up to 20 sponsors. No more than 5 sponsors may be groups.
+Add sponsors to an [agent identity blueprint principal](../resources/agentidentityblueprintprincipal.md). Sponsors can include users or groups. Sponsors may not include service principals or agent users.
+
+A single blueprint principal may have up to 20 sponsors. No more than 5 sponsors may be groups. Only groups with dynamic membership or Microsoft 365 (unified) groups are supported as sponsors.
 
 ## Permissions
 

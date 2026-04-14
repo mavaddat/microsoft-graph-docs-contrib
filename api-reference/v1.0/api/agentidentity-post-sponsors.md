@@ -12,7 +12,9 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-Add sponsors to an [agentIdentity](../resources/agentidentity.md). Sponsors can include users or groups. Sponsors may not include service principals or agent users. A single identity may have up to 20 sponsors. No more than 5 sponsors may be groups.
+Add sponsors to an [agentIdentity](../resources/agentidentity.md). Sponsors can include users or groups. Sponsors may not include service principals or agent users.
+
+A single blueprint principal may have up to 20 sponsors. No more than 5 sponsors may be groups. Only groups with dynamic membership or Microsoft 365 (unified) groups are supported as sponsors.
 
 ## Permissions
 
