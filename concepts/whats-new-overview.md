@@ -42,8 +42,8 @@ Manage Teams apps at the channel level within a team using the following APIs:
 - Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
 - The following Microsoft Teams APIs support **@odata.nextLink** pagination to handle increased channel limits. When the result set spans multiple pages, the response includes the **@odata.nextLink** property with a URL for retrieving the next page of results:
   - [List channels](/graph/api/channel-list)
-  - [List allChannels](/graph/api/team-list-incomingchannels)
-  - [List incomingChannels](/graph/api/team-list-allchannels)
+  - [List incomingChannels](/graph/api/team-list-incomingchannels)
+  - [List allChannels](/graph/api/team-list-allchannels)
 
 ## April 2026: New in preview only
 
@@ -78,8 +78,8 @@ Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/secur
   - [Delete a targeted message from a chat](/graph/api/chat-delete-targetedmessages?view=graph-rest-beta&preserve-view=true) by providing the chat ID and message ID.
 - The following Microsoft Teams APIs support **@odata.nextLink** pagination to handle increased channel limits. When the result set spans multiple pages, the response includes the **@odata.nextLink** property with a URL for retrieving the next page of results:
   - [List channels](/graph/api/channel-list?view=graph-rest-beta&preserve-view=true)
-  - [List allChannels](/graph/api/team-list-incomingchannels?view=graph-rest-beta&preserve-view=true)
-  - [List incomingChannels](/graph/api/team-list-allchannels?view=graph-rest-beta&preserve-view=true)
+  - [List incomingChannels](/graph/api/team-list-incomingchannels?view=graph-rest-beta&preserve-view=true)
+  - [List allChannels](/graph/api/team-list-allchannels?view=graph-rest-beta&preserve-view=true)
 
 ## March 2026: New and generally available
 
