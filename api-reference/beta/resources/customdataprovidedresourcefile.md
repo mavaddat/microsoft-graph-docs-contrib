@@ -29,7 +29,7 @@ This resource doesn't have direct methods. Access files through the **files** na
 |id|String|Unique identifier for the file. Read-only.|
 |name|String|Name of the uploaded file, including the file extension. Required.  Supports `$filter` (`eq`, `ne`)  and `$orderby`.|
 |size|Int64|Size of the file in bytes. Read-only.  Supports `$filter` (`eq`, `ne`, `gt`, `ge`, `lt`, `le`) and `$orderby`.|
-|uploadedDateTime|DateTimeOffset|Timestamp when the file was uploaded. Read-only.  Supports `$filter` (`eq`, `ne`, `gt`, `ge`, `lt`, `le`) and $orderby`.|
+|uploadedDateTime|DateTimeOffset|Timestamp when the file was uploaded. Read-only.  Supports `$filter` (`eq`, `ne`, `gt`, `ge`, `lt`, `le`) and `$orderby`.|
 
 ## Relationships
 
