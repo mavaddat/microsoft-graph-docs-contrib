@@ -77,9 +77,9 @@ The following example shows a request.
 }
 -->
 
-
 ```http
 DELETE https://graph.microsoft.com/beta/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabel
+```
 ---
 
 #### Response
@@ -110,14 +110,12 @@ The following example shows a request.
 }
 -->
 
-
 ```http
 DELETE https://graph.microsoft.com/beta/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabel
 ```
 ---
 
 #### Response
-
 The following example shows the response.
 <!-- {
   "blockType": "response",
