@@ -578,6 +578,7 @@ Namespace: microsoft.graph
 | allDirectoryServicePrincipals |
 | allConfiguredConnectedOrganizationUsers |
 | allExternalUsers |
+| allDirectoryAgentIdentities |
 | unknownFutureValue |
 
 ### accessPackageAssignmentFilterByCurrentUserOptions values
@@ -586,15 +587,6 @@ Namespace: microsoft.graph
 | ------------------ |
 | target |
 | createdBy |
-| unknownFutureValue |
-
-### accessPackageAssignmentRequestFilterByCurrentUserOptions values
-
-| Member |
-| ------------------ |
-| target |
-| createdBy |
-| approver |
 | unknownFutureValue |
 
 ### accessPackageAssignmentState values
@@ -672,6 +664,7 @@ Namespace: microsoft.graph
 | systemRemove |
 | onBehalfAdd |
 | unknownFutureValue |
+| approverRemove |
 
 ### accessPackageSubjectType values
 
@@ -820,6 +813,30 @@ Namespace: microsoft.graph
 | ------ |
 | allow |
 | block |
+
+### attestationEnforcement values
+
+| Member |
+|:---|
+| disabled |
+| registrationOnly |
+| unknownFutureValue |
+
+### passkeyType values
+
+| Member |
+|:---|
+| deviceBound |
+| synced |
+| unknownFutureValue |
+
+### passkeyTypes values
+
+| Member |
+|:---|
+| deviceBound |
+| synced |
+| unknownFutureValue |
 
 ### x509CertificateAuthenticationMode values
 
@@ -1067,6 +1084,15 @@ Namespace: microsoft.graph
 | inactive |
 | unknownFutureValue |
 
+### baselineParameterType values 
+
+|Member|
+|:---|
+|string|
+|integer|
+|boolean|
+|unknownFutureValue|
+
 ### basicStatus values
 
 | Member |
@@ -1135,6 +1161,30 @@ Namespace: microsoft.graph
 | videoBasedScreenSharing |
 | data |
 | screenSharing |
+| unknownFutureValue |
+
+### monitorMode values
+
+| Member |
+| :--- |
+| monitorOnly |
+| unknownFutureValue |
+
+### monitorRunStatus values
+
+| Member |
+| :--- |
+| successful |
+| partiallySuccessful |
+| failed |
+| unknownFutureValue |
+
+### monitorStatus values
+
+| Member |
+| :--- |
+| active |
+| inactive |
 | unknownFutureValue |
 
 ### endpointType values
@@ -2505,6 +2555,17 @@ Possible values for user account types (group membership), per Windows definitio
 | reported |
 | unknownFutureValue |
 
+### snapshotJobStatus values
+
+| Member |
+| :--- |
+| notStarted |
+| running |
+| succeeded |
+| failed |
+| partiallySuccessful |
+| unknownFutureValue |
+
 ### serviceUpdateCategory values
 
 | Member |
@@ -2927,46 +2988,6 @@ Possible values for user account types (group membership), per Windows definitio
 | mfa |
 | unknownFutureValue |
 
-### authenticationMethodModes values
-
-| Member |
-| ---- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido2 |
-| windowsHelloForBusiness |
-| microsoftAuthenticatorPush |
-| deviceBasedPush |
-| temporaryAccessPassOneTime |
-| temporaryAccessPassMultiUse |
-| email |
-| x509CertificateSingleFactor |
-| x509CertificateMultiFactor |
-| federatedSingleFactor |
-| federatedMultiFactor |
-| unknownFutureValue |
-
-### baseAuthenticationMethod values
-
-| Member |
-| ---- |
-| password |
-| voice |
-| hardwareOath |
-| softwareOath |
-| sms |
-| fido |
-| microsoftAuthenticator |
-| windowsHelloForBusiness |
-| temporaryAccessPass |
-| email |
-| x509Certificate |
-| federation |
-| unknownFutureValue |
-
 ### browserSharedCookieSourceEnvironment values
 
 | Member |
@@ -3097,6 +3118,14 @@ Possible values for user account types (group membership), per Windows definitio
 | AttributeReadOnly |
 | ReferenceAttributes |
 | UnknownFutureValue |
+
+### driftStatus values
+
+| Member |
+| :--- |
+| active |
+| fixed |
+| unknownFutureValue |
 
 ### attributeType values
 
@@ -3277,6 +3306,16 @@ Possible values for user account types (group membership), per Windows definitio
 | Active |
 | Disabled |
 | Paused |
+
+### scopeCollectionKind values 
+
+|Member|
+|:---|
+|allAllowed|
+|enumerated|
+|none|
+|scopeKindNotSet|
+|unknownFutureValue|
 
 ### scopeOperatorMultiValuedComparisonType values
 
@@ -3704,6 +3743,19 @@ Possible values for user account types (group membership), per Windows definitio
 | bullseye         |
 | unknownFutureValue |
 
+### exchangeMessageTraceStatus values
+
+|Member|
+|:---|
+|gettingStatus|
+|pending|
+|failed|
+|delivered|
+|expanded|
+|quarantined|
+|filteredAsSpam|
+|unknownFutureValue|
+
 ### webApplicationFirewallDnsRecordType values 
 
 |Member|
@@ -3811,4 +3863,23 @@ Possible values for user account types (group membership), per Windows definitio
 |office|
 |remote|
 |timeOff|
+|unknownFutureValue|
+
+### resourceAccessStatus values
+
+|Member|
+|:---|
+|none|
+|failure|
+|success|
+|unknownFutureValue|
+
+### resourceAccessType values
+
+|Member|
+|:---|
+|none|
+|read|
+|write|
+|create|
 |unknownFutureValue|
