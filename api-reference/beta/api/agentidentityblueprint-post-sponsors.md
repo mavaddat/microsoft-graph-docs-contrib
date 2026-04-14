@@ -16,7 +16,7 @@ Namespace: microsoft.graph
 
 Add a sponsor to an [agentIdentityBlueprint](../resources/agentidentityblueprint.md) object. Sponsors can include users or groups. Sponsors may not include service principals or agent users.
 
-A single blueprint may have up to 20 sponsors. No more than 5 sponsors may be groups. Only groups with dynamic membership or Microsoft 365 (unified) groups are supported as sponsors.
+A single blueprint may have up to 20 sponsors. No more than 5 sponsors may be groups. Only groups with dynamic membership or Microsoft 365 groups are supported as sponsors.
 
 ## Permissions
 

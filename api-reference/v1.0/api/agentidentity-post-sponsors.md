@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 Add sponsors to an [agentIdentity](../resources/agentidentity.md). Sponsors can include users or groups. Sponsors may not include service principals or agent users.
 
-A single agent identity may have up to 20 sponsors. No more than 5 sponsors may be groups. Only groups with dynamic membership or Microsoft 365 (unified) groups are supported as sponsors.
+A single agent identity may have up to 20 sponsors. No more than 5 sponsors may be groups. Only groups with dynamic membership or Microsoft 365 groups are supported as sponsors.
 
 ## Permissions
 
