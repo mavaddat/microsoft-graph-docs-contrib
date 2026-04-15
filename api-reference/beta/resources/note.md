@@ -30,7 +30,7 @@ Inherits from [outlookItem](../resources/outlookitem.md).
 |[Get delta](../api/note-delta.md)|[note](../resources/note.md) collection|Get a set of [note](../resources/note.md) objects that were added, updated, or deleted in the user's Notes folder since the last delta query.|
 |[List attachments](../api/note-list-attachments.md)|[attachment](../resources/attachment.md) collection|Get the list of file attachments associated with a [note](../resources/note.md).|
 |[Create attachment](../api/note-post-attachments.md)|[attachment](../resources/attachment.md)|Add an inline image attachment to a [note](../resources/note.md).|
-|[Delete attachment](../api/note-delete-attachments.md)|None|Delete an inline image attachment from a [note](../resources/note.md).|
+|[Delete attachment](../api/attachment-delete.md)|None|Delete an inline image attachment from a [note](../resources/note.md).|
 
 ## Properties
 |Property|Type|Description|
@@ -39,11 +39,11 @@ Inherits from [outlookItem](../resources/outlookitem.md).
 |bodyPreview|String|Auto-generated preview of the note body content (first ~255 characters, plain text). Read-only.|
 |categories|String collection|The categories associated with the note. Inherited from [outlookItem](../resources/outlookitem.md).|
 |changeKey|String|Version identifier used for optimistic concurrency control via the `If-Match` header. Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
-|createdDateTime|DateTimeOffset|The date and time when the note was created. Supports `$filter` (`eq`, `ge`, `le`, `gt`, `lt`). Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
+|createdDateTime|DateTimeOffset|The date and time when the note was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`. Supports `$filter` (`eq`, `ge`, `le`, `gt`, `lt`). Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
 |hasAttachments|Boolean|Indicates whether the note has file attachments. Supports `$filter` (`eq`). Read-only.|
 |id|String|The unique identifier for the note. Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
 |isDeleted|Boolean|Indicates whether the note is soft-deleted. Read-only.|
-|lastModifiedDateTime|DateTimeOffset|The date and time when the note was last modified. Supports `$filter` (`eq`, `ge`, `le`, `gt`, `lt`) and `$orderby`. Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
+|lastModifiedDateTime|DateTimeOffset|The date and time when the note was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`. Supports `$filter` (`eq`, `ge`, `le`, `gt`, `lt`) and `$orderby`. Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
 |subject|String|The title of the note. Supports `$filter` (`eq`, `ne`, `startsWith`) and `$orderby`.|
 
 ## Relationships
