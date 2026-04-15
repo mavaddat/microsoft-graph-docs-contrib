@@ -2444,6 +2444,7 @@
         "mailFolderOperation",
         "mailSearchFolder",
         "messageRule",
+        "note",
         "exchangeMessageTrace",
         "userConfiguration"
       ],
@@ -2517,15 +2518,6 @@
         "pageLinks",
         "recentNotebookLinks",
         "sectionLinks"
-      ]
-    },
-    {
-      "name": "User Notes",
-      "keywords": [
-        "Notes"
-      ],
-      "resources": [
-        "note"
       ]
     },
     {
