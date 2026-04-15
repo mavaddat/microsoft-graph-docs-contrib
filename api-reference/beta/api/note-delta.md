@@ -73,6 +73,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 The following example shows the initial sync request to get all notes.
 
 #### Request
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "note_delta_initial"
@@ -83,6 +84,7 @@ GET https://graph.microsoft.com/beta/me/notes/delta
 ```
 
 #### Response
+The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
@@ -121,6 +123,7 @@ Content-Type: application/json
 The following example shows a subsequent sync request using the delta token from the previous response. New, updated, and deleted notes are returned.
 
 #### Request
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "note_delta_subsequent"
@@ -131,6 +134,7 @@ GET https://graph.microsoft.com/beta/me/notes/delta?$deltatoken=abc123def456
 ```
 
 #### Response
+The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
