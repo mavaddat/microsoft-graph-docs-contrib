@@ -203,7 +203,7 @@ HTTP/1.1 204 No Content
 The following example shows a request to delete an attachment on a note.
 <!-- {
   "blockType": "request",
-  "name": "delete_note_attachment"
+  "name": "delete_attachment_from_note"
 } -->
 
 ```http
