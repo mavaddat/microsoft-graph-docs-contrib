@@ -1,5 +1,5 @@
 ---
-title: "List User's notes"
+title: "List notes"
 description: "Get a list of the note objects in the user's Notes folder."
 author: "rajeshvulla"
 ms.date: 04/07/2026
@@ -8,7 +8,7 @@ ms.subservice: "outlook"
 doc_type: apiPageType
 ---
 
-# List User's notes
+# List notes
 
 Namespace: microsoft.graph
 

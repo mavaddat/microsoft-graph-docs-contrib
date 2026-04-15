@@ -49,7 +49,7 @@ POST /users/{id | userPrincipalName}/notes
 
 In the request body, supply a JSON representation of the [note](../resources/note.md) object.
 
-You can specify the following properties when creating a **note**.
+You can specify the following properties when you create a **note**.
 
 |Property|Type|Description|
 |:---|:---|:---|
