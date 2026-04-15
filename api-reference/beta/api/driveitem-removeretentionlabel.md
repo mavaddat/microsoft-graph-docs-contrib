@@ -120,7 +120,7 @@ The following example shows the response.
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.publicError"
+  "@odata.type": "microsoft.graph.error"
 } -->
 
 ```http
