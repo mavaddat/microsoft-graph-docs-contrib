@@ -589,15 +589,6 @@ Namespace: microsoft.graph
 | createdBy |
 | unknownFutureValue |
 
-### accessPackageAssignmentRequestFilterByCurrentUserOptions values
-
-| Member |
-| ------------------ |
-| target |
-| createdBy |
-| approver |
-| unknownFutureValue |
-
 ### accessPackageAssignmentState values
 
 | Member |
@@ -673,6 +664,7 @@ Namespace: microsoft.graph
 | systemRemove |
 | onBehalfAdd |
 | unknownFutureValue |
+| approverRemove |
 
 ### accessPackageSubjectType values
 
@@ -821,6 +813,30 @@ Namespace: microsoft.graph
 | ------ |
 | allow |
 | block |
+
+### attestationEnforcement values
+
+| Member |
+|:---|
+| disabled |
+| registrationOnly |
+| unknownFutureValue |
+
+### passkeyType values
+
+| Member |
+|:---|
+| deviceBound |
+| synced |
+| unknownFutureValue |
+
+### passkeyTypes values
+
+| Member |
+|:---|
+| deviceBound |
+| synced |
+| unknownFutureValue |
 
 ### x509CertificateAuthenticationMode values
 
