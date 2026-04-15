@@ -8,7 +8,7 @@ ms.subservice: "outlook"
 doc_type: resourcePageType
 ---
 
-# Note resource type
+# note resource type
 
 Namespace: microsoft.graph
 
@@ -22,15 +22,15 @@ Inherits from [outlookItem](../resources/outlookitem.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/user-list-notes.md)|[note](../resources/note.md) collection|Get a list of the note objects in the user's Notes folder.|
-|[Create](../api/user-post-notes.md)|[note](../resources/note.md)|Create a new note in the user's Notes folder.|
-|[Get](../api/note-get.md)|[note](../resources/note.md)|Read the properties and relationships of a note object.|
-|[Update](../api/note-update.md)|[note](../resources/note.md)|Update the properties of a note object.|
-|[Delete](../api/note-delete.md)|None|Delete a note object.|
-|[Get delta](../api/note-delta.md)|[note](../resources/note.md) collection|Get a set of notes that were added, updated, or deleted since the last delta query.|
-|[List attachments](../api/note-list-attachments.md)|[attachment](../resources/attachment.md) collection|Get the list of file attachments associated with a note.|
-|[Create attachment](../api/note-post-attachments.md)|[attachment](../resources/attachment.md)|Add an inline image attachment to a note.|
-|[Delete attachment](../api/note-delete-attachments.md)|None|Delete an inline image attachment from a note.|
+|[List](../api/user-list-notes.md)|[note](../resources/note.md) collection|Get a list of the [note](../resources/note.md) objects in the user's Notes folder.|
+|[Create](../api/user-post-notes.md)|[note](../resources/note.md)|Create a new [note](../resources/note.md) in the user's Notes folder.|
+|[Get](../api/note-get.md)|[note](../resources/note.md)|Read the properties and relationships of a [note](../resources/note.md) object.|
+|[Update](../api/note-update.md)|[note](../resources/note.md)|Update the properties of a [note](../resources/note.md) object.|
+|[Delete](../api/note-delete.md)|None|Delete a [note](../resources/note.md) object.|
+|[Get delta](../api/note-delta.md)|[note](../resources/note.md) collection|Get a set of [note](../resources/note.md) objects that were added, updated, or deleted in the user's Notes folder since the last delta query.|
+|[List attachments](../api/note-list-attachments.md)|[attachment](../resources/attachment.md) collection|Get the list of file attachments associated with a [note](../resources/note.md).|
+|[Create attachment](../api/note-post-attachments.md)|[attachment](../resources/attachment.md)|Add an inline image attachment to a [note](../resources/note.md).|
+|[Delete attachment](../api/note-delete-attachments.md)|None|Delete an inline image attachment from a [note](../resources/note.md).|
 
 ## Properties
 |Property|Type|Description|
@@ -41,7 +41,7 @@ Inherits from [outlookItem](../resources/outlookitem.md).
 |changeKey|String|Version identifier used for optimistic concurrency control via the `If-Match` header. Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
 |createdDateTime|DateTimeOffset|The date and time when the note was created. Supports `$filter` (`eq`, `ge`, `le`, `gt`, `lt`). Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
 |hasAttachments|Boolean|Indicates whether the note has file attachments. Supports `$filter` (`eq`). Read-only.|
-|id|String|The unique identifier for the note. Read-only. Inherited from [entity](../resources/entity.md).|
+|id|String|The unique identifier for the note. Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
 |isDeleted|Boolean|Indicates whether the note is soft-deleted. Read-only.|
 |lastModifiedDateTime|DateTimeOffset|The date and time when the note was last modified. Supports `$filter` (`eq`, `ge`, `le`, `gt`, `lt`) and `$orderby`. Read-only. Inherited from [outlookItem](../resources/outlookitem.md).|
 |subject|String|The title of the note. Supports `$filter` (`eq`, `ne`, `startsWith`) and `$orderby`.|

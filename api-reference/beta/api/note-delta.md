@@ -8,7 +8,7 @@ ms.subservice: "outlook"
 doc_type: apiPageType
 ---
 
-# Note: delta
+# note: delta
 
 Namespace: microsoft.graph
 

@@ -43,7 +43,7 @@ DELETE /users/{id | userPrincipalName}/notes/{note-id}
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
-|If-Match|The note's **changeKey** value for optimistic concurrency control. Optional but recommended.|
+|If-Match|The **changeKey** value for the note is used for optimistic concurrency control. Optional. We recommend that you use this header to avoid conflicts.|
 
 ## Request body
 

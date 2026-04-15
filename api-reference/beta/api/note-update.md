@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [note](../resources/note.md) object. Supports optimistic concurrency control via the `If-Match` header with the note's **changeKey**.
+Update the properties of a [note](../resources/note.md) object. Supports optimistic concurrency control via the `If-Match` header with the **changeKey** value for the note.
 
 ## Permissions
 
@@ -44,7 +44,7 @@ PATCH /users/{id | userPrincipalName}/notes/{note-id}
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
-|If-Match|The note's **changeKey** value for optimistic concurrency control. Optional but recommended.|
+|If-Match|The **changeKey** value for the note is used for optimistic concurrency control. Optional. We recommend that you use this header to avoid conflicts.|
 
 ## Request body
 

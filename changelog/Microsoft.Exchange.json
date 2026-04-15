@@ -4,10 +4,146 @@
       "ChangeList": [
         {
           "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Resource",
+          "ChangedApiName": "note",
+          "ChangeType": "Addition",
+          "Description": "Added the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Property",
+          "ChangedApiName": "body",
+          "ChangeType": "Addition",
+          "Description": "Added the **body** property to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
           "ApiChange": "Property",
           "ChangedApiName": "bodyPreview",
           "ChangeType": "Addition",
           "Description": "Added the **bodyPreview** property to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Property",
+          "ChangedApiName": "hasAttachments",
+          "ChangeType": "Addition",
+          "Description": "Added the **hasAttachments** property to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Property",
+          "ChangedApiName": "isDeleted",
+          "ChangeType": "Addition",
+          "Description": "Added the **isDeleted** property to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Property",
+          "ChangedApiName": "subject",
+          "ChangeType": "Addition",
+          "Description": "Added the **subject** property to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "attachments",
+          "ChangeType": "Addition",
+          "Description": "Added the **attachments** relationship to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "extensions",
+          "ChangeType": "Addition",
+          "Description": "Added the **extensions** relationship to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "notes",
+          "ChangeType": "Addition",
+          "Description": "Added the **notes** relationship to the [user](https://learn.microsoft.com/en-us/graph/api/resources/user?view=graph-rest-beta) resource.",
+          "Target": "user"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "List notes",
+          "ChangeType": "Addition",
+          "Description": "Added the [List notes](https://learn.microsoft.com/en-us/graph/api/user-list-notes?view=graph-rest-beta) method to the [user](https://learn.microsoft.com/en-us/graph/api/resources/user?view=graph-rest-beta) resource.",
+          "Target": "user"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "Create note",
+          "ChangeType": "Addition",
+          "Description": "Added the [Create note](https://learn.microsoft.com/en-us/graph/api/user-post-notes?view=graph-rest-beta) method to the [user](https://learn.microsoft.com/en-us/graph/api/resources/user?view=graph-rest-beta) resource.",
+          "Target": "user"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get note",
+          "ChangeType": "Addition",
+          "Description": "Added the [Get note](https://learn.microsoft.com/en-us/graph/api/note-get?view=graph-rest-beta) method to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "Update note",
+          "ChangeType": "Addition",
+          "Description": "Added the [Update note](https://learn.microsoft.com/en-us/graph/api/note-update?view=graph-rest-beta) method to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "Delete note",
+          "ChangeType": "Addition",
+          "Description": "Added the [Delete note](https://learn.microsoft.com/en-us/graph/api/note-delete?view=graph-rest-beta) method to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "Get delta",
+          "ChangeType": "Addition",
+          "Description": "Added the [delta](https://learn.microsoft.com/en-us/graph/api/note-delta?view=graph-rest-beta) method to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "List attachments",
+          "ChangeType": "Addition",
+          "Description": "Added the [List attachments](https://learn.microsoft.com/en-us/graph/api/note-list-attachments?view=graph-rest-beta) method to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "Create attachment",
+          "ChangeType": "Addition",
+          "Description": "Added the [Create attachment](https://learn.microsoft.com/en-us/graph/api/note-post-attachments?view=graph-rest-beta) method to the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
+          "Target": "note"
+        },
+        {
+          "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
+          "ApiChange": "Method",
+          "ChangedApiName": "Delete attachment",
+          "ChangeType": "Change",
+          "Description": "Updated the [Delete attachment](https://learn.microsoft.com/en-us/graph/api/attachment-delete?view=graph-rest-beta) method to support the [note](https://learn.microsoft.com/en-us/graph/api/resources/note?view=graph-rest-beta) resource.",
           "Target": "note"
         }
       ],

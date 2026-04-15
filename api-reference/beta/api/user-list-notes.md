@@ -22,10 +22,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- {
   "blockType": "permissions",
-  "name": "note-list-permissions"
+  "name": "user-list-notes-permissions"
 }
 -->
-[!INCLUDE [permissions-table](../includes/permissions/note-list-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/user-list-notes-permissions.md)]
 
 ## HTTP request
 

@@ -8,7 +8,7 @@ ms.subservice: "outlook"
 doc_type: apiPageType
 ---
 
-# List attachments
+# List Note attachments
 
 Namespace: microsoft.graph
 
@@ -40,7 +40,13 @@ GET /users/{id | userPrincipalName}/notes/{note-id}/attachments
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$filter`, `$select`, and `$expand` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+
+You can use the `$expand` query parameter to include all of the note attachments inline with the rest of the note properties. For example:
+
+``` http
+GET https://graph.microsoft.com/beta/me/notes/{note-id}?$expand=attachments
+```
 
 ## Request headers
 
