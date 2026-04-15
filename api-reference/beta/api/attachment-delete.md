@@ -139,10 +139,10 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 ## Examples
 
 ### Example 1: Delete an event attachment
-
+The following example shows how to delete an attachment on an [event](../resources/event.md).
 #### Request
 
-The following example shows a request to delete an attachment on an event.
+The following example shows a request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -197,10 +197,10 @@ HTTP/1.1 204 No Content
 ```
 
 ### Example 2: Delete a note attachment
-
+The following example shows how to delete an attachment on a [note](../resources/note.md).
 #### Request
 
-The following example shows a request to delete an attachment on a note.
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "delete_attachment_from_note"

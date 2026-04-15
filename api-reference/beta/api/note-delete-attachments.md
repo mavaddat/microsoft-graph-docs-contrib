@@ -1,5 +1,5 @@
 ---
-title: "Delete Note attachment"
+title: "Delete attachment"
 description: "Delete an inline image attachment from a note."
 author: "rajeshvulla"
 ms.date: 04/07/2026
