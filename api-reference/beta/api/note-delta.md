@@ -61,10 +61,10 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [note](../resources/note.md) objects in the response body. The response also includes an `@odata.nextLink` URL or an `@odata.deltaLink` URL.
+If successful, this method returns a `200 OK` response code and a collection of [note](../resources/note.md) objects in the response body. The response also includes an **@odata.nextLink** URL or an **@odata.deltaLink** URL.
 
-- If an `@odata.nextLink` URL is returned, there are more pages of data to retrieve. The application continues making requests using the `@odata.nextLink` URL until an `@odata.deltaLink` URL is included in the response.
-- If an `@odata.deltaLink` URL is returned, there's no more data to return. Save the `@odata.deltaLink` URL for use in the next **delta** call.
+- If an **@odata.nextLink** URL is returned, more pages of data remain to be retrieved. The application continues making requests using the **@odata.nextLink** URL until an **@odata.deltaLink** URL is included in the response.
+- If an **@odata.deltaLink** URL is returned, no more pages of data remain to be returned. Save the **@odata.deltaLink** URL for use in the next **delta** call.
 
 ## Examples
 

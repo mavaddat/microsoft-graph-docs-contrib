@@ -1,5 +1,5 @@
 ---
-title: "List Note attachments"
+title: "List attachments"
 description: "Get the list of file attachments associated with a note."
 author: "rajeshvulla"
 ms.date: 04/07/2026
@@ -8,7 +8,7 @@ ms.subservice: "outlook"
 doc_type: apiPageType
 ---
 
-# List Note attachments
+# List attachments
 
 Namespace: microsoft.graph
 

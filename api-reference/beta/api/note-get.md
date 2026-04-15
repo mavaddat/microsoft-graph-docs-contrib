@@ -61,7 +61,7 @@ If successful, this method returns a `200 OK` response code and a [note](../reso
 ## Examples
 
 ### Example 1: Get a note
-
+The following example shows how to get a [note](../resources/note.md) object.
 #### Request
 
 The following example shows a request.
@@ -106,10 +106,11 @@ Content-Type: application/json
 ```
 
 ### Example 2: Get a note with attachments
+The following example shows how to get a [note](../resources/note.md) object using `$expand` to include attachments.
 
 #### Request
 
-The following example shows a request that uses `$expand` to include attachments.
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "get_note_with_attachments"
