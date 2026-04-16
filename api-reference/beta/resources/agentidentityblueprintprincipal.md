@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an agent identity blueprint principal in a tenant. An agent identity blueprint principal is instantiated from an [agentIdentityBlueprintPrincipal](../resources/agentidentityblueprintprincipal.md) object and is used to create [agent identities](../resources/agentidentity.md) within a Microsoft Entra ID tenant, and perform various identity management operations that affect all agent identities created.
+Represents an agent identity blueprint principal in a tenant. An agent identity blueprint principal is instantiated from an [agentIdentityBlueprint](../resources/agentidentityblueprint.md) object and is used to create [agent identities](../resources/agentidentity.md) within a Microsoft Entra ID tenant, and perform various identity management operations that affect all agent identities created.
 
 Inherits from [servicePrincipal](../resources/serviceprincipal.md).
 
