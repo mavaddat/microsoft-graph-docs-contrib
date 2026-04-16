@@ -5,7 +5,7 @@ author: "jessieli-ad"
 ms.localizationpriority: medium
 ms.subservice: change-notifications
 doc_type: apiPageType
-ms.date: 04/13/2026
+ms.date: 04/16/2026
 ---
 
 # subscription: reauthorize

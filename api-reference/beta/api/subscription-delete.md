@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: "jessieli-ad"
 doc_type: apiPageType
 ms.subservice: change-notifications
-ms.date: 04/13/2026
+ms.date: 04/16/2026
 ---
 
 # Delete subscription
