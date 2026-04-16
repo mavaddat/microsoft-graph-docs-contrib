@@ -43,6 +43,10 @@ Removed the `model` parameters and payment-model guidance from Microsoft Teams e
 
 ## April 2026: New in preview only
 
+### Teamwork and communications | Copilot AI Insights Change Notifications API
+
+Added new Copilot Graph Change Notifications API for Meetings AI Insights. This new capability allows developers to subscribe to notifications for the generation of meeting AI summaries and receive a Graph notification as soon as the summaries are fully generated and available. For more information, see [AI Insights Change Notifications](/microsoft-365/copilot/extensibility/api/ai-services/change-notifications/aiinsights-changenotifications).
+
 ### Applications
 
 Added the **deprecationDate** property to the [applicationTemplate](/graph/api/resources/applicationtemplate?view=graph-rest-beta&preserve-view=true) resource to indicate when an application will be removed from the Microsoft Entra application gallery.
