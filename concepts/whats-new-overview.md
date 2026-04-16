@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 03/18/2026
+ms.date: 04/16/2026
 ms.topic: whats-new
 ---
 
@@ -20,10 +20,19 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## April 2026: New and generally available
 
+### Applications
+
+- Added the [approvedClientApp](/graph/api/resources/approvedclientapp) resource type for managing approved client applications for [remote desktop access](/graph/api/resources/remotedesktopsecurityconfiguration).
+- Added the **managerApplications** property to the [application](/graph/api/resources/application) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint) resources to enable Microsoft first-party applications to be designated as managers of agent blueprints.
+
 ### Backup storage
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
 - A [protection policy can be deleted](/graph/api/protectionpolicybase-delete) only after it was [deactivated](/graph/api/protectionpolicybase-deactivate). When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
+
+### Identity and access | Governance
+
+Use `approverRemove` as a new supported value for the **requestType** property of the [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest) resource. For more information, see [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest).
 
 ### Teamwork and communications | Apps
 
@@ -39,10 +48,30 @@ Removed the `model` parameters and payment-model guidance from Microsoft Teams e
 
 ## April 2026: New in preview only
 
+### Applications
+
+Added the **deprecationDate** property to the [applicationTemplate](/graph/api/resources/applicationtemplate?view=graph-rest-beta&preserve-view=true) resource to indicate when an application will be removed from the Microsoft Entra application gallery.
+
 ### Backup storage
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate?view=graph-rest-beta&preserve-view=true), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
 - A [protection policy can be deleted](/graph/api/protectionpolicybase-delete?view=graph-rest-beta&preserve-view=true) only after it was [deactivated](/graph/api/protectionpolicybase-deactivate?view=graph-rest-beta&preserve-view=true). When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
+- Use the **billingPolicyId** property on [protectionUnitBase](/graph/api/resources/protectionunitbase?view=graph-rest-beta&preserve-view=true), [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true), [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true), and [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) to get or set the unique identifier of the billing policy assigned to the protection unit for cost allocation.
+- [Update](/graph/api/driveprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [driveProtectionUnit](/graph/api/resources/driveprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+- [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+- [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
+
+### Identity and access | Identity and sign-in
+
+Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
+
+### Reports | Identity and access reports
+
+Added the [azureADPremiumLicenseInsight](/graph/api/resources/azureadpremiumlicenseinsight?view=graph-rest-beta&preserve-view=true) resource and its associated APIs for getting insights into the Microsoft Entra ID P1 and P2 premium license utilization for the tenant, including feature utilization breakdowns for P1, P2, Internet Access, and Private Access features.
+
+### Security | Microsoft Defender for Identity
+
+Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true) to get the list of device types for the sensor.
 
 ### Teamwork and communications | Messaging
 
@@ -107,7 +136,7 @@ Updated the admin consent requirement for the following delegated permissions re
 >>>>>>> main
 
 - Added a known issue of RBAC in [Places update API](/graph/api/place-update): update requests may still succeed without *Exchange Administrator* role but result in unexpected behaviors.
-- When using *application permissions* with the [Create place](/graph/api/place-post), [Upsert places](/graph/api/place-patch-places), [Update place](/graph/api/place-update), and [Delete place](/graph/api/place-delete) APIs, you must configure the required `TenantPlacesManagement` role (to manage Places) and the `MailRecipient` role (to manage users and mailboxes). For more information on how to configure these roles, see [Role Based Access Control for Applications in Exchange Online](/exchange/permissions-exo/application-rbac).
+- When using *application permissions* with the [Create place](/graph/api/place-post), [Update place](/graph/api/place-update), and [Delete place](/graph/api/place-delete) APIs, you must configure the required `TenantPlacesManagement` role (to manage Places) and the `MailRecipient` role (to manage users and mailboxes). For more information on how to configure these roles, see [Role Based Access Control for Applications in Exchange Online](/exchange/permissions-exo/application-rbac).
 
 ### Device and app management | Cloud PC
 
@@ -136,23 +165,20 @@ The API also introduces supporting types including [inheritableScopes](/graph/ap
 
 Added the **createdByAppId** property to the [application](/graph/api/resources/application) and [servicePrincipal](/graph/api/resources/serviceprincipal) resources.
 
+### Identity and access | Governance
+
+- Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
+- Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
+
 ### Identity and access | Identity and sign-in
 
 - Added new authentication event resources to support Just-In-Time (JIT) user migration scenarios from legacy authentication systems:
   - Use the [onPasswordSubmitListener](/graph/api/resources/onpasswordsubmitlistener) resource to configure authentication event listeners that trigger during password submission.
   - Use the [onPasswordSubmitCustomExtension](/graph/api/resources/onpasswordsubmitcustomextension) resource to configure custom extensions that validate passwords against external legacy authentication systems.
-- Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and app service connect settings:
-  - Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting) resource type that represents the inbound app service connect settings for a cross-tenant access policy.
-  - Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting) resource type that represents the inbound Microsoft 365 collaboration settings for a cross-tenant access policy.
-  - Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting) resource type that represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy.
-  - Use the **appServiceConnectInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for inbound app service connect settings.
-  - Use the **m365CollaborationInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for inbound Microsoft 365 collaboration settings.
-  - Use the **m365CollaborationOutbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner) to get or set the default or partner-specific configuration for outbound Microsoft 365 collaboration settings.
-
-### Identity and access | Governance
-
-- Added the `allDirectoryAgentIdentities` member to the [allowedTargetScope](/graph/api/resources/enums#allowedtargetscope-values) enumeration to allow access packages to target all directory agent identities.
-- Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners) resource type that defines the sponsors or owners of a specific agent identity.
+- Added the following properties and their associated complex types to the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) resources of cross-tenant access policy APIs to support Microsoft 365 collaboration and app service connect settings:
+  - **appServiceConnectInbound** property to get or set the default or partner-specific configuration for inbound app service connect settings.
+  - **m365CollaborationInbound** property to get or set the default or partner-specific configuration for inbound Microsoft 365 collaboration settings.
+  - **m365CollaborationOutbound** property get or set the default or partner-specific configuration for outbound Microsoft 365 collaboration settings.
 
 ### People and workplace intelligence | People admin settings
 
@@ -240,16 +266,6 @@ Use the **administrationScopeTargets** relationship on the [workflowBase](/graph
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 
-### Identity and access | Identity and sign-in
-
-Added the following resources and properties to the cross-tenant access policy APIs to support Microsoft 365 collaboration and app service connect settings:
-- Added the [crossTenantAccessPolicyAppServiceConnectSetting](/graph/api/resources/crosstenantaccesspolicyappserviceconnectsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the inbound app service connect settings for a cross-tenant access policy.
-- Added the [crossTenantAccessPolicyM365CollaborationInboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationinboundsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the inbound Microsoft 365 collaboration settings for a cross-tenant access policy.
-- Added the [crossTenantAccessPolicyM365CollaborationOutboundSetting](/graph/api/resources/crosstenantaccesspolicym365collaborationoutboundsetting?view=graph-rest-beta&preserve-view=true) resource type that represents the outbound Microsoft 365 collaboration settings for a cross-tenant access policy.
-- Use the **appServiceConnectInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for inbound app service connect settings.
-- Use the **m365CollaborationInbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for inbound Microsoft 365 collaboration settings.
-- Use the **m365CollaborationOutbound** property on [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) to get or set the default or partner-specific configuration for outbound Microsoft 365 collaboration settings.
-
 ### Identity and access | Network access
 
 - Added the **homeTenantId**, **crossTenantAccessType**, and **deviceJoinType** properties to the [connection](/graph/api/resources/networkaccess-connection?view=graph-rest-beta&preserve-view=true) resource to support Bring Your Own Device (BYOD) and Business-to-Business (B2B) collaboration scenarios in Global Secure Access traffic connection logs.
@@ -273,6 +289,11 @@ Introduced the tenant governance API set to enable organizations to manage and g
 - Establishing governance relationships between a governing tenant and a governed tenant
 - Tracking established relationships 
 - Configure relationship policies
+
+### Security | Microsoft Defender for Identities
+
+- Added migration guidance for Microsoft Defender for Endpoint (MDE) advanced hunting APIs to help organizations transition from the retired APIs that were available through the `https://api.securitycenter.microsoft.com` endpoint to the advanced hunting APIs available in Microsoft Graph. For more information, see [Migrate from the older APIs](/graph/api/resources/security-api-overview#migrate-from-older-apis).
+- The Defender for Identity sensor management APIs let you discover eligible servers, control automatic onboarding, activate or deactivate the unified agent, and manage required auditing settings during activation—all through a single management interface.
 
 For more information, see [Overview of Tenant Governance APIs](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
