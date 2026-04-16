@@ -523,7 +523,7 @@ items:
   - name: External data connections
     items:
     - name: Connectors overview
-      href: /microsoft-365-copilot/extensibility/overview-copilot-connector?toc=/graph/toc.json
+      href: /microsoft-365/copilot/extensibility/overview-copilot-connector?toc=/graph/toc.json
       displayName: Microsoft Graph connectors, Microsoft 365 Copilot connectors, Copilot connectors, connect external content
     - name: Connectors experiences
       href: connecting-external-content-experiences.md
@@ -535,7 +535,7 @@ items:
     - name: Build your first connector
       items:
       - name: Build with Agents Toolkit
-        href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=graph/context
+        href: /microsoft-365/copilot/extensibility/build-your-first-connector?context=graph/context
       - name: Build with SDK
         items:
         - name: Overview
