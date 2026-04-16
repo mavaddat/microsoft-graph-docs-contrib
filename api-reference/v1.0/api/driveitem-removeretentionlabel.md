@@ -103,7 +103,7 @@ The following example shows a request.
 
 <!-- {
   "blockType": "request",
-  "name": "driveItem_removeRetentionLabel_spe_permissions_error",
+  "name": "driveItem_removeRetentionLabel_insufficientPermissions",
   "sampleKeys": ["b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7", "01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK"]
 }
 -->
@@ -127,6 +127,7 @@ Content-Type: application/json
 
 {
   "error": {
+    "@odata.type": "microsoft.graph.publicError",
     "code": "accessDenied",
     "message": "Access denied. You do not have sufficient permissions to perform this action.",
     "innerError": {

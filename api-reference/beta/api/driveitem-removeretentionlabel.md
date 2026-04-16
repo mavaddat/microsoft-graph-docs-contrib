@@ -62,7 +62,7 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 ## Examples
 
-## Example 1: Remove the retention label from a driveItem
+### Example 1: Remove the retention label from a driveItem
 
 The following example shows how to remove the retention label from a **driveItem** object.
 
@@ -129,6 +129,7 @@ Content-Type: application/json
 
 {
   "error": {
+    "@odata.type": "microsoft.graph.error",
     "code": "accessDenied",
     "message": "Access denied. You do not have sufficient permissions to perform this action.",
     "innerError": {
