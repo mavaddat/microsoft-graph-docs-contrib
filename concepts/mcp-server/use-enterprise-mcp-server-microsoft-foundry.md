@@ -1,5 +1,5 @@
 ---
-title: Use Microsoft MCP Server for Enterprise in Microsoft Foundry
+title: Use Microsoft MCP Server for Enterprise from Microsoft Foundry
 description: "Learn how to connect Microsoft MCP Server for Enterprise as a tool in your Microsoft Foundry project to query Microsoft Entra data using natural language."
 author: msewaweru
 ms.author: eunicewaweru
@@ -12,22 +12,23 @@ ms.custom: msecd-doc-authoring-106
 #customer intent: As a developer or an IT administrator, I want to integrate Microsoft MCP Server for Enterprise into my Microsoft Foundry agent so that I can query Microsoft Entra data using natural language.
 ---
 
-# Use Microsoft MCP Server for Enterprise in Microsoft Foundry
+# Use Microsoft MCP Server for Enterprise from Microsoft Foundry
 
 The [Microsoft MCP Server for Enterprise](overview.md) enables AI agents to query data in your Microsoft Entra tenant by using natural language. This article shows you how to connect the MCP Server as a tool in your Microsoft Foundry project and start querying your organization's data.
 
 ## Prerequisites
 
 - A Microsoft Entra tenant.
+- An admin user account in the tenant with the following roles assigned in the [Microsoft Entra admin center](https://entra.microsoft.com):
+  - [**Cloud Application Administrator**](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) — required to create the app registration and grant admin consent.
+  - Appropriate directory roles for the Graph operations your agent performs — required so the MCP Server can execute Graph API calls on behalf of the signed-in user.
+  - At least [**Azure AI Developer**](/azure/role-based-access-control/built-in-roles/ai-machine-learning#azure-ai-developer) role scoped to the Microsoft Foundry project resource to connect tools and use agents.
 - Complete the MCP Server provisioning steps in [Get started with the Microsoft MCP Server for Enterprise](get-started.md). For more information, see [MCP Server for Enterprise documentation](https://aka.ms/MCPServerForEnterprise).
 - A [client app registration](/entra/identity-platform/quickstart-register-app) in Microsoft Entra with the following configuration:
   - **Application (client) ID** — Note this value for use during setup.
   - **Client secret** — Go to **Certificates & secrets** > **Client secrets** and create a new secret. Copy the secret **value** for use during setup.
   - Assign the `MCP.*` API permissions to your app registration and grant admin consent. For more information, see [MCP Server for Enterprise documentation](https://aka.ms/MCPServerForEnterprise).
-  - At least [**Cloud Application Administrator**](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator) role to create the app registration and grant admin consent.
-- Appropriate Microsoft Entra directory roles for the Microsoft Graph operations your agent performs. The MCP Server executes Graph API calls on behalf of the signed-in user.
 - A Microsoft Foundry project with at least one agent configured.
-- At least [**Azure AI Developer**](/azure/role-based-access-control/built-in-roles/ai-machine-learning#azure-ai-developer) role scoped to the Microsoft Foundry project resource to connect tools and use agents.
 
 ## Connect the MCP Server as a tool in Microsoft Foundry
 
