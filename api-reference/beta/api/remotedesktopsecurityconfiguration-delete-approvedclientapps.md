@@ -1,6 +1,6 @@
 ---
-title: "Delete targetDeviceGroup"
-description: "Delete a targetDeviceGroup object for the remoteDesktopSecurityConfiguration object on the servicePrincipal."
+title: "Delete approvedClientApp"
+description: "Delete an approvedClientApp object for the remoteDesktopSecurityConfiguration object on the servicePrincipal."
 author: "mjsantani"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
@@ -8,20 +8,18 @@ doc_type: apiPageType
 ms.date: 01/02/2026
 ---
 
-# Delete targetDeviceGroup
+# Delete approvedClientApp
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Delete a [targetDeviceGroup](../resources/targetdevicegroup.md) object for the remoteDesktopSecurityConfiguration object on the servicePrincipal.
-
-Any user authenticating using the Microsoft Entra ID [Remote Desktop Services (RDS) authentication protocol](/openspecs/windows_protocols/ms-rdpbcgr/dc43f040-d75d-49a9-90c6-0c9999281136) to a [Microsoft Entra joined](/azure/active-directory/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) device that's in the removed targetDeviceGroup doesn't get SSO prompts.
+Delete a [approvedClientApp](../resources/approvedclientapp.md) object for the [remoteDesktopSecurityConfiguration](../resources/remotedesktopsecurityconfiguration.md) object on a service principal.
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "remotedesktopsecurityconfiguration_delete_targetdevicegroups" } -->
-[!INCLUDE [permissions-table](../includes/permissions/remotedesktopsecurityconfiguration-delete-targetdevicegroups-permissions.md)]
+<!-- { "blockType": "permissions", "name": "remotedesktopsecurityconfiguration_delete_approvedclientapps" } -->
+[!INCLUDE [permissions-table](../includes/permissions/remotedesktopsecurityconfiguration-delete-approvedclientapps-permissions.md)]
 
 [!INCLUDE [rbac-remote-desktop-security-config-apis](../includes/rbac-for-apis/rbac-remote-desktop-security-config-apis.md)]
 
@@ -34,8 +32,8 @@ You can address the service principal using either its **id** or **appId**. **id
 }
 -->
 ``` http
-DELETE /servicePrincipals/{id}/remoteDesktopSecurityConfiguration/targetDeviceGroups/{targetDeviceGroupId}/$ref
-DELETE /servicePrincipals(appId='{appId}')/remoteDesktopSecurityConfiguration/targetDeviceGroups/{targetDeviceGroupId}/$ref
+DELETE /servicePrincipals/{id}/remoteDesktopSecurityConfiguration/approvedClientApps/{approvedClientAppId}
+DELETE /servicePrincipals(appId='{appId}')/remoteDesktopSecurityConfiguration/approvedClientApps/{approvedClientAppId}
 ```
 
 ## Request headers
@@ -54,14 +52,13 @@ If successful, this method returns a `204 No Content` response code.
 
 ### Request
 The following example shows a request.
-
 <!-- {
   "blockType": "request",
-  "name": "delete_targetdevicegroup"
+  "name": "delete_approvedclientapp"
 }
 -->
 ``` http
-DELETE https://graph.microsoft.com/beta/servicePrincipals/00af5dfb-85da-4b41-a677-0c6b86dd34f8/remoteDesktopSecurityConfiguration/targetDeviceGroups/1a9db3ab-0acf-4808-99ae-e8ed581cb2e0/$ref
+DELETE https://graph.microsoft.com/beta/servicePrincipals/00af5dfb-85da-4b41-a677-0c6b86dd34f8/remoteDesktopSecurityConfiguration/approvedClientApps/cd57c330-a543-4249-9486-c1c257341de6
 ```
 
 ### Response
