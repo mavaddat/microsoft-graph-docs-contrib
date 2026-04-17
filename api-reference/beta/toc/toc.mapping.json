@@ -3679,6 +3679,16 @@
     {
       "name": "Tenants",
       "shouldSort": true,
+      "overview": "../../resources/tenants-overview.md",
+      "keywords": [
+        "tenant management",
+        "tenant configuration",
+        "tenant governance",
+        "Lighhouse",
+        "cross-tenant access",
+        "multitenant",
+        "backup"
+      ],
       "childNodes": [
         {
           "name": "Configuration management",
