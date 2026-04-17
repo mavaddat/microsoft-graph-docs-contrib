@@ -5,7 +5,7 @@ author: "garchiro7"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
-ms.date: 04/17/2024
+ms.date: 09/11/2024
 ---
 
 # meetingengagement resource type
@@ -20,21 +20,9 @@ Contains information associated with real-time participant interaction behaviors
 
 | Property   | Type                                    | Description |
 | ---------- | --------------------------------------- | ----------- |
-| `engagementType` | [engagementType](#engagementtype-values)  | The category of the engagement event. Required, non-nullable. |
+| `engagementType` | [meetingEngagementType](enums.md#meetingengagementtype-values) | The category of the engagement event. Required, non-nullable. |
 | `engagementSubType` | String                     | The specific engagement action within the type (e.g., `like`, `love`, `applause`, `laugh`, `surprised` for reactions; `raiseHand` for hand; `cameraOn` for camera; `unmute`, `mute` for microphone). |
 | `dateTime` | DateTime                   | The UTC date and time when the engagement event occurred. |
-
-
-#### engagementType values
-
-| Member               | Description |
-| -------------------- | ----------- |
-| `reaction`           | An emoji reaction (like, love, applause, laugh, surprised). |
-| `hand`               | A hand raise event. |
-| `camera`             | A camera toggle event. |
-| `microphone`         | A microphone mute/unmute event. |
-| `unknownFutureValue` | Evolvable enumeration sentinel value. Do not use. |
-
 ## Relationships
 None.
 
