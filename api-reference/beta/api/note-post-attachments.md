@@ -1,6 +1,6 @@
 ---
 title: "Create attachment"
-description: "Add an inline image attachment to a note."
+description: "Create a fileAttachment object, which adds an inline image attachment to a note."
 author: "rajeshvulla"
 ms.date: 04/07/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Add an inline image attachment to a [note](../resources/note.md). Only image file types (image/png, image/jpeg, image/gif, image/bmp) are supported, with a maximum size of 3 MB per attachment. Use the **contentId** property to reference the attachment in the HTML body of a note by using `<img src="cid:{contentId}" />`.
+Create a [fileAttachment](../resources/fileattachment.md) object, which adds an inline image attachment to a [note](../resources/note.md). Only image file types (image/png, image/jpeg, image/gif, or image/bmp) are supported, with a maximum size of 3 MB per attachment. Use the **contentId** property to reference the attachment in the HTML body of a note by using `<img src="cid:{contentId}" />`.
 
 ## Permissions
 

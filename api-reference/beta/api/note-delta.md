@@ -40,12 +40,12 @@ GET /users/{id | userPrincipalName}/notes/delta
 
 ## Query parameters
 
-Tracking changes in notes incurs a round of one or more **delta** function calls. If you use any query parameter (other than `$deltatoken` and `$skiptoken`), you must specify it in the initial **delta** request. Microsoft Graph automatically encodes any specified parameters into the token portion of the `@odata.nextLink` or `@odata.deltaLink` URL provided in the response.
+Tracking changes in notes incurs a round of one or more **delta** function calls. If you use any query parameter (other than `$deltatoken` and `$skiptoken`), you must specify it in the initial **delta** request. Microsoft Graph automatically encodes any specified parameters into the token portion of the **@odata.nextLink** or **@odata.deltaLink** URL provided in the response.
 
 | Query parameter | Type | Description |
 |:---|:---|:---|
-| $deltatoken | String | A [state token](/graph/delta-query-overview) returned in the `@odata.deltaLink` URL of the previous **delta** function call, indicating the completion of that round of change tracking. Save and apply the entire `@odata.deltaLink` URL including this token in the first request of the next round of change tracking for that collection.|
-| $skiptoken | String | A [state token](/graph/delta-query-overview) returned in the `@odata.nextLink` URL of the previous **delta** function call, indicating further changes to be tracked. |
+| $deltatoken | String | A [state token](/graph/delta-query-overview) returned in the **@odata.deltaLink** URL of the previous **delta** function call, indicating the completion of that round of change tracking. Save and apply the entire **@odata.deltaLink** URL, including this token, in the first request of the next round of change tracking for that collection.|
+| $skiptoken | String | A [state token](/graph/delta-query-overview) returned in the **@odata.nextLink** URL of the previous **delta** function call, indicating further changes to be tracked. |
 
 This method also supports the `$select`, `$filter`, `$orderby`, and `$top` OData query parameters to help customize the response.
 

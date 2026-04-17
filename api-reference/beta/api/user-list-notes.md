@@ -49,7 +49,7 @@ The following properties support `$filter`:
 - **lastModifiedDateTime**: `eq`, `ge`, `le`, `gt`, `lt`
 - **hasAttachments**: `eq`
 
-The following properties support `$orderby`: **createdDateTime**, **lastModifiedDateTime**, **subject**.
+The following properties support `$orderby`: **createdDateTime**, **lastModifiedDateTime**, and **subject**.
 
 ## Request headers
 

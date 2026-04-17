@@ -30,7 +30,7 @@ Inherits from [outlookItem](../resources/outlookitem.md).
 |[Delete](../api/note-delete.md)|None|Delete a [note](../resources/note.md) object.|
 |[Get delta](../api/note-delta.md)|[note](../resources/note.md) collection|Get a set of [note](../resources/note.md) objects that were added, updated, or deleted in the user's *Notes* folder since the last delta query.|
 |[List attachments](../api/note-list-attachments.md)|[attachment](../resources/attachment.md) collection|Get the list of file attachments associated with a [note](../resources/note.md).|
-|[Create attachment](../api/note-post-attachments.md)|[attachment](../resources/attachment.md)|Add an inline image attachment to a [note](../resources/note.md).|
+|[Create attachment](../api/note-post-attachments.md)|[attachment](../resources/attachment.md)|Create a [fileAttachment](../resources/fileattachment.md) object, which adds an inline image attachment to a [note](../resources/note.md).|
 |[Delete attachment](../api/attachment-delete.md)|None|Delete an inline image attachment from a [note](../resources/note.md).|
 
 ## Properties
@@ -50,7 +50,7 @@ Inherits from [outlookItem](../resources/outlookitem.md).
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|attachments|[attachment](../resources/attachment.md) collection|The file attachments for the note. Only inline image attachments (image/png, image/jpeg, image/gif, image/bmp) are supported, with a maximum size of 3 MB per attachment. Use `$expand` to retrieve attachments.|
+|attachments|[attachment](../resources/attachment.md) collection|The file attachments for the note. Only inline image attachments (image/png, image/jpeg, image/gif, or image/bmp) are supported, with a maximum size of 3 MB per attachment. Use `$expand` to retrieve attachments.|
 |extensions|[extension](../resources/extension.md) collection|The collection of open extensions defined for the note.|
 |multiValueExtendedProperties|[multiValueLegacyExtendedProperty](../resources/multivaluelegacyextendedproperty.md) collection|The collection of multi-value extended properties defined for the note.|
 |singleValueExtendedProperties|[singleValueLegacyExtendedProperty](../resources/singlevaluelegacyextendedproperty.md) collection|The collection of single-value extended properties defined for the note.|

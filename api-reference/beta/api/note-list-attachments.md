@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the list of file attachments associated with a [note](../resources/note.md). Only inline image attachments (image/png, image/jpeg, image/gif, image/bmp) are supported, with a maximum size of 3 MB per attachment.
+Get the list of file attachments associated with a [note](../resources/note.md). Only inline image attachments (image/png, image/jpeg, image/gif, or image/bmp) are supported, with a maximum size of 3 MB per attachment.
 
 ## Permissions
 
