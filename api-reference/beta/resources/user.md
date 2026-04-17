@@ -383,7 +383,7 @@ For example, Cameron is an administrator of a directory for an elementary school
 |memberOf|[directoryObject](directoryobject.md) collection|The groups, directory roles, and administrative units that the user is a member of. Read-only. Nullable. Supports `$expand`. |
 |joinedTeams|[team](team.md) collection|The Microsoft Teams teams the user is a member of. Read-only. Nullable.|
 |messages|[message](message.md) collection|The messages in a mailbox or folder. Read-only. Nullable.|
-|notes|[note](note.md) collection|The notes in the user's Notes folder. Read-only. Nullable.|
+|notes|[note](note.md) collection|The notes in the user's *Notes* folder. Read-only. Nullable.|
 |onenote|[onenote](onenote.md)| Read-only.|
 |onlineMeetings|[onlineMeeting](onlinemeeting.md) collection| Information about a meeting, including the URL used to join a meeting, the attendees list, and the description. |
 | onPremisesSyncBehavior | [onPremisesSyncBehavior](../resources/onpremisessyncbehavior.md)  | Indicates the state of synchronization for a user between the cloud and on-premises Active Directory. Supports `$filter` only with advanced query capabilities, for example, `$filter=onPremisesSyncBehavior/isCloudManaged eq true&$count=true`.|

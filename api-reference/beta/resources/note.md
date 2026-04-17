@@ -15,7 +15,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a simple note in the user's Notes folder. Notes support text content with optional inline image attachments, and are suitable for quick capture scenarios.
+Represents a simple note in the user's *Notes* folder. Notes support text content with optional inline image attachments, and are suitable for quick capture scenarios.
 
 Inherits from [outlookItem](../resources/outlookitem.md).
 
@@ -23,12 +23,12 @@ Inherits from [outlookItem](../resources/outlookitem.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/user-list-notes.md)|[note](../resources/note.md) collection|Get a list of the [note](../resources/note.md) objects in the user's Notes folder.|
-|[Create](../api/user-post-notes.md)|[note](../resources/note.md)|Create a new [note](../resources/note.md) in the user's Notes folder.|
+|[List](../api/user-list-notes.md)|[note](../resources/note.md) collection|Get a list of the [note](../resources/note.md) objects in the user's *Notes* folder.|
+|[Create](../api/user-post-notes.md)|[note](../resources/note.md)|Create a new [note](../resources/note.md) in the user's *Notes* folder.|
 |[Get](../api/note-get.md)|[note](../resources/note.md)|Read the properties and relationships of a [note](../resources/note.md) object.|
 |[Update](../api/note-update.md)|[note](../resources/note.md)|Update the properties of a [note](../resources/note.md) object.|
 |[Delete](../api/note-delete.md)|None|Delete a [note](../resources/note.md) object.|
-|[Get delta](../api/note-delta.md)|[note](../resources/note.md) collection|Get a set of [note](../resources/note.md) objects that were added, updated, or deleted in the user's Notes folder since the last delta query.|
+|[Get delta](../api/note-delta.md)|[note](../resources/note.md) collection|Get a set of [note](../resources/note.md) objects that were added, updated, or deleted in the user's *Notes* folder since the last delta query.|
 |[List attachments](../api/note-list-attachments.md)|[attachment](../resources/attachment.md) collection|Get the list of file attachments associated with a [note](../resources/note.md).|
 |[Create attachment](../api/note-post-attachments.md)|[attachment](../resources/attachment.md)|Add an inline image attachment to a [note](../resources/note.md).|
 |[Delete attachment](../api/attachment-delete.md)|None|Delete an inline image attachment from a [note](../resources/note.md).|

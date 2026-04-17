@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [note](../resources/note.md) in the user's Notes folder.
+Create a new [note](../resources/note.md) in the user's *Notes* folder.
 
 ## Permissions
 

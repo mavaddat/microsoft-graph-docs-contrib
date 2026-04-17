@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [note](../resources/note.md) objects in the user's Notes folder.
+Get a list of the [note](../resources/note.md) objects in the user's *Notes* folder.
 
 ## Permissions
 
