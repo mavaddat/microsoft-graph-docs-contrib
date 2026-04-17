@@ -32,7 +32,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Files
 
-Use the **height** and **width** parameters on the [driveItem](/graph/api/resources/driveitem) method to [download a file in another format](/graph/api/driveitem-get-content-format) when `format=jpg`.
+- Use the **height** and **width** parameters to [download a file in another format](/graph/api/driveitem-get-content-format) when `format=jpg`.
 
 ### Identity and access | Governance
 
@@ -67,7 +67,7 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 
 ### Files
 
-Use the **height** and **width** parameters on the [driveItem](/graph/api/resources/driveitem?view=graph-rest-beta&preserve-view=true) method to [download a file in another format](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) when `format=jpg`.
+- Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
 
 ### Identity and access | Identity and sign-in
 
