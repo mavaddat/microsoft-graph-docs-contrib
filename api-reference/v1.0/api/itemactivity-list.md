@@ -11,7 +11,7 @@ ms.date: 03/31/2026
 
 Namespace: microsoft.graph
 
-List the recent [activities](../resources/itemactivity.md) that took place on an item or under a hierarchy.
+List the recent [activities](../resources/itemactivity.md) that took place on a [drive](../resources/drive.md), [list](../resources/list.md), item, or within an item hierarchy.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
