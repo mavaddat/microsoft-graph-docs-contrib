@@ -126,6 +126,8 @@ The [agentUser](../resources/agentuser.md) resource inherits from this resource.
 | [Create rule](../api/mailfolder-post-messagerules.md) | [messageRule](messagerule.md) | Create a messageRule object by specifying a set of conditions and actions. |
 | [Send mail](../api/user-sendmail.md) | None | Send the message specified in the request body. |
 | [Get mail tips](../api/user-getmailtips.md) | [mailTips](mailtips.md) collection | Return the MailTips of one or more recipients as available to the signed-in user. |
+|[List notes](../api/user-list-notes.md)|[note](../resources/note.md) collection|Get a list of the [note](../resources/note.md) objects in the user's *Notes* folder.|
+|[Create note](../api/user-post-notes.md)|[note](../resources/note.md)|Create a new [note](../resources/note.md) in the user's *Notes* folder.|
 | **Notes** |||
 | [List notebooks](../api/onenote-list-notebooks.md) | [notebook](notebook.md) collection | Retrieve a list of notebook objects. |
 | [Create notebook](../api/onenote-post-notebooks.md) | [notebook](notebook.md) | Create a new OneNote notebook. |
