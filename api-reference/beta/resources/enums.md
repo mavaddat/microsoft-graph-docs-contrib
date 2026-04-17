@@ -5986,3 +5986,13 @@ Possible values for user account types (group membership), per Windows definitio
 |sessionPersistence|
 |performance|
 |unknownFutureValue|
+
+#### meetingEngagementType values
+
+| Member               |
+| -------------------- |
+| `reaction`           |
+| `hand`               |
+| `camera`             |
+| `microphone`         |
+| `unknownFutureValue` |
