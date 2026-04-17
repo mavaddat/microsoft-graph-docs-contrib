@@ -3,7 +3,6 @@
     {
       "ChangeList": [
         {
-<<<<<<< tl-add-activitites-list-v1
           "Id": "63d99556-8815-47b2-8c0c-27bedb7ecc73",
           "ApiChange": "Method",
           "ChangedApiName": "GET",
@@ -22,8 +21,6 @@
     {
       "ChangeList": [
         {
-=======
->>>>>>> main
           "Id": "e010d96a-7a4e-4b7c-aa22-05bd067da980",
           "ApiChange": "Property",
           "ChangedApiName": "itemCount",
@@ -38,10 +35,7 @@
       "CreatedDateTime": "2026-03-29T23:41:39.1409717Z",
       "WorkloadArea": "Files",
       "SubArea": ""
-<<<<<<< tl-add-activitites-list-v1
-=======
     },
->>>>>>> main
     {
       "ChangeList": [
         {
@@ -75,10 +69,7 @@
       "CreatedDateTime": "2026-03-29T01:57:33.226047Z",
       "WorkloadArea": "Files",
       "SubArea": ""
-<<<<<<< tl-add-activitites-list-v1
-=======
     },
->>>>>>> main
     {
       "ChangeList": [
         {
