@@ -352,10 +352,6 @@ items:
           href: ../../api/remotedesktopsecurityconfiguration-update.md
         - name: Delete
           href: ../../api/serviceprincipal-delete-remotedesktopsecurityconfiguration.md
-        - name: List approved client apps
-          href: ../../api/remotedesktopsecurityconfiguration-list-approvedclientapps.md
-        - name: Create approved client app
-          href: ../../api/remotedesktopsecurityconfiguration-post-approvedclientapps.md
       - name: Approved client app
         items:
         - name: Approved client app
