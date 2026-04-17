@@ -1,7 +1,7 @@
 ---
 author: daspek
 title: List activities
-description: "List the recent activities that took place on an item or under a hierarchy."
+description: "List the recent activities that took place on a drive, list, item, or within an item hierarchy."
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: onedrive
