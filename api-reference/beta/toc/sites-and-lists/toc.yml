@@ -94,7 +94,7 @@ items:
     href: ../../api/listitem-list.md
   - name: Get lists in a site
     href: ../../api/list-list.md
-  - name: Get recent activities
+  - name: List activities
     href: ../../api/itemactivity-list.md
   - name: Create item
     href: ../../api/listitem-create.md
