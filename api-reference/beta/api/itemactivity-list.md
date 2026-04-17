@@ -13,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-List the recent [activities](../resources/itemactivity.md) that took place on an item or under a hierarchy.
+List the recent [activities](../resources/itemactivity.md) that took place on a [drive](../resources/drive.md), [list](../resources/list.md), item, or within an item hierarchy.
 
 
 [activities]: ../resources/itemactivity.md

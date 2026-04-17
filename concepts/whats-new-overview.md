@@ -32,7 +32,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Files
 
-Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive) item or under a hierarchy.
+Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive), [list](/graph/api/resources/list), item, or within an item hierarchy.
 
 ### Identity and access | Governance
 

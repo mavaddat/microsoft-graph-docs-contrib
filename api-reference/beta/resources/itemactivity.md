@@ -21,7 +21,7 @@ Currently only available on SharePoint and OneDrive for Business.
 
 | Method | Return type | Description |
 |:-------|:------------|:------------|
-| [List activities](../api/itemactivity-list.md) | [itemActivity](itemactivity.md) collection | List the recent [activities](../resources/itemactivity.md) that took place on an item or under a hierarchy. |
+| [List activities](../api/itemactivity-list.md) | [itemActivity](itemactivity.md) collection | List the recent [activities](../resources/itemactivity.md) that took place on a [drive](../resources/drive.md), [list](../resources/list.md), item, or within an item hierarchy. |
 
 ## Properties
 
