@@ -45,8 +45,6 @@ Items with the **folder** facet act as containers of items and therefore have a 
 | [Get item](../api/driveitem-get.md)                                          | [driveItem](../resources/driveitem.md) |Retrieve the metadata for a **driveItem** in a drive.|
 | [Get analytics][]                                                            | [itemAnalytics][] | Get analytics for this resource.|
 | [Get activities by interval][]                                               | [itemActivityStat](../resources/itemactivitystat.md) | Get a collection of **itemActivityStats** within the specified time interval.|
-| [Get activities by interval][]                                               | [itemActivityStat](../resources/itemactivitystat.md) | Get a collection of **itemActivityStats** within the specified time interval.|
-| [Get recent activities](../api/itemactivity-list.md)       | [itemActivity](../resources/itemactivity.md) collection                         | List the recent [activities](../resources/itemactivity.md) that took place on an item or under a hierarchy.                      |
 | [List children](../api/driveitem-list-children.md)                           | [driveItem](../resources/driveitem.md) collection | Return a collection of **driveItems** in the children relationship of a **driveItem**.|
 | [List versions](../api/driveitem-list-versions.md)                           | [driveItemVersion][] collection | Retrieve the versions of a file in the current user's drive.|
 | [Create folder](../api/driveitem-post-children.md)                             | [driveItem](../resources/driveitem.md) | Create a **driveItem** in the specified drive.|
@@ -272,7 +270,6 @@ The **driveItem** resource is derived from [**baseItem**][baseItem] and inherits
 [itemReference]: itemreference.md
 [itemRetentionLabel]: itemretentionlabel.md
 [geoCoordinates]: geocoordinates.md
-[List activities]: ../api/itemactivity-list.md
 [listItem]: listitem.md
 [malware]: malware.md
 [media]: media.md
