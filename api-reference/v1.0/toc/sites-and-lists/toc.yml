@@ -60,8 +60,6 @@ items:
     href: ../../api/list-create.md
   - name: Get items
     href: ../../api/listitem-list.md
-  - name: Get recent activities
-    href: ../../api/activities-list.md
   - name: Update
     href: ../../api/listitem-update.md
   - name: Delete

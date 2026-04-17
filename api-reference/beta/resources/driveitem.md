@@ -270,7 +270,7 @@ The **driveItem** resource is derived from [**baseItem**][baseItem] and inherits
 [itemReference]: itemreference.md
 [itemRetentionLabel]: itemretentionlabel.md
 [geoCoordinates]: geocoordinates.md
-[List activities]: ../api/activities-list.md
+[List activities]: ../api/itemactivity-list.md
 [listItem]: listitem.md
 [malware]: malware.md
 [media]: media.md

@@ -129,7 +129,7 @@ The **drive** resource is derived from [**baseItem**](baseitem.md) and inherits 
 [list]: list.md
 [quota-facet]: quota.md
 [drive-resource]: drive.md
-[drive-activities]: ../api/activities-list.md
+[drive-activities]: ../api/itemactivity-list.md
 [drive-following]: ../api/drive-list-following.md
 [drive-get]: ../api/drive-get.md
 [drive-list]: ../api/drive-list.md

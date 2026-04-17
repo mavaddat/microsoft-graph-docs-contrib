@@ -14,8 +14,6 @@ items:
     href: ../../api/drive-get.md
   - name: Get drive root
     href: ../../api/driveitem-get.md
-  - name: List activities
-    href: ../../api/activities-list.md
   - name: List followed items
     href: ../../api/drive-list-following.md
   - name: List children

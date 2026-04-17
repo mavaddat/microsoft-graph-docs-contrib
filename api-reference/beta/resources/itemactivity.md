@@ -17,6 +17,12 @@ Namespace: microsoft.graph
 Provides information about activities that took place on an item or within a container.
 Currently only available on SharePoint and OneDrive for Business.
 
+## Methods
+
+| Method | Return type | Description |
+|:-------|:------------|:------------|
+| [List activities](../api/itemactivity-list.md) | [itemActivity](itemactivity.md) collection | List the recent activities that took place on an item or under a hierarchy. |
+
 ## Properties
 
 | Property | Type                    | Description                                                  |

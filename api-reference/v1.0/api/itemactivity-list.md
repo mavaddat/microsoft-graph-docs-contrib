@@ -19,8 +19,8 @@ List the recent [activities](../resources/itemactivity.md) that took place on an
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "activities_list" } -->
-[!INCLUDE [permissions-table](../includes/permissions/activities-list-permissions.md)]
+<!-- { "blockType": "permissions", "name": "itemactivity_list" } -->
+[!INCLUDE [permissions-table](../includes/permissions/itemactivity-list-permissions.md)]
 
 ## HTTP request
 
@@ -32,6 +32,10 @@ GET /drives/{drive-id}/items/{item-id}/activities
 GET /sites/{site-id}/lists/{list-id}/activities
 GET /sites/{site-id}/lists/{list-id}/items/{item-id}/activities
 ```
+
+## Optional query parameters
+
+This method doesn't support [OData query parameters](/graph/query-parameters) to customize the response.
 
 ## Request headers
 
@@ -53,10 +57,10 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 The following example shows a request.
 
-<!-- { "blockType": "request", "name": "list-activities-v1" } -->
+<!-- { "blockType": "request", "name": "list-itemactivity-v1" } -->
 
 ```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/drives/{drive-id}/items/{item-id}/activities
+GET https://graph.microsoft.com/v1.0/drives/b!kjtJnMGCeEeNkZsY18PtOiNjCV0Z9s9Fqyly8jKvPEB2kal9T5pOT5y7TXClirlE/items/01BYE5RZZ3CIHERNM6RZELODVGWI5T4B76/activities
 ```
 
 ### Response

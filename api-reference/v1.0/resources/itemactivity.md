@@ -20,6 +20,12 @@ The actions that took place within an itemActivity are detailed in the [itemActi
 
 [itemActionSet]: itemactionset.md#properties
 
+## Methods
+
+| Method | Return type | Description |
+|:-------|:------------|:------------|
+| [List activities](../api/itemactivity-list.md) | [itemActivity](itemactivity.md) collection | List the recent activities that took place on an item or under a hierarchy. |
+
 ## Properties
 
 | Property | Type                    | Description
