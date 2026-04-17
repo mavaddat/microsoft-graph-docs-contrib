@@ -162,7 +162,7 @@ Content-Type: application/json
     "endDateTime": "2020-09-11T07:30:18.0615989Z",
     "joinWebUrl": "(redacted)",
     "subject": "Create a meeting with customId provided",
-        "isBroadcast": false,
+    "isBroadcast": false,
     "autoAdmittedUsers": "EveryoneInCompany",
     "isEntryExitAnnounced": true,
     "allowedPresenters": "everyone",
