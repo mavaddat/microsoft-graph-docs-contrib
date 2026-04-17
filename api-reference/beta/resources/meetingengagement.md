@@ -1,5 +1,5 @@
 ---
-title: "meetingengagement resource type"
+title: "meetingEngagement resource type"
 description: "Contains information associated with a meeting participant interaction in an attendanceRecord."
 author: "garchiro7"
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ doc_type: resourcePageType
 ms.date: 09/11/2024
 ---
 
-# meetingengagement resource type
+# meetingEngagement resource type
 
 Namespace: microsoft.graph
 
