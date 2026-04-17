@@ -7,7 +7,7 @@ doc_type: apiPageType
 ms.subservice: onedrive
 ms.date: 04/04/2024
 ---
-# List activities (preview)
+# List activities
 
 Namespace: microsoft.graph
 
@@ -15,7 +15,6 @@ Namespace: microsoft.graph
 
 List the recent [activities](../resources/itemactivity.md) that took place on an item or under a hierarchy.
 
->**Note:** Activities is in a limited preview and is not yet available to all tenants.
 
 [activities]: ../resources/itemactivity.md
 
@@ -48,14 +47,12 @@ This method doesn't support [OData query parameters](/graph/query-parameters) to
 ### Request
 
 
-# [HTTP](#tab/http)
 <!-- { "blockType": "request", "name": "list-activities" } -->
 
 ```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/drive/activities
 ```
 
-# [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-activities-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
@@ -83,7 +80,6 @@ GET https://graph.microsoft.com/beta/me/drive/activities
 [!INCLUDE [sample-code](../includes/snippets/python/list-activities-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
----
 
 ### Response
 
