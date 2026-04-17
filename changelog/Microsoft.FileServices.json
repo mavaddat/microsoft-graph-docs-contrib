@@ -7,16 +7,16 @@
           "ApiChange": "Parameter",
           "ChangedApiName": "height",
           "ChangeType": "Addition",
-          "Description": "Added the **height** parameter to the [driveItem](https://learn.microsoft.com/en-us/graph/api/resources/driveitem?view=graph-rest-beta) method to [download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-beta).",
-          "Target": "driveItem"
+          "Description": "Added the **height** query parameter to the [API to download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-beta).",
+          "Target": "driveItem-get-content-format"
         },
         {
           "Id": "e7a4527a-30ea-4877-9cea-e7340b1f7877",
           "ApiChange": "Parameter",
           "ChangedApiName": "width",
           "ChangeType": "Addition",
-          "Description": "Added the **width** parameter to the [driveItem](https://learn.microsoft.com/en-us/graph/api/resources/driveitem?view=graph-rest-beta) method to [download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-beta).",
-          "Target": "driveItem"
+          "Description": "Added the **width** query parameter to the [API to download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-beta).",
+          "Target": "driveItem-get-content-format"
         }
       ],
       "Id": "e7a4527a-30ea-4877-9cea-e7340b1f7877",
@@ -33,16 +33,16 @@
           "ApiChange": "Parameter",
           "ChangedApiName": "height",
           "ChangeType": "Addition",
-          "Description": "Added the **height** parameter to the [driveItem](https://learn.microsoft.com/en-us/graph/api/resources/driveitem?view=graph-rest-1.0) method to [download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-1.0).",
-          "Target": "driveItem"
+          "Description": "Added the **height** query parameter to the [API to download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-1.0).",
+          "Target": "driveItem-get-content-format"
         },
         {
           "Id": "8d880708-d68a-4a9a-b72f-954b6b86e20b",
           "ApiChange": "Parameter",
           "ChangedApiName": "width",
           "ChangeType": "Addition",
-          "Description": "Added the **width** parameter to the [driveItem](https://learn.microsoft.com/en-us/graph/api/resources/driveitem?view=graph-rest-1.0) method to [download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-1.0).",
-          "Target": "driveItem"
+          "Description": "Added the **width** query parameter to the [API to download a file in another format](https://learn.microsoft.com/en-us/graph/api/driveitem-get-content-format?view=graph-rest-1.0).",
+          "Target": "driveItem-get-content-format"
         }
       ],
       "Id": "8d880708-d68a-4a9a-b72f-954b6b86e20b",
