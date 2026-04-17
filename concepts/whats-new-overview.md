@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 04/16/2026
+ms.date: 04/17/2026
 ms.topic: whats-new
 ---
 
@@ -64,6 +64,16 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 ### Identity and access | Identity and sign-in
 
 Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
+
+### Reports | Identity and access reports
+
+Added the [azureADPremiumLicenseInsight](/graph/api/resources/azureadpremiumlicenseinsight?view=graph-rest-beta&preserve-view=true) resource and its associated APIs for getting insights into the Microsoft Entra ID P1 and P2 premium license utilization for the tenant, including feature utilization breakdowns for P1, P2, Internet Access, and Private Access features.
+
+### Security | Compliance
+
+Updated the capabilities of the [auditLogQuery resource type](/graph/api/resources/security-auditlogquery?view=graph-rest-beta&preserve-view=true) and its associated methods as follows:
+- Updated the [auditLogRecordType](/graph/api/resources/security-auditlogrecordtype?view=graph-rest-beta&preserve-view=true) enumeration to represent over 400 types of audit log operations across Microsoft cloud services.
+- Added 135 new derived types of the [auditData](/graph/api/resources/security-auditdata?view=graph-rest-beta&preserve-view=true) resource to represent audit log data for specific services and features, including AI and Copilot interactions, agent management, compliance and data lifecycle management (Microsoft Purview, eDiscovery, DLP), cloud services (Azure Firewall, Microsoft Defender, Sentinel), and collaboration services (Teams, Planner, SharePoint, Viva). For a complete list of audit data types, see [auditData derived types](/graph/api/resources/security-auditdata-derived-types?view=graph-rest-beta&preserve-view=true).
 
 ### Security | Microsoft Defender for Identity
 
