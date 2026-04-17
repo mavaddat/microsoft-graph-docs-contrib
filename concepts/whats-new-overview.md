@@ -22,7 +22,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Files
 
-- Use the [List activities](/graph/api/itemactivity-list?view=graph-rest-1.0) API to retrieve recent activities that took place on a drive item or under a hierarchy.
+Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive) item or under a hierarchy.
 
 ## March 2026: New and generally available
 
