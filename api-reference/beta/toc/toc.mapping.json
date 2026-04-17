@@ -75,6 +75,7 @@
                   "name": "Remote desktop security policy",
                   "resources": [
                     "remoteDesktopSecurityConfiguration",
+                    "approvedClientApp",
                     "targetDeviceGroup"
                   ]
                 }
@@ -144,30 +145,38 @@
       "name": "Agents",
       "overview": "../../resources/agentid-platform-overview.md",
       "shouldSort": true,
-      "childNodes": [
-          {
-            "name": "Agent identities",
-            "resources": [
-              "agentIdentityBlueprint",
-              "agentIdentityBlueprintPrincipal",
-              "agentIdentity"
-            ]
-          },
-          {
-            "name": "Agent user (preview)",
-            "resources": [
-              "agentUser"
-            ]
-          },
-          {
-            "name": "Agent registry (preview)",
-            "resources": [
-              "agentRegistry",
-              "agentInstance",
-              "agentCardManifest",
-              "agentCollection"
-            ]
-          }
+      "childNodes": [ 
+        {
+          "name": "Agent identities",
+          "resources": [
+            "agentIdentityBlueprint",
+            "agentIdentityBlueprintPrincipal",
+            "agentIdentity"
+          ],
+          "childNodes": [
+            {
+              "name": "Agent identity blueprint",
+              "resources": [
+                "inheritablePermission"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Agent user (preview)",
+          "resources": [
+            "agentUser"
+          ]
+        },
+        {
+          "name": "Agent registry (preview)",
+          "resources": [
+            "agentRegistry",
+            "agentInstance",
+            "agentCardManifest",
+            "agentCollection"
+          ]
+        }
       ]
     },
     {
@@ -1122,7 +1131,8 @@
       "complexTypes": [
         "fileStorageContainerTypeRegistrationSettings",
         "fileStorageContainerTypeAgentSettings",
-        "fileStorageContainerTypeSettings"
+        "fileStorageContainerTypeSettings",
+        "sharePointGroupIdentity"
       ],
       "childNodes": [
         {
@@ -2725,11 +2735,17 @@
                     "userRegistrationActivitySummary",
                     "userSignInUsageByAuthMethodActivity"
                   ]
+                },
+                {
+                  "name": "Premium license utilization (preview)",
+                  "resources": [
+                    "azureADPremiumLicenseInsight"
+                  ]
                 }
               ]
             },
             {
-              "name": "Microsoft Entra logs",
+              "name": "Microsoft Entra logs and reports",
               "overview": "../../resources/azure-ad-auditlog-overview.md",
               "shouldSort": true,
               "resources": [
@@ -3572,6 +3588,7 @@
             "chatMessage",
             "pinnedChatMessageInfo",
             "deletedChat",
+            "targetedChatMessage",
             "team",
             "teamworkTag",
             "teamworkTagMember"
@@ -3653,8 +3670,18 @@
       ]
     },
     {
-      "name": "Tenant management",
+      "name": "Tenants",
       "shouldSort": true,
+      "overview": "../../resources/tenants-overview.md",
+      "keywords": [
+        "tenant management",
+        "tenant configuration",
+        "tenant governance",
+        "Lighhouse",
+        "cross-tenant access",
+        "multitenant",
+        "backup"
+      ],
       "childNodes": [
         {
           "name": "Configuration management",
