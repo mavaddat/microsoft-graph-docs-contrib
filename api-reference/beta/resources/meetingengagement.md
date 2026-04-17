@@ -20,7 +20,7 @@ Contains information associated with real-time participant interaction behaviors
 
 | Property   | Type                                    | Description |
 | ---------- | --------------------------------------- | ----------- |
-| `engagementType` | [engagementType](#engagementType-values)  | The category of the engagement event. Required, non-nullable. |
+| `engagementType` | [engagementType](#engagementtype-values)  | The category of the engagement event. Required, non-nullable. |
 | `engagementSubType` | String                     | The specific engagement action within the type (e.g., `like`, `love`, `applause`, `laugh`, `surprised` for reactions; `raiseHand` for hand; `cameraOn` for camera; `unmute`, `mute` for microphone). |
 | `dateTime` | DateTime                   | The UTC date and time when the engagement event occurred. |
 

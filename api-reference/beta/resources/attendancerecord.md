@@ -30,7 +30,6 @@ Contains information associated with an attendance record in a [meetingAttendanc
 | emailAddress | String | Email address of the user associated with this attendance record. |
 | engagements | [meetingengagement](../resources/meetingengagement.md) collection | List the real-time participant interaction behaviors during a meeting. |
 | externalRegistrationInformation | [virtualEventExternalRegistrationInformation](../resources/virtualeventexternalregistrationinformation.md) | The external information for a virtual event registration. |
-
 | identity | [identity](identity.md) | Identity of the user associated with this attendance record. The specific type will be one of the following derived types of [identity](identity.md), depending on the type of the user: [communicationsUserIdentity](communicationsUserIdentity.md), [azureCommunicationServicesUserIdentity](azureCommunicationServicesUserIdentity.md). |
 | role | String | Role of the attendee. The possible values are: `None`, `Attendee`, `Presenter`, and `Organizer`.  |
 | registrantId | String | Unique identifier of a [meetingRegistrant](meetingregistrantbase.md). Presents when the participant has registered for the meeting. (deprecated) |
