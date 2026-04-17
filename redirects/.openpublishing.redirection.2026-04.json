@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/‎api-reference/beta/api/activities-list.md",
+      "redirect_url": "https://learn.microsoft.com/en-us/graph/api/itemactivity-list?view=graph-rest-beta",
+      "redirect_document_id": false
+    }
+  ]
+}
