@@ -2,6 +2,8 @@
 # GENERATED FILE - DO NOT EDIT
 #
 items:
+- name: Overview
+  href: ../../resources/tenants-overview.md
 - name: Configuration management
   items:
   - name: Overview
@@ -70,7 +72,7 @@ items:
       href: ../../api/tenantgovernanceservices-tenantgovernancesetting-get.md
     - name: Update
       href: ../../api/tenantgovernanceservices-tenantgovernancesetting-update.md
-    - name: enableRelatedTenants
+    - name: Enable related tenants
       href: ../../api/tenantgovernanceservices-tenantgovernancesetting-enablerelatedtenants.md
   - name: Related tenant
     items:
