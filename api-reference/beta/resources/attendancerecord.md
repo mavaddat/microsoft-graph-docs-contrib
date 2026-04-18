@@ -77,7 +77,7 @@ The following JSON representation shows the resource type.
   },
   "engagements": [
     {
-      "@odata.type": "#microsoft.graph.meetingengagement"
+      "@odata.type": "#microsoft.graph.meetingEngagement"
     }
   ]
 }

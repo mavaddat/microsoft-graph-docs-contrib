@@ -81,7 +81,7 @@ Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/secur
 
 ### Teamwork and communications | Calls and online meetings
 
-[Meeting engagement data](/graph/api/resources/meetingengagement?view=graph-rest-beta&preserve-view=true) captures real-time participant interaction behaviors during a meeting reactions (like, love, applause, etc.), hand raises, camera toggles, and microphone mute/unmute events. This data is collected as part of the attendance report and requires a Teams Premium license.
+[Meeting engagement data](/graph/api/resources/meetingengagement?view=graph-rest-beta&preserve-view=true) captures real-time participant interaction behaviors during a meeting, including: reactions (like, love, applause, and so on), hand raises, camera toggles, and microphone mute/unmute events. This data is collected as part of the attendance report and requires a Teams Premium license.
 
 ### Teamwork and communications | Messaging
 

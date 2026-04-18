@@ -20,7 +20,7 @@ Namespace: microsoft.graph
 |reaction|
 |hand|
 |camera|
-microphone|
+|microphone|
 |unknownFutureValue|
 
 ### notifyMembers values
