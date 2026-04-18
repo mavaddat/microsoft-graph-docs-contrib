@@ -49,6 +49,18 @@
       "Cloud": "Prod",
       "Version": "v1.0",
       "CreatedDateTime": "2026-04-17T23:41:39.1409717Z",
+          "Id": "63d99556-8815-47b2-8c0c-27bedb7ecc73",
+          "ApiChange": "Method",
+          "ChangedApiName": "itemActivity: list",
+          "ChangeType": "Addition",
+          "Description": "Added the [List](https://learn.microsoft.com/en-us/graph/api/itemactivity-list?view=graph-rest-1.0) operation to the [itemActivity](https://learn.microsoft.com/en-us/graph/api/resources/itemActivity?view=graph-rest-1.0) resource.",
+          "Target": "itemActivity"
+        }
+      ],
+      "Id": "63d99556-8815-47b2-8c0c-27bedb7ecc73",
+      "Cloud": "Prod",
+      "Version": "v1.0",
+      "CreatedDateTime": "2026-04-17T00:00:00.000Z",
       "WorkloadArea": "Files",
       "SubArea": ""
     },
