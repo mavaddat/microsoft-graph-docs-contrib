@@ -209,7 +209,7 @@
           "Target": "drive"
         },
         {
-          "Id": "cfd328aa-a83a-49ed-982e-f25c37a312d2",
+          "Id": "3f2504e0-4f89-11d3-9a0c-0305e82c3301",
           "ApiChange": "Annotation",
           "ChangedApiName": "Org.OData.Core.V1.Revisions",
           "ChangeType": "Deprecation",
@@ -217,7 +217,7 @@
           "Target": "recent"
         },
         {
-          "Id": "cfd328aa-a83a-49ed-982e-f25c37a312d2",
+          "Id": "3f2504e0-4f89-11d3-9a0c-0305e82c3301",
           "ApiChange": "Annotation",
           "ChangedApiName": "Org.OData.Core.V1.Revisions",
           "ChangeType": "Deprecation",
@@ -251,7 +251,7 @@
           "Target": "drive"
         },
         {
-          "Id": "f3a53290-debd-4e11-a89e-fa38a7063991",
+          "Id": "e3a7f8c1-9d42-4b6a-8f3e-7c2d1a9b5f84",
           "ApiChange": "Annotation",
           "ChangedApiName": "Org.OData.Core.V1.Revisions",
           "ChangeType": "Deprecation",
@@ -259,7 +259,7 @@
           "Target": "recent"
         },
         {
-          "Id": "f3a53290-debd-4e11-a89e-fa38a7063991",
+          "Id": "e3a7f8c1-9d42-4b6a-8f3e-7c2d1a9b5f84",
           "ApiChange": "Annotation",
           "ChangedApiName": "Org.OData.Core.V1.Revisions",
           "ChangeType": "Deprecation",
