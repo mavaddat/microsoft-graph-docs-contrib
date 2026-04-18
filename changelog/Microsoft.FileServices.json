@@ -49,6 +49,12 @@
       "Cloud": "Prod",
       "Version": "v1.0",
       "CreatedDateTime": "2026-04-17T23:41:39.1409717Z",
+      "WorkloadArea": "Files",
+      "SubArea": ""
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "63d99556-8815-47b2-8c0c-27bedb7ecc73",
           "ApiChange": "Method",
           "ChangedApiName": "itemActivity: list",
