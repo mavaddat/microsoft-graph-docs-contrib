@@ -33,6 +33,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 ### Files
 
 - Use the **height** and **width** parameters to [download a file in another format](/graph/api/driveitem-get-content-format) when `format=jpg`.
+- Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive), [list](/graph/api/resources/list), item, or within an item hierarchy.
 
 ### Identity and access | Governance
 
@@ -72,6 +73,10 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 ### Identity and access | Identity and sign-in
 
 Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
+
+### People and workplace intelligence | Profile
+
+Use the **activities**, **awards**, and **fieldsOfStudy** properties on [educationalActivityDetail](/graph/api/resources/educationalactivitydetail?view=graph-rest-beta&preserve-view=true) to get or set collections of activities, awards, or fields of study.
 
 ### Reports | Identity and access reports
 
