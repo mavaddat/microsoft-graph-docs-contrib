@@ -32,7 +32,8 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Files
 
-Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive), [list](/graph/api/resources/list), item, or within an item hierarchy.
+- Use the **height** and **width** parameters to [download a file in another format](/graph/api/driveitem-get-content-format) when `format=jpg`.
+- Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive), [list](/graph/api/resources/list), item, or within an item hierarchy.
 
 ### Identity and access | Governance
 
@@ -67,7 +68,11 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 
 ### Identity and access | Governance
 
-Use `default`, `notVisible`, and `visible` as supported values for the **approverInformationVisibility** property of the [accessPackageApprovalStage](/graph/api/resources/accesspackageapprovalstage?view=graph-rest-beta&preserve-view=true) and [approvalStage](/graph/api/resources/approvalstage?view=graph-rest-beta&preserve-view=true) resources to indicate whether approver information is visible to the requestor.
+- Use `default`, `notVisible`, and `visible` as supported values for the **approverInformationVisibility** property of the [accessPackageApprovalStage](/graph/api/resources/accesspackageapprovalstage?view=graph-rest-beta&preserve-view=true) and [approvalStage](/graph/api/resources/approvalstage?view=graph-rest-beta&preserve-view=true) resources to indicate whether approver information is visible to the requestor.
+
+### Files
+
+- Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
 
 ### Identity and access | Identity and sign-in
 
