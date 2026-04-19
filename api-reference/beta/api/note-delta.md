@@ -1,5 +1,5 @@
 ---
-title: "Note: delta"
+title: "note: delta"
 description: "Get a set of note objects that were added, updated, or deleted in the user's Notes folder since the last delta query."
 author: "rajeshvulla"
 ms.date: 04/07/2026
