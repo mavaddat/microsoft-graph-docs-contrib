@@ -90,6 +90,7 @@ Introduced the new notes API that enables users to create and manage simple note
 - [List attachments](/graph/api/note-list-attachments?view=graph-rest-beta&preserve-view=true) for a note.
 - [Create an attachment](/graph/api/note-post-attachments?view=graph-rest-beta&preserve-view=true) on a note.
 - [Delete an attachment](/graph/api/attachment-delete?view=graph-rest-beta&preserve-view=true) from a note.
+
 ### People and workplace intelligence | Profile
 
 Use the **activities**, **awards**, and **fieldsOfStudy** properties on [educationalActivityDetail](/graph/api/resources/educationalactivitydetail?view=graph-rest-beta&preserve-view=true) to get or set collections of activities, awards, or fields of study.
