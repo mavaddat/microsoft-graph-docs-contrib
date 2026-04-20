@@ -56,7 +56,7 @@ Depending on the resource you're creating the extended property in and the permi
 | group [post](../resources/post.md) | Group.ReadWrite.All | Not supported. | Not supported. |
 | [mailFolder](../resources/mailfolder.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
 | [message](../resources/message.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
-| [note](../resources/note.md) | Notes.ReadWrite | Notes.ReadWrite | Notes.ReadWrite |
+| [note](../resources/note.md) | ShortNotes.ReadWrite | ShortNotes.ReadWrite | ShortNotes.ReadWrite |
 | [Outlook task](../resources/outlooktask.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
 | [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
 | [todoTask](../resources/todotask.md) | Tasks.ReadWrite | Not supported. | Not supported. |

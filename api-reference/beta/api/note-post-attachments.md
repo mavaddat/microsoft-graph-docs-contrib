@@ -53,12 +53,12 @@ You can specify the following properties when you create an attachment.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|@odata.type|String|Required. Set to `#microsoft.graph.fileAttachment`.|
+|@odata.type|String|The OData type of the attachment resource. Required. Set to `#microsoft.graph.fileAttachment`.|
 |name|String|The file name of the attachment. Required.|
 |contentType|String|The MIME type of the attachment. Must be an image type: `image/png`, `image/jpeg`, `image/gif`, or `image/bmp`. Required.|
 |contentBytes|String|The base64-encoded contents of the file. Required.|
 |contentId|String|The ID used for referencing the attachment in the HTML body via `cid:`. Required.|
-|isInline|Boolean|Must be set to `true` for note attachments. Required.|
+|isInline|Boolean|Indicates whether the attachment is an inline attachment. Must be set to `true` for note attachments. Required.|
 
 ## Response
 

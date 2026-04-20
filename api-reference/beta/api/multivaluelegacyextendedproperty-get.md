@@ -59,7 +59,7 @@ Depending on the resource you're getting the extended property from and the perm
 | group [post](../resources/post.md) | Group.Read.All | Not supported | Group.Read.All |
 | [mailFolder](../resources/mailfolder.md) | Mail.Read | Mail.Read | Mail.Read |
 | [message](../resources/message.md) | Mail.Read | Mail.Read | Mail.Read |
-| [note](../resources/note.md) | Notes.Read | Notes.Read | Notes.Read |
+| [note](../resources/note.md) | ShortNotes.Read | ShortNotes.Read | ShortNotes.Read |
 | [Outlook task](../resources/outlooktask.md) | Tasks.Read | Tasks.Read | Not supported |
 | [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.Read | Tasks.Read | Not supported |
 
