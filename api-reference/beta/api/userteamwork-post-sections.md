@@ -49,7 +49,7 @@ The following table lists the properties that you can set when you create a **te
 | Property | Type | Description |
 |:---------|:-----|:------------|
 | displayIcon | [sectionDisplayIcon](../resources/sectiondisplayicon.md) | The icon displayed for the section. Optional. The **skinTone** property of the icon can't be set and is derived from user settings. |
-| displayName | String | The display name of the section. Required. Maximum length is 50 characters. |
+| displayName | String | The display name of the section. Required. Maximum length is 50 characters. Display names are case-sensitive and must be unique within a user's sections. The following names are reserved for system-defined sections and can't be used: `RecentChats`, `QuickViews`, `TeamsAndChannels`, `MutedChats`, `MeetingChats`, `EngageCommunities`. |
 | isExpanded | Boolean | Indicates whether the section is expanded in the user interface. Optional. The default value is `true`. |
 | sortType | sectionSortType | The sort order of items in the section. Optional. The default value is `userDefinedCustomOrder`. The valid values for user-defined sections are: `mostRecent`, `unreadThenMostRecent`, `userDefinedCustomOrder`, `unknownFutureValue`. The `nameAlphabetical` member isn't valid for user-defined sections. |
 
@@ -59,6 +59,20 @@ If successful, this method returns a `201 Created` response code and a [teamwork
 
 > [!NOTE]
 > The response includes an updated **@odata.etag** value. Use this value as the `If-Match` header for any subsequent mutation operations.
+
+The following errors are possible.
+
+| Response code | Message |
+|:---|:---|
+| `400 Bad Request` | The 'displayName' property is required and must not be empty. |
+| `400 Bad Request` | The 'displayName' property must not exceed 50 characters. |
+| `400 Bad Request` | The section display name contains invalid characters or format. |
+| `400 Bad Request` | The 'id', 'createdDateTime', 'lastModifiedDateTime', 'sectionType', or 'isHierarchicalViewEnabled' property is read-only and must not be provided when creating a section. |
+| `400 Bad Request` | The 'displayIcon.contentUrl' property is not supported, or the 'displayIcon.displayName' or 'displayIcon.skinTone' property is read-only and must not be provided. |
+| `400 Bad Request` | The maximum number of sections has been reached. |
+| `409 Conflict` | A section with this display name already exists. Returned when the requested **displayName** matches an existing user-defined section or one of the reserved system-defined section names (`RecentChats`, `QuickViews`, `TeamsAndChannels`, `MutedChats`, `MeetingChats`, `EngageCommunities`). The comparison is case-sensitive. |
+| `412 Precondition Failed` | The `If-Match` header value doesn't match the current section hierarchy version. [List sections](userteamwork-list-sections.md) again to retrieve the current **@microsoft.graph.sectionsVersion** annotation and retry. |
+| `428 Precondition Required` | The `If-Match` header is required for this operation. |
 
 ## Examples
 
@@ -79,8 +93,7 @@ If-Match: "1742515200"
 {
   "displayName": "Project Alpha",
   "displayIcon": {
-    "iconType": "🚀",
-    "displayName": "Rocket"
+    "iconType": "🚀"
   },
   "sortType": "mostRecent"
 }

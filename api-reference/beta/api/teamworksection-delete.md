@@ -47,6 +47,15 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `204 No Content` response code. It doesn't return anything in the response body.
 
+The following errors are possible.
+
+| Response code | Message |
+|:---|:---|
+| `403 Forbidden` | This section is system-generated and cannot be modified. System-defined sections can't be deleted. |
+| `404 Not Found` | The specified section was not found. |
+| `412 Precondition Failed` | The `If-Match` header value doesn't match the current section hierarchy version. [List sections](userteamwork-list-sections.md) again to retrieve the current **@microsoft.graph.sectionsVersion** annotation and retry. |
+| `428 Precondition Required` | The `If-Match` header is required for this operation. |
+
 ## Examples
 
 ### Request

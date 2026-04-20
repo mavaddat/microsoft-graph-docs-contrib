@@ -57,15 +57,19 @@ If successful, this method returns a `201 Created` response code and a [teamwork
 > [!NOTE]
 > The response includes an updated **@odata.etag** value. Use this value as the `If-Match` header for any subsequent mutation operations.
 
-This method can also return the following errors.
+The following errors are possible.
 
-| Scenario | HTTP code | Error code | Message |
-|:---------|:----------|:-----------|:--------|
-| Item already exists in this section | `409 Conflict` | `conflict` | This item is already in this section. |
-| Item already exists in another user-defined section | `409 Conflict` | `conflict` | This item is already associated with another section. Use the [move](teamworksectionitem-move.md) API to relocate it. |
-| Maximum items per section reached | `400 Bad Request` | `badRequest` | The maximum number of items in this section is reached. |
-| Invalid item ID | `400 Bad Request` | `badRequest` | The specified item ID isn't valid. Provide a valid chat, channel, meeting, or community ID. |
-| ETag version mismatch | `412 Precondition Failed` | `preconditionFailed` | The resource was modified after it was last read. Read the latest version and retry. |
+| Response code | Message |
+|:---|:---|
+| `400 Bad Request` | The 'id' property is required and must not be empty. |
+| `400 Bad Request` | The specified item ID is not valid. Provide a valid chat, channel, meeting, or community ID. |
+| `400 Bad Request` | The maximum number of items in this section has been reached. |
+| `403 Forbidden` | Access to this resource is denied. The caller must be a member of the conversation being added. |
+| `404 Not Found` | The specified section was not found. |
+| `409 Conflict` | This item is already in this section. |
+| `409 Conflict` | This item is already associated with another section. Use the [move](teamworksectionitem-move.md) API to relocate it. The response includes a `conflictingSectionId` detail with the ID of the section that currently holds the item. |
+| `412 Precondition Failed` | The `If-Match` header value doesn't match the current section hierarchy version. [List sections](userteamwork-list-sections.md) again to retrieve the current **@microsoft.graph.sectionsVersion** annotation and retry. |
+| `428 Precondition Required` | The `If-Match` header is required for this operation. |
 
 ## Examples
 

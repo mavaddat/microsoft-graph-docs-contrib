@@ -33,7 +33,7 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 |:---------|:-----|:------------|
 | createdDateTime | DateTimeOffset | Date and time when the section was created. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`. |
 | displayIcon | [sectionDisplayIcon](sectiondisplayicon.md) | The icon displayed for the section. |
-| displayName | String | The display name of the section. Required. Maximum length is 50 characters. |
+| displayName | String | The display name of the section. Required. Maximum length is 50 characters. Display names are case-sensitive and must be unique within a user's sections. The following names are reserved for system-defined sections and can't be used when creating a user-defined section: `RecentChats`, `QuickViews`, `TeamsAndChannels`, `MutedChats`, `MeetingChats`, `EngageCommunities`. |
 | id | String | The unique identifier for the section. Read-only. |
 | isExpanded | Boolean | Indicates whether the section is expanded in the user interface. The default value is `true`. |
 | isHierarchicalViewEnabled | Boolean | Indicates whether the hierarchical view is enabled for the section. Read-only. |
@@ -48,6 +48,21 @@ Represents a section in a user's Microsoft Teams chat list that organizes chats,
 | userDefined | A section created by the user that can be renamed, reordered, and deleted. |
 | systemDefined | A section managed by the service that can't be deleted. Only the **sortType** property can be updated. |
 | unknownFutureValue | Evolvable enumeration sentinel value. Don't use. |
+
+#### System-defined sections
+
+System-defined sections are provisioned by the service and appear in every user's section list. Their **displayName** values are reserved and can't be used for user-defined sections.
+
+| displayName | Description |
+|:------------|:------------|
+| RecentChats | The default chats section. |
+| QuickViews | The Quick views section. |
+| TeamsAndChannels | The teams and channels section. |
+| MutedChats | The muted chats section. |
+| MeetingChats | The meeting chats section. |
+| EngageCommunities | The communities section. |
+
+System-defined sections can't be deleted, and only the **sortType** property can be updated. Attempts to update other properties or to delete a system-defined section return `403 Forbidden`. Listing [items](teamworksectionitem.md) on a system-defined section is not supported and returns `400 Bad Request`.
 
 ### sectionSortType values
 

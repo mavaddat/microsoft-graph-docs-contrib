@@ -57,6 +57,17 @@ If successful, this action returns a `200 OK` response code and a [teamworkSecti
 > [!NOTE]
 > The response includes an updated **@odata.etag** value. Use this value as the `If-Match` header for any subsequent mutation operations.
 
+The following errors are possible.
+
+| Response code | Message |
+|:---|:---|
+| `400 Bad Request` | The 'targetSectionId' property is required and must not be empty. |
+| `400 Bad Request` | The source and target sections must be different. |
+| `403 Forbidden` | This section is system-generated and cannot be modified. Items can't be moved into or out of system-defined sections by using this action. |
+| `404 Not Found` | The specified section was not found, or the specified item was not found in this section. |
+| `412 Precondition Failed` | The `If-Match` header value doesn't match the current section hierarchy version. [List sections](userteamwork-list-sections.md) again to retrieve the current **@microsoft.graph.sectionsVersion** annotation and retry. |
+| `428 Precondition Required` | The `If-Match` header is required for this operation. |
+
 ## Examples
 
 ### Request
