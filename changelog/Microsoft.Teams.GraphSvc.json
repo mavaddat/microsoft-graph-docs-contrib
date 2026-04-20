@@ -3583,6 +3583,32 @@
     {
       "ChangeList": [
         {
+          "Id": "e1f2a3b4-5c6d-7e8f-9a0b-c1d2e3f4a5b6",
+          "ApiChange": "Property",
+          "ChangedApiName": "layoutType",
+          "ChangeType": "Addition",
+          "Description": "Added the **layoutType** property to the [channel](https://learn.microsoft.com/en-us/graph/api/resources/channel?view=graph-rest-1.0) resource.",
+          "Target": "channel"
+        },
+        {
+          "Id": "e1f2a3b4-5c6d-7e8f-9a0b-c1d2e3f4a5b6",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "channelLayoutType",
+          "ChangeType": "Addition",
+          "Description": "Added the **channelLayoutType** enumeration type.",
+          "Target": "channelLayoutType"
+        }
+      ],
+      "Id": "e1f2a3b4-5c6d-7e8f-9a0b-c1d2e3f4a5b6",
+      "Cloud": "Prod",
+      "Version": "v1.0",
+      "CreatedDateTime": "2026-04-01T00:00:00.0000000Z",
+      "WorkloadArea": "Teamwork and communications",
+      "SubArea": "Messaging"
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "3e5eeaf8-7046-4713-ac62-2ddf24eb26f0",
           "ApiChange": "Property",
           "ChangedApiName": "migrationMode",
