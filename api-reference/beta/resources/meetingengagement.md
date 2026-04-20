@@ -34,7 +34,6 @@ The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
-
   ],
   "@odata.type": "microsoft.graph.meetingEngagement"
 }-->
