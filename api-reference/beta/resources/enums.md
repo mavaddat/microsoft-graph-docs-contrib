@@ -13,7 +13,7 @@ ms.custom: sfi-ropc-nochange
 
 Namespace: microsoft.graph
 
-### meetingEngagementType
+### meetingEngagementType values
 
 |Member|
 |:---|
