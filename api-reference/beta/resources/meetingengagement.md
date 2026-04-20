@@ -20,7 +20,7 @@ Contains information associated with real-time participant interaction behaviors
 
 | Property   | Type                                    | Description |
 | ---------- | --------------------------------------- | ----------- |
-| `engagementType` | microsoft.graph.meetingEngagementType | The category of the engagement event. Required, non-nullable. |
+| `engagementType` | String | The category of the engagement event. Required, non-nullable. |
 | `engagementSubType` | String                     | The specific engagement action within the type (e.g., `like`, `love`, `applause`, `laugh`, `surprised` for reactions; `raiseHand` for hand; `cameraOn` for camera; `unmute`, `mute` for microphone). |
 | `dateTime` | DateTime                   | The UTC date and time when the engagement event occurred. |
 
@@ -36,7 +36,7 @@ The following JSON representation shows the resource type.
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.meetingengagement"
+  "@odata.type": "microsoft.graph.meetingEngagement"
 }-->
 
 ```json
