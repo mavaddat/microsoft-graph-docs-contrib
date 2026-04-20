@@ -117,7 +117,7 @@ Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagent
 
 ### Security | Data security and compliance
 
-Use the [contentActivityMetadata](/graph/api/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track Data Loss Prevention (DLP) enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
+Use the [contentActivityMetadata](/graph/api-reference/beta/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track Data Loss Prevention (DLP) enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
 
 ## February 2026: New and generally available
 
