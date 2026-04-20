@@ -43,6 +43,6 @@ In other words, a rule match answers "Did the policy match?" and enforcement res
 
 ## Related APIs and resources
 
-- [Microsoft Purview data security and governance APIs in Microsoft Graph](/graph/concepts/security-datasecurityandgovernance-overview)
+- [Microsoft Purview data security and governance APIs in Microsoft Graph](/graph/security-datasecurityandgovernance-overview)
 - [contentActivityMetadata resource type](/graph/api/resources/contentactivitymetadata)
 - [enforcementResultStatus enum](/graph/api/resources/security-enforcementresultstatus)
