@@ -1126,7 +1126,6 @@
         "recycleBinItem",
         "sharedDriveItem",
         "sharePointGroup",
-        "sharePointGroupIdentity",
         "sharePointGroupMember"
       ],
       "complexTypes": [
