@@ -12,8 +12,6 @@ description: "Represents an identity of type sharePointGroup"
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 Represents the identity of a SharePoint group. Extends the [identity](identity.md) type with SharePoint-specific properties.
 
 Inherits from [identity](identity.md).
