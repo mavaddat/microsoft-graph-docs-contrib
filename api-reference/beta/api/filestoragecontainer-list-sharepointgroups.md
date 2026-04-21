@@ -139,7 +139,7 @@ Content-Type: application/json
 
 ### Example 2: Attempt to retrieve all the existing sharePointGroup objects that are local to a fileStorageContainer
 
-The following example attempts to retrieve all the **sharePointGroup** objects that are local to a **fileStorageContainer** identified by the container ID `b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z`; however, the **fileStorageContainer** contains no **sharePointGroup** objects.
+The following example attempts to retrieve all the **sharePointGroup** objects that are local to a **fileStorageContainer** identified by the container ID `b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_6A`; however, the **fileStorageContainer** contains no **sharePointGroup** objects.
 
 #### Request
 
@@ -151,7 +151,7 @@ The following example shows a request.
   "name": "list_sharepointgroups_2"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/sharePointGroups
+GET https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_6A/sharePointGroups
 ```
 
 # [C#](#tab/csharp)

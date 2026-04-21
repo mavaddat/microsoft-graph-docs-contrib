@@ -95,7 +95,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "principalId",
           "ChangeType": "Addition",
-          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroup?view=graph-rest-beta) resource.",
+          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-beta) resource.",
           "Target": "sharePointGroup"
         },
         {
@@ -103,7 +103,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroupIdentity",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroupIdentity?view=graph-rest-beta) resource type.",
+          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupidentity?view=graph-rest-beta) resource type.",
           "Target": "sharePointGroupIdentity"
         },
         {
@@ -111,7 +111,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "sharePointGroup",
           "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharePointIdentitySet?view=graph-rest-beta) resource.",
+          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharepointidentityset?view=graph-rest-beta) resource.",
           "Target": "sharePointIdentitySet"
         }
       ],
@@ -4625,7 +4625,7 @@
           "ApiChange": "Relationship",
           "ChangedApiName": "sharePointGroups",
           "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroups** relationship to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/fileStorageContainer?view=graph-rest-beta) resource.",
+          "Description": "Added the **sharePointGroups** relationship to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) resource.",
           "Target": "fileStorageContainer"
         },
         {
@@ -4633,7 +4633,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroup",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroup?view=graph-rest-beta) resource and associated methods.",
+          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-beta) resource and associated methods.",
           "Target": "sharePointGroup"
         },
         {
@@ -4641,7 +4641,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroupMember",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroupMember?view=graph-rest-beta) resource and associated methods.",
+          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupmember?view=graph-rest-beta) resource and associated methods.",
           "Target": "sharePointGroupMember"
         }
       ],
@@ -5575,7 +5575,7 @@
       "CreatedDateTime": "2025-12-18T05:31:00.804975Z",
       "WorkloadArea": "Files",
       "SubArea": ""
-    },    
+    },
     {
       "ChangeList": [
         {
@@ -5617,7 +5617,7 @@
       "CreatedDateTime": "2026-03-04T05:31:00.804975Z",
       "WorkloadArea": "Files",
       "SubArea": ""
-    },    
+    },
     {
       "ChangeList": [
         {
@@ -5693,7 +5693,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "principalId",
           "ChangeType": "Addition",
-          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroup?view=graph-rest-beta) resource.",
+          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-beta) resource.",
           "Target": "sharePointGroup"
         },
         {
@@ -5701,7 +5701,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroupIdentity",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroupIdentity?view=graph-rest-beta) resource.",
+          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupidentity?view=graph-rest-beta) resource.",
           "Target": "sharePointGroupIdentity"
         },
         {
@@ -5709,7 +5709,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "sharePointGroup",
           "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharePointIdentitySet?view=graph-rest-beta) resource.",
+          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharepointidentityset?view=graph-rest-beta) resource.",
           "Target": "sharePointIdentitySet"
         }
       ],
@@ -5727,7 +5727,7 @@
           "ApiChange": "Relationship",
           "ChangedApiName": "sharePointGroups",
           "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroups** relationship to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/fileStorageContainer?view=graph-rest-1.0) resource.",
+          "Description": "Added the **sharePointGroups** relationship to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource.",
           "Target": "fileStorageContainer"
         },
         {
@@ -5735,7 +5735,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroup",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroup?view=graph-rest-1.0) resource.",
+          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
           "Target": "sharePointGroup"
         },
         {
@@ -5743,7 +5743,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroupIdentity",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroupIdentity?view=graph-rest-1.0) resource.",
+          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupidentity?view=graph-rest-1.0) resource.",
           "Target": "sharePointGroupIdentity"
         },
         {
@@ -5751,7 +5751,7 @@
           "ApiChange": "Property",
           "ChangedApiName": "sharePointGroup",
           "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharePointIdentitySet?view=graph-rest-1.0) resource.",
+          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharepointidentityset?view=graph-rest-1.0) resource.",
           "Target": "sharePointIdentitySet"
         },
         {
@@ -5759,7 +5759,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroupMember",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharePointGroupMember?view=graph-rest-1.0) resource.",
+          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupmember?view=graph-rest-1.0) resource.",
           "Target": "sharePointGroupMember"
         }
       ],

@@ -49,9 +49,9 @@ The following JSON representation shows the resource type.
 }
 ```
 
-[driveItem]: driveItem.md
+[driveItem]: driveitem.md
 [identity]: identity.md
-[sharePointIdentity]: sharePointIdentity.md
+[sharePointIdentity]: sharepointidentity.md
 [sharePointGroupIdentity]: sharepointgroupidentity.md
 
 <!-- {

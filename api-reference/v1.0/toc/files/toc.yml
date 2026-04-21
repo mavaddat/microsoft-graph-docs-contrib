@@ -82,6 +82,8 @@ items:
     href: ../../api/driveitem-invite.md
   - name: List permissions
     href: ../../api/driveitem-list-permissions.md
+  - name: Create permission
+    href: ../../api/driveitem-post-permissions.md
   - name: Delete permission
     href: ../../api/permission-delete.md
   - name: Get WebSocket channel
