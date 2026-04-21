@@ -134,7 +134,7 @@ Using the **signInAudience** property to limit where an [application](/graph/api
   - [Delete column](/graph/api/filestoragecontainer-delete-column)
 - [Download a partial range of bytes from a previous version of a file](/graph/api/driveitemversion-get-contents#example-2-download-a-partial-range-of-bytes-from-a-previous-version-of-a-file).
 - Requests made using the [list containers](/graph/api/filestorage-list-containers) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
-- Create and manage [sharePointGroup](/graph/api/resources/sharepointgroup) and its members in a SharePoint Embedded container.
+- Added support for [sharePointGroup](/graph/api/resources/sharepointgroup) and its members in a SharePoint Embedded container.
 
 ### Identity and access | Directory management
 
