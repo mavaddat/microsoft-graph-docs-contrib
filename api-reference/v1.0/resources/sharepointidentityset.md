@@ -9,7 +9,7 @@ ms.date: 07/22/2024
 ---
 # sharePointIdentitySet resource type
 
-Represents a keyed collection of [sharePointIdentity](sharePointIdentity.md) resources. This resource extends from the **identitySet** resource to provide the ability to expose SharePoint-specific information to the user.
+Represents a keyed collection of [sharePointIdentity][] resources. This resource extends from the **identitySet** resource to provide the ability to expose SharePoint-specific information to the user.
 
 This resource is used to represent a set of identities associated with various events for an item, such as _created by_ or _last modified by_.
 
