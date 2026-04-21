@@ -5689,40 +5689,6 @@
     {
       "ChangeList": [
         {
-          "Id": "b9b68eda-862a-4d65-9c60-ee12f5b0f8e1",
-          "ApiChange": "Property",
-          "ChangedApiName": "principalId",
-          "ChangeType": "Addition",
-          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-beta) resource.",
-          "Target": "sharePointGroup"
-        },
-        {
-          "Id": "b9b68eda-862a-4d65-9c60-ee12f5b0f8e1",
-          "ApiChange": "Resource",
-          "ChangedApiName": "sharePointGroupIdentity",
-          "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupidentity?view=graph-rest-beta) resource.",
-          "Target": "sharePointGroupIdentity"
-        },
-        {
-          "Id": "b9b68eda-862a-4d65-9c60-ee12f5b0f8e1",
-          "ApiChange": "Property",
-          "ChangedApiName": "sharePointGroup",
-          "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharepointidentityset?view=graph-rest-beta) resource.",
-          "Target": "sharePointIdentitySet"
-        }
-      ],
-      "Id": "b9b68eda-862a-4d65-9c60-ee12f5b0f8e1",
-      "Cloud": "Prod",
-      "Version": "beta",
-      "CreatedDateTime": "2026-02-16T01:57:33.226047Z",
-      "WorkloadArea": "Files",
-      "SubArea": ""
-    },
-    {
-      "ChangeList": [
-        {
           "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
           "ApiChange": "Relationship",
           "ChangedApiName": "sharePointGroups",
@@ -5736,6 +5702,14 @@
           "ChangedApiName": "sharePointGroup",
           "ChangeType": "Addition",
           "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
+          "Target": "sharePointGroup"
+        },
+        {
+          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+          "ApiChange": "Property",
+          "ChangedApiName": "principalId",
+          "ChangeType": "Addition",
+          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
           "Target": "sharePointGroup"
         },
         {

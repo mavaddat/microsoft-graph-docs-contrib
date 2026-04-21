@@ -26,7 +26,7 @@ Represents a user or Microsoft 365 group within a [sharePointGroup](./sharepoint
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|id|String|The unique stable identifier of the **sharePointGroup**. Read-only.|
+|id|String|The unique stable identifier of the **sharePointGroupMember**. Read-only.|
 |identity|[sharePointIdentitySet](../resources/sharepointidentityset.md)|The identity represented by the **sharePointGroupMember** object.|
 
 ## Relationships
