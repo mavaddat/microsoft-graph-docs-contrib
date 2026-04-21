@@ -73,7 +73,7 @@ The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "driveitem-post-permissions-1",
-  "scopes": "filestoragecontainer.selected",
+  "scopes": "files.readwrite.all",
   "target": "action"
 } -->
 ```http
