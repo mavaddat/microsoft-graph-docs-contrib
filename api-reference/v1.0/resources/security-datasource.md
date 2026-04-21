@@ -27,8 +27,8 @@ None.
 |createdBy|[identitySet](../resources/identityset.md)|The user who created the **dataSource**.|
 |createdDateTime|DateTimeOffset|The date and time the **dataSource** was created.|
 |displayName|String|The display name of the **dataSource** and is the name of the SharePoint site.|
-|holdStatus|microsoft.graph.security.dataSourceHoldStatus|The hold status of the **dataSource**.The possible values are: `notApplied`, `applied`, `applying`, `removing`, `partial`|
-|id|String| The ID of the **dataSource**. This isn't the ID of the actual site.|
+|holdStatus|microsoft.graph.security.dataSourceHoldStatus|The hold status of the **dataSource**. The possible values are: `notApplied`, `applied`, `applying`, `removing`, `partial`.|
+|id|String| The ID of the **dataSource** and isn't the ID of the actual site.|
 
 ## Relationships
 None.
