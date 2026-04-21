@@ -97,7 +97,7 @@ Content-Type: application/json
   "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#solutions/backupRestore/sharePointBrowseSessions",
   "value": [
     {
-      "@odata.type": "#microsoft.graph.sharePointBrowseSessions",
+      "@odata.type": "#microsoft.graph.sharePointBrowseSession",
       "id": "ASAA3_8kysv7AWN-Sb9JndIPy67ZWhpFmgIk2EKs05DqCIN25Q",
       "restorePointDateTime": "2025-12-26T03:00:56Z",
       "status": "created",
