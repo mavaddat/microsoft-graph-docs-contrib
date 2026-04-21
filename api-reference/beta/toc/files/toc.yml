@@ -338,6 +338,8 @@ items:
     href: ../../api/sharepointgroup-list-members.md
   - name: Create SharePoint group member
     href: ../../api/sharepointgroup-post-members.md
+- name: SharePoint group identity
+  href: ../../resources/sharepointgroupidentity.md
 - name: SharePoint group member
   items:
   - name: SharePoint group member

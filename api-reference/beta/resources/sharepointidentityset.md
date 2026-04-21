@@ -38,7 +38,7 @@ None.
 The following JSON representation shows the resource type.
 
 <!-- { "blockType": "resource", "@odata.type": "microsoft.graph.sharePointIdentitySet",
-       "optionalProperties": ["user", "application", "group", "device", "siteUser", "siteGroup"],
+        "optionalProperties": ["user", "application", "group", "device", "siteUser", "siteGroup", "sharePointGroup"],
        "openType": true } -->
 
 ```json
@@ -58,7 +58,7 @@ The following JSON representation shows the resource type.
 [driveItem]: driveitem.md
 [identity]: identity.md
 [sharePointGroupIdentity]: sharepointgroupidentity.md
-[sharePointIdentity]: sharePointidentity.md
+[sharePointIdentity]: sharepointidentity.md
 
 <!-- {
   "type": "#page.annotation",
