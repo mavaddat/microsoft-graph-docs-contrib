@@ -3,6 +3,64 @@
     {
       "ChangeList": [
         {
+          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "sharePointGroups",
+          "ChangeType": "Addition",
+          "Description": "Added the **sharePointGroups** relationship to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource.",
+          "Target": "fileStorageContainer"
+        },
+        {
+          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+          "ApiChange": "Resource",
+          "ChangedApiName": "sharePointGroup",
+          "ChangeType": "Addition",
+          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
+          "Target": "sharePointGroup"
+        },
+        {
+          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+          "ApiChange": "Property",
+          "ChangedApiName": "principalId",
+          "ChangeType": "Addition",
+          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
+          "Target": "sharePointGroup"
+        },
+        {
+          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+          "ApiChange": "Resource",
+          "ChangedApiName": "sharePointGroupIdentity",
+          "ChangeType": "Addition",
+          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupidentity?view=graph-rest-1.0) resource.",
+          "Target": "sharePointGroupIdentity"
+        },
+        {
+          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+          "ApiChange": "Property",
+          "ChangedApiName": "sharePointGroup",
+          "ChangeType": "Addition",
+          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharepointidentityset?view=graph-rest-1.0) resource.",
+          "Target": "sharePointIdentitySet"
+        },
+        {
+          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+          "ApiChange": "Resource",
+          "ChangedApiName": "sharePointGroupMember",
+          "ChangeType": "Addition",
+          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupmember?view=graph-rest-1.0) resource.",
+          "Target": "sharePointGroupMember"
+        }
+      ],
+      "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
+      "Cloud": "Prod",
+      "Version": "v1.0",
+      "CreatedDateTime": "2026-02-19T01:57:33.2263995Z",
+      "WorkloadArea": "Files",
+      "SubArea": ""
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "e7a4527a-30ea-4877-9cea-e7340b1f7877",
           "ApiChange": "Parameter",
           "ChangedApiName": "height",
@@ -5683,64 +5741,6 @@
       "Cloud": "Prod",
       "Version": "beta",
       "CreatedDateTime": "2026-02-05T23:09:29.5797462Z",
-      "WorkloadArea": "Files",
-      "SubArea": ""
-    },
-    {
-      "ChangeList": [
-        {
-          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-          "ApiChange": "Relationship",
-          "ChangedApiName": "sharePointGroups",
-          "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroups** relationship to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource.",
-          "Target": "fileStorageContainer"
-        },
-        {
-          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-          "ApiChange": "Resource",
-          "ChangedApiName": "sharePointGroup",
-          "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
-          "Target": "sharePointGroup"
-        },
-        {
-          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-          "ApiChange": "Property",
-          "ChangedApiName": "principalId",
-          "ChangeType": "Addition",
-          "Description": "Added the **principalId** property to the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
-          "Target": "sharePointGroup"
-        },
-        {
-          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-          "ApiChange": "Resource",
-          "ChangedApiName": "sharePointGroupIdentity",
-          "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupIdentity](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupidentity?view=graph-rest-1.0) resource.",
-          "Target": "sharePointGroupIdentity"
-        },
-        {
-          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-          "ApiChange": "Property",
-          "ChangedApiName": "sharePointGroup",
-          "ChangeType": "Addition",
-          "Description": "Added the **sharePointGroup** property to the [sharePointIdentitySet](https://learn.microsoft.com/en-us/graph/api/resources/sharepointidentityset?view=graph-rest-1.0) resource.",
-          "Target": "sharePointIdentitySet"
-        },
-        {
-          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-          "ApiChange": "Resource",
-          "ChangedApiName": "sharePointGroupMember",
-          "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupmember?view=graph-rest-1.0) resource.",
-          "Target": "sharePointGroupMember"
-        }
-      ],
-      "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-      "Cloud": "Prod",
-      "Version": "v1.0",
-      "CreatedDateTime": "2026-02-19T01:57:33.2263995Z",
       "WorkloadArea": "Files",
       "SubArea": ""
     },
