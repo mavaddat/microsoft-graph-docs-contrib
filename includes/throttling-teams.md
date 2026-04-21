@@ -51,7 +51,7 @@ Limits are expressed as requests per second (rps).
 | GET /teams/```{team-id}```/channels/[getAllRetainedMessages](/graph/api/channel-getallretainedmessages) | 200rps | 1000rps |
 | GET /users/```{user-id}```/chats/[getAllRetainedMessages](/graph/api/chat-getallretainedmessages) | 200rps | 1000rps |
 | GET /copilot/users/```{user-id}```/interactionHistory/[getAllEnterpriseInteractions](/microsoft-365-copilot/extensibility/api-reference/aiinteractionhistory-getallenterpriseinteractions) | 30rps | 1500rps |
-| All section management APIs under /users/```{user-id}```/teamwork/[sections](/graph/api/resources/teamworksection?view=graph-rest-beta) | Five rps | Not currently enforced |
+| All section management APIs under /users/```{user-id}```/teamwork/[sections](/graph/api/resources/teamworksection?view=graph-rest-beta) | Five rps | N/A |
 | Other GET API calls for Microsoft Teams              | 30 rps | 1500 rps | 1rps |
 | Other API calls for Microsoft Teams              | 30 rps | 300 rps | 1rps |
 
