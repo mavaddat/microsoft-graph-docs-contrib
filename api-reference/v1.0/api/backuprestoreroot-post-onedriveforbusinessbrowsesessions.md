@@ -90,7 +90,7 @@ HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#solutions/backupRestore/sharePointBrowseSessions/$entity",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#solutions/backupRestore/oneDriveForBusinessBrowseSessions/$entity",
     "id": "m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE",
     "restorePointDateTime": "2026-01-18T03:00:15Z",
     "status": "created",
