@@ -30,7 +30,7 @@ Represents a cohort of users or Microsoft 365 groups that are localized to a Sha
 |Property|Type|Description|
 |:---|:---|:---|
 |description|String|The user-visible description of the **sharePointGroup**. Read-write.|
-|id|String|The unique stable identifier of the **sharePointGroup**. This ID is unique only within the context of a single SharePoint Embedded container or SharePoint site. Read-only.|
+|id|String|The unique stable identifier of the **sharePointGroup**. This ID is unique only within the context of a single SharePoint Embedded container. Read-only.|
 |principalId|String|The principal ID of the SharePoint group in the tenant. Read-only.|
 |title|String|The user-visible title of the **sharePointGroup**. Read-write.|
 
