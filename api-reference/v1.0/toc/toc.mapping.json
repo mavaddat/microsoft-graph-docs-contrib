@@ -72,6 +72,7 @@
                   "name": "Remote desktop security policy",
                   "resources": [
                     "remoteDesktopSecurityConfiguration",
+                    "approvedClientApp",
                     "targetDeviceGroup"
                   ]
                 }
@@ -1542,7 +1543,7 @@
               ]
             },
             {
-              "name": "Microsoft Entra logs",
+              "name": "Microsoft Entra logs and reports",
               "overview": "../../resources/azure-ad-auditlog-overview.md",
               "resources": [
                 "directoryAudit",
@@ -1777,7 +1778,8 @@
             "microsoft.graph.security.sensor",
             "microsoft.graph.security.sensorCandidate",
             "microsoft.graph.security.sensorCandidateActivationConfiguration",
-            "microsoft.graph.security.identityAccounts"
+            "microsoft.graph.security.identityAccounts",
+            "microsoft.graph.security.autoAuditingConfiguration"
           ],
           "complexTypes": [
             "microsoft.graph.security.deploymentAccessKeyType",
@@ -2262,7 +2264,7 @@
       ]
     },
     {
-      "name": "Tenant management",
+      "name": "Tenants",
       "childNodes": [
         {
           "name": "Configuration management",
