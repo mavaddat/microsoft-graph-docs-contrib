@@ -50,8 +50,8 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.ownerlessGroupPolicy",
   "isEnabled": "Boolean",
-  "notificationDurationInWeeks": "Integer",
-  "maxMembersToNotify": "Integer",
+  "notificationDurationInWeeks": "Int64",
+  "maxMembersToNotify": "Int64",
   "enabledGroupIds": [
     "String"
   ],
