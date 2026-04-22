@@ -3,6 +3,66 @@
     {
       "ChangeList": [
         {
+          "Id": "3c6e3081-1ae2-4f9d-bd88-242f194293de",
+          "ApiChange": "Member",
+          "ChangedApiName": "canceling",
+          "ChangeType": "Addition",
+          "Description": "Added the `canceling` member to the **lifecycleWorkflowProcessingStatus** enumeration.",
+          "Target": "lifecycleWorkflowProcessingStatus"
+        },
+        {
+          "Id": "3c6e3081-1ae2-4f9d-bd88-242f194293de",
+          "ApiChange": "Method",
+          "ChangedApiName": "cancelProcessing",
+          "ChangeType": "Addition",
+          "Description": "Added the [cancelProcessing](https://learn.microsoft.com/en-us/graph/api/identityGovernance-workflow-cancelProcessing?view=graph-rest-beta) method to the [workflow](https://learn.microsoft.com/en-us/graph/api/resources/identityGovernance-workflow?view=graph-rest-beta) resource.",
+          "Target": "workflow"
+        }
+      ],
+      "Id": "3c6e3081-1ae2-4f9d-bd88-242f194293de",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-04-21T20:07:39.0883626Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Governance"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "6602f266-8d62-4913-a8b3-40d5862e3ef2",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "previewScope",
+          "ChangeType": "Addition",
+          "Description": "Added the **previewScope** relationship to the [workflow](https://learn.microsoft.com/en-us/graph/api/resources/identityGovernance-workflow?view=graph-rest-beta) resource.",
+          "Target": "workflow"
+        },
+        {
+          "Id": "6602f266-8d62-4913-a8b3-40d5862e3ef2",
+          "ApiChange": "Method",
+          "ChangedApiName": "previewTaskFailures",
+          "ChangeType": "Addition",
+          "Description": "Added the [previewTaskFailures](https://learn.microsoft.com/en-us/graph/api/identityGovernance-workflow-previewTaskFailures?view=graph-rest-beta) method to the [workflow](https://learn.microsoft.com/en-us/graph/api/resources/identityGovernance-workflow?view=graph-rest-beta) resource.",
+          "Target": "workflow"
+        },
+        {
+          "Id": "6602f266-8d62-4913-a8b3-40d5862e3ef2",
+          "ApiChange": "Method",
+          "ChangedApiName": "previewWorkflow",
+          "ChangeType": "Addition",
+          "Description": "Added the [previewWorkflow](https://learn.microsoft.com/en-us/graph/api/identityGovernance-workflow-previewWorkflow?view=graph-rest-beta) method to the [workflow](https://learn.microsoft.com/en-us/graph/api/resources/identityGovernance-workflow?view=graph-rest-beta) resource.",
+          "Target": "workflow"
+        }
+      ],
+      "Id": "6602f266-8d62-4913-a8b3-40d5862e3ef2",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-03-24T20:29:37.6698166Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Governance"
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "2452248e-8074-411b-be6a-516c9cf679dc",
           "ApiChange": "Method",
           "ChangedApiName": "POST",
@@ -1411,6 +1471,24 @@
       "Cloud": "Prod",
       "Version": "beta",
       "CreatedDateTime": "2025-11-24T17:17:39.0761212Z",
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Governance"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "0cd51000-c5bc-4a2e-8278-7d75cd72921d",
+          "ApiChange": "Relationship",
+          "ChangedApiName": "administrationScopeTargets",
+          "ChangeType": "Addition",
+          "Description": "Added the **administrationScopeTargets** relationship to the [workflowBase](https://learn.microsoft.com/en-us/graph/api/resources/identityGovernance-workflowBase?view=graph-rest-1.0) resource. This relationship is also inherited by the [workflow](https://learn.microsoft.com/en-us/graph/api/resources/identitygovernance-workflow?view=graph-rest-1.0) and [workflowVersion](https://learn.microsoft.com/en-us/graph/api/resources/identitygovernance-workflowVersion?view=graph-rest-1.0) derived types.",
+          "Target": "workflowBase"
+        }
+      ],
+      "Id": "0cd51000-c5bc-4a2e-8278-7d75cd72921d",
+      "Cloud": "Prod",
+      "Version": "v1.0",
+      "CreatedDateTime": "2026-02-19T20:19:15.1249826Z",
       "WorkloadArea": "Identity and access",
       "SubArea": "Governance"
     },

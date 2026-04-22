@@ -40,7 +40,9 @@ GET /drive/root:/{path and filename}:/content?format={format}
 
 | Parameter      | Type  | Description                                                    |
 |:----------|:-------|:---------------------------------------------------------------|
-| _format_  | string | Specify the format the item's content should be downloaded as. |
+| format | String | Specify the format the item's content should be downloaded as. |
+| height | Int32  | The desired height of the converted image in pixels. Required when `format=jpg`. |
+| width | Int32  | The desired width of the converted image in pixels. Required when `format=jpg`. |
 
 ### Format options
 
@@ -48,8 +50,9 @@ The following values are valid for the **format** parameter:
 
 | Format value | Description                        | Supported source extensions
 |:-------------|:-----------------------------------|----------------------------
+| jpg          | Converts the item into JPG format. | 3g2, 3gp, 3gp2, 3gpp, 3mf, ai, arw, asf, avi, bas, bash, bat, bmp, c, cbl, cmd, cool, cpp, cr2, crw, cs, css, csv, cur, dcm, dcm30, dic, dicm, dicom, dng, doc, docx, dwg, eml, epi, eps, epsf, epsi, epub, erf, fbx, fppx, gif, glb, h, hcp, heic, heif, htm, html, ico, icon, java, jfif, jpeg, jpg, js, json, key, log, m2ts, m4a, m4v, markdown, md, mef, mov, movie, mp3, mp4, mp4v, mrw, msg, mts, nef, nrw, numbers, obj, odp, odt, ogg, orf, pages, pano, pdf, pef, php, pict, pl, ply, png, pot, potm, potx, pps, ppsx, ppsxm, ppt, pptm, pptx, ps, ps1, psb, psd, py, raw, rb, rtf, rw1, rw2, sh, sketch, sql, sr2, stl, tif, tiff, ts, txt, vb, webm, wma, wmv, xaml, xbm, xcf, xd, xml, xpm, yaml, yml
 | pdf          | Converts the item into PDF format. | doc, docx, dot, dotx, dotm, dsn, dwg, eml, epub, fluidframework, form, htm, html, loop, loot, markdown, md, msg, note, odp, ods, odt, page, pps, ppsx, ppt, pptx, pulse, rtf, task, tif, tiff, wbtx, whiteboard, xls, xlsm, xlsx
-| html         | Converts the item into HTML format.| loop, fluid, wbtx
+| html         | Converts the item into HTML format.| loop, fluid, wbtx, whiteboard
 
 ## Request headers
 
@@ -59,6 +62,10 @@ The following values are valid for the **format** parameter:
 | _if-none-match_ | String. If this request header is included and the eTag (or cTag) provided matches the current tag on the file, an `HTTP 304 Not Modified` response is returned. |
 
 ## Example
+
+### Request
+
+The following example shows a request.
 
 # [HTTP](#tab/http)
 <!-- { "blockType": "request", "name": "convert-item-content", "scopes": "files.read" } -->
@@ -97,9 +104,9 @@ GET /me/drive/items/{item-id}/content?format={format}
 
 ---
 
-## Response
+### Response
 
-Returns a `302 Found` response redirecting to a preauthenticated download URL for the converted file.
+The following example shows the response. It returns a `302 Found` response redirecting to a preauthenticated download URL for the converted file.
 
 To download the converted file, your app must follow the `Location` header in the response.
 
@@ -114,7 +121,7 @@ Location: https://b0mpua-by3301.files.1drv.com/y23vmagahszhxzlcvhasdhasghasodfi
 
 ### Error responses
 
-For more information about how errors are returned, see [Error Responses][error-response].
+For more information about how errors are returned, see [Error responses][error-response].
 
 [error-response]: /graph/errors
 [file-facet]: ../resources/file.md
