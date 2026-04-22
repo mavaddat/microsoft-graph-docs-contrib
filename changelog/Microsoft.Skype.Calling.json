@@ -13,7 +13,7 @@
         {
           "Id": "96c4625a-00e0-4233-8069-71053205f202",
           "ApiChange": "Property",
-          "ChangedApiName": "attendanceRecord",
+          "ChangedApiName": "engagements",
           "ChangeType": "Addition",
           "Description": "Added the **engagements** property to the [attendanceRecord](https://learn.microsoft.com/en-us/graph/api/resources/attendanceRecord?view=graph-rest-beta) resource.",
           "Target": "attendanceRecord"
