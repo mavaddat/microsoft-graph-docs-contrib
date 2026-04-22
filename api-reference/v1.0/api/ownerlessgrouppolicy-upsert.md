@@ -2,7 +2,7 @@
 title: "Create or update ownerlessGroupPolicy"
 description: "Create or update the ownerless group policy for the tenant using upsert semantics."
 author: "Ananya-Sharma"
-ms.date: 02/12/2026
+ms.date: 04/22/2026
 ms.localizationpriority: medium
 ms.subservice: "exchange"
 doc_type: apiPageType
@@ -12,13 +12,9 @@ doc_type: apiPageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 Create or update the [ownerlessGroupPolicy](../resources/ownerlessgrouppolicy.md) for the tenant. If the policy doesn't exist, it creates a new one; if the policy exists, it updates the existing policy.
 
 To disable the policy, set **isEnabled** to `false`. Setting **isEnabled** to `false` clears the values of all other policy parameters.
-
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -54,7 +50,7 @@ In the request body, supply a JSON representation of the [ownerlessGroupPolicy](
 |Property|Type|Description|
 |:---|:---|:---|
 |emailInfo|[emailDetails](../resources/emaildetails.md)|The email notification details for the ownerless group policy. Required.|
-|enabledGroupIds|String collection|The collection of IDs for Microsoft 365 groups for which the policy is enabled. Required.|
+|enabledGroupIds|String collection|The collection of IDs for Microsoft 365 groups for which the policy is enabled. If empty, the policy is enabled for all groups in the tenant. Required.|
 |isEnabled|Boolean|Indicates whether the ownerless group policy is enabled. Setting this property to `false` clears the values of all other policy parameters. Required.|
 |maxMembersToNotify|Int64|The maximum number of members to notify. Value range is 0-90. Required.|
 |notificationDurationInWeeks|Int64|The number of weeks for the notification duration. Value range is 1-7. Required.|
@@ -79,14 +75,13 @@ If successful, this method returns a `200 OK` response code and an updated [owne
 #### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_ownerlessgrouppolicy"
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/policies/ownerlessGroupPolicy
+PATCH https://graph.microsoft.com/v1.0/policies/ownerlessGroupPolicy
 Content-Type: application/json
 
 {
@@ -112,32 +107,6 @@ Content-Type: application/json
   }
 }
 ```
-
-# [C#](#tab/csharp)
-[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/update-ownerlessgrouppolicy-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 #### Response
 
@@ -185,46 +154,19 @@ Content-Type: application/json
 #### Request
 
 The following example shows a request.
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "disable_ownerlessgrouppolicy"
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/policies/ownerlessGroupPolicy
+PATCH https://graph.microsoft.com/v1.0/policies/ownerlessGroupPolicy
 Content-Type: application/json
 
 {
   "isEnabled": false
 }
 ```
-
-# [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/disable-ownerlessgrouppolicy-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/disable-ownerlessgrouppolicy-go-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/disable-ownerlessgrouppolicy-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/disable-ownerlessgrouppolicy-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/disable-ownerlessgrouppolicy-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/disable-ownerlessgrouppolicy-python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 #### Response
 

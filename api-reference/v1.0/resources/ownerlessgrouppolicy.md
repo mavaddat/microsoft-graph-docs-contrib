@@ -2,7 +2,7 @@
 title: "ownerlessGroupPolicy resource type"
 description: "Represents the configuration for managing M365 groups that have lost their sole owner."
 author: "Ananya-Sharma"
-ms.date: 02/12/2026
+ms.date: 04/22/2026
 ms.localizationpriority: medium
 ms.subservice: "exchange"
 doc_type: resourcePageType
@@ -11,8 +11,6 @@ doc_type: resourcePageType
 # ownerlessGroupPolicy resource type
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents the configuration for managing [Microsoft 365 groups](../resources/group.md) that have lost their sole owner. Use this policy to send actionable notification emails to active members of ownerless groups to accept ownership. Administrators can configure notification duration, maximum members to notify, and control ownership eligibility by using security groups.
 
