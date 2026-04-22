@@ -86,7 +86,7 @@ HTTP/1.1 204 No Content
 The following example attempts to delete a **sharePointGroup** identified by the ID `ZGYwZTEzYTgtOTExOS00MjdmLWEzNjktOTdjOWM3YjNlYjcyXzE1` from the **fileStorageContainer** identified by the container ID `b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z`; however, the group doesn't exist in the container.
 
 #### Request
-
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "delete_nonexisting_sharepointgroup"
