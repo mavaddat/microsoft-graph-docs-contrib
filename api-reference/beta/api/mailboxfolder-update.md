@@ -19,6 +19,9 @@ Update [mailboxFolder](../resources/mailboxfolder.md) properties such as the **d
 > [!NOTE]
 > The folder **type** can't be updated. Instead, the folder needs to be deleted and a new folder can be created.
 
+> [!NOTE]
+> **Archive mailboxes with auto-expanded folders:** When the target folder physically resides in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).

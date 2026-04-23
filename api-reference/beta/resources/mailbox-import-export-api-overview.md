@@ -50,3 +50,4 @@ Use the mailbox import and export APIs in Microsoft Graph to import and export c
 ## Related content
 
 - [Import an Exchange mailbox item using the mailbox import and export APIs](/graph/import-exchange-mailbox-item)
+- [Handle archive mailbox redirects](handle-archive-mailbox-redirects.md)
