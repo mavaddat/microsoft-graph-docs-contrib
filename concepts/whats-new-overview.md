@@ -94,7 +94,7 @@ Updated the capabilities of the [auditLogQuery resource type](/graph/api/resourc
 
 ### Security | Data security and compliance
 
-Added the [contentActivityMetadata](/graph/api-reference/beta/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track Data Loss Prevention (DLP) enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
+Added the [contentActivityMetadata](/graph/api/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track Data Loss Prevention (DLP) enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
 
 ### Security | Microsoft Defender for Identity
 
