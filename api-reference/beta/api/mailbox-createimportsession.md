@@ -18,9 +18,6 @@ Create a session to [import an Exchange mailbox item](/graph/import-exchange-mai
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
-> [!NOTE]
-> **Archive mailboxes with auto-expanded folders:** When you attempt to import an item into a folder that physically resides in an auxiliary (auto-expanded) archive mailbox, you may receive an HTTP 409 Conflict response indicating the correct target mailbox. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
-
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -116,3 +113,6 @@ Content-length: 232
     "expirationDateTime": "2024-10-17T19:00:48.1052906Z"
 }
 ```
+
+> [!NOTE]
+> **Archive mailboxes with auto-expanded folders:** When you attempt to import an item into a folder that physically resides in an auxiliary (auto-expanded) archive mailbox, you may receive an HTTP 409 Conflict response indicating the correct target mailbox. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).

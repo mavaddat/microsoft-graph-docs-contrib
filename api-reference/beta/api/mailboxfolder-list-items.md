@@ -18,9 +18,6 @@ Get the [mailboxItem](../resources/mailboxitem.md) collection within a specified
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
-> [!NOTE]
-> **Archive mailboxes with auto-expanded folders:** When the target folder or items physically reside in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
-
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -220,3 +217,6 @@ Content-length: 232
     "@odata.nextLink": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders('Inbox')/items?%24filter=createdDateTime+ge+2021-08-21+and+createdDateTime+lt+2021-09-16&%24select=type%2csize&%24top=1&%24skip=1"
 }
 ```
+
+> [!NOTE]
+> **Archive mailboxes with auto-expanded folders:** When the target folder or items physically reside in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
