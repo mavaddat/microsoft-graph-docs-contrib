@@ -7,7 +7,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "meetingEngagement",
           "ChangeType": "Addition",
-          "Description": "Added the [engagements](https://learn.microsoft.com/en-us/graph/api/resources/meetingengagement?view=graph-rest-beta) resource.",
+          "Description": "Added the [meetingEngagement](https://learn.microsoft.com/en-us/graph/api/resources/meetingengagement?view=graph-rest-beta) resource.",
           "Target": "meetingEngagement"
         },
         {
