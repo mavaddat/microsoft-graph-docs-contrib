@@ -3923,6 +3923,17 @@ Possible values for user account types (group membership), per Windows definitio
 | strategic |
 | unknownFutureValue |
 
+### sectionIconSkinTone values
+
+| Member |
+| ------------------ |
+| light |
+| mediumLight |
+| medium |
+| mediumDark |
+| dark |
+| unknownFutureValue |
+
 ### serviceHealthClassificationType values
 
 | Member |
