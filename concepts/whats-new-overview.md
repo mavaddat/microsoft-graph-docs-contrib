@@ -72,7 +72,8 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 
 ### Files
 
-Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
+- Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
+- Use the **itemCount** property on the [list](/graph/api/resources/list?view=graph-rest-beta&preserve-view=true) resource to quickly access the total number of items in a SharePoint list without retrieving all items or making additional queries.
 
 ### Identity and access | Governance
 
@@ -242,7 +243,6 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 - Use the [list](/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta&preserve-view=true), [create](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta&preserve-view=true), [get](/graph/api/filestoragecontainertype-get-permission?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/filestoragecontainertype-delete-permissions?view=graph-rest-beta&preserve-view=true) APIs to manage user permissions for SharePoint Embedded [file storage container types](/graph/api/resources/filestoragecontainertype?view=graph-rest-beta&preserve-view=true).
 - [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
 - Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
-- Use the **itemCount** property on the [list](/graph/api/resources/list?view=graph-rest-beta&preserve-view=true) resource to quickly access the total number of items in a SharePoint list without retrieving all items or making additional queries.
 - Use the **principalId** property on [sharePointGroup](/graph/api/resources/sharepointgroup?view=graph-rest-beta&preserve-view=true) to get the principal ID of the SharePoint group in the tenant.
 - Use the **sharePointGroup** property on [sharePointIdentitySet](/graph/api/resources/sharepointidentityset?view=graph-rest-beta&preserve-view=true) to get the SharePoint group associated with a **sharePointIdentitySet** object.
 
