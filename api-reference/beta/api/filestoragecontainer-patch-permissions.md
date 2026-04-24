@@ -1,23 +1,23 @@
 ---
-title: "Delta patch permissions"
+title: "Patch permissions"
 description: "Use delta patch to bulk manage permissions on a fileStorageContainer."
 author: "RushwantKoppolu"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
-ms.date: 04/22/2026
+ms.date: 04/24/2026
 ---
 
-# Delta patch permissions
+# Patch permissions
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Add up to 10 [permission](../resources/permission.md) objects to an existing [fileStorageContainer](../resources/filestoragecontainer.md) in a single request using delta patch.
+Manage up to 10 [permission](../resources/permission.md) objects on an existing [fileStorageContainer](../resources/filestoragecontainer.md) in a single request using delta patch. Delta patch allows the caller to create, update, or delete multiple permissions with a single request.
 
 > [!NOTE]
-> Currently, we only support bulk **creating** permissions. Bulk updating and deleting permissions will be supported in the future.
+> Currently, only bulk **creating** permissions is supported. Bulk updating and deleting permissions will be supported in the future.
 
 > [!IMPORTANT]
 > Permissions added to a [fileStorageContainer](../resources/filestoragecontainer.md) apply to all its [driveItem](../resources/driveitem.md) objects, regardless of any unique or restrictive permissions applied to those items.
@@ -28,8 +28,8 @@ Add up to 10 [permission](../resources/permission.md) objects to an existing [fi
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "filestoragecontainer_deltapatch_permissions" } -->
-[!INCLUDE [permissions-table](../includes/permissions/filestoragecontainer-deltapatch-permissions-permissions.md)]
+<!-- { "blockType": "permissions", "name": "filestoragecontainer_patch_permissions" } -->
+[!INCLUDE [permissions-table](../includes/permissions/filestoragecontainer-patch-permissions-permissions.md)]
 
 [!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-permissions.md)]
 
@@ -78,7 +78,7 @@ The following example shows how to add three permissions to a container in a sin
 
 <!-- {
   "blockType": "request",
-  "name": "deltapatch_permissions"
+  "name": "patch_permissions"
 }
 -->
 ```http

@@ -33,7 +33,7 @@ Represents a location where multiple users or a group of users can store files a
 |[Add permissions](../api/filestoragecontainer-post-permissions.md)|[permission](../resources/permission.md)|Add permission to a fileStorageContainer.|
 |[Update permissions](../api/filestoragecontainer-update-permissions.md)|[permission](../resources/permission.md)|Update permission on a fileStorageContainer.|
 |[Delete permissions](../api/filestoragecontainer-delete-permissions.md)|None|Delete permission from a fileStorageContainer.|
-|[Delta patch permissions](../api/filestoragecontainer-deltapatch-permissions.md)|[permission](../resources/permission.md) collection|Manage permissions on a fileStorageContainer in bulk using delta patch.|
+|[Patch permissions](../api/filestoragecontainer-patch-permissions.md)|[permission](../resources/permission.md) collection|Manage permissions on a fileStorageContainer in bulk using delta patch.|
 |[List custom property](../api/filestoragecontainer-list-customproperty.md)|[filestoragecontainercustompropertyvalue](../resources/filestoragecontainercustompropertyvalue.md) collection|List custom properties of the fileStorageContainer.|
 |[Add custom property](../api/filestoragecontainer-post-customproperty.md)|[filestoragecontainercustompropertyvalue](../resources/filestoragecontainercustompropertyvalue.md)|Create custom property to the fileStorageContainer.|
 |[Update custom property](../api/filestoragecontainer-update-customproperty.md)|[filestoragecontainercustompropertyvalue](../resources/filestoragecontainercustompropertyvalue.md)|Update custom property on a fileStorageContainer.|
