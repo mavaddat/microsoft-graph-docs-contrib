@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 03/18/2026
+ms.date: 04/17/2026
 ms.topic: whats-new
 ---
 
@@ -20,10 +20,20 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ## April 2026: New and generally available
 
+### Applications
+
+- Added the [approvedClientApp](/graph/api/resources/approvedclientapp) resource type for managing approved client applications for [remote desktop access](/graph/api/resources/remotedesktopsecurityconfiguration).
+- Added the **managerApplications** property to the [application](/graph/api/resources/application) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint) resources to enable Microsoft first-party applications to be designated as managers of agent blueprints.
+
 ### Backup storage
 
 - When a [protection policy is deactivated](/graph/api/protectionpolicybase-deactivate), backup activity stops immediately, no new backups are taken, and the protected resources are no longer covered by the policy. Any backups taken before deactivation are retained according to the retention policy, after which they're offboarded. You can restore data using previous restore points even after deactivation.
 - A [protection policy can be deleted](/graph/api/protectionpolicybase-delete) only after it was [deactivated](/graph/api/protectionpolicybase-deactivate). When you delete a policy, all associated protection units are removed, and backup protection stops for the resources previously covered by the policy. Existing backup data is retained according to the retention policy before it's offboarded. You can restore data using previous restore points even after deletion.
+
+### Files
+
+- Use the **height** and **width** parameters to [download a file in another format](/graph/api/driveitem-get-content-format) when `format=jpg`.
+- Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive), [list](/graph/api/resources/list), item, or within an item hierarchy.
 
 ### Identity and access | Governance
 
@@ -39,7 +49,11 @@ Manage Teams apps at the channel level within a team using the following APIs:
 
 ### Teamwork and communications | Messaging
 
-Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
+- Removed the `model` parameters and payment-model guidance from Microsoft Teams export APIs and related change-notification documentation. The `model` query parameter is no longer required and is ignored if supplied. For more information, see [Payment models and licensing requirements for Microsoft Teams APIs](/graph/teams-licenses).
+- The following Microsoft Teams APIs support **@odata.nextLink** pagination to handle increased channel limits. When the result set spans multiple pages, the response includes the **@odata.nextLink** property with a URL for retrieving the next page of results:
+  - [List channels](/graph/api/channel-list)
+  - [List incomingChannels](/graph/api/team-list-incomingchannels)
+  - [List allChannels](/graph/api/team-list-allchannels)
 
 ## April 2026: New in preview only
 
@@ -56,13 +70,50 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 - [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 - [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 
+### Files
+
+- Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
+- Use the **itemCount** property on the [list](/graph/api/resources/list?view=graph-rest-beta&preserve-view=true) resource to quickly access the total number of items in a SharePoint list without retrieving all items or making additional queries.
+
 ### Identity and access | Directory management
 
 Added the **inheritedAppRoleAssignments** and **inheritedOauth2PermissionGrants** relationships to the [agentIdentity](/graph/api/resources/agentidentity?view=graph-rest-beta&preserve-view=true) resource to retrieve inherited permissions from the parent Agent Identity Blueprint Service Principal.
 
+### Identity and access | Governance
+
+- Use `default`, `notVisible`, and `visible` as supported values for the **approverInformationVisibility** property of the [accessPackageApprovalStage](/graph/api/resources/accesspackageapprovalstage?view=graph-rest-beta&preserve-view=true) and [approvalStage](/graph/api/resources/approvalstage?view=graph-rest-beta&preserve-view=true) resources to indicate whether approver information is visible to the requestor.
+- Added the [cancelProcessing](/graph/api/identitygovernance-workflow-cancelprocessing?view=graph-rest-beta&preserve-view=true) method to the [workflow](/graph/api/resources/identitygovernance-workflow?view=graph-rest-beta&preserve-view=true) resource to cancel workflow runs that are currently in progress or queued.
+
 ### Identity and access | Identity and sign-in
 
 Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
+
+### Mail
+
+Introduced the new notes API that enables users to create and manage simple notes in their *Notes* folder. Notes support text content with optional inline image attachments, and are suitable for quick capture scenarios. Use the [note](/graph/api/resources/note?view=graph-rest-beta&preserve-view=true) resource and the following APIs:
+- [List notes](/graph/api/user-list-notes?view=graph-rest-beta&preserve-view=true) in the user's *Notes* folder.
+- [Create a note](/graph/api/user-post-notes?view=graph-rest-beta&preserve-view=true) in the user's *Notes* folder.
+- [Get a note](/graph/api/note-get?view=graph-rest-beta&preserve-view=true).
+- [Update a note](/graph/api/note-update?view=graph-rest-beta&preserve-view=true).
+- [Delete a note](/graph/api/note-delete?view=graph-rest-beta&preserve-view=true).
+- [Get delta](/graph/api/note-delta?view=graph-rest-beta&preserve-view=true) to track changes to notes.
+- [List attachments](/graph/api/note-list-attachments?view=graph-rest-beta&preserve-view=true) for a note.
+- [Create an attachment](/graph/api/note-post-attachments?view=graph-rest-beta&preserve-view=true) on a note.
+- [Delete an attachment](/graph/api/attachment-delete?view=graph-rest-beta&preserve-view=true) from a note.
+
+### People and workplace intelligence | Profile
+
+Use the **activities**, **awards**, and **fieldsOfStudy** properties on [educationalActivityDetail](/graph/api/resources/educationalactivitydetail?view=graph-rest-beta&preserve-view=true) to get or set collections of activities, awards, or fields of study.
+
+### Reports | Identity and access reports
+
+Added the [azureADPremiumLicenseInsight](/graph/api/resources/azureadpremiumlicenseinsight?view=graph-rest-beta&preserve-view=true) resource and its associated APIs for getting insights into the Microsoft Entra ID P1 and P2 premium license utilization for the tenant, including feature utilization breakdowns for P1, P2, Internet Access, and Private Access features.
+
+### Security | Compliance
+
+Updated the capabilities of the [auditLogQuery resource type](/graph/api/resources/security-auditlogquery?view=graph-rest-beta&preserve-view=true) and its associated methods as follows:
+- Updated the [auditLogRecordType](/graph/api/resources/security-auditlogrecordtype?view=graph-rest-beta&preserve-view=true) enumeration to represent over 400 types of audit log operations across Microsoft cloud services.
+- Added 135 new derived types of the [auditData](/graph/api/resources/security-auditdata?view=graph-rest-beta&preserve-view=true) resource to represent audit log data for specific services and features, including AI and Copilot interactions, agent management, compliance and data lifecycle management (Microsoft Purview, eDiscovery, DLP), cloud services (Azure Firewall, Microsoft Defender, Sentinel), and collaboration services (Teams, Planner, SharePoint, Viva). For a complete list of audit data types, see [auditData derived types](/graph/api/resources/security-auditdata-derived-types?view=graph-rest-beta&preserve-view=true).
 
 ### Security | Microsoft Defender for Identity
 
@@ -70,12 +121,13 @@ Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/secur
 
 ### Teamwork and communications | Messaging
 
-Use the targeted messages APIs to manage messages in Microsoft Teams that are visible only to specified recipients within group chats or channels:
-- Use the [targetedChatMessage](/graph/api/resources/targetedchatmessage?view=graph-rest-beta&preserve-view=true) resource type to represent a targeted message in a chat or channel.
-- [Get all targeted messages](/graph/api/userteamwork-getalltargetedmessages?view=graph-rest-beta&preserve-view=true) sent to a user in group chats and channels for compliance and archiving purposes.
-- [Get all retained targeted messages](/graph/api/userteamwork-getallretainedtargetedmessages?view=graph-rest-beta&preserve-view=true) for a user, including messages deleted by the sender but preserved due to organizational retention policies.
-- [Delete a targeted message from a channel](/graph/api/userteamwork-deletetargetedmessage?view=graph-rest-beta&preserve-view=true) by providing the team ID, channel ID, and message ID.
-- [Delete a targeted message from a chat](/graph/api/chat-delete-targetedmessages?view=graph-rest-beta&preserve-view=true) by providing the chat ID and message ID.
+- Use the targeted messages APIs to manage messages in Microsoft Teams that are visible only to specified recipients within group chats or channels:
+  - Use the [targetedChatMessage](/graph/api/resources/targetedchatmessage?view=graph-rest-beta&preserve-view=true) resource type to represent a targeted message in a chat or channel.
+  - [Get all targeted messages](/graph/api/userteamwork-getalltargetedmessages?view=graph-rest-beta&preserve-view=true) sent to a user in group chats and channels for compliance and archiving purposes.
+  - [Get all retained targeted messages](/graph/api/userteamwork-getallretainedtargetedmessages?view=graph-rest-beta&preserve-view=true) for a user, including messages deleted by the sender but preserved due to organizational retention policies.
+  - [Delete a targeted message from a channel](/graph/api/userteamwork-deletetargetedmessage?view=graph-rest-beta&preserve-view=true) by providing the team ID, channel ID, and message ID.
+  - [Delete a targeted message from a chat](/graph/api/chat-delete-targetedmessages?view=graph-rest-beta&preserve-view=true) by providing the chat ID and message ID.
+- Organize chats, channels, and meetings into custom sections in a user's Microsoft Teams chat list using the new [teamworkSection](/graph/api/resources/teamworksection?view=graph-rest-beta&preserve-view=true) and [teamworkSectionItem](/graph/api/resources/teamworksectionitem?view=graph-rest-beta&preserve-view=true) resources. Use the section management APIs to [list](/graph/api/userteamwork-list-sections?view=graph-rest-beta&preserve-view=true), [create](/graph/api/userteamwork-post-sections?view=graph-rest-beta&preserve-view=true), [get](/graph/api/teamworksection-get?view=graph-rest-beta&preserve-view=true), [update](/graph/api/teamworksection-update?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/teamworksection-delete?view=graph-rest-beta&preserve-view=true) sections, and [add](/graph/api/teamworksection-post-items?view=graph-rest-beta&preserve-view=true), [remove](/graph/api/teamworksectionitem-delete?view=graph-rest-beta&preserve-view=true), and [move](/graph/api/teamworksectionitem-move?view=graph-rest-beta&preserve-view=true) items within sections.
 
 ## March 2026: New and generally available
 
@@ -195,7 +247,6 @@ Use the [follow user](/graph/api/storyline-follow?view=graph-rest-beta&preserve-
 - Use the [list](/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta&preserve-view=true), [create](/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta&preserve-view=true), [get](/graph/api/filestoragecontainertype-get-permission?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/filestoragecontainertype-delete-permissions?view=graph-rest-beta&preserve-view=true) APIs to manage user permissions for SharePoint Embedded [file storage container types](/graph/api/resources/filestoragecontainertype?view=graph-rest-beta&preserve-view=true).
 - [Archive](/graph/api/filestoragecontainer-archive?view=graph-rest-beta&preserve-view=true) or [unarchive](/graph/api/filestoragecontainer-unarchive?view=graph-rest-beta&preserve-view=true) a SharePoint Embedded storage container.
 - Requests made using the [list containers](/graph/api/filestorage-list-containers?view=graph-rest-beta&preserve-view=true) API without a user context (app-only authentication) aren't currently supported for multi-geo tenants.
-- Use the **itemCount** property on the [list](/graph/api/resources/list?view=graph-rest-beta&preserve-view=true) resource to quickly access the total number of items in a SharePoint list without retrieving all items or making additional queries.
 - Use the **principalId** property on [sharePointGroup](/graph/api/resources/sharepointgroup?view=graph-rest-beta&preserve-view=true) to get the principal ID of the SharePoint group in the tenant.
 - Use the **sharePointGroup** property on [sharePointIdentitySet](/graph/api/resources/sharepointidentityset?view=graph-rest-beta&preserve-view=true) to get the SharePoint group associated with a **sharePointIdentitySet** object.
 
@@ -212,7 +263,7 @@ Added the [ownerlessGroupPolicy](/graph/api/resources/ownerlessgrouppolicy?view=
 
 ### Identity and access | Governance
 
-Use the **administrationScopeTargets** relationship on the [workflowBase](/graph/api/resources/identitygovernance-workflowbase), [workflow](/graph/api/resources/identitygovernance-workflow), and [workflowVersion](/graph/api/resources/identitygovernance-workflowversion) resources to specify the [administrative units](/graph/api/resources/administrativeunit) in the scope of a lifecycle workflow.
+Use the **administrationScopeTargets** relationship on the [workflowBase](/graph/api/resources/identitygovernance-workflowbase?view=graph-rest-beta&preserve-view=true), [workflow](/graph/api/resources/identitygovernance-workflow?view=graph-rest-beta&preserve-view=true), and [workflowVersion](/graph/api/resources/identitygovernance-workflowversion?view=graph-rest-beta&preserve-view=true) resources to specify the [administrative units](/graph/api/resources/administrativeunit?view=graph-rest-beta&preserve-view=true) in the scope of a lifecycle workflow.
 - Added **privilegeLevel** as a property on [accessPackageCatalog](/graph/api/resources/accesspackagecatalog?view=graph-rest-beta&preserve-view=true). This value represents the privilege level of the access package catalogs.
 - Added the [targetAgentIdentitySponsorsOrOwners](/graph/api/resources/targetagentidentitysponsorsorowners?view=graph-rest-beta&preserve-view=true) resource type that defines the sponsors or owners of a specific agent identity.
 

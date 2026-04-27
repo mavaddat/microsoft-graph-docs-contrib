@@ -75,6 +75,7 @@
                   "name": "Remote desktop security policy",
                   "resources": [
                     "remoteDesktopSecurityConfiguration",
+                    "approvedClientApp",
                     "targetDeviceGroup"
                   ]
                 }
@@ -2444,6 +2445,7 @@
         "mailFolderOperation",
         "mailSearchFolder",
         "messageRule",
+        "note",
         "exchangeMessageTrace",
         "userConfiguration"
       ],
@@ -2734,11 +2736,17 @@
                     "userRegistrationActivitySummary",
                     "userSignInUsageByAuthMethodActivity"
                   ]
+                },
+                {
+                  "name": "Premium license utilization (preview)",
+                  "resources": [
+                    "azureADPremiumLicenseInsight"
+                  ]
                 }
               ]
             },
             {
-              "name": "Microsoft Entra logs",
+              "name": "Microsoft Entra logs and reports",
               "overview": "../../resources/azure-ad-auditlog-overview.md",
               "shouldSort": true,
               "resources": [
@@ -2756,7 +2764,7 @@
           ]
         },
         {
-          "name": "Microsoft 365 monitoring reports (preview)",
+          "name": "Monitoring reports (preview)",
           "overview": "../../resources/m365-monitoring-api-overview.md",
           "resources": [
             "serviceActivity"
@@ -3607,6 +3615,16 @@
                   "href": "../../api/teamwork-sendactivitynotificationtorecipients.md"
                 }
               ]
+            },
+            {
+              "name": "Sections (preview)",
+              "resources": [
+                "teamworkSection",
+                "teamworkSectionItem"
+              ],
+              "complexTypes": [
+                "sectionDisplayIcon"
+              ]
             }
           ],
           "complexTypes": [
@@ -3665,6 +3683,16 @@
     {
       "name": "Tenants",
       "shouldSort": true,
+      "overview": "../../resources/tenants-overview.md",
+      "keywords": [
+        "tenant management",
+        "tenant configuration",
+        "tenant governance",
+        "Lighhouse",
+        "cross-tenant access",
+        "multitenant",
+        "backup"
+      ],
       "childNodes": [
         {
           "name": "Configuration management",
