@@ -74,7 +74,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ### Request
 
-The following example shows how to add three permissions to a container in a single request.
+The following example shows how to add four permissions to a container in a single request.
 
 <!-- {
   "blockType": "request",
@@ -111,6 +111,14 @@ Content-Type: application/json
           "userPrincipalName": "kate@contoso.com"
         }
       }
+    },
+    {
+      "roles": ["reader"],
+      "grantedToV2": {
+        "user": {
+          "userPrincipalName": "mike@contoso.com"
+        }
+      }
     }
   ]
 }
@@ -118,7 +126,7 @@ Content-Type: application/json
 
 ### Response
 
-The following example shows the response. The first two permissions were created successfully. The third failed because the user wasn't found, as indicated by the `@Core.DataModificationException` annotation.
+The following example shows the response. The first two permissions were created successfully. The third failed because the user wasn't found, and the fourth failed due to a conflict because the user already has a different role on the container. Failed items include a `@Core.DataModificationException` annotation with error details.
 
 >**Note:** The response object shown here might be shortened for readability.
 
@@ -180,6 +188,26 @@ Content-Type: application/json
           "userPrincipalName": "kate@contoso.com"
         }
       }
+    },
+    {
+      "@Core.DataModificationException": {
+        "@odata.type": "#Org.OData.Core.V1.DataModificationExceptionType",
+        "failedOperation": "Create",
+        "responseCode": 409,
+        "info": {
+          "code": "Conflict",
+          "message": "Conflict: this identity is a [Owner] member of the container and cannot be added to the [Reader] role."
+        }
+      },
+      "id": "00000000-0000-0000-0000-000000000000",
+      "roles": [
+        "reader"
+      ],
+      "grantedToV2": {
+        "user": {
+          "userPrincipalName": "mike@contoso.com"
+        }
+      }
     }
   ]
 }
@@ -193,5 +221,4 @@ Content-Type: application/json
 |401|Request lacks valid authentication credentials.|
 |403|Provided authentication credentials are valid but insufficient to perform requested operation. Examples: the calling app does not have permissions to manage permissions for containers of this type; the calling user has no permissions on this container instance or their role does not allow container permission management.|
 |404|Container doesn't exist.|
-|409|Resource modified. Returned per-item when attempting to add an identity that already has a different role on the container.|
 |423|Container is locked. For example, the container is archived.|
