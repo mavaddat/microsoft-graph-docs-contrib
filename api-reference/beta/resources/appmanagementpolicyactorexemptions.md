@@ -14,7 +14,10 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a collection of exemptions from the enforcement of [identifierUri restrictions](../resources/identifierurirestriction.md) on an app management policy.
+Represents a collection of custom security attribute conditions that exempt specific actors (users or service principals) from application management policy restrictions.
+
+>[!NOTE]
+>Actors with attributes matching any of the defined custom security attributes in the collection are exempt. The collection in this exemption is limited to 5 attributes.
 
 ## Properties
 |Property|Type|Description|

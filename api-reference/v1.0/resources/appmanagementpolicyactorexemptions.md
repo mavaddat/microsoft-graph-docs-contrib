@@ -12,7 +12,10 @@ ms.date: 11/17/2024
 
 Namespace: microsoft.graph
 
-Represents a collection of exemptions from the enforcement of [identifierUri restrictions](../resources/identifierurirestriction.md) on an app management policy.
+Represents a collection of custom security attribute conditions that exempt specific actors (users or service principals) from application management policy restrictions.
+
+>[!NOTE]
+>Actors with attributes matching any of the defined custom security attributes in the collection are exempt. The collection in this exemption is limited to 5 attributes.
 
 ## Properties
 |Property|Type|Description|
