@@ -49,7 +49,7 @@ The following JSON representation shows the resource type.
   "blockType": "resource",
   "keyProperty": "name",
   "@odata.type": "microsoft.graph.m365CapabilityBase",
-  "baseType": "",
+  "baseType": "microsoft.graph.entity",
   "openType": false
 }
 -->
