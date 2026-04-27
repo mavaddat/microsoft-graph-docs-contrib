@@ -1,6 +1,6 @@
 ---
 title: "m365CapabilityBase resource type"
-description: "Abstract base type for cross-tenant M365 capabilities."
+description: "Abstract base type for cross-tenant Microsoft 365 capabilities."
 author: "lasharma"
 ms.date: 04/23/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Abstract base type for cross-tenant M365 capabilities. This type cannot be instantiated directly. Instances are created using specific derived types. All capability instances in a collection are differentiated by the `@odata.type` property.
+Abstract base type for cross-tenant Microsoft 365 capabilities. This type cannot be instantiated directly. Instances are created using specific derived types. All capability instances in a collection are differentiated by the `@odata.type` property.
 
 The following types derive from **m365CapabilityBase**:
 
@@ -37,7 +37,7 @@ None.
 |Property|Type|Description|
 |:---|:---|:---|
 |inboundAccess|[m365CapabilityInboundAccess](../resources/m365capabilityinboundaccess.md)|The inbound access settings for the capability.|
-|lastModifiedDateTime|DateTimeOffset|The automatically-updated last modified timestamp for the capability.|
+|lastModifiedDateTime|DateTimeOffset|The automatically updated last modified timestamp for the capability.|
 |name|String|The name or identifier of the capability. Key.|
 
 ## Relationships

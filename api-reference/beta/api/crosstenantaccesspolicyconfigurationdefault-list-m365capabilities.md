@@ -1,6 +1,6 @@
 ---
 title: "List m365Capabilities"
-description: "Get a list of M365 cross-tenant capabilities configured for the default cross-tenant access policy."
+description: "Get a list of Microsoft 365 cross-tenant capabilities configured for the default cross-tenant access policy."
 author: "lasharma"
 ms.date: 04/23/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of M365 cross-tenant capabilities configured for the default cross-tenant access policy. The returned collection is a heterogeneous collection of derived types of [m365CapabilityBase](../resources/m365capabilitybase.md), differentiated by their `@odata.type` property.
+Get a list of Microsoft 365 cross-tenant capabilities configured for the default cross-tenant access policy. The returned collection is a heterogeneous collection of derived types of [m365CapabilityBase](../resources/m365capabilitybase.md), differentiated by their `@odata.type` property.
 
 ## Permissions
 

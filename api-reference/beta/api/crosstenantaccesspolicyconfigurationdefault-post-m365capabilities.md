@@ -1,6 +1,6 @@
 ---
 title: "Create m365CapabilityBase"
-description: "Create a new M365 cross-tenant capability for the default cross-tenant access policy."
+description: "Create a new Microsoft 365 cross-tenant capability for the default cross-tenant access policy."
 author: "lasharma"
 ms.date: 04/23/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new M365 cross-tenant capability for the default cross-tenant access policy. The `@odata.type` property in the request body is required to specify which type of capability to create.
+Create a new Microsoft 365 cross-tenant capability for the default cross-tenant access policy. The `@odata.type` property in the request body is required to specify which type of capability to create.
 
 ## Permissions
 
