@@ -13,7 +13,7 @@ ms.date: 11/17/2024
 Namespace: microsoft.graph
 
 Configuration object to configure a custom security attribute exemption for a restriction on application management policies.
-This resource is an abstract type from which the [customSecurityAttributeStringValueExemption](../resources/customSecurityAttributeStringValueExemption.md) derives.
+This resource is an abstract type from which the [customSecurityAttributeStringValueExemption](../resources/customsecurityattributestringvalueexemption.md) derives.
 
 
 Inherits from [entity](../resources/entity.md).
@@ -46,7 +46,7 @@ The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.customSecurityAttributeExemption",
-  "baseType": "microsoft.graph.entity",
+  "baseType": "microsoft.graph.entity"
 }
 -->
 ``` json

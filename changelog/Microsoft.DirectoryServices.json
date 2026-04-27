@@ -3,32 +3,6 @@
     {
       "ChangeList": [
         {
-          "Id": "2a3f2ac6-08b8-4963-b976-509ed72ca031",
-          "ApiChange": "Property",
-          "ChangedApiName": "managerApplications",
-          "ChangeType": "Addition",
-          "Description": "Added the **managerApplications** property to the [agentIdentityBlueprint](https://learn.microsoft.com/en-us/graph/api/resources/agentIdentityBlueprint?view=graph-rest-1.0) resource.",
-          "Target": "agentIdentityBlueprint"
-        },
-        {
-          "Id": "2a3f2ac6-08b8-4963-b976-509ed72ca031",
-          "ApiChange": "Property",
-          "ChangedApiName": "managerApplications",
-          "ChangeType": "Addition",
-          "Description": "Added the **managerApplications** property to the [application](https://learn.microsoft.com/en-us/graph/api/resources/application?view=graph-rest-1.0) resource.",
-          "Target": "application"
-        }
-      ],
-      "Id": "2a3f2ac6-08b8-4963-b976-509ed72ca031",
-      "Cloud": "Prod",
-      "Version": "v1.0",
-      "CreatedDateTime": "2026-04-16T19:41:51.6805516Z",
-      "WorkloadArea": "Applications",
-      "SubArea": ""
-    },
-    {
-      "ChangeList": [
-        {
           "Id": "b18a7db8-92de-4d28-b025-71d5d3fc511a",
           "ApiChange": "Enumeration",
           "ChangedApiName": "customSecurityAttributeComparisonOperator",
@@ -123,6 +97,32 @@
       "CreatedDateTime": "2026-04-09T14:22:04.4254655Z",
       "WorkloadArea": "Identity and access",
       "SubArea": "Directory management"
+    },
+    {
+      "ChangeList": [
+        {
+          "Id": "2a3f2ac6-08b8-4963-b976-509ed72ca031",
+          "ApiChange": "Property",
+          "ChangedApiName": "managerApplications",
+          "ChangeType": "Addition",
+          "Description": "Added the **managerApplications** property to the [agentIdentityBlueprint](https://learn.microsoft.com/en-us/graph/api/resources/agentIdentityBlueprint?view=graph-rest-1.0) resource.",
+          "Target": "agentIdentityBlueprint"
+        },
+        {
+          "Id": "2a3f2ac6-08b8-4963-b976-509ed72ca031",
+          "ApiChange": "Property",
+          "ChangedApiName": "managerApplications",
+          "ChangeType": "Addition",
+          "Description": "Added the **managerApplications** property to the [application](https://learn.microsoft.com/en-us/graph/api/resources/application?view=graph-rest-1.0) resource.",
+          "Target": "application"
+        }
+      ],
+      "Id": "2a3f2ac6-08b8-4963-b976-509ed72ca031",
+      "Cloud": "Prod",
+      "Version": "v1.0",
+      "CreatedDateTime": "2026-04-16T19:41:51.6805516Z",
+      "WorkloadArea": "Applications",
+      "SubArea": ""
     },
     {
       "ChangeList": [
