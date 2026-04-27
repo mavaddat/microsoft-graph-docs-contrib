@@ -40,7 +40,7 @@ The following JSON representation shows the resource.
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.passwordCredentialConfiguration",
+  "@odata.type": "microsoft.graph.passwordCredentialConfiguration"
 }
 -->
 
