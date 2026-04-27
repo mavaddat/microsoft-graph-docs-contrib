@@ -2490,12 +2490,6 @@
       "complexTypes": [
         "exportItemResponse",
         "mailboxItemImportSession"
-      ],
-      "childNodes": [
-        {
-          "name": "Handle archive mailbox redirects",
-          "overview": "../../resources/handle-archive-mailbox-redirects.md"
-        }
       ]
     },
     {
