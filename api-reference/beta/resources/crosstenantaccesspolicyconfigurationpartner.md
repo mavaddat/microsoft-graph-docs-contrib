@@ -34,6 +34,8 @@ Inherits from [policyDeletableItem](../resources/policydeletableitem.md).
 | [Get deleted policy](../api/policydeletableitem-get.md) | [crossTenantAccessPolicyConfigurationPartner](../resources/crosstenantaccesspolicyconfigurationpartner.md) | Get a single deleted partner-specific configuration policy. |
 | [Permanently delete deleted policy](../api/policydeletableitem-delete.md) | None | Permanently delete a deleted partner-specific configuration policy. |
 |[Restore deleted policy](../api/crosstenantaccesspolicyconfigurationpartner-restore.md)|[crossTenantAccessPolicyConfigurationPartner](../resources/crosstenantaccesspolicyconfigurationpartner.md)| Restore the partner-specific configuration policy. |
+|[List m365Capabilities](../api/crosstenantaccesspolicyconfigurationpartner-list-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md) collection|Get a list of M365 cross-tenant capabilities configured for the partner.|
+|[Create m365CapabilityBase](../api/crosstenantaccesspolicyconfigurationpartner-post-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md)|Create a new M365 cross-tenant capability for the partner.|
 
 ## Properties
 
@@ -60,6 +62,7 @@ Inherits from [policyDeletableItem](../resources/policydeletableitem.md).
 |Relationship|Type|Description|
 |:---|:---|:---|
 |identitySynchronization|[crossTenantIdentitySyncPolicyPartner](../resources/crosstenantidentitysyncpolicypartner.md)|Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.|
+|m365Capabilities|[m365CapabilityBase](../resources/m365capabilitybase.md) collection|Defines the partner-specific M365 cross-tenant capabilities for inbound access from the partner organization.|
 
 ## JSON representation
 

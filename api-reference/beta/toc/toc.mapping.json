@@ -1862,6 +1862,11 @@
                 "crossTenantAccessPolicyConfigurationDefault",
                 "crossTenantAccessPolicyConfigurationPartner",
                 "crossTenantIdentitySyncPolicyPartner"
+              ],
+              "complexTypes": [
+                "m365CapabilityInboundAccess",
+                "m365CapabilityResourceScope",
+                "m365CapabilityResourceScopes"
               ]
             },
             {

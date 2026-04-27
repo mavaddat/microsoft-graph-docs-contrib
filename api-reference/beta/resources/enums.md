@@ -3463,6 +3463,15 @@ Possible values for user account types (group membership), per Windows definitio
 | rescan             | 2     | The rescan result.                                   |
 | unknownFutureValue | 3     | A sentinel member.                                   |
 
+### m365ResourceType values
+
+| Member             | Value | Description                       |
+| ------------------ | ----- | --------------------------------- |
+| none               | 0     | A value to use instead of null.   |
+| group              | 1     | The resource ID is a group ID.    |
+| user               | 2     | The resource ID is a user ID.     |
+| unknownFutureValue | 3     | Evolvable enumeration sentinel value. Do not use. |
+
 ### mailDestinationRoutingReason values
 
 | Member                | Value | Description                         |
