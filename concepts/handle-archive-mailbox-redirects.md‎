@@ -1,6 +1,6 @@
 ---
 title: "Handle archive mailbox redirects (preview)"
-description: "Learn how to handle HTTP redirects when accessing folders and items in archive mailboxes with auto-expanded folders using the mailbox import and export APIs."
+description: "Learn how to handle HTTP redirects when accessing folders and items in archive mailboxes with autoexpanded folders using the mailbox import and export APIs."
 ms.localizationpriority: medium
 author: "svempali"
 ms.subservice: "outlook"
@@ -10,7 +10,7 @@ ms.date: 04/23/2026
 
 # Handle archive mailbox redirects (preview)
 
-An archive mailbox can include a main archive mailbox and one or more auxiliary archive mailboxes (created through auto-expanding archive). Over time, folder contents might be distributed across these mailboxes.
+An archive mailbox can include a main archive mailbox and one or more auxiliary archive mailboxes (created through autoexpanding archive). Over time, folder contents might be distributed across these mailboxes.
 
 In some cases, a folder appears in the main archive mailbox, but its contents actually reside in an auxiliary archive mailbox. This type of folder is called an *expanded folder*. It acts as a logical representation of the folder in the main archive, but the data itself is stored in a different archive mailbox.
 
@@ -24,7 +24,7 @@ When an application accesses an expanded folder, the API might return an HTTP re
 
 ## Example 1: Redirect when accessing a folder
 
-When you access a folder that physically resides in an auxiliary archive mailbox, the API returns an HTTP `308 Permanent Redirect` with a `Location` header.
+When you access a folder that physically resides in an auxiliary archive mailbox, the API returns an `HTTP 308 Permanent Redirect` with a `Location` header.
 
 ### Request
 The following example shows a request.
@@ -52,9 +52,9 @@ Make a new request using the URL from the `Location` header.
 GET https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:767fh867@a7809c93/folders/NJWt2LeVEAAAIBDAAAAA==
 ```
 
-## Example 2: Export items — archive redirect response
+## Example 2: Export items with an archive redirect response
 
-When you export items from a mailbox that has auto-expanded archive folders, some items in the response might include an `ErrorArchiveFolderMovedPermanently` error instead of data. This indicates that the item physically resides in an auxiliary archive mailbox. Reissue the export request for those items using the URL provided in the error message.
+When you export items from a mailbox that has autoexpanded archive folders, some items in the response might include an `ErrorArchiveFolderMovedPermanently` error instead of data. This indicates that the item physically resides in an auxiliary archive mailbox. Reissue the export request for those items using the URL provided in the error message.
 
 ### Response
 
@@ -85,9 +85,9 @@ Content-type: application/json
 
 For the item that returned `ErrorArchiveFolderMovedPermanently`, make a new POST request to the URL in the error message with the item ID to export it.
 
-## Example 3: Import to an archive folder — redirect handling
+## Example 3: Import to an archive folder with redirect handling
 
-When you attempt to import an item into a folder that physically resides in an auxiliary (auto-expanded) archive mailbox, you receive an HTTP `409 Conflict` response that indicates the correct target mailbox.
+When you attempt to import an item into a folder that physically resides in an auxiliary (autoexpanded) archive mailbox, you receive an `HTTP 409 Conflict` response that indicates the correct target mailbox.
 
 ### Response
 The following example shows the response.

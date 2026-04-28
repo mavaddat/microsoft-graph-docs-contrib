@@ -59,7 +59,7 @@ The following table lists the parameters that are required when you call this ac
 If successful, this action returns a `200 OK` response code and a collection of [exportItemResponse](../resources/exportitemresponse.md) objects in the response body.
 
 > [!NOTE]
-> **Archive mailboxes with auto-expanded folders:** When you export items from a mailbox that has auto-expanded archive folders, some items in the response may include an error with code `ErrorArchiveFolderMovedPermanently` instead of data. Re-issue the export request for those items using the URL provided in the error message. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
+> *Archive mailboxes with autoexpanded folders:* When you export items from a mailbox that has autoexpanded archive folders, some items in the response might include an error with code `ErrorArchiveFolderMovedPermanently` instead of data. Reissue the export request for those items using the URL provided in the error message. For details, see [Handle archive mailbox redirects](/graph/handle-archive-mailbox-redirects).
 
 ## Examples
 
