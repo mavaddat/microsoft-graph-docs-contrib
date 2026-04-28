@@ -106,7 +106,6 @@ The following example shows the resource type.
   "id": "String (identifier)",
   "inUse": "Boolean",
   "inUseByCloudPc": "Boolean",
-  "managedBy": "String",
   "organizationalUnit": "String",
   "resourceGroupId": "String",
   "scopeIds": ["String"],
