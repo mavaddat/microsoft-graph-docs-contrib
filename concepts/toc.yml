@@ -247,6 +247,10 @@ items:
       href: mcp-server/overview.md
     - name: Get started
       href: mcp-server/get-started.md
+    - name: Use from Copilot Studio
+      href: mcp-server/use-enterprise-mcp-server-copilot-studio.md
+    - name: Use from Microsoft Foundry
+      href: mcp-server/use-enterprise-mcp-server-microsoft-foundry.md
     - name: Sample prompts
       href: mcp-server/mcp-server-sample-prompts.md
     - name: Explore the repository
@@ -521,7 +525,7 @@ items:
   - name: External data connections
     items:
     - name: Connectors overview
-      href: /microsoft-365-copilot/extensibility/overview-copilot-connector?toc=/graph/toc.json
+      href: /microsoft-365/copilot/extensibility/overview-copilot-connector?toc=/graph/toc.json
       displayName: Microsoft Graph connectors, Microsoft 365 Copilot connectors, Copilot connectors, connect external content
     - name: Connectors experiences
       href: connecting-external-content-experiences.md
@@ -533,7 +537,7 @@ items:
     - name: Build your first connector
       items:
       - name: Build with Agents Toolkit
-        href: /microsoft-365-copilot/extensibility/build-your-first-connector?context=graph/context
+        href: /microsoft-365/copilot/extensibility/build-your-first-connector?context=graph/context
       - name: Build with SDK
         items:
         - name: Overview
@@ -745,7 +749,7 @@ items:
       href: social-intel-concept-overview.md
     - name: Microsoft 365 Copilot connectors for people data
       href: peopleconnectors.md
-    - name: Configure profile source precedence (preview)
+    - name: Configure profile source precedence
       href: profilepriority-configure-profilepropertysetting.md
     - name: Customize item insights privacy
       href: insights-customize-item-insights-privacy.md
@@ -753,7 +757,7 @@ items:
       href: insights-customize-people-insights-privacy.md
     - name: Customize the profile card
       href: add-properties-profilecard.md
-    - name: Customize profile source (preview)
+    - name: Customize profile source
       href: profilesource-configure-settings.md
     - name: Enable or disable pronouns
       href: pronouns-configure-pronouns-availability.md
@@ -970,7 +974,7 @@ items:
       href: teams-licenses.md
     - name: Implementation differences in national clouds
       href: teamwork-national-cloud-differences.md
-  - name: Tenant administration (preview)
+  - name: Tenants
     items:
     - name: Configuration management
       items:
@@ -1180,7 +1184,7 @@ items:
     href: best-practices-concept.md
     displayName: Microsoft Graph, Best practices for working with Microsoft Graph
   - name: Known issues
-    href: https://developer.microsoft.com/graph/known-issues
+    href: known-issues.md
     displayName: Microsoft Graph, Known issues with Microsoft Graph
   - name: Errors
     href: errors.md
