@@ -72,6 +72,7 @@
                   "name": "Remote desktop security policy",
                   "resources": [
                     "remoteDesktopSecurityConfiguration",
+                    "approvedClientApp",
                     "targetDeviceGroup"
                   ]
                 }
@@ -111,14 +112,22 @@
       "overview": "",
       "resources": [],
       "childNodes": [
-          {
-            "name": "Agent identities",
-            "resources": [
-              "agentIdentityBlueprint",
-              "agentIdentityBlueprintPrincipal",
-              "agentIdentity"
-            ]
-          }
+        {
+          "name": "Agent identities",
+          "resources": [
+            "agentIdentityBlueprint",
+            "agentIdentityBlueprintPrincipal",
+            "agentIdentity"
+          ],
+          "childNodes": [
+            {
+              "name": "Agent identity blueprint",
+              "resources": [
+                "inheritablePermission"
+              ]
+            }
+          ]
+        }
       ]
     },
     {
@@ -950,6 +959,7 @@
                 "singleUser",
                 "socialIdentitySource",
                 "subjectSet",
+                "targetAgentIdentitySponsorsOrOwners",
                 "targetApplicationOwners",
                 "targetManager",
                 "targetUserSponsors"
@@ -1444,6 +1454,7 @@
         "peopleAdminSettings",
         "insightsSettings",
         "profileCardProperty",
+        "profilePropertySetting",
         "profileSource",
         "pronounsSettings"
       ],
@@ -1529,7 +1540,7 @@
               ]
             },
             {
-              "name": "Microsoft Entra logs",
+              "name": "Microsoft Entra logs and reports",
               "overview": "../../resources/azure-ad-auditlog-overview.md",
               "resources": [
                 "directoryAudit",
@@ -1764,7 +1775,8 @@
             "microsoft.graph.security.sensor",
             "microsoft.graph.security.sensorCandidate",
             "microsoft.graph.security.sensorCandidateActivationConfiguration",
-            "microsoft.graph.security.identityAccounts"
+            "microsoft.graph.security.identityAccounts",
+            "microsoft.graph.security.autoAuditingConfiguration"
           ],
           "complexTypes": [
             "microsoft.graph.security.deploymentAccessKeyType",
@@ -2249,10 +2261,11 @@
       ]
     },
     {
-      "name": "Tenant management",
+      "name": "Tenants",
       "childNodes": [
         {
           "name": "Configuration management",
+          "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
           "resources": [
             "configurationMonitor",
             "configurationMonitoringResult",

@@ -219,6 +219,21 @@ After updating the changelog, update the What's new section in `concepts/whats-n
   - For **v1.0** documentation: Do NOT append any query string parameters
 - Example format: `Added the [resourceName](/graph/api/resources/resourcename) resource to manage XYZ.`
 
+**Authoring principles for What's New entries:**
+
+- **Lead with the doc action verb.** Start with "Added", "Updated", or "Changed" to signal what was documented. For new resources, use `Added the [resource](/path) resource type and related methods for...`. For new properties or relationships on an existing resource, use `Added the **propertyName** relationship to the [resource](/path) resource.` For new enum members, use `Added the \`memberName\` member to the [enumName](/path) enumeration...` and describe the capability it enables.
+- **Describe the capability, not the objects.** Say what users can now *do*. Do not enumerate properties, methods, complex types, or enumerations — those are discoverable from the linked pages.
+- **Do not say "new"** — the section context implies it. Do not qualify with the API version — the section structure (v1.0 vs. beta) already communicates this.
+- **Link only to the root entry point** — the entity type, function, or property that triggers the capability. If the change introduces an entity type, everything else (properties, methods, complex types) depends on it and doesn't need separate mention. If the change is a function or property addition, link to that and its parent resource.
+- **Keep entries to 1–4 sentences.**
+
+| Scenario | ❌ Avoid | ✅ Correct |
+|----------|----------|-----------|
+| New entity type with operations | List the resource, each method, and every complex type separately. | `Added the [driveItem](/graph/api/resources/driveitem) resource type and related methods for managing drive items. Use it to list, get, create, update, and delete files and folders.` |
+| New function + property addition | List the function, the property, and all supporting complex types. | `Added support for programmatic FIDO2 passkey registration. Use the [creationOptions](/graph/api/fido2authenticationmethod-creationoptions) function to get WebAuthn credential creation options, then complete registration by posting the **publicKeyCredential** property to the [fido2AuthenticationMethod](/graph/api/resources/fido2authenticationmethod) resource.` |
+| New property or relationship on existing resource | Name all new properties individually. | `Added the **inheritedAppRoleAssignments** and **inheritedOauth2PermissionGrants** relationships to the [agentIdentity](/graph/api/resources/agentidentity) resource. Use these to retrieve the permissions an agent identity inherits from its parent blueprint service principal.` |
+| New enum member | List only the enum type without explaining the capability, where possible. | `Added \`targetAgentIdentitySponsorOrOwner\` to the filter options for [access package assignments](/graph/api/accesspackageassignment-filterbycurrentuser), enabling sponsors and owners of agent identities to view access package activity for the agent identities they manage.` |
+
 ### Updating the Table of Contents (TOC)
 
 After updating What's new, update the appropriate TOC mapping file to make new documentation discoverable:
@@ -603,6 +618,19 @@ Use the following format when reporting file processing results, so output is co
 ⚠️ Blocked: [list with reasons, or "None"]
 ```
 
+**Mid-phase validation** (required at every ⏸ phase gate, before moving to the next phase):
+
+Re-read each file completed in the current phase and verify it meets expectations for its file type. Output a validation checklist:
+
+```
+✅ Phase [N] Validation
+- [file1.md]: H1 ✓ | Namespace ✓ | Properties table ✓ | JSON representation ✓
+- [file2.md]: H1 ✓ | Namespace ✓ | Permissions ✓ | HTTP request ✓ | Examples ✓
+- [file3.md]: H1 ✓ | Namespace ✓ | Properties table ✗ (missing "newProperty") — FIXING
+```
+
+Fix any failures before proceeding to the next phase. Do not defer fixes to end-of-session.
+
 ## State Tracking
 
 Maintain a running progress tracker throughout the session. After each file or batch of files, update and display:
@@ -625,8 +653,9 @@ For Documentation Plans with many files (10+):
 1. **Group by type:** resources, API methods, enumerations, permissions, supporting files
 2. **Process in batches of 5 files** — complete all steps for each file before moving to the next
 3. **After each batch**, output a phase status summary (see [Structured Output Format](#structured-output-format))
-4. **Present the execution plan upfront** and proceed unless the author objects — avoid blocking confirmations for each batch when the Documentation Plan is clear
-5. **If the plan exceeds 20 files**, create a numbered task list at the start, group into batches, and checkpoint progress after each batch
+4. **Verify each batch before proceeding:** Re-read every file in the completed batch and confirm it contains the expected sections (e.g., H1, namespace, Permissions, HTTP request, Examples for API files; H1, namespace, Properties table, JSON representation for resource files). Fix any issues before starting the next batch.
+5. **Present the execution plan upfront** and proceed unless the author objects — avoid blocking confirmations for each batch when the Documentation Plan is clear
+6. **If the plan exceeds 20 files**, after the first batch completes and is verified, **stop and ask the author to confirm quality** before continuing. This catches systematic errors early.
 
 ## Decision Trees for Ambiguous Cases
 
@@ -701,6 +730,8 @@ Report any inconsistencies in the final summary to the author.
 ## Base Quality Checklist
 
 The following checks apply to every documentation scenario. Scenario-specific checklists add additional items on top of these.
+
+> **IMPORTANT:** For each checklist item, re-read the actual file content to confirm — do not check items from memory.
 
 **For all files (new and updated):**
 - [ ] All required sections are present and in correct order
