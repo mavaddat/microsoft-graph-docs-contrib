@@ -49,7 +49,7 @@ POST /identityGovernance/accessReviews/definitions/{accessReviewScheduleDefiniti
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
-|x-accessreviews-version|vNext|
+|x-accessreviews-version|`vNext`. Required.|
 
 ## Request body
 
@@ -61,7 +61,7 @@ The following table lists the parameters when you call this action.
 |:---|:---|:---|
 |applyResult|[accessReviewInstanceDecisionItemApplyResult](../resources/enums.md)|The `applyResult` for the entity being reviewed. The possible values are: `new`, `appliedSuccessfully`, `appliedWithUnknownFailure`, `appliedSuccessfullyButObjectNotFound`, `applyNotSupported`. Required.  |
 |applyDescription|String|If supplied, a description for the `applyResult`. Optional. |
-|customDataProvidedResourceId|String|The `applyResult` on all the **accessReviewInstanceDecisionItems** with matching **resourceId** will be set. Required. |
+|customDataProvidedResourceId|String|The `applyResult` will be set on all **accessReviewInstanceDecisionItems** whose custom data provided resource `id` matches the supplied **customDataProvidedResourceId**. Required. |
 
 
 ## Response
@@ -84,7 +84,7 @@ Content-Type: application/json
 
 {
   "applyResult": "appliedSuccessfully",
-  "applyDescription": "Access was removed from production application: Github-app.",
+  "applyDescription": "Access was removed from production application: GitHub-app.",
   "customDataProvidedResourceId": "5c728447-be5c-4565-b4d3-cb248b609891"
 }
 ```
