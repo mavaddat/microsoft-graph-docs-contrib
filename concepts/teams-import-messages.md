@@ -33,10 +33,17 @@ To use the Teams messaging API to import messages, the following conditions must
 - Optional timestamp rules (if you specify **createdDateTime**): You can set a custom timestamp for the imported message, but it must meet the following constraints:
   - The value must be *later than* the **createdDateTime** of the target chat or channel.
   - The value must *not* be in the future.
+  - The value must be *unique down to the millisecond* within the target chat or channel. If a message with the same **createdDateTime** exists, the request fails with `409 Conflict`; adjust the value and retry.
 
 > [!NOTE]
 > - Only the application that called [startMigration](/graph/api/channel-startmigration) on the target channel or [startMigration](/graph/api/chat-startmigration) on the target chat can import messages into it. No other application can request this API on the channel or chat until the owning application completes the migration by calling [channel: completeMigration](/graph/api/channel-completemigration) or [chat: completeMigration](/graph/api/chat-completemigration).
 > - Some imported messages may not be visible in the Teams client until migration is completed by calling [completeMigration](/graph/api/channel-completemigration) on the target channel or [completeMigration](/graph/api/chat-completemigration) on the target chat.
+
+## Troubleshooting
+
+### 409 Conflict when importing a message
+
+The **createdDateTime** must be unique down to the millisecond within the target chat or channel. If a message with the same **createdDateTime** exists, the request fails with `409 Conflict`. Adjust the **createdDateTime** and retry the request.
 
 ## Related content
 
@@ -44,3 +51,4 @@ To use the Teams messaging API to import messages, the following conditions must
 - [Send a message in a channel](/graph/api/channel-post-messages)
 - [Send a message in a chat](/graph/api/chat-post-messages)
 - [Send a message in a channel or a chat](/graph/api/chatmessage-post)
+- [Send replies to a message in a channel](/graph/api/chatmessage-post-replies)

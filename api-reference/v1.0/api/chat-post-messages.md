@@ -167,6 +167,9 @@ The following example shows how to import a message. For more information, see [
 
 > **Note**: The permission scope `Teamwork.Migrate.All` is required for this scenario. The target chat must be in migration mode.
 
+> [!IMPORTANT]
+> The **createdDateTime** must be unique down to the millisecond within the target chat. If a message with the same **createdDateTime** exists, the request fails with `409 Conflict`. Adjust the **createdDateTime** and retry. For more information, see [Import messages into Microsoft Teams chats and channels using Microsoft Graph](/graph/teams-import-messages).
+
 #### Request
 
 The following example shows how to import a message into a chat on behalf of a user using the **createdDateTime** and **from** properties in the request body.

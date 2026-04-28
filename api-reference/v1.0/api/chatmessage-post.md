@@ -1926,6 +1926,9 @@ The following example shows how to import a message into a chat on behalf of a u
 > [!NOTE]
 > The permission scope `Teamwork.Migrate.All` is required for this scenario.
 
+> [!IMPORTANT]
+> The **createdDateTime** must be unique down to the millisecond within the target chat. If a message with the same **createdDateTime** exists, the request fails with `409 Conflict`. Adjust the **createdDateTime** and retry.
+
 #### Request
 
 The following example shows a request. The **createdDateTime** and **from** properties are used to attribute the message to a specific user at a specific time in the past.
@@ -2013,6 +2016,9 @@ The following example shows how to import a message into a channel on behalf of 
 
 > [!NOTE]
 > The permission scope `Teamwork.Migrate.All` is required for this scenario.
+
+> [!IMPORTANT]
+> The **createdDateTime** must be unique down to the millisecond within the target channel. If a message with the same **createdDateTime** exists, the request fails with `409 Conflict`. Adjust the **createdDateTime** and retry.
 
 #### Request
 
