@@ -3,15 +3,23 @@
     {
       "ChangeList": [
         {
-          "Id": "96c4625a-00e0-4233-8069-71053205f202",
+          "Id": "bd16e1cf-95de-4af4-b71c-0be1d682b4ef",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "meetingEngagementType",
+          "ChangeType": "Addition",
+          "Description": "Added the **meetingEngagementType** enumeration type.",
+          "Target": "meetingEngagementType"
+        },
+        {
+          "Id": "bd16e1cf-95de-4af4-b71c-0be1d682b4ef",
           "ApiChange": "Resource",
           "ChangedApiName": "meetingEngagement",
           "ChangeType": "Addition",
-          "Description": "Added the [meetingEngagement](https://learn.microsoft.com/en-us/graph/api/resources/meetingengagement?view=graph-rest-beta) resource.",
+          "Description": "Added the [meetingEngagement](https://learn.microsoft.com/en-us/graph/api/resources/meetingEngagement?view=graph-rest-beta) resource.",
           "Target": "meetingEngagement"
         },
         {
-          "Id": "96c4625a-00e0-4233-8069-71053205f202",
+          "Id": "bd16e1cf-95de-4af4-b71c-0be1d682b4ef",
           "ApiChange": "Property",
           "ChangedApiName": "engagements",
           "ChangeType": "Addition",
@@ -19,12 +27,12 @@
           "Target": "attendanceRecord"
         }
       ],
-      "Id": "96c4625a-00e0-4233-8069-71053205f202",
-      "Cloud": "Prod",
+      "Id": "bd16e1cf-95de-4af4-b71c-0be1d682b4ef",
+      "Cloud": "Review",
       "Version": "beta",
-      "CreatedDateTime": "2026-04-17T16:02:03.2817806Z",
-      "WorkloadArea": "Teamwork and communications",
-      "SubArea": "Calls and online meetings"
+      "CreatedDateTime": "2026-04-27T20:46:26.7145941Z",
+      "WorkloadArea": "Cloud communications",
+      "SubArea": "Call"
     },
     {
       "ChangeList": [
