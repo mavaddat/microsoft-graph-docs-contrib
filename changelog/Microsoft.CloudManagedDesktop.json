@@ -3,6 +3,32 @@
     {
       "ChangeList": [
         {
+          "Id": "2876463c-edcd-4391-b9dd-0d185702cf2e",
+          "ApiChange": "Resource",
+          "ChangedApiName": "cloudPcOnPremisesConnectionSubnetIpDetail",
+          "ChangeType": "Addition",
+          "Description": "Added the [cloudPcOnPremisesConnectionSubnetIpDetail](https://learn.microsoft.com/en-us/graph/api/resources/cloudpconpremisesconnectionsubnetipdetail?view=graph-rest-beta) resource type.",
+          "Target": "cloudPcOnPremisesConnectionSubnetIpDetail"
+        },
+        {
+          "Id": "2876463c-edcd-4391-b9dd-0d185702cf2e",
+          "ApiChange": "Property",
+          "ChangedApiName": "subnetPrivateIpDetail",
+          "ChangeType": "Addition",
+          "Description": "Added the **subnetPrivateIpDetail** property to the [cloudPcOnPremisesConnection](https://learn.microsoft.com/en-us/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta) resource.",
+          "Target": "cloudPcOnPremisesConnection"
+        }
+      ],
+      "Id": "2876463c-edcd-4391-b9dd-0d185702cf2e",
+      "Cloud": "Prod",
+      "Version": "beta",
+      "CreatedDateTime": "2026-04-28T02:56:39.1048878Z",
+      "WorkloadArea": "Devices and app management",
+      "SubArea": "Cloud PC"
+    },
+    {
+      "ChangeList": [
+        {
           "Id": "c2c26a46-94e4-4747-a731-042b7a546a7d",
           "ApiChange": "Property",
           "ChangedApiName": "availabilityZoneRestricted",
