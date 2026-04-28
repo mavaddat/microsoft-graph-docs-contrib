@@ -115,9 +115,9 @@ Updated the capabilities of the [auditLogQuery resource type](/graph/api/resourc
 
 Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true) to get the list of device types for the sensor.
 
-### Teamwork and communications | Calls and online meetings
+### Cloud communications | Call
 
-[Meeting engagement data](/graph/api/resources/meetingengagement?view=graph-rest-beta&preserve-view=true) captures real-time participant interaction behaviors during a meeting, including: reactions (like, love, applause, and so on), hand raises, camera toggles, and microphone mute/unmute events. This data is collected as part of the attendance report and requires a Teams Premium license.
+Added [meeting engagement data](/graph/api/resources/meetingengagement?view=graph-rest-beta&preserve-view=true) to capture real-time participant interaction behaviors during a meeting, including reactions (like, love, applause, and so on), hand raises, camera toggles, and microphone mute/unmute events. This data is collected as part of the attendance report and requires a Teams Premium license.
 
 ### Teamwork and communications | Messaging
 

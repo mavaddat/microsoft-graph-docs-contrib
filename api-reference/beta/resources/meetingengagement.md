@@ -40,8 +40,8 @@ The following JSON representation shows the resource type.
 
 ```json
 {
-    "engagementType": "String",
+    "engagementType": "String(reaction, hand, camera, microphone, unknownFutureValue)",
     "engagementSubType": "String",
-    "dateTime": "String"
+    "dateTime": "DateTimeOffset"
 }  
 ```
