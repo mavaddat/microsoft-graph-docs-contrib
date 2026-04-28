@@ -46,7 +46,7 @@ The following JSON representation shows the resource type.
   "endDateTime": "2019-03-11T15:15:00Z",
   "code": "",
   "displayName": "Lunch",
-  "theme": "String"
+  "theme": "white"
 }
 ```
 
