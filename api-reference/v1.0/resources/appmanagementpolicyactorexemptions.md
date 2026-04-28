@@ -1,6 +1,6 @@
 ---
 title: "appManagementPolicyActorExemptions resource type"
-description: "Represents a collection of exemptions from the enforcement of identifierUri restrictions on an app management policy."
+description: "Represents a collection of exemptions from the enforcement of application management policy restrictions."
 author: "yogesh-randhawa"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"

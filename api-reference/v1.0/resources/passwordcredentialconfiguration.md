@@ -41,12 +41,12 @@ The following JSON representation shows the resource type.
 ```json
 {
   "@odata.type": "#microsoft.graph.passwordCredentialConfiguration",
-  "restrictionType": "String",
-  "state": "String",
-  "restrictForAppsCreatedAfterDateTime": "String (DateTime)",
-  "maxLifetime": "String (duration)",
   "excludeActors": {
     "@odata.type": "microsoft.graph.appManagementPolicyActorExemptions"
-  }
+  },
+  "maxLifetime": "String (duration)",
+  "restrictForAppsCreatedAfterDateTime": "String (DateTime)",
+  "restrictionType": "String",
+  "state": "String"
 }
 ```

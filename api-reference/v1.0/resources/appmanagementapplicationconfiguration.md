@@ -41,18 +41,18 @@ The following JSON representation shows the resource type.
 ```json
 {
   "@odata.type": "#microsoft.graph.appManagementApplicationConfiguration",
-  "passwordCredentials": [
-    {
-      "@odata.type": "microsoft.graph.passwordCredentialConfiguration"
-    }
-  ],
+  "identifierUris": {
+    "@odata.type": "microsoft.graph.identifierUriConfiguration"
+  },
   "keyCredentials": [
     {
       "@odata.type": "microsoft.graph.keyCredentialConfiguration"
     }
   ],
-  "identifierUris": {
-    "@odata.type": "microsoft.graph.identifierUriConfiguration"
-  }
+  "passwordCredentials": [
+    {
+      "@odata.type": "microsoft.graph.passwordCredentialConfiguration"
+    }
+  ]
 }
 ```

@@ -12,7 +12,7 @@ ms.date: 09/13/2024
 
 Namespace: microsoft.graph
 
- Represents a restriction to block identifier URI formats on applications that could either be easily compromised or used for compromise.
+Represents a restriction to block identifier URI formats on applications that could either be easily compromised or used for compromise.
 
 ## Properties
 | Property                            | Type                            | Description                 |
@@ -33,10 +33,10 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.identifierUriConfiguration",
-  "uriAdditionWithoutUniqueTenantIdentifier": {
+  "nonDefaultUriAddition": {
     "@odata.type": "microsoft.graph.identifierUriRestriction"
   },
-  "nonDefaultUriAddition": {
+  "uriAdditionWithoutUniqueTenantIdentifier": {
     "@odata.type": "microsoft.graph.identifierUriRestriction"
   }
 }

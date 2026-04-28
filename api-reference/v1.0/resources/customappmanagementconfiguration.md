@@ -41,18 +41,18 @@ The following JSON representation shows the resource type.
 ```json
 {
   "@odata.type": "#microsoft.graph.customAppManagementConfiguration",
-  "passwordCredentials": [
-    {
-      "@odata.type": "microsoft.graph.passwordCredentialConfiguration"
-    }
-  ],
+  "applicationRestrictions": {
+    "@odata.type": "microsoft.graph.customAppManagementApplicationConfiguration"
+  },
   "keyCredentials": [
     {
       "@odata.type": "microsoft.graph.keyCredentialConfiguration"
     }
   ],
-  "applicationRestrictions": {
-    "@odata.type": "microsoft.graph.customAppManagementApplicationConfiguration"
-  }
+  "passwordCredentials": [
+    {
+      "@odata.type": "microsoft.graph.passwordCredentialConfiguration"
+    }
+  ]
 }
 ```

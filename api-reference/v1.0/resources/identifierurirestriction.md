@@ -37,14 +37,14 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.identifierUriRestriction",
-  "state": "String",
-  "isStateSetByMicrosoft": "Boolean",
-  "restrictForAppsCreatedAfterDateTime": "String (DateTime)",
-  "excludeAppsReceivingV2Tokens": "Boolean",
-  "excludeSaml": "Boolean",
   "excludeActors": {
       "@odata.type": "microsoft.graph.appManagementPolicyActorExemptions"
-    }
+  },
+  "excludeAppsReceivingV2Tokens": "Boolean",
+  "excludeSaml": "Boolean",
+  "isStateSetByMicrosoft": "Boolean",
+  "restrictForAppsCreatedAfterDateTime": "String (DateTime)",
+  "state": "String"
 }
 ```
 
