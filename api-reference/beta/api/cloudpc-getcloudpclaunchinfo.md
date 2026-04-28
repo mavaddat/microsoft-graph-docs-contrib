@@ -13,6 +13,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+> [!CAUTION]
+> The `/me/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo` and `/users/{userId}/cloudPCs/{id}/getCloudPcLaunchInfo` endpoints are deprecated and will stop returning data on October 30, 2026. Going forward, use the [retrieveCloudPcLaunchDetail](../api/cloudpc-retrievecloudpclaunchdetail.md) API.
+
 Get the [cloudPCLaunchInfo](../resources/cloudpclaunchinfo.md) for a specific [cloudPC](../resources/cloudpc.md) that belongs to the current signed-in user.
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
@@ -36,9 +39,6 @@ To get the [cloudPCLaunchInfo](../resources/cloudpclaunchinfo.md) for a specific
 GET /me/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo
 GET /users/{userId}/cloudPCs/{id}/getCloudPcLaunchInfo
 ```
-
-> [!CAUTION]
-> This API is deprecated and will stop returning data on October 30, 2026. Going forward, use the [retrieveCloudPcLaunchDetail](../api/cloudpc-retrievecloudpclaunchdetail.md) API.
 
 To get the [cloudPCLaunchInfo](../resources/cloudpclaunchinfo.md) for a specific [cloudPC](../resources/cloudpc.md) in the organization using delegated permission (the signed-in user should be the administrator):
 
