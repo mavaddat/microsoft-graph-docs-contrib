@@ -37,12 +37,12 @@ The following JSON representation shows the resource type.
 ```json
 {
   "@odata.type": "#microsoft.graph.shiftActivity",
-  "code": "String",
-  "displayName": "String",
-  "endDateTime": "String (timestamp)",
-  "isPaid": "Boolean",
-  "startDateTime": "String (timestamp)",
-  "theme": "String"
+  "code": "",
+  "displayName": "Lunch",
+  "endDateTime": "2019-03-11T15:15:00Z",
+  "isPaid": true,
+  "startDateTime": "2019-03-11T15:00:00Z",
+  "theme": "white"
 }
 ```
 
