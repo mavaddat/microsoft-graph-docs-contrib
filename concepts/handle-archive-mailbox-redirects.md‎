@@ -1,5 +1,5 @@
 ---
-title: "Handle archive mailbox redirects (preview)"
+title: "Handle archive mailbox redirects"
 description: "Learn how to handle HTTP redirects when accessing folders and items in archive mailboxes with autoexpanded folders using the mailbox import and export APIs."
 ms.localizationpriority: medium
 author: "svempali"
@@ -8,7 +8,7 @@ doc_type: conceptualPageType
 ms.date: 04/23/2026
 ---
 
-# Handle archive mailbox redirects (preview)
+# Handle archive mailbox redirects
 
 An archive mailbox can include a main archive mailbox and one or more auxiliary archive mailboxes (created through autoexpanding archive). Over time, folder contents might be distributed across these mailboxes.
 
@@ -19,7 +19,7 @@ When an application accesses an expanded folder, the API might return an HTTP re
 ## How it works
 
 - Your app makes a request to a folder or item using the main archive mailbox ID.
-- If the target resides in an auxiliary archive, the API returns a redirect response (such as HTTP 308) with a redirect URL.
+- If the target resides in an auxiliary archive, the API returns a redirect response (such as `HTTP 308 Permanent Redirect`) with a redirect URL.
 - Your app makes a new request to the URL indicated in the response.
 
 ## Example 1: Redirect when accessing a folder
