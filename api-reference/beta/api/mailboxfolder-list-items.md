@@ -53,6 +53,9 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and a collection of [mailboxItem](../resources/mailboxitem.md) objects in the response body.
 
+> [!NOTE]
+> **Archive mailboxes with auto-expanded folders:** When the target folder or items physically reside in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
+
 ## Examples
 
 ### Example 1: List items
@@ -217,6 +220,3 @@ Content-length: 232
     "@odata.nextLink": "https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders('Inbox')/items?%24filter=createdDateTime+ge+2021-08-21+and+createdDateTime+lt+2021-09-16&%24select=type%2csize&%24top=1&%24skip=1"
 }
 ```
-
-> [!NOTE]
-> **Archive mailboxes with auto-expanded folders:** When the target folder or items physically reside in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).

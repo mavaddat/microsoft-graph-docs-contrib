@@ -48,6 +48,9 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `204 No Content` response code.
 
+> [!NOTE]
+> **Archive mailboxes with auto-expanded folders:** When the target folder physically resides in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
+
 ## Examples
 
 ### Request
@@ -82,6 +85,3 @@ The following example shows the response.
 ```http
 HTTP/1.1 204 No Content
 ```
-
-> [!NOTE]
-> **Archive mailboxes with auto-expanded folders:** When the target folder physically resides in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).

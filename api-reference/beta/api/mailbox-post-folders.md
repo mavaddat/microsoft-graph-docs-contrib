@@ -56,6 +56,9 @@ You can specify the following properties when you create a **mailboxFolder**.
 
 If successful, this method returns a `201 Created` response code and a [mailboxFolder](../resources/mailboxfolder.md) object in the response body.
 
+> [!NOTE]
+> **Archive mailboxes with auto-expanded folders:** When the target folder physically resides in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
+
 ## Examples
 
 ### Request
@@ -115,6 +118,3 @@ Content-length: 179
   "type": "IPF.Note"
 }
 ```
-
-> [!NOTE]
-> **Archive mailboxes with auto-expanded folders:** When the target folder physically resides in an auxiliary (auto-expanded) archive mailbox, the API may return a redirect response pointing to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](../resources/handle-archive-mailbox-redirects.md).
