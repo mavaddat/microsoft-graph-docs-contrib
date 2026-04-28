@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Contains information associated with real-time participant interaction behaviors during a meeting reactions (like, love, applause, etc.), hand raises, camera toggles, and microphone mute/unmute events in an [attendanceRecord](attendancerecord.md).
+Contains information associated with real-time participant interaction behaviors during a meeting, including reactions (like, love, applause, etc.), hand raises, camera toggles, and microphone mute/unmute events in an [attendanceRecord](attendancerecord.md).
 
 ## Properties
 
@@ -22,7 +22,7 @@ Contains information associated with real-time participant interaction behaviors
 | ---------- | --------------------------------------- | ----------- |
 | `engagementType` | microsoft.graph.meetingEngagementType | The category of the engagement event. Required, non-nullable. |
 | `engagementSubType` | String                     | The specific engagement action within the type (e.g., `like`, `love`, `applause`, `laugh`, `surprised` for reactions; `raiseHand` for hand; `cameraOn` for camera; `unmute`, `mute` for microphone). |
-| `dateTime` | DateTime                   | The UTC date and time when the engagement event occurred. |
+| `dateTime` | DateTimeOffset             | The UTC date and time when the engagement event occurred, in ISO 8601 format. |
 
 ## Relationships
 None.
