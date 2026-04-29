@@ -12,7 +12,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-Represents an agent identity in an Entra ID directory. An agent identity is an account used by AI agents to authenticate within the Microsoft Entra ID ecosystem.
+Represents an agent identity in Microsoft Entra ID. An agent identity is an account used by AI agents to authenticate within the Microsoft Entra ID ecosystem.
 
 Inherits from [servicePrincipal](../resources/serviceprincipal.md).
 
@@ -25,6 +25,7 @@ This resource is an open type that allows additional properties beyond those doc
 |[Create](../api/agentidentity-post.md)|[agentidentity](../resources/agentidentity.md)|Create a new agentidentity object.|
 |[Get](../api/agentidentity-get.md)|[agentIdentity](../resources/agentidentity.md)|Read the properties and relationships of [agentIdentity](../resources/agentidentity.md) object.|
 |[Update](../api/agentidentity-update.md)|[agentIdentity](../resources/agentidentity.md)|Update the properties of an agentIdentity object.|
+|[Delete](../api/agentidentity-delete.md)|None|Delete an agentIdentity object.|
 |**App role assignments**|||
 |[List appRoleAssignedTo](../api/serviceprincipal-list-approleassignedto.md)|[appRoleAssignment](../resources/approleassignment.md) collection|Get the users, groups, and agent identities assigned app roles for this agent identity.|
 |[List appRoleAssignments](../api/serviceprincipal-list-approleassignments.md)|[appRoleAssignment](../resources/approleassignment.md) collection|Get the app roles that this agent identity is assigned.|
@@ -61,7 +62,7 @@ This resource is an open type that allows additional properties beyond those doc
 |odata.type|String| `#microsoft.graph.agentIdentity`. Distinguishes this object as an agent identity. Can be used to identify this object as an agent identity, instead of another kind of service principal. |
 |accountEnabled|Boolean|`true` if the agent identity account is enabled; otherwise, `false`. If set to `false`, then no users are able to sign in to this app, even if they're assigned to it. Inherited from [servicePrincipal](../resources/serviceprincipal.md).|
 |agentIdentityBlueprintId|String|The **appId** of the agent identity blueprint that defines the configuration for this agent identity.|
-|customSecurityAttributes|[customSecurityAttributeValue](../resources/customsecurityattributevalue.md)|An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on `$select`. Inherited from [servicePrincipal](../resources/serviceprincipal.md).|
+|customSecurityAttributes|[customSecurityAttributeValue](../resources/customsecurityattributevalue.md)|An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Requires `$select` to retrieve. Inherited from [servicePrincipal](../resources/serviceprincipal.md).|
 |createdByAppId|String|The **appId** of the application that created this agent identity. Set internally by Microsoft Entra ID. Read-only. Inherited from [servicePrincipal](../resources/serviceprincipal.md).|
 |createdDateTime|DateTimeOffset|The date and time the agent identity was created. Read-only. Inherited from [servicePrincipal](../resources/serviceprincipal.md).|
 |disabledByMicrosoftStatus|String|Specifies whether Microsoft has disabled the registered Agent Identity Blueprint. The possible values are: `null` (default value), `NotDisabled`, and `DisabledDueToViolationOfServicesAgreement` (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement). Inherited from [servicePrincipal](../resources/serviceprincipal.md).|

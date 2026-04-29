@@ -589,15 +589,6 @@ Namespace: microsoft.graph
 | createdBy |
 | unknownFutureValue |
 
-### accessPackageAssignmentRequestFilterByCurrentUserOptions values
-
-| Member |
-| ------------------ |
-| target |
-| createdBy |
-| approver |
-| unknownFutureValue |
-
 ### accessPackageAssignmentState values
 
 | Member |
@@ -673,6 +664,7 @@ Namespace: microsoft.graph
 | systemRemove |
 | onBehalfAdd |
 | unknownFutureValue |
+| approverRemove |
 
 ### accessPackageSubjectType values
 
@@ -982,6 +974,7 @@ Namespace: microsoft.graph
 | compliantApplication |
 | passwordChange |
 | unknownFutureValue |
+| riskRemediation |
 
 ### conditionalAccessClientApp values
 
@@ -1925,29 +1918,6 @@ Possible values for user account types (group membership), per Windows definitio
 | standard      | 0      | Member of Standard Users group. |
 | power         | 1      | Member of Power Users group.    |
 | administrator | 2      | Member of Administrators group. |
-
-### riskDetail values
-
-| Member |
-| ----------------------------------------- |
-| none |
-| adminGeneratedTemporaryPassword |
-| userPerformedSecuredPasswordChange |
-| userPerformedSecuredPasswordReset |
-| adminConfirmedSigninSafe |
-| aiConfirmedSigninSafe |
-| userPassedMFADrivenByRiskBasedPolicy |
-| adminDismissedAllRiskForUser |
-| adminConfirmedSigninCompromised |
-| hidden |
-| adminConfirmedUserCompromised |
-| unknownFutureValue |
-| adminConfirmedServicePrincipalCompromised |
-| adminDismissedAllRiskForServicePrincipal |
-| m365DAdminDismissedDetection |
-| userChangedPasswordOnPremises |
-| adminDismissedRiskForSignIn |
-| adminConfirmedAccountSafe |
 
 ### riskEventTypes values
 
