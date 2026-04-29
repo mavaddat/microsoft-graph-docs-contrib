@@ -163,6 +163,10 @@ Using the **signInAudience** property to limit where an [application](/graph/api
 
 ### Device and app management | Cloud PC
 
+- [Update](/graph/api/cloudpconpremisesconnection-updateaddomainpassword) the Active Directory domain password for a successful [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection).
+- Use the **inUseByCloudPc** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the on-premises connection is currently in use by a Cloud PC.
+- Use the **healthCheckPaused** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the health check is currently paused.
+- Use the **scopeIds** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to specify the scope identifiers.
 - Use the **osVersionNumber** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) and [cloudPcGalleryImage](/graph/api/resources/cloudpcgalleryimage) resources to get the operating system version of an image.
 - Use the **sizeInGB** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) to get the size of the image in GB.
 
@@ -246,6 +250,7 @@ The new Tenant Configuration Management APIs in Microsoft Graph allow administra
 
 ### Device and app management | Cloud PC
 
+- Use the **scopeIds** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta&preserve-view=true) to specify the scope identifiers.
 - Added `underServiceMaintenance` and `inUse` as new supported values for the **cloudPcConnectivityStatus** enumeration. Use these values with the **status** property on [cloudPcConnectivityResult](/graph/api/resources/cloudpcconnectivityresult?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is temporarily unavailable for service-initiated maintenance or is currently in use by a user.
 - Added [configureAgent](/graph/api/cloudpcexternalpartner-configureagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
 - Added [deployAgent](/graph/api/cloudpcexternalpartner-deployagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
