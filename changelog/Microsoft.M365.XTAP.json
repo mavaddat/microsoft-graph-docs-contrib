@@ -135,8 +135,8 @@
       "Cloud": "Prod",
       "Version": "beta",
       "CreatedDateTime": "2026-04-23T13:06:28.2230249Z",
-      "WorkloadArea": "Multi Tenant Management",
-      "SubArea": ""
+      "WorkloadArea": "Identity and access",
+      "SubArea": "Identity and sign-in"
     }
   ]
 }
