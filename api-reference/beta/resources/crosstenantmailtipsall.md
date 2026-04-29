@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a cross-tenant capability for sharing all mail tips. This capability allows tenant administrators to control whether users can share all mail tips information across organizations.
+Represents a cross-tenant capability for sharing all mail tips. This capability allows tenant administrators to control whether users can share all mail tips across organizations.
 
 Inherits from [m365CapabilityBase](../resources/m365capabilitybase.md).
 
