@@ -37,7 +37,7 @@ None.
 |Property|Type|Description|
 |:---|:---|:---|
 |inboundAccess|[m365CapabilityInboundAccess](../resources/m365capabilityinboundaccess.md)|The inbound access settings for the capability.|
-|lastModifiedDateTime|DateTimeOffset|The automatically updated last modified timestamp for the capability.|
+|lastModifiedDateTime|DateTimeOffset|The automatically updated last modified timestamp for the capability. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`.|
 |name|String|The name or identifier of the capability. Key.|
 
 ## Relationships

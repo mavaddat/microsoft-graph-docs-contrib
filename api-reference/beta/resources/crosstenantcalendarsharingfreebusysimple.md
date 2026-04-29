@@ -25,7 +25,7 @@ This resource is part of a polymorphic collection managed by the [m365Capability
 |Property|Type|Description|
 |:---|:---|:---|
 |inboundAccess|[m365CapabilityInboundAccess](../resources/m365capabilityinboundaccess.md)|The inbound access settings for the capability. Inherited from [m365CapabilityBase](../resources/m365capabilitybase.md).|
-|lastModifiedDateTime|DateTimeOffset|The automatically updated last modified timestamp for the capability. Inherited from [m365CapabilityBase](../resources/m365capabilitybase.md).|
+|lastModifiedDateTime|DateTimeOffset|The automatically updated last modified timestamp for the capability. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is `2024-01-01T00:00:00Z`. Inherited from [m365CapabilityBase](../resources/m365capabilitybase.md).|
 |name|String|The name or identifier of the capability. Inherited from [m365CapabilityBase](../resources/m365capabilitybase.md).|
 
 ## Relationships
