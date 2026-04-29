@@ -2885,9 +2885,9 @@ items:
         href: ../../api/crosstenantaccesspolicyconfigurationdefault-update.md
       - name: Reset to system default
         href: ../../api/crosstenantaccesspolicyconfigurationdefault-resettosystemdefault.md
-      - name: List m365Capabilities
+      - name: List Microsoft 365 capabilities
         href: ../../api/crosstenantaccesspolicyconfigurationdefault-list-m365capabilities.md
-      - name: Create m365CapabilityBase
+      - name: Create Microsoft 365 capability
         href: ../../api/crosstenantaccesspolicyconfigurationdefault-post-m365capabilities.md
     - name: Partner settings
       items:
@@ -2911,9 +2911,9 @@ items:
         href: ../../api/policydeletableitem-delete.md
       - name: Restore deleted policy
         href: ../../api/crosstenantaccesspolicyconfigurationpartner-restore.md
-      - name: List m365Capabilities
+      - name: List Microsoft 365 capabilities
         href: ../../api/crosstenantaccesspolicyconfigurationpartner-list-m365capabilities.md
-      - name: Create m365CapabilityBase
+      - name: Create Microsoft 365 capability
         href: ../../api/crosstenantaccesspolicyconfigurationpartner-post-m365capabilities.md
     - name: Partner user and group sync settings
       items:
