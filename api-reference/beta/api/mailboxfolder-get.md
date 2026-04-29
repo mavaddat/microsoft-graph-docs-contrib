@@ -55,7 +55,7 @@ Don't supply a request body for this method.
 If successful, this method returns a `200 OK` response code and a [mailboxFolder](../resources/mailboxfolder.md) object in the response body.
 
 > [!NOTE]
-> *Archive mailboxes with autoexpanded folders:* When the target folder physically resides in an auxiliary (autoexpanded) archive mailbox, this API might return a redirect response that points to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](/graph/handle-archive-mailbox-redirects).
+> This API might return a redirect when the requested folder is in an autoexpanded archive mailbox. For more information, see [Handle archive mailbox redirects](/graph/handle-archive-mailbox-redirects).
 
 ## Examples
 
