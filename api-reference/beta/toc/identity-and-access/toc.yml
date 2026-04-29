@@ -2885,6 +2885,10 @@ items:
         href: ../../api/crosstenantaccesspolicyconfigurationdefault-update.md
       - name: Reset to system default
         href: ../../api/crosstenantaccesspolicyconfigurationdefault-resettosystemdefault.md
+      - name: List m365Capabilities
+        href: ../../api/crosstenantaccesspolicyconfigurationdefault-list-m365capabilities.md
+      - name: Create m365CapabilityBase
+        href: ../../api/crosstenantaccesspolicyconfigurationdefault-post-m365capabilities.md
     - name: Partner settings
       items:
       - name: Partner settings
@@ -2907,6 +2911,10 @@ items:
         href: ../../api/policydeletableitem-delete.md
       - name: Restore deleted policy
         href: ../../api/crosstenantaccesspolicyconfigurationpartner-restore.md
+      - name: List m365Capabilities
+        href: ../../api/crosstenantaccesspolicyconfigurationpartner-list-m365capabilities.md
+      - name: Create m365CapabilityBase
+        href: ../../api/crosstenantaccesspolicyconfigurationpartner-post-m365capabilities.md
     - name: Partner user and group sync settings
       items:
       - name: Partner user and group sync settings
@@ -2927,6 +2935,40 @@ items:
         href: ../../api/policydeletableitem-delete.md
       - name: Restore deleted policy
         href: ../../api/crosstenantidentitysyncpolicypartner-restore.md
+    - name: M 365 capability base
+      href: ../../resources/m365capabilitybase.md
+    - name: Microsoft 365 capabilities
+      items:
+      - name: Cross-tenant calendar availability basic
+        href: ../../resources/crosstenantcalendaravailabilitybasic.md
+      - name: Cross-tenant calendar availability limited details
+        href: ../../resources/crosstenantcalendaravailabilitylimiteddetails.md
+      - name: Cross-tenant calendar sharing free busy detail
+        href: ../../resources/crosstenantcalendarsharingfreebusydetail.md
+      - name: Cross-tenant calendar sharing free busy reviewer
+        href: ../../resources/crosstenantcalendarsharingfreebusyreviewer.md
+      - name: Cross-tenant calendar sharing free busy simple
+        href: ../../resources/crosstenantcalendarsharingfreebusysimple.md
+      - name: Cross-tenant mail tips all
+        href: ../../resources/crosstenantmailtipsall.md
+      - name: Cross-tenant mail tips limited
+        href: ../../resources/crosstenantmailtipslimited.md
+      - name: Cross-tenant migration
+        href: ../../resources/crosstenantmigration.md
+      - name: Cross-tenant open profile card
+        href: ../../resources/crosstenantopenprofilecard.md
+      - name: Cross-tenant places desk booking
+        href: ../../resources/crosstenantplacesdeskbooking.md
+      - name: Cross-tenant places room booking
+        href: ../../resources/crosstenantplacesroombooking.md
+      - name: Complex types
+        items:
+        - name: Microsoft 365 capabilities
+          href: ../../resources/m365capabilityresourcescopes.md
+        - name: Microsoft 365 capability inbound access
+          href: ../../resources/m365capabilityinboundaccess.md
+        - name: Microsoft 365 capability resource scope
+          href: ../../resources/m365capabilityresourcescope.md
   - name: Cross-tenant migration
     items:
     - name: Overview
