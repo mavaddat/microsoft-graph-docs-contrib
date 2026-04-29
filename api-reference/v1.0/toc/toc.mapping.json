@@ -131,90 +131,96 @@
       ]
     },
     {
-      "name": "Backup storage",
-      "shouldSort": true,
-      "keywords": [
-        "M365 Backup Storage",
-        "Microsoft 365 Backup Storage",
-        "Enhanced Restore"
-      ],
-      "resources": [
-        "backupRestoreRoot",
-        "protectionPolicyBase",
-        "protectionRuleBase",
-        "protectionUnitBase",
-        "restoreArtifactBase",
-        "restoreArtifactsBulkRequestBase",
-        "restorePoint",
-        "restoreSessionBase",
-        "serviceApp"
-      ],
+      "name": "Backup and recovery",
+      "overview": "../../resources/tenants-backup-recovery-overview.md",
       "childNodes": [
         {
-          "name": "Protection policy",
+          "name": "Microsoft 365 backup and storage",
+          "shouldSort": true,
+          "keywords": [
+            "M365 Backup Storage",
+            "Microsoft 365 Backup Storage",
+            "Enhanced Restore"
+          ],
           "resources": [
-            "exchangeProtectionPolicy",
-            "oneDriveForBusinessProtectionPolicy",
-            "sharePointProtectionPolicy"
-          ]
-        },
-        {
-          "name": "Protection rule",
-          "resources": [
-            "driveProtectionRule",
-            "mailboxProtectionRule",
-            "siteProtectionRule"
-          ]
-        },
-        {
-          "name": "Protection unit",
-          "resources": [
-            "driveProtectionUnit",
-            "mailboxProtectionUnit",
-            "siteProtectionUnit"
-          ]
-        },
-        {
-          "name": "Protection units bulk job",
-          "resources": [
-            "driveProtectionUnitsBulkAdditionJob",
-            "mailboxProtectionUnitsBulkAdditionJob",
-            "siteProtectionUnitsBulkAdditionJob"
-          ]
-        },
-        {
-          "name": "Restore artifact",
-          "resources": [
-            "granularMailBoxRestoreArtifact",
-            "driveRestoreArtifact",
-            "mailboxRestoreArtifact",
-            "siteRestoreArtifact"
-          ]
-        },
-        {
-          "name": "Restore artifacts bulk request",
-          "resources": [
-            "driveRestoreArtifactsBulkAdditionRequest",
-            "mailboxRestoreArtifactsBulkAdditionRequest",
-            "siteRestoreArtifactsBulkAdditionRequest"
-          ]
-        },
-        {
-          "name": "Restore session",
-          "resources": [
-            "oneDriveForBusinessRestoreSession",
-            "exchangeRestoreSession",
-            "sharePointRestoreSession"
+            "backupRestoreRoot",
+            "protectionPolicyBase",
+            "protectionRuleBase",
+            "protectionUnitBase",
+            "restoreArtifactBase",
+            "restoreArtifactsBulkRequestBase",
+            "restorePoint",
+            "restoreSessionBase",
+            "serviceApp"
+          ],
+          "childNodes": [
+            {
+              "name": "Protection policy",
+              "resources": [
+                "exchangeProtectionPolicy",
+                "oneDriveForBusinessProtectionPolicy",
+                "sharePointProtectionPolicy"
+              ]
+            },
+            {
+              "name": "Protection rule",
+              "resources": [
+                "driveProtectionRule",
+                "mailboxProtectionRule",
+                "siteProtectionRule"
+              ]
+            },
+            {
+              "name": "Protection unit",
+              "resources": [
+                "driveProtectionUnit",
+                "mailboxProtectionUnit",
+                "siteProtectionUnit"
+              ]
+            },
+            {
+              "name": "Protection units bulk job",
+              "resources": [
+                "driveProtectionUnitsBulkAdditionJob",
+                "mailboxProtectionUnitsBulkAdditionJob",
+                "siteProtectionUnitsBulkAdditionJob"
+              ]
+            },
+            {
+              "name": "Restore artifact",
+              "resources": [
+                "granularMailBoxRestoreArtifact",
+                "driveRestoreArtifact",
+                "mailboxRestoreArtifact",
+                "siteRestoreArtifact"
+              ]
+            },
+            {
+              "name": "Restore artifacts bulk request",
+              "resources": [
+                "driveRestoreArtifactsBulkAdditionRequest",
+                "mailboxRestoreArtifactsBulkAdditionRequest",
+                "siteRestoreArtifactsBulkAdditionRequest"
+              ]
+            },
+            {
+              "name": "Restore session",
+              "resources": [
+                "oneDriveForBusinessRestoreSession",
+                "exchangeRestoreSession",
+                "sharePointRestoreSession"
+              ]
+            }
+          ],
+          "complexTypes": [
+            "artifactQuery",
+            "restorePointSearchResponse",
+            "restorePointSearchResult",
+            "retentionSetting",
+            "serviceStatus",
+            "timePeriod"
           ]
         }
-      ],
-      "complexTypes": [
-        "artifactQuery",
-        "restorePointSearchResponse",
-        "restorePointSearchResult",
-        "retentionSetting",
-        "serviceStatus",
-        "timePeriod"
       ]
     },
     {
@@ -2262,6 +2268,18 @@
     },
     {
       "name": "Tenants",
+      "shouldSort": true,
+      "overview": "../../resources/tenants-overview.md",
+      "keywords": [
+        "tenant management",
+        "tenant configuration",
+        "tenant governance",
+        "Lighhouse",
+        "cross-tenant access",
+        "multitenant",
+        "backup",
+        "recovery"
+      ],
       "childNodes": [
         {
           "name": "Configuration management",

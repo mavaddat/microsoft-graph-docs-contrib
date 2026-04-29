@@ -59,6 +59,7 @@ Represents a defined collection of Azure resource information that can be used t
 |subscriptionId|String|The ID of the target Azure subscription associated with your tenant.|
 |subscriptionName|String|The name of the target Azure subscription. Read-only.|
 |type (deprecated)|[cloudPcOnPremisesConnectionType](../resources/cloudpconpremisesconnection.md#cloudpconpremisesconnectiontype-values)|Specifies the method by which a provisioned Cloud PC is joined to Microsoft Entra. The `azureADJoin` option indicates the absence of an on-premises Active Directory (AD) in the current tenant, which results in the Cloud PC device only joining to Microsoft Entra. The `hybridAzureADJoin` option indicates the presence of an on-premises AD in the current tenant and that the Cloud PC joins both the on-premises AD and Microsoft Entra. The selected option also determines the types of users who can be assigned and can sign into a Cloud PC. The `azureADJoin` option allows both cloud-only and hybrid users to be assigned and sign in, whereas `hybridAzureADJoin` is restricted to hybrid users only. The default value is `hybridAzureADJoin`. The possible values are: `hybridAzureADJoin`, `azureADJoin`, `unknownFutureValue`. The **type** property is deprecated and stopped returning data on January 31, 2024. Going forward, use the **connectionType** property.|
+|subnetPrivateIpDetail |[cloudPcOnPremisesConnectionSubnetIpDetail](../resources/cloudpconpremisesconnectionsubnetipdetail.md) |Contains detailed information about the private IP addresses associated with the subnet. Returned only on `$select`. For an example that shows how to retrieve specific properties using `$select`, see [Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails](../api/cloudpconpremisesconnection-get.md#example-2-get-the-selected-properties-of-an-azure-network-connection-including-healthcheckstatusdetails). Read-only.|
 
 ### cloudPcManagementService values
 
@@ -118,17 +119,18 @@ The following JSON representation shows the resource type.
   "alternateResourceUrl": "String",
   "connectionType": "String",
   "displayName": "String",
+  "healthCheckPaused": "Boolean",
   "healthCheckStatus": "String",
   "healthCheckStatusDetail": { "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionStatusDetail" },
   "healthCheckStatusDetails": { "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionStatusDetails" },
   "id": "String (identifier)",
   "inUse": "Boolean",
   "inUseByCloudPc": "Boolean",
-  "healthCheckPaused": "Boolean",
   "managedBy": "String",
   "organizationalUnit": "String",
   "resourceGroupId": "String",
   "subnetId": "String",
+  "subnetPrivateIpDetail": { "@odata.type": "microsoft.graph.cloudPcOnPremisesConnectionSubnetIpDetail" },
   "subscriptionId": "String",
   "subscriptionName": "String",
   "type": "String",
