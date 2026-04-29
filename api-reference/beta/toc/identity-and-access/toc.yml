@@ -764,6 +764,8 @@ items:
         href: ../../api/accessreviewinstance-get.md
       - name: Update
         href: ../../api/accessreviewinstance-update.md
+      - name: Apply custom data provided resource decisions
+        href: ../../api/accessreviewinstance-batchapplycustomdataprovidedresourcedecisions.md
       - name: Filter by current user
         href: ../../api/accessreviewinstance-filterbycurrentuser.md
       - name: List contacted reviewers
