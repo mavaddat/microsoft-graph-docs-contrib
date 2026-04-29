@@ -146,6 +146,10 @@ Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/secur
   - [Delete a targeted message from a chat](/graph/api/chat-delete-targetedmessages?view=graph-rest-beta&preserve-view=true) by providing the chat ID and message ID.
 - Organize chats, channels, and meetings into custom sections in a user's Microsoft Teams chat list using the new [teamworkSection](/graph/api/resources/teamworksection?view=graph-rest-beta&preserve-view=true) and [teamworkSectionItem](/graph/api/resources/teamworksectionitem?view=graph-rest-beta&preserve-view=true) resources. Use the section management APIs to [list](/graph/api/userteamwork-list-sections?view=graph-rest-beta&preserve-view=true), [create](/graph/api/userteamwork-post-sections?view=graph-rest-beta&preserve-view=true), [get](/graph/api/teamworksection-get?view=graph-rest-beta&preserve-view=true), [update](/graph/api/teamworksection-update?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/teamworksection-delete?view=graph-rest-beta&preserve-view=true) sections, and [add](/graph/api/teamworksection-post-items?view=graph-rest-beta&preserve-view=true), [remove](/graph/api/teamworksectionitem-delete?view=graph-rest-beta&preserve-view=true), and [move](/graph/api/teamworksectionitem-move?view=graph-rest-beta&preserve-view=true) items within sections.
 
+### Identity and access | Governance
+
+Added the **referenceId** property and the **files** relationship to [customDataProvidedResourceUploadSession](/graph/api/resources/customdataprovidedresourceuploadsession?view=graph-rest-beta&preserve-view=true) resource to identify the context for which data is being uploaded, such as an access review instance ID, and identify files uploaded during an upload session, respectively. Also added enhanced support for query capabilities for the  [List customDataProvidedResourceUploadSession objects](/graph/api/accesspackageresource-list-uploadsessions?view=graph-rest-beta&preserve-view=true) API operation.
+
 ## March 2026: New and generally available
 
 ### Applications
