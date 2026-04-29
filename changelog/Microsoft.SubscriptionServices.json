@@ -775,7 +775,7 @@
       "CreatedDateTime": "2025-07-29T00:00:00",
       "WorkloadArea": "Change notifications",
       "SubArea": ""
-    }
+    },
     {
       "ChangeList": [
        {
@@ -795,7 +795,7 @@
           "Target": "subscription"
        },
        {
-          "Id": "b2f8b874-6182-4a6a-b79c-58b6ffdeb218",
+          "Id": "b3c1443f-b2d9-4020-a7ff-e7d561a19570",
           "ApiChange": "Method",
           "ChangedApiName": "GET",
           "ChangeType": "Addition",
@@ -803,7 +803,7 @@
           "Target": "subscription"
        },
        {
-          "Id": "b2f8b874-6182-4a6a-b79c-58b6ffdeb218",
+          "Id": "b3c1443f-b2d9-4020-a7ff-e7d561a19570",
           "ApiChange": "Method",
           "ChangedApiName": "POST",
           "ChangeType": "Addition",
@@ -811,7 +811,7 @@
           "Target": "subscription"
        },
        {
-          "Id": "b2f8b874-6182-4a6a-b79c-58b6ffdeb218",
+          "Id": "b3c1443f-b2d9-4020-a7ff-e7d561a19570",
           "ApiChange": "Method",
           "ChangedApiName": "reauthorize",
           "ChangeType": "Addition",
@@ -819,7 +819,7 @@
           "Target": "subscription"
        }
       ],
-      "Id": "b2f8b874-6182-4a6a-b79c-58b6ffdeb218",
+      "Id": "b3c1443f-b2d9-4020-a7ff-e7d561a19570",
       "Cloud": "Prod",
       "Version": "beta",
       "CreatedDateTime": "2026-03-18T00:00:00",
