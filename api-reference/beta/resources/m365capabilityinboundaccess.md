@@ -1,6 +1,6 @@
 ---
 title: "m365CapabilityInboundAccess resource type"
-description: "Represents the inbound access settings for a cross-tenant M365 capability."
+description: "Represents the inbound access settings for a cross-tenant Microsoft 365 capability."
 author: "lasharma"
 ms.date: 04/23/2026
 ms.localizationpriority: medium
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the inbound access settings for a cross-tenant M365 capability. This type defines whether the capability should be allowed or blocked and specifies the resource scopes for the capability.
+Represents the inbound access settings for a cross-tenant Microsoft 365 capability. This type defines whether the capability should be allowed or blocked and specifies the resource scopes for the capability.
 
 ## Properties
 |Property|Type|Description|
