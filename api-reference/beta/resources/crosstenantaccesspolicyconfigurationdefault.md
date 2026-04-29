@@ -24,8 +24,8 @@ Represents the default configuration for cross-tenant access and tenant restrict
 |[Get](../api/crosstenantaccesspolicyconfigurationdefault-get.md)|[crossTenantAccessPolicyConfigurationDefault](../resources/crosstenantaccesspolicyconfigurationdefault.md)|Get the default configuration for B2B collaboration and B2B direct connect inbound and outbound settings.|
 |[Update](../api/crosstenantaccesspolicyconfigurationdefault-update.md)|None|Update the default configuration for B2B collaboration and B2B direct connect inbound and outbound settings.|
 |[Reset to system default](../api/crosstenantaccesspolicyconfigurationdefault-resettosystemdefault.md)|None|Reset the default configuration for a cross-tenant access policy to the system default settings.|
-|[List m365Capabilities](../api/crosstenantaccesspolicyconfigurationdefault-list-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md) collection|Get a list of Microsoft 365 cross-tenant capabilities configured for the default policy.|
-|[Create m365CapabilityBase](../api/crosstenantaccesspolicyconfigurationdefault-post-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md)|Create a new Microsoft 365 cross-tenant capability for the default policy.|
+|[List m365Capabilities](../api/crosstenantaccesspolicyconfigurationdefault-list-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md) collection|Get a list of Microsoft 365 cross-tenant capabilities configured for the [default cross-tenant access policy](../resources/crosstenantaccesspolicyconfigurationdefault.md).|
+|[Create m365CapabilityBase](../api/crosstenantaccesspolicyconfigurationdefault-post-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md)|Create a new Microsoft 365 cross-tenant capability for the [default cross-tenant access policy](../resources/crosstenantaccesspolicyconfigurationdefault.md).|
 
 ## Properties
 

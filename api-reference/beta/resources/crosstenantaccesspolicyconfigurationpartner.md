@@ -34,8 +34,8 @@ Inherits from [policyDeletableItem](../resources/policydeletableitem.md).
 | [Get deleted policy](../api/policydeletableitem-get.md) | [crossTenantAccessPolicyConfigurationPartner](../resources/crosstenantaccesspolicyconfigurationpartner.md) | Get a single deleted partner-specific configuration policy. |
 | [Permanently delete deleted policy](../api/policydeletableitem-delete.md) | None | Permanently delete a deleted partner-specific configuration policy. |
 |[Restore deleted policy](../api/crosstenantaccesspolicyconfigurationpartner-restore.md)|[crossTenantAccessPolicyConfigurationPartner](../resources/crosstenantaccesspolicyconfigurationpartner.md)| Restore the partner-specific configuration policy. |
-|[List m365Capabilities](../api/crosstenantaccesspolicyconfigurationpartner-list-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md) collection|Get a list of Microsoft 365 cross-tenant capabilities configured for the partner.|
-|[Create m365CapabilityBase](../api/crosstenantaccesspolicyconfigurationpartner-post-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md)|Create a new Microsoft 365 cross-tenant capability for the partner.|
+|[List m365Capabilities](../api/crosstenantaccesspolicyconfigurationpartner-list-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md) collection|Get a list of Microsoft 365 cross-tenant capabilities configured for a partner organization in the [cross-tenant access policy](../resources/crosstenantaccesspolicy-overview.md).|
+|[Create m365CapabilityBase](../api/crosstenantaccesspolicyconfigurationpartner-post-m365capabilities.md)|[m365CapabilityBase](../resources/m365capabilitybase.md)|Create a new Microsoft 365 cross-tenant capability for a partner organization in the [cross-tenant access policy](../resources/crosstenantaccesspolicy-overview.md).|
 
 ## Properties
 
