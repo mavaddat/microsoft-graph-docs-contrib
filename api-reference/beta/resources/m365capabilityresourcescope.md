@@ -22,6 +22,15 @@ Specifies the resource that a cross-tenant capability policy applies to. This ty
 |resourceId|String|The ID of the resource being modified (a user or group ID).|
 |resourceType|m365ResourceType|The type of resource. The possible values are: `none`, `group`, `user`, `unknownFutureValue`.|
 
+### m365ResourceType values
+
+| Member             | Description                       |
+| ------------------ | --------------------------------- |
+| none               | A value to use instead of `null`.   |
+| group              | The resource ID is a group ID.    |
+| user               | The resource ID is a user ID.     |
+| unknownFutureValue | Evolvable enumeration sentinel value. Don't use. |
+
 ## Relationships
 None.
 
