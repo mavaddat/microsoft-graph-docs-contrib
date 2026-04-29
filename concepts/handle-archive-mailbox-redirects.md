@@ -100,7 +100,7 @@ Content-type: application/json
 }
 ```
 
-To resolve this issue, create a new import session targeting the mailbox ID indicated in the error message (in this case, `MBX:f10964a6-4fd0-4f74-8@4d2e-9e48-109351d094ab`), then retry the import using the new **importUrl**.
+To resolve this issue, [create a new import session](/graph/api/mailbox-createimportsession?view=graph-rest-beta&preserve-view=true) targeting the mailbox ID indicated in the error message (in this case, `MBX:f10964a6-4fd0-4f74-8@4d2e-9e48-109351d094ab`). Use the [importUrl](/graph/api/resources/mailboxitemimportsession?view=graph-rest-beta&preserve-view=true#properties) property from the new session response to retry the import.
 
 ## Related content
 
