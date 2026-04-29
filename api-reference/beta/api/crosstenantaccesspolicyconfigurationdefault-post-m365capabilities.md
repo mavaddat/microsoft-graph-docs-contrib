@@ -1,5 +1,5 @@
 ---
-title: "Create m365CapabilityBase"
+title: "Create m365CapabilityBase for default policy"
 description: "Create a new Microsoft 365 cross-tenant capability for the default cross-tenant access policy."
 author: "lasharma"
 ms.date: 04/23/2026
@@ -8,13 +8,13 @@ ms.subservice: "entra-sign-in"
 doc_type: apiPageType
 ---
 
-# Create m365CapabilityBase
+# Create m365CapabilityBase for default policy
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new Microsoft 365 cross-tenant capability for the default cross-tenant access policy. The `@odata.type` property in the request body is required to specify which type of capability to create.
+Create a new Microsoft 365 cross-tenant capability for the [default cross-tenant access policy](../resources/crosstenantaccesspolicyconfigurationdefault.md). The **@odata.type** property in the request body is required to specify which type of capability to create.
 
 ## Permissions
 
@@ -46,9 +46,9 @@ POST /policies/crossTenantAccessPolicy/default/m365Capabilities
 
 ## Request body
 
-In the request body, supply a JSON representation of a derived type of [m365CapabilityBase](../resources/m365capabilitybase.md). The `@odata.type` property is required to specify the capability type.
+In the request body, supply a JSON representation of a derived type of [m365CapabilityBase](../resources/m365capabilitybase.md). The **@odata.type** property is required to specify the capability type.
 
-You can specify the following properties when creating an **m365CapabilityBase** capability.
+You can specify the following properties when you create an **m365CapabilityBase** capability.
 
 |Property|Type|Description|
 |:---|:---|:---|
