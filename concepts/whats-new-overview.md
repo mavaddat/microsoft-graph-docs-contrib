@@ -83,6 +83,10 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 - [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 - [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 
+### Device and app management | Cloud PC
+
+The `/me/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo` and `/users/{userId}/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo` endpoints are deprecated and will stop returning data on October 30, 2026. Going forward, use the [retrieveCloudPcLaunchDetail](/graph/api/cloudpc-retrievecloudpclaunchdetail?view=graph-rest-beta&preserve-view=true) API.
+
 ### Files
 
 - Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
