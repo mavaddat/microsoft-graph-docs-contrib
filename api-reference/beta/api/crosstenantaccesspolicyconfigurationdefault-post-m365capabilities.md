@@ -52,7 +52,7 @@ You can specify the following properties when you create an **m365CapabilityBase
 
 |Property|Type|Description|
 |:---|:---|:---|
-|@odata.type|String|The type of capability to create. Required. Example values: `#microsoft.graph.crossTenantOpenProfileCard`, `#microsoft.graph.crossTenantMigration`|
+|@odata.type|String|The type of capability to create. Required. Example values: `#microsoft.graph.crossTenantOpenProfileCard`, `#microsoft.graph.crossTenantMigration`.|
 |inboundAccess|[m365CapabilityInboundAccess](../resources/m365capabilityinboundaccess.md)|The inbound access settings for the capability. Required.|
 
 ## Response
@@ -62,7 +62,7 @@ If successful, this method returns a `201 Created` response code and the created
 ## Examples
 
 ### Example 1: Create a cross-tenant open profile card capability
-
+The following example shows how to create a [cross-tenant open profile card](../resources/crosstenantopenprofilecard.md) capability.
 #### Request
 
 The following example shows a request.
@@ -136,7 +136,7 @@ Content-Type: application/json
 ```
 
 ### Example 2: Create a cross-tenant migration capability
-
+The following example shows how to create a [cross-tenant migration](../resources/crosstenantmigration.md) capability.
 #### Request
 
 The following example shows a request.

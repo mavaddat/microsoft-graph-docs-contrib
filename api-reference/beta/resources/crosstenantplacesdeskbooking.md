@@ -1,6 +1,6 @@
 ---
 title: "crossTenantPlacesDeskBooking resource type"
-description: "Represents a cross-tenant capability for desk booking in places."
+description: "Represents a cross-tenant capability for desk booking in Places."
 author: "lasharma"
 ms.date: 04/23/2026
 ms.localizationpriority: medium

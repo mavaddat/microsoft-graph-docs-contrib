@@ -62,7 +62,7 @@ If successful, this method returns a `201 Created` response code and the created
 ## Examples
 
 ### Example 1: Create a cross-tenant mail tips capability
-
+The following example shows how to create a [cross-tenant mail tips](../resources/crosstenantmailtipslimited.md) capability.
 #### Request
 
 The following example shows a request.
@@ -127,7 +127,7 @@ Content-Type: application/json
 ```
 
 ### Example 2: Create a cross-tenant places room booking capability
-
+The following example shows how to create a [cross-tenant places room booking](../resources/crosstenantplacesroombooking.md) capability.
 #### Request
 
 The following example shows a request.

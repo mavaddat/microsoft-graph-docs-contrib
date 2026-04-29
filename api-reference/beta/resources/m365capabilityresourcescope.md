@@ -6,6 +6,7 @@ ms.date: 04/23/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+toc.title: "Microsoft 365 capability resource scope"
 ---
 
 # m365CapabilityResourceScope resource type
@@ -20,7 +21,7 @@ Specifies the resource that a cross-tenant capability policy applies to. This ty
 |Property|Type|Description|
 |:---|:---|:---|
 |resourceId|String|The ID of the resource to modify (a user or group ID).|
-|resourceType|m365ResourceType|The type of resource. The possible values are: `none`, `group`, `user`, `unknownFutureValue`.|
+|resourceType|[m365ResourceType](#m365resourcetype-values)|The type of resource. The possible values are: `none`, `group`, `user`, `unknownFutureValue`.|
 
 ### m365ResourceType values
 

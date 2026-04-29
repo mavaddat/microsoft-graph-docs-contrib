@@ -1,6 +1,6 @@
 ---
 title: "crossTenantPlacesRoomBooking resource type"
-description: "Represents a cross-tenant capability for room booking in places."
+description: "Represents a cross-tenant capability for room booking in Places."
 author: "lasharma"
 ms.date: 04/23/2026
 ms.localizationpriority: medium

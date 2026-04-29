@@ -45,7 +45,7 @@
         {
           "Id": "bd386b48-f0cf-4b48-9bfb-2500f71ee753",
           "ApiChange": "Method",
-          "ChangedApiName": "List m365Capabilities for default policy",
+          "ChangedApiName": "GET",
           "ChangeType": "Addition",
           "Description": "Added the [List m365Capabilities](/graph/api/crosstenantaccesspolicyconfigurationdefault-list-m365capabilities?view=graph-rest-beta) method to the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crossTenantAccessPolicyConfigurationDefault?view=graph-rest-beta) resource.",
           "Target": "crossTenantAccessPolicyConfigurationDefault"
@@ -53,7 +53,7 @@
         {
           "Id": "bd386b48-f0cf-4b48-9bfb-2500f71ee753",
           "ApiChange": "Method",
-          "ChangedApiName": "Create m365CapabilityBase for default policy",
+          "ChangedApiName": "POST",
           "ChangeType": "Addition",
           "Description": "Added the [Create m365CapabilityBase](/graph/api/crosstenantaccesspolicyconfigurationdefault-post-m365capabilities?view=graph-rest-beta) method to the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crossTenantAccessPolicyConfigurationDefault?view=graph-rest-beta) resource.",
           "Target": "crossTenantAccessPolicyConfigurationDefault"
@@ -61,7 +61,7 @@
         {
           "Id": "bd386b48-f0cf-4b48-9bfb-2500f71ee753",
           "ApiChange": "Method",
-          "ChangedApiName": "List m365Capabilities for partner",
+          "ChangedApiName": "GET",
           "ChangeType": "Addition",
           "Description": "Added the [List m365Capabilities](/graph/api/crosstenantaccesspolicyconfigurationpartner-list-m365capabilities?view=graph-rest-beta) method to the [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crossTenantAccessPolicyConfigurationPartner?view=graph-rest-beta) resource.",
           "Target": "crossTenantAccessPolicyConfigurationPartner"
@@ -69,7 +69,7 @@
         {
           "Id": "bd386b48-f0cf-4b48-9bfb-2500f71ee753",
           "ApiChange": "Method",
-          "ChangedApiName": "Create m365CapabilityBase for partner",
+          "ChangedApiName": "POST",
           "ChangeType": "Addition",
           "Description": "Added the [Create m365CapabilityBase](/graph/api/crosstenantaccesspolicyconfigurationpartner-post-m365capabilities?view=graph-rest-beta) method to the [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crossTenantAccessPolicyConfigurationPartner?view=graph-rest-beta) resource.",
           "Target": "crossTenantAccessPolicyConfigurationPartner"
@@ -161,6 +161,14 @@
           "ChangeType": "Addition",
           "Description": "Added the [crossTenantPlacesRoomBooking](https://learn.microsoft.com/en-us/graph/api/resources/crossTenantPlacesRoomBooking?view=graph-rest-beta) resource.",
           "Target": "crossTenantPlacesRoomBooking"
+        },
+        {
+          "Id": "bd386b48-f0cf-4b48-9bfb-2500f71ee753",
+          "ApiChange": "Enumeration",
+          "ChangedApiName": "m365ResourceType",
+          "ChangeType": "Addition",
+          "Description": "Added the **m365ResourceType** enumeration type.",
+          "Target": "m365ResourceType"
         }
       ],
       "Id": "bd386b48-f0cf-4b48-9bfb-2500f71ee753",
