@@ -19,7 +19,7 @@ Specifies the included and excluded resource scopes for a cross-tenant capabilit
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|excluded|[m365CapabilityResourceScope](../resources/m365capabilityresourcescope.md) collection|Resources to exclude from the scope. If a resource appears in both `included` and `excluded`, exclusion takes precedence.|
+|excluded|[m365CapabilityResourceScope](../resources/m365capabilityresourcescope.md) collection|Resources to exclude from the scope. If a resource appears in both **included** and **excluded**, the **excluded** property takes precedence.|
 |included|[m365CapabilityResourceScope](../resources/m365capabilityresourcescope.md) collection|Resources to include in the scope.|
 
 ## Relationships
