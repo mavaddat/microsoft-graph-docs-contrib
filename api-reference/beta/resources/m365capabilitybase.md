@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents an abstract base type for cross-tenant Microsoft 365 capabilities. This type cannot be instantiated directly. Instances are created using specific derived types. All capability instances in a collection are differentiated by the `@odata.type` property.
+Represents an abstract base type for cross-tenant Microsoft 365 capabilities. This type can't be instantiated directly. Instances are created using specific derived types. All capability instances in a collection are differentiated by the **@odata.type** property.
 
 The following types derive from **m365CapabilityBase**:
 
