@@ -4,7 +4,7 @@ description: "Learn how to handle HTTP redirects when accessing folders and item
 ms.localizationpriority: medium
 author: "svempali"
 ms.subservice: "outlook"
-doc_type: conceptualPageType
+ms.topic: concept-article
 ms.date: 04/23/2026
 ---
 
