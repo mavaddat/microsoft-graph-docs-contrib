@@ -1,12 +1,21 @@
 ---
-title: Manage your tenants by using Microsoft Graph
-description: Use the Microsoft Graph tenant management APIs to back up data, manage configuration settings, and govern tenants at scale programmatically.
-author: FaithOmbongi
-ms.author: ombongifaith
-ms.date: 04/29/2026
-ms.topic: include
-ms.subservice: non-product-specific
+title: "Overview of tenant management APIs in Microsoft Graph"
+description: "Use Microsoft Graph tenant management APIs to configure, govern, and protect tenants at scale."
+author: "FaithOmbongi"
+ms.author: "ombongifaith"
+ms.localizationpriority: high
+doc_type: conceptualPageType
+ms.subservice: "entra-directory-management"
+ms.topic: overview
+ms.date: 04/17/2026
+# Customer intent: As a developer integrating with Microsoft Graph, I want to know which tenant management APIs are available so I can choose the right APIs to programmatically manage my organization's tenant configurations and governance at scale.
 ---
+
+# Overview of tenant management APIs in Microsoft Graph
+
+Tenants are the foundation of your organization's cloud environment, providing the boundaries for collaboration, identity, access, and resource management. Microsoft Graph provides a growing set of APIs to programmatically manage, configure, and govern those tenants at scale - from maintaining consistent settings to establishing cross-tenant governance relationships.
+
+## Available services and APIs
 
 ---
 :::image type="icon" source="/graph/images/tenants/backup-icon.svg" alt-text="" border="false":::
