@@ -2935,9 +2935,8 @@ items:
         href: ../../api/policydeletableitem-delete.md
       - name: Restore deleted policy
         href: ../../api/crosstenantidentitysyncpolicypartner-restore.md
-    - name: M 365 capability base
-      href: ../../resources/m365capabilitybase.md
     - name: Microsoft 365 capabilities
+      href: ../../resources/m365capabilitybase.md
       items:
       - name: Cross-tenant calendar availability basic
         href: ../../resources/crosstenantcalendaravailabilitybasic.md
@@ -2963,12 +2962,12 @@ items:
         href: ../../resources/crosstenantplacesroombooking.md
       - name: Complex types
         items:
-        - name: Microsoft 365 capabilities
-          href: ../../resources/m365capabilityresourcescopes.md
         - name: Microsoft 365 capability inbound access
           href: ../../resources/m365capabilityinboundaccess.md
         - name: Microsoft 365 capability resource scope
           href: ../../resources/m365capabilityresourcescope.md
+        - name: Microsoft 365 resource scopes
+          href: ../../resources/m365capabilityresourcescopes.md
   - name: Cross-tenant migration
     items:
     - name: Overview
