@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a cross-tenant capability for desk booking in places. This capability allows tenant administrators to control whether users can book desks across organizations.
+Represents a cross-tenant capability for desk booking in Places. This capability allows tenant administrators to control whether users can book desks across organizations.
 
 Inherits from [m365CapabilityBase](../resources/m365capabilitybase.md).
 
