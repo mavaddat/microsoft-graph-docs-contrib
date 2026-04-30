@@ -22,7 +22,7 @@ The Microsoft Purview APIs for eDiscovery enable organizations to automate repet
 | -------- | -------- | -------- | -------- |
 |Cases, Searches, Holds|Yes   |Yes|Yes|
 |Export|Requires pay-as-you-go billing|Yes|Yes|
-|Premium features incl: Review sets, tagging, analytics, data sources|No|Yes|Yes|
+|Premium features incl: Review sets, tagging, analytics|No|Yes|Yes|
 
 | Name | Type | Use case |
 |:---|:---|:---|
