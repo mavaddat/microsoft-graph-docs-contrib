@@ -21,12 +21,9 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Create verifiableCredentialAuthenticationMethodTarget](../api/verifiablecredentialsauthenticationmethodconfiguration-post-includetargets.md)|[verifiableCredentialAuthenticationMethodTarget](../resources/verifiablecredentialauthenticationmethodtarget.md)|Create a new verifiableCredentialAuthenticationMethodTarget object.|
 |[Delete](../api/verifiablecredentialsauthenticationmethodconfiguration-delete.md)|None|Delete a verifiableCredentialsAuthenticationMethodConfiguration object.|
-|[Delete verifiableCredentialAuthenticationMethodTarget](../api/verifiablecredentialsauthenticationmethodconfiguration-delete-includetargets.md)|None|Delete a verifiableCredentialAuthenticationMethodTarget object.|
 |[Get](../api/verifiablecredentialsauthenticationmethodconfiguration-get.md)|[verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md)|Read the properties and relationships of [verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md) object.|
 |[List](../api/verifiablecredentialsauthenticationmethodconfiguration-list.md)|[verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md) collection|Get a list of the verifiableCredentialsAuthenticationMethodConfiguration objects and their properties.|
-|[List includeTargets](../api/verifiablecredentialsauthenticationmethodconfiguration-list-includetargets.md)|[verifiableCredentialAuthenticationMethodTarget](../resources/verifiablecredentialauthenticationmethodtarget.md) collection|Get a list of the verifiableCredentialAuthenticationMethodTarget objects and their properties.|
 |[Update](../api/verifiablecredentialsauthenticationmethodconfiguration-update.md)|[verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md)|Update the properties of a verifiableCredentialsAuthenticationMethodConfiguration object.|
 
 
