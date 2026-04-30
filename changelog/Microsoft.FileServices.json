@@ -237,7 +237,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroupMember",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupmember?view=graph-rest-1.0) resource.",
+          "Description": "Added the [sharePointGroupMember](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroupmember?view=graph-rest-1.0) resource and associated methods.",
           "Target": "sharePointGroupMember"
         }
       ],
