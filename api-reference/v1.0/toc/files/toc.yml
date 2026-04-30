@@ -368,5 +368,5 @@ items:
     href: ../../resources/filestoragecontainertyperegistrationsettings.md
   - name: File storage container type settings
     href: ../../resources/filestoragecontainertypesettings.md
-  - name: Share point group identity
+  - name: SharePoint group identity
     href: ../../resources/sharepointgroupidentity.md
