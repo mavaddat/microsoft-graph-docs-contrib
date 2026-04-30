@@ -34,10 +34,9 @@ Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy
 
 ### Identity and access | Identity and sign-in
 
-- Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
 - Added the [onVerifiedIdClaimValidationCustomExtension](/graph/api/resources/onverifiedidclaimvalidationcustomextension) and [onVerifiedIdClaimValidationListener](/graph/api/resources/onverifiedidclaimvalidationlistener) resource types and associated methods to support custom logic for claim validation from Verified ID credential presentations during authentication flows through Microsoft Entra custom authentication extensions in External ID.
-
 - Added claim validation and match-confidence capabilities to [Verified ID profiles](/graph/api/resources/verifiedidprofile?view=graph-rest-beta&preserve-view=true), enabling stronger claim verification and more flexible matching.
+- Added support for Microsoft 365 cross-tenant access policy capabilities that allow administrators to control access to Microsoft 365 resources and data when collaborating with external organizations. Use the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) resources with the new **m365Capabilities** relationship to manage capabilities including profile sharing, calendar sharing, migration, mail tips, and Places booking across organizational boundaries.
 
 ## April 2026: New and generally available
 
@@ -121,8 +120,7 @@ The `/me/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo` and `/users/{userId}/cloudPC
 
 ### Identity and access | Identity and sign-in
 
-- Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
-- Added support for Microsoft 365 cross-tenant access policy capabilities that allow administrators to control access to Microsoft 365 resources and data when collaborating with external organizations. Use the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) resources with the new **m365Capabilities** relationship to manage capabilities including profile sharing, calendar sharing, migration, mail tips, and Places booking across organizational boundaries.
+Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
 
 ### Mail
 
