@@ -5,14 +5,14 @@ author: "yogesh-randhawa"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
-ms.date: 09/13/2024
+ms.date: 04/30/2026
 ---
 
 # identifierUriConfiguration resource type
 
 Namespace: microsoft.graph
 
-Represents a restriction to block identifier URI formats on applications that could either be easily compromised or used for compromise.
+Configuration object to configure a restriction for [identifier URIs on application objects](../resources/identifieruriconfiguration.md).
 
 ## Properties
 | Property                            | Type                            | Description                 |

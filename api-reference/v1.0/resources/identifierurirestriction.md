@@ -12,7 +12,7 @@ ms.date: 11/17/2024
 
 Namespace: microsoft.graph
 
-Configuration object to configure a restriction for identifier URIs on application objects.
+Configuration object to configure a restriction for [identifier URIs on application objects](../resources/identifieruriconfiguration.md).
 
 ## Properties
 | Property                                    | Type                            | Description                 |
