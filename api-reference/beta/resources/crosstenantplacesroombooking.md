@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a cross-tenant capability for room booking in places. This capability allows tenant administrators to control whether users can book rooms across organizations.
+Represents a cross-tenant capability for room booking in Places. This capability allows tenant administrators to control whether users can book rooms across organizations.
 
 Inherits from [m365CapabilityBase](../resources/m365capabilitybase.md).
 
