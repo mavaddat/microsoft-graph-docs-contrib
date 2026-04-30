@@ -83,6 +83,10 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 - [Update](/graph/api/mailboxprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [mailboxProtectionUnit](/graph/api/resources/mailboxprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 - [Update](/graph/api/siteprotectionunit-update?view=graph-rest-beta&preserve-view=true) the **billingPolicyId** property on a [siteProtectionUnit](/graph/api/resources/siteprotectionunit?view=graph-rest-beta&preserve-view=true) object.
 
+### Device and app management | Cloud PC
+
+The `/me/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo` and `/users/{userId}/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo` endpoints are deprecated and will stop returning data on October 30, 2026. Going forward, use the [retrieveCloudPcLaunchDetail](/graph/api/cloudpc-retrievecloudpclaunchdetail?view=graph-rest-beta&preserve-view=true) API.
+
 ### Files
 
 - Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
@@ -109,6 +113,10 @@ Introduced the new notes API that enables users to create and manage simple note
 - [List attachments](/graph/api/note-list-attachments?view=graph-rest-beta&preserve-view=true) for a note.
 - [Create an attachment](/graph/api/note-post-attachments?view=graph-rest-beta&preserve-view=true) on a note.
 - [Delete an attachment](/graph/api/attachment-delete?view=graph-rest-beta&preserve-view=true) from a note.
+
+### Mailbox import and export
+
+Learn how to handle HTTP redirects when accessing folders and items in archive mailboxes with autoexpanded folders using the mailbox import and export APIs. For more information, see [Handle archive mailbox redirects](/graph/handle-archive-mailbox-redirects).
 
 ### People and workplace intelligence | Profile
 
@@ -138,6 +146,10 @@ Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/secur
   - [Delete a targeted message from a chat](/graph/api/chat-delete-targetedmessages?view=graph-rest-beta&preserve-view=true) by providing the chat ID and message ID.
 - Organize chats, channels, and meetings into custom sections in a user's Microsoft Teams chat list using the new [teamworkSection](/graph/api/resources/teamworksection?view=graph-rest-beta&preserve-view=true) and [teamworkSectionItem](/graph/api/resources/teamworksectionitem?view=graph-rest-beta&preserve-view=true) resources. Use the section management APIs to [list](/graph/api/userteamwork-list-sections?view=graph-rest-beta&preserve-view=true), [create](/graph/api/userteamwork-post-sections?view=graph-rest-beta&preserve-view=true), [get](/graph/api/teamworksection-get?view=graph-rest-beta&preserve-view=true), [update](/graph/api/teamworksection-update?view=graph-rest-beta&preserve-view=true), and [delete](/graph/api/teamworksection-delete?view=graph-rest-beta&preserve-view=true) sections, and [add](/graph/api/teamworksection-post-items?view=graph-rest-beta&preserve-view=true), [remove](/graph/api/teamworksectionitem-delete?view=graph-rest-beta&preserve-view=true), and [move](/graph/api/teamworksectionitem-move?view=graph-rest-beta&preserve-view=true) items within sections.
 
+### Identity and access | Governance
+
+Added the **referenceId** property and the **files** relationship to [customDataProvidedResourceUploadSession](/graph/api/resources/customdataprovidedresourceuploadsession?view=graph-rest-beta&preserve-view=true) resource to identify the context for which data is being uploaded, such as an access review instance ID, and identify files uploaded during an upload session, respectively. Also added enhanced support for query capabilities for the  [List customDataProvidedResourceUploadSession objects](/graph/api/accesspackageresource-list-uploadsessions?view=graph-rest-beta&preserve-view=true) API operation.
+
 ## March 2026: New and generally available
 
 ### Applications
@@ -151,6 +163,10 @@ Using the **signInAudience** property to limit where an [application](/graph/api
 
 ### Device and app management | Cloud PC
 
+- [Update](/graph/api/cloudpconpremisesconnection-updateaddomainpassword) the Active Directory domain password for a successful [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection).
+- Use the **inUseByCloudPc** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the on-premises connection is currently in use by a Cloud PC.
+- Use the **healthCheckPaused** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the health check is currently paused.
+- Use the **scopeIds** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to specify the scope identifiers.
 - Use the **osVersionNumber** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) and [cloudPcGalleryImage](/graph/api/resources/cloudpcgalleryimage) resources to get the operating system version of an image.
 - Use the **sizeInGB** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) to get the size of the image in GB.
 
@@ -234,6 +250,7 @@ The new Tenant Configuration Management APIs in Microsoft Graph allow administra
 
 ### Device and app management | Cloud PC
 
+- Use the **scopeIds** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta&preserve-view=true) to specify the scope identifiers.
 - Added `underServiceMaintenance` and `inUse` as new supported values for the **cloudPcConnectivityStatus** enumeration. Use these values with the **status** property on [cloudPcConnectivityResult](/graph/api/resources/cloudpcconnectivityresult?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is temporarily unavailable for service-initiated maintenance or is currently in use by a user.
 - Added [configureAgent](/graph/api/cloudpcexternalpartner-configureagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
 - Added [deployAgent](/graph/api/cloudpcexternalpartner-deployagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).

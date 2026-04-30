@@ -1,23 +1,19 @@
 ---
 title: "cloudPcOnPremisesConnection: updateAdDomainPassword"
 description: "Update the Active Directory domain password for a successful Azure network connection."
-author: "AshleyYangSZ"
+author: "shijun2026-3"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
-ms.date: 04/05/2024
+ms.date: 03/25/2026
 ---
 
 # cloudPcOnPremisesConnection: updateAdDomainPassword
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 Update the Active Directory domain password for a successful [cloudPcOnPremisesConnection](../resources/cloudpconpremisesconnection.md). This API is supported when the type of the **cloudPcOnPremisesConnection** object is `hybridAzureADJoin`.
 
 [!INCLUDE [on-premise-rename-note](../../includes/on-premise-rename-note.md)]
-
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -71,7 +67,7 @@ The following example shows a request.
 -->
 
 ``` http
-POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/onPremisesConnections/07f12770-a225-4957-9127-0d247cf4ffff/updateAdDomainPassword
+POST https://graph.microsoft.com/v1.0/deviceManagement/virtualEndpoint/onPremisesConnections/07f12770-a225-4957-9127-0d247cf4ffff/updateAdDomainPassword
 Content-Type: application/json
 
 {
