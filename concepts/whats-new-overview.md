@@ -32,6 +32,10 @@ Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy
 
 ## May 2026: New in preview only
 
+### Change notifications
+
+Use the new Copilot change notifications API for meetings AI insights to subscribe to notifications for the generation of meeting AI summaries and receive a notification when the summaries are fully generated and available. For more information, see [Get change notifications for Copilot AI insights using Microsoft Graph](/microsoft-365/copilot/extensibility/api/ai-services/change-notifications/aiinsights-changenotifications).
+
 ### Identity and access | Identity and sign-in
 
 - Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
@@ -86,10 +90,6 @@ Manage Teams apps at the channel level within a team using the following APIs:
 - Use the **subnetPrivateIpDetail** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta&preserve-view=true) to get detailed information about the subnet's private IP addresses associated with the subnet.
 
 ## April 2026: New in preview only
-
-### Teamwork and communications | Copilot AI Insights Change Notifications API
-
-Added new Copilot Graph Change Notifications API for Meetings AI Insights. This new capability allows developers to subscribe to notifications for the generation of meeting AI summaries and receive a Graph notification as soon as the summaries are fully generated and available. For more information, see [AI Insights Change Notifications](/microsoft-365/copilot/extensibility/api/ai-services/change-notifications/aiinsights-changenotifications).
 
 ### Agents
 
