@@ -1,6 +1,6 @@
 ---
 title: "Create permission on a driveItem"
-description: "Create a new permission object for a driveItem."
+description: "Create a new permission object on a driveItem."
 author: "humbertorMSFT"
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
