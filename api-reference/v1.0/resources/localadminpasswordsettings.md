@@ -1,17 +1,16 @@
 ---
 title: "localAdminPasswordSettings resource type"
 description: "Represents the policy scope of a Microsoft Entra tenant that controls the Local Admin Password Solution (LAPS) setting."
-author: "sandeo-MSFT"
+author: "michaelrm97"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
-ms.date: 07/22/2024
+ms.date: 03/20/2026
 ---
+
 # localAdminPasswordSettings resource type
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents the policy scope of the Microsoft Entra tenant that controls the Local Admin Password Solution (LAPS) setting. Configured in the **localAdminPassword** property of [deviceRegistrationPolicy](../resources/deviceregistrationpolicy.md).
 

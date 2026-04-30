@@ -312,6 +312,14 @@ Namespace: microsoft.graph
 | application |
 | unknownFutureValue |
 
+### multiFactorAuthConfiguration values
+
+| Member             | 
+| ------------------ | 
+| notRequired        | 
+| required           | 
+| unknownFutureValue | 
+
 ### multiTenantOrganizationMemberProcessingStatus values
 
 | Member |

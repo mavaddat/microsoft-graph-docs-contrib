@@ -1,18 +1,16 @@
 ---
 title: "localAdminSettings resource type"
 description: "Controls local administrators on Microsoft Entra-joined devices."
-author: "SanDeo-MSFT"
+author: "michaelrm97"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
-ms.date: 06/03/2024
-ms.custom: sfi-ga-nochange
+ms.date: 03/20/2026
 ---
+
 # localAdminSettings resource type
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Controls local administrators on Microsoft Entra-joined devices in a device registration policy. Configured on the **localAdmins** property of [azureADJoinPolicy](../resources/azureadjoinpolicy.md).
 

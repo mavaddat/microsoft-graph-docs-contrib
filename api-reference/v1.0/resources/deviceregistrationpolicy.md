@@ -1,17 +1,16 @@
 ---
 title: "deviceRegistrationPolicy resource type"
 description: "Represents the policy scope that controls quota restrictions, additional authentication, and authorization policies for the Microsoft Entra tenant."
-author: "myra-ramdenbourg"
+author: "michaelrm97"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
-ms.date: 05/23/2024
+ms.date: 03/20/2026
 ---
+
 # deviceRegistrationPolicy resource type
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents the policy scope that controls quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
 
@@ -34,7 +33,6 @@ Represents the policy scope that controls quota restrictions, additional authent
 |localAdminPassword|[localAdminPasswordSettings](../resources/localadminpasswordsettings.md)| Specifies the setting for **Local Admin Password Solution (LAPS)** within your organization.|
 |multiFactorAuthConfiguration|multiFactorAuthConfiguration|Specifies the authentication policy for a user to complete registration using **Microsoft Entra join** or **Microsoft Entra registered** within your organization. The possible values are: `notRequired`, `required`, `unknownFutureValue`. The default value is `notRequired`.|
 |userDeviceQuota|Int32|Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to `0` to indicate that users aren't allowed to join any devices.|
-
 
 ## Relationships
 
