@@ -18,6 +18,27 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 > [!IMPORTANT]
 > Features in _preview_ status are subject to change without notice, and might not be promoted to generally available (GA) status. Don't use preview features in production apps.
 
+## May 2026: New and generally available
+
+### Agents
+
+- Added the [agentUser](/graph/api/resources/agentuser) resource type and related methods for managing the lifecycle of agent user identities.
+
+- Added [verifiedIdProfile](/graph/api/resources/verifiedidprofile) resources and related profile configuration for configuring Microsoft Entra Verified ID.
+
+### Identity and access | Directory management
+
+Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy) resource type and its related methods to manage the policy that controls device registration quota restrictions, additional authentication, and authorization policies for your Microsoft Entra tenant.
+
+## May 2026: New in preview only
+
+### Identity and access | Identity and sign-in
+
+- Added the **blueprintId** and **source** agent-descriptive properties to [agentRiskDetection](/graph/api/resources/agentriskdetection?view=graph-rest-beta&preserve-view=true) and [riskyAgent](/graph/api/resources/riskyagent?view=graph-rest-beta&preserve-view=true) resources.
+- Added the [onVerifiedIdClaimValidationCustomExtension](/graph/api/resources/onverifiedidclaimvalidationcustomextension) and [onVerifiedIdClaimValidationListener](/graph/api/resources/onverifiedidclaimvalidationlistener) resource types and associated methods to support custom logic for claim validation from Verified ID credential presentations during authentication flows through Microsoft Entra custom authentication extensions in External ID.
+
+- Added claim validation and match-confidence capabilities to [Verified ID profiles](/graph/api/resources/verifiedidprofile?view=graph-rest-beta&preserve-view=true), enabling stronger claim verification and more flexible matching.
+
 ## April 2026: New and generally available
 
 ### Applications
@@ -40,6 +61,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 Use `approverRemove` as a new supported value for the **requestType** property of the [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest) resource. For more information, see [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest).
 
 ### Identity and access | Identity and sign-in
+
 - Use `riskRemediation` as part of [conditional access grant controls](/graph/api/resources/conditionalaccessgrantcontrols) to enforce a User Risk [conditional access policy](/graph/api/resources/conditionalaccesspolicy). When you select "Require risk remediation" in your policy's grant controls, Microsoft Entra ID Protection manages the appropriate remediation flow based on the threat observed and the user's authentication method. In passwordless Risky User sessions, it updates risk details with `microsoftRevokedSessions`. 
 
 ### Teamwork and communications | Apps
@@ -62,7 +84,6 @@ Manage Teams apps at the channel level within a team using the following APIs:
 
 - Added the [cloudPcOnPremisesConnectionSubnetIpDetail](/graph/api/resources/cloudpconpremisesconnectionsubnetipdetail?view=graph-rest-beta&preserve-view=true) resource type to represent the subnet IP details of a Cloud PC on-premises connection.
 - Use the **subnetPrivateIpDetail** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta&preserve-view=true) to get detailed information about the subnet's private IP addresses associated with the subnet.
-
 
 ## April 2026: New in preview only
 
@@ -96,6 +117,7 @@ The `/me/cloudPCs/{cloudPCId}/getCloudPcLaunchInfo` and `/users/{userId}/cloudPC
 
 - Use `default`, `notVisible`, and `visible` as supported values for the **approverInformationVisibility** property of the [accessPackageApprovalStage](/graph/api/resources/accesspackageapprovalstage?view=graph-rest-beta&preserve-view=true) and [approvalStage](/graph/api/resources/approvalstage?view=graph-rest-beta&preserve-view=true) resources to indicate whether approver information is visible to the requestor.
 - Added the [cancelProcessing](/graph/api/identitygovernance-workflow-cancelprocessing?view=graph-rest-beta&preserve-view=true) method to the [workflow](/graph/api/resources/identitygovernance-workflow?view=graph-rest-beta&preserve-view=true) resource to cancel workflow runs that are currently in progress or queued.
+- Added the **referenceId** property and the **files** relationship to [customDataProvidedResourceUploadSession](/graph/api/resources/customdataprovidedresourceuploadsession?view=graph-rest-beta&preserve-view=true) resource to identify the context for which data is being uploaded, such as an access review instance ID, and identify files uploaded during an upload session, respectively. Also added enhanced support for query capabilities for the  [List customDataProvidedResourceUploadSession objects](/graph/api/accesspackageresource-list-uploadsessions?view=graph-rest-beta&preserve-view=true) API operation.
 
 ### Identity and access | Identity and sign-in
 
@@ -160,6 +182,10 @@ Using the **signInAudience** property to limit where an [application](/graph/api
 
 ### Device and app management | Cloud PC
 
+- [Update](/graph/api/cloudpconpremisesconnection-updateaddomainpassword) the Active Directory domain password for a successful [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection).
+- Use the **inUseByCloudPc** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the on-premises connection is currently in use by a Cloud PC.
+- Use the **healthCheckPaused** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to indicate whether the health check is currently paused.
+- Use the **scopeIds** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection) to specify the scope identifiers.
 - Use the **osVersionNumber** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) and [cloudPcGalleryImage](/graph/api/resources/cloudpcgalleryimage) resources to get the operating system version of an image.
 - Use the **sizeInGB** property on [cloudPcDeviceImage](/graph/api/resources/cloudpcdeviceimage) to get the size of the image in GB.
 
@@ -243,6 +269,7 @@ The new Tenant Configuration Management APIs in Microsoft Graph allow administra
 
 ### Device and app management | Cloud PC
 
+- Use the **scopeIds** property on [cloudPcOnPremisesConnection](/graph/api/resources/cloudpconpremisesconnection?view=graph-rest-beta&preserve-view=true) to specify the scope identifiers.
 - Added `underServiceMaintenance` and `inUse` as new supported values for the **cloudPcConnectivityStatus** enumeration. Use these values with the **status** property on [cloudPcConnectivityResult](/graph/api/resources/cloudpcconnectivityresult?view=graph-rest-beta&preserve-view=true) to indicate that the Cloud PC is temporarily unavailable for service-initiated maintenance or is currently in use by a user.
 - Added [configureAgent](/graph/api/cloudpcexternalpartner-configureagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).
 - Added [deployAgent](/graph/api/cloudpcexternalpartner-deployagent?view=graph-rest-beta&preserve-view=true) as a new action for [cloudpcexternalpartner](/graph/api/resources/cloudpcexternalpartner?view=graph-rest-beta&preserve-view=true).

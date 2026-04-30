@@ -127,6 +127,12 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Agent user",
+          "resources": [
+            "agentUser"
+          ]
         }
       ]
     },
@@ -1147,7 +1153,8 @@
                 "onInteractiveAuthFlowStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener",
-                "onPasswordSubmitListener"
+                "onPasswordSubmitListener",
+                "onVerifiedIdClaimValidationListener"
               ]
             },
             {
@@ -1243,7 +1250,8 @@
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
                 "onTokenIssuanceStartCustomExtension",
-                "onPasswordSubmitCustomExtension"
+                "onPasswordSubmitCustomExtension",
+                "onVerifiedIdClaimValidationCustomExtension"
               ]
             },
             {
@@ -1324,6 +1332,7 @@
                 "homeRealmDiscoveryPolicy",
                 "authenticationFlowsPolicy",
                 "authenticationStrengthPolicy",
+                "deviceRegistrationPolicy",
                 "featureRolloutPolicy",
                 "identitySecurityDefaultsEnforcementPolicy"
               ]
@@ -1357,6 +1366,12 @@
                 "userFlowLanguageConfiguration",
                 "identityApiConnector",
                 "identityUserFlow"
+              ]
+            },
+            {
+              "name": "Verified ID",
+              "resources": [
+                "verifiedIdProfile"
               ]
             }
           ]

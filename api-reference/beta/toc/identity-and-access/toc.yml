@@ -1285,12 +1285,16 @@ items:
         href: ../../resources/customdataprovidedresourceuploadsession.md
       - name: Create
         href: ../../api/customdataprovidedresource-post-uploadsessions.md
+      - name: List
+        href: ../../api/accesspackageresource-list-uploadsessions.md
       - name: Get
         href: ../../api/customdataprovidedresourceuploadsession-get.md
+      - name: Upload file
+        href: ../../api/customdataprovidedresourceuploadsession-uploadfile.md
       - name: Update
         href: ../../api/customdataprovidedresourceuploadsession-update.md
-      - name: uploadFile
-        href: ../../api/customdataprovidedresourceuploadsession-uploadfile.md
+      - name: Delete
+        href: ../../api/accesspackageresource-delete-uploadsessions.md
     - name: External origin resource connector
       items:
       - name: External origin resource connector
@@ -1329,12 +1333,16 @@ items:
         href: ../../resources/customdataprovidedresourceuploadsession.md
       - name: Create
         href: ../../api/customdataprovidedresource-post-uploadsessions.md
+      - name: List
+        href: ../../api/accesspackageresource-list-uploadsessions.md
       - name: Get
         href: ../../api/customdataprovidedresourceuploadsession-get.md
+      - name: Upload file
+        href: ../../api/customdataprovidedresourceuploadsession-uploadfile.md
       - name: Update
         href: ../../api/customdataprovidedresourceuploadsession-update.md
-      - name: uploadFile
-        href: ../../api/customdataprovidedresourceuploadsession-uploadfile.md
+      - name: Delete
+        href: ../../api/accesspackageresource-delete-uploadsessions.md
     - name: Complex types
       items:
       - name: Access package answer
