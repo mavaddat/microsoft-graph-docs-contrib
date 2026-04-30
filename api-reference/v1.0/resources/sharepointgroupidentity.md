@@ -5,7 +5,7 @@ ms.date: 11/17/2025
 ms.subservice: "onedrive"
 doc_type: resourcePageType
 title: "sharePointGroupIdentity resource type"
-description: "Represents an identity of type sharePointGroup"
+description: "Represents the identity of a SharePoint group."
 ---
 
 # sharePointGroupIdentity resource type
