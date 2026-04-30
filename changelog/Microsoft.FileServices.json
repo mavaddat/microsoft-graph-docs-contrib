@@ -205,7 +205,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "sharePointGroup",
           "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
+          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource and associated methods.",
           "Target": "sharePointGroup"
         },
         {
