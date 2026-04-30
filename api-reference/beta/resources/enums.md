@@ -5088,6 +5088,14 @@ Possible values for user account types (group membership), per Windows definitio
 | contains |
 | unknownFutureValue |
 
+### matchConfidenceLevel values 
+
+|Member|
+|:---|
+|exact|
+|relaxed|
+|unknownFutureValue|
+
 ### matchOn values
 
 | Member |

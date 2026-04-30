@@ -2,7 +2,7 @@
 title: "claimBinding resource type"
 description: "Defines the mapping between a source attribute and a Verifiable ID claim."
 author: "tilarso"
-ms.date: 04/03/2026
+ms.date: 04/13/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
@@ -12,17 +12,15 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
-Defines the mapping between a source attribute and a Verifiable ID claim.
+Defines the mapping between a source attribute and a Verifiable ID claim in a [verifiedIdProfileConfiguration](../resources/verifiedidprofileconfiguration.md) object.
 
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |matchConfidenceLevel|matchConfidenceLevel|The confidence level for matching the claim to the source attribute. The possible values are: `exact`, `relaxed`, `unknownFutureValue`.|
-|sourceAttribute|String|Source attribute value|
-|verifiedIdClaim|String|Entra ID attribute value|
+|sourceAttribute|String|Source attribute name from the source system, for example a directory attribute.|
+|verifiedIdClaim|String|Verified ID claim name or path, for example `vc.credentialSubject.firstName`.|
 
 ## Relationships
 None.

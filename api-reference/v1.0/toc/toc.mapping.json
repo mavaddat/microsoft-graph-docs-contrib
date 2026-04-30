@@ -1366,6 +1366,12 @@
                 "identityApiConnector",
                 "identityUserFlow"
               ]
+            },
+            {
+              "name": "Verified ID",
+              "resources": [
+                "verifiedIdProfile"
+              ]
             }
           ]
         },

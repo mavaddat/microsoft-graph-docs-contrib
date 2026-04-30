@@ -2,7 +2,7 @@
 title: "verifiedIdProfileConfiguration resource type"
 description: "Profile configuration defining set of properties of a specific Verified ID credential. "
 author: "tilarso"
-ms.date: 10/14/2025
+ms.date: 04/13/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
@@ -12,9 +12,7 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
-Verified ID profile configuration defining set of properties of a specific [Verified ID credential](../resources/verifiedidprofile.md). 
+Verified ID profile configuration defining set of properties of a specific [Verified ID credential](../resources/verifiedidprofile.md).
 
 ## Properties
 |Property|Type|Description|

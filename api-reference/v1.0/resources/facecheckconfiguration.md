@@ -2,7 +2,7 @@
 title: "faceCheckConfiguration resource type"
 description: "Configuration for Face Check requirements in a Verified ID Profile"
 author: "tilarso"
-ms.date: 10/14/2025
+ms.date: 04/13/2026
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
@@ -12,15 +12,13 @@ doc_type: resourcePageType
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
-Configuration for Face Check requirements in a Verified ID Profile
+Configuration for Face Check requirements in a [Verified ID Profile](../resources/verifiedidprofile.md).
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|isEnabled|Boolean|Defines if Face Check is required. Currently must always be true.|
-|sourcePhotoClaimName|String|Source of photo to validate Face Check against. Currently must always be `portrait`|
+|isEnabled|Boolean|Defines if Face Check is required. Currently must always be `true`.|
+|sourcePhotoClaimName|String|Source of photo to validate Face Check against. Currently must always be `portrait`.|
 
 ## Relationships
 None.
