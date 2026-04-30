@@ -182,7 +182,7 @@ GET https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0
 
 #### Response
 
-The following example shows the response. Because no **sharePointGroup** objects exist in the **fileStorageContainer**, the response has an empty list.
+The following example shows the response. The response has an empty list, because no **sharePointGroup** objects exist in the **fileStorageContainer**. 
 
 <!-- {
   "blockType": "response",
