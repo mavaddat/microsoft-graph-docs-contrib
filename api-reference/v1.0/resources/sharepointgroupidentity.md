@@ -6,6 +6,7 @@ ms.subservice: "onedrive"
 doc_type: resourcePageType
 title: "sharePointGroupIdentity resource type"
 description: "Represents the identity of a SharePoint group."
+toc.title: "SharePoint group identity"
 ---
 
 # sharePointGroupIdentity resource type
