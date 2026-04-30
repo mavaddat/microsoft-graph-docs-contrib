@@ -24,8 +24,8 @@ For usage information, see [driveItem][].
 | application | [identity][] | The application associated with this action. Optional. |
 | device | [identity][] | The device associated with this action. Optional. |
 | group | [identity][] | The group associated with this action. Optional. |
-| sharePointGroup | [sharePointGroupIdentity][] | The SharePoint group associated with this action. Optional. |
-| siteGroup | [sharePointIdentity][] | The SharePoint group associated with this action. Optional. |
+| sharePointGroup | [sharePointGroupIdentity][] | The SharePoint group associated with this action, identified by a globally unique ID. Use this property instead of **siteGroup** when available. Optional. |
+| siteGroup | [sharePointIdentity][] | The SharePoint group associated with this action, identified by a principal ID that is unique only within the site. Optional. |
 | siteUser | [sharePointIdentity][] | The SharePoint user associated with this action. Optional. |
 | user | [identity][] | The user associated with this action. Optional. |
 

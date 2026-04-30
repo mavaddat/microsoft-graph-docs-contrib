@@ -1,6 +1,6 @@
 ---
 title: "Delete sharePointGroup"
-description: "Delete a sharePointGroup object."
+description: "Delete a sharePointGroup object that is local to a fileStorageContainer."
 author: "humbertorMSFT"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"

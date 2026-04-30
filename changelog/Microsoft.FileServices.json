@@ -202,14 +202,6 @@
         },
         {
           "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
-          "ApiChange": "Resource",
-          "ChangedApiName": "sharePointGroup",
-          "ChangeType": "Addition",
-          "Description": "Added the [sharePointGroup](https://learn.microsoft.com/en-us/graph/api/resources/sharepointgroup?view=graph-rest-1.0) resource.",
-          "Target": "sharePointGroup"
-        },
-        {
-          "Id": "71fdf3e6-ddee-443e-9221-b9965f11e3da",
           "ApiChange": "Property",
           "ChangedApiName": "principalId",
           "ChangeType": "Addition",
