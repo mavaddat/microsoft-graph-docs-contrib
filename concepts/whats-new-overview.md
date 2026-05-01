@@ -111,6 +111,10 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 - Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
 - Use the **itemCount** property on the [list](/graph/api/resources/list?view=graph-rest-beta&preserve-view=true) resource to quickly access the total number of items in a SharePoint list without retrieving all items or making additional queries.
 
+### Identity and access | Directory management
+
+Added the **inheritedAppRoleAssignments** and **inheritedOauth2PermissionGrants** relationships to the [agentIdentity](/graph/api/resources/agentidentity?view=graph-rest-beta&preserve-view=true) resource to retrieve inherited permissions from the parent Agent Identity Blueprint Service Principal.
+
 ### Identity and access | Governance
 
 - Use `default`, `notVisible`, and `visible` as supported values for the **approverInformationVisibility** property of the [accessPackageApprovalStage](/graph/api/resources/accesspackageapprovalstage?view=graph-rest-beta&preserve-view=true) and [approvalStage](/graph/api/resources/approvalstage?view=graph-rest-beta&preserve-view=true) resources to indicate whether approver information is visible to the requestor.
