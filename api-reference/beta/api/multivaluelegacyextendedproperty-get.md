@@ -140,6 +140,10 @@ Get a **mailboxFolder** instance:
 ```http
 GET /admin/exchange/mailboxes/{mailboxId}/folders?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 Get a **note** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
