@@ -51,14 +51,6 @@
           "Target": "mailboxItem"
         },
         {
-          "Id": "c78d47e6-f176-4238-8763-ec3319938a74",
-          "ApiChange": "Resource",
-          "ChangedApiName": "userSettings",
-          "ChangeType": "Addition",
-          "Description": "Added the [userSettings](https://learn.microsoft.com/en-us/graph/api/resources/userSettings?view=graph-rest-1.0) resource.",
-          "Target": "userSettings"
-        },
-        {
           "Id": "7c4b9e2f-8a3d-4f1b-9c5e-6d2a8f3b1e4c",
           "ApiChange": "Relationship",
           "ChangedApiName": "exchange",
@@ -126,8 +118,12 @@
       "Id": "7c4b9e2f-8a3d-4f1b-9c5e-6d2a8f3b1e4c",
       "Cloud": "Prod",
       "Version": "v1.0",
-      "CreatedDateTime": "2026-02-23T17:36:39.9393866Z",
+      "CreatedDateTime": "2026-05-01T17:36:39.9393866Z",
       "WorkloadArea": "Mailbox import and export",
+      "SubArea": ""
+    },
+      "ChangeList": [
+        {
           "Id": "b1dd3bfb-7296-4d50-a5c5-deac8a81a49e",
           "ApiChange": "Resource",
           "ChangedApiName": "note",
@@ -151,7 +147,6 @@
       "WorkloadArea": "Mail",
       "SubArea": ""
     },
-    {
       "ChangeList": [
         {
           "Id": "56106a0b-9fb9-47c7-b22f-1eba28e5ec43",
