@@ -28,9 +28,11 @@ User resources:
 - [mailboxItem](../resources/mailboxitem.md)
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
+- [note](../resources/note.md)
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
 - [todoTask](../resources/todotask.md)
+- [todoTaskList](../resources/todotasklist.md)
 
 Microsoft 365 group resources:
 

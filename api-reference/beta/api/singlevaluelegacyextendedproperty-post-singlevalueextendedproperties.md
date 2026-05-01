@@ -27,9 +27,11 @@ The following user resources are supported:
 - [mailboxFolder](../resources/mailboxfolder.md)
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
+- [note](../resources/note.md)
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
 - [todoTask](../resources/todotask.md)
+- [todoTaskList](../resources/todotasklist.md)
 
 The following group resources are supported:
 
@@ -56,9 +58,11 @@ Depending on the resource you're creating the extended property in and the permi
 | [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All | 
 | [mailFolder](../resources/mailfolder.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
 | [message](../resources/message.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
+| [note](../resources/note.md) | ShortNotes.ReadWrite | ShortNotes.ReadWrite | ShortNotes.ReadWrite |
 | [Outlook task](../resources/outlooktask.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
 | [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
 | [todoTask](../resources/todotask.md) | Tasks.ReadWrite | Not supported. | Not supported. |
+| [todoTaskList](../resources/todotasklist.md) | Tasks.ReadWrite | Not supported. | Not supported. |
 
 ## HTTP request
 You can create extended properties in a new or existing resource instance.
@@ -92,6 +96,8 @@ POST /me/contactFolders
 POST /users/{id|userPrincipalName}/contactFolders
 
 POST /admin/exchange/mailboxes/{mailboxId}/folders
+POST /me/notes
+POST /users/{id|userPrincipalName}/notes
 
 POST /me/outlook/tasks
 POST /users/{id|userPrincipalName}/outlook/tasks
@@ -107,6 +113,8 @@ POST /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders
 
 POST /me/todo/lists/{todoTaskListId}/tasks/{todoTaskId}?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
 POST /me/todo/lists/{todoTaskListId}/tasks?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+
+POST /me/todo/lists?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
 
 POST /groups/{id}/events
 
@@ -147,6 +155,8 @@ PATCH /me/contactFolders/{id}
 PATCH /users/{id|userPrincipalName}/contactFolders/{id}
 
 PATCH /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}
+PATCH /me/notes/{id}
+PATCH /users/{id|userPrincipalName}/notes/{id}
 
 PATCH /me/outlook/tasks/{id}
 PATCH /users/{id|userPrincipalName}/outlook/tasks/{id}
@@ -162,6 +172,8 @@ PATCH /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders/{id}
 
 PATCH /me/todo/lists/{todoTaskListId}/tasks?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
 PATCH /me/todo/lists/{todoTaskListId}/tasks/{todoTaskId}?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+
+PATCH /me/todo/lists/{todoTaskListId}?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
 
 PATCH /groups/{id}/events/{id}
 ```

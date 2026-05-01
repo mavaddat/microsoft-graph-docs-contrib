@@ -1,5 +1,5 @@
 ---
-title: Microsoft Entra Agent ID APIs in Microsoft Graph (preview)
+title: Microsoft Entra Agent ID APIs in Microsoft Graph
 description: "Use Microsoft Entra Agent ID APIs in Microsoft Graph to create, secure, and monitor AI agent identities."
 author: FaithOmbongi
 ms.author: ombongifaith
@@ -13,7 +13,7 @@ ms.localizationpriority: high
 #customer intent: As a developer, I want to understand how to use Microsoft Graph APIs for Microsoft Entra Agent ID so that I can manage agent identities effectively.
 ---
 
-# Microsoft Entra Agent ID APIs in Microsoft Graph overview (preview)
+# Microsoft Entra Agent ID APIs in Microsoft Graph overview
 
 Microsoft Entra Agent ID APIs in Microsoft Graph help you create, secure, and manage AI agent identities operating in your organization. You can programmatically create agent identities, control their access to resources, and monitor their activities through a centralized platform.
 
@@ -31,7 +31,9 @@ The following core components comprise Microsoft Entra Agent ID's architecture:
 | **Blueprint principal** | Record of blueprint's addition to a tenant | [agentIdentityBlueprintPrincipal](../resources/agentidentityblueprintprincipal.md) |
 | **Agent identity** | Primary identity for authentication | [agentIdentity](../resources/agentidentity.md) |
 | **Agent user** | Optional account for scenarios that require a user account | [agentUser](../resources/agentUser.md) |
-| **Agent registry** | Centralized repository for agent management that serves as the platform for managing agent card manifests, agent instances, and agent collections. | <ul><li>[agentRegistry](../resources/agentregistry.md)</li><li>[agentCardManifest](../resources/agentcardmanifest.md)</li><li>[agentInstance](../resources/agentinstance.md)</li><li>[agentCollection](../resources/agentcollection.md)</li> |
+| **Agent registry** (deprecated) | Centralized repository for agent management that serves as the platform for managing agent card manifests, agent instances, and agent collections. | <ul><li>[agentRegistry](../resources/agentregistry.md)</li><li>[agentCardManifest](../resources/agentcardmanifest.md)</li><li>[agentInstance](../resources/agentinstance.md)</li><li>[agentCollection](../resources/agentcollection.md)</li> |
+
+[!INCLUDE [agentregistry-deprecation-note](../includes/agentregistry-deprecation-note.md)]
 
 Learn more about the agent identity architecture in the following articles:
 - [Agent identity and blueprint concepts in Microsoft Entra ID](/entra/agent-id/identity-platform/key-concepts)
