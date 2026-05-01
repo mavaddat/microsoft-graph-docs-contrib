@@ -193,6 +193,14 @@ Namespace: microsoft.graph
 | additionalStepsRequired |
 | unknownFutureValue |
 
+### matchConfidenceLevel values
+
+|Member|
+|:---|
+|exact|
+|relaxed|
+|unknownFutureValue|
+
 ### appManagementRestrictionState values
 
 | Member |
@@ -233,6 +241,13 @@ Namespace: microsoft.graph
 |:---|
 |root|
 |intermediate|
+|unknownFutureValue|
+
+### claimBindingSource values
+
+|Member|
+|:---|
+|directory|
 |unknownFutureValue|
 
 ### courseStatus values
@@ -296,6 +311,14 @@ Namespace: microsoft.graph
 | group |
 | application |
 | unknownFutureValue |
+
+### multiFactorAuthConfiguration values
+
+| Member             | 
+| ------------------ | 
+| notRequired        | 
+| required           | 
+| unknownFutureValue | 
 
 ### multiTenantOrganizationMemberProcessingStatus values
 
@@ -3450,6 +3473,23 @@ Possible values for user account types (group membership), per Windows definitio
 | draft |
 | published |
 | canceled |
+
+### verifiedIdProfileState values
+
+|Member|
+|:---|
+|enabled|
+|disabled|
+|unknownFutureValue|
+
+### verifiedIdUsageConfigurationPurpose values
+
+|Member|
+|:---|
+|recovery|
+|onboarding|
+|all|
+|unknownFutureValue|
 
 ### socialIdentitySourceType values
 
