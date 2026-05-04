@@ -36,6 +36,7 @@ This article explains how to configure the arguments property for built-in tasks
 | Remove selected license assignments from user (Preview) | 5fc402a8-daaf-4b7b-9203-da868b05fc5f | **name**: `licenses`<br/>**value**: The ID of the license you want to assign. |
 | Revoke all refresh tokens for user | 509589a4-0466-4471-829e-49c5e502bdee | None. |
 | Send email to manager about sponsorship changes | b8c4e1f9-3a7d-4b2e-9c5f-8d6a9b1c2e3f | **name**: `cc`<br/>**value**: A valid user ID (String) for the user you want to cc in the email.<br/><br/>**name**: `customSubject`<br/>**value**: A custom subject header for the email being sent.<br/><br/>**name**: `customBody`<br/>**value**: The body of the customized email.<br/><br/>**name**: `locale`<br/>**value**: Language value that overrides the email recipient's language settings. This argument doesn't customize the custom text of the email, and should be set in the same language as the custom text.<br/><br/>**name**: `to`<br/>**value**: `User`, `Managers`, `Sponsors`, or the string of a specific `userID`. If `Sponsors` is selected, you're not able to add another user in the `cc` argument. |
+| Send email to co-sponsors about sponsor changes | ad3b85cd-75b1-43e7-b4b9-0e52faba3944 | **name**: `cc`<br/>**value**: A valid user ID (String) for the user you want to cc in the email.<br/><br/>**name**: `customSubject`<br/>**value**: A custom subject header for the email being sent.<br/><br/>**name**: `customBody`<br/>**value**: The body of the customized email.<br/><br/>**name**: `locale`<br/>**value**: Language value that overrides the email recipient's language settings. This argument doesn't customize the custom text of the email, and should be set in the same language as the custom text.<br/><br/>**name**: `to`<br/>**value**: `User`, `Managers`, `Sponsors`, or the string of a specific `userID`. If `Sponsors` is selected, you're not able to add another user in the `cc` argument. |
 | Disable user account | 1dfdfcc7-52fa-4c2e-bf3a-e3919cc12950 | **name**: `disableOnPremisesAccount`<br/>**value**: A Boolean value that indicates whether the task disables synced on-premises user accounts. |
 | Remove user from selected group | 1953a66c-751c-45e5-8bfe-01462c70da3c | **name**: `groupID`<br/>**value**: A valid group ID or a comma-separated list of groups that the user is a member of. For example, `"06269010-2d8e-48e4-8f0e-33580720c9e1, 06bba22c-775e-42d8-b451-4221af061af0, 182f68db-6513-4e79-9ec2-a7e89a460e7f"`. |
 | Remove users from all groups | b3a31406-2a15-4c9a-b25b-a658fa5f07fc | None |
@@ -581,6 +582,37 @@ This article explains how to configure the arguments property for built-in tasks
     {
       "name": "customBody",
       "value": "Hello {{managerDisplayName}}\n\nwe are reaching out to let you know {{userDisplayName}} has moved in the organization and you have taken over their agent ID sponsorships.\n\nRegards\nYour IT department"
+    },
+    {
+      "name": "locale",
+      "value": "en-us"
+    }
+  ]
+}
+```
+
+### Example 26: Send email to co-sponsors about sponsor changes
+
+```json
+{
+  "category": "mover",
+  "continueOnError": false,
+  "description": "Notify co-sponsors about agent identity sponsorship changes.",
+  "displayName": "Send email to co-sponsors about sponsor changes",
+  "isEnabled": true,
+  "taskDefinitionId": "ad3b85cd-75b1-43e7-b4b9-0e52faba3944",
+  "arguments": [
+    {
+      "name": "cc",
+      "value": "ac17d108-60cd-4eb2-a4b4-084cacda33f2,7d3ee937-edcc-46b0-9e2c-f832e01231ea"
+    },
+    {
+      "name": "customSubject",
+      "value": "{{userDisplayName}} has moved"
+    },
+    {
+      "name": "customBody",
+      "value": "Hello \n\nwe are reaching out to let you know {{userDisplayName}} has moved in the organization and will no longer have sponsorship authority over agent IDs they previously sponsored with you.\n\nRegards\nYour IT department"
     },
     {
       "name": "locale",
