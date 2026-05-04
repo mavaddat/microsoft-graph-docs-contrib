@@ -34,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-POST /users/{usersId}/calendar/permanentDelete
+POST /users/{usersId}/calendars/permanentDelete
 POST /groups/{groupsId}/calendar/permanentDelete
 ```
 
@@ -64,7 +64,7 @@ The following example shows a request.
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/users/{usersId}/calendar/permanentDelete
+POST https://graph.microsoft.com/beta/users/{usersId}/calendars/permanentDelete
 ```
 
 # [C#](#tab/csharp)
