@@ -16,7 +16,7 @@ ms.date: 04/25/2025
 
 Microsoft Graph Lifecycle Workflows APIs let you automate user lifecycle processes at the joiner, leaver, and mover levels. 
 
-Core to the workflows are [tasks](/graph/api/resources/identitygovernance-task) that represent specific actions that run automatically when a workflow is triggered. [24 built-in tasks](/graph/api/resources/identitygovernance-task) are available to support creating custom workflows. These tasks are configured on the **arguments** propertyof a task definition.
+Core to the workflows are [tasks](/graph/api/resources/identitygovernance-task) that represent specific actions that run automatically when a workflow is triggered. [29 built-in tasks](/graph/api/resources/identitygovernance-task) are available to support creating custom workflows. These tasks are configured on the **arguments** property of a task definition.
 
 This article explains how to configure the arguments property for built-in tasks to streamline automation.
 
