@@ -49,7 +49,8 @@ This article explains how to configure the arguments property for built-in tasks
 | Send email to manager before user last day | 52853a3e-f4e5-4eb8-bb24-1ac09a1da935 | **name**: `cc`<br/>**value**: A valid user ID (String) for the user you want to cc in the email.<br/><br/>**name**: `customSubject`<br/>**value**: A custom subject header for the email being sent.<br/><br/>**name**: `customBody`<br/>**value**: The body of the customized email.<br/><br/>**name**: `locale`<br/>**value**: Language value that overrides the email recipient's language settings. Doesn't customize the custom text of the email, and should be set in the same language as the custom text.<br/><br/>**name**: `to`<br/>**value**: `User`, `Managers`, `Sponsors`, or the string of a specific `userID`. If `Sponsors` is selected, you're not able to add another user in the `cc` argument. |
 | Send email on user's last day | 9c0a1eaf-5bda-4392-9d9e-6e155bb57411 | **name**: `cc`<br/>**value**: A valid user ID (String) for the user you want to cc in the email.<br/><br/>**name**: `customSubject`<br/>**value**: A custom subject for the email being sent.<br/><br/>**name**: `customBody`<br/>**value**: The body of the customized email.<br/><br/>**name**: `locale`<br/>**value**: Language value that overrides the email recipient's language settings. Doesn't customize the custom text of the email, and should be set in the same language as the custom text.<br/><br/>**name**: `to`<br/>**value**: `User`, `Managers`, `Sponsors`, or the string of a specific `userID`. If `Sponsors` is selected, you're not able to add another user in the `cc` argument. |
 | Send offboarding email to user's manager after their last day | 6f22ddd4-b3a5-47a4-a846-0d7c201a49ce | **name**: `cc`<br/>**value**: A valid user ID (String) for the user you want to cc in the email.<br/><br/>**name**: `customSubject`<br/>**value**: A custom subject header for the email being sent.<br/><br/>**name**: `customBody`<br/>**value**: The body of the customized email.<br/><br/>**name**: `locale`<br/>**value**: Language value that overrides the email recipient's language settings. Doesn't customize the custom text of the email, and should be set in the same language as the custom text.<br/><br/>**name**: `to`<br/>**value**: `User`, `Managers`, `Sponsors`, or the string of a specific `userID`. If `Sponsors` is selected, you're not able to add another user in the `cc` argument. |
-| Request user access package assignment | c1ec1e76-f374-4375-aaa6-0bb6bd4c60be | **name**: `assignmentPolicyId`<br/>**value**: A valid assignment policy ID (String) for the access package you want to assign the user.<br/><br/>**name**: `accessPackageId`<br/>**value**: A valid access package ID for the access package you want to assign to the user. |
+| Send email about user inactivity | 92f74cb4-f1b6-4ec0-b766-96210f56edc2 | **name**: `cc`<br/>**value**: A valid user ID (String) for the user you want to cc in the email.<br/><br/>**name**: `customSubject`<br/>**value**: A custom subject header for the email being sent.<br/><br/>**name**: `customBody`<br/>**value**: The body of the customized email.<br/><br/>**name**: `locale`<br/>**value**: Language value that overrides the email recipient's language settings. This argument doesn't customize the custom text of the email, and should be set in the same language as the custom text.<br/><br/>**name**: `to`<br/>**value**: `User`, `Managers`, `Sponsors`, or the string of a specific `userID`. If `Sponsors` is selected, you're not able to add another user in the `cc` argument. |
+| Request user access package assignment | c1ec1e76-f374-4375-aaa6-0bb6bd4c60be| **name**: `assignmentPolicyId`<br/>**value**: A valid assignment policy ID (String) for the access package you want to assign the user.<br/><br/>**name**: `accessPackageId`<br/>**value**: A valid access package ID for the access package you want to assign to the user. |
 | Remove access package assignment for user | 4a0b64f2-c7ec-46ba-b117-18f262946c50 | **name**: `accessPackageId`<br/>**value**: A valid access package ID for the access package you want to unassign from the user. |
 | Remove all access package assignments for user | 42ae2956-193d-4f39-be06-691b8ac4fa1d | None |
 | Cancel pending access package assignment requests for user | 498770d9-bab7-4e4c-b73d-5ded82a1d0b3 | **name**: `daysUntilExpiration`<br/>**value**: A valid string of the days until the access package assignment for the user expires. |
@@ -634,6 +635,37 @@ This article explains how to configure the arguments property for built-in tasks
   "isEnabled": true,
   "taskDefinitionId": "b8f4c3d5-9e7a-4b1c-8f2d-6a5e8b9c7f4a",
   "arguments": []
+}
+```
+
+### Example 28: Send email about user inactivity
+
+```json
+{
+  "category": "leaver",
+  "continueOnError": false,
+  "description": "Notify manager that user has been inactive",
+  "displayName": "Send email about user inactivity",
+  "isEnabled": true,
+  "taskDefinitionId": "92f74cb4-f1b6-4ec0-b766-96210f56edc2",
+  "arguments": [
+    {
+      "name": "cc",
+      "value": "1bda0458-cb4b-473d-baf5-61125c86a6d3,7f552c25-e0f6-40b6-b4e0-36bb40ba7fb6"
+    },
+    {
+      "name": "customSubject",
+      "value": "[UserDisplayName]'s account has been inactive for [NumberofDays] days."
+    },
+    {
+      "name": "customBody",
+      "value": "We're notifying you that a recent sign-in for [UserDisplayName]'s user account has not been detected, and the account is considered inactive. The last sign in was [LastSigninDate]. To maintain a secure environment, your organization may have already started the process to disable or delete this user account.\n\nPlease check your organization's policies and take appropriate action if this user account is still needed.\n\nRegards\nYour IT department"
+    },
+    {
+      "name": "locale",
+      "value": "en-us"
+    }
+  ]
 }
 ```
 
