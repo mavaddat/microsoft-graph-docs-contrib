@@ -60,7 +60,7 @@ In the request body, supply the values for relevant fields that should be update
 |name|String|The calendar name.|
 
 > [!IMPORTANT]
-> Calendar container properties in group calendars are read-only and cannot be modified. PATCH requests targeting these properties will fail with a 405 Method Not Allowed response.
+> Calendar container properties in group calendars are read-only and can't be modified. `PATCH` requests that target these properties fail with a `405 Method Not Allowed` response.
 
 ## Response
 
