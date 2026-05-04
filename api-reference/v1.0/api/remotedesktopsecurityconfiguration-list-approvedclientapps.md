@@ -13,7 +13,7 @@ doc_type: apiPageType
 Namespace: microsoft.graph
 Get a list of the [approvedClientApp](../resources/approvedclientapp.md) objects and their properties on the [remoteDesktopSecurityConfiguration](../resources/remotedesktopsecurityconfiguration.md) resource on a service principal.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
