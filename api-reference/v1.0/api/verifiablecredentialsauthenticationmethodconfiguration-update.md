@@ -34,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-PATCH /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/VerifiableCredentials/{id}
+PATCH /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/VerifiableCredentials
 ```
 
 ## Request headers
@@ -70,7 +70,7 @@ The following example shows a request.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/VerifiableCredentials/{id}
+PATCH https://graph.microsoft.com/v1.0/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/VerifiableCredentials
 Content-Type: application/json
 
 {
