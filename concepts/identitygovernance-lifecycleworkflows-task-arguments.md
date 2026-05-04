@@ -29,7 +29,8 @@ This article explains how to configure the arguments property for built-in tasks
 | Generate Temporary Access Pass and send via email to user's manager | 1b555e50-7f65-41d5-b514-5894a026d10d | **name**: `tapLifetimeMinutes`<br/>**value**: `10` up to `43000`<br/><br/>**name**: `tapIsUsableOnce`<br/>**value**: `true` or `false`<br/><br/>**name**: `to`<br/>**value**: `User`, `Managers`, `Sponsors`, or the string of a specific `userID`. If `Sponsors` is selected, you're not able to add another user in the `cc` argument.<br/><br/>**Prerequisites**:<br/><ol><li>The user must be assigned a manager.</li><li>The user's manager must have their mail enabled.</li><li>The temporary access pass (TAP) policy must be enabled in the tenant and the user enabled to use the TAP authentication method. For more information, see [temporaryAccessPassAuthenticationMethodConfiguration resource type](/graph/api/resources/temporaryaccesspassauthenticationmethodconfiguration).</li></ol> |
 | Add user to groups | 22085229-5809-45e8-97fd-270d28d66910 | **name**: `groupID`<br/>**value**: A valid group ID or a comma-separated list of groups to which the user is added as a member. For example, `"06269010-2d8e-48e4-8f0e-33580720c9e1, 06bba22c-775e-42d8-b451-4221af061af0, 182f68db-6513-4e79-9ec2-a7e89a460e7f"`. |
 | Add user to teams | e440ed8d-25a1-4618-84ce-091ed5be5594 | **name**: `teamID`<br/>**value**: A valid group ID or a comma-separated list of teams to which the user is added as a member. For example, `"06269010-2d8e-48e4-8f0e-33580720c9e1, 06bba22c-775e-42d8-b451-4221af061af0, 182f68db-6513-4e79-9ec2-a7e89a460e7f"`. |
-| Enable user account | 6fc52c9d-398b-4305-9763-15f42c1676fc | **name**: `enableOnPremisesAccount`<br/>**value**: A Boolean value that indicates whether the task enables synced on-premises user accounts. |
+| Update user attributes (Preview) | 2c8f4a1b-7d3e-4f9c-8a5b-6e1d2c3f4a5b | **name**: `attributeUpdates`<br/>**value**: A JSON string specifying up to 10 user attributes to update or clear. The attributes can include built-in, on-premises extensions, directory extensions, and employee org data. |
+| Enable user account | 6fc52c9d-398b-4305-9763-15f42c1676fc| **name**: `enableOnPremisesAccount`<br/>**value**: A Boolean value that indicates whether the task enables synced on-premises user accounts. |
 | Run a custom task extension | 4262b724-8dba-4fad-afc3-43fcbb497a0e | **name**: `CustomTaskExtensionID`<br/>**value**: The ID of the custom task extension. |
 | Assign licenses to users (Preview) | 683c87a4-2ad4-420b-97d4-220d90afcd24 | **name**: `licenses`<br/>**value**: The ID of the license you want to assign. |
 | Remove selected license assignments from user (Preview) | 5fc402a8-daaf-4b7b-9203-da868b05fc5f | **name**: `licenses`<br/>**value**: The ID of the license you want to assign. |
@@ -160,7 +161,26 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 5: Enable a user account
+### Example 5: Update user attributes
+
+```json
+{
+  "category": "joiner",
+  "continueOnError": false,
+  "description": "Update or clear user attribute values including custom attributes",
+  "displayName": "Update user attributes",
+  "isEnabled": true,
+  "taskDefinitionId": "2c8f4a1b-7d3e-4f9c-8a5b-6e1d2c3f4a5b",
+  "arguments": [
+    {
+      "name": "attributeUpdates",
+      "value": "[{\"attribute\":\"department\",\"value\":\"Sales\"},{\"attribute\":\"jobTitle\",\"value\":\"Account Executive\"}]"
+    }
+  ]
+}
+```
+
+### Example 6: Enable a user account
 
 ```json
 {
@@ -174,7 +194,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 6: Run a custom task extension
+### Example 7: Run a custom task extension
 
 ```json
 {
@@ -193,7 +213,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 7: Disable a user account
+### Example 8: Disable a user account
 
 ```json
 {
@@ -207,7 +227,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 8: Remove a user from selected groups
+### Example 9: Remove a user from selected groups
 
 ```json
 {
@@ -226,7 +246,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 9: Remove a user from all groups
+### Example 10: Remove a user from all groups
 
 ```json
 {
@@ -240,7 +260,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 10: Remove a user from selected teams
+### Example 11: Remove a user from selected teams
 
 ```json
 {
@@ -259,7 +279,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 11: Remove a user from all teams
+### Example 12: Remove a user from all teams
 
 ```json
 {
@@ -273,7 +293,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 12: Remove all license assignments from a user
+### Example 13: Remove all license assignments from a user
 
 ```json
 {
@@ -287,7 +307,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 13: Delete a user
+### Example 14: Delete a user
 
 ```json
 {
@@ -301,7 +321,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 14: Send an email to notify a manager of a user move
+### Example 15: Send an email to notify a manager of a user move
 
 ```json
 {
@@ -332,7 +352,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 15: Send an email to a manager before a user's last day
+### Example 16: Send an email to a manager before a user's last day
 
 ```json
 {
@@ -363,7 +383,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 16: Send an email on a user's last day
+### Example 17: Send an email on a user's last day
 
 ```json
 {
@@ -394,7 +414,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 17: Send the offboarding email to a user's manager after the user's last day of work
+### Example 18: Send the offboarding email to a user's manager after the user's last day of work
 
 ```json
 {
@@ -409,7 +429,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 18: Request user access package assignment
+### Example 19: Request user access package assignment
 
 ```json
 {
@@ -432,7 +452,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 19: Remove access package assignment for a user
+### Example 20: Remove access package assignment for a user
 
 ```json
 {
@@ -451,7 +471,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 20: Remove all access package assignments for a user
+### Example 21: Remove all access package assignments for a user
 
 ```json
 {
@@ -479,7 +499,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 21: Cancel pending access package assignment requests for a user
+### Example 22: Cancel pending access package assignment requests for a user
 
 ```json
 {
@@ -493,7 +513,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 22: Send onboarding reminder email
+### Example 23: Send onboarding reminder email
 
 ```json
 {
@@ -524,7 +544,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 23: Revoke all refresh tokens for user
+### Example 24: Revoke all refresh tokens for user
 
 ```json
 {
