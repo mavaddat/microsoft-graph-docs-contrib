@@ -3866,6 +3866,16 @@ Possible values for user account types (group membership), per Windows definitio
 | principal |
 | unknownFutureValue |
 
+### roleType values
+
+| Member |
+| ------ |
+| active |
+| eligible |
+| application |
+| delegated |
+| unknownFutureValue |
+
 ### cloudPcAuditActivityOperationType values
 
 | Member |
@@ -5077,6 +5087,14 @@ Possible values for user account types (group membership), per Windows definitio
 | suffix |
 | contains |
 | unknownFutureValue |
+
+### matchConfidenceLevel values 
+
+|Member|
+|:---|
+|exact|
+|relaxed|
+|unknownFutureValue|
 
 ### matchOn values
 

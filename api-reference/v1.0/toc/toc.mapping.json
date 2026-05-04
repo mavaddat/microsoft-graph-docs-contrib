@@ -127,6 +127,12 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Agent user",
+          "resources": [
+            "agentUser"
+          ]
         }
       ]
     },
@@ -733,11 +739,14 @@
         "permission",
         "recycleBin",
         "recycleBinItem",
-        "sharedDriveItem"
+        "sharedDriveItem",
+        "sharePointGroup",
+        "sharePointGroupMember"
       ],
       "complexTypes": [
         "fileStorageContainerTypeRegistrationSettings",
-        "fileStorageContainerTypeSettings"
+        "fileStorageContainerTypeSettings",
+        "sharePointGroupIdentity"
       ],
       "childNodes": [
         {
@@ -1147,7 +1156,8 @@
                 "onInteractiveAuthFlowStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener",
-                "onPasswordSubmitListener"
+                "onPasswordSubmitListener",
+                "onVerifiedIdClaimValidationListener"
               ]
             },
             {
@@ -1243,7 +1253,8 @@
                 "onAttributeCollectionSubmitCustomExtension",
                 "onOtpSendCustomExtension",
                 "onTokenIssuanceStartCustomExtension",
-                "onPasswordSubmitCustomExtension"
+                "onPasswordSubmitCustomExtension",
+                "onVerifiedIdClaimValidationCustomExtension"
               ]
             },
             {
@@ -1324,6 +1335,7 @@
                 "homeRealmDiscoveryPolicy",
                 "authenticationFlowsPolicy",
                 "authenticationStrengthPolicy",
+                "deviceRegistrationPolicy",
                 "featureRolloutPolicy",
                 "identitySecurityDefaultsEnforcementPolicy"
               ]
@@ -1357,6 +1369,12 @@
                 "userFlowLanguageConfiguration",
                 "identityApiConnector",
                 "identityUserFlow"
+              ]
+            },
+            {
+              "name": "Verified ID",
+              "resources": [
+                "verifiedIdProfile"
               ]
             }
           ]
