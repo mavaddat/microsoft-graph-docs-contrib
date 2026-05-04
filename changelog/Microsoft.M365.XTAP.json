@@ -167,7 +167,7 @@
           "ApiChange": "Enumeration",
           "ChangedApiName": "m365ResourceType",
           "ChangeType": "Addition",
-          "Description": "Added the **m365ResourceType** enumeration type.",
+          "Description": "Added the **m365ResourceType** enumeration type. For details, see [m365CapabilityInboundAccess](https://learn.microsoft.com/en-us/graph/api/resources/m365CapabilityInboundAccess?view=graph-rest-beta).",
           "Target": "m365ResourceType"
         }
       ],
