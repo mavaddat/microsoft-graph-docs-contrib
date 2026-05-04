@@ -165,7 +165,7 @@ This article explains how to configure the arguments property for built-in tasks
 }
 ```
 
-### Example 5: Update user attributes
+### Example 5: Update user attributes (Preview)
 
 ```json
 {
