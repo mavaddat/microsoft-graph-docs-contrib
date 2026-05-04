@@ -56,16 +56,27 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ## Examples
 
 ### Request
+The following example shows a request.
 
-
+<!-- {
+  "blockType": "request",
+  "name": "list_photoupdatesettings"
+}
+-->
 ```http
-GET /admin/people/photoUpdateSettings
+GET https://graph.microsoft.com/beta/admin/people/photoUpdateSettings
 ```
 
 ### Response
 
-If successful, this method returns a 200 OK response code and an photoUpdateSettings object in the response body.
-
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.photoUpdateSettings"
+}
+-->
 ```http
 HTTP/1.1 200 OK
 Content-Type: application/json
