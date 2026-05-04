@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 Update the properties of an [approvedClientApp](../resources/approvedclientapp.md) object for a [remotedesktopsecurityconfiguration](../resources/remotedesktopsecurityconfiguration.md).
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 

@@ -18,7 +18,7 @@ Enables reviewers to set the `applyResult` and `applyDescription` on all [access
 
 **NOTE:** The access review instance must be in an `Applying` state.
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
