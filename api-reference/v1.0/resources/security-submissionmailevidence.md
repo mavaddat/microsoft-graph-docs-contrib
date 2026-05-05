@@ -45,15 +45,15 @@ The following JSON representation shows the resource type.
 
 ``` json
 {
-"@odata.type": "#microsoft.graph.security.submissionMailEvidence",
-"submissionId": "String",
-"submissionDateTime": "String (timestamp)",
-"submitter": "String",
-"networkMessageId": "String",
-"recipient": "String",
-"sender": "String",
-"senderIp": "String",
-"subject": "String",
-"reportType": "String"
+  "@odata.type": "#microsoft.graph.security.submissionMailEvidence",
+  "submissionId": "String",
+  "submissionDateTime": "String (timestamp)",
+  "submitter": "String",
+  "networkMessageId": "String",
+  "recipient": "String",
+  "sender": "String",
+  "senderIp": "String",
+  "subject": "String",
+  "reportType": "String"
 }
 ```
