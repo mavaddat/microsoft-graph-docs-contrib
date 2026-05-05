@@ -24,7 +24,6 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |algorithm|[microsoft.graph.security.fileHashAlgorithm](#filehashalgorithm-values)|The hash algorithm type. Possible values are: `unknown`, `md5`, `sha1`, `sha256`, `sha256ac`, `unknownFutureValue`.|
 |value|String|The hash value.|
 
-
 ### fileHashAlgorithm values
 
 |Member|Description|
@@ -35,7 +34,6 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |sha256|SHA256 hash type.|
 |sha256ac|SHA256 authenticode hash type.|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
-
 
 ## Relationships
 

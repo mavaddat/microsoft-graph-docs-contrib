@@ -24,48 +24,48 @@ service using a compromised user account can track the following evidence:
 
 This resource is the base type for the following evidence types:
 
-* [amazonResourceEvidence](security-amazonresourceevidence.md)
-* [analyzedMessageEvidence](security-analyzedmessageevidence.md)
-* [azureResourceEvidence](security-azureresourceevidence.md)
-* [blobContainerEvidence](security-blobcontainerevidence.md)
-* [blobEvidence](security-blobevidence.md)
-* [cloudApplicationEvidence](security-cloudapplicationevidence.md)
-* [containerEvidence](security-containerevidence.md)
-* [containerImageEvidence](security-containerimageevidence.md)
-* [containerRegistryEvidence](security-containerregistryevidence.md)
-* [deviceEvidence](security-deviceevidence.md)
-* [fileEvidence](security-fileevidence.md)
-* [googleCloudResourceEvidence](security-googlecloudresourceevidence.md)
-* [ipEvidence](security-ipevidence.md)
-* [kubernetesClusterEvidence](security-kubernetesclusterevidence.md)
-* [kubernetesControllerEvidence](security-kubernetescontrollerevidence.md)
-* [kubernetesNamespaceEvidence](security-kubernetesnamespaceevidence.md)
-* [kubernetesPodEvidence](security-kubernetespodevidence.md)
-* [kubernetesSecretEvidence](security-kubernetessecretevidence.md)
-* [kubernetesServiceAccountEvidence](security-kubernetesserviceaccountevidence.md)
-* [kubernetesServiceEvidence](security-kubernetesserviceevidence.md)
-* [mailClusterEvidence](security-mailclusterevidence.md)
-* [mailboxEvidence](security-mailboxevidence.md)
-* [oauthApplicationEvidence](security-oauthapplicationevidence.md)
-* [processEvidence](security-processevidence.md)
-* [registryKeyEvidence](security-registrykeyevidence.md)
-* [registryValueEvidence](security-registryvalueevidence.md)
-* [securityGroupEvidence](security-securitygroupevidence.md)
-* [urlEvidence](security-urlevidence.md)
-* [userEvidence](security-userevidence.md)
-* [sasTokenEvidence](security-sastokenevidence.md)
-* [networkConnectionEvidence](security-networkconnectionevidence.md)
-* [submissionMailEvidence](security-submissionMailevidence.md)
-* [gitHubRepoEvidence](security-githubrepoevidence.md)
-* [gitHubUserEvidence](security-gitHubUserEvidence.md)
-* [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
-* [servicePrincipalEvidence](security-serviceprincipalevidence.md)
-* [malwareEvidence](security-malwareevidence.md)
-* [ioTDeviceEvidence](security-iotdeviceevidence.md)
-* [nicEvidence](security-nicevidence.md)
-* [hostLogonSessionEvidence](security-hostlogonsessionevidence.md)
-* [dnsEvidence](security-dnsevidence.md)
-* [fileHashEvidence](security-filehashevidence.md)
+- [amazonResourceEvidence](security-amazonresourceevidence.md)
+- [analyzedMessageEvidence](security-analyzedmessageevidence.md)
+- [azureResourceEvidence](security-azureresourceevidence.md)
+- [blobContainerEvidence](security-blobcontainerevidence.md)
+- [blobEvidence](security-blobevidence.md)
+- [cloudApplicationEvidence](security-cloudapplicationevidence.md)
+- [containerEvidence](security-containerevidence.md)
+- [containerImageEvidence](security-containerimageevidence.md)
+- [containerRegistryEvidence](security-containerregistryevidence.md)
+- [deviceEvidence](security-deviceevidence.md)
+- [fileEvidence](security-fileevidence.md)
+- [googleCloudResourceEvidence](security-googlecloudresourceevidence.md)
+- [ipEvidence](security-ipevidence.md)
+- [kubernetesClusterEvidence](security-kubernetesclusterevidence.md)
+- [kubernetesControllerEvidence](security-kubernetescontrollerevidence.md)
+- [kubernetesNamespaceEvidence](security-kubernetesnamespaceevidence.md)
+- [kubernetesPodEvidence](security-kubernetespodevidence.md)
+- [kubernetesSecretEvidence](security-kubernetessecretevidence.md)
+- [kubernetesServiceAccountEvidence](security-kubernetesserviceaccountevidence.md)
+- [kubernetesServiceEvidence](security-kubernetesserviceevidence.md)
+- [mailClusterEvidence](security-mailclusterevidence.md)
+- [mailboxEvidence](security-mailboxevidence.md)
+- [oauthApplicationEvidence](security-oauthapplicationevidence.md)
+- [processEvidence](security-processevidence.md)
+- [registryKeyEvidence](security-registrykeyevidence.md)
+- [registryValueEvidence](security-registryvalueevidence.md)
+- [securityGroupEvidence](security-securitygroupevidence.md)
+- [urlEvidence](security-urlevidence.md)
+- [userEvidence](security-userevidence.md)
+- [sasTokenEvidence](security-sastokenevidence.md)
+- [networkConnectionEvidence](security-networkconnectionevidence.md)
+- [submissionMailEvidence](security-submissionmailevidence.md)
+- [gitHubRepoEvidence](security-githubrepoevidence.md)
+- [gitHubUserEvidence](security-githubuserevidence.md)
+- [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
+- [servicePrincipalEvidence](security-serviceprincipalevidence.md)
+- [malwareEvidence](security-malwareevidence.md)
+- [ioTDeviceEvidence](security-iotdeviceevidence.md)
+- [nicEvidence](security-nicevidence.md)
+- [hostLogonSessionEvidence](security-hostlogonsessionevidence.md)
+- [dnsEvidence](security-dnsevidence.md)
+- [fileHashEvidence](security-filehashevidence.md)
 
 ## Properties
 
@@ -118,16 +118,6 @@ This resource is the base type for the following evidence types:
 |loaded|The entity was loaded by a process under the control of an attacker, for example, a Dll was loaded into an attacker-controlled process.|
 |suspicious|The entity is suspected of being malicious or controlled by an attacker but hasn't been incriminated.|
 |policyViolator|The entity is a violator of a customer defined policy.|
-|unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
-
-### evidenceRemediationStatus values
-
-|Member|Description|
-|:-------------------|:-------------------------------------------------|
-|unknown|No verdict was determined for the evidence.|
-|suspicious|The evidence indicates suspicious activity|
-|malicious|The evidence indicates malicious activity|
-|clean|The evidence indicates benign activity|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
 ### evidenceVerdict values

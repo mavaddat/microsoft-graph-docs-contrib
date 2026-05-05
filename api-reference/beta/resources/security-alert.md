@@ -21,6 +21,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 [!INCLUDE [alerts-callout-two-types](../includes/alerts-callout-two-types.md)]
 
 ## Methods
+
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List alerts_v2](../api/security-list-alerts_v2.md)|[microsoft.graph.security.alert](security-alert.md) collection|Get a list of [alert](../resources/security-alert.md) resources that track suspicious activities in an organization.|
@@ -29,6 +30,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 |[Create comment for alert](../api/security-alert-post-comments.md)|[alertComment](../resources/security-alertcomment.md)|Create a comment for an existing [alert](../resources/security-alert.md) based on the specified alert **ID** property.|
 
 ## Properties
+
 |Property|Type|Description|
 |:-------|:---|:----------|
 |actorDisplayName|String|The adversary or activity group that is associated with this alert.|
@@ -66,7 +68,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 |systemTags|String collection|The system tags associated with the alert.|
 |alertPolicyId|String|The Id of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built in policy.|
 
-### alertClassification values 
+### alertClassification values
 
 |Member|Description|
 |:-----|:----------|
@@ -76,7 +78,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 |informationalExpectedActivity|The alert is benign positive and detected potentially malicious activity by a trusted/internal user, for example, security testing.|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
-### alertDetermination values 
+### alertDetermination values
 
 |Member|Description|
 |:-----|:----------|
@@ -97,7 +99,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 |other|Other determination.|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
-### alertSeverity values 
+### alertSeverity values
 
 |Member|Description|
 |:-----|:----------|
@@ -108,8 +110,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 |high|Alerts commonly seen associated with advanced persistent threats (APT). These alerts indicate a high risk because of the severity of damage they can inflict on assets. Some examples are: credential theft tools activities, ransomware activities not associated with any group, tampering with security sensors, or any malicious activities indicative of a human adversary.|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
-
-### alertStatus values 
+### alertStatus values
 
 |Member|Description|
 |:-----|:----------|
@@ -119,8 +120,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 |resolved|The alert is in the resolved state.|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
-
-### serviceSource values 
+### serviceSource values
 
 |Value|Description|
 |:----|:----------|
@@ -137,8 +137,7 @@ Security providers create an alert in the system when they detect a threat. Micr
 |microsoftDefenderForCloud|Microsoft Defender for Cloud.|
 |microsoftSentinel|Microsoft Sentinel.|
 
-
-### detectionSource values 
+### detectionSource values
 
 |Value|Description|
 |:----|:----------|
@@ -178,11 +177,12 @@ Security providers create an alert in the system when they detect a threat. Micr
 |microsoftDefenderThreatIntelligenceAnalytics|Sentinel Threat Intelligence Alerts.|
 |builtInMl|Sentinel Built-in ML.|
 
-
 ## Relationships
+
 None.
 
 ## JSON representation
+
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
