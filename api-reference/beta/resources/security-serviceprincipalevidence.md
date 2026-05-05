@@ -21,12 +21,12 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:-------|:---|:----------|
-|servicePrincipalName|String|The display name for the service principal.|
-|servicePrincipalObjectId|String|The unique identifier for the service principal.|
 |appId|String|The unique identifier for the associated application (its appId property).|
 |appOwnerTenantId|String|Contains the tenant ID where the application is registered.|
-|tenantId|String|The Microsoft Entra tenant ID of Service Principal.|
+|servicePrincipalName|String|The display name for the service principal.|
+|servicePrincipalObjectId|String|The unique identifier for the service principal.|
 |servicePrincipalType|[microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values)|Type of the service principal: 'Unknown,' 'Application,' 'ManagedIdentity,' 'Legacy'.|
+|tenantId|String|The Microsoft Entra tenant ID of Service Principal.|
 
 ### servicePrincipalType values
 

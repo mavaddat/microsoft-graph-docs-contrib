@@ -19,32 +19,32 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:-------|:---|:----------|
-|ioTHub|[microsoft.graph.security.azureResourceEvidence](./security-azureresourceevidence.md)|The AzureResource entity that represents the IoT Hub the device belongs to.|
 |deviceId|String|The ID of the device resource.|
 |deviceName|String|The friendly name of the device.|
-|owners|String Collection|The owners of the device.|
-|ioTSecurityAgentId|String|The ID of the Azure Security Center for IoT agent running on the device.|
-|deviceType|String|The type of the device. For example, 'temperature sensor', 'freezer', 'wind turbine', and so on.|
-|source|String|The source of the device entity. The  possible values are: 'microsoft', 'vendor'.|
-|sourceRef|[microsoft.graph.security.urlEvidence](./security-urlevidence.md)|A URL reference to the source item where the device is managed.|
-|manufacturer|String|The manufacturer of the device.|
-|model|String|The model of the device.|
-|operatingSystem|String|The operating system the device is running.|
-|ipAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|The current IP address of the device.|
-|macAddress|String|The MAC address of the device.|
-|nics|[microsoft.graph.security.nicEvidence](./security-nicevidence.md)|The current NICs on the device.|
-|protocols|String Collection|A list of protocols that the device supports.|
-|serialNumber|String|The serial number of the device.|
-|site|String|The site location of the device.|
-|zone|String|The zone location of the device within a site.|
-|sensor|String|The sensor that monitors the device.|
-|importance|[microsoft.graph.security.ioTDeviceImportanceType](#iotdeviceimportancetype-values )|The importance of the IoT Device.|
-|purdueLayer|String|The Purdue Layer of the device.|
-|isProgramming|Boolean|Whether the device is a programming device.|
-|isAuthorized|Boolean|Whether the device is an authorized device.|
-|isScanner|Boolean|Whether the device is a scanner device.|
 |devicePageLink|String|A URL to the device page in IoT Defender portal.|
 |deviceSubType|String|The name of the device subtype.|
+|deviceType|String|The type of the device. For example, 'temperature sensor', 'freezer', 'wind turbine', and so on.|
+|importance|[microsoft.graph.security.ioTDeviceImportanceType](#iotdeviceimportancetype-values )|The importance of the IoT Device.|
+|ioTHub|[microsoft.graph.security.azureResourceEvidence](./security-azureresourceevidence.md)|The AzureResource entity that represents the IoT Hub the device belongs to.|
+|ioTSecurityAgentId|String|The ID of the Azure Security Center for IoT agent running on the device.|
+|ipAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|The current IP address of the device.|
+|isAuthorized|Boolean|Whether the device is an authorized device.|
+|isProgramming|Boolean|Whether the device is a programming device.|
+|isScanner|Boolean|Whether the device is a scanner device.|
+|macAddress|String|The MAC address of the device.|
+|manufacturer|String|The manufacturer of the device.|
+|model|String|The model of the device.|
+|nics|[microsoft.graph.security.nicEvidence](./security-nicevidence.md)|The current NICs on the device.|
+|operatingSystem|String|The operating system the device is running.|
+|owners|String Collection|The owners of the device.|
+|protocols|String Collection|A list of protocols that the device supports.|
+|purdueLayer|String|The Purdue Layer of the device.|
+|sensor|String|The sensor that monitors the device.|
+|serialNumber|String|The serial number of the device.|
+|site|String|The site location of the device.|
+|source|String|The source of the device entity. The  possible values are: 'microsoft', 'vendor'.|
+|sourceRef|[microsoft.graph.security.urlEvidence](./security-urlevidence.md)|A URL reference to the source item where the device is managed.|
+|zone|String|The zone location of the device within a site.|
 
 #### ioTDeviceImportanceType values
 
@@ -65,7 +65,7 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.security.kubernetesServiceEvidence"
+  "@odata.type": "microsoft.graph.security.ioTDeviceEvidence"
 }
 -->
 
