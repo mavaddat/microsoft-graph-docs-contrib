@@ -1,4 +1,4 @@
-﻿---
+---
 title: "dnsEvidence resource type"
 description: "A dns that is reported in the alert as evidence."
 author: "OfirBelenky"
