@@ -3,6 +3,7 @@ title: "servicePrincipalEvidence resource type"
 description: "Represents a ServicePrincipal reported in a security detection alert."
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---

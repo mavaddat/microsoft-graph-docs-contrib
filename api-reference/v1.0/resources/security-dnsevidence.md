@@ -3,6 +3,7 @@ title: "dnsEvidence resource type"
 description: "A DNS that is reported in the alert as evidence."
 author: "OfirBelenky"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---
