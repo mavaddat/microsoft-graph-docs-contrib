@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: "jessieli-ad"
 doc_type: conceptualPageType
 ms.subservice: change-notifications
-ms.date: 06/07/2024
+ms.date: 05/05/2026
 ---
 
 # Use the Microsoft Graph API to get change notifications

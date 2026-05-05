@@ -1,7 +1,7 @@
 ---
 author: "slavatarasov"
 ms.topic: include
-ms.date: 05/06/2026
+ms.date: 05/05/2026
 ms.localizationpriority: medium
 ---
 
@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 ### aiInsights
 
-*Dummy text*
+*Text from aiInteractions, to be replaced*
 
 Subscriptions on Copilot AI interactions require a valid Copilot license that includes the following Copilot service plan:
 
