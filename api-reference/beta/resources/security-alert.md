@@ -66,7 +66,6 @@ Security providers create an alert in the system when they detect a threat. Micr
 |threatFamilyName|String|Threat family associated with this alert.|
 |title|String|Brief identifying string value describing the alert.|
 |systemTags|String collection|The system tags associated with the alert.|
-|alertPolicyId|String|The Id of the policy that generated the alert, and populated when there is a specific policy that generated the alert, whether configured by a customer or a built in policy.|
 
 ### alertClassification values
 
