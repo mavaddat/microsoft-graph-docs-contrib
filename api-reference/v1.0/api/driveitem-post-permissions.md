@@ -20,6 +20,8 @@ Create a new [permission](../resources/permission.md) object on a [driveItem](..
 > - For OneDrive for work or school and SharePoint Online, you can only use this method to create a new application permission. If you want to create a new user permission in a **driveItem**, see [invite](./driveitem-invite.md). For more information on application permissions, see [Overview of selected permissions in OneDrive and SharePoint](/graph/permissions-selected-overview).
 > - For SharePoint Embedded, you can only use this method to create a new [sharePointGroup](../resources/sharepointgroup.md) permission with app-only access. You can't create a permission on the root item of a container.
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
