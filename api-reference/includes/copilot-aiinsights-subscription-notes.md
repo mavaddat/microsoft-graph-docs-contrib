@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 
 ### aiInsights
 
-*Dummy text*
+*Text from aiInteractions, to be replaced*
 
 Subscriptions on Copilot AI interactions require a valid Copilot license that includes the following Copilot service plan:
 
