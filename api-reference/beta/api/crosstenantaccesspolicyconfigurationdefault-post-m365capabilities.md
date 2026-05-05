@@ -20,11 +20,7 @@ Create a new Microsoft 365 cross-tenant capability for the [default cross-tenant
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "crosstenantaccesspolicyconfigurationdefault-post-m365capabilities-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "crosstenantaccesspolicyconfigurationdefault_post_m365capabilities" } -->
 [!INCLUDE [permissions-table](../includes/permissions/crosstenantaccesspolicyconfigurationdefault-post-m365capabilities-permissions.md)]
 
 ## HTTP request
