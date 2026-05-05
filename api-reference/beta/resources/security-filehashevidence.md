@@ -1,5 +1,5 @@
 ﻿---
-title: "fileHashEvidence  resource type"
+title: "fileHashEvidence resource type"
 description: "Represents a file hash value that is reported in a security detection alert, usually in relation to a file entity instance."
 author: "OfirBelenky"
 ms.localizationpriority: medium

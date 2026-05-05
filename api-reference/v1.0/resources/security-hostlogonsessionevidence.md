@@ -13,6 +13,8 @@ Namespace: microsoft.graph.security
 
 Represents a logon session to a host by an account.
 
+Inherits from [alertEvidence](../resources/security-alertevidence.md).
+
 ## Properties
 
 |Property|Type|Description|

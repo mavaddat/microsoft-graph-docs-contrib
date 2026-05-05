@@ -46,7 +46,11 @@ The following JSON representation shows the resource type.
       "@odata.type": "microsoft.graph.security.ipEvidence"
     }
   ],
-  "dnsServerIp": "microsoft.graph.security.ipEvidence",
-  "hostIpAddress": "microsoft.graph.security.ipEvidence",
+  "dnsServerIp": {
+    "@odata.type": "microsoft.graph.security.ipEvidence"
+  },
+  "hostIpAddress": {
+    "@odata.type": "microsoft.graph.security.ipEvidence"
+  }
 }
 ```

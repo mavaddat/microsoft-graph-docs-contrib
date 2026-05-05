@@ -31,8 +31,8 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Member|Description|
 |:-----|:----------|
-|tcp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
-|udp|Reliable, connection-oriented data transfer, essential for web browsing and file transfer.|
+|tcp|Reliable, connection-oriented data transfer, essential for web browsing and file transfer.|
+|udp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ## Relationships
@@ -40,6 +40,11 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 None.
 
 ## JSON representation
+
+<!-- {
+  "blockType": "resource",
+  "@odata.type": "microsoft.graph.security.networkConnectionEvidence"
+} -->
 
 The following JSON representation shows the resource type.
 
@@ -54,6 +59,6 @@ The following JSON representation shows the resource type.
     "@odata.type": "microsoft.graph.security.ipEvidence"
   },
   "destinationPort": "Int32",
-  "protocol": "String",
+  "protocol": "String"
 }
 ```
