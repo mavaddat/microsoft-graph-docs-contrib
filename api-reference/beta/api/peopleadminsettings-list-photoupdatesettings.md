@@ -37,7 +37,7 @@ GET /admin/people/photoUpdateSettings
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method doesn't support OData query parameters to help customize the response. For general information, see  [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -71,15 +71,11 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": [
-    {
-      "@odata.type": "#microsoft.graph.photoUpdateSettings",
-      "id": "20a03e03-52a3-3c97-6c4f-db600fca32ba",
-      "source": "String",
-      "allowedRoles": [
-        "String"
-      ]
-    }
+  "@odata.type": "#microsoft.graph.photoUpdateSettings",
+  "id": "20a03e03-52a3-3c97-6c4f-db600fca32ba",
+  "source": "String",
+  "allowedRoles": [
+    "String"
   ]
 }
 ```
