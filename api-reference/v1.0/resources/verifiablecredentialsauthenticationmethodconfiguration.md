@@ -37,7 +37,7 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
-|includeTargets|[verifiableCredentialAuthenticationMethodTarget](../resources/verifiablecredentialauthenticationmethodtarget.md) collection|A collection of groups that are enabled to use the authentication method.
+|includeTargets|[verifiableCredentialAuthenticationMethodTarget](../resources/verifiablecredentialauthenticationmethodtarget.md) collection|A collection of groups that are enabled to use the authentication method.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
