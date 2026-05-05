@@ -101,11 +101,11 @@ Depending on the resource and the permission type (delegated or application) req
 
 [!INCLUDE [teams-subscription-notes](../../includes/teams-subscription-notes.md)]
 
-<!-- ### aiInteraction -->
-[!INCLUDE [copilot-aiinteraction-subscription-notes.md](../../includes/copilot-aiinteraction-subscription-notes.md)]
-
 <!-- ### aiInsights -->
 [!INCLUDE [copilot-aiinsights-subscription-notes.md](../../includes/copilot-aiinsights-subscription-notes.md)]
+
+<!-- ### aiInteraction -->
+[!INCLUDE [copilot-aiinteraction-subscription-notes.md](../../includes/copilot-aiinteraction-subscription-notes.md)]
 
 ### driveItem
 
