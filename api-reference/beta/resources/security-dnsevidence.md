@@ -3,6 +3,7 @@ title: "dnsEvidence resource type"
 description: "A dns that is reported in the alert as evidence."
 author: "OfirBelenky"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---
@@ -13,7 +14,7 @@ Namespace: microsoft.graph.security
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-A dns that is reported in the alert as evidence.
+A DNS that is reported in the alert as evidence.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 

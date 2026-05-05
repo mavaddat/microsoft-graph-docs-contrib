@@ -3,6 +3,7 @@ title: "networkConnectionEvidence resource type"
 description: "Represents a network connection entity."
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---

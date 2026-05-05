@@ -3,6 +3,7 @@ title: "gitHubUserEvidence resource type"
 description: "Represents a user account in GitHub."
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---

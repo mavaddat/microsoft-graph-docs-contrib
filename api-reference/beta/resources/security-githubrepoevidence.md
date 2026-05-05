@@ -3,6 +3,7 @@ title: "gitHubRepoEvidence resource type"
 description: "Represents a repository in GitHub."
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---

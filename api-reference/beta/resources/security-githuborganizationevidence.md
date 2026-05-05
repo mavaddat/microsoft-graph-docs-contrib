@@ -3,6 +3,7 @@ title: "gitHubOrganizationEvidence resource type"
 description: "Represents an organization in GitHub."
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---

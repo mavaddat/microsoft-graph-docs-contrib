@@ -3,6 +3,7 @@ title: "sasTokenEvidence resource type"
 description: "Represents a Shared Access Signature (SAS) token entity for a storage container."
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---

@@ -3,6 +3,7 @@ title: "submissionMailEvidence resource type"
 description: "Represents a user-reported concern over an email, such as reporting an email as Junk/Phish."
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---

@@ -3,6 +3,7 @@ title: "hostLogonSessionEvidence resource type"
 description: "Represents a logon session to a host by an account"
 author: "Lirlev48"
 ms.localizationpriority: medium
+ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
 ---
