@@ -1,0 +1,9 @@
+{
+  "redirections": [
+    {
+      "source_path_from_root": "/api-reference/beta/api/photoupdatesettings-get.md",
+      "redirect_url": "https://learn.microsoft.com/en-us/graph/api/peopleadminsettings-list-photoupdatesettings?view=graph-rest-beta",
+      "redirect_document_id": false
+    }
+  ]
+}
