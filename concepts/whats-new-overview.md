@@ -163,6 +163,10 @@ Updated the capabilities of the [auditLogQuery](/graph/api/resources/security-au
 
 Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true) to get the list of device types for the sensor.
 
+### Cloud communications | Call
+
+Added [meeting engagement data](/graph/api/resources/meetingengagement?view=graph-rest-beta&preserve-view=true) to capture real-time participant interaction behaviors during a meeting, including reactions (like, love, applause, and so on), hand raises, camera toggles, and microphone mute/unmute events. This data is collected as part of the attendance report.
+
 ### Teamwork and communications | Messaging
 
 - Use the targeted messages APIs to manage messages in Microsoft Teams that are visible only to specified recipients within group chats or channels:
