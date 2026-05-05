@@ -1,11 +1,11 @@
 ---
 title: "cloudPC resource type"
 description: "Represents a cloud-managed virtual desktop."
-author: "AshleyYangSZ"
+author: "danipocket"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: resourcePageType
-ms.date: 11/19/2024
+ms.date: 05/05/2026
 ---
 
 # cloudPC resource type
@@ -49,7 +49,8 @@ Represents a cloud-managed virtual desktop. This Cloud PC is also enrolled in In
 |[Retrieve snapshots](../api/cloudpc-retrievesnapshots.md)|[cloudPcSnapshot](../resources/cloudpcsnapshot.md) collection|Get a list of [cloudPcSnapshot](../resources/cloudpcsnapshot.md) resources for a Cloud PC.|
 |[Get frontline access state](../api/cloudpc-getfrontlinecloudpcaccessstate.md)|[frontlineCloudPcAccessState](#frontlinecloudpcaccessstate-values)|Get the access state of the frontline Cloud PC. The possible values are: `unassigned`, `noLicensesAvailable`, `activationFailed`, `active`, `activating`, `standbyMode`, `unknownFutureValue`. The `noLicensesAvailable` member is deprecated and stopped returning on September 30, 2024.|
 |[Get launch info (deprecated)](../api/cloudpc-getcloudpclaunchinfo.md)|[cloudPcLaunchInfo](../resources/cloudpclaunchinfo.md)|Get the [cloudPCLaunchInfo](../resources/cloudpclaunchinfo.md) for a specific Cloud PC that belongs to the current signed-in user. This API is deprecated and will stop returning data on October 30, 2026. Going forward, use the [Retrieve launch detail](../api/cloudpc-retrievecloudpclaunchdetail.md) API.|
-|[Retrieve frontline Cloud PC detail](../api/cloudpc-retrievefrontlinecloudpcdetail.md)|[frontlineCloudPcDetail](../resources/frontlinecloudpcdetail.md)|Get the [frontlineCloudPcDetail](../resources/frontlinecloudpcdetail.md) of a frontline [Cloud PC](../resources/cloudpc.md).
+|[Retrieve frontline Cloud PC detail](../api/cloudpc-retrievefrontlinecloudpcdetail.md)|[frontlineCloudPcDetail](../resources/frontlinecloudpcdetail.md)|Get the [frontlineCloudPcDetail](../resources/frontlinecloudpcdetail.md) of a frontline [Cloud PC](../resources/cloudpc.md).|
+
 ## Properties
 
 |Property|Type|Description|
@@ -82,6 +83,7 @@ Represents a cloud-managed virtual desktop. This Cloud PC is also enrolled in In
 |servicePlanId|String|The service plan ID of the Cloud PC.|
 |servicePlanName|String|The service plan name of the Cloud PC.|
 |servicePlanType|[cloudPcServicePlanType](../resources/cloudpcserviceplan.md#cloudpcserviceplantype-values)|The service plan type of the Cloud PC.|
+|scopeIds|String collection|The scope IDs of the corresponding permission. Currently, it's the Intune scope tag ID. Read-only.|
 |sharedDeviceDetail|[cloudPcFrontlineSharedDeviceDetail](../resources/cloudpcfrontlineshareddevicedetail.md)|Indicates the Cloud PC device details associated with the frontline shared service plan, including the user's UPN and the session start date and time.|
 |status|[cloudPcStatus](#cloudpcstatus-values)|The status of the Cloud PC. The possible values are: `notProvisioned`, `provisioning`, `provisioned`, `inGracePeriod`, `deprovisioning`, `failed`, `provisionedWithWarnings`, `resizing`, `restoring`, `pendingProvision`, `unknownFutureValue`, `movingRegion`, `resizePendingLicense`, `modifyingSingleSignOn`, `refreshPolicyConfiguration`, and `preparing`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `movingRegion`, `resizePendingLicense`, `modifyingSingleSignOn`, `refreshPolicyConfiguration`, and `preparing`.|
 |statusDetail|[cloudPcStatusDetail](../resources/cloudpcstatusdetail.md)|Indicates the detailed status associated with Cloud PC, including error/warning code, error/warning message, additionalInformation. For example, `{ "code": "internalServerError", "message": "There was an error during the Cloud PC upgrade. Please contact support.", "additionalInformation": null }`. |
@@ -204,6 +206,7 @@ The following JSON representation shows the resource type.
   "servicePlanId": "String",
   "servicePlanName": "String",
   "servicePlanType": "String",
+  "scopeIds": ["String"],
   "sharedDeviceDetail": {"@odata.type": "microsoft.graph.cloudPcFrontlineSharedDeviceDetail"},
   "status": "String",
   "userAccountType": "String",
