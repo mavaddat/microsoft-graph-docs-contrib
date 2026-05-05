@@ -45,6 +45,7 @@ Permissions to update a task of another user:
   "blockType": "ignored"
 }
 -->
+```http
 PATCH /users/{id|userPrincipalName}/todo/lists/{todoTaskListId}/tasks/{taskId}
 ```
 
