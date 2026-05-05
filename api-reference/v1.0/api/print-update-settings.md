@@ -5,6 +5,7 @@ author: nilakhan
 ms.localizationpriority: medium
 ms.subservice: universal-print
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Update printSettings
@@ -24,7 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /print/settings
 ```
 
@@ -39,7 +40,8 @@ In the request body, supply the values for the relevant [printSettings](../resou
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|documentConversionEnabled|Boolean|Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service will automatically convert documents into a format compatible with the printer (for example, XPS to PDF) when needed.|
+|documentConversionEnabled|Boolean|Specifies whether document conversion is enabled for the tenant. If document conversion is enabled, Universal Print service automatically converts documents into a format compatible with the printer (for example, XPS to PDF) when needed.|
+|printerDiscoverySettings|[printerDiscoverySettings](../resources/printerdiscoverysettings.md)|Specifies settings that affect printer discovery when using Universal Print.|
 
 ## Response
 
@@ -55,7 +57,7 @@ If successful, this method returns a `204 No Content` response code and an empty
   "name": "update_printsettings"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/print/settings
 Content-type: application/json
 
@@ -77,7 +79,7 @@ Content-type: application/json
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

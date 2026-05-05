@@ -4,14 +4,17 @@ description: "List the azureAuthorizationSystemResource objects and their proper
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # List resources (for an Azure authorization system)
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 List the [azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md) objects and their properties for an Azure authorization system onboarded to Permissions Management..
 
@@ -109,3 +112,4 @@ Content-Type: application/json
   ]
 }
 ```
+

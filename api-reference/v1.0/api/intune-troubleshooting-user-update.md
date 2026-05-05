@@ -5,6 +5,7 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update user
@@ -31,7 +32,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /users/{usersId}
 ```
 
@@ -59,10 +60,8 @@ If successful, this method returns a `200 OK` response code and an updated [user
 
 ### Request
 Here is an example of the request.
-
-<!-- { "blockType": "request" , "name" : "intune_troubleshooting_user_update_update_user" }-->
-``` http
-PATCH https://graph.microsoft.com/v1/users/{usersId}
+```http
+PATCH https://graph.microsoft.com/v1.0/users/{usersId}
 Content-type: application/json
 Content-length: 46
 
@@ -73,9 +72,7 @@ Content-length: 46
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-
-<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.user" }-->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 95
@@ -85,7 +82,3 @@ Content-Length: 95
   "id": "d36894ae-94ae-d368-ae94-68d3ae9468d3"
 }
 ```
-
-
-
-

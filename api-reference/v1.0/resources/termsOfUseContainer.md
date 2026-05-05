@@ -5,13 +5,12 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "AlexFilipin"
+ms.date: 07/22/2024
 ---
 
 # termsOfUseContainer resource type
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Container for the relationships that expose the terms of use API and its features. Currently exposes the [agreements](agreement.md) and [agreementAcceptances](agreementacceptance.md) relationships.
 
@@ -34,7 +33,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

@@ -6,6 +6,7 @@ author: "lisaychuang"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # ipRange resource type
@@ -22,9 +23,12 @@ The [iPv4CidrRange](ipv4cidrrange.md) derived type is used to configure IPv4 add
 
 None.
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

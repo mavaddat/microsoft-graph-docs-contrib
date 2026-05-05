@@ -5,9 +5,11 @@ author: "shubhamguptacal"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 08/01/2024
+toc.title: User sign-in insight
 ---
 
-# usersignininsight resource type
+# userSignInInsight resource type
 
 Namespace: microsoft.graph
 
@@ -28,7 +30,7 @@ Inherits from [governanceInsight](governanceinsight.md).
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.userSignInInsight",

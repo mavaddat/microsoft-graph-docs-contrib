@@ -5,6 +5,7 @@ author: "lumine2008"
 ms.localizationpriority: medium
 ms.subservice: "excel"
 doc_type: apiPageType
+ms.date: 08/21/2024
 ---
 
 # Create RangeBorder
@@ -36,16 +37,17 @@ POST /me/drive/root:/{item-path}:/workbook/tables/{id|name}/columns/{id|name}/ra
 | Workbook-Session-Id  | Workbook session Id that determines if changes are persisted or not. Optional.|
 
 ## Request body
-In the request body, supply a JSON representation of [WorkbookRangeBorder](../resources/rangeborder.md) object.
+In the request body, supply a JSON representation of [workbookRangeBorder](../resources/workbookrangeborder.md) object.
 
 ## Response
 
-If successful, this method returns `201 Created` response code and [WorkbookRangeBorder](../resources/rangeborder.md) object in the response body.
+If successful, this method returns `201 Created` response code and [workbookRangeBorder](../resources/workbookrangeborder.md) object in the response body.
 
 ## Example
 ##### Request
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_rangeborder_from_rangeformat"
@@ -63,7 +65,13 @@ Content-type: application/json
 }
 ```
 
-In the request body, supply a JSON representation of [WorkbookRangeBorder](../resources/rangeborder.md) object.
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-rangeborder-from-rangeformat-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+In the request body, supply a JSON representation of [workbookRangeBorder](../resources/workbookrangeborder.md) object.
 ##### Response
 The following example shows the response. Note: The response object shown here might be shortened for readability.
 <!-- {

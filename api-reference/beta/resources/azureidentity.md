@@ -4,8 +4,9 @@ description: "Represents identities in Azure including managed identities, servi
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # azureIdentity resource type
@@ -13,6 +14,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Represents identities in Azure including managed identities, service principals, users, groups, and serverless functions.
 
@@ -29,8 +32,8 @@ The following resources inherit from this resource type:
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List all identities](../api/azureassociatedidentities-list-all.md)|[azureIdentity](../resources/azureidentity.md) collection|Get a list of the [azureIdentity](../resources/azureidentity.md) objects and their properties.|
-|[Get azureIdentity](../api/azureidentity-get.md)|[azureIdentity](../resources/azureidentity.md)|Read the properties and relationships of an [azureIdentity](../resources/azureidentity.md) object.|
+|[List](../api/azureassociatedidentities-list-all.md)|[azureIdentity](../resources/azureidentity.md) collection|Get a list of the [azureIdentity](../resources/azureidentity.md) objects and their properties.|
+|[Get](../api/azureidentity-get.md)|[azureIdentity](../resources/azureidentity.md)|Read the properties and relationships of an [azureIdentity](../resources/azureidentity.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -66,4 +69,5 @@ The following JSON representation shows the resource type.
   "externalId": "String"
 }
 ```
+
 

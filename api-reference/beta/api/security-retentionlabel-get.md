@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Get retentionLabel
@@ -28,13 +29,13 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/labels/retentionLabels/{retentionLabelId}
 GET /security/triggers/retentionEvents/{retentionEventId}/labels/{retentionLabelId}
 ```
 
 ## Optional query parameters
-This method supports the expand OData query parameters to help customize the response.  For example, to retrieve the **retentionEventType** property, you can use the `expand` parameter:`$expand=retentionEventType`. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the expand OData query parameters to help customize the response.  For example, to retrieve the **retentionEventType** property, you can use the `expand` parameter:`$expand=retentionEventType` or `$expand=descriptors`. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 |Name|Description|
@@ -51,6 +52,7 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 ## Examples
 
 ### Request
+Here's an example of a request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -58,16 +60,12 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
   "name": "get_retentionlabel"
 }
 -->
-``` http
+```msgraph-interactive
 GET  https://graph.microsoft.com/beta/security/labels/retentionLabels/{retentionLabelId}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-retentionlabel-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-retentionlabel-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -97,6 +95,7 @@ GET  https://graph.microsoft.com/beta/security/labels/retentionLabels/{retention
 ---
 
 ### Response
+Here's an example of the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -104,7 +103,7 @@ GET  https://graph.microsoft.com/beta/security/labels/retentionLabels/{retention
   "@odata.type": "microsoft.graph.security.retentionLabel"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -112,26 +111,33 @@ Content-Type: application/json
   "value": {
     "@odata.type": "#microsoft.graph.security.retentionLabel",
     "id": "64a99fb4-07be-0481-8746-44c15c0eef1f",
-    "displayName": "String",
-    "behaviorDuringRetentionPeriod": "String",
-    "actionAfterRetentionPeriod": "String",
-    "retentionTrigger": "String",
-    "retentionDuration": {
-      "@odata.type": "microsoft.graph.security.retentionDuration"
-    },
-    "isInUse": "Boolean",
-    "descriptionForAdmins": "String",
-    "descriptionForUsers": "String",
-    "createdBy": {
-      "@odata.type": "microsoft.graph.identitySet"
-    },
-    "createdDateTime": "String (timestamp)",
-    "lastModifiedBy": {
-      "@odata.type": "microsoft.graph.identitySet"
-    },
-    "lastModifiedDateTime": "String (timestamp)",
-    "labelToBeApplied": "String",
-    "defaultRecordBehavior": "String"
+      "displayName": "Retention Schedule 10004",
+      "behaviorDuringRetentionPeriod": "retain",
+      "actionAfterRetentionPeriod": "relabel",
+      "retentionTrigger": "dateCreated",
+      "retentionDuration": {
+        "@odata.type": "microsoft.graph.security.retentionDurationInDays",
+        "days": 730
+      },
+      "isInUse": true,
+      "descriptionForAdmins": "creation based retention label for schedule 10004",
+      "descriptionForUsers": "retains for 2 years then relabeled",
+      "createdBy": {
+        "user": {
+          "id": "efee1b77-fb3b-4f65-99d6-274c11914d12",
+          "displayName": "Admin"
+        }
+      },
+      "createdDateTime": "2017-11-27T02:10:12Z",
+      "lastModifiedBy": {
+        "user": {
+          "id": "9563a605-e827-4324-a5a9-09efddff1e90",
+          "displayName": "Records Manager"
+        }
+      },
+      "lastModifiedDateTime": "2020-08-28T22:13:09Z",
+      "labelToBeApplied": "Retention schedule 10005",
+      "defaultRecordBehavior": "startLocked"
   }
 }
 ```

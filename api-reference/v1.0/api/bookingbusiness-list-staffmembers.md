@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "arvindmicrosoft"
 ms.subservice: "microsoft-bookings"
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # List staffMembers
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Get a list of [bookingStaffMember](../resources/bookingstaffmember.md) objects in the specified [bookingBusiness](../resources/bookingbusiness.md).
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -64,10 +65,6 @@ GET https://graph.microsoft.com/v1.0/solutions/bookingBusinesses/Contosolunchdel
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/bookingbusinessliststaffmembers-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/bookingbusinessliststaffmembers-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

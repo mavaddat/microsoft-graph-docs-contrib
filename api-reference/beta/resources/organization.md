@@ -6,6 +6,7 @@ author: "suawat"
 ms.reviewer: "alvarorahul, iamut"
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # organization resource type
@@ -20,9 +21,9 @@ Represents the Microsoft Entra tenant that the user or application is authentica
 
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
-|[List organizations](../api/organization-list.md) | [organization](organization.md) collection|Read properties and relationships of the organization object.|
-|[Get organization](../api/organization-get.md) | [organization](organization.md) collection|Read properties and relationships of an organization object.|
-|[Update organization](../api/organization-update.md) | None | Update an organization object. |
+|[List](../api/organization-list.md) | [organization](organization.md) collection|Read properties and relationships of the organization object.|
+|[Get](../api/organization-get.md) | [organization](organization.md) collection|Read properties and relationships of an organization object.|
+|[Update](../api/organization-update.md) | None | Update an organization object. |
 
 ## Properties
 
@@ -54,7 +55,7 @@ Represents the Microsoft Entra tenant that the user or application is authentica
 | state | String | State name of the address for the organization. |
 | street | String | Street name of the address for organization. |
 | technicalNotificationMails |String collection | Not nullable. |
-| tenantType | String | Not nullable. Can be one of the following types: <li> `AAD` - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios. <li> `AAD B2C` An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.  <li> `CIAM` - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.  |
+| tenantType | String | Not nullable. Can be one of the following types: <ul><li> `AAD` - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios. </li><li> `AAD B2C` An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.  </li><li> `CIAM` - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios. </li></ul> |
 | verifiedDomains | [verifiedDomain](verifieddomain.md) collection|The collection of domains associated with this tenant. Not nullable. |
 
 ### partnerTenantType values
@@ -96,14 +97,12 @@ The following JSON representation shows the resource type.
   "assignedPlans": [{"@odata.type": "microsoft.graph.assignedPlan"}],
   "businessPhones": ["String"],
   "city": "String",
-  "companyLastDirSyncTime": "2019-02-07T20:33:52.942Z",
   "country": "String",
   "countryLetterCode": "String",
   "createdDateTime": "String (timestamp)",
   "defaultUsageLocation": "String",
   "deletedDateTime": "String (timestamp)",
   "directorySizeQuota": {"@odata.type": "microsoft.graph.directorySizeQuota"},
-  "dirSyncEnabled": true,
   "displayName": "String",
   "id": "String (identifier)",
   "isMultipleDataLocationsForServicesEnabled": "Boolean",

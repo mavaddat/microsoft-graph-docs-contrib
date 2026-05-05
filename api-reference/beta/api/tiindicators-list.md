@@ -1,17 +1,21 @@
 ---
-title: "List threat intelligence indicators"
+title: "List threat intelligence indicators (deprecated)"
 description: "Retrieve a list of threat intelligence indicator objects."
 ms.localizationpriority: medium
 author: "preetikr"
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 08/13/2024
+ROBOTS: NOINDEX
 ---
 
-# List threat intelligence indicators
+# List threat intelligence indicators (deprecated)
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [security-tiindicator-deprecation](../includes/security-tiindicator-deprecation.md)]
 
 Retrieve a list of [tiIndicator](../resources/tiindicator.md) objects.
 
@@ -40,7 +44,7 @@ This method supports some of the OData query parameters to help customize the re
 
 | Name      |Description|
 |:----------|:----------|
-| Authorization | Bearer {code} |
+| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -68,10 +72,6 @@ GET https://graph.microsoft.com/beta/security/tiIndicators
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-tiindicators-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-tiindicators-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

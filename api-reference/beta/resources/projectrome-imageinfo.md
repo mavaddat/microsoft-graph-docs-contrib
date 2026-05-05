@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 ms.subservice: project-rome
 doc_type: resourcePageType
 author: ailae
+ms.date: 03/21/2024
 ---
 
 # imageInfo resource type
@@ -23,9 +24,12 @@ A complex type for representing the **attribution** property in the [visualInfo]
 | alternateText | String  | Optional; alt-text accessible content for the image                                                                                                      |
 | addImageQuery | Boolean | Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image |
 
+## Relationships
+None.
+
 ## JSON Representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

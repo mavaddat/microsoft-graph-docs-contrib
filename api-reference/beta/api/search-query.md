@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "njerigrevious"
 ms.subservice: "search"
 doc_type: "apiPageType"
+ms.date: 05/02/2024
 ---
 
 # searchEntity: query
@@ -97,10 +98,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/query-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/query-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -248,7 +245,7 @@ Content-type: application/json
 - Search [mail messages](/graph/search-concept-messages)
 - Search [calendar events](/graph/search-concept-events)
 - Search [person](/graph/search-concept-person)
-- Search content in SharePoint and OneDrive ([files, lists and sites](/graph/search-concept-files))
+- Search content in SharePoint and OneDrive ([files, lists, and sites](/graph/search-concept-files))
 - Search [custom types (Graph Connectors)](/graph/search-concept-custom-types) data
 - Search with [queryTemplate](/graph/search-concept-query-template)
 - [Sort](/graph/search-concept-sort) search results

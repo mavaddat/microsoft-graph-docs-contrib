@@ -2,11 +2,12 @@
 title: "Configure application proxy using Microsoft Graph APIs"
 description: "Provide remote access and single sign-on to on-premises applications by configuring Microsoft Entra application proxy using Microsoft Graph APIs."
 author: FaithOmbongi
+ma.author: ombongifaith
 ms.reviewer: dhruvinrshah, arpadg
 ms.topic: tutorial
 ms.localizationpriority: medium
 ms.subservice: entra-applications
-ms.date: 02/28/2024
+ms.date: 05/20/2024
 #customer intent: As a developer, I want to configure Microsoft Entra application proxy programmatically using Microsoft Graph, so that I can automate the process of providing secure remote access and single sign-on to on-premises web applications for users.
 ---
 
@@ -22,7 +23,7 @@ In this tutorial, you learn how to Configure Microsoft Entra application proxy u
 ## Prerequisites
 
 - Install a connector and complete the [prerequisites](/entra/identity/app-proxy/application-proxy-add-on-premises-application#prerequisites) for application proxy so that connectors can communicate with Microsoft Entra services.
-- Sign in to an API client such as [Graph Explorer](https://aka.ms/ge) with an account that has the Global Administrator role.
+- Sign in to an API client such as [Graph Explorer](https://aka.ms/ge) with an account that has at least the Cloud Application Administrator role.
 - Grant yourself the Microsoft Graph `Directory.ReadWrite.All` delegated permission.
 - Have a test user to assign to the application.
 
@@ -50,10 +51,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/tutorial-configure-appproxy-create-applicationtemplates-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-configure-appproxy-create-applicationtemplates-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -273,7 +270,7 @@ Also, configure the **onPremisesPublishing** property to set the internal and ex
 
 ### Step 2.1: Configure the URIs
 
-The request returns a `204 No content` response.
+The following request uses the value of **appId** for the **identifierUris** property. You can also use any other identifier that matches the application id URI format expected by Microsoft Entra ID. The request returns a `204 No content` response.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -286,7 +283,7 @@ Content-type: application/json
 
 {
     "identifierUris": [
-        "https://contosoiwaapp-contoso.msappproxy.net"
+        "api://32977d3b-ee0e-4614-9f50-f583a07842d2"
     ],
     "web": {
         "redirectUris": [
@@ -299,10 +296,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/tutorial-configure-appproxy-add-uris-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-configure-appproxy-add-uris-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -364,10 +357,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/beta/tutorial-configure-appproxy-update-onpremisespublishing-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-configure-appproxy-update-onpremisespublishing-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/beta/tutorial-configure-appproxy-update-onpremisespublishing-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -413,10 +402,6 @@ GET https://graph.microsoft.com/beta/onPremisesPublishingProfiles/applicationPro
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/beta/tutorial-configure-appproxy-get-connectors-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-configure-appproxy-get-connectors-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -499,10 +484,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/beta/tutorial-configure-appproxy-create-connectorgroup-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-configure-appproxy-create-connectorgroup-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/beta/tutorial-configure-appproxy-create-connectorgroup-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -571,10 +552,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/beta/tutorial-configure-appproxy-create-connector-memberof-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-configure-appproxy-create-connector-memberof-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/beta/tutorial-configure-appproxy-create-connector-memberof-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -621,10 +598,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/beta/tutorial-configure-appproxy-assign-application-connectorgroup-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/beta/tutorial-configure-appproxy-assign-application-connectorgroup-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -721,7 +694,6 @@ Content-type: appplication/json
 
 The following request shows how to configure header-based SSO for the application. In this mode, the value of the **singleSignOnMode** property can be `aadHeaderBased`, `pingHeaderBased`, or `oAuthToken`. The request returns a `204 No content` response.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "ignore",
   "name": "tutorial_configure_appproxy_update_app_headerbased_sso"
@@ -739,12 +711,6 @@ Content-type: appplication/json
   } 
 }
 ```
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/beta/tutorial-configure-appproxy-update-app-headerbased-sso-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ## Step 5: Assign a user to the application
 
@@ -856,10 +822,6 @@ DELETE https://graph.microsoft.com/v1.0/users/4628e7df-dff3-407c-a08f-75f08c0806
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/tutorial-configure-appproxy-delete-user-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-configure-appproxy-delete-user-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/v1/tutorial-configure-appproxy-delete-user-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -901,10 +863,6 @@ DELETE https://graph.microsoft.com/v1.0/applications/bf21f7e9-9d25-4da2-82ab-7fd
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/tutorial-configure-appproxy-delete-application-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/tutorial-configure-appproxy-delete-application-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

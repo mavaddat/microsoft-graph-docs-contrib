@@ -5,6 +5,7 @@ author: "SuryaLashmiS"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # messageRuleActions resource type
@@ -30,7 +31,7 @@ Represents the set of actions that are available to a rule.
 | stopProcessingRules | Boolean | Indicates whether subsequent rules should be evaluated. |
 
 ## JSON representation
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

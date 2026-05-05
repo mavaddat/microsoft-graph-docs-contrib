@@ -4,14 +4,17 @@ description: "View the raw count of inactive users in the specified AWS, Azure, 
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 06/26/2024
 ---
 
 # inactiveUserFinding: aggregatedSummary
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 View the raw count of inactive users in the specified AWS, Azure, or GCP authorization systems in your multicloud environment.
 
@@ -28,7 +31,7 @@ Example of an AWS request
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.inactiveUserFinding/aggregatedSummary(authorizationSystemIds=['awsAuthSystemId'])
 ```
 
@@ -37,8 +40,8 @@ Example of an Azure request
   "blockType": "ignored"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/azure/findings/microsoft.graph.inactiveUserFinding/aggregatedSummary(authorizationSystemIds=['azureAuthSystemId'])
+```http
+GET /identityGovernance/permissionsAnalytics/azure/findings/microsoft.graph.inactiveUserFinding/aggregatedSummary(authorizationSystemIds=['azureAuthSystemId'])
 ```
 
 Example of a GCP request
@@ -46,13 +49,12 @@ Example of a GCP request
   "blockType": "ignored"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.inactiveUserFinding/aggregatedSummary(authorizationSystemIds=['gcpAuthSystemId'])
+```http
+GET /identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.inactiveUserFinding/aggregatedSummary(authorizationSystemIds=['gcpAuthSystemId'])
 ```
 
 ## Function parameters
 In the request URL, provide the following query parameters with values.
-The following table lists the parameters that are required when you call this function.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
@@ -81,7 +83,7 @@ The following example shows a request.
   "name": "inactiveuserfindingthis.aggregatedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.inactiveUserFinding/aggregatedSummary(authorizationSystemIds=['377596131774'])
 ```
 
@@ -100,7 +102,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.permissionsAnalyticsAggregatedIdentitySummary"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -110,4 +112,5 @@ Content-Type: application/json
     "findingsCount": 77
 }
 ```
+
 

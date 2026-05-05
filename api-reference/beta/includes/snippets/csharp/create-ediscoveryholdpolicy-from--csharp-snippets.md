@@ -13,32 +13,7 @@ var requestBody = new EdiscoveryHoldPolicy
 {
 	DisplayName = "My legalHold with sources",
 	Description = "Created from Graph API",
-	AdditionalData = new Dictionary<string, object>
-	{
-		{
-			"userSources@odata.bind" , new List<object>
-			{
-				new 
-				{
-					OdataType = "microsoft.graph.security.userSource",
-					Email = "SalesTeam@contoso.com",
-				},
-			}
-		},
-		{
-			"siteSources@odata.bind" , new List<object>
-			{
-				new 
-				{
-					OdataType = "microsoft.graph.security.siteSource",
-					Site = new 
-					{
-						WebUrl = "https://m365x809305.sharepoint.com/sites/Design-topsecret",
-					},
-				},
-			}
-		},
-	},
+	ContentQuery = "KQL content query",
 };
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=csharp

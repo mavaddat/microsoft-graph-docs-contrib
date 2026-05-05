@@ -1,10 +1,11 @@
 ---
-title: "admin resource type"
+title: "Admin resource type"
 description: "Represents an entity that acts as a container for administrator functionality."
 author: "angelgolfer-ms"
 ms.localizationpriority: medium
-ms.subservice: windows-update-business
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 10/21/2024
 ---
 
 # admin resource type
@@ -23,12 +24,16 @@ Represents an entity that acts as a container for administrator functionality.
 ## Relationships
 |Relationship|Type|Description|
 |:---|:---|:---|
+| cloudLicensing | [microsoft.graph.cloudLicensing.adminCloudLicensing](../resources/cloudlicensing-admincloudlicensing.md) | The root of the cloud licensing API for the entire organization. Read-only. |
 | edge | [edge](edge.md) | A container for Microsoft Edge resources. Read-only. |
+| entra | [entra](entra.md) | A container for Microsoft Entra resources. Read-only. |
+| exchange | [exchangeAdmin](../resources/exchangeadmin.md) |A container for the Exchange admin functionality. Read-only.|
 | microsoft365Apps |[adminMicrosoft365Apps](../resources/adminmicrosoft365apps.md)|A container for the Microsoft 365 apps admin functionality.|
 | people | [peopleAdminSettings](../resources/peopleadminsettings.md) | Represents a setting to control people-related admin settings in the tenant. |
 | reportSettings |[microsoft.graph.adminReportSettings](../resources/adminreportsettings.md)|A container for administrative resources to manage reports.|
 | serviceAnnouncement | [serviceAnnouncement](serviceannouncement.md) | A container for service communications resources. Read-only. |
 | sharepointSettings | [sharepointSettings](../resources/sharepointSettings.md) | A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive. |
+| teams|[microsoft.graph.teamsAdministration.teamsAdminRoot](../resources/teamsadministration-teamsadminroot.md)|A container for Teams administration functionalities, such as user configurations, telephone number management, and policy assignments.|
 | windows |[microsoft.graph.adminWindows](../resources/adminwindows.md)|A container for all Windows administrator functionalities. Read-only.|
 
 ## JSON representation

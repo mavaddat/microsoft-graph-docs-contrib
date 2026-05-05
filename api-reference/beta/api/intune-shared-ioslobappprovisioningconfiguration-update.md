@@ -2,42 +2,43 @@
 title: "Update iosLobAppProvisioningConfiguration"
 description: "Update the properties of a iosLobAppProvisioningConfiguration object."
 author: "jaiprakashmb"
-localization_priority: Normal
-ms.subservice: "intune"
+ms.localizationpriority: medium
+ms.prod: "Intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update iosLobAppProvisioningConfiguration
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
 Update the properties of a [iosLobAppProvisioningConfiguration](../resources/intune-shared-ioslobappprovisioningconfiguration.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-## Permissions
+        ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from most to least privileged)|
 |:---|:---|
-|Delegated (work or school account)||
+|Delegated (work or school account)|DeviceManagementApps.ReadWrite.All|
 | &nbsp; &nbsp; **Apps** | DeviceManagementApps.ReadWrite.All|
 | &nbsp; &nbsp; **Policy Set** | DeviceManagementApps.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application||
+|Application|DeviceManagementApps.ReadWrite.All|
 | &nbsp; &nbsp; **Apps** | DeviceManagementApps.ReadWrite.All|
 | &nbsp; &nbsp; **Policy Set** | DeviceManagementApps.ReadWrite.All|
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## HTTP Request
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceAppManagement/iosLobAppProvisioningConfigurations/{iosLobAppProvisioningConfigurationId}
 ```
 
@@ -74,7 +75,7 @@ If successful, this method returns a `200 OK` response code and an updated [iosL
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/deviceAppManagement/iosLobAppProvisioningConfigurations/{iosLobAppProvisioningConfigurationId}
 Content-type: application/json
 Content-length: 375
@@ -95,7 +96,7 @@ Content-length: 375
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 547

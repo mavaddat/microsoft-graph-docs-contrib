@@ -1,16 +1,20 @@
 ---
-title: "Update branch"
+title: "Update branch (deprecated)"
 description: "Update the configuration or properties of a specific branch."
 author: Moti-ba
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
-# Update branchSite
+# Update branchSite (deprecated)
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!IMPORTANT]
+> Deprecated and to be retired soon. Use the [remoteNetwork resource type](../resources/networkaccess-remotenetwork.md) and its associated methods instead.
 
 Update the configuration or properties of a specific branch.
 
@@ -30,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /networkAccess/connectivity/branches/{branchSiteId}
 ```
 
@@ -66,7 +70,7 @@ The following example shows a request.
   "name": "update_branchsite"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/networkAccess/connectivity/branches/{branchSiteId}
 Content-Type: application/json
 
@@ -77,10 +81,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-branchsite-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-branchsite-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -99,6 +99,10 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/php/update-branchsite-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/update-branchsite-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/update-branchsite-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -114,7 +118,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.networkaccess.branchSite"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "tommoser"
 ms.subservice: "security"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # recommendLabelAction resource type (deprecated)
@@ -21,14 +22,14 @@ Represents a label that should be recommended to the user for application to the
 
 | Property                    | Type                                                                     | Description                                                                      |
 | :-------------------------- | :----------------------------------------------------------------------- | :------------------------------------------------------------------------------- |
-| actionSource                | String                                                                   | Possible values are: `manual`, `automatic`, `recommended`, `default`.            |
+| actionSource                | String                                                                   | The possible values are: `manual`, `automatic`, `recommended`, `default`.            |
 | actions                     | [informationProtectionAction](informationprotectionaction.md) collection | Actions to take if the label is accepted by the user.                            |
 | label                       | [labelDetails](labeldetails.md)                                          | The label that is being recommended.                                             |
 | responsibleSensitiveTypeIds | Guid collection                                                          | The sensitive information type GUIDs that caused the recommendation to be given. |
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

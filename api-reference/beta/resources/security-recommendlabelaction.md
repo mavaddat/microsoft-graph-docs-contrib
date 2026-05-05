@@ -5,6 +5,7 @@ author: "tommoser"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # recommendLabelAction resource type
@@ -22,7 +23,7 @@ Inherits from [informationProtectionAction](../resources/security-informationpro
 | Property                    | Type                                                                                           | Description                                                                                                 |
 | :-------------------------- | :--------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
 | actions                     | [informationProtectionAction](../resources/security-informationprotectionaction.md) collection | Actions to take if the label is accepted by the user.                                                       |
-| actionSource                | String                                                                                         | Specifies why the label was selected. Possible values are: `manual`, `automatic`, `recommended`, `default`. |
+| actionSource                | String                                                                                         | Specifies why the label was selected. The possible values are: `manual`, `automatic`, `recommended`, `default`. |
 | responsibleSensitiveTypeIds | GUID collection                                                                                | The sensitive information type GUIDs that caused the recommendation to be given.                            |
 
 ## Relationships
@@ -32,7 +33,7 @@ Inherits from [informationProtectionAction](../resources/security-informationpro
 | sensitivityLabel | [microsoft.graph.security.sensitivityLabel](../resources/security-sensitivitylabel.md) | The label that is being recommended. |
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.recommendLabelAction"

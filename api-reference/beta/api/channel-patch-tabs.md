@@ -1,10 +1,11 @@
 ---
 title: "Update tab"
 description: "Update the properties of the specified tab."
-author: "nkramer"
+author: "MSFTRickyCastaneda"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 09/13/2024
 ---
 
 # Update tab
@@ -17,12 +18,15 @@ Update the properties of the specified [tab](../resources/teamstab.md).
 
 This API can be used to configure the content of the tab.
 
+> [!NOTE] 
+> You can't use this API to update a static tab. An attempt to update a static tab returns a `400 Bad Request` response code.
+
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-This API supports admin permissions. Global admins and Microsoft Teams service admins can access teams that they aren't a member of.
+This API supports admin permissions. Microsoft Teams service admins can access teams that they aren't a member of.
 
 <!-- { "blockType": "permissions", "name": "channel_patch_tabs" } -->
 [!INCLUDE [permissions-table](../includes/permissions/channel-patch-tabs-permissions.md)]

@@ -1,13 +1,14 @@
 ---
-title: "List history"
+title: "List history of riskyUser"
 description: "Get the riskyUserHistoryItems from the history navigation property."
 author: "tracyshi"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/17/2024
 ---
 
-# List history
+# List history of riskyUser
 Namespace: microsoft.graph
 
 Get the riskyUserHistoryItems from the history navigation property.
@@ -20,7 +21,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "riskyuser_list_history" } -->
 [!INCLUDE [permissions-table](../includes/permissions/riskyuser-list-history-permissions.md)]
 
-[!INCLUDE [rbac-identity-protection-apis-read](../../beta/includes/rbac-for-apis/rbac-identity-protection-apis-read.md)]
+[!INCLUDE [rbac-identity-protection-apis-read](../includes/rbac-for-apis/rbac-identity-protection-apis-read.md)]
 
 ## HTTP request
 
@@ -28,13 +29,12 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityProtection/riskyUsers/{riskyUserId}/history
-GET /identityProtection/riskyUsers/{riskyUserId}/history/{riskyUserHistoryItemId}/history
 ```
 
 ## Optional query parameters
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select` OData query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 |Name|Description|
@@ -58,16 +58,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
   "name": "get_riskyuserhistoryitem_2"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/identityProtection/riskyUsers/{riskyUserId}/history
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-riskyuserhistoryitem-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-riskyuserhistoryitem-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -104,7 +100,7 @@ GET https://graph.microsoft.com/v1.0/identityProtection/riskyUsers/{riskyUserId}
   "@odata.type": "collection(microsoft.graph.riskyUserHistoryItem)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

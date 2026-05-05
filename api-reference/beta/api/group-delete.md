@@ -6,6 +6,7 @@ ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
 ms.localizationpriority: medium
 ms.subservice: "entra-groups"
 doc_type: apiPageType
+ms.date: 11/30/2024
 ---
 
 # Delete group
@@ -14,9 +15,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Deletes a group.
+Delete a [group](../resources/group.md).
 
-When deleted, Microsoft 365 groups are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This isn't applicable to Security groups and Distribution groups that are permanently deleted immediately. To learn more, see [deletedItems](../resources/directory.md).
+When deleted, both Microsoft 365 and security groups are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted. This doesn't apply to Distribution groups that are permanently deleted immediately. To learn more, see [deletedItems](../resources/directory.md).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -28,8 +29,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 [!INCLUDE [permissions-table](../includes/permissions/group-delete-permissions.md)]
 
 The following conditions apply for apps to delete role-assignable groups:
-+ For delegated scenarios, the app must be assigned the _RoleManagement.ReadWrite.Directory_ delegated permission, and the calling user must be the creator of the group or a global administrator or a privileged role administrator.
-+ For app-only scenarios, the calling app must be the owner of the group or be assigned the _RoleManagement.ReadWrite.Directory_ application permission or be assigned the Global Administrator or Privileged Role Administrator Microsoft Entra role.
++ For delegated scenarios, the app must be assigned the _RoleManagement.ReadWrite.Directory_ delegated permission, and the calling user must be the creator of the group or a privileged role administrator.
++ For app-only scenarios, the calling app must be the owner of the group or be assigned the _RoleManagement.ReadWrite.Directory_ application permission or be assigned the Privileged Role Administrator Microsoft Entra role.
 
 ## HTTP request
 
@@ -72,10 +73,6 @@ DELETE https://graph.microsoft.com/beta/groups/{id}
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-group-byid-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-group-byid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

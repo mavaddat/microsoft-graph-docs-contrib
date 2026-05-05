@@ -4,14 +4,17 @@ description: "Read the properties and relationships of a gcpIdentity object."
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get gcpIdentity
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Read the properties and relationships of a [gcpIdentity](../resources/gcpidentity.md) object.
 
@@ -31,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/associatedIdentities/all/{gcpIdentityId}
 GET /external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/associatedIdentities/all(externalId='{externalId}')
 ```
@@ -61,7 +64,7 @@ The following example shows a request.
   "name": "get_gcpidentity"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/associatedIdentities/all/dXNlcjFAZ3N1aXRlMS5jb20
 ```
 
@@ -80,7 +83,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.gcpIdentity"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -98,4 +101,5 @@ Content-Type: application/json
   }
 }
 ```
+
 

@@ -5,12 +5,15 @@ description: Follow a user's site/sites.
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 04/19/2024
 ---
 # Follow site 
 
 Namespace: microsoft.graph
 
 Follow a user's [site](../resources/site.md) or multiple sites.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -24,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "ignored" } -->
 
 ```http
-POST /users/{user-id}/followedSites/add
+POST /users/{id | userPrincipalName}/followedSites/add
 ```
 
 ## Request body
@@ -48,12 +51,11 @@ Here's and example that shows how to follow multiple sites.
 
 ### Request
 
-
 # [HTTP](#tab/http)
 <!-- { "blockType": "request", "name": "follow-site", "scopes": "sites.readwrite.all" } -->
 
 ```http
-POST https://graph.microsoft.com/beta/users/{user-id}/followedSites/add
+POST https://graph.microsoft.com/beta/users/87d349ed-44d7-43e1-9a83-5f2406dee5bd/followedSites/add
 Content-Type: application/json
 
 {
@@ -71,10 +73,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/follow-site-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/follow-site-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -2,42 +2,40 @@
 title: "Create channel"
 description: "Create new channel in a team, as specified in the request body."
 ms.localizationpriority: medium
-author: "nkramer"
+author: "MSFTRickyCastaneda"
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 09/18/2024
 ---
 
 # Create channel
 
 Namespace: microsoft.graph
 
-Create a new [channel](../resources/channel.md) in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams.
+Create a new [channel](../resources/channel.md) in a team, as specified in the request body. When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams.
 
 If you're creating a private channel, you can add a maximum of 200 members.
 
 > [!NOTE]
-> - Some special characters in the channel name will cause the [Get filesFolder](/graph/api/channel-get-filesfolder) API to return an error. For details, see [Known issues](https://developer.microsoft.com/en-us/graph/known-issues/?search=16692).
-> - When you create a private/shared channel, the SharePoint site might fail to provision. If the site fails to provision after 5 minutes, use the [Get filesFolder](/graph/api/channel-get-filesfolder) API to trigger provisioning.
+> - Some special characters in the channel name cause the [Get filesFolder](/graph/api/channel-get-filesfolder) API to return an error. For details, see [Known issues](/graph/known-issues#create-channel-can-return-an-error-response).
+> - When you create a private or shared channel, the SharePoint site might fail to provision. If the site fails to provision after five minutes, use the [Get filesFolder](/graph/api/channel-get-filesfolder) API to trigger provisioning.
+> - You can create shared channels with only one owner initially. Adding multiple owners results in a `400 Bad Request` error code. After the initial request, you can add more owners using the [Add member to channel](/graph/api/channel-post-members) API.
+> - Shared channel creation **isn't supported** in Microsoft Graph China (21Vianet).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Channel.Create, Group.ReadWrite.All, Directory.ReadWrite.All |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Channel.Create.Group*, Channel.Create, Teamwork.Migrate.All, Group.ReadWrite.All, Directory.ReadWrite.All |
+This API supports admin permissions. Microsoft Teams service admins can access teams that they are not a member of.
 
-> **Notes**: 
-> The Group.ReadWrite.All and Directory.ReadWrite.All permissions are supported only for backward compatibility. We recommend that you update your solutions to use an alternative permission listed in the previous table and avoid using these permissions going forward. Permissions marked with * use [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
->
-> This API supports admin permissions. Global admins and Microsoft Teams service admins can access teams that they are not a member of.
->
-> In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data imported
-using Teamwork.Migrate.All and/or [migration APIs](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
+<!-- { "blockType": "permissions", "name": "channel_post" } -->
+[!INCLUDE [permissions-table](../includes/permissions/channel-post-permissions.md)]
+
+> [!NOTE]
+> - The Group.ReadWrite.All and Directory.ReadWrite.All permissions are supported only for backward compatibility. We recommend that you update your solutions to use an alternative permission listed in the previous table and avoid using these permissions going forward.
+> - The Channel.Create.Group permission uses [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent). In the future, Microsoft may require you or your customers to pay additional fees based on the amount of data imported using Teamwork.Migrate.All and/or [migration APIs](/microsoftteams/platform/graph-api/import-messages/import-external-messages-to-teams).
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -87,10 +85,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-channel-from-group-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-channel-from-group-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -179,10 +173,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-channel-from-user-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-channel-from-user-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-channel-from-user-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -237,11 +227,101 @@ Content-type: application/json
 }
 ```
 
-### Example 3: Create a channel in migration mode
+### Example 3: Create a channel with chat layout type
+
+The following example shows how to create a channel with the chat layout type that provides a chat-like threading experience similar to group chats.
 
 #### Request
 
-The following example shows how to create a channel that will be used for importing messages.
+The following example shows a request to create a channel with **layoutType** set to `chat`.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_channel_with_chat_layout",
+  "sampleKeys": ["57fb72d0-d811-46f4-8947-305e6072eaa5"]
+}-->
+
+```http
+POST https://graph.microsoft.com/v1.0/teams/57fb72d0-d811-46f4-8947-305e6072eaa5/channels
+Content-type: application/json
+
+{
+  "displayName": "Project Collaboration",
+  "description": "Discussion space for project team collaboration",
+  "membershipType": "standard",
+  "layoutType": "chat"
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-channel-with-chat-layout-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-channel-with-chat-layout-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-channel-with-chat-layout-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-channel-with-chat-layout-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-channel-with-chat-layout-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-channel-with-chat-layout-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-channel-with-chat-layout-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+
+> **Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.channel"
+} -->
+
+```http
+HTTP/1.1 201 Created
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('57fb72d0-d811-46f4-8947-305e6072eaa5')/channels/$entity",
+  "id": "19:4b6bed8d24574f6a9e436813cb2617d8@thread.tacv2",
+  "createdDateTime": "2024-12-08T12:30:45.123Z",
+  "displayName": "Project Collaboration",
+  "description": "Discussion space for project team collaboration",
+  "membershipType": "standard",
+  "layoutType": "chat",
+  "isFavoriteByDefault": false,
+  "email": "",
+  "webUrl": "https://teams.microsoft.com/l/channel/19%3A4b6bed8d24574f6a9e436813cb2617d8%40thread.tacv2/Project%20Collaboration?groupId=57fb72d0-d811-46f4-8947-305e6072eaa5&tenantId=0afeb5d5-a667-4716-8fc7-733024389e91",
+  "tenantId": "0afeb5d5-a667-4716-8fc7-733024389e91"
+}
+```
+
+### Example 4: Create a channel in migration mode
+
+The following example shows how to create a channel that is used for importing messages.
+
+#### Request
+
+The following example shows a request.
 
 
 
@@ -265,10 +345,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-channel-for-migration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-channel-for-migration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -326,11 +402,13 @@ Location: /teams('57fb72d0-d811-46f4-8947-305e6072eaa5')/channels('19:4b6bed8d24
 }
 ```
 
-### Example 4: Create private channel on behalf of user using user principal name
+### Example 5: Create a private channel on behalf of a user using the user principal name
+
+The following example shows how to create a private channel and add a user as a team owner.
 
 #### Request
 
-The following example shows a request to create a private channel and add a user as an team owner.
+The following example shows a request.
 
 
 # [HTTP](#tab/http)
@@ -361,10 +439,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-private-channel-upn-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-private-channel-upn-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -422,11 +496,13 @@ Content-type: application/json
 }
 ```
 
-### Example 5: Create a shared channel on behalf of a user
+### Example 6: Create a shared channel on behalf of a user
+
+The following example shows how to create a shared channel.
 
 #### Request
 
-The following example shows how to create a shared channel.
+The following example shows a request.
 
 
 
@@ -460,10 +536,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-shared-channel-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-shared-channel-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-shared-channel-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -489,8 +561,6 @@ Content-type: application/json
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
-
->  **Note:** To add a guest account to the channel, for the **roles** property, use the value `guest`.
 
 #### Response
 
@@ -539,7 +609,7 @@ Content-type: application/json
   "members": [
     {
       "@odata.type": "#microsoft.graph.aadUserConversationMember",
-      "user@odata.bind": "https://graph.microsoft.com/beta/users('7640023f-fe43-573f-9ff4-84a9efe4acd6')",
+      "user@odata.bind": "https://graph.microsoft.com/v1.0/users('7640023f-fe43-573f-9ff4-84a9efe4acd6')",
       "roles": [
         "owner"
       ]

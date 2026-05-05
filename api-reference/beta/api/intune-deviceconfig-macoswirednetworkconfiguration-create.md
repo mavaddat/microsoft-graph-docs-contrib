@@ -2,16 +2,17 @@
 title: "Create macOSWiredNetworkConfiguration"
 description: "Create a new macOSWiredNetworkConfiguration object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Create macOSWiredNetworkConfiguration
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /deviceManagement/deviceConfigurations
 POST /deviceManagement/deviceConfigurations/{deviceConfigurationId}/microsoft.graph.windowsDomainJoinConfiguration/networkAccessConfigurations
 ```
@@ -70,6 +71,7 @@ The following table shows the properties that are required when you create the m
 |authenticationMethod|[wiFiAuthenticationMethod](../resources/intune-deviceconfig-wifiauthenticationmethod.md)|Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: `certificate`, `usernameAndPassword`, `derivedCredential`.|
 |nonEapAuthenticationMethodForEapTtls|[nonEapAuthenticationMethodForEapTtlsType](../resources/intune-deviceconfig-noneapauthenticationmethodforeapttlstype.md)|Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: `unencryptedPassword`, `challengeHandshakeAuthenticationProtocol`, `microsoftChap`, `microsoftChapVersionTwo`.|
 |enableOuterIdentityPrivacy|String|Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.|
+|deploymentChannel|[appleDeploymentChannel](../resources/intune-deviceconfig-appledeploymentchannel.md)|Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: `deviceChannel`, `userChannel`, `unknownFutureValue`.|
 
 
 
@@ -80,10 +82,10 @@ If successful, this method returns a `201 Created` response code and a [macOSWir
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 POST https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations
 Content-type: application/json
-Content-length: 1499
+Content-length: 1538
 
 {
   "@odata.type": "#microsoft.graph.macOSWiredNetworkConfiguration",
@@ -124,16 +126,17 @@ Content-length: 1499
   ],
   "authenticationMethod": "usernameAndPassword",
   "nonEapAuthenticationMethodForEapTtls": "challengeHandshakeAuthenticationProtocol",
-  "enableOuterIdentityPrivacy": "Enable Outer Identity Privacy value"
+  "enableOuterIdentityPrivacy": "Enable Outer Identity Privacy value",
+  "deploymentChannel": "userChannel"
 }
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
-Content-Length: 1671
+Content-Length: 1710
 
 {
   "@odata.type": "#microsoft.graph.macOSWiredNetworkConfiguration",
@@ -177,6 +180,7 @@ Content-Length: 1671
   ],
   "authenticationMethod": "usernameAndPassword",
   "nonEapAuthenticationMethodForEapTtls": "challengeHandshakeAuthenticationProtocol",
-  "enableOuterIdentityPrivacy": "Enable Outer Identity Privacy value"
+  "enableOuterIdentityPrivacy": "Enable Outer Identity Privacy value",
+  "deploymentChannel": "userChannel"
 }
 ```

@@ -5,6 +5,10 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Graph\Generated\Models\RoomList;
+use Microsoft\Graph\Generated\Models\PhysicalAddress;
+use Microsoft\Graph\Generated\Models\OutlookGeoCoordinates;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
@@ -18,7 +22,7 @@ $address->setStreet('4567 Main Street');
 $address->setCity('Buffalo');
 $address->setState('NY');
 $address->setPostalCode('98052');
-$address->setCountryOrRegion('USA');
+$address->setCountryOrRegion('US');
 $requestBody->setAddress($address);
 $geoCoordinates = new OutlookGeoCoordinates();
 $geoCoordinates->setAltitude(null);

@@ -5,6 +5,7 @@ title: Get driveItem
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 06/12/2024
 ---
 # Get driveItem
 
@@ -13,6 +14,7 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Retrieve the metadata for a [driveItem](../resources/driveitem.md) in a [drive](../resources/drive.md) by file system path or ID.
+`item-id` is the ID of a drive item. It can also be the unique ID of a [SharePoint list item](../resources/listitem.md).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -23,8 +25,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "driveitem_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/driveitem-get-permissions.md)]
 
-> Note:
-> The `/teams` endpoint requires the use of Group.Read.All or Group.ReadWrite.All permissions.
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-driveitem-permissions.md)]
+
+> [!NOTE]
+> The `/teams` endpoint requires the use of `Group.Read.All` or `Group.ReadWrite.All` permissions.
 
 ## HTTP request
 
@@ -40,8 +44,8 @@ GET /me/drive/items/{item-id}
 GET /me/drive/root:/{item-path}
 GET /sites/{siteId}/drive/items/{itemId}
 GET /sites/{siteId}/drive/root:/{item-path}
-GET /users/{userId}/drive/items/{itemId}
-GET /users/{userId}/drive/root:/{item-path}
+GET /users/{userId | userPrincipalName}/drive/items/{item-id}
+GET /users/{userId | userPrincipalName}/drive/root:/{item-path}
 ```
 
 ## Optional query parameters
@@ -79,10 +83,6 @@ GET /me/drive/root
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-item-metadata-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-item-metadata-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

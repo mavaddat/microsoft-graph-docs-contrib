@@ -1,16 +1,20 @@
 ---
-title: "Get branchConnectivityConfiguration"
+title: "Get branchConnectivityConfiguration (deprecated)"
 description: "Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and Microsoft's gateway."
 author: "Moti-ba"
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
-# Get branchConnectivityConfiguration
+# Get branchConnectivityConfiguration (deprecated)
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!IMPORTANT]
+> Deprecated and to be retired soon. Use the [remoteNetworkConnectivityConfiguration resource type](../resources/networkaccess-remotenetworkconnectivityconfiguration.md) and its associated methods instead.
 
 Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and the Microsoft gateway. This information is vital for configuring your router (customer premise equipment) after creating a [deviceLink](../resources/networkaccess-devicelink.md).
 
@@ -30,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /networkAccess/connectivity/branches/{branchSiteId}/connectivityConfiguration
 ```
 
@@ -59,16 +63,12 @@ The following example shows a request.
   "name": "get_branchconnectivityconfiguration"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/networkAccess/connectivity/branches/{branchSiteId}/connectivityConfiguration
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-branchconnectivityconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-branchconnectivityconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -87,6 +87,10 @@ GET https://graph.microsoft.com/beta/networkAccess/connectivity/branches/{branch
 [!INCLUDE [sample-code](../includes/snippets/php/get-branchconnectivityconfiguration-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-branchconnectivityconfiguration-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/get-branchconnectivityconfiguration-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -102,7 +106,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.networkaccess.branchConnectivityConfiguration"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

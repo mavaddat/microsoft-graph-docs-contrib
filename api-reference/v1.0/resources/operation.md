@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "billbliss"
 ms.subservice: teams
 doc_type: resourcePageType
+ms.date: 08/08/2024
 ---
 
 # operation resource type
@@ -20,9 +21,13 @@ The status of a long-running operation.
 |lastActionDateTime| DateTimeOffset |The time of the last action of the operation.|
 |status|operationStatus|The current status of the operation: `notStarted`, `running`, `completed`, `failed` |
 
+## Relationships
+
+None.
+
 ## JSON representation
 
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!--{
   "blockType": "resource",

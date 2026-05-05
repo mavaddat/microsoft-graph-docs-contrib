@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "hafen-ms"
 ms.subservice: "security"
 doc_type: "resourcePageType"
+ms.date: 07/25/2024
 ---
 
 # threatAssessmentResult resource type
@@ -22,11 +23,15 @@ Represents a threat assessment result item.
 |createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 |id|String|The threat assessment result ID is a globally unique identifier (GUID).|
 |message|String|The result message for each threat assessment.|
-|resultType|threatAssessmentResultType|The threat assessment result type. Possible values are: `checkPolicy` (only for mail assessment), `rescan`.|
+|resultType|threatAssessmentResultType|The threat assessment result type. The possible values are: `checkPolicy` (only for mail assessment), `rescan`.|
+
+## Relationships
+
+None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

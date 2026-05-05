@@ -5,6 +5,7 @@ author: Moti-ba
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
 # Delete policies
@@ -30,8 +31,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
-DELETE /networkaccess/FilteringProfiles/{FilteringProfileId}/policies/{FilteringPolicyId}
+```http
+DELETE /networkaccess/filteringProfiles/{filteringProfileId}/policies/{filteringPolicyId}
 
 ```
 
@@ -57,16 +58,12 @@ The following example shows a request.
   "name": "delete_policylink"
 }
 -->
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/networkaccess/FilteringProfiles/9020f79d-71f6-4650-83a9-6b532479578f/policies/d00cf227-8645-4ab8-bd99-a9b455fd83a3
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-policylink-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-policylink-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -85,6 +82,10 @@ DELETE https://graph.microsoft.com/beta/networkaccess/FilteringProfiles/9020f79d
 [!INCLUDE [sample-code](../includes/snippets/php/delete-policylink-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/delete-policylink-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/delete-policylink-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -98,7 +99,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

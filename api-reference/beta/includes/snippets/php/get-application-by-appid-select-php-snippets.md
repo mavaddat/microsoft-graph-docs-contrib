@@ -5,13 +5,15 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\Beta\GraphServiceClient;
+use Microsoft\Graph\Beta\Generated\Applications_with_app_id\ApplicationsWithAppIdRequestBuilderGetRequestConfiguration;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 $requestConfiguration = new ApplicationsWithAppIdRequestBuilderGetRequestConfiguration();
 $queryParameters = ApplicationsWithAppIdRequestBuilderGetRequestConfiguration::createQueryParameters();
-$queryParameters->select = ["id","appId","displayName","requiredResourceAccess"];
+$queryParameters->select = ["id","appId","displayName","signInAudience","signInAudienceRestrictions"];
 $requestConfiguration->queryParameters = $queryParameters;
 
 

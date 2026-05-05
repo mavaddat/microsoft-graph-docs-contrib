@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # updateRecordingStatusOperation resource type
@@ -20,14 +21,14 @@ Describes the response format of an update recording status action.
 | clientContext       | String                      | Unique client context string. Max limit is 256 chars.                              |
 | id                  | String                      | Read-only.                                                                         |
 | resultInfo          | [resultInfo](resultinfo.md) | The result information. Read-only.                                                 |
-| status              | String                      | Possible values are: `notStarted`, `running`, `completed`, `failed`.               |
+| status              | String                      | The possible values are: `notStarted`, `running`, `completed`, `failed`.               |
 
 ## Relationships
 None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

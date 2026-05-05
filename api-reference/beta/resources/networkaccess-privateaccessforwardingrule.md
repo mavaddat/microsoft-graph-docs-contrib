@@ -5,6 +5,7 @@ author: "Moti-ba"
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: resourcePageType
+ms.date: 08/02/2024
 ---
 
 # privateAccessForwardingRule resource type
@@ -21,6 +22,8 @@ Inherits from [microsoft.graph.networkaccess.forwardingRule](../resources/networ
 
 None.
 
+For API operations for managing forward rules, see [policyRule](../resources/networkaccess-policyrule.md).
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
@@ -34,7 +37,7 @@ None.
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "markwahl-msft"
 ms.subservice: "entra-id-governance"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # accessPackageResourceScope resource type
@@ -36,7 +37,7 @@ If the resource is in an access package catalog but hasn't yet had its roles add
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

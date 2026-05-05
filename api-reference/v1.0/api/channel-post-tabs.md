@@ -1,10 +1,11 @@
 ---
 title: "Add tab to channel"
 description: "Add (pin) a tab to the specified channel within a team. "
-author: "nkramer"
+author: "MSFTRickyCastaneda"
 ms.localizationpriority: high
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 09/16/2024
 ---
 
 # Add tab to channel
@@ -13,13 +14,15 @@ Namespace: microsoft.graph
 
 Add (pin) a [tab](../resources/teamstab.md) to the specified [channel](../resources/channel.md) within a [team](../resources/team.md). The app must be [preinstalled in the team](../api/team-list-installedapps.md) and have the [configurableTabs](/microsoftteams/platform/resources/schema/manifest-schema#configurabletabs) property defined in the app manifest.
 
+> **Note**: If the app manifest for a given **appId** contains a static tab that matches the current scope (**team**), the static tab is pinned by default.
+
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-This API supports admin permissions. Global admins and Microsoft Teams service admins can access teams that they aren't a member of.
+This API supports admin permissions. Microsoft Teams service admins can access teams that they aren't a member of.
 
 <!-- { "blockType": "permissions", "name": "channel_post_tabs" } -->
 [!INCLUDE [permissions-table](../includes/permissions/channel-post-tabs-permissions.md)]
@@ -44,6 +47,8 @@ POST /teams/{team-id}/channels/{channel-id}/tabs
 
 A [teamsTab](../resources/teamstab.md).
 
+> [!NOTE] 
+> When you pin a static tab, Teams takes the **displayName** and **configuration** from the app manifest. If these properties are specified in the request body, this API returns a `400 Bad Request` response code.
 ## Response
 
 If successful, this method returns a `201 Created` response code.
@@ -76,10 +81,6 @@ POST https://graph.microsoft.com/v1.0/teams/{id}/channels/{id}/tabs
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/channelposttabs-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/channelposttabs-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

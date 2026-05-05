@@ -1,22 +1,25 @@
 ---
-title: "privilegedAccess resource type"
+title: "privilegedAccess resource type (deprecated)"
 description: " for example, `privilegedAccess/azureResources` represents PIM managing privileged access to Azure resources."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
+ROBOTS: NOINDEX
+ms.date: 04/03/2024
 ---
 
-# privilegedAccess resource type
+# privilegedAccess resource type (deprecated)
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a group of functionalities provided by the Privileged Identity Management (PIM) service. Different instances of `privilegedAccess` represent different providers managed by PIM; for example, `privilegedAccess/azureResources` represents PIM managing privileged access to Azure resources.
+[!INCLUDE [pim-v2ResourceRoles-deprecation](../../includes/pim-v2ResourceRoles-deprecation.md)]
 
+Represents a group of functionalities provided by the Privileged Identity Management (PIM) iteration 2 service. Different instances of `privilegedAccess` represent different providers managed by PIM; for example, `privilegedAccess/azureResources` represents PIM managing privileged access to Azure resources.
 
-`privilegedAccess` is read-only for now. No `POST`, `PUT`, `PATCH`, or `DELETE` operations are supported on the `privilegedAccess` entity set.
+`privilegedAccess` is read-only.
 
 ## Properties
 | Property	| Type	    |Description|
@@ -37,7 +40,7 @@ Represents a group of functionalities provided by the Privileged Identity Manage
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # mediaStream resource type
@@ -25,9 +26,12 @@ Contains information about the media channel.
 | serverMuted | Boolean | Indicates whether the server has muted the media.                                                                          |
 | sourceId    | String  | The source ID.                                                                                                |
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

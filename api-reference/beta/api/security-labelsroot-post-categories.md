@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Create categoryTemplate
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/labels/categories
 ```
 
@@ -64,25 +65,18 @@ The following example shows a request.
   "name": "create_categorytemplate_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/security/labels/categories
 Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.security.categoryTemplate",
-  "displayName": "String",
-  "createdBy": {
-    "@odata.type": "microsoft.graph.identitySet"
-  }
+  "displayName": "Accounts Payable",
 }
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-categorytemplate-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-categorytemplate-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -112,7 +106,7 @@ Content-Type: application/json
 ---
 
 ### Response
-The following example shows the response.
+Here's an example of the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -120,18 +114,21 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.categoryTemplate"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
 {
   "@odata.type": "#microsoft.graph.security.categoryTemplate",
   "id": "e2c79762-34a9-75ba-b6f0-a7c9a57978ef",
-  "displayName": "String",
+  "displayName": "Accounts Payable",
   "createdBy": {
-    "@odata.type": "microsoft.graph.identitySet"
+    "user": {
+      "id": "efee1b77-fb3b-4f65-99d6-274c11914d12",
+      "displayName": "Admin"
+    }
   },
-  "createdDateTime": "String (timestamp)"
+  "createdDateTime" : "2021-03-24T02:09:08Z"
 }
 ```
 

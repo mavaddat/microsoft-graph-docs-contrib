@@ -6,6 +6,7 @@ author: "DougKirschner"
 ms.reviewer: msodsrbac
 ms.subservice: "entra-directory-management"
 doc_type: "apiPageType"
+ms.date: 07/26/2024
 ---
 
 # Delete unifiedRoleAssignment
@@ -31,6 +32,8 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (work or school account) |  RoleManagement.ReadWrite.Directory   |
 |Delegated (personal Microsoft account) | Not supported.    |
 |Application | RoleManagement.ReadWrite.Directory |
+
+[!INCLUDE [rbac-role-assignment-apis-write](../includes/rbac-for-apis/rbac-role-assignment-apis-write.md)]
 
 ### For Entitlement management provider
 <!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
@@ -107,10 +110,6 @@ DELETE https://graph.microsoft.com/beta/roleManagement/directory/roleAssignments
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-unifiedroleassignment-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-unifiedroleassignment-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/delete-unifiedroleassignment-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -169,10 +168,6 @@ DELETE https://graph.microsoft.com/beta/roleManagement/exchange/roleAssignments/
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-exchange-unifiedroleassignment-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-exchange-unifiedroleassignment-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

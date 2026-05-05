@@ -5,6 +5,7 @@ author: "malabikaroy"
 ms.localizationpriority: medium
 ms.subservice: "viva-learning"
 doc_type: apiPageType
+ms.date: 04/25/2024
 ---
 
 # Update learningContent
@@ -33,13 +34,13 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 For a specific learning content based on its ID (primary key):
 
-``` http
+```http
 PATCH /employeeExperience/learningProviders/{learningProviderId}/learningContents/{learningContentId}
 ```
 
 For a specific learning content based on its external ID (secondary key):
 
-``` http
+```http
 PATCH /employeeExperience/learningProviders/{learningProviderId}/learningContents(externalId='{externalId}') 
 ```
 
@@ -64,6 +65,7 @@ PATCH /employeeExperience/learningProviders/{learningProviderId}/learningContent
 |duration|Duration|The duration of the learning content in seconds. The value is represented in ISO 8601 format for durations. Optional.|
 |externalId|String|Unique external content ID for the learning content. Required.|
 |format|String|The format of the learning content. For example, `Course`, `Video`, `Book`, `Book Summary`, `Audiobook Summary`. Optional.|
+|level|Level|The difficulty level of the learning content. The possible values are: `Beginner`, `Intermediate`, `Advanced`. Optional.|
 |isActive|Boolean|Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is `true`. Optional.|
 |isPremium|Boolean|Indicates whether the learning content requires the user to sign-in on the learning provider platform or not. The default value is `false`. Optional.|
 |isSearchable|Boolean|Indicates whether the learning content is searchable or not. The default value is `true`. Optional.|
@@ -96,7 +98,7 @@ The following example shows the request.
   "sampleKeys": ["13727311-e7bb-470d-8b20-6a23d9030d70", "77029588-a660-46b6-ba58-3ce4d21d5678"]
 }
 -->
-``` http
+```http
 PATCH  https://graph.microsoft.com/v1.0/employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents/77029588-a660-46b6-ba58-3ce4d21d5678
 Content-Type: application/json
 
@@ -110,6 +112,7 @@ Content-Type: application/json
     "numberOfPages": 9,
     "duration": "PT20M",
     "format": "Book",
+    "level": "Beginner",
     "createdDateTime": "2018-01-01T00:00:00Z",
     "lastModifiedDateTime": "2021-04-01T04:26:06.1995367Z",
     "contributors": [
@@ -133,10 +136,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-learningcontent-id-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-learningcontent-id-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -173,7 +172,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.learningContent"
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 Content-Type: application/json
 
@@ -190,6 +189,7 @@ Content-Type: application/json
     "numberOfPages": 9,
     "duration": "PT20M",
     "format": "Book",
+    "level": "Beginner",
     "createdDateTime": "2018-01-01T00:00:00",
     "lastModifiedDateTime": "2021-04-01T04:26:06.1995367Z",
     "contributors": [
@@ -226,7 +226,7 @@ The following example shows the request.
   "sampleKeys": ["13727311-e7bb-470d-8b20-6a23d9030d70", "LP4471"]
 }
 -->
-``` http
+```http
 PATCH  https://graph.microsoft.com/v1.0/employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents(externalId='LP4471') 
 Content-Type: application/json
 
@@ -240,6 +240,7 @@ Content-Type: application/json
     "numberOfPages": 9,
     "duration": "PT20M",
     "format": "Book",
+    "level": "Beginner",
     "createdDateTime": "2018-01-01T00:00:00",
     "lastModifiedDateTime": "2021-04-01T04:26:06.1995367Z",
     "contributors": [
@@ -263,10 +264,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-learningcontent-externalid-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-learningcontent-externalid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -303,7 +300,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.learningContent"
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 Content-Type: application/json
 
@@ -320,6 +317,7 @@ Content-Type: application/json
     "numberOfPages": 9,
     "duration": "PT20M",
     "format": "Book",
+    "level": "Beginner",
     "createdDateTime": "2018-01-01T00:00:00",
     "lastModifiedDateTime": "2021-04-01T04:26:06.1995367Z",
     "contributors": [

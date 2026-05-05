@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "snlraju-msft"
 ms.subservice: "search"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # connectionOperation resource type
@@ -19,7 +20,7 @@ Describes status of an asynchronous request to create a Microsoft Search connect
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
-| [Get connectionOperation](../api/externalconnectors-connectionoperation-get.md) | [connectionOperation](externalconnectors-connectionoperation.md) | Read properties of a connectionOperation object. |
+| [Get operation](../api/externalconnectors-connectionoperation-get.md) | [connectionOperation](externalconnectors-connectionoperation.md) | Read properties of a connectionOperation object. |
 
 ## Properties
 
@@ -27,7 +28,7 @@ Describes status of an asynchronous request to create a Microsoft Search connect
 |:---------|:------------------------------|:----------------------------------|
 | error    | [publicError](publicerror.md) | If `status` is `failed`, provides more information about the error that caused the failure. |
 | id       | String                        | Unique identifier for the connectionOperation. Read-only. |
-| status   | String                        | Indicates the status of the asynchronous operation. Possible values are: `unspecified`, `inprogress`, `completed`, `failed`. |
+| status   | String                        | Indicates the status of the asynchronous operation. The possible values are: `unspecified`, `inprogress`, `completed`, `failed`. |
 
 ## Relationships
 
@@ -35,7 +36,7 @@ None
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -5,6 +5,7 @@ author: "RamjotSingh"
 ms.localizationpriority: high
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 05/23/2024
 ---
 
 # Get chat
@@ -27,7 +28,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "chat_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/chat-get-permissions.md)]
 
-> **Note**: The ChatSettings.Read.Chat, ChatSettings.ReadWrite.Chat, and Chat.Manage.Chat permissions use [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
+> [!NOTE]
+> The ChatSettings.Read.Chat, ChatSettings.ReadWrite.Chat, and Chat.Manage.Chat permissions use [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
 
 ## HTTP request
 
@@ -75,10 +77,6 @@ GET https://graph.microsoft.com/beta/chats/19:b8577894a63548969c5c92bb9c80c5e1@t
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-group-chat-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-group-chat-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -129,10 +127,22 @@ Content-type: application/json
     "webUrl": "https://teams.microsoft.com/l/chat/19%3Ab8577894a63548969c5c92bb9c80c5e1@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
     "tenantId": "b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
     "onlineMeetingInfo": null,
+    "createdBy": {
+        "application": null,
+        "device": null,
+        "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+            "id": "8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca",
+            "displayName": null,
+            "userIdentityType": "aadUser",
+            "tenantId": "b33cbe9f-8ebe-4f2a-912b-7e2a427f477f"
+        }
+    },
     "viewpoint": {
         "isHidden": true,
         "lastMessageReadDateTime": "2021-05-06T23:55:07.191Z"
-    }
+    },
+    "isHiddenForAllMembers": false
 }
 ```
 
@@ -153,10 +163,6 @@ GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-chat-e2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-chat-e2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -207,10 +213,22 @@ Content-type: application/json
     "webUrl": "https://teams.microsoft.com/l/chat/19%3A8b081ef6-4792-4def-b2c9-c363a1bf41d5_877192bd-9183-47d3-a74c-8aa0426716cf@unq.gbl.spaces/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
     "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
     "onlineMeetingInfo": null,
+    "createdBy": {
+        "application": null,
+        "device": null,
+        "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+            "id": "8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca",
+            "displayName": null,
+            "userIdentityType": "aadUser",
+            "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34"
+        }
+    },
     "viewpoint": {
         "isHidden": false,
         "lastMessageReadDateTime": "2021-07-06T22:26:27.98Z"
-    }
+    },
+    "isHiddenForAllMembers": false
 }
 ```
 
@@ -231,10 +249,6 @@ GET https://graph.microsoft.com/beta/chats/19:b8577894a63548969c5c92bb9c80c5e1@t
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-chat-withmembers-e3-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-chat-withmembers-e3-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -285,10 +299,22 @@ Content-type: application/json
     "webUrl": "https://teams.microsoft.com/l/chat/19%3Ab8577894a63548969c5c92bb9c80c5e1@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
     "tenantId": "b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
     "onlineMeetingInfo": null,
+    "createdBy": {
+        "application": null,
+        "device": null,
+        "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+            "id": "8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca",
+            "displayName": null,
+            "userIdentityType": "aadUser",
+            "tenantId": "b33cbe9f-8ebe-4f2a-912b-7e2a427f477f"
+        }
+    },
     "viewpoint": {
         "isHidden": false,
         "lastMessageReadDateTime": "2021-08-09T17:38:24.101Z"
     },
+    "isHiddenForAllMembers": false,
     "members": [
         {
             "@odata.type": "#microsoft.graph.aadUserConversationMember",
@@ -373,10 +399,6 @@ GET https://graph.microsoft.com/beta/chats/19:meeting_ZDZlYTYxOWUtYzdlMi00ZmMxLW
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-meeting-chat-e4-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-meeting-chat-e4-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-meeting-chat-e4-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -427,6 +449,7 @@ Content-type: application/json
         "isHidden": false,
         "lastMessageReadDateTime": "2021-08-17T18:04:32.583Z"
     },
+    "isHiddenForAllMembers": false,
     "onlineMeetingInfo": {
         "calendarEventId": "AAMkADAzMjNhY2NiLWVmNDItNDVjYS05MnFjLTExY2U0ZWMyZTNmZQBGAAAAAAARDMODhhR0TZRGWo9nN0NcBwAmvYmLhDvYR6hCFdQLgxR-AAAAAAENAAAmvYmLhDvYR6hCFdQLgxR-AABkrglJAAA=",
         "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3Ameeting_YDZlYTYxOWUtYzdlMi00ZmMxLWIxMTAtN2YzODZlZjAxYzI4%40thread.v2/0?context=%7b%22Tid%22%3a%222432b57b-0abd-43db-aa7b-16eadd115d34%22%2c%22Oid%22%3a%22bfb5bb25-3a8d-487d-9828-7875ced51a30%22%7d",
@@ -435,23 +458,20 @@ Content-type: application/json
             "displayName": null,
             "userIdentityType": "aadUser"
         }
+    },
+    "createdBy": {
+        "application": null,
+        "device": null,
+        "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+            "id": "bfb5bb25-3a8d-487d-9828-7875ced51a30",
+            "displayName": null,
+            "userIdentityType": "aadUser",
+            "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34"
+        }
     }
 }
 ```
-
-<!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
-2015-10-25 14:57:30 UTC -->
-<!--
-{
-  "type": "#page.annotation",
-  "description": "Get chat",
-  "keywords": "",
-  "section": "documentation",
-  "tocPath": "",
-  "suppressions": [
-  ]
-}
--->
 
 ### Example 5: Get the chat along with the preview of the last message sent in the chat
 #### Request
@@ -470,10 +490,6 @@ GET https://graph.microsoft.com/beta/chats/19:ebe3857aa388434bab0cad9d2e09f4de@t
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-meeting-chat-e5-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-meeting-chat-e5-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -524,10 +540,22 @@ Content-type: application/json
     "webUrl": "https://teams.microsoft.com/l/chat/19%3Aebe3857aa388434bab0cad9d2e09f4de%40thread.v2/0?tenantId=2432b57b-0abd-43db-aa7b-16eadd115d34",
     "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34",
     "onlineMeetingInfo": null,
+    "createdBy": {
+        "application": null,
+        "device": null,
+        "user": {
+            "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+            "id": "bfb5bb25-3a8d-487d-9828-7875ced51a30",
+            "displayName": null,
+            "userIdentityType": "aadUser",
+            "tenantId": "2432b57b-0abd-43db-aa7b-16eadd115d34"
+        }
+    },
     "viewpoint": {
         "isHidden": true,
         "lastMessageReadDateTime": "2022-09-08T23:11:54.353Z"
     },
+    "isHiddenForAllMembers": false,
     "lastMessagePreview@odata.context": "https://graph.microsoft.com/beta/$metadata#chats('19%3Aebe3857aa388434bab0cad9d2e09f4de%40thread.v2')/lastMessagePreview/$entity",
     "lastMessagePreview": {
         "id": "1662678714353",
@@ -563,6 +591,111 @@ Content-type: application/json
 }
 ```
 
+### Example 6: Get a group chat in migration mode
+
+The following example shows how to get a group chat in migration mode.
+
+#### Request
+
+The following example shows a request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_group_chat_migration_mode_e6",
+  "sampleKeys": ["19:b8577894a63548969c5c92bb9c80c5e1@thread.v2"]
+}-->
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/chats/19:b8577894a63548969c5c92bb9c80c5e1@thread.v2
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/get-group-chat-migration-mode-e6-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/get-group-chat-migration-mode-e6-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/get-group-chat-migration-mode-e6-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-group-chat-migration-mode-e6-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/get-group-chat-migration-mode-e6-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-group-chat-migration-mode-e6-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/get-group-chat-migration-mode-e6-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+The following example shows the response when the chat is in migration mode.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.chat"
+} -->
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#chats/$entity",
+  "id": "19:b8577894a63548969c5c92bb9c80c5e1@thread.v2",
+  "topic": "test group 1",
+  "createdDateTime": "2021-04-06T19:49:52.431Z",
+  "lastUpdatedDateTime": "2021-04-06T19:54:04.306Z",
+  "chatType": "group",
+  "webUrl": "https://teams.microsoft.com/l/chat/19%3Ab8577894a63548969c5c92bb9c80c5e1@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
+  "tenantId": "b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
+  "onlineMeetingInfo": null,
+  "createdBy": {
+    "application": null,
+    "device": null,
+    "user": {
+      "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+      "id": "8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca",
+      "displayName": null,
+      "userIdentityType": "aadUser",
+      "tenantId": "b33cbe9f-8ebe-4f2a-912b-7e2a427f477f"
+    }
+  },
+  "viewpoint": {
+    "isHidden": true,
+    "lastMessageReadDateTime": "2021-05-06T23:55:07.191Z"
+  },
+  "isHiddenForAllMembers": false,
+  "migrationMode": "InProgress",
+  "originalCreatedDateTime": "2022-05-28T10:00:00+00:00"
+}
+```
+
 ## Related content
 
 * [Microsoft Graph service-specific throttling limits](/graph/throttling-limits#microsoft-teams-service-limits)
+
+<!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
+2015-10-25 14:57:30 UTC -->
+<!--
+{
+  "type": "#page.annotation",
+  "description": "Get chat",
+  "keywords": "",
+  "section": "documentation",
+  "tocPath": "",
+  "suppressions": [
+  ]
+}
+-->

@@ -4,6 +4,8 @@ description: "Use the cloud communications API in Microsoft Graph to manage a wa
 author: "zihzhan-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Manage watermarks for sensitive Teams meetings

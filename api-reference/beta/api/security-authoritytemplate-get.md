@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Get authorityTemplate
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/labels/authorities/{authorityTemplateId}
 GET /security/labels/retentionLabels/{retentionLabelId}/descriptors/authorityTemplate
 ```
@@ -58,16 +59,12 @@ The following example shows a request.
   "name": "get_authoritytemplate"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/security/labels/authorities/{authorityTemplateId}
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/security/labels/authorities/6cf65e55-6baf-44ff-5dcc-08d8de97b1d5
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-authoritytemplate-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-authoritytemplate-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -97,7 +94,7 @@ GET https://graph.microsoft.com/beta/security/labels/authorities/{authorityTempl
 ---
 
 ### Response
-The following example shows the response.
+Here's an example of the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -105,20 +102,23 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.authorityTemplate"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
   "value": {
     "@odata.type": "#microsoft.graph.security.authorityTemplate",
-    "id": "a94af2e3-853b-6fcc-c898-d61d3a6d9efc",
-    "displayName": "String",
+    "id": "6cf65e55-6baf-44ff-5dcc-08d8de97b1d5",
+    "displayName": "Business",
     "createdBy": {
-      "@odata.type": "microsoft.graph.identitySet"
-    },
-    "createdDateTime": "String (timestamp)"
-  }
+    "user": {
+      "id": "efee1b77-fb3b-4f65-99d6-274c11914d12",
+      "displayName": "Admin"
+            }
+  },
+  "createdDateTime" : "2021-03-24T02:09:08Z"
+}
 }
 ```
 

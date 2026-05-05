@@ -4,8 +4,9 @@ description: "Represents over-provisioned Azure service prinicipals."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # overprovisionedAzureServicePrincipalFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents over-provisioned Azure service prinicipals.
 
 Inherits from [identityFinding](../resources/identityfinding.md).
@@ -21,8 +24,8 @@ Inherits from [identityFinding](../resources/identityfinding.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List overprovisionedAzureServicePrincipalFinding objects](../api/overprovisionedazureserviceprincipalfinding-list.md)|[overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md) collection|Get a list of the [overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md) objects and their properties.|
-|[Get overprovisionedAzureServicePrincipalFinding](../api/overprovisionedazureserviceprincipalfinding-get.md)|[overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md)|Read the properties and relationships of an [overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md) object.|
+|[List](../api/overprovisionedazureserviceprincipalfinding-list.md)|[overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md) collection|Get a list of the [overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md) objects and their properties.|
+|[Get](../api/overprovisionedazureserviceprincipalfinding-get.md)|[overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md)|Read the properties and relationships of an [overprovisionedAzureServicePrincipalFinding](../resources/overprovisionedazureserviceprincipalfinding.md) object.|
 
 ## Properties
 
@@ -66,4 +69,5 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+
 

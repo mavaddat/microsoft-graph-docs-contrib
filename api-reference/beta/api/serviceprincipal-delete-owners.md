@@ -1,10 +1,11 @@
 ---
 title: "Remove owner"
 description: "Remove an owner from a servicePrincipals."
-author: "sureshja"
+author: "Jackson-Woods"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 04/19/2024
 ---
 
 # Remove owner
@@ -15,13 +16,20 @@ Namespace: microsoft.graph
 
 Remove an owner from a [servicePrincipal](../resources/serviceprincipal.md) object. As a recommended best practice, service principals should have at least two owners.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "serviceprincipal_delete_owners" } -->
 [!INCLUDE [permissions-table](../includes/permissions/serviceprincipal-delete-owners-permissions.md)]
+
+> [!IMPORTANT]
+> 
+> In delegated scenarios with work or school accounts, the signed-in user must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with a supported role permission. The following least privileged roles are supported for this operation.
+> - Hybrid Identity Administrator
+> - Cloud Application Administrator
+> - Application Administrator
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -65,10 +73,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/serviceprincipal-delete-owners-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/serviceprincipal-delete-owners-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

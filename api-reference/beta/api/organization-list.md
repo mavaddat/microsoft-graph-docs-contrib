@@ -6,6 +6,7 @@ author: "suawat"
 ms.reviewer: "alvarorahul, iamut"
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 06/22/2024
 ---
 
 # List organizations
@@ -39,7 +40,7 @@ This method supports the `$select` [OData query parameter](/graph/query-paramete
 ## Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 Don't supply a request body for this method.
@@ -62,10 +63,6 @@ GET https://graph.microsoft.com/beta/organization
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-organization-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-organization-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

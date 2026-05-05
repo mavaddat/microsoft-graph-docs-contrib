@@ -5,6 +5,7 @@ author: "ananmishr"
 doc_type: conceptualPageType
 ms.subservice: cloud-communications
 ms.localizationpriority: high
+ms.date: 06/25/2024
 ---
 
 # Working with the cloud communications API in Microsoft Graph
@@ -23,12 +24,14 @@ This API provides calling functionality as well as the ability to create and ret
 
 One of the following [permissions](/graph/permissions-reference#calls-permissions) is required to access the cloud communications API. These permissions need to be granted by the administrator.
 
-| Scenario     | Permissions                                                                                                                     |
-|:-------------|:--------------------------------------------------------------------------------------------------------------------------------|
-| Calling      | Calls.JoinGroupCallAsGuest.All, Calls.JoinGroupCall.All, Calls.Initiate.All, Calls.InitiateGroupCall.All, Calls.AccessMedia.All |
-| Meetings     | OnlineMeetings.ReadWrite.All, OnlineMeetings.Read.All                                                                           |
-| Presence     | Presence.Read, Presence.Read.All                                                                                                |
-| Call records | CallRecords.Read.All                                                                                                            |
+| Scenario      | Permissions                                                                                                                     |
+|:--------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| Call records  | CallRecords.Read.All                                                                                                            |
+| Calling       | Calls.JoinGroupCallAsGuest.All, Calls.JoinGroupCall.All, Calls.Initiate.All, Calls.InitiateGroupCall.All, Calls.AccessMedia.All |
+| Meetings      | OnlineMeetings.ReadWrite.All, OnlineMeetings.Read.All                                                                           |
+| Presence      | Presence.Read, Presence.Read.All                                                                                                |
+| Virtual event | VirtualEvent.Read, VirtualEvent.ReadWrite                                                                                       |
+
 
 ## Common use cases
 
@@ -36,12 +39,14 @@ The following table lists some of the common uses for the cloud communications A
 
 | Use cases                         | REST resources                                 | See also  |
 |:------------------------------------|:---------------------------------------------|:----------|
-| Creating and joining 1-1 and group calls   | [Call](/graph/api/resources/call?view=graph-rest-beta&preserve-view=true&preserve-view=true)| [Methods for calls](/graph/api/resources/call?view=graph-rest-beta&preserve-view=true#methods&preserve-view=true)|
-|IVR calls   |     | [Methods for IVR](/graph/api/resources/calls-api-ivr-overview?view=graph-rest-beta?&preserve-view=true&preserve-view=true)
-| Call controls (participant) | [Participant](/graph/api/resources/participant?view=graph-rest-beta&preserve-view=true&preserve-view=true)   ||
+| Creating and joining 1-1 and group calls   | [call](/graph/api/resources/call?view=graph-rest-beta&preserve-view=true&preserve-view=true)| [Methods for calls](/graph/api/resources/call?view=graph-rest-beta&preserve-view=true#methods&preserve-view=true)|
+|IVR calls   |  [call](/graph/api/resources/call?view=graph-rest-beta&preserve-view=true&preserve-view=true)   | [Methods for IVR](/graph/api/resources/teams-api-overview#ivr-scenarios?view=graph-rest-beta?&preserve-view=true&preserve-view=true)
+| Call controls (participant) | [participant](/graph/api/resources/participant?view=graph-rest-beta&preserve-view=true&preserve-view=true)   ||
+| Call delegation | [delegationSettings](../resources/delegationsettings.md)   |[Working with the call delegation APIs in Microsoft Graph (preview)](../resources/calldelegation-api-overview.md)|
 |Meetings|[onlineMeeting](/graph/api/resources/onlinemeeting?view=graph-rest-beta&preserve-view=true&preserve-view=true)| [Methods for meetings](/graph/api/resources/onlinemeeting?view=graph-rest-beta&preserve-view=true#methods&preserve-view=true)|
 |Presence | [presence](/graph/api/resources/presence?view=graph-rest-beta&preserve-view=true) | [Methods for presence](/graph/api/resources/presence?view=graph-rest-beta&preserve-view=true#methods) |
-| Retrieving call records | [callRecord](/graph/api/resources/callrecords-callrecord?view=graph-rest-beta&preserve-view=true&preserve-view=true) | [Webhook subscriptions](/graph/api/resources/webhooks?view=graph-rest-beta&preserve-view=true&preserve-view=true) |
+| Retrieving call records | [callRecord](/graph/api/resources/callrecords-callrecord?view=graph-rest-beta&preserve-view=true&preserve-view=true) | [Subscription API overview](/graph/api/resources/change-notifications-api-overview) |
+| Virtual events | [virtualEvent](/graph/api/resources/virtualevent?view=graph-rest-beta&preserve-view=true) | [Methods for virtualEventTownhall](/graph/api/resources/virtualeventtownhall#methods?view=graph-rest-beta&preserve-view=true), [Methods for virtualEventWebinar](/graph/api/resources/virtualeventwebinar#methods?view=graph-rest-beta&preserve-view=true) |
 
 ## Common properties
 

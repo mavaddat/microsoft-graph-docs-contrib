@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Delete citationTemplate
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /security/labels/citations/{citationTemplateId}
 DELETE /security/labels/retentionLabels/{retentionLabelId}/descriptors/citationTemplate
 ```
@@ -55,9 +56,8 @@ The following example shows a request.
   "name": "delete_citationtemplate"
 }
 -->
-``` http
-DELETE https://graph.microsoft.com/beta/security/labels/citations/{citationTemplateId}
-```
+```http
+DELETE https://graph.microsoft.com/beta/security/labels/citations/f44dkle55-6baf-44ff-5dcc-08d8de97b1d5
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-citationtemplate-csharp-snippets.md)]
@@ -94,14 +94,14 @@ DELETE https://graph.microsoft.com/beta/security/labels/citations/{citationTempl
 ---
 
 ### Response
-The following example shows the response.
+Here's an example of the response.
 >
 <!-- {
   "blockType": "response",
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

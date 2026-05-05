@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "dhruvinrshah"
 ms.subservice: "entra-applications"
 doc_type: "apiPageType"
+ms.date: 08/01/2024
 ---
 
 # Update connectorGroups
@@ -38,9 +39,9 @@ In the request body, supply the values for relevant fields that should be update
 |:---------------|:--------|:----------|
 |connectorGroupType|string| Indicates the type of hybrid agent and is preset by the system. |
 |id|string| Unique identifier for this connectorGroup. Read-only. |
-|isDefault|boolean| Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is preset by the system. |
+|isDefault|Boolean| Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is preset by the system. |
 |name|string| The name associated with the connectorGroup. |
-|region|string| The region the connectorGroup is assigned to and for which it optimizes traffic. This region can only be set if **no** connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. Possible values are: `nam`, `eur`, `aus`, `asia`, `ind`.|
+|region|string| The region the connectorGroup is assigned to and for which it optimizes traffic. This region can only be set if **no** connectors or applications are assigned to the connectorGroup. The regions available include: North America, Europe, Australia, Asia, and India. The possible values are: `nam`, `eur`, `aus`, `asia`, `ind`.|
 
 ## Response
 
@@ -66,10 +67,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-connectorgroup-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-connectorgroup-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,7 @@ author: "TarkanSevilmis"
 ms.localizationpriority: medium
 ms.subservice: "business-scenarios"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # businessScenarioTask resource type
@@ -21,11 +22,11 @@ Inherits from [plannerTask](../resources/plannertask.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List businessScenarioTasks](../api/businessscenarioplanner-list-tasks.md)|[businessScenarioTask](../resources/businessscenariotask.md) collection|Get a list of the [businessScenarioTask](../resources/businessscenariotask.md) objects and their properties.|
-|[Create businessScenarioTask](../api/businessscenarioplanner-post-tasks.md)|[businessScenarioTask](../resources/businessscenariotask.md)|Create a new [businessScenarioTask](../resources/businessscenariotask.md) object.|
-|[Get businessScenarioTask](../api/businessscenariotask-get.md)|[businessScenarioTask](../resources/businessscenariotask.md)|Read the properties and relationships of a [businessScenarioTask](../resources/businessscenariotask.md) object.|
-|[Update businessScenarioTask](../api/businessscenariotask-update.md)|[businessScenarioTask](../resources/businessscenariotask.md)|Update the properties of a [businessScenarioTask](../resources/businessscenariotask.md) object.|
-|[Delete businessScenarioTask](../api/businessscenarioplanner-delete-tasks.md)|None|Delete a [businessScenarioTask](../resources/businessscenariotask.md) object.|
+|[List](../api/businessscenarioplanner-list-tasks.md)|[businessScenarioTask](../resources/businessscenariotask.md) collection|Get a list of the [businessScenarioTask](../resources/businessscenariotask.md) objects and their properties.|
+|[Create](../api/businessscenarioplanner-post-tasks.md)|[businessScenarioTask](../resources/businessscenariotask.md)|Create a new [businessScenarioTask](../resources/businessscenariotask.md) object.|
+|[Get](../api/businessscenariotask-get.md)|[businessScenarioTask](../resources/businessscenariotask.md)|Read the properties and relationships of a [businessScenarioTask](../resources/businessscenariotask.md) object.|
+|[Update](../api/businessscenariotask-update.md)|[businessScenarioTask](../resources/businessscenariotask.md)|Update the properties of a [businessScenarioTask](../resources/businessscenariotask.md) object.|
+|[Delete](../api/businessscenarioplanner-delete-tasks.md)|None|Delete a [businessScenarioTask](../resources/businessscenariotask.md) object.|
 
 ## Properties
 
@@ -50,7 +51,7 @@ Inherits from [plannerTask](../resources/plannertask.md).
 |orderHint|String|Hint used to order items of this type in a list view. For details about the supported format, see [Using order hints in Planner](planner-order-hint-format.md). Inherited from [plannerTask](../resources/plannertask.md).|
 |percentComplete|Int32|Percentage of task completion. When set to `100`, the task is considered completed. Inherited from [plannerTask](../resources/plannertask.md).|
 |planId|String|Identifier of the plan to which the task belongs. Inherited from [plannerTask](../resources/plannertask.md).|
-|previewType|plannerPreviewType|This sets the type of preview that shows up on the task. Possible values are: `automatic`, `noPreview`, `checklist`, `description`, `reference`. Inherited from [plannerTask](../resources/plannertask.md).|
+|previewType|plannerPreviewType|This sets the type of preview that shows up on the task. The possible values are: `automatic`, `noPreview`, `checklist`, `description`, `reference`. Inherited from [plannerTask](../resources/plannertask.md).|
 |priority|Int32|Priority of the task. Valid range of values is between `0` and `10` (inclusive), with increasing value being lower priority (`0` has the highest priority and `10` has the lowest priority).  Currently, Planner interprets values `0` and `1` as "urgent", `2`, `3`, and `4` as "important", `5`, `6`, and `7` as "medium", and `8`, `9`, and `10` as "low".  Currently, Planner sets the value `1` for "urgent", `3` for "important", `5` for "medium", and `9` for "low". Inherited from [plannerTask](../resources/plannertask.md).|
 |referenceCount|Int32|Number of external references that exist on the task. Inherited from [plannerTask](../resources/plannertask.md).|
 |startDateTime|DateTimeOffset|Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [plannerTask](../resources/plannertask.md).|
@@ -68,7 +69,7 @@ Inherits from [plannerTask](../resources/plannertask.md).
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

@@ -1,10 +1,11 @@
 ---
 title: "chatRestrictions resource type"
-description: "Specifies the configuration for meeting chat restrictions."
+description: "Specifies the configuration settings for meeting chat restrictions."
 author: "yuyaolian-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 03/06/2024
 ---
 
 # chatRestrictions resource type
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Specifies the configuration for meeting chat restrictions.
+Specifies the configuration settings for meeting chat restrictions.
 
 ## Properties
 
@@ -21,18 +22,21 @@ Specifies the configuration for meeting chat restrictions.
 |:--------------------|:----------|:----------------------------------------------|
 | allowTextOnly  | Boolean   | Indicates whether only text is allowed in the meeting chat. Optional. |
 
+## Relationships
+None.
+
 ## JSON representation
 
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.chatrestrictions"
+  "@odata.type": "microsoft.graph.chatRestrictions"
 }
 -->
 
 ``` json
 {
-  "@odata.type": "#microsoft.graph.chatrestrictions",
+  "@odata.type": "#microsoft.graph.chatRestrictions",
   "allowTextOnly": "Boolean",
 }
 ```

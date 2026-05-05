@@ -3,8 +3,9 @@ title: "List notes"
 description: "Get the personAnnotations from the notes navigation property."
 author: "kevinbellinger"
 ms.localizationpriority: medium
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 
 # List notes
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/profile/notes
 GET /users/{id | userPrincipalName}/profile/notes
 ```
@@ -72,10 +73,6 @@ GET https://graph.microsoft.com/beta/me/profile/notes
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-notes-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-notes-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-notes-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -110,7 +107,7 @@ GET https://graph.microsoft.com/beta/me/profile/notes
   "@odata.type": "collection(microsoft.graph.personAnnotation)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

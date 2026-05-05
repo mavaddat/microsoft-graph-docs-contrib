@@ -5,6 +5,7 @@ author: braedenp-msft
 ms.localizationpriority: medium
 ms.subservice: universal-print
 doc_type: apiPageType
+ms.date: 06/07/2024
 ---
 
 # Create printJob for a printerShare
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Create a new [printJob](../resources/printJob.md) for a [printerShare](../resources/printerShare.md). 
 
-> **Note:** A user can submit up to ~10000 print jobs in 10 days.
+> **Note:** A user can submit up to ~10000 print jobs in 12 days.
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
@@ -97,10 +98,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-printjob-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-printjob-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

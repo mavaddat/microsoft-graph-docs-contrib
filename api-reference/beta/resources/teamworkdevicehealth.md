@@ -5,11 +5,14 @@ author: "adsrivastava2"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # teamworkDeviceHealth resource type
 
 Namespace: microsoft.graph
+
+[!INCLUDE [beta-deprecation-disclaimer](../../includes/beta-deprecation-disclaimer.md)]
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
@@ -20,7 +23,7 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get teamworkDeviceHealth](../api/teamworkdevicehealth-get.md)|[teamworkDeviceHealth](../resources/teamworkdevicehealth.md)|Read the properties and relationships of a [teamworkDeviceHealth](../resources/teamworkdevicehealth.md) object.|
+|[Get](../api/teamworkdevicehealth-get.md)|[teamworkDeviceHealth](../resources/teamworkdevicehealth.md)|Read the properties and relationships of a [teamworkDeviceHealth](../resources/teamworkdevicehealth.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -36,8 +39,11 @@ Inherits from [entity](../resources/entity.md).
 |peripheralsHealth|[teamworkPeripheralsHealth](../resources/teamworkperipheralshealth.md)|Health details about all peripherals (for example, speaker and microphone) attached to a device.|
 |softwareUpdateHealth|[teamworkSoftwareUpdateHealth](../resources/teamworksoftwareupdatehealth.md)|Software updates available for the device.|
 
+## Relationships
+None.
+
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Delete retentionLabel
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /security/labels/retentionLabels/{retentionLabelId}
 
 ```
@@ -48,6 +49,7 @@ If successful, this method returns a `204 No Content` response code.
 ## Examples
 
 ### Request
+Here's an example of a request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -55,16 +57,12 @@ If successful, this method returns a `204 No Content` response code.
   "name": "delete_retentionlabel"
 }
 -->
-``` http
-DELETE https://graph.microsoft.com/beta/security/labels/retentionLabels/{retentionLabelId}
+```http
+DELETE https://graph.microsoft.com/beta/security/labels/retentionLabels/9563a605-e827-4324-a5a9-09efddff1e50
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-retentionlabel-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-retentionlabel-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -94,13 +92,15 @@ DELETE https://graph.microsoft.com/beta/security/labels/retentionLabels/{retenti
 ---
 
 ### Response
+Here's an example of the response.
+
 >
 <!-- {
   "blockType": "response",
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

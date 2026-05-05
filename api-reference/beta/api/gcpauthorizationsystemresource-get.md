@@ -4,14 +4,17 @@ description: "Read the properties and relationships of a gcpAuthorizationSystemR
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get gcpAuthorizationSystemResource
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Read the properties and relationships of a [gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) object for a provided GCP authorization system.
 
@@ -31,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/resources/{resourceId}
 GET /external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/resources(externalId='{externalId}')
 ```
@@ -61,7 +64,7 @@ The following example shows a request.
   "name": "get_gcpauthorizationsystemresource"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/resources/cHJvamVjdHMvaGVsbG8td29ybGQtMjMxMTA3L3pvbmVzL3VzLWNlbnRyYWwxLWEvaW5zdGFuY2VzL2luc3RhbmNlLTE
 ```
 
@@ -80,7 +83,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.gcpAuthorizationSystemResource"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -99,3 +102,4 @@ Content-Type: application/json
   ]
 }
 ```
+

@@ -2,16 +2,17 @@
 title: "androidForWorkMobileAppConfiguration resource type"
 description: "Contains properties, inherited properties and actions for AFW mobile app configurations."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # androidForWorkMobileAppConfiguration resource type
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -45,6 +46,7 @@ Inherits from [managedDeviceMobileAppConfiguration](../resources/intune-apps-man
 |permissionActions|[androidPermissionAction](../resources/intune-apps-androidpermissionaction.md) collection|List of Android app permissions and corresponding permission actions.|
 |profileApplicability|[androidProfileApplicability](../resources/intune-apps-androidprofileapplicability.md)|Android Enterprise profile applicability (AndroidWorkProfile, DeviceOwner, or default (applies to both)). Possible values are: `default`, `androidWorkProfile`, `androidDeviceOwner`.|
 |connectedAppsEnabled|Boolean|Setting to specify whether to allow ConnectedApps experience for this app.|
+|credentialProviderRoleState|[androidAppCredentialProviderRoleState](../resources/intune-apps-androidappcredentialproviderrolestate.md)|Indicates whether the app is allowed to act as a credential provider. Applies to Android 14 and above. The default value is 'notConfigured'. Possible values are: 'notConfigured' and 'allowed'. When set to 'notConfigured', the Android OS will determine whether the app is allowed to act as a credential provider or not. Possible values are: `notConfigured`, `allowed`, `unknownFutureValue`.|
 
 ## Relationships
 |Relationship|Type|Description|
@@ -88,6 +90,7 @@ Here is a JSON representation of the resource.
     }
   ],
   "profileApplicability": "String",
-  "connectedAppsEnabled": true
+  "connectedAppsEnabled": true,
+  "credentialProviderRoleState": "String"
 }
 ```

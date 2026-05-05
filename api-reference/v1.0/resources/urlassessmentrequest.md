@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "hafen-ms"
 ms.subservice: "security"
 doc_type: "resourcePageType"
+ms.date: 05/23/2024
 ---
 
 # urlAssessmentRequest resource type
@@ -15,21 +16,21 @@ Used to create and retrieve a URL threat assessment, derived from [threatAssessm
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
-| [Create threatAssessmentRequest](../api/informationprotection-post-threatassessmentrequests.md) | [urlAssessmentRequest](urlAssessmentRequest.md) | Create a new URL assessment request by posting an **urlAssessmentRequest** object. |
-| [Get threatAssessmentRequest](../api/threatassessmentrequest-get.md) | [urlAssessmentRequest](urlassessmentrequest.md) | Read the properties and relationships of a **urlAssessmentRequest** object. |
+| [Create](../api/informationprotection-post-threatassessmentrequests.md) | [urlAssessmentRequest](urlAssessmentRequest.md) | Create a new URL assessment request by posting an **urlAssessmentRequest** object. |
+| [Get](../api/threatassessmentrequest-get.md) | [urlAssessmentRequest](urlassessmentrequest.md) | Read the properties and relationships of a **urlAssessmentRequest** object. |
 
 ## Properties
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|category|[threatCategory](enums.md#threatcategory-values)|The threat category. Possible values are: `spam`, `phishing`, `malware`.|
-|contentType|[threatAssessmentContentType](enums.md#threatassessmentcontenttype-values)|The content type of the threat assessment. Possible values are: `mail`, `url`, `file`.|
+|category|[threatCategory](enums.md#threatcategory-values)|The threat category. The possible values are: `spam`, `phishing`, `malware`.|
+|contentType|[threatAssessmentContentType](enums.md#threatassessmentcontenttype-values)|The content type of the threat assessment. The possible values are: `mail`, `url`, `file`.|
 |createdBy|[identitySet](identityset.md)|The threat assessment request creator.|
 |createdDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
-|expectedAssessment|[threatExpectedAssessment](enums.md#threatexpectedassessment-values)|The expected assessment from the submitter. Possible values are: `block`, `unblock`.|
+|expectedAssessment|[threatExpectedAssessment](enums.md#threatexpectedassessment-values)|The expected assessment from the submitter. The possible values are: `block`, `unblock`.|
 |id|String|The threat assessment request ID is a globally unique identifier (GUID).|
-|requestSource|[threatAssessmentRequestSource](enums.md#threatassessmentrequestsource-values)|The source of the threat assessment request. Possible values are: `administrator`.|
-|status|[threatAssessmentStatus](enums.md#threatassessmentstatus-values)|The assessment process status. Possible values are: `pending`, `completed`.|
+|requestSource|[threatAssessmentRequestSource](enums.md#threatassessmentrequestsource-values)|The source of the threat assessment request. The possible values are: `administrator`.|
+|status|[threatAssessmentStatus](enums.md#threatassessmentstatus-values)|The assessment process status. The possible values are: `pending`, `completed`.|
 |url|String|The URL string.|
 
 
@@ -41,7 +42,7 @@ Used to create and retrieve a URL threat assessment, derived from [threatAssessm
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

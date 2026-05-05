@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "AlexFilipin"
+ms.date: 03/21/2024
 ---
 
 # agreementFileVersion resource type
@@ -50,7 +51,7 @@ Inherits from [agreementFileProperties](agreementfileproperties.md).
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

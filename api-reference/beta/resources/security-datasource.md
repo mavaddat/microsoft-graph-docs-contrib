@@ -1,10 +1,11 @@
 ---
 title: "dataSource resource type"
-description: "The dataSource entity is an abstract base class used to identify sources of content for eDiscovery."
+description: "An abstract base class used to identify sources of content for eDiscovery."
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 06/11/2024
 ---
 
 # dataSource resource type
@@ -13,7 +14,10 @@ Namespace: microsoft.graph.security
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-The dataSource entity is an abstract base class used to identify sources of content for eDiscovery.
+An abstract base class used to identify the following sources of content for eDiscovery.
+- [siteSource](../resources/security-sitesource.md)
+- [unifiedGroupSource](../resources/security-unifiedgroupsource.md)
+- [userSource](../resources/security-usersource.md)
 
 ## Methods
 
@@ -30,7 +34,7 @@ None.
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

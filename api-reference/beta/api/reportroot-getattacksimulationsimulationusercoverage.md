@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "reports"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # reportRoot: getAttackSimulationSimulationUserCoverage (deprecated)
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /reports/getAttackSimulationSimulationUserCoverage
 ```
 
@@ -57,16 +58,12 @@ If successful, this function returns a `200 OK` response code and a [attackSimul
   "name": "reportroot_getattacksimulationsimulationusercoverage"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/reports/getAttackSimulationSimulationUserCoverage
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/reportroot-getattacksimulationsimulationusercoverage-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/reportroot-getattacksimulationsimulationusercoverage-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -103,7 +100,7 @@ GET https://graph.microsoft.com/beta/reports/getAttackSimulationSimulationUserCo
   "@odata.type": "Collection(microsoft.graph.attackSimulationSimulationUserCoverage)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

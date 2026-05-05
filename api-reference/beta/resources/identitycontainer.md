@@ -5,6 +5,7 @@ ms.localizationpriority: high
 doc_type: resourcePageType
 ms.subservice: "entra-sign-in"
 author: "namkedia"
+ms.date: 04/03/2026
 ---
 
 # identityContainer resource type
@@ -16,9 +17,8 @@ Namespace: microsoft.graph
 Represents the entry point to different features in [External Identities](/azure/active-directory/external-identities/) for both Microsoft Entra ID and Azure AD B2C tenants.
 
 ## Methods
-
 None.
-
+ 
 ## Properties
 
 None.
@@ -28,7 +28,7 @@ None.
 | Relationship | Type        | Description |
 |:-------------|:------------|:------------|
 |apiConnectors|[identityApiConnector](identityApiConnector.md) collection|Represents entry point for API connectors.|
-|authenticationEventsFlows|[authenticationEventsFlow](../resources/authenticationeventsflow.md) collection|Represents the entry point for self-service sign up and sign in user flows in both Microsoft Entra workforce and customer tenants.|
+|authenticationEventsFlows|[authenticationEventsFlow](../resources/authenticationeventsflow.md) collection|Represents the entry point for self-service sign-up and sign-in user flows in both Microsoft Entra workforce and external tenants.|
 |authenticationEventListener|[authenticationEventListener](authenticationeventlistener.md) collection| Represents listeners for custom authentication extension events in Microsoft Entra ID for workforce and customers.|
 |b2cUserFlows|[b2cIdentityUserFlow](b2cIdentityUserFlow.md) collection|Represents entry point for B2C identity userflows.|
 |b2xUserFlows|[b2xIdentityUserFlow](b2xIdentityUserFlow.md) collection| Represents entry point for B2X and self-service sign-up identity userflows.|
@@ -37,10 +37,12 @@ None.
 |userFlowAttributes|[identityUserFlowAttribute](identityUserFlowAttribute.md) collection| Represents entry point for identity userflow attributes.|
 |conditionalAccess|[conditionalAccessRoot](conditionalAccessRoot.md) collection| the entry point for the Conditional Access (CA) object model.|
 |continuousAccessEvaluationPolicy|[continuousAccessEvaluationPolicy](continuousAccessEvaluationPolicy.md)| Represents entry point for continuous access evaluation policy.|
+|riskPrevention|[riskPreventionContainer](../resources/riskpreventioncontainer.md)|Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.|
+|verifiedId|[identityVerifiedIdRoot](identityverifiedidroot.md)|Entry point for verified ID operations.|
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.identityContainer",

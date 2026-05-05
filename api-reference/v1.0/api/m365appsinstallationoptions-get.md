@@ -5,12 +5,15 @@ author: "yan-git"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 09/18/2024
 ---
 
 # Get m365AppsInstallationOptions
 Namespace: microsoft.graph
 
 Read the properties and relationships of an [m365AppsInstallationOptions](../resources/m365appsInstallationoptions.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -19,9 +22,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 [!INCLUDE [permissions-table](../includes/permissions/m365appsinstallationoptions-get-permissions.md)]
 
 When calling on behalf of a user, the user needs to belong to the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-+ Global administrator
-+ Global reader
-+ Office apps administrator
++ Office apps administrator (recommended)
++ Global Reader
 
 ## HTTP request
 
@@ -29,7 +31,7 @@ When calling on behalf of a user, the user needs to belong to the following [Mic
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/microsoft365Apps/installationOptions
 ```
 
@@ -39,7 +41,7 @@ This method supports the `$select` [OData query parameter](/graph/query-paramete
 ## Request headers
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 Don't supply a request body for this method.
@@ -58,16 +60,12 @@ The following example shows a request.
   "name": "get_m365AppsInstallationOptions"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/admin/microsoft365Apps/installationOptions
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-m365appsinstallationoptions-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-m365appsinstallationoptions-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -101,7 +99,7 @@ The following example shows a response.
   "@odata.type": "microsoft.graph.m365AppsInstallationOptions"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

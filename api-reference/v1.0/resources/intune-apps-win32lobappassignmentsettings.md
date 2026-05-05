@@ -2,9 +2,10 @@
 title: "win32LobAppAssignmentSettings resource type"
 description: "Contains properties used to assign an Win32 LOB mobile app to a group."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # win32LobAppAssignmentSettings resource type
@@ -21,10 +22,11 @@ Inherits from [mobileAppAssignmentSettings](../resources/intune-apps-mobileappas
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|notifications|[win32LobAppNotification](../resources/intune-apps-win32lobappnotification.md)|The notification status for this app assignment. Possible values are: `showAll`, `showReboot`, `hideAll`.|
+|notifications|[win32LobAppNotification](../resources/intune-apps-win32lobappnotification.md)|The notification status for this app assignment. The possible values are: `showAll`, `showReboot`, `hideAll`.|
 |restartSettings|[win32LobAppRestartSettings](../resources/intune-apps-win32lobapprestartsettings.md)|The reboot settings to apply for this app assignment.|
 |installTimeSettings|[mobileAppInstallTimeSettings](../resources/intune-apps-mobileappinstalltimesettings.md)|The install time settings to apply for this app assignment.|
-|deliveryOptimizationPriority|[win32LobAppDeliveryOptimizationPriority](../resources/intune-apps-win32lobappdeliveryoptimizationpriority.md)|The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. Possible values are: `notConfigured`, `foreground`.|
+|deliveryOptimizationPriority|[win32LobAppDeliveryOptimizationPriority](../resources/intune-apps-win32lobappdeliveryoptimizationpriority.md)|The delivery optimization priority for this app assignment. This setting is not supported in National Cloud environments. The possible values are: `notConfigured`, `foreground`.|
+|autoUpdateSettings|[win32LobAppAutoUpdateSettings](../resources/intune-apps-win32lobappautoupdatesettings.md)|The auto-update settings to apply for this app assignment.|
 
 ## Relationships
 None
@@ -52,6 +54,10 @@ Here is a JSON representation of the resource.
     "startDateTime": "String (timestamp)",
     "deadlineDateTime": "String (timestamp)"
   },
-  "deliveryOptimizationPriority": "String"
+  "deliveryOptimizationPriority": "String",
+  "autoUpdateSettings": {
+    "@odata.type": "microsoft.graph.win32LobAppAutoUpdateSettings",
+    "autoUpdateSupersededAppsState": "String"
+  }
 }
 ```

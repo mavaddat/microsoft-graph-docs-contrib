@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # recordingInfo resource type
@@ -20,12 +21,15 @@ Recording information for a participant.
 | Property        | Type    | Description|
 |:----------------|:--------|:----------|
 | initiatedBy     | [participantInfo](participantinfo.md) | The participant who initiated the recording. |
-| recordingStatus | String | Possible values are: `unknown`, `notRecording`, `recording`, or `failed`. |
+| recordingStatus | String | The possible values are: `unknown`, `notRecording`, `recording`, or `failed`. |
 | initiator | [identitySet](identitySet.md) | The identities of recording initiator. |
+
+## Relationships
+None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

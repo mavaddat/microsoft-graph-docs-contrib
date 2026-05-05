@@ -2,9 +2,10 @@
 title: "omaSetting resource type"
 description: "OMA Settings definition."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # omaSetting resource type

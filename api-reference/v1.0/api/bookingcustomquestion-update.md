@@ -5,6 +5,7 @@ author: "razortbone"
 ms.localizationpriority: medium
 ms.subservice: "microsoft-bookings"
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Update bookingCustomQuestion
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Update the properties of a [bookingCustomQuestion](../resources/bookingcustomquestion.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -78,10 +79,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/bookingcustomquestionupdate-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/bookingcustomquestionupdate-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

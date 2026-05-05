@@ -5,6 +5,7 @@ author: "nanguil"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 08/16/2024
 ---
 
 # Add attribute (to user flow)
@@ -14,7 +15,9 @@ Namespace: microsoft.graph
 
 Add an attribute to an external identities self-service sign up user flow that's represented by an [externalUsersSelfServiceSignupEventsFlow](../resources/externalusersselfservicesignupeventsflow.md) object. You can add both custom and built-in attributes to a user flow.
 
-Prior to this step, [PATCH the user flow](../api/authenticationeventsflow-update.md) to add the attribute to the attribute collection step (to determine how it will be displayed).
+The attribute is added to both the **attributeCollection**> **attributes** and **attributeCollection**> **attributeCollectionPage** > **views** collections on the user flow. In the **views** collection, the attribute is assigned the default settings. You can [PATCH the user flow](../api/authenticationeventsflow-update.md) to customize the settings of the attribute on the **views** object, for example, marking it as required or updating the allowed input types.
+
+[!INCLUDE [national-cloud-support](../../includes/global-china.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -30,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /identity/authenticationEventsFlows/{authenticationEventsFlow-id}/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow/onAttributeCollection/microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp/attributes/$ref
 ```
 
@@ -51,7 +54,7 @@ If successful, this method returns a `204 No Content` response code.  If unsucce
 
 #### Request
 
-The following example shows a request that adds city as an attribute for attribute collection step of an external identities self-service sign-up user flow. Before you can add an attribute to the attribute collection step, you must first [add it among the attributes to be collected in the user flow](../api/authenticationeventsflow-update.md).
+The following example shows a request that adds city as an attribute for attribute collection step of an external identities self-service sign-up user flow. If the request is successful, the attribute is added to both the **attributeCollection**> **attributes** and **attributeCollection**> **attributeCollectionPage** > **views** collections on the user flow. After adding the attribute to the user flow, you can [PATCH the user flow](../api/authenticationeventsflow-update.md) to customize the settings of the attribute on the **views** object, that is, customize the page layout.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -60,7 +63,7 @@ The following example shows a request that adds city as an attribute for attribu
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/authenticationEventsFlows/0313cc37-d421-421d-857b-87804d61e33e/microsoft.graph.externalUsersSelfServiceSignUpEventsFlow/onAttributeCollection/microsoft.graph.onAttributeCollectionExternalUsersSelfServiceSignUp/attributes/$ref
 
 {
@@ -71,10 +74,6 @@ POST https://graph.microsoft.com/beta/identity/authenticationEventsFlows/0313cc3
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/onattributecollectionexternalusersselfservicesignup-post-attributes-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/onattributecollectionexternalusersselfservicesignup-post-attributes-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,6 +109,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

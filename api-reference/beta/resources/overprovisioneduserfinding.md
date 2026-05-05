@@ -4,8 +4,9 @@ description: "Represents over-provisioned users in AWS, Azure, or GCP."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # overprovisionedUserFinding resource type
@@ -13,6 +14,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Represents over-provisioned users in AWS, Azure, or GCP.
 
@@ -22,8 +25,8 @@ Inherits from [identityFinding](../resources/identityfinding.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List overprovisionedUserFinding objects](../api/overprovisioneduserfinding-list.md)|[overprovisionedUserFinding](../resources/overprovisioneduserfinding.md) collection|Get a list of the [overprovisionedUserFinding](../resources/overprovisioneduserfinding.md) objects and their properties.|
-|[Get overprovisionedUserFinding](../api/overprovisioneduserfinding-get.md)|[overprovisionedUserFinding](../resources/overprovisioneduserfinding.md)|Read the properties and relationships of an [overprovisionedUserFinding](../resources/overprovisioneduserfinding.md) object.|
+|[List](../api/overprovisioneduserfinding-list.md)|[overprovisionedUserFinding](../resources/overprovisioneduserfinding.md) collection|Get a list of the [overprovisionedUserFinding](../resources/overprovisioneduserfinding.md) objects and their properties.|
+|[Get](../api/overprovisioneduserfinding-get.md)|[overprovisionedUserFinding](../resources/overprovisioneduserfinding.md)|Read the properties and relationships of an [overprovisionedUserFinding](../resources/overprovisioneduserfinding.md) object.|
 
 ## Properties
 
@@ -67,3 +70,4 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+

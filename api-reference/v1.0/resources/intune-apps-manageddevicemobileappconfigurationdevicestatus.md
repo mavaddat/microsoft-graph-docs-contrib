@@ -2,9 +2,10 @@
 title: "managedDeviceMobileAppConfigurationDeviceStatus resource type"
 description: "Contains properties, inherited properties and actions for an MDM mobile app configuration status for a device."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # managedDeviceMobileAppConfigurationDeviceStatus resource type
@@ -32,7 +33,7 @@ Contains properties, inherited properties and actions for an MDM mobile app conf
 |userName|String|The User Name that is being reported|
 |deviceModel|String|The device model that is being reported|
 |complianceGracePeriodExpirationDateTime|DateTimeOffset|The DateTime when device compliance grace period expires|
-|status|[complianceStatus](../resources/intune-shared-compliancestatus.md)|Compliance status of the policy report. Possible values are: `unknown`, `notApplicable`, `compliant`, `remediated`, `nonCompliant`, `error`, `conflict`, `notAssigned`.|
+|status|[complianceStatus](../resources/intune-shared-compliancestatus.md)|Compliance status of the policy report. The possible values are: `unknown`, `notApplicable`, `compliant`, `remediated`, `nonCompliant`, `error`, `conflict`, `notAssigned`.|
 |lastReportedDateTime|DateTimeOffset|Last modified date time of the policy report.|
 |userPrincipalName|String|UserPrincipalName.|
 

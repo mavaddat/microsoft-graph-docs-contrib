@@ -5,6 +5,7 @@ author: "dipakboyed"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: apiPageType
+ms.date: 09/10/2024
 ---
 
 # Delete educationCategory
@@ -52,24 +53,18 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 The following example shows a request.
 
-
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name": "delete_educationassignment_2",
-  "sampleKeys": ["11014", "19002"]
+  "name": "delete_educationassignment_2"
 }-->
 
 ```http
-DELETE https://graph.microsoft.com/beta/education/classes/11014/assignmentCategories/19002
+DELETE https://graph.microsoft.com/beta/education/classes/37d99af7-cfc5-4e3b-8566-f7d40e4a2070/assignmentCategories/39e3d9dc-7244-42d7-8b4d-1071aae5eb41
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-educationassignment-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-educationassignment-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

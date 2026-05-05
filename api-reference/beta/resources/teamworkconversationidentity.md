@@ -5,6 +5,7 @@ author: "RamjotSingh"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # teamworkConversationIdentity resource type
@@ -20,7 +21,7 @@ Inherits from [identity](../resources/identity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|conversationIdentityType|teamworkConversationIdentityType|Type of conversation. Possible values are: `team`, `channel`, and `chat`.|
+|conversationIdentityType|teamworkConversationIdentityType|Type of conversation. The possible values are: `team`, `channel`, and `chat`.|
 |displayName|String|Inherited from [identity](../resources/identity.md). Display name of the conversation. Optional.|
 |id|String|Inherited from [identity](../resources/identity.md). ID of the conversation.|
 
@@ -28,7 +29,7 @@ Inherits from [identity](../resources/identity.md).
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.teamworkConversationIdentity"

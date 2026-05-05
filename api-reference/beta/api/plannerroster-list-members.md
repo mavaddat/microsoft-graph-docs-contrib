@@ -5,6 +5,7 @@ author: "tarkansevilmis"
 ms.localizationpriority: medium
 ms.subservice: "planner"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # List plannerRosterMembers
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /planner/rosters/{plannerRosterId}/members
 ```
 
@@ -63,16 +64,12 @@ The following example shows a request.
   "name": "list_plannerrostermember"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/planner/rosters/6519868f-868f-6519-8f86-19658f861965/members
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-plannerrostermember-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-plannerrostermember-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -112,7 +109,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.plannerRosterMember)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

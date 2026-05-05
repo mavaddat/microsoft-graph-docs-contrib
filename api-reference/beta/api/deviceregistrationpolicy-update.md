@@ -5,6 +5,7 @@ author: "myra-ramdenbourg"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 06/03/2024
 ---
 # Update deviceRegistrationPolicy
 
@@ -21,7 +22,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "deviceregistrationpolicy_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/deviceregistrationpolicy-update-permissions.md)]
 
-When calling on behalf of a user, the user needs the *Cloud Device Administrator* [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
+[!INCLUDE [rbac-device-registration-policy-apis-update](../includes/rbac-for-apis/rbac-device-registration-policy-apis-update.md)]
 
 ## HTTP request
 
@@ -47,7 +48,7 @@ In the request body, supply a JSON representation of a [deviceRegistrationPolicy
 |Property|Type|Description|
 |:---|:---|:---|
 |userDeviceQuota|Int32| Required. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. Required. |
-|multiFactorAuthConfiguration|multiFactorAuthConfiguration| Required. Specifies the authentication policy for a user to complete registration using Microsoft Entra join or Microsoft Entra registered within your organization. Possible values are: `notRequired` or `required`. |
+|multiFactorAuthConfiguration|multiFactorAuthConfiguration| Required. Specifies the authentication policy for a user to complete registration using Microsoft Entra join or Microsoft Entra registered within your organization. The possible values are: `notRequired` or `required`. |
 |azureADRegistration|[azureADRegistrationPolicy](../resources/azureadregistrationpolicy.md)| Required. Specifies the authorization policy for controlling registration of new devices using Microsoft Entra registration within your organization. Required. For more information, see [What is a device identity?](/azure/active-directory/devices/overview). If Intune is enabled this property cannot be modified.|
 |azureADJoin|[azureADJoinPolicy](../resources/azureadjoinpolicy.md)| Required. Specifies the authorization policy for controlling the registration of new devices using Microsoft Entra join within your organization. For more information, see [What is a device identity?](/azure/active-directory/devices/overview).|
 |localAdminPassword|[localAdminPasswordSettings](../resources/localadminpasswordsettings.md)|  Required. Specifies the setting for **Local Admin Password Solution (LAPS)** within your organization.|
@@ -72,28 +73,31 @@ PUT https://graph.microsoft.com/beta/policies/deviceRegistrationPolicy
 Content-Type: application/json
 
 {
-    "id": "deviceRegistrationPolicy",
-    "displayName": "Device Registration Policy",
-    "description": "Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks",
-    "userDeviceQuota": 50,
-    "multiFactorAuthConfiguration": "0",
-    "azureADRegistration": {
-        "isAdminConfigurable": true,
-        "allowedToRegister": {
-            "@odata.type": "#microsoft.graph.enumeratedDeviceRegistrationMembership",
-            "users": [],
-            "groups": ["3c8ef067-8b96-44de-b2ae-557dfa0f97a0"]
+  "userDeviceQuota": 2,
+  "multiFactorAuthConfiguration": "notRequired",
+  "azureADRegistration": {
+    "isAdminConfigurable": false,
+    "allowedToRegister": {
+      "@odata.type": "#microsoft.graph.enumeratedDeviceRegistrationMembership",
+      "users": ["3c8ef067-8b96-44de-b2ae-557dfa0f97a0"],
+      "groups": []
+    },
+  },
+  "azureADJoin": {
+    "isAdminConfigurable": true,
+    "allowedToJoin": {
+      "@odata.type": "#microsoft.graph.allDeviceRegistrationMembership"
+    },
+    "localAdmins": {
+      "enableGlobalAdmins": false,
+      "registeringUsers": {
+        "@odata.type": "#microsoft.graph.noDeviceRegistrationMembership"
       }
     },
-    "azureADJoin": {
-        "isAdminConfigurable": true,
-        "allowedToJoin": {
-            "@odata.type": "#microsoft.graph.allDeviceRegistrationMembership"
-        }
-    },
-    "localAdminPassword": {
-      "isEnabled": true
-    }
+  },
+  "localAdminPassword": {
+    "isEnabled": true
+  }
 }
 ```
 
@@ -117,26 +121,33 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceRegistrationPolicy",
-    "id": "deviceRegistrationPolicy",
-    "displayName": "Device Registration Policy",
-    "description": "Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks",
-    "userDeviceQuota": 50,
-    "multiFactorAuthConfiguration": "0",
-    "azureADRegistration": {
-        "appliesTo": "1",
-        "isAdminConfigurable": false,
-        "allowedUsers": [],
-        "allowedGroups": []
+  "id": "deviceRegistrationPolicy",
+  "displayName": "Device Registration Policy",
+  "description": "Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks",
+  "userDeviceQuota": 2,
+  "multiFactorAuthConfiguration": "notRequired",
+  "azureADRegistration": {
+    "isAdminConfigurable": false,
+    "allowedToRegister": {
+      "@odata.type": "#microsoft.graph.enumeratedDeviceRegistrationMembership",
+      "users": ["3c8ef067-8b96-44de-b2ae-557dfa0f97a0"],
+      "groups": []
     },
-    "azureADJoin": {
-        "appliesTo": "1",
-        "isAdminConfigurable": true,
-        "allowedUsers": [],
-        "allowedGroups": []
+  },
+  "azureADJoin": {
+    "isAdminConfigurable": true,
+    "allowedToJoin": {
+      "@odata.type": "#microsoft.graph.allDeviceRegistrationMembership"
     },
-    "localAdminPassword": {
-      "isEnabled": true
-    }
+    "localAdmins": {
+      "enableGlobalAdmins": false,
+      "registeringUsers": {
+        "@odata.type": "#microsoft.graph.noDeviceRegistrationMembership"
+      }
+    },
+  },
+  "localAdminPassword": {
+    "isEnabled": true
+  }
 }
 ```

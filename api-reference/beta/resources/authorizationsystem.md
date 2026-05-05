@@ -4,8 +4,9 @@ description: "Represents a Microsoft Azure subscription, Amazon Web Services (AW
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # authorizationSystem resource type
@@ -13,6 +14,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Represents a Microsoft Azure susbcription, Amazon Web Services (AWS) account, or Google Cloud Platform (GCP) project onboarded onto Microsoft Entra Permissions Management, Microsoft's cloud infrastructure entitlement management (CIEM) solution. Permissions Management discovers, remediates, and monitors the permissions and actions of identities in these platforms.
 
@@ -29,8 +32,8 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List authorizationSystems](../api/externalconnectors-external-list-authorizationsystems.md)|[authorizationSystem](../resources/authorizationsystem.md) collection|Get a list of the [authorizationSystem](../resources/authorizationsystem.md) objects and their properties.|
-|[Get authorizationSystem](../api/authorizationsystem-get.md)|[authorizationSystem](../resources/authorizationsystem.md)|Read the properties and relationships of an [authorizationSystem](../resources/authorizationsystem.md) object.|
+|[List](../api/externalconnectors-external-list-authorizationsystems.md)|[authorizationSystem](../resources/authorizationsystem.md) collection|Get a list of the [authorizationSystem](../resources/authorizationsystem.md) objects and their properties.|
+|[Get](../api/authorizationsystem-get.md)|[authorizationSystem](../resources/authorizationsystem.md)|Read the properties and relationships of an [authorizationSystem](../resources/authorizationsystem.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -64,4 +67,5 @@ The following JSON representation shows the resource type.
   "authorizationSystemType": "String"
 }
 ```
+
 

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "grangeryy"
 ms.subservice: "excel"
 doc_type: "apiPageType"
+ms.date: 04/05/2024
 ---
 
 # Get workbookCommentReply
@@ -64,10 +65,6 @@ GET https://graph.microsoft.com/beta/drive/items/{id}/workbook/comments/{id}/rep
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-workbookcommentreply-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-workbookcommentreply-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-workbookcommentreply-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -109,7 +106,9 @@ Content-type: application/json
 {
   "content": "This is text of comment.",
   "contentType": "Plain",
-  "id": "{97A21473-8339-4BF0-BCB6-F55E4909FFB8}"
+  "id": "{97A21473-8339-4BF0-BCB6-F55E4909FFB8}",
+  "richContent": "",
+  "mentions": []
 }
 ```
 

@@ -5,6 +5,7 @@ author: "devjha-ms"
 ms.localizationpriority: high
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # teamInfo resource type
@@ -25,8 +26,11 @@ Base type of [associatedTeamInfo](associatedteaminfo.md) and [sharedWithChannelT
 |tenantId|String|The ID of the Microsoft Entra tenant.|
 
 
+## Relationships
+None.
+
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

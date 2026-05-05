@@ -1,10 +1,11 @@
 ---
 title: "Delete custom properties from a fileStorageContainer"
-description: "Delete custom properties from a fileStorageContainer"
+description: "Delete custom properties from a fileStorageContainer."
 author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 11/12/2024
 ---
 
 # Delete custom properties from a fileStorageContainer
@@ -21,13 +22,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "filestoragecontainer_delete_customproperty" } -->
 [!INCLUDE [permissions-table](../includes/permissions/filestoragecontainer-delete-customproperty-permissions.md)]
 
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-permissions.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /storage/fileStorage/containers/{containerId}/customProperties
 ```
 
@@ -47,12 +50,13 @@ If successful, this action returns a `200 OK` response code.
 
 ### Request
 The following example deletes multiple custom properties.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "delete_filestoragecontainer_customproperty"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/customProperties
 Content-type: application/json
 
@@ -62,6 +66,12 @@ Content-type: application/json
 }
 ```
 
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/delete-filestoragecontainer-customproperty-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 ### Response
 The following example shows the response.
 <!-- {
@@ -69,7 +79,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 200 Ok
 ```
 

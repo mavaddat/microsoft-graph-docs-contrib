@@ -1,29 +1,30 @@
 ---
-title: "groupMembers complex type"
-description: "Identifies a collection of users in the tenant who will be allowed as requestor, approver, or reviewer."
+title: "groupMembers resource type"
+description: "Identifies a collection of users in the tenant who are allowed as requestor, approver, or reviewer."
 author: "markwahl-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 10/04/2024
 ---
-# groupMembers complex type
+# groupMembers resource type
 
 Namespace: microsoft.graph
 
 
 Used in the request, approval, and assignment review settings of an access package assignment policy.
-The `@odata.type` value `#microsoft.graph.groupMembers` indicates that this type identifies a collection of users in the tenant who will be allowed as requestor, approver, or reviewer, who are the members of a specific group.
+The `@odata.type` value `#microsoft.graph.groupMembers` indicates that this type identifies a collection of users in the tenant who are allowed as requestor, approver, or reviewer, who are the members of a specific group.
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|description|String|The name of the group in Microsoft Entra ID. Read only. |
+|description|String|The name of the group in Microsoft Entra ID. Read-only. |
 |groupId|String|The ID of the [group](group.md) in Microsoft Entra ID.|
 
 ## Relationships
 None.
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.groupMembers",

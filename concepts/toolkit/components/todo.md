@@ -3,9 +3,14 @@ title: "To Do component in Microsoft Graph Toolkit"
 description: "The To Do component enables the user to view, add, remove, complete, or edit todo tasks. It works with any tasks in Microsoft To Do."
 ms.localizationpriority: medium
 author: sebastienlevert
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # To Do component in Microsoft Graph Toolkit
+
+> [!CAUTION]
+> The Microsoft Graph Toolkit is deprecated. The retirement period begins September 1, 2025, with full retirement planned for August 28, 2026. Developers should migrate to using the Microsoft Graph SDKs or other supported Microsoft Graph tools for building web experiences. For more information, see the [deprecation announcement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
 
 The To Do component is used to enable the signed-in user to view, add, remove, complete, and/or edit tasks from Microsoft To Do using the To Do API in Microsoft Graph.
 
@@ -34,8 +39,6 @@ You can use the following attributes and properties to customize the component.
 | Attribute | Property | Description |
 | -- | -- | -- |
 | read-only | readOnly | A Boolean to set the task interface to be read only (no adding or removing tasks). Default is `false`. |
-| hide-header | hideHeader | A Boolean to show or hide the header of the component. Default is `false`. |
-| hide-options | hideOptions | A Boolean to show or hide the options in tasks. Default is `false`.
 | initial-id="folder_id" | initialId | A string ID to set the initially displayed folder to the provided ID. |
 | target-id="folder_id"| targetId | A string ID to lock the tasks interface to the provided folder ID. |
 | N/A | isNewTaskVisible  | Determines whether new task view is visible at render. |

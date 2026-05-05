@@ -2,16 +2,17 @@
 title: "Update androidDeviceOwnerEnrollmentProfile"
 description: "Update the properties of a androidDeviceOwnerEnrollmentProfile object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update androidDeviceOwnerEnrollmentProfile
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceManagement/androidDeviceOwnerEnrollmentProfiles/{androidDeviceOwnerEnrollmentProfileId}
 ```
 
@@ -62,7 +63,7 @@ The following table shows the properties that are required when you create the [
 |tokenCreationDateTime|DateTimeOffset|Date time the most recently created token was created.|
 |tokenExpirationDateTime|DateTimeOffset|Date time the most recently created token will expire.|
 |enrolledDeviceCount|Int32|Total number of Android devices that have enrolled using this enrollment profile.|
-|enrollmentTokenUsageCount|Int32|Total number of AOSP devices that have enrolled using the current token.|
+|enrollmentTokenUsageCount|Int32|Total number of AOSP devices that have enrolled using the current token. Valid values 0 to 20000|
 |qrCodeContent|String|String used to generate a QR code for the token.|
 |qrCodeImage|[mimeContent](../resources/intune-shared-mimecontent.md)|String used to generate a QR code for the token.|
 |roleScopeTagIds|String collection|List of Scope Tags for this Entity instance.|
@@ -72,6 +73,7 @@ The following table shows the properties that are required when you create the [
 |wifiSecurityType|[aospWifiSecurityType](../resources/intune-androidforwork-aospwifisecuritytype.md)|String that contains the wi-fi security type. Possible values are: `none`, `wpa`, `wep`.|
 |wifiHidden|Boolean|Boolean that indicates if hidden wifi networks are enabled|
 |isTeamsDeviceProfile|Boolean|Boolean indicating if this profile is an Android AOSP for Teams device profile.|
+|deviceNameTemplate|String|Indicates the device name template used for the enrolled Android devices. The maximum length allowed for this property is 63 characters. The template expression contains normal text and tokens, including the serial number of the device, user name, device type, upn prefix, or a randomly generated number. Supported Tokens for device name templates are: (for device naming template expression): {{SERIAL}}, {{SERIALLAST4DIGITS}}, {{ENROLLMENTDATETIME}}, {{USERNAME}}, {{DEVICETYPE}}, {{UPNPREFIX}}, {{rand:x}}. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.|
 
 
 
@@ -82,10 +84,10 @@ If successful, this method returns a `200 OK` response code and an updated [andr
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/deviceManagement/androidDeviceOwnerEnrollmentProfiles/{androidDeviceOwnerEnrollmentProfileId}
 Content-type: application/json
-Content-length: 981
+Content-length: 1036
 
 {
   "@odata.type": "#microsoft.graph.androidDeviceOwnerEnrollmentProfile",
@@ -113,16 +115,17 @@ Content-length: 981
   "wifiPassword": "Wifi Password value",
   "wifiSecurityType": "wpa",
   "wifiHidden": true,
-  "isTeamsDeviceProfile": true
+  "isTeamsDeviceProfile": true,
+  "deviceNameTemplate": "Device Name Template value"
 }
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 1153
+Content-Length: 1208
 
 {
   "@odata.type": "#microsoft.graph.androidDeviceOwnerEnrollmentProfile",
@@ -153,6 +156,7 @@ Content-Length: 1153
   "wifiPassword": "Wifi Password value",
   "wifiSecurityType": "wpa",
   "wifiHidden": true,
-  "isTeamsDeviceProfile": true
+  "isTeamsDeviceProfile": true,
+  "deviceNameTemplate": "Device Name Template value"
 }
 ```

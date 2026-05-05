@@ -4,6 +4,8 @@ description: "Use Send As and Send On Behalf Of permissions to send Outlook mess
 author: "jasonjoh"
 ms.localizationpriority: high
 ms.subservice: "outlook"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Send Outlook messages from another user

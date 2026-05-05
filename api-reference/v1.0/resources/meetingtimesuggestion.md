@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "vrod9429"
 ms.subservice: "outlook"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # meetingTimeSuggestion resource type
@@ -16,7 +17,7 @@ availability, and available meeting locations.
 
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

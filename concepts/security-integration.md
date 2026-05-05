@@ -4,6 +4,8 @@ description: "Use these options to connect with the Microsoft Graph Security API
 author: "preetikr"
 ms.localizationpriority: high
 ms.subservice: "security"
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Security solution integrations using the Microsoft Graph Security API

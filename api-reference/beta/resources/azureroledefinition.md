@@ -4,8 +4,9 @@ description: "Represents an Azure role in an Azure authorization system."
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # azureRoleDefinition resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents an Azure role in an Azure authorization system.
 
 Inherits from [entity](../resources/entity.md).
@@ -21,8 +24,8 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List azureRoleDefinitions](../api/azureauthorizationsystem-list-roledefinitions.md)|[azureRoleDefinition](../resources/azureroledefinition.md) collection|Get a list of the [azureRoleDefinition](../resources/azureroledefinition.md) objects and their properties.|
-|[Get azureRoleDefinition](../api/azureroledefinition-get.md)|[azureRoleDefinition](../resources/azureroledefinition.md)|Read the properties and relationships of an [azureRoleDefinition](../resources/azureroledefinition.md) object.|
+|[List](../api/azureauthorizationsystem-list-roledefinitions.md)|[azureRoleDefinition](../resources/azureroledefinition.md) collection|Get a list of the [azureRoleDefinition](../resources/azureroledefinition.md) objects and their properties.|
+|[Get](../api/azureroledefinition-get.md)|[azureRoleDefinition](../resources/azureroledefinition.md)|Read the properties and relationships of an [azureRoleDefinition](../resources/azureroledefinition.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -58,4 +61,5 @@ The following JSON representation shows the resource type.
   ]
 }
 ```
+
 

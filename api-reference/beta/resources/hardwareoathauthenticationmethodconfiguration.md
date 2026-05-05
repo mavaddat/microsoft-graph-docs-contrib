@@ -6,6 +6,8 @@ ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+toc.title: Hardware OATH
+ms.date: 10/01/2024
 ---
 
 # hardwareOathAuthenticationMethodConfiguration resource type
@@ -21,16 +23,16 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get hardwareOathAuthenticationMethodConfiguration](../api/hardwareoathauthenticationmethodconfiguration-get.md)|[hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md)|Read the properties and relationships of a [hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md) object.|
-|[Update hardwareOathAuthenticationMethodConfiguration](../api/hardwareoathauthenticationmethodconfiguration-update.md)|[hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md)|Update the properties of a [hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md) object.|
-|[Delete hardwareOathAuthenticationMethodConfiguration](../api/hardwareoathauthenticationmethodconfiguration-delete.md)|None|Reverts the hardwareOathAuthenticationMethodConfiguration object to its default configuration.|
+|[Get](../api/hardwareoathauthenticationmethodconfiguration-get.md)|[hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md)|Read the properties and relationships of a [hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md) object.|
+|[Update](../api/hardwareoathauthenticationmethodconfiguration-update.md)|[hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md)|Update the properties of a [hardwareOathAuthenticationMethodConfiguration](../resources/hardwareoathauthenticationmethodconfiguration.md) object.|
+|[Delete](../api/hardwareoathauthenticationmethodconfiguration-delete.md)|None|Reverts the hardwareOathAuthenticationMethodConfiguration object to its default configuration.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |excludeTargets|[excludeTarget](../resources/excludetarget.md) collection|Groups of users that are excluded from the policy. Inherited from [authenticationMethodConfiguration](../resources/authenticationmethodconfiguration.md).|
 |id|String|The authentication method policy identifier. Inherited from [entity](../resources/entity.md).|
-|state|authenticationMethodState|Possible values are: `enabled`, `disabled`. Inherited from [authenticationMethodConfiguration](../resources/authenticationmethodconfiguration.md).|
+|state|authenticationMethodState|The possible values are: `enabled`, `disabled`. Inherited from [authenticationMethodConfiguration](../resources/authenticationmethodconfiguration.md).|
 
 
 ## Relationships
@@ -39,7 +41,7 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 |includeTargets|[authenticationMethodTarget](../resources/authenticationmethodtarget.md) collection|A collection of groups that are enabled to use the authentication method. Expanded by default.|
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

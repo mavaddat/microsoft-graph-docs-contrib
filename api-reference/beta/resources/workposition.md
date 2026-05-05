@@ -3,8 +3,9 @@ title: "workPosition resource type"
 description: "workPosition resource type"
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: people-and-workplace-intelligence
+ms.subservice: "people"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # workPosition resource type
@@ -21,17 +22,17 @@ This resource type inherits from [itemFacet](itemfacet.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List positions](../api/profile-list-positions.md)|[workPosition](../resources/workposition.md) collection|Get the workPosition resources from the positions navigation property.|
-|[Create workPosition](../api/profile-post-positions.md)|[workPosition](../resources/workposition.md)|Create a new workPosition object.|
-|[Get workPosition](../api/workposition-get.md)|[workPosition](../resources/workposition.md)|Read the properties and relationships of a [workPosition](../resources/workposition.md) object.|
-|[Update workPosition](../api/workposition-update.md)|[workPosition](../resources/workposition.md)|Update the properties of a [workPosition](../resources/workposition.md) object.|
-|[Delete workPosition](../api/workposition-delete.md)|None|Deletes a [workPosition](../resources/workposition.md) object.|
+|[List](../api/profile-list-positions.md)|[workPosition](../resources/workposition.md) collection|Get the workPosition resources from the positions navigation property.|
+|[Create](../api/profile-post-positions.md)|[workPosition](../resources/workposition.md)|Create a new workPosition object.|
+|[Get](../api/workposition-get.md)|[workPosition](../resources/workposition.md)|Read the properties and relationships of a [workPosition](../resources/workposition.md) object.|
+|[Update](../api/workposition-update.md)|[workPosition](../resources/workposition.md)|Update the properties of a [workPosition](../resources/workposition.md) object.|
+|[Delete](../api/workposition-delete.md)|None|Deletes a [workPosition](../resources/workposition.md) object.|
 
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |categories|String collection|Categories that the user has associated with this position.|
 |colleagues|[relatedPerson](../resources/relatedperson.md) collection|Colleagues that are associated with this position.|
 |createdBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that created the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
@@ -50,7 +51,7 @@ This resource type inherits from [itemFacet](itemfacet.md).
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

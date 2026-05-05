@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "qiwhuang"
 ms.subservice: "reports"
 doc_type: apiPageType
+ms.date: 08/07/2024
 ---
 
 # Update adminReportSettings
@@ -24,7 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "adminreportsettings_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/adminreportsettings-update-permissions.md)]
 
-> **Note:** For delegated permissions to allow apps to update report settings on behalf of a user, the tenant administrator must have assigned the user the appropriate Microsoft Entra ID limited administrator role. For more details, see [Authorization for APIs to read Microsoft 365 usage reports](/graph/reportroot-authorization).
+> **Note:** For delegated permissions to allow apps to update report settings on behalf of a user, the tenant administrator must have assigned the user the appropriate Microsoft Entra ID limited administrator role. For more information, see [Authorization for APIs to read Microsoft 365 usage reports](/graph/reportroot-authorization).
 
 ## HTTP request
 <!-- { "blockType": "ignored" } --> 
@@ -45,7 +46,7 @@ PATCH /admin/reportSettings
 
 | Property       | Type           | Description                                 |
 | -------------- | -------------- | ------------------------------------------- |
-| displayConcealedNames | Boolean | If set to `true`, all reports will conceal user information such as usernames, groups, and sites. If `false`, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required. |
+| displayConcealedNames | Boolean | If set to `true`, all reports conceal user information such as usernames, groups, and sites. If `false`, all reports show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required. |
 
 ## Response
 
@@ -64,7 +65,7 @@ The following example shows a request.
   "name": "update_adminreportsettings"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/admin/reportSettings
 Content-Type: application/json
 Content-length: 37
@@ -76,10 +77,6 @@ Content-length: 37
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-adminreportsettings-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-adminreportsettings-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

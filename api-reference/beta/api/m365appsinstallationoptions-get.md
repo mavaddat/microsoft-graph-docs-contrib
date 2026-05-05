@@ -5,6 +5,7 @@ author: "yan-git"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 09/19/2024
 ---
 
 # Get m365AppsInstallationOptions
@@ -23,9 +24,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 [!INCLUDE [permissions-table](../includes/permissions/m365appsinstallationoptions-get-permissions.md)]
 
 When calling on behalf of a user, the user needs to belong to the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-+ Global administrator
-+ Global reader
-+ Office apps administrator
++ Office apps administrator (recommended)
++ Global Reader
 
 ## HTTP request
 
@@ -33,7 +33,7 @@ When calling on behalf of a user, the user needs to belong to the following [Mic
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/microsoft365Apps/installationOptions
 ```
 
@@ -62,16 +62,12 @@ The following example shows a request.
   "name": "get_m365AppsInstallationOptions"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/microsoft365Apps/installationOptions
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-m365appsinstallationoptions-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-m365appsinstallationoptions-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -105,7 +101,7 @@ The following example shows a response.
   "@odata.type": "microsoft.graph.m365AppsInstallationOptions"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

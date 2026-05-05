@@ -5,6 +5,7 @@ author: "BenAlfasi"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 05/31/2024
 ---
 
 # alertEvidence resource type
@@ -24,56 +25,62 @@ service using a compromised user account can track the following evidence:
 
 This resource is the base type for the following evidence types:
 
-- [amazonResourceEvidence](security-amazonresourceevidence.md)
-- [analyzedMessageEvidence](security-analyzedmessageevidence.md)
-- [azureResourceEvidence](security-azureresourceevidence.md)
-- [blobContainerEvidence](security-blobcontainerevidence.md)
-- [blobEvidence](security-blobevidence.md)
-- [cloudApplicationEvidence](security-cloudapplicationevidence.md)
-- [containerEvidence](security-containerevidence.md)
-- [containerImageEvidence](security-containerimageevidence.md)
-- [containerRegistryEvidence](security-containerregistryevidence.md)
-- [deviceEvidence](security-deviceevidence.md)
-- [fileEvidence](security-fileevidence.md)
-- [googleCloudResourceEvidence](security-googlecloudresourceevidence.md)
-- [ipEvidence](security-ipevidence.md)
-- [kubernetesClusterEvidence](security-kubernetesclusterevidence.md)
-- [kubernetesControllerEvidence](security-kubernetescontrollerevidence.md)
-- [kubernetesNamespaceEvidence](security-kubernetesnamespaceevidence.md)
-- [kubernetesPodEvidence](security-kubernetespodevidence.md)
-- [kubernetesSecretEvidence](security-kubernetessecretevidence.md)
-- [kubernetesServiceAccountEvidence](security-kubernetesserviceaccountevidence.md)
-- [kubernetesServiceEvidence](security-kubernetesserviceevidence.md)
-- [mailClusterEvidence](security-mailclusterevidence.md)
-- [mailboxEvidence](security-mailboxevidence.md)
-- [oauthApplicationEvidence](security-oauthapplicationevidence.md)
-- [processEvidence](security-processevidence.md)
-- [registryKeyEvidence](security-registrykeyevidence.md)
-- [registryValueEvidence](security-registryvalueevidence.md)
-- [securityGroupEvidence](security-securitygroupevidence.md)
-- [urlEvidence](security-urlevidence.md)
-- [userEvidence](security-userevidence.md)
-- [sasTokenEvidence](security-sastokenevidence.md)
-- [networkConnectionEvidence](security-networkconnectionevidence.md)
-- [submissionMailEvidence](security-submissionmailevidence.md)
-- [gitHubRepoEvidence](security-githubrepoevidence.md)
-- [gitHubUserEvidence](security-githubuserevidence.md)
-- [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
-- [servicePrincipalEvidence](security-serviceprincipalevidence.md)
-- [malwareEvidence](security-malwareevidence.md)
-- [ioTDeviceEvidence](security-iotdeviceevidence.md)
-- [nicEvidence](security-nicevidence.md)
-- [hostLogonSessionEvidence](security-hostlogonsessionevidence.md)
-- [dnsEvidence](security-dnsevidence.md)
-- [fileHashEvidence](security-filehashevidence.md)
+* [activeDirectoryDomainEvidence](security-activedirectorydomainevidence.md)
+* [aiAgentEvidence](security-aiagentevidence.md)
+* [amazonResourceEvidence](security-amazonresourceevidence.md)
+* [analyzedMessageEvidence](security-analyzedmessageevidence.md)
+* [azureResourceEvidence](security-azureresourceevidence.md)
+* [blobContainerEvidence](security-blobcontainerevidence.md)
+* [blobEvidence](security-blobevidence.md)
+* [cloudApplicationEvidence](security-cloudapplicationevidence.md)
+* [cloudLogonRequestEvidence](security-cloudlogonrequestevidence.md)
+* [cloudLogonSessionEvidence](security-cloudlogonsessionevidence.md)
+* [containerEvidence](security-containerevidence.md)
+* [containerImageEvidence](security-containerimageevidence.md)
+* [containerRegistryEvidence](security-containerregistryevidence.md)
+* [deviceEvidence](security-deviceevidence.md)
+* [dnsEvidence](security-dnsevidence.md)
+* [fileEvidence](security-fileevidence.md)
+* [fileHashEvidence](security-filehashevidence.md)
+* [gitHubOrganizationEvidence](security-githuborganizationevidence.md)
+* [gitHubRepoEvidence](security-githubrepoevidence.md)
+* [gitHubUserEvidence](security-githubuserevidence.md)
+* [googleCloudResourceEvidence](security-googlecloudresourceevidence.md)
+* [hostLogonSessionEvidence](security-hostlogonsessionevidence.md)
+* [ioTDeviceEvidence](security-iotdeviceevidence.md)
+* [ipEvidence](security-ipevidence.md)
+* [kubernetesClusterEvidence](security-kubernetesclusterevidence.md)
+* [kubernetesControllerEvidence](security-kubernetescontrollerevidence.md)
+* [kubernetesNamespaceEvidence](security-kubernetesnamespaceevidence.md)
+* [kubernetesPodEvidence](security-kubernetespodevidence.md)
+* [kubernetesSecretEvidence](security-kubernetessecretevidence.md)
+* [kubernetesServiceAccountEvidence](security-kubernetesserviceaccountevidence.md)
+* [kubernetesServiceEvidence](security-kubernetesserviceevidence.md)
+* [mailboxConfigurationEvidence](security-mailboxconfigurationevidence.md)
+* [mailboxEvidence](security-mailboxevidence.md)
+* [mailClusterEvidence](security-mailclusterevidence.md)
+* [malwareEvidence](security-malwareevidence.md)
+* [networkConnectionEvidence](security-networkconnectionevidence.md)
+* [nicEvidence](security-nicevidence.md)
+* [oauthApplicationEvidence](security-oauthapplicationevidence.md)
+* [processEvidence](security-processevidence.md)
+* [registryKeyEvidence](security-registrykeyevidence.md)
+* [registryValueEvidence](security-registryvalueevidence.md)
+* [sasTokenEvidence](security-sastokenevidence.md)
+* [securityGroupEvidence](security-securitygroupevidence.md)
+* [servicePrincipalEvidence](security-serviceprincipalevidence.md)
+* [submissionMailEvidence](security-submissionmailevidence.md)
+* [teamsMessageEvidence](security-teamsmessageevidence.md)
+* [urlEvidence](security-urlevidence.md)
+* [userEvidence](security-userevidence.md)
 
 ## Properties
 
 |Property|Type|Description|
-|:-------|:---|-----------|
+|:-------|:---|:----------|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
-|detailedRoles|String collection|Detailed description of the entity role in an alert. Values are free-form.|
-|remediationStatus|[microsoft.graph.security.evidenceRemediationStatus](#evidenceremediationstatus-values)|Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`.|
+|detailedRoles|String collection|Detailed description of the entity role/s in an alert. Values are free-form.|
+|remediationStatus|[microsoft.graph.security.evidenceRemediationStatus](#evidenceremediationstatus-values)|Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`, `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`.|
 |remediationStatusDetails|String|Details about the remediation status.|
 |roles|[microsoft.graph.security.evidenceRole](#evidencerole-values) collection|The role/s that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role **Attacker**.|
 |tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices, high-value assets, etc.|
@@ -90,35 +97,41 @@ This resource is the base type for the following evidence types:
 
 ### evidenceRemediationStatus values
 
-|Member|Description|
-|:-------------------|:-------------------------------------------------|
-|none|No threats were found.|
-|remediated|Remediation action has completed successfully.|
-|prevented|The threat was prevented from executing.|
-|blocked|The threat was blocked while executing.|
-|notFound|The evidence wasn't found.|
-|unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
+| Member                     | Description                                                                             |
+| :--------------------------| :-------------------------------------------------------------------------------------- |
+| none                       | No threats were found.                                                                  |
+| remediated                 | Remediation action has completed successfully.                                          |
+| prevented                  | The threat was prevented from executing.                                                |
+| blocked                    | The threat was blocked while executing.                                                 |
+| notFound                   | The evidence wasn't found.                                                             |
+| unknownFutureValue         | Evolvable enumeration sentinel value. Don't use.                                        |
+| active                     | Investigation is running/pending and remediation is not complete yet.                   |
+| pendingApproval            | The remediation action is pending approval.                                             |
+| declined                   | The remediation action was declined.                                                    |
+| unremediated               | Investigation undid the remediation and the entity is recovered.                        |
+| running                    | The remediation action is running.                                                      |
+| partiallyRemediated        | The threat was partially remediated.                                                    |
 
 ### evidenceRole values
 
-|Member|Description|
-|:-------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|unknown|The evidence role is unknown.|
-|contextual|An entity that arose likely benign but was reported as a side effect of an attacker's action, for example, the benign services.exe process was used to start a malicious service.|
-|scanned|An entity identified as a target of discovery scanning or reconnaissance actions, for example, a port scanner was used to scan a network.|
-|source|The entity the activity originated from, for example, device, user, IP address, etc.|
-|destination|The entity the activity was sent to, for example, device, user, IP address, etc.|
-|created|The entity was created as a result of the actions of an attacker, for example, a user account was created.|
-|added|The entity was added as a result of the actions of an attacker, for example, a user account was added to a permissions group.|
-|compromised|The entity was compromised and is under the control of an attacker, for example, a user account was compromised and used to log into a cloud service.|
-|edited|The entity was edited or changed by an attacker, for example, the registry key for a service was edited to point to the location of a new malicious payload.|
-|attacked|The entity was attacked, for example, a device was targeted in a DDoS attack.|
-|attacker|The entity represents the attacker, for example, the attacker`s IP address observed logging into a cloud service using a compromised user account.|
-|commandAndControl|The entity is being used for command and control, for example, a C2 (command and control) domain used by malware.|
-|loaded|The entity was loaded by a process under the control of an attacker, for example, a Dll was loaded into an attacker-controlled process.|
-|suspicious|The entity is suspected of being malicious or controlled by an attacker but hasn't been incriminated.|
-|policyViolator|The entity is a violator of a customer defined policy.|
-|unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
+| Member                     | Description                                                                                                                                                          |
+| :--------------------------| :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| unknown                    | The evidence role is unknown.                                                                                                                                        |
+| contextual                 | An entity that arose likely benign but was reported as a side effect of an attacker's action. For example, the benign services.exe process was used to start a malicious service.|
+| scanned                    | An entity identified as a target of discovery scanning or reconnaissance actions. For example, a port scanner was used to scan a network.                                    |
+| source                     | The entity the activity originated from. For example, a device, user, IP address, or so on.                                                                                         |
+| destination                | The entity the activity was sent to. For example, a device, user, IP address, or so on.                                                                                             |
+| created                    | The entity was created as a result of the actions of an attacker. For example, a user account was created.                                                                   |
+| added                      | The entity was added as a result of the actions of an attacker. For example, a user account was added to a permissions group.                                                |
+| compromised                | The entity was compromised and is under the control of an attacker. For example, a user account was compromised and used to log into a cloud service.                        |
+| edited                     | The entity was edited or changed by an attacker. For example, the registry key for a service was edited to point to the location of a new malicious payload.                 |
+| attacked                   | The entity was attacked. For example, a device was targeted in a DDoS attack.                                                                                                |
+| attacker                   | The entity represents the attacker. For example, the attacker`s IP address observed logging into a cloud service using a compromised user account.                           |
+| commandAndControl          | The entity is being used for command and control. For example, a C2 (command and control) domain used by malware.                                                            |
+| loaded                     | The entity was loaded by a process under the control of an attacker. For example, a DLL was loaded into an attacker-controlled process.                                      |
+| suspicious                 | The entity is suspected of being malicious or controlled by an attacker but hasn't been incriminated.                                                               |
+| policyViolator             | The entity is a violator of a customer defined policy.                                                                                                               |
+| unknownFutureValue         | Evolvable enumeration sentinel value. Don't use.                                                                                                                     |
 
 ### evidenceVerdict values
 
@@ -134,8 +147,8 @@ This resource is the base type for the following evidence types:
 
 |Member|Description|
 |:-------------------|:-------------------------------------------------------------------------------------------|
-|tcp|Indicates TCP.|
-|udp|Indicates UDP.|
+|tcp|Reliable, connection-oriented data transfer, essential for web browsing and file transfer.|
+|udp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ### servicePrincipalType values
@@ -143,19 +156,19 @@ This resource is the base type for the following evidence types:
 |Member|Description|
 |:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |unknown|The service principal type is unknown.|
-|application|The service principal is the local representation, or application instance, of a global application object in a single tenant or directory.|
-|managedIdentity|The service principal is used to represent a managed identity.|
-|legacy|The service principal is a legacy app, which is either an app created before app registrations were introduced or an app created through legacy experiences.|
+|application|This service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.|
+|managedIdentity|This service principal is used to represent a managed identity.|
+|legacy|This service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
-#### ioTDeviceImportanceType values
+### ioTDeviceImportanceType values
 
 |Member|Description|
 |:-------------------|:----------------------------------------|
-|unknown|Unknown - Default value|
-|low|Low|
-|normal|Normal|
-|high|High|
+|unknown|The importance is unknown. Default value.|
+|low|The importance is low.|
+|normal|The importance is normal.|
+|high|The importance is high.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ## Relationships
@@ -163,7 +176,6 @@ This resource is the base type for the following evidence types:
 None.
 
 ## JSON representation
-
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",

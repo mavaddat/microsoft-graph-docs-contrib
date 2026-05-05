@@ -2,9 +2,10 @@
 title: 'List applicationTemplates'
 description: 'Retrieve a list of applicationtemplate objects.'
 ms.localizationpriority: medium
-author: 'luleonpla'
-ms.prod: 'applications'
+author: luleonpla
+ms.subservice: entra-applications
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
 # List applicationTemplates
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Retrieve a list of [applicationTemplate](../resources/applicationtemplate.md) objects from the Microsoft Entra application gallery.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -45,7 +46,7 @@ For general information, see [OData query parameters](/graph/query-parameters).
 
 | Name          | Description   |
 | :------------ | :------------ |
-| Authorization | Bearer {code} |
+| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -74,10 +75,6 @@ GET https://graph.microsoft.com/v1.0/applicationTemplates
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-applicationtemplates-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-applicationtemplates-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

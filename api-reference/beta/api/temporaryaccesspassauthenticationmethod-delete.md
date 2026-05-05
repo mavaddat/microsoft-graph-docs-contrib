@@ -5,6 +5,7 @@ author: "tilarso"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 07/31/2025
 ---
 
 # Delete temporaryAccessPassAuthenticationMethod
@@ -14,40 +15,37 @@ Namespace: microsoft.graph
 
 Delete a users's [temporaryAccessPassAuthenticationMethod](../resources/temporaryaccesspassauthenticationmethod.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-china.md)]
 
 ## Permissions
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-### Permissions acting on self
-<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-|Permission type      | Permissions (from least to most privileged)              |
-|:---------------------------------------|:-------------------------|
-| Delegated (work or school account)     | UserAuthenticationMethod.ReadWrite |
-| Delegated (personal Microsoft account) | Not supported. |
-| Application                            | Not supported. |
-
-### Permissions acting on other users
-<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-|Permission type      | Permissions (from least to most privileged)              |
-|:---------------------------------------|:-------------------------|
-| Delegated (work or school account)     | UserAuthenticationMethod.ReadWrite.All |
-| Delegated (personal Microsoft account) | Not supported. |
-| Application                            | UserAuthenticationMethod.ReadWrite.All |
+<!-- { 
+  "blockType": "permissions", 
+  "name": "temporaryaccesspassauthenticationmethod_delete", 
+  "requestUrls": ["DELETE /users/{id | userPrincipalName}/authentication/temporaryAccessPassMethods/{id}"]
+ } -->
+[!INCLUDE [permissions-table](../includes/permissions/temporaryaccesspassauthenticationmethod-delete-permissions.md)]
 
 [!INCLUDE [rbac-authentication-methods-apis-write-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-write-others.md)]
 
 ## HTTP request
 
 Delete your own temporary access pass authentication method.
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 <!-- { "blockType": "ignored" } -->
-``` http
+```http
 DELETE /me/authentication/temporaryAccessPassMethods/{id}
 ```
 
 Delete your own or another user's temporary access pass authentication method.
+
+[!INCLUDE [authentication-methods-apis-users-selfservice](../includes/authentication-methods-apis-users-selfservice.md)]
+
 <!-- { "blockType": "ignored" } -->
-``` http
+```http
 DELETE /users/{id | userPrincipalName}/authentication/temporaryAccessPassMethods/{id}
 ```
 
@@ -79,10 +77,6 @@ DELETE https://graph.microsoft.com/beta/users/071cc716-8147-4397-a5ba-b2105951cc
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-temporaryaccesspassauthenticationmethod-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-temporaryaccesspassauthenticationmethod-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -119,6 +113,6 @@ DELETE https://graph.microsoft.com/beta/users/071cc716-8147-4397-a5ba-b2105951cc
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

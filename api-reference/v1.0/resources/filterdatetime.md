@@ -1,13 +1,14 @@
 ---
-title: "filterDatetime resource type"
+title: "workbookFilterDatetime resource type"
 description: "Represents how to filter a date when filtering on values."
 ms.localizationpriority: medium
 author: "ruoyingl"
 ms.subservice: excel
 doc_type: resourcePageType
+ms.date: 05/13/2024
 ---
 
-# filterDatetime resource type
+# workbookFilterDatetime resource type
 
 Namespace: microsoft.graph
 

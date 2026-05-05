@@ -5,6 +5,7 @@ author: "jewan-microsoft"
 ms.localizationpriority: medium
 ms.subservice: "onenote"
 doc_type: apiPageType
+ms.date: 06/22/2024
 ---
 
 # notebook: getNotebookFromWebUrl
@@ -36,7 +37,7 @@ POST /sites/{id}/onenote/notebooks/GetNotebookFromWebUrl
 ## Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Accept | string | `application/json` |
 
 ## Request body
@@ -67,10 +68,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/notebook-fromweburl-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/notebook-fromweburl-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

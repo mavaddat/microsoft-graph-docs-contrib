@@ -1,11 +1,11 @@
 ---
 title: "incident resource type"
 description: "An incident in Microsoft 365 Defender is a collection of correlated alerts and associated metadata that reflects the story of an attack."
-ms.date: 11/11/2022
 author: "BenAlfasi"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/05/2024
 ---
 
 # incident resource type
@@ -30,26 +30,28 @@ Because piecing the individual alerts together to gain insight into an attack ca
 |Property|Type|Description|
 |:---|:---|:---|
 |assignedTo|String|Owner of the incident, or null if no owner is assigned. Free editable text.|
-|classification|microsoft.graph.security.alertClassification|The specification for the incident. Possible values are: `unknown`, `falsePositive`, `truePositive`, `informationalExpectedActivity`, `unknownFutureValue`.|
+|classification|microsoft.graph.security.alertClassification|The specification for the incident. The possible values are: `unknown`, `falsePositive`, `truePositive`, `informationalExpectedActivity`, `unknownFutureValue`.|
 |comments|[microsoft.graph.security.alertComment](security-alertcomment.md) collection|Array of comments created by the Security Operations (SecOps) team when the incident is managed.|
 |createdDateTime|DateTimeOffset|Time when the incident was first created.|
 |customTags|String collection|Array of custom tags associated with an incident.|
 |description|String|Description of the incident.|
-|determination|microsoft.graph.security.alertDetermination|Specifies the determination of the incident. Possible values are: `unknown`, `apt`, `malware`, `securityPersonnel`, `securityTesting`, `unwantedSoftware`, `other`, `multiStagedAttack`, `compromisedUser`, `phishing`, `maliciousUserActivity`, `clean`, `insufficientData`, `confirmedUserActivity`, `lineOfBusinessApplication`, `unknownFutureValue`.|
+|determination|microsoft.graph.security.alertDetermination|Specifies the determination of the incident. The possible values are: `unknown`, `apt`, `malware`, `securityPersonnel`, `securityTesting`, `unwantedSoftware`, `other`, `multiStagedAttack`, `compromisedUser`, `phishing`, `maliciousUserActivity`, `clean`, `insufficientData`, `confirmedUserActivity`, `lineOfBusinessApplication`, `unknownFutureValue`.|
 |displayName|String|The incident name.|
 |id|String|Unique identifier to represent the incident.|
 |incidentWebUrl|String|The URL for the incident page in the Microsoft 365 Defender portal.|
 |lastModifiedBy|String|The identity that last modified the incident.|
 |lastUpdateDateTime|DateTimeOffset|Time when the incident was last updated.|
+|priorityScore|Int|A priority score for the incident from 0 to 100, with > 85 being the top priority, 15 - 85 medium priority, and < 15 low priority. This score is generated using machine learning and is based on multiple factors, including severity, disruption impact, threat intelligence, alert types, asset criticality, threat analytics, incident rarity, and additional priority signals. The value can also be `null` which indicates the feature is not open for the tenant or the value of the score is pending calculation.|
 |redirectIncidentId|String|Only populated in case an incident is grouped with another incident, as part of the logic that processes incidents. In such a case, the **status** property is `redirected`. |
-|severity|alertSeverity|Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically higher severity items require the most immediate attention. Possible values are: `unknown`, `informational`, `low`, `medium`, `high`, `unknownFutureValue`.|
-|status|[microsoft.graph.security.incidentStatus](#incidentstatus-values)|The status of the incident. Possible values are: `active`, `resolved`, `inProgress`, `redirected`, `unknownFutureValue`, and `awaitingAction`.|
-|tenantId|String|The Microsoft Entra tenant in which the alert was created.|
+|resolvingComment|String|User input that explains the resolution of the incident and the classification choice. This property contains free editable text.|
+|severity|alertSeverity|Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically higher severity items require the most immediate attention. The possible values are: `unknown`, `informational`, `low`, `medium`, `high`, `unknownFutureValue`.|
+|status|[microsoft.graph.security.incidentStatus](#incidentstatus-values)|The status of the incident. The possible values are: `active`, `resolved`, `inProgress`, `redirected`, `unknownFutureValue`, and `awaitingAction`.|
+|summary|String|The overview of an attack. When applicable, the summary contains details of what occurred, impacted assets, and the type of attack.|
 |systemTags|String collection|The system tags associated with the incident.|
-
+|tenantId|String|The Microsoft Entra tenant in which the alert was created.|
 
 ### incidentStatus values 
-The following table lists the members of an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). You must use the `Prefer: include-unknown-enum-members` request header to get the following values in this evolvable enum: `awaitingAction`.
+The following table lists the members of an [evolvable enumeration](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations). Use the `Prefer: include-unknown-enum-members` request header to get the following values in this evolvable enum: `awaitingAction`.
 
 | Member              | Description                                                                                                                                  |
 | :-------------------| :------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -80,31 +82,26 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.incident",
-  "id": "String (identifier)",
-  "incidentWebUrl": "String",
-  "tenantId": "String",
-  "redirectIncidentId": "String",
-  "displayName": "String",
-  "createdDateTime": "String (timestamp)",
-  "lastUpdateDateTime": "String (timestamp)",
   "assignedTo": "String",
   "classification": "String",
-  "determination": "String",
-  "status": "String",
-  "severity": "String",
-  "customTags": [
-    "String"
-  ],
-  "comments": [
-    {
-      "@odata.type": "microsoft.graph.security.alertComment"
-    }
-  ],
-  "systemTags" : [
-    "String"
-  ],
+  "comments": [{"@odata.type": "microsoft.graph.security.alertComment"}],
+  "createdDateTime": "String (timestamp)",
+  "customTags": ["String"],
   "description" : "String",
-  "lastModifiedBy": "String"
+  "determination": "String",
+  "displayName": "String",
+  "id": "String (identifier)",
+  "incidentWebUrl": "String",
+  "lastModifiedBy": "String",
+  "lastUpdateDateTime": "String (timestamp)",
+  "redirectIncidentId": "String",
+  "resolvingComment": "String",
+  "severity": "String",
+  "status": "String",
+  "summary": "String",
+  "systemTags" : ["String"],
+  "tenantId": "String",
+  "priorityScore": "Int"
 }
 ```
 

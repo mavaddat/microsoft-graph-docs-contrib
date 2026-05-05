@@ -5,6 +5,7 @@ author: "sumanac"
 ms.subservice: "teams"
 doc_type: apiPageType
 ms.localizationpriority: medium
+ms.date: 04/05/2024
 ---
 
 # chatMessage: unsetReaction
@@ -44,7 +45,7 @@ To unset a reaction to a **chatMessage** in a **channel**:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /teams/{teamsId}/channels/{channelId}/messages/{chatMessageId}/unsetReaction
 POST /teams/{teamId}/channels/{channelId}/messages/{messageId}/replies/{replyId}/unsetReaction
 ```
@@ -54,7 +55,7 @@ To unset a reaction to a **chatMessage** in a **chat**:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /chats/{chatId}/messages/{chatMessageId}/unsetReaction
 ```
 
@@ -111,7 +112,7 @@ POST https://graph.microsoft.com/beta/teams/teamsid/channels/channelId/messages/
   "blockType": "response"
 } -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

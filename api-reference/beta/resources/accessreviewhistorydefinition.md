@@ -5,6 +5,7 @@ author: "jyothig123"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # accessReviewHistoryDefinition resource type
@@ -21,9 +22,9 @@ An **accessReviewHistoryDefinition** contains a list of [accessReviewHistoryInst
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List accessReviewHistoryDefinitions](../api/accessreviewset-list-historydefinitions.md)|[accessReviewHistoryDefinition](accessreviewhistorydefinition.md) collection|Get a list of the [accessReviewHistoryDefinition](accessreviewhistorydefinition.md) objects and their properties.|
-|[Create accessReviewHistoryDefinition](../api/accessreviewset-post-historydefinitions.md)|[accessReviewHistoryDefinition](accessreviewhistorydefinition.md)|Create a new [accessReviewHistoryDefinition](accessreviewhistorydefinition.md) object.|
-|[Get accessReviewHistoryDefinition](../api/accessreviewhistorydefinition-get.md)|[accessReviewHistoryDefinition](accessreviewhistorydefinition.md)|Read the properties and relationships of an [accessReviewHistoryDefinition](accessreviewhistorydefinition.md) object.|
+|[List](../api/accessreviewset-list-historydefinitions.md)|[accessReviewHistoryDefinition](accessreviewhistorydefinition.md) collection|Get a list of the [accessReviewHistoryDefinition](accessreviewhistorydefinition.md) objects and their properties.|
+|[Create](../api/accessreviewset-post-historydefinitions.md)|[accessReviewHistoryDefinition](accessreviewhistorydefinition.md)|Create a new [accessReviewHistoryDefinition](accessreviewhistorydefinition.md) object.|
+|[Get](../api/accessreviewhistorydefinition-get.md)|[accessReviewHistoryDefinition](accessreviewhistorydefinition.md)|Read the properties and relationships of an [accessReviewHistoryDefinition](accessreviewhistorydefinition.md) object.|
 
 ## Properties
 
@@ -31,7 +32,7 @@ An **accessReviewHistoryDefinition** contains a list of [accessReviewHistoryInst
 |:---|:---|:---|
 |createdBy|[userIdentity](useridentity.md)| User who created this review history definition. |
 |createdDateTime|DateTimeOffset|Timestamp when the access review definition was created.|
-|decisions|String collection|Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: `approve`, `deny`, `dontKnow`, `notReviewed`, and `notNotified`.|
+|decisions|String collection|Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. The possible values are: `approve`, `deny`, `dontKnow`, `notReviewed`, and `notNotified`.|
 |displayName|String|Name for the access review history data collection. Required.|
 |id|String|The assigned unique identifier of an access review history definition.|
 |reviewHistoryPeriodEndDateTime|DateTimeOffset| A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if **scheduleSettings** is not defined. |
@@ -48,7 +49,7 @@ An **accessReviewHistoryDefinition** contains a list of [accessReviewHistoryInst
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

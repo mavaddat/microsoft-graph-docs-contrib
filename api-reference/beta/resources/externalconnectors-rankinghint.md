@@ -2,9 +2,10 @@
 title: "rankingHint resource type"
 description: "The ranking hint for the property."
 author: "emzho"
-ms.localizationpriority: normal
+ms.localizationpriority: medium
 ms.subservice: "search"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # rankingHint resource type
@@ -18,13 +19,13 @@ Specifies the schema property's ranking hint.
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|importanceScore|microsoft.graph.externalConnectors.importanceScore | Specifies the schema property importance. Possible values are: `low`, `medium`, `high`, `veryHigh`, `unknownFutureValue`. Required. |
+|importanceScore|microsoft.graph.externalConnectors.importanceScore | Specifies the schema property importance. The possible values are: `low`, `medium`, `high`, `veryHigh`, `unknownFutureValue`. Required. |
 
 ## Relationships
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.externalConnectors.rankingHint"

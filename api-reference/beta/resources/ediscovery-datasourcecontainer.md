@@ -3,8 +3,9 @@ title: "dataSourceContainer resource type"
 description: "Base class for Custodians and Non-Custodial data sources."
 author: "mahage-msft"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # dataSourceContainer resource type
@@ -12,6 +13,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 Base class for [custodian](../resources/ediscovery-custodian.md) and [noncustodialDataSource](../resources/ediscovery-noncustodialdatasource.md).
 
@@ -30,7 +33,7 @@ None
 |id|String|Unique identifier of the dataSourceContainer. Inherited from [entity](../resources/entity.md)|
 |lastModifiedDateTime|DateTimeOffset|Last modified date and time of the dataSourceContainer.|
 |releasedDateTime|DateTimeOffset|Date and time that the dataSourceContainer was released from the case.|
-|status|microsoft.graph.ediscovery.dataSourceContainerStatus|Latest status of the dataSourceContainer. Possible values are: `Active`, `Released`.|
+|status|microsoft.graph.ediscovery.dataSourceContainerStatus|Latest status of the dataSourceContainer. The possible values are: `Active`, `Released`.|
 
 ### dataSourceContainerStatus values
 
@@ -45,7 +48,7 @@ None
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

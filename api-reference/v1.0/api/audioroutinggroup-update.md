@@ -5,6 +5,7 @@ author: "hanknguyen"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 06/25/2024
 ---
 
 # Update audioRoutingGroup
@@ -34,12 +35,12 @@ PATCH /communications/calls/{id}/audioRoutingGroups/{id}
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
-In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance, don't include existing values that haven't changed.
+In the request body, supply the values for relevant fields that should be updated. Existing properties that aren't included in the request body maintain their previous values or are recalculated based on changes to other property values. For best performance, don't include existing values that haven't changed.
 
 | Property       | Type    |Description|
 |:---------------|:--------|:----------|
 | receivers | String collection | The target participants in the audioRoutingGroup. |
-| routingMode | String | Possible values are: `oneToOne`, `multicast`. |
+| routingMode | String | The possible values are: `oneToOne`, `multicast`. |
 | sources | String collection | The source participant in the audioRoutingGroup. |
 
 ## Response
@@ -75,10 +76,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-audioroutinggroup-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-audioroutinggroup-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

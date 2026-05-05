@@ -1,17 +1,21 @@
 ---
-title: "Create threat intelligence indicator"
+title: "Create threat intelligence indicator (deprecated)"
 description: "Create a new tiIndicator."
 ms.localizationpriority: medium
 author: "preetikr"
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 08/13/2024
+ROBOTS: NOINDEX
 ---
 
-# Create threat intelligence indicator
+# Create threat intelligence indicator (deprecated)
 
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [security-tiindicator-deprecation](../includes/security-tiindicator-deprecation.md)]
 
 Create a new [tiIndicator](../resources/tiindicator.md) object.
 
@@ -36,7 +40,7 @@ POST /security/tiIndicators
 
 | Name          | Description   |
 |:--------------|:--------------|
-| Authorization | Bearer {code} |
+| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -83,10 +87,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-tiindicator-from-security-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-tiindicator-from-security-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

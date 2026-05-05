@@ -4,8 +4,9 @@ description: "Represents the findings for Azure encrypted storage accounts."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # encryptedAzureStorageAccountFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents the findings for Azure encrypted storage buckets.
 
 Inherits from [finding](../resources/finding.md).
@@ -21,8 +24,8 @@ Inherits from [finding](../resources/finding.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List encryptedAzureStorageAccountFinding objects](../api/encryptedazurestorageaccountfinding-list.md)|[encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md) collection|Get a list of the [encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md) objects and their properties.|
-|[Get encryptedAzureStorageAccountFinding](../api/encryptedazurestorageaccountfinding-get.md)|[encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md)|Read the properties and relationships of an [encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md) object.|
+|[List](../api/encryptedazurestorageaccountfinding-list.md)|[encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md) collection|Get a list of the [encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md) objects and their properties.|
+|[Get](../api/encryptedazurestorageaccountfinding-get.md)|[encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md)|Read the properties and relationships of an [encryptedAzureStorageAccountFinding](../resources/encryptedazurestorageaccountfinding.md) object.|
 
 
 ## Properties
@@ -55,4 +58,5 @@ The following JSON representation shows the resource type.
   "encryptionManagedBy": "String"
 }
 ```
+
 

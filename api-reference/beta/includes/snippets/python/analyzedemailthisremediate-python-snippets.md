@@ -4,12 +4,13 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```python
 
-from msgraph import GraphServiceClient
-from msgraph.generated.models.remediate_post_request_body import RemediatePostRequestBody
-from msgraph.generated.models.analyzed_email import AnalyzedEmail
-
-graph_client = GraphServiceClient(credentials, scopes)
-
+# Code snippets are only available for the latest version. Current version is 1.x
+from msgraph_beta import GraphServiceClient
+from msgraph_beta.generated.security.collaboration.analyzedemails.microsoft_graph_security_remediate.remediate_post_request_body import RemediatePostRequestBody
+from msgraph_beta.generated.models.remediation_severity import RemediationSeverity
+from msgraph_beta.generated.models.remediation_action import RemediationAction
+from msgraph_beta.generated.models.security.analyzed_email import AnalyzedEmail
+# To initialize your graph_client, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=python
 request_body = RemediatePostRequestBody(
 	display_name = "Clean up Phish email",
 	description = "Delete email",
@@ -18,10 +19,12 @@ request_body = RemediatePostRequestBody(
 	remediate_senders_copy = False,
 	analyzed_emails = [
 		AnalyzedEmail(
-			id = "73ca4154-58d8-43d0-a890-08dc18c52e6d-1311265001240363512-1",
+			network_message_id = "73ca4154-58d8-43d0-a890-08dc18c52e6d",
+			recipient_email_address = "hannah.jarvis@contoso.com",
 		),
 		AnalyzedEmail(
-			id = "73ca4154-58d8-43d0-a890-08dc18c52e6d-13805748846361900678-1",
+			network_message_id = "73ca4154-58d8-43d0-a890-08dc18c52e6d",
+			recipient_email_address = "preston.morales@contoso.com",
 		),
 	],
 )

@@ -3,8 +3,9 @@ title: "List addresses"
 description: "Get the itemAddresses from the addresses navigation property."
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 
 # List addresses
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/profile/addresses
 GET /users/{id | userPrincipalName}/profile/addresses
 ```
@@ -64,16 +65,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
   "name": "get_itemaddresses_from_profile"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/profile/addresses
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-itemaddresses-from-profile-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-itemaddresses-from-profile-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,7 +107,7 @@ GET https://graph.microsoft.com/beta/me/profile/addresses
   "@odata.type": "collection(microsoft.graph.itemAddress)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

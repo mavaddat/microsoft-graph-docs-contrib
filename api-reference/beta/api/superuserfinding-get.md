@@ -4,14 +4,17 @@ description: "Read the properties and relationships of a superUserFinding object
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get superUserFinding
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Read the properties and relationships of a [superUserFinding](../resources/superuserfinding.md) object.
 
@@ -28,7 +31,7 @@ Get AWS super users:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/{id}/microsoft.graph.superUserFinding
 ```
 
@@ -37,7 +40,7 @@ Get Azure super users:
   "blockType": "ignored",
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/azure/findings/{id}/microsoft.graph.superUserFinding
 ```
 
@@ -46,7 +49,7 @@ Get GCP super users:
   "blockType": "ignored",
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/gcp/findings/{id}/microsoft.graph.superUserFinding
 ```
 
@@ -75,7 +78,7 @@ The following example shows a request.
   "name": "get_superuserfinding"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/findings/MSxTdXBlclVzZXJGaW5kaW5nLDE1NDczMQ/microsoft.graph.superUserFinding
 ```
 
@@ -94,7 +97,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.superUserFinding"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
@@ -134,3 +137,4 @@ Content-type: application/json
     }
 }
 ```
+

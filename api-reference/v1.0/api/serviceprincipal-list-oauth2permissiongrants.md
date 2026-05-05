@@ -5,6 +5,7 @@ ms.localizationpriority: high
 doc_type: apiPageType
 ms.subservice: "entra-applications"
 author: "psignoret"
+ms.date: 07/11/2024
 ---
 
 # List oauth2PermissionGrants granted to a service principal
@@ -21,6 +22,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "serviceprincipal_list_oauth2permissiongrants" } -->
 [!INCLUDE [permissions-table](../includes/permissions/serviceprincipal-list-oauth2permissiongrants-permissions.md)]
+
+[!INCLUDE [rbac-oauth2permissiongrant-serviceprincipal-apis-read](../includes/rbac-for-apis/rbac-oauth2permissiongrant-serviceprincipal-apis-read.md)]
 
 ## HTTP request
 
@@ -70,10 +73,6 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals/00063ffc-54e9-405d-b8f3-5
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-serviceprincipal-oauth2permissiongrants-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-serviceprincipal-oauth2permissiongrants-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

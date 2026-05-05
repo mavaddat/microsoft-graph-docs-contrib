@@ -5,6 +5,7 @@ author: "jecha"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get teamsAsyncOperation
@@ -17,26 +18,27 @@ Get the specified [Teams async operation](../resources/teamsasyncoperation.md) t
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 The following permissions are for getting the operation on a chat:
 
-| Permission type                        | Permissions (from least to most privileged)|
-| :------------------------------------- | :--------------------------------------------------- |
-| Delegated (work or school account)     | Chat.ReadBasic, Chat.Read, Chat.ReadWrite|
-| Delegated (personal Microsoft account) | Not supported. |
-| Application                            | ChatSettings.Read.Chat*, ChatSettings.ReadWrite.Chat*, Chat.Manage.Chat*, Chat.ReadBasic.All, Chat.Read.All, Chat.ReadWrite.All |
+<!-- { "blockType": "permissions", "name": "teamsasyncoperation_get" } -->
+[!INCLUDE [permissions-table](../includes/permissions/teamsasyncoperation-get-permissions.md)]
 
-> **Note**: Permissions marked with * use [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
+> [!NOTE]
+> The `ChatSettings.Read.Chat`, `ChatSettings.ReadWrite.Chat`, and `Chat.Manage.Chat` permissions use [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
 
 ## HTTP request
 <!-- { 
     "blockType": "ignored" 
 } 
 -->
-``` http
+```http
 GET /chats/{chat-id}/operations/{operation-id}
 ```
+
+> [!NOTE]
+> The status of individual operations returned by this API might be outdated. To get the latest status of the operations, we recommend that you perform a `GET` request for the operations.
 
 ## Optional query parameters
 
@@ -56,9 +58,11 @@ Don't supply a request body for this method.
 
 If successful, this returns a `200 OK` response code and a [teamsAsyncOperation](../resources/teamsasyncoperation.md) object in the response body.
 
-## Example: Get operation on chat
+## Examples
 
 ### Request
+
+The following example shows a request that gets the operation on a chat.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -67,16 +71,12 @@ If successful, this returns a `200 OK` response code and a [teamsAsyncOperation]
   "sampleKeys": ["19:c253a29b5f694b55a6baad8e83510af7@thread.v2", "2432b57b-0abd-43db-aa7b-16eadd115d34-e88ae9aa-887e-4972-ac3e-bd578e38232e-cf58835e-43f0-4fc1-825e-5de55630e7e4"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/chats/19:c253a29b5f694b55a6baad8e83510af7@thread.v2/operations/2432b57b-0abd-43db-aa7b-16eadd115d34-e88ae9aa-887e-4972-ac3e-bd578e38232e-cf58835e-43f0-4fc1-825e-5de55630e7e4
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-chat-operation-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-chat-operation-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -106,13 +106,16 @@ GET https://graph.microsoft.com/beta/chats/19:c253a29b5f694b55a6baad8e83510af7@t
 ---
 
 ### Response
+
+The following example shows the response.
+
 <!-- {
   "blockType": "response",
   "@odata.type": "microsoft.graph.teamsAsyncOperation"
 }
 -->
-``` http
-HTTP/1.1 202 OK
+```http
+HTTP/1.1 200 OK
 Content-Type: application/json
 
 {

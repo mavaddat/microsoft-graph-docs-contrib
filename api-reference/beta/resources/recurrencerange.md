@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "iamgirishck"
+ms.date: 07/23/2024
 ---
 
 # recurrenceRange resource type
@@ -26,7 +27,7 @@ You can specify the date range for a recurring event in one of 3 ways depending 
 |numberOfOccurrences|Int32|The number of times to repeat the event. Required and must be positive if **type** is `numbered`.|
 |recurrenceTimeZone|String |Time zone for the **startDate** and **endDate** properties. Optional. If not specified, the time zone of the event is used.|
 |startDate|Date|The date to start applying the recurrence pattern. The first occurrence of the meeting may be this date or later, depending on the recurrence pattern of the event. Must be the same value as the **start** property of the recurring [event](event.md). Required.|
-|type|String|The recurrence range. Possible values are: `endDate`, `noEnd`, `numbered`. Required.|
+|type|String|The recurrence range. The possible values are: `endDate`, `noEnd`, `numbered`. Required.|
 
 Use the **type** property to specify the different types of **recurrenceRange**. Note the required properties for each type, as described in the following table.
 
@@ -36,9 +37,13 @@ Use the **type** property to specify the different types of **recurrenceRange**.
 |`noEnd`   |Range without an end date | Event repeats on all the days that fit the corresponding recurrence pattern beginning on the **startDate**. | Repeat event in the date range starting on June 1, 2017 indefinitely. | **type**, **startDate** |
 |`numbered`|Range with specific number of occurrences | Event repeats for the **numberOfOccurrences** based on the recurrence pattern beginning on the **startDate**. | Repeat event in the date range starting on June 1, 2017, for 10 occurrences.  | **type**, **startDate**, **numberOfOccurrences** |
 
+## Relationships
+
+None.
+
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

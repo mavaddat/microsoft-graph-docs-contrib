@@ -3,8 +3,9 @@ title: "Use the Microsoft Graph compliance and privacy APIs"
 description: "The Microsoft Graph compliance and privacy APIs provide a unified interface and schema to integrate with solutions available in the Microsoft Purview compliance portal from Microsoft and ecosystem partners. This can help customers streamline their compliance and privacy operations to better manage and monitor their data, protect information, minimize insider risk, perform legal and internal investigations, and comply with legal or regulatory standards."
 ms.localizationpriority: high
 author: "mahage-msft"
-ms.prod: "compliance"
+ms.subservice: "compliance"
 doc_type: conceptualPageType
+ms.date: 06/11/2024
 ---
 
 # Use the Microsoft Graph compliance and privacy APIs
@@ -19,6 +20,9 @@ Use the Microsoft Graph compliance and privacy APIs to build applications that:
 - Create and manage subject rights requests
 - Automate tasks in records management
 
+> [!Note] 
+> The compliance APIs are deprecated. Instead, use equivalent API requests from the security endpoints. For more information, see [Microsoft Graph Security API documentation](/graph/api/resources/security-api-overview?view=graph-rest-beta).
+> 
 ## eDiscovery
 
 eDiscovery in Microsoft 365 provides an end-to-end workflow to preserve, collect, review, analyze, and export data that's responsive to your organization's internal and external investigations. Learn more about [Microsoft Purview eDiscovery (Premium)](/microsoft-365/compliance/overview-ediscovery-20).

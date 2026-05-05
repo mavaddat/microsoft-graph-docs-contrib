@@ -4,7 +4,8 @@ description: "Specifies the sensitive properties of the app that are locked for 
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "madansr7"
+author: "Jackson-Woods"
+ms.date: 04/03/2024
 ---
 
 # servicePrincipalLockConfiguration resource type
@@ -27,7 +28,7 @@ For more information about managing this object, see [Lock sensitive properties 
 | tokenEncryptionKeyId       | Boolean | Locks the tokenEncryptionKeyId property for modification on the service principal.                                                                            |
 
 ## JSON representation
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

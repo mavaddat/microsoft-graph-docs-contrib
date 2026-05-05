@@ -3,8 +3,9 @@ title: "Grant an appRoleAssignment to a user"
 description: "Grant an app role assignment to a user."
 ms.localizationpriority: high
 doc_type: apiPageType
-ms.prod: "users"
+ms.subservice: entra-users
 author: "psignoret"
+ms.date: 10/15/2024
 ---
 
 # Grant an appRoleAssignment to a user
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
+Use this API to assign an [app role](../resources/approle.md) to a [user](../resources/user.md), creating an [appRoleAssignment](../resources/approleassignment.md) object. To grant an app role assignment to a user, you need three identifiers:
 
 - `principalId`: The `id` of the user to whom you are assigning the app role.
 - `resourceId`: The `id` of the resource `servicePrincipal` that has defined the app role.
@@ -27,6 +28,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "user_post_approleassignments" } -->
 [!INCLUDE [permissions-table](../includes/permissions/user-post-approleassignments-permissions.md)]
+
+[!INCLUDE [rbac-approleassignments-apis-write](../includes/rbac-for-apis/rbac-approleassignments-apis-write.md)]
 
 ## HTTP request
 
@@ -79,10 +82,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/user-create-approleassignment-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/user-create-approleassignment-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

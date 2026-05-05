@@ -5,6 +5,7 @@ author: "cristobal-buenrostro"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: apiPageType
+ms.date: 08/29/2024
 ---
 
 # educationSubmission: reassign
@@ -67,10 +68,6 @@ POST https://graph.microsoft.com/beta/education/classes/bf1f1963-05f6-4cba-903c-
 [!INCLUDE [sample-code](../includes/snippets/csharp/educationsubmission-reassign-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/educationsubmission-reassign-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/educationsubmission-reassign-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -102,6 +99,7 @@ The following is an example of the response when `Prefer: include-unknown-enum-m
 
 <!-- {
   "blockType": "response",
+  "truncated": true,
   "@odata.type": "microsoft.graph.educationSubmission"
 } -->
 ```http
@@ -179,10 +177,6 @@ Prefer: include-unknown-enum-members
 [!INCLUDE [sample-code](../includes/snippets/csharp/educationsubmission-prefer-reassign-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/educationsubmission-prefer-reassign-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/educationsubmission-prefer-reassign-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -213,7 +207,8 @@ Prefer: include-unknown-enum-members
 The following is an example of the response when `Prefer: include-unknown-enum-members` is provided in the request header and the submission hasn't been returned before.
 
 <!-- {
-  "blockType": "response",
+  "blockType": "response",  
+  "truncated": true,
   "@odata.type": "microsoft.graph.educationSubmission"
 } -->
 ```http
@@ -271,7 +266,7 @@ HTTP/1.1 200 OK
 
 ## Related content
 
-* [States, transitions, and limitations for assignments and submissions](/graph/assignments-submissions-states-transition)
+* [Status, transitions, and limitations for assignments and submissions](/graph/assignments-submissions-status-transition)
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

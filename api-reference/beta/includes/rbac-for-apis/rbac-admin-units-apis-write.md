@@ -3,4 +3,6 @@ author: DougKirschner
 ms.topic: include
 ---
 
-For delegated scenarios, the calling user needs at least the *Privileged Role Administrator* [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
+> [!IMPORTANT]
+> 
+> For delegated access using work or school accounts, the signed-in user must be a member user or be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role that grants the permissions required for this operation. s*Privileged Role Administrator* is the least privileged role supported for this operation.

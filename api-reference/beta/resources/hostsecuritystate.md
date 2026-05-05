@@ -1,17 +1,21 @@
 ---
-title: "hostSecurityState resource type"
+title: "hostSecurityState resource type (deprecated)"
 description: " > **Important:** APIs under the /beta version in Microsoft Graph are in preview and are subject to change. Use of these APIs in production applications isn't supported."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: security
 author: "preetikr"
+ms.date: 03/21/2024
+ROBOTS: NOINDEX
 ---
 
-# hostSecurityState resource type
+# hostSecurityState resource type (deprecated)
 
 Namespace: microsoft.graph
 
  [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [security-alerts-v1-deprecation](../includes/security-alerts-v1-deprecation.md)]
 
 Contains stateful information about the host (including devices, computers, and so on).
 
@@ -29,9 +33,12 @@ Contains stateful information about the host (including devices, computers, and 
 |publicIpAddress|String|Publicly routable IPv4 or IPv6 address (see [RFC 1918](https://tools.ietf.org/html/rfc1918)) at time of the alert.|
 |riskScore|String|Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.|
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

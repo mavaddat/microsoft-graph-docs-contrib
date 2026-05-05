@@ -5,6 +5,7 @@ author: "payiAzure"
 ms.localizationpriority: medium
 ms.subservice: "service-communications"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # serviceAnnouncementBase resource type
@@ -32,7 +33,7 @@ None.
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

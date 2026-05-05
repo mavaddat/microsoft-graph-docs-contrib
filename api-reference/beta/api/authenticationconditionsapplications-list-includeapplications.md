@@ -5,6 +5,7 @@ author: "nanguil"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 08/06/2024
 ---
 
 # List includeApplications (for a user flow)
@@ -13,6 +14,8 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 List the applications linked to an external identities self-service sign up user flow that's represented by an [externalUsersSelfServiceSignupEventsFlow](../resources/externalusersselfservicesignupeventsflow.md) object. These are the applications for which the authentication experience that's defined by the user flow is enabled.
+
+To find the user flow that's linked to an application, see [Example 4: List user flow associated with specific application ID](../api/identitycontainer-list-authenticationeventsflows.md#example-4-list-user-flow-associated-with-specific-application-id).
 
 [!INCLUDE [national-cloud-support](../../includes/global-china.md)]
 
@@ -30,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identity/authenticationEventsFlows/{authenticationEventsFlow-id}/conditions/applications/includeApplications/
 ```
 
@@ -60,16 +63,12 @@ The following example shows a request to retrieve the list of applications assoc
   "name": "get_includeApplications"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identity/authenticationEventsFlows/0313cc37-d421-421d-857b-87804d61e33e/conditions/applications/includeApplications/
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-includeapplications-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-includeapplications-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -106,7 +105,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationConditionApplication"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "TarkanSevilmis"
 ms.subservice: "planner"
 doc_type: resourcePageType
+ms.date: 03/07/2024
 ---
 
 # plannerAssignments resource type
@@ -28,7 +29,8 @@ Example:
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.plannerAssignments"
+  "@odata.type": "microsoft.graph.plannerAssignments",
+  "openType": true
 }-->
 
 ```json

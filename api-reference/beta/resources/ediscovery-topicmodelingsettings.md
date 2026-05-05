@@ -3,8 +3,9 @@ title: "topicModelingSettings resource type"
 description: "Article modeling settings for an eDiscovery case"
 author: "mahage-msft"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 06/11/2024
 ---
 
 # topicModelingSettings resource type
@@ -12,6 +13,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 Article modeling (Themes) settings for an eDiscovery case. To learn more, see [Configure search and analytics settings in Advanced eDiscovery](/microsoft-365/compliance/configure-search-and-analytics-settings-in-advanced-ediscovery).
 
@@ -30,7 +33,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.ediscovery.topicModelingSettings"

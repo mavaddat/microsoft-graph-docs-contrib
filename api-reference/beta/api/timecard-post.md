@@ -5,6 +5,7 @@ author: "akumar39"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Create timeCard
@@ -19,15 +20,10 @@ Create a [timeCard](../resources/timecard.md) instance in a [schedule](../resour
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Schedule.ReadWrite.All    |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Schedule.ReadWrite.All* |
-
->\* **Important:** When you use application permissions, you must include the `MS-APP-ACTS-AS` header in the request.
+<!-- { "blockType": "permissions", "name": "timecard_post" } -->
+[!INCLUDE [permissions-table](../includes/permissions/timecard-post-permissions.md)]
 
 ## HTTP request
 
@@ -43,7 +39,7 @@ POST /teams/{teamId}/schedule/timeCards
 |:---------------|:--------|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-type | application/json. Required.|
-| MS-APP-ACTS-AS | The ID of the user on behalf of whom the app is acting. Required when you use the application permission scope. |
+| MS-APP-ACTS-AS (deprecated) | A user ID (GUID). Required only if the authorization token is an application token; otherwise, optional. The `MS-APP-ACTS-AS` header is deprecated and no longer required with application tokens.|
 
 ## Request body
 
@@ -69,10 +65,10 @@ POST https://graph.microsoft.com/beta/teams/871dbd5c-3a6a-4392-bfe1-042452793a50
 Content-type: application/json
 
 {
-  "onBehalfOfUserId":"a3601044-a1b5-438e-b742-f78d01d68a67",
+  "userId":"a3601044-a1b5-438e-b742-f78d01d68a67",
   "clockInEvent":{
      "dateTime":"2019-03-18T00:00:00.000Z",
-     "atApprovedLocation":true,
+     "isAtApprovedLocation":true,
      "notes": {
         "content": "Started late due to traffic in CA 237",
         "contentType": "text"
@@ -91,7 +87,7 @@ Content-type: application/json
         },
         "start":{
            "dateTime":"2019-03-18T02:00:00.000Z",
-           "atApprovedLocation":true,
+           "isAtApprovedLocation":true,
            "notes": {
                 "content": "Reduced break to make up for lost time",
                 "contentType": "text"
@@ -104,10 +100,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/timecard-post-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/timecard-post-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -174,6 +166,7 @@ Content-type: application/json
     "clockInEvent": {
       "dateTime": "2019-03-18T00:00:00.000Z",
       "atApprovedLocation": true,
+      "isAtApprovedLocation": true,
       "notes": {
         "content": "Started late due to traffic in CA 237",
         "contentType": "text"
@@ -190,6 +183,7 @@ Content-type: application/json
         "start": {
           "dateTime": "2019-03-18T02:00:00.000Z",
           "atApprovedLocation": true,
+          "isAtApprovedLocation": true,
           "notes": {
             "content": "Reduced break to make up for lost time",
             "contentType": "text"
@@ -202,6 +196,7 @@ Content-type: application/json
   "clockInEvent": {
     "dateTime": "2019-03-18T00:00:00.000Z",
     "atApprovedLocation": true,
+    "isAtApprovedLocation": true,
     "notes": {
       "content": "Started late due to traffic in CA 237",
       "contentType": "text"
@@ -222,6 +217,7 @@ Content-type: application/json
       "start": {
         "dateTime": "2019-03-18T02:00:00.000Z",
         "atApprovedLocation": true,
+        "isAtApprovedLocation": true,
         "notes": {
           "content": "Reduced break to make up for lost time",
           "contentType": "text"

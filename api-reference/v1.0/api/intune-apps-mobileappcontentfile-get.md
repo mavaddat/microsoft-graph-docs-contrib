@@ -2,9 +2,10 @@
 title: "Get mobileAppContentFile"
 description: "Read properties and relationships of the mobileAppContentFile object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Get mobileAppContentFile
@@ -15,14 +16,16 @@ Namespace: microsoft.graph
 
 Read properties and relationships of the [mobileAppContentFile](../resources/intune-apps-mobileappcontentfile.md) object.
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All|
+|Delegated (work or school account)|DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All, DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All|
+|Application|DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All, DeviceManagementApps.Read.All, DeviceManagementApps.ReadWrite.All|
 
 ## HTTP Request
 <!-- {
@@ -52,20 +55,16 @@ If successful, this method returns a `200 OK` response code and [mobileAppConten
 
 ### Request
 Here is an example of the request.
-
-<!-- { "blockType": "ignored" , "name" : "intune_apps_mobileappcontentfile_get_get_mobileappcontentfile" }-->
 ``` http
 GET https://graph.microsoft.com/v1.0/deviceAppManagement/mobileApps/{mobileAppId}/contentVersions/{mobileAppContentId}/files/{mobileAppContentFileId}
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-
-<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.mobileAppContentFile" }-->
 ``` http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 491
+Content-Length: 574
 
 {
   "value": {
@@ -77,9 +76,12 @@ Content-Length: 491
     "name": "Name value",
     "size": 4,
     "sizeEncrypted": 13,
+    "sizeInBytes": 11,
+    "sizeEncryptedInBytes": 4,
     "azureStorageUriExpirationDateTime": "2017-01-01T00:00:08.4940464-08:00",
     "manifest": "bWFuaWZlc3Q=",
-    "uploadState": "transientError"
+    "uploadState": "transientError",
+    "isDependency": true
   }
 }
 ```

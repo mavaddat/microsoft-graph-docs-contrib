@@ -3,8 +3,9 @@ title: "Create ediscoveryHoldPolicy"
 description: "Create a new ediscoveryHoldPolicy object."
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: "apiPageType"
+ms.date: 10/29/2024
 ---
 
 # Create ediscoveryHoldPolicy
@@ -21,6 +22,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "security_ediscoverycase_post_legalholds" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-ediscoverycase-post-legalholds-permissions.md)]
+[!INCLUDE [rbac-rbac-ediscovery-apis-write](../includes/rbac-for-apis/rbac-ediscovery-apis-write.md)]
 
 ## HTTP request
 
@@ -28,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/cases/ediscoveryCases/{ediscoveryCaseId}/legalHolds
 ```
 
@@ -47,6 +49,7 @@ You can specify the following properties when you create an **ediscoveryHoldPoli
 |:---|:---|:---|
 |displayName|String|The display name of the legal hold policy. Required.|
 |description|String|The description of the legal hold policy. Optional.|
+|contentQuery|String|KQL query that specifies content to be held in the specified locations. Optional. |
 
 ## Response
 
@@ -63,27 +66,14 @@ The following example shows a request.
   "name": "create_ediscoveryholdpolicy_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/security/cases/ediscoveryCases/b0073e4e-4184-41c6-9eb7-8c8cc3e2288b/legalHolds
 Content-Type: application/json
 
 {
     "displayName": "My legalHold with sources",
     "description": "Created from Graph API",
-    "userSources@odata.bind": [
-        {
-            "@odata.type": "microsoft.graph.security.userSource",
-            "email": "SalesTeam@contoso.com"
-        }
-    ],
-    "siteSources@odata.bind": [
-        {
-            "@odata.type": "microsoft.graph.security.siteSource",
-            "site": {
-                "webUrl": "https://m365x809305.sharepoint.com/sites/Design-topsecret"
-            }
-        }
-    ]
+    "contentQuery": "KQL content query",
 }
 ```
 
@@ -91,8 +81,8 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-ediscoveryholdpolicy-from--csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-ediscoveryholdpolicy-from--cli-snippets.md)]
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-ediscoveryholdpolicy-from--go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Java](#tab/java)
@@ -126,7 +116,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.ediscoveryHoldPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

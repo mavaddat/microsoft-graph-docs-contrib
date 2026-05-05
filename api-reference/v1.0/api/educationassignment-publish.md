@@ -1,10 +1,11 @@
 ---
 title: "educationAssignment: publish"
-description: "Change the state of an educationAssignment from its original draft status to the published status."
+description: "Change the status of an educationAssignment from its original draft status to the published status."
 ms.localizationpriority: medium
 author: "cristobal-buenrostro"
 ms.subservice: "education"
 doc_type: apiPageType
+ms.date: 05/21/2024
 ---
 
 # educationAssignment: publish
@@ -13,13 +14,13 @@ Namespace: microsoft.graph
 
 Publish an education assignment.
 
-Change the state of an [educationAssignment](../resources/educationassignment.md) from its original `draft` status to the `published` status. 
+Change the status of an [educationAssignment](../resources/educationassignment.md) from its original `draft` status to the `published` status. 
 
-You can change the state from `draft` to `scheduled` if the **assignment** is scheduled for a future date. 
+You can change the status from `draft` to `scheduled` if the **assignment** is scheduled for a future date. 
 
 Only a teacher in the class can make this call. When an assignment is in draft status, students will not see the assignment, nor will there be any submission objects. Calling this API creates [educationSubmission](../resources/educationsubmission.md) objects and displays the assignment in each student's list.
 
-The state of the assignment goes back to `draft` if there is any backend failure during publish process.
+The status of the assignment goes back to `draft` if there is any backend failure during publish process.
 
 To update the properties of a published **assignment**, see [update an assignment](../api/educationassignment-update.md).
 
@@ -68,10 +69,6 @@ POST https://graph.microsoft.com/v1.0/education/classes/72a7baec-c3e9-4213-a850-
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/educationassignment-publish-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/educationassignment-publish-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -160,7 +157,7 @@ HTTP/1.1 200 Ok
 
 ## Related content
 
-* [States, transitions, and limitations for assignments and submissions](/graph/assignments-submissions-states-transition)
+* [Status, transitions, and limitations for assignments and submissions](/graph/assignments-submissions-status-transition)
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

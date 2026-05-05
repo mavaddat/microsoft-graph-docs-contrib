@@ -5,6 +5,7 @@ author: "Zacharypeng"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # serviceActivity: getMetricsForConditionalAccessManagedDevicesSignInSuccess
@@ -20,23 +21,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "serviceactivity_getmetricsforconditionalaccessmanageddevicessigninsuccess" } -->
 [!INCLUDE [permissions-table](../includes/permissions/serviceactivity-getmetricsforconditionalaccessmanageddevicessigninsuccess-permissions.md)]
 
-In addition to the delegated permissions, the signed-in user who is accessing the data needs to belong to one of the following directory roles, which allow them to read sign-in reports:
+[!INCLUDE [rbac-entra-health-service-activity-apis](../includes/rbac-for-apis/rbac-entra-health-service-activity-apis.md)]
 
-+ Global Administrator
-+ Global Reader
-+ Reports Reader
-+ Security Administrator
-+ Security Operator
-+ Security Reader
-
-To learn more about directory roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /reports/serviceActivity/getMetricsForConditionalAccessManagedDevicesSignInSuccess
 ```
 
@@ -71,16 +64,12 @@ The following example shows a request.
   "name": "serviceactivitythis.getmetricsforconditionalaccessmanageddevicessigninsuccess"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/reports/serviceActivity/getMetricsForConditionalAccessManagedDevicesSignInSuccess(inclusiveIntervalStartDateTime=2023-01-01T00:00:00Z,exclusiveIntervalEndDateTime=2023-01-01T00:20:00Z,aggregationIntervalInMinutes=10)
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/serviceactivitythisgetmetricsforconditionalaccessmanageddevicessigninsuccess-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/serviceactivitythisgetmetricsforconditionalaccessmanageddevicessigninsuccess-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -118,7 +107,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.serviceActivityValueMetric)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

@@ -1,10 +1,11 @@
 ---
 title: "virtualEventWebinar: getByUserIdAndRole"
-description: "List all webinars where the specified user is either the organizer or a coorganizer."
+description: "Get a list of virtualEventWebinar objects where the specified user is either the organizer or a coorganizer."
 author: "awang119"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 10/18/2024
 ---
 
 # virtualEventWebinar: getByUserIdAndRole
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a [virtualEventWebinar](../resources/virtualeventwebinar.md) collection where the specified user is either the organizer or a coorganizer.
+Get a list of [virtualEventWebinar](../resources/virtualeventwebinar.md) objects where the specified user is either the organizer or a coorganizer.
 
 ## Permissions
 
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /solutions/virtualEvents/webinars/getByUserIdAndRole(userId='{userId}', role='{role}')
 ```
 
@@ -42,8 +43,8 @@ In the request URL, provide the following query parameters with values.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
+|role|String|User role of the specified user in the webinar. The possible values are: `organizer`, `coOrganizer`.|
 |userId|String|The ID of the specified user in Microsoft Entra.|
-|role|String|User role of the specified user in the webinar. Possible values are: `organizer`, `coOrganizer`.|
 
 ## Request headers
 
@@ -57,7 +58,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this function returns a `200 OK` response code and a [virtualEventWebinar](../resources/virtualeventwebinar.md) collection in the response body.
+If successful, this function returns a `200 OK` response code and a collection of [virtualEventWebinar](../resources/virtualeventwebinar.md) objects in the response body.
 
 ## Examples
 
@@ -69,16 +70,12 @@ The following example shows a request.
   "name": "virtualeventwebinarthis.getbyuseridandrole"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/solutions/virtualEvents/webinars/getByUserIdAndRole(userId='b7ef013a-c73c-4ec7-8ccb-e56290f45f68', role='organizer')
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/virtualeventwebinarthisgetbyuseridandrole-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/virtualeventwebinarthisgetbyuseridandrole-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -109,7 +106,7 @@ GET https://graph.microsoft.com/beta/solutions/virtualEvents/webinars/getByUserI
 
 ### Response
 
-The following example shows the response
+The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -117,7 +114,7 @@ The following example shows the response
   "@odata.type": "Collection(microsoft.graph.virtualEventWebinar)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -128,7 +125,10 @@ Content-Type: application/json
       "id": "88b245ac-b0b2-f1aa-e34a-c81c27abdac2@f9448ec4-804b-46af-b810-62085248da33",
       "status": "published",
       "displayName": "The Impact of Tech on Our Lives",
-      "description": "Discusses how technology has changed the way we communicate, work, and interact with each other.",
+      "description": {
+        "contentType": "text",
+        "content": "Discusses how technology has changed the way we communicate, work, and interact with each other."
+      },
       "startDateTime": {
         "dateTime": "2023-03-30T10:00:00",
         "timeZone": "PacificSt"
@@ -153,6 +153,15 @@ Content-Type: application/json
           "id": "7b7e1acd-a3e0-4533-8c1d-c1a4ca0b2e2b",
           "displayName": "Kenneth Brown",
           "tenantId": "77229959-e479-4a73-b6e0-ddac27be315c"
+        }
+      ],
+      "settings": {
+        "isAttendeeEmailNotificationEnabled": false
+      },
+      "externalEventInformation": [
+        {
+          "applicationId" : "67a527ba-ef0e-4ba2-88b6-4fa5e9711757",
+          "externalEventId": "myExternalEventId"
         }
       ]
     }

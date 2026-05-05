@@ -5,6 +5,8 @@ author: "v-rmanda"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: resourcePageType
+toc.title: Grading scheme
+ms.date: 06/14/2024
 ---
 
 # educationGradingScheme resource type
@@ -20,11 +22,10 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List educationGradingScheme objects](../api/educationassignmentsettings-get.md)|[educationGradingScheme](../resources/educationgradingscheme.md) collection|Get a list of the [educationGradingScheme](../resources/educationgradingscheme.md) objects and their properties.|
-|[Create educationGradingScheme](../api/educationassignment-post-gradingscheme.md)|[educationGradingScheme](../resources/educationgradingscheme.md)|Create a new [educationGradingScheme](../resources/educationgradingscheme.md) object.|
-|[Get educationGradingScheme](../api/educationgradingscheme-get.md)|[educationGradingScheme](../resources/educationgradingscheme.md)|Read the properties and relationships of an [educationGradingScheme](../resources/educationgradingscheme.md) object.|
-|[Update educationGradingScheme](../api/educationgradingscheme-update.md)|[educationGradingScheme](../resources/educationgradingscheme.md)|Update the properties of an [educationGradingScheme](../resources/educationgradingscheme.md) object.|
-|[Delete educationGradingScheme](../api/educationgradingscheme-delete.md)|None|Delete an [educationGradingScheme](../resources/educationgradingscheme.md) object.|
+|[Create](../api/educationassignmentsettings-post-gradingschemes.md)|[educationGradingScheme](../resources/educationgradingscheme.md)|Create a new [educationGradingScheme](../resources/educationgradingscheme.md) on an [educationClass](../resources/educationclass.md).|
+|[Get](../api/educationgradingscheme-get.md)|[educationGradingScheme](../resources/educationgradingscheme.md)|Read the properties and relationships of an [educationGradingScheme](../resources/educationgradingscheme.md) object.|
+|[Update](../api/educationgradingscheme-update.md)|[educationGradingScheme](../resources/educationgradingscheme.md)|Update the properties of an [educationGradingScheme](../resources/educationgradingscheme.md) object.|
+|[Delete](../api/educationgradingscheme-delete.md)|None|Delete an [educationGradingScheme](../resources/educationgradingscheme.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -50,14 +51,10 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.educationGradingScheme",
-  "id": "String (identifier)",
   "displayName": "String",
-  "grades": [
-    {
-      "@odata.type": "microsoft.graph.educationGradingSchemeGrade"
-    }
-  ],
-  "hidePointsDuringGrading": "Boolean"
+  "grades": [{"@odata.type": "microsoft.graph.educationGradingSchemeGrade"}],
+  "hidePointsDuringGrading": "Boolean",
+  "id": "String (identifier)"
 }
 ```
 

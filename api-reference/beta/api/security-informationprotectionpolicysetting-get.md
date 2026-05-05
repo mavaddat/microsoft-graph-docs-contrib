@@ -5,6 +5,7 @@ author: "tommoser"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Get informationProtectionPolicySetting
@@ -33,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 To get policy settings available to the signed-in user (delegated permission) or a specified user (application permission):
 
-``` http
+```http
 GET /users/{usersId}/security/informationProtection/labelPolicySettings
 GET /me/security/informationProtection/labelPolicySettings
 ```
@@ -76,16 +77,12 @@ The following example shows a request.
   "sampleKeys": ["bob@contoso.com"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/users/bob@contoso.com/security/informationProtection/labelPolicySettings
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-informationprotectionpolicysetting-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-informationprotectionpolicysetting-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -126,12 +123,12 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.informationProtectionPolicySetting"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://canary.graph.microsoft.com/testprodbetamipdev/$metadata#users('bob%40contoso.com')/security/informationProtection/labelPolicySettings/$entity",
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#users('bob%40contoso.com')/security/informationProtection/labelPolicySettings/$entity",
     "id": "BFB31DC0E2183F5872EEC3FEC1A254B8118DF1156CC19E783EA6D36304242B7FCFA4CF1DA3374481AA9919D8F3D63F7C",
     "moreInfoUrl": "https://contoso.com/MIPInfo",
     "isMandatory": false,

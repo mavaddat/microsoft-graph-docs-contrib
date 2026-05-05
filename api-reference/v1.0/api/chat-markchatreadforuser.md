@@ -1,10 +1,11 @@
 ---
 title: "chat: markChatReadForUser"
-description: "Mark a chat as read till the current time, or the last message received or sent."
+description: "Mark a chat as read until the current time, or until the most recent message was received or sent."
 author: "RamjotSingh"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 06/04/2024
 ---
 
 # chat: markChatReadForUser
@@ -76,10 +77,6 @@ Content-length: 106
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/chat-markchatreadforuser-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/chat-markchatreadforuser-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # attackSimulationOperation resource type
@@ -19,7 +20,7 @@ Inherits from [longRunningOperation](../resources/longrunningoperation.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get attackSimulationOperation](../api/attacksimulationoperation-get.md)|[attackSimulationOperation](../resources/attacksimulationoperation.md)|Get an attack simulation operation to track a long-running operation request for a tenant.|
+|[Get](../api/attacksimulationoperation-get.md)|[attackSimulationOperation](../resources/attacksimulationoperation.md)|Get an attack simulation operation to track a long-running operation request for a tenant.|
 
 ## Properties
 
@@ -33,7 +34,7 @@ Inherits from [longRunningOperation](../resources/longrunningoperation.md).
 |status|longRunningOperationStatus|Operation status. The possible values are: `notStarted`, `running`, `succeeded`, `failed`, `unknownFutureValue`. Inherited from [longRunningOperation](../resources/longrunningoperation.md).|
 |statusDetail|String|Status detail of the operation. Inherited from [longRunningOperation](../resources/longrunningoperation.md).|
 |tenantId|String|Tenant identifier.|
-|type|[attackSimulationOperationType](#attacksimulationoperationtype-values)|The attack simulation operation type. Possible values are: `createSimulation`, `updateSimulation`, `unknownFutureValue`.|
+|type|[attackSimulationOperationType](#attacksimulationoperationtype-values)|The attack simulation operation type. The possible values are: `createSimulation`, `updateSimulation`, `unknownFutureValue`.|
 
 ### attackSimulationOperationType values
 

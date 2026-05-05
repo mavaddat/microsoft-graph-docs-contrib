@@ -4,14 +4,17 @@ description: View the count of inactive GCP service accounts in your authorizati
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 06/26/2024
 ---
 
 # inactiveGcpServiceAccountFinding: aggregatedSummary
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 View the count of inactive GCP service accounts for the specified authorization systems in your GCP environment.
 
@@ -27,13 +30,12 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.inactiveGcpServiceAccountFinding/aggregatedSummary(authorizationSystemIds=['gcpAuthSystemId'])
 ```
 
 ## Function parameters
 In the request URL, provide the following query parameters with values.
-The following table lists the parameters that are required when you call this function.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
@@ -62,7 +64,7 @@ The following example shows a request.
   "name": "inactivegcpserviceaccountfindingthis.aggregatedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.inactiveGcpServiceAccountFinding/aggregatedSummary(authorizationSystemIds=['ck-qa-neova-solutions'])
 ```
 
@@ -81,7 +83,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.permissionsAnalyticsAggregatedIdentitySummary"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -91,4 +93,5 @@ Content-Type: application/json
     "findingsCount": 0
 }
 ```
+
 

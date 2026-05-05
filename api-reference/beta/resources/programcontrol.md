@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "shubhamguptacal"
+ms.date: 03/21/2024
 ---
 
 # programControl resource type (deprecated)
@@ -50,7 +51,7 @@ In the Microsoft Entra [access reviews](accessreviews-root.md) feature, the prog
 
 ## JSON representation
 
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -1,10 +1,11 @@
 ---
 title: "List targetDeviceGroups"
 description: "Get a list of the targetDeviceGroup objects and their properties on the remoteDesktopSecurityConfiguration resource on the servicePrincipal."
-author: "SanDeo-MSFT"
+author: "mjsantani"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 01/02/2026
 ---
 
 # List targetDeviceGroups
@@ -14,24 +15,27 @@ Namespace: microsoft.graph
 
 Get a list of the [targetDeviceGroup](../resources/targetdevicegroup.md) objects and their properties on the remoteDesktopSecurityConfiguration resource on the servicePrincipal. Any user authenticating using the Microsoft Entra ID [Remote Desktop Services (RDS) authentication protocol](/openspecs/windows_protocols/ms-rdpbcgr/dc43f040-d75d-49a9-90c6-0c9999281136) to a [Microsoft Entra joined](/azure/active-directory/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) device that belongs to the targetDeviceGroup will get SSO.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "remotedesktopsecurityconfiguration_list_targetdevicegroups" } -->
+<!-- { "blockType": "ignored", "name": "remotedesktopsecurityconfiguration_list_targetdevicegroups" } -->
 [!INCLUDE [permissions-table](../includes/permissions/remotedesktopsecurityconfiguration-list-targetdevicegroups-permissions.md)]
 
 [!INCLUDE [rbac-remote-desktop-security-config-apis](../includes/rbac-for-apis/rbac-remote-desktop-security-config-apis.md)]
 
 ## HTTP request
 
+You can address the service principal using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in app registrations in the Microsoft Entra admin center.
+
 <!-- {
   "blockType": "ignored"
 }
 -->
 ``` http
-GET /servicePrincipals/{servicePrincipalsId}/remoteDesktopSecurityConfiguration/targetDeviceGroups
+GET /servicePrincipals/{id}/remoteDesktopSecurityConfiguration/targetDeviceGroups
+GET /servicePrincipals(appId='{appId}')/remoteDesktopSecurityConfiguration/targetDeviceGroups
 ```
 
 ## Optional query parameters
@@ -65,10 +69,6 @@ GET https://graph.microsoft.com/beta/servicePrincipals/00af5dfb-85da-4b41-a677-0
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-targetdevicegroup-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-targetdevicegroup-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,7 @@ author: "AshleyYangSZ"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # List userSettings
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 GET /deviceManagement/virtualEndpoint/userSettings
 ```
 
@@ -56,23 +57,19 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ## Examples
 
 ### Request
-
+The following example shows a request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_cloudpcusersetting"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/userSettings
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-cloudpcusersetting-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-cloudpcusersetting-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -102,6 +99,7 @@ GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/userSettin
 ---
 
 ### Response
+The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -110,7 +108,7 @@ GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/userSettin
   "isCollection": true
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -126,6 +124,17 @@ Content-Type: application/json
         "frequencyInHours": 16,
         "userRestoreEnabled": true
       },
+      "crossRegionDisasterRecoverySetting": {
+        "crossRegionDisasterRecoveryEnabled": false,
+        "maintainCrossRegionRestorePointEnabled": true,
+        "disasterRecoveryNetworkSetting": {
+            "regionName": "westus",
+            "regionGroup": "usEast"
+        },
+        "disasterRecoveryType": "premium",
+        "userInitiatedDisasterRecoveryAllowed": true
+      },
+      "provisioningSourceType": null,
       "lastModifiedDateTime": "2021-02-01T10:29:57Z",
       "createdDateTime": "2021-02-01T10:29:57Z"
     }

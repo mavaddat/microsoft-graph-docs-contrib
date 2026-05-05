@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 description: "The calculated column on a columnDefinition resource indicates that the column's data is calculated based on other columns in the site."
 ms.subservice: "sharepoint"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 # calculatedColumn resource type
 
@@ -16,9 +17,9 @@ The **calculatedColumn** on a [columnDefinition](columndefinition.md) resource i
 
 | Property       | Type   | Description                                                                                                                        |
 |:---------------|:-------|:-----------------------------------------------------------------------------------------------------------------------------------|
-| format         | String | For `dateTime` output types, the format of the value. Possible values are: `dateOnly` or `dateTime`.                               |
+| format         | String | For `dateTime` output types, the format of the value. The possible values are: `dateOnly` or `dateTime`.                               |
 | formula        | String | The formula used to compute the value for this column.                                                                             |
-| outputType     | String | The output type used to format values in this column. Possible values are: `boolean`, `currency`, `dateTime`, `number`, or `text`. |
+| outputType     | String | The output type used to format values in this column. The possible values are: `boolean`, `currency`, `dateTime`, `number`, or `text`. |
 
 SharePoint formulas use a syntax similar to Excel formulas. For more information, see [Examples of common formulas in SharePoint Lists][SPFormulas].
 
@@ -26,7 +27,7 @@ SharePoint formulas use a syntax similar to Excel formulas. For more information
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- { "blockType": "resource", "@odata.type": "microsoft.graph.calculatedColumn" } -->
 
 ```json

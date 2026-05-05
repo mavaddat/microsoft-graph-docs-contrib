@@ -5,11 +5,14 @@ author: "adsrivastava2"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # teamworkDevice resource type
 
 Namespace: microsoft.graph
+
+[!INCLUDE [beta-deprecation-disclaimer](../../includes/beta-deprecation-disclaimer.md)]
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
@@ -88,7 +91,7 @@ Inherits from [entity](../resources/entity.md).
 |operations|[teamworkDeviceOperation](../resources/teamworkdeviceoperation.md) collection|The async operations on the device.|
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

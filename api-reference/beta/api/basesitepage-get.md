@@ -71,15 +71,11 @@ If successful, this method returns a `200` and a [baseSitePage](../resources/bas
 -->
 
 ```msgraph-interactive
-GET /sites/{site-id}/pages/{page-id}
+GET /sites/7f50f45e-714a-4264-9c59-3bf43ea4db8f/pages/df69e386-6c58-4df2-afc0-ab6327d5b202
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-basesitepage-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-basesitepage-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -133,7 +129,7 @@ Content-type: application/json
     "id": "f45354cb-d634-45df-8b88-2b4e96a1dc45",
     "lastModifiedDateTime": "2023-04-16T10:01:41Z",
     "name": "Electronic Convertible.aspx",
-    "webUrl": "SitePages/Electronic Convertible.aspx",
+    "webUrl": "https://contoso.sharepoint.com/SitePages/Electronic Convertible.aspx",
     "title": "Electronic Convertible",
     "pageLayout": "article",
     "thumbnailWebUrl": "https://media.akamai.odsp.cdn.office.net/_layouts/15/images/sitepagethumbnail.png",

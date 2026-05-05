@@ -2,9 +2,10 @@
 title: "Get iosLobAppProvisioningConfigurationAssignment"
 description: "Read properties and relationships of the iosLobAppProvisioningConfigurationAssignment object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Get iosLobAppProvisioningConfigurationAssignment
@@ -55,7 +56,7 @@ Here is an example of the request.
 
 <!-- { "blockType": "ignored" , "name" : "intune_apps_ioslobappprovisioningconfigurationassignment_get_get_ioslobappprovisioningconfigurationassignment" }-->
 ``` http
-GET https://graph.microsoft.com/beta/deviceAppManagement/iosLobAppProvisioningConfigurations/{iosLobAppProvisioningConfigurationId}/assignments/{iosLobAppProvisioningConfigurationAssignmentId}
+GET https://graph.microsoft.com/v1.0/deviceAppManagement/iosLobAppProvisioningConfigurations/{iosLobAppProvisioningConfigurationId}/assignments/{iosLobAppProvisioningConfigurationAssignmentId}
 ```
 
 ### Response

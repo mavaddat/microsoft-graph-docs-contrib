@@ -6,6 +6,7 @@ author: "lisaychuang"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # conditionalAccessPlatforms resource type
@@ -20,8 +21,8 @@ Platforms included in and excluded from the policy scope.
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|includePlatforms|conditionalAccessDevicePlatform collection| Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue, `linux``.|
-|excludePlatforms|conditionalAccessDevicePlatform collection| Possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`, `linux`.|
+|includePlatforms|conditionalAccessDevicePlatform collection| The possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue, `linux``.|
+|excludePlatforms|conditionalAccessDevicePlatform collection| The possible values are: `android`, `iOS`, `windows`, `windowsPhone`, `macOS`, `all`, `unknownFutureValue`, `linux`.|
 
 ## Relationships
 
@@ -29,7 +30,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -6,6 +6,7 @@ author: "lisaychuang"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # conditionalAccessPolicy resource type
@@ -18,11 +19,11 @@ Represents a Microsoft Entra Conditional Access policy. Conditional access polic
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
-| [List conditionalAccessPolicies](../api/conditionalaccessroot-list-policies.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) collection | Get all of the conditionalAccessPolicies objects in the organization. |
-| [Create conditionalAccessPolicy](../api/conditionalaccessroot-post-policies.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) | Create a new conditionalAccessPolicy object. |
-| [Get conditionalAccessPolicy](../api/conditionalaccesspolicy-get.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) | Read properties and relationships of a conditionalAccessPolicy object. |
-| [Update conditionalAccessPolicy](../api/conditionalaccesspolicy-update.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) | Update a conditionalAccessPolicy object. |
-| [Delete conditionalAccessPolicy](../api/conditionalaccesspolicy-delete.md) | None | Delete a conditionalAccessPolicy object. |
+| [List](../api/conditionalaccessroot-list-policies.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) collection | Get all of the conditionalAccessPolicies objects in the organization. |
+| [Create](../api/conditionalaccessroot-post-policies.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) | Create a new conditionalAccessPolicy object. |
+| [Get](../api/conditionalaccesspolicy-get.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) | Read properties and relationships of a conditionalAccessPolicy object. |
+| [Update](../api/conditionalaccesspolicy-update.md) | [conditionalAccessPolicy](conditionalaccesspolicy.md) | Update a conditionalAccessPolicy object. |
+| [Delete](../api/conditionalaccesspolicy-delete.md) | None | Delete a conditionalAccessPolicy object. |
 
 ## Properties
 
@@ -35,7 +36,8 @@ Represents a Microsoft Entra Conditional Access policy. Conditional access polic
 |id|String| Specifies the identifier of a conditionalAccessPolicy object. Read-only.|
 |modifiedDateTime| DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Readonly. |
 |sessionControls|[conditionalAccessSessionControls](conditionalaccesssessioncontrols.md)| Specifies the session controls that are enforced after sign-in. |
-|state|conditionalAccessPolicyState| Specifies the state of the conditionalAccessPolicy object. Possible values are: `enabled`, `disabled`, `enabledForReportingButNotEnforced`. Required. |
+|state|conditionalAccessPolicyState| Specifies the state of the conditionalAccessPolicy object. The possible values are: `enabled`, `disabled`, `enabledForReportingButNotEnforced`. Required. |
+|templateId|String|Specifies the unique identifier of a [Conditional Access template](../resources/conditionalaccesstemplate.md). Inherited from [entity](../resources/entity.md).|
 
 ## Relationships
 
@@ -43,7 +45,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

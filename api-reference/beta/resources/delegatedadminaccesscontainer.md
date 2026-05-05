@@ -5,6 +5,7 @@ author: "koravvams"
 ms.localizationpriority: medium
 ms.subservice: partner-customer-administration
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # delegatedAdminAccessContainer resource type
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-An admin access container through which directory roles are assigned via an access assignment.
+An admin access container through which directory roles are [assigned via an access assignment](../resources/delegatedadminaccessassignment.md).
 
 ## Properties
 |Property|Type|Description|
@@ -25,7 +26,7 @@ An admin access container through which directory roles are assigned via an acce
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.delegatedAdminAccessContainer"

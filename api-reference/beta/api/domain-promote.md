@@ -1,10 +1,11 @@
 ---
 title: "domain: promote"
 description: "Promote a verified subdomain to the root domain."
-author: "franqq"
+author: "tafra00"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 10/25/2024
 ---
 
 # domain: promote
@@ -24,10 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "domain_promote" } -->
 [!INCLUDE [permissions-table](../includes/permissions/domain-promote-permissions.md)]
 
-The work or school account needs to belong to one of the following roles:
-
-* Global Administrator
-* Domain Name Administrator
+[!INCLUDE [rbac-domain-apis-write](../includes/rbac-for-apis/rbac-domain-apis-write.md)]
 
 ## HTTP request
 
@@ -68,10 +66,6 @@ POST https://graph.microsoft.com/beta/domains/contoso.com/promote
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/domain-promote-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/domain-promote-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

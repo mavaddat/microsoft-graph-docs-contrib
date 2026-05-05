@@ -1,10 +1,11 @@
 ---
 title: "driveItem: removeRetentionLabel"
-description: "Remove a retention label from a driveItem."
+description: "Remove the retention label from a driveItem."
 author: "kyracatwork"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 02/03/2026
 ---
 
 # driveItem: removeRetentionLabel
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Remove a retention label from a [driveItem](../resources/driveitem.md).
+Remove the retention label from a [driveItem](../resources/driveitem.md). This operation clears the retention label and all associated retention settings enforced on the item.
 
 For information about retention labels from an administrator's perspective, see [Use retention labels to manage the lifecycle of documents stored in SharePoint](/microsoft-365/compliance/auto-apply-retention-labels-scenario).
 
@@ -21,15 +22,16 @@ For information about retention labels from an administrator's perspective, see 
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-| Type                                   | Permissions (from least to most privileged)                                     |
-|:---------------------------------------|:--------------------------------------------------------------------------------|
-| Delegated (work or school account)     | Files.Read.All, Files.ReadWrite.All, Sites.ReadWrite.All, Sites.FullControl.All |
-| Delegated (personal Microsoft account) | Not supported.                                                                  |
-| Application                            | Files.Read.All, Files.ReadWrite.All, Sites.ReadWrite.All                        |
+<!-- { "blockType": "permissions", "name": "driveitem_removeretentionlabel" } -->
+[!INCLUDE [permissions-table](../includes/permissions/driveitem-removeretentionlabel-permissions.md)]
 
->**Note:** `Sites.FullControl.All` is the least privileged permission required to remove retention labels that classify the content as records.
+> [!NOTE]
+> * `Sites.FullControl.All` is the least privileged permission required to remove retention labels that classify the content as records in SharePoint Online and OneDrive.
+> * The removal of a *Record* retention label isn't supported when using app-only authentication. This operation requires a delegated user context.
+
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-driveitem-permissions.md)]
 
 ## HTTP request
 
@@ -38,8 +40,10 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 ```http
-DELETE /driveitem/retentionLabel
 DELETE /drives/{drive-id}/items/{item-id}/retentionLabel
+DELETE /groups/{group-id}/drive/items/{item-id}/retentionLabel
+DELETE /me/drive/items/{item-id}/retentionLabel
+DELETE /users/{user-id}/drive/items/{item-id}/retentionLabel
 ```
 
 ## Request headers
@@ -58,7 +62,11 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 
 ## Examples
 
-### Request
+### Example 1: Remove the retention label from a driveItem
+
+The following example shows how to remove the retention label from a **driveItem** object.
+
+#### Request
 
 The following example shows a request.
 
@@ -66,20 +74,16 @@ The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "driveItem_removeRetentionLabel",
-  "sampleKeys": ["22e064df-3562-4a3c-98c3-74721ca06aa0", "44d372fc-2eb6-4c85-8538-f3a0386a568f"]
+  "sampleKeys": ["b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7", "01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK"]
 }
 -->
 
 ```http
-DELETE https://graph.microsoft.com/beta/drives/22e064df-3562-4a3c-98c3-74721ca06aa0/items/44d372fc-2eb6-4c85-8538-f3a0386a568f/retentionLabel
+DELETE https://graph.microsoft.com/beta/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabel
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/driveitem-removeretentionlabel-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/driveitem-removeretentionlabel-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -108,7 +112,9 @@ DELETE https://graph.microsoft.com/beta/drives/22e064df-3562-4a3c-98c3-74721ca06
 
 ---
 
-### Response
+---
+
+#### Response
 
 The following example shows the response.
 
@@ -119,4 +125,81 @@ The following example shows the response.
 
 ```http
 HTTP/1.1 204 No Content
+```
+
+### Example 2: Remove the retention label from a driveItem that fails due to insufficient permissions
+
+The following example shows how to remove the retention label from a **driveItem** object that fails due to insufficient permissions.
+
+#### Request
+
+The following example shows a request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "driveItem_removeRetentionLabel_spe_permissions_error",
+  "sampleKeys": ["b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7", "01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK"]
+}
+-->
+
+```http
+DELETE https://graph.microsoft.com/beta/drives/b!t18F8ybsHUq1z3LTz8xvZqP8zaSWjkFNhsME-Fepo75dTf9vQKfeRblBZjoSQrd7/items/01NKDM7HMOJTVYMDOSXFDK2QJDXCDI3WUK/retentionLabel
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/driveitem-removeretentionlabel-spe-permissions-error-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/driveitem-removeretentionlabel-spe-permissions-error-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/driveitem-removeretentionlabel-spe-permissions-error-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/driveitem-removeretentionlabel-spe-permissions-error-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/driveitem-removeretentionlabel-spe-permissions-error-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/driveitem-removeretentionlabel-spe-permissions-error-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/driveitem-removeretentionlabel-spe-permissions-error-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+---
+
+#### Response
+The following example shows the response.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.error"
+} -->
+
+```http
+HTTP/1.1 403 Forbidden
+Content-Type: application/json
+
+{
+  "error": {
+    "@odata.type": "microsoft.graph.error",
+    "code": "accessDenied",
+    "message": "Access denied. You do not have sufficient permissions to perform this action.",
+    "innerError": {
+      "request-id": "12345678-1234-1234-1234-123456789012",
+      "date": "2025-02-03T10:30:00"
+    }
+  }
+}
 ```

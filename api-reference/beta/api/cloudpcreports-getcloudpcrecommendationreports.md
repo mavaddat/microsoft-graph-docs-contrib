@@ -1,13 +1,14 @@
 ---
-title: "cloudPcReports: getCloudPcRecommendationReports"
+title: "cloudPcReports: getCloudPcRecommendationReports (deprecated)"
 description: "Get the device recommendation reports for Cloud PCs, such as the usage category report."
 author: "XiaolouT"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
-# cloudPcReports: getCloudPcRecommendationReports
+# cloudPcReports: getCloudPcRecommendationReports (deprecated)
 
 Namespace: microsoft.graph
 
@@ -15,7 +16,10 @@ Namespace: microsoft.graph
 
 Get the device recommendation reports for Cloud PCs, such as the usage category report. The usage category report categorizes a Cloud PC as `Undersized`, `Oversized`, `Rightsized`, or `Underutilized`, and also provides the recommended SKU when the Cloud PC isn't `Rightsized`.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+>[!CAUTION] 
+> This API is deprecated and will stop returning data on July 01, 2025. Going forward, use the [retrieveCloudPcRecommendationReports](../api/cloudpcreports-retrievecloudpcrecommendationreports.md) API.
+
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -38,7 +42,7 @@ POST /deviceManagement/virtualEndpoint/reports/getCloudPcRecommendationReports
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
@@ -52,7 +56,7 @@ The following table shows the parameters that can be used with this action.
 |filter|String|OData `$filter` syntax. Supported filters are: `and`, `or`, `lt`, `le`, `gt`, `ge`, and `eq`.|
 |groupBy|String collection|Specifies how to group the reports. If used, must have the same content as the **select** parameter.|
 |orderBy|String collection|Specifies how to sort the reports.|
-|reportName|[cloudPcReportName](../resources/cloudpcexportjob.md#cloudpcreportname-values)|Specifies the report name. Supports a subset of the values for **cloudPcReportName**. Supported values are: `cloudPcUsageCategoryReports`.|
+|reportName|[cloudPcReportName](../resources/cloudpcreportname.md)|Specifies the report name. Supports only `cloudPcUsageCategoryReports` for **cloudPcReportName**.|
 |search|String|Specifies a String to search.|
 |select|String collection|OData `$select` syntax. The selected columns of the reports. |
 |skip|Int32|Number of records to skip.|
@@ -109,10 +113,6 @@ Content-length: 262
 [!INCLUDE [sample-code](../includes/snippets/csharp/cloudpcreportsthisgetcloudpcrecommendationreports-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/cloudpcreportsthisgetcloudpcrecommendationreports-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/cloudpcreportsthisgetcloudpcrecommendationreports-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -127,10 +127,6 @@ Content-length: 262
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/cloudpcreportsthisgetcloudpcrecommendationreports-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/cloudpcreportsthisgetcloudpcrecommendationreports-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -264,10 +260,6 @@ Content-length: 262
 [!INCLUDE [sample-code](../includes/snippets/csharp/cloudpcreportsthisgetcloudpcrecommendationreports-byusageinsight-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/cloudpcreportsthisgetcloudpcrecommendationreports-byusageinsight-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/cloudpcreportsthisgetcloudpcrecommendationreports-byusageinsight-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -282,10 +274,6 @@ Content-length: 262
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/cloudpcreportsthisgetcloudpcrecommendationreports-byusageinsight-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/cloudpcreportsthisgetcloudpcrecommendationreports-byusageinsight-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)

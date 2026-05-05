@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: apiPageType
 author: "namkedia"
 ms.subservice: "entra-sign-in"
+ms.date: 04/04/2024
 ---
 
 # List a userflowidentityproviders
@@ -24,10 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "b2cidentityuserflow_list_userflowidentityproviders" } -->
 [!INCLUDE [permissions-table](../includes/permissions/b2cidentityuserflow-list-userflowidentityproviders-permissions.md)]
 
-The work or school account needs to belong to one of the following roles:
-
-* Global administrator
-* External ID user flow administrator
+[!INCLUDE [rbac-b2xb2c-user-flows-apis](../includes/rbac-for-apis/rbac-b2xb2c-user-flows-apis.md)]
 
 ## HTTP request
 
@@ -72,10 +70,6 @@ GET https://graph.microsoft.com/beta/identity/b2cUserFlows/B2C_test_signin_signu
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-b2cuserflow-list-userflowidentityproviders-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-b2cuserflow-list-userflowidentityproviders-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

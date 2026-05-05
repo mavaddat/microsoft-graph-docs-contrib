@@ -4,14 +4,17 @@ description: "Get a GCP role in a GCP authorization system."
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get gcpRole
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Read the properties and relationships of a [gcpRole](../resources/gcprole.md) object in a GCP authorization system.
 
@@ -31,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/roles/{gcpRoleId}
 GET /external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/roles(externalId='{externalId}')
 ```
@@ -61,7 +64,7 @@ The following example shows a request.
   "name": "get_gcprole"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/roles/cm9sZXMvYmFja3VwZHIuY29tcHV0ZUVuZ2luZU9wZXJhdG9y
 ```
 
@@ -80,7 +83,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.gcpRole"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -104,4 +107,5 @@ Content-Type: application/json
   ]
 }
 ```
+
 

@@ -5,6 +5,7 @@ author: "jakeost-msft"
 ms.localizationpriority: medium
 ms.subservice: "search"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # Create acronym
@@ -12,6 +13,8 @@ doc_type: apiPageType
 Namespace: microsoft.graph.search
 
 Create a new [acronym](../resources/search-acronym.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -26,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /search/acronyms
 ```
 
@@ -34,7 +37,7 @@ POST /search/acronyms
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
@@ -48,7 +51,7 @@ The following table shows the properties that are available when you create an [
 |description|String|A brief description of the acronym that gives users more information about the acronym and what it stands for. Inherited from [searchAnswer](../resources/search-searchanswer.md).|
 |displayName|String|The actual short form or acronym. Inherited from [searchAnswer](../resources/search-searchanswer.md).|
 |standsFor|String|What the acronym stands for.|
-|state|microsoft.graph.search.answerState|State of the acronym. Possible values are: `published`, `draft`, `excluded`, `unknownFutureValue`.|
+|state|microsoft.graph.search.answerState|State of the acronym. The possible values are: `published`, `draft`, `excluded`, `unknownFutureValue`.|
 |webUrl|String|The URL of the page or website where users can go for more information about the acronym. Inherited from [searchAnswer](../resources/search-searchanswer.md).|
 
 ## Response
@@ -81,10 +84,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-acronym-from-acronyms-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-acronym-from-acronyms-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

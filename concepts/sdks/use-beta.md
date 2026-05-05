@@ -3,6 +3,8 @@ title: "Use the Microsoft Graph SDKs with the beta API"
 description: "Describes how to use the Microsoft Graph SDKs with the beta version of the API."
 ms.localizationpriority: medium
 author: jasonjoh
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 <!-- markdownlint-disable MD051 -->

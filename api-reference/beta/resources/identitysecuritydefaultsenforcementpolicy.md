@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "Sammak"
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # identitySecurityDefaultsEnforcementPolicy resource type
@@ -39,7 +40,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

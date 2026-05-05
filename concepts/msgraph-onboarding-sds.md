@@ -5,6 +5,9 @@ ms.localizationpriority: medium
 author: "cristobal-buenrostro"
 ms.subservice: "education"
 doc_type: conceptualPageType
+ms.date: 11/07/2024
+ms.custom: sfi-image-nochange, sfi-ga-nochange
+ms.topic: how-to
 ---
 
 # Set up School Data Sync
@@ -44,6 +47,7 @@ To access the School Data Sync admin portal, launch a private web browser, go to
     ![Screenshot of the profile page](./images/msgraph-onboarding/sds10-settingup.png)
 
 
-## Next steps
+## Next step
 
-- [Set up Microsoft Teams](/graph/msgraph-onboarding-msteams) to set up classes (optional).
+> [!div class="nextstepaction"]
+> [Set up Microsoft Teams to set up classes](/graph/msgraph-onboarding-msteams)

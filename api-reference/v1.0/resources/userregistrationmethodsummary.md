@@ -5,6 +5,8 @@ author: "kvenkit"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: resourcePageType
+ms.date: 07/22/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # userRegistrationMethodSummary resource type
@@ -17,7 +19,7 @@ Represents the summary of number of users registered for each authentication met
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
-| [usersRegisteredByMethod](../api/authenticationmethodsroot-usersregisteredbymethod.md) | [userRegistrationMethodSummary](../resources/userregistrationmethodsummary.md) | Get the number of users registered for each authentication method. |
+| [List](../api/authenticationmethodsroot-usersregisteredbymethod.md) | [userRegistrationMethodSummary](../resources/userregistrationmethodsummary.md) | Get the number of users registered for each authentication method. |
 
 ## Properties
 
@@ -25,10 +27,10 @@ Represents the summary of number of users registered for each authentication met
 |:---|:---|:---|
 |totalUserCount|Int64|Total number of users in the tenant.|
 |userRegistrationMethodCounts|[userRegistrationMethodCount](../resources/userregistrationmethodcount.md) collection|Number of users registered for each authentication method.|
-|userRoles|includedUserRoles|The role type of the user. Possible values are: `all`, `privilegedAdmin`, `admin`, `user`, `unknownFutureValue`.|
-|userTypes|includedUserTypes|User type. Possible values are: `all`, `member`, `guest`, `unknownFutureValue`.|
+|userRoles|includedUserRoles|The role type of the user. The possible values are: `all`, `privilegedAdmin`, `admin`, `user`, `unknownFutureValue`.|
+|userTypes|includedUserTypes|User type. The possible values are: `all`, `member`, `guest`, `unknownFutureValue`.|
 
-The value `privilegedAdmin` consists of the following privileged admin roles:
+The value `privilegedAdmin` consists of the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
 
 * Global Administrator
 * Security Administrator
@@ -48,7 +50,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

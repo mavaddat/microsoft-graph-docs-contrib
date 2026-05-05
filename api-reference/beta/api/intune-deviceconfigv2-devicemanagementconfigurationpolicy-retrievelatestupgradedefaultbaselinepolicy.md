@@ -2,16 +2,17 @@
 title: "retrieveLatestUpgradeDefaultBaselinePolicy function"
 description: "Intune Deviceconfigv2 Devicemanagementconfigurationpolicy Retrievelatestupgradedefaultbaselinepolicy Api ."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # retrieveLatestUpgradeDefaultBaselinePolicy function
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -24,16 +25,16 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|DeviceManagementConfiguration.Read.All|
+|Delegated (work or school account)|DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All, DeviceManagementEndpointSecurity.Read.All, DeviceManagementEndpointSecurity.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|DeviceManagementConfiguration.Read.All|
+|Application|DeviceManagementConfiguration.Read.All, DeviceManagementConfiguration.ReadWrite.All, DeviceManagementEndpointSecurity.Read.All, DeviceManagementEndpointSecurity.ReadWrite.All|
 
 ## HTTP Request
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicyId}/retrieveLatestUpgradeDefaultBaselinePolicy
 GET /deviceManagement/reusablePolicySettings/{deviceManagementReusablePolicySettingId}/referencingConfigurationPolicies/{deviceManagementConfigurationPolicyId}/retrieveLatestUpgradeDefaultBaselinePolicy
 ```
@@ -54,16 +55,16 @@ If successful, this function returns a `200 OK` response code and a [deviceManag
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 GET https://graph.microsoft.com/beta/deviceManagement/configurationPolicies/{deviceManagementConfigurationPolicyId}/retrieveLatestUpgradeDefaultBaselinePolicy
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 1050
+Content-Length: 1098
 
 {
   "value": {
@@ -81,6 +82,7 @@ Content-Length: 1050
       "Role Scope Tag Ids value"
     ],
     "isAssigned": true,
+    "disableEntraGroupPolicyAssignment": true,
     "templateReference": {
       "@odata.type": "microsoft.graph.deviceManagementConfigurationPolicyTemplateReference",
       "templateId": "Template Id value",

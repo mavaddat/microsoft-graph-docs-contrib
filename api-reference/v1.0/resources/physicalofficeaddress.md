@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "dkershaw10"
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # physicalOfficeAddress resource type
@@ -26,7 +27,7 @@ Represents the business address of a resource such as an organizational contact.
 
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

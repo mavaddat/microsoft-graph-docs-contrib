@@ -5,6 +5,7 @@ author: "benmicrosoft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Create virtualAppointment (deprecated)
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PUT /me/onlineMeetings/{onlineMeetingId}/virtualAppointment
 PUT /users/{userId}/onlineMeetings/{onlineMeetingId}/virtualAppointment
 ```
@@ -75,7 +76,7 @@ The following example shows a request.
   "sampleKeys": ["MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi"]
 }
 -->
-``` http
+```http
 PUT https://graph.microsoft.com/beta/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi/virtualAppointment
 Content-Type: application/json
 ETag: W/"ZfYdV7Meckeip07P//nwjAAADyI7NQ=="
@@ -115,7 +116,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.virtualAppointment"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

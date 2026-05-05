@@ -2,9 +2,10 @@
 title: "wipeManagedAppRegistrationsByDeviceTag action"
 description: "Issues a wipe operation on an app registration with specified device tag."
 author: "jaiprakashmb"
-localization_priority: Normal
-ms.subservice: "intune"
+ms.localizationpriority: medium
+ms.prod: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # wipeManagedAppRegistrationsByDeviceTag action
@@ -17,9 +18,7 @@ Namespace: microsoft.graph
 
 Issues a wipe operation on an app registration with specified device tag.
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-## Permissions
+        ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
@@ -31,13 +30,15 @@ One of the following permissions is required to call this API. To learn more, in
 |Application||
 | &nbsp; &nbsp; **MAM** | DeviceManagementApps.ReadWrite.All|
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## HTTP Request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /users/{usersId}/wipeManagedAppRegistrationsByDeviceTag
 ```
 
@@ -68,7 +69,7 @@ If successful, this action returns a `204 No Content` response code.
 
 Here is an example of the request.
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/users/{usersId}/wipeManagedAppRegistrationsByDeviceTag
 
 Content-type: application/json
@@ -83,6 +84,6 @@ Content-length: 39
 
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

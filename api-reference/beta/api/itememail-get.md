@@ -3,8 +3,9 @@ title: "Get itemEmail"
 description: "Retrieve the properties and relationships of an itemEmail object."
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 06/10/2024
 ---
 
 # Get itemEmail
@@ -58,16 +59,12 @@ If successful, this method returns a `200 OK` response code and an [itemEmail](.
   "name": "get_itememail"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/users/{userId}/profile/emails/{id}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-itememail-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-itememail-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -104,7 +101,7 @@ GET https://graph.microsoft.com/beta/users/{userId}/profile/emails/{id}
   "@odata.type": "microsoft.graph.itemEmail"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

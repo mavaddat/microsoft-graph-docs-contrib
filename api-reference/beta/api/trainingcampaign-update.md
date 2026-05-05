@@ -3,8 +3,9 @@ title: "Update trainingCampaign"
 description: "Update the properties of a trainingCampaign object."
 author: "akgraph"
 ms.localizationpriority: medium
-ms.prod: "security"
+ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 
 # Update trainingCampaign
@@ -15,15 +16,13 @@ Namespace: microsoft.graph
 
 Update the properties of a [trainingCampaign](../resources/trainingcampaign.md) object.
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- {
-  "blockType": "permissions",
-  "name": "trainingcampaign-update-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "trainingcampaign_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/trainingcampaign-update-permissions.md)]
 
 ## HTTP request
@@ -32,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /security/attackSimulation/trainingCampaigns/{trainingCampaignId}
 ```
 
@@ -70,12 +69,13 @@ The following example shows how to update the status of the training campaign. I
 
 ### Request
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_trainingcampaign"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/security/attackSimulation/trainingCampaigns/{trainingCampaignId}
 Content-Type: application/json
 
@@ -137,6 +137,32 @@ Content-Type: application/json
     }
 }
 ```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/update-trainingcampaign-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/update-trainingcampaign-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/update-trainingcampaign-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/update-trainingcampaign-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/update-trainingcampaign-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/update-trainingcampaign-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

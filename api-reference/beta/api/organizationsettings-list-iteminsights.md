@@ -1,10 +1,11 @@
 ---
-title: "List itemInsights"
+title: "List itemInsights (deprecated)"
 description: "Retrieve properties of insightsSettings object for displaying or returning item insights in an organization."
 author: "simonhult"
 ms.localizationpriority: medium
 ms.subservice: "insights"
 doc_type: "apiPageType"
+ms.date: 04/04/2024
 ---
 
 # List itemInsights
@@ -13,10 +14,11 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [organizationiteminsights-deprecate](../../includes/organizationiteminsights-deprecate.md)]
+
 Get the properties of an [insightsSettings](../resources/insightssettings.md) object for displaying or returning item insights in an organization.
 
 To learn how to customize the privacy of item insights in an organization, see [Customize item insights privacy](/graph/insights-customize-item-insights-privacy). 
-
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -65,10 +67,6 @@ GET https://graph.microsoft.com/beta/organization/{organizationId}/settings/item
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-insightssettingsrequest-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-insightssettingsrequest-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

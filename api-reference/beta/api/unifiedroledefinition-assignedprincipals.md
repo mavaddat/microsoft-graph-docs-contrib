@@ -6,6 +6,7 @@ ms.reviewer: msodsrbac
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 07/26/2024
 ---
 
 # unifiedRoleDefinition: assignedPrincipals
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Get the list of security principals (users, groups, and service principals) that are assigned to a specific role for different scopes either directly or transitively. You can use the `$count` query parameter to also get the count.
+
+This API is supported for the directory (Microsoft Entra ID) provider only.
 
 To list the direct and transitive role assignments for a specific principal, use the [List transitiveRoleAssignments](rbacapplication-list-transitiveroleassignments.md) API.
 
@@ -25,10 +28,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "unifiedroledefinition_assignedprincipals" } -->
 [!INCLUDE [permissions-table](../includes/permissions/unifiedroledefinition-assignedprincipals-permissions.md)]
 
-If the caller doesn't have the permission to read properties for some of the objects included in the result set, the response follows the [limited information returned for inaccessible member objects](/graph/permissions-overview#limited-information-returned-for-inaccessible-member-objects) pattern.
+[!INCLUDE [rbac-role-definition-apis-read](../includes/rbac-for-apis/rbac-role-definition-apis-read.md)]
 
-To read the properties that may require permissions for the object, grant the permissions to retrieve information about the object. For more information, see permissions for [users](user-list.md#permissions), [groups](group-list.md#permissions), and [service principals](serviceprincipal-list.md#permissions).
-
+[!INCLUDE [limited-info](../../includes/limited-info.md)]
 
 ## HTTP request
 
@@ -36,7 +38,7 @@ To read the properties that may require permissions for the object, grant the pe
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /roleManagement/directory/roleDefinitions/{unifiedRoleDefinitionId}/assignedPrincipals(transitive=@transitive,directoryScopeType='@directoryScopeType',directoryScopeId='@directoryScopeId')
 ```
 
@@ -149,7 +151,7 @@ Based on the same scenario, the following examples show the counts that are retu
   "name": "unifiedroledefinition_assignedprincipals_scope_role"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals(directoryScopeType='administrativeUnit', directoryScopeId ='d0c2e067-9ae9-4dbf-a280-51a51c46f432')
 ```
 
@@ -167,7 +169,7 @@ GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/64
   "@odata.type": "Collection(microsoft.graph.directoryObject)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -192,7 +194,7 @@ Content-Type: application/json
   "name": "unifiedroledefinition_assignedprincipals_allscopes"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals
 ```
 
@@ -210,7 +212,7 @@ GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/64
   "@odata.type": "Collection(microsoft.graph.directoryObject)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -252,7 +254,7 @@ Content-Type: application/json
   "name": "unifiedroledefinition_assignedprincipals_scope"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals(directoryScopeType='tenant')/microsoft.graph.user
 ```
 
@@ -270,7 +272,7 @@ GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/64
   "@odata.type": "Collection(microsoft.graph.directoryObject)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -298,7 +300,7 @@ The following example gets the directly assigned principals and displays an inli
   "name": "unifiedroledefinition_assignedprincipals_minimumpermission_count"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/644ef478-e28f-4e28-b9dc-3fdde9aa0b1f/assignedPrincipals?$count=true
 ```
 
@@ -316,7 +318,7 @@ GET https://graph.microsoft.com/beta/roleManagement/directory/roleDefinitions/64
   "@odata.type": "Collection(microsoft.graph.directoryObject)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

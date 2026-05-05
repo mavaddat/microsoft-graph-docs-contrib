@@ -1,10 +1,11 @@
 ---
 title: "List entries"
 description: "Get a list of catalogEntry resources from the catalog."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: windows-update-business
+ms.subservice: windows-autopatch
 doc_type: apiPageType
+ms.date: 01/27/2026
 ---
 
 # List entries
@@ -16,7 +17,7 @@ Get a list of [catalogEntry](../resources/windowsupdates-catalogentry.md) resour
 
 Currently, this operation returns entries of the [featureUpdateCatalogEntry](../resources/windowsupdates-featureupdatecatalogentry.md) or [qualityUpdateCatalog](../resources/windowsupdates-qualityupdatecatalogentry.md) types, inherited from **catalogEntry**. 
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/windows/updates/catalog/entries
 ```
 ## Optional query parameters
@@ -64,16 +65,12 @@ The following example shows a request.
   "name": "list_catalogentry"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/windows/updates/catalog/entries
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-catalogentry-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-catalogentry-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -112,7 +109,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.windowsUpdates.catalogEntry)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -121,10 +118,10 @@ Content-Type: application/json
     {
       "@odata.type": "#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry",
       "id": "c1dec151-c151-c1de-51c1-dec151c1dec1",
-      "displayName": "String",
-      "releaseDateTime": "String (timestamp)",
-      "deployableUntilDateTime": "String (timestamp)",
-      "version": "String"
+      "displayName": "Test security updates",
+      "releaseDateTime": "2023-07-11T00:00:00Z",
+      "deployableUntilDateTime": "2023-07-11T00:00:00Z",
+      "version": "v2"
     },
     {
       "@odata.type": "#microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry",

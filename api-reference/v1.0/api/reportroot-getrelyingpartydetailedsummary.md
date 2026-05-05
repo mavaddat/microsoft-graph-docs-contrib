@@ -3,8 +3,9 @@ title: "reportRoot: getRelyingPartyDetailedSummary"
 description: "Get a summary of AD FS relying parties information."
 author: "gmcnamara-microsoft"
 ms.localizationpriority: medium
-ms.prod: "identity-and-access-reports"
+ms.subservice: entra-monitoring-health
 doc_type: apiPageType
+ms.date: 06/25/2024
 ---
 
 # reportRoot: getRelyingPartyDetailedSummary
@@ -13,6 +14,8 @@ Namespace: microsoft.graph
 
 
 Get a summary of AD FS relying parties information.
+
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -25,19 +28,20 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/reportroot-getrelyingpartydetailedsummary-permissions.md)]
 
+[!INCLUDE [rbac-usage-insights-apis](../includes/rbac-for-apis/rbac-usage-insights-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /reports/getRelyingPartyDetailedSummary(period='parameterValue')
 ```
 
 ## Function parameters
 In the request URL, provide the following query parameters with values.
-The following table lists the parameters that are required when you call this function.
 
 ## Optional query parameters
 
@@ -52,7 +56,7 @@ This method supports the `$filter` and `$orderby` OData query parameters to help
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -67,15 +71,45 @@ If successful, this function returns a `200 OK` response code and a [relyingPart
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "reportrootthis.getrelyingpartydetailedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/reports/getRelyingPartyDetailedSummary(period='D7')
 ```
 
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/reportrootthisgetrelyingpartydetailedsummary-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/reportrootthisgetrelyingpartydetailedsummary-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/reportrootthisgetrelyingpartydetailedsummary-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/reportrootthisgetrelyingpartydetailedsummary-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/reportrootthisgetrelyingpartydetailedsummary-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/reportrootthisgetrelyingpartydetailedsummary-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/reportrootthisgetrelyingpartydetailedsummary-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
@@ -87,7 +121,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.relyingPartyDetailedSummary)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

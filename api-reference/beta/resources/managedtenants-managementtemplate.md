@@ -5,6 +5,7 @@ author: "idwilliams"
 ms.localizationpriority: medium
 ms.subservice: "m365-lighthouse"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # managementTemplate resource type
@@ -18,13 +19,13 @@ Represents a group of actions and setting that can be performed against a manage
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List managementTemplates](../api/managedtenants-managedtenant-list-managementtemplates.md)|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md) collection|Get a list of the [managementTemplate](../resources/managedtenants-managementtemplate.md) objects and their properties.|
-|[Get managementTemplate](../api/managedtenants-managementtemplate-get.md)|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md)|Read the properties and relationships of a [managementTemplate](../resources/managedtenants-managementtemplate.md) object.|
+|[List management templates](../api/managedtenants-managedtenant-list-managementtemplates.md)|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md) collection|Get a list of the [managementTemplate](../resources/managedtenants-managementtemplate.md) objects and their properties.|
+|[Get management template](../api/managedtenants-managementtemplate-get.md)|[microsoft.graph.managedTenants.managementTemplate](../resources/managedtenants-managementtemplate.md)|Read the properties and relationships of a [managementTemplate](../resources/managedtenants-managementtemplate.md) object.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|category|managementCategory|The management category for the management template. Possible values are: `custom`, `devices`, `identity`, `unknownFutureValue`. Required. Read-only.|
+|category|managementCategory|The management category for the management template. The possible values are: `custom`, `devices`, `identity`, `unknownFutureValue`. Required. Read-only.|
 |description|String|The description for the management template. Optional. Read-only.|
 |displayName|String|The display name for the management template. Required. Read-only.|
 |id|String|The unique identifier for the management template. Required. Read-only.|
@@ -35,7 +36,7 @@ Represents a group of actions and setting that can be performed against a manage
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

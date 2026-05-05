@@ -5,13 +5,15 @@ ms.localizationpriority: medium
 author: "ruoyingl"
 ms.subservice: excel
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # json resource type 
 
 Namespace: microsoft.graph
 
-Represents data returned in JSON format for Excel.
+Represents data returned in JSON format by Microsoft Graph. This object is a shared resource.
+
 ## Properties
 None.
 
@@ -19,7 +21,7 @@ None.
 None.
 
 ## JSON Representation
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!--{
   "blockType": "resource",
   "@odata.type": "microsoft.graph.Json"

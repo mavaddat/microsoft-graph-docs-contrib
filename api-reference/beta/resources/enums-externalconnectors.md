@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.subservice: "search"
 ms.author: "emzho"
 author: "emzho"
+ms.date: 03/06/2024
 ---
 
 # External connectors enum values
@@ -31,7 +32,6 @@ Namespace: microsoft.graph.externalConnectors
 | externalGroup
 | unknownFutureValue
 
-
 ### connectionOperationStatus values
 
 | Member
@@ -41,7 +41,6 @@ Namespace: microsoft.graph.externalConnectors
 | completed
 | failed
 | unknownFutureValue
-
 
 ### connectionState values
 
@@ -53,7 +52,28 @@ Namespace: microsoft.graph.externalConnectors
 | limitExceeded
 | unknownFutureValue
 
+### contentCategory values
+
+| Member
+|:----------
+| uncategorized
+| knowledgeBase
+| wikis
+| fileRepository
+| qna
+| crm
+| dashboard
+| people
+| media
+| email
+| messaging
+| meetingTranscripts
+| taskManagement
+| learningManagement
+| unknownFutureValue
+
 ### contentExperienceType values
+
 | Member
 |:--------------
 | search
@@ -129,6 +149,25 @@ Namespace: microsoft.graph.externalConnectors
 | iconUrl
 | containerName
 | containerUrl
+| personEmails
+| personAddresses
+| personAnniversaries
+| personName
+| personNote
+| personPhones
+| personCurrentPosition
+| personWebAccounts
+| personWebSite
+| personSkills
+| personProjects
+| personAccount
+| personAwards
+| personCertifications
+| personAssistants
+| personColleagues
+| personManager
+| personAlternateContacts
+| personEmergencyContacts
 
 
 ### propertyType values
@@ -145,6 +184,8 @@ Namespace: microsoft.graph.externalConnectors
 | doubleCollection
 | dateTimeCollection
 | unknownFutureValue
+| principal
+| principalCollection
 
 ### ruleOperation values
 

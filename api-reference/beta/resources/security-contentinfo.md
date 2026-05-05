@@ -5,6 +5,7 @@ author: "tommoser"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # contentInfo resource type
@@ -18,7 +19,7 @@ Represents the current state of some information that is to be labeled. **conten
 ## Properties
 | Property      | Type                                                                                      | Description                                                                                                                     |
 | :------------ | :---------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
-| contentFormat | String                                                                                    | The format of the content to be labeled. Possible values are: `file`, `email`.                                                                     |
+| contentFormat | String                                                                                    | The format of the content to be labeled. The possible values are: `file`, `email`.                                                                     |
 | identifier    | String                                                                                    | Identifier used for Azure Information Protection Analytics.                                                                     |
 | metadata      | [keyValuePair](../resources/security-keyvaluepair.md) collection | Existing Microsoft Purview Information Protection metadata is passed as key-value pairs, where the key is the `MSIP_Label_GUID_PropName`. |
 | state         | contentState                                                                              | The usage state of the content. The possible values are: `rest`, `motion`, or `use`.                                                                                |
@@ -27,7 +28,7 @@ Represents the current state of some information that is to be labeled. **conten
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.contentInfo"
@@ -37,7 +38,6 @@ The following is a JSON representation of the resource.
 {
   "@odata.type": "#microsoft.graph.security.contentInfo",
   "contentFormat": "String",
-  "format": "String",
   "identifier": "String",
   "metadata": [
     {

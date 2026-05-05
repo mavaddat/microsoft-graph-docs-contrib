@@ -2,9 +2,10 @@
 title: "Update softwareUpdateStatusSummary"
 description: "Update the properties of a softwareUpdateStatusSummary object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update softwareUpdateStatusSummary
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
 Update the properties of a [softwareUpdateStatusSummary](../resources/intune-deviceconfig-softwareupdatestatussummary.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
@@ -29,7 +32,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceManagement/softwareUpdateStatusSummary
 ```
 
@@ -72,10 +75,7 @@ If successful, this method returns a `200 OK` response code and an updated [soft
 
 ### Request
 Here is an example of the request.
-
-# [HTTP](#tab/http)
-<!-- { "blockType": "request" , "name" : "intune_deviceconfig_softwareupdatestatussummary_update_update_softwareupdatestatussummary" }-->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/deviceManagement/softwareUpdateStatusSummary
 Content-type: application/json
 Content-length: 518
@@ -100,17 +100,9 @@ Content-length: 518
 }
 ```
 
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/intune-deviceconfig-softwareupdatestatussummary-update-update-softwareupdatestatussummary-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-
-<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.softwareUpdateStatusSummary" }-->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 567

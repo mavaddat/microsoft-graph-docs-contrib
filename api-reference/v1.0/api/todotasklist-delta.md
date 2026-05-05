@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "avijityadav"
 ms.subservice: "outlook"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # todoTaskList: delta
@@ -55,7 +56,7 @@ _id_ property is always returned.
 ## Request headers
 | Name       | Type | Description |
 |:---------------|:----------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type  | string  | application/json. Required. |
 | Prefer | string  | odata.maxpagesize={x}. Optional. |
 
@@ -77,16 +78,12 @@ The main differences between tracking **todoTaskList** and tracking **todoTask**
   "name": "todotasklistdelta"
 }-->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/me/todo/lists/delta
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/todotasklistdelta-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/todotasklistdelta-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: teams
 author: "billbliss"
+ms.date: 07/22/2024
 ---
 
 # operation resource type
@@ -26,7 +27,7 @@ None.
 | createdDateTime    | DateTimeOffset  | The start time of the operation.                                                |
 | id                 | String          | The operation ID. Read-only. Server generated.                                  |
 | lastActionDateTime | DateTimeOffset  | The time of the last action of the operation.                                   |
-| status             | String          | Possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only. |
+| status             | String          | The possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only. |
 
 ## Relationships
 
@@ -34,7 +35,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!--{
   "blockType": "resource",

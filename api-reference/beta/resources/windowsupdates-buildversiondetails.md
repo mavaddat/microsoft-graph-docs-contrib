@@ -1,10 +1,11 @@
 ---
 title: "buildVersionDetails resource type"
-description: "Represents the build version details of a product revision that is associated with a quality update."
-author: "angiechen22"
+description: "Represents the build version details of a product revision that is associated with an update."
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: windows-update-business
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 01/27/2026
 ---
 
 # buildVersionDetails resource type
@@ -30,7 +31,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

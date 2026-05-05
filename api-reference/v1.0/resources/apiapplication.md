@@ -4,14 +4,15 @@ description: "Specifies settings for a Web API application."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "sureshja"
+author: "Jackson-Woods"
+ms.date: 04/03/2024
 ---
 
 # apiApplication resource type
 
 Namespace: microsoft.graph
 
-Specifies settings for an application that implements a web API.
+Specifies settings for an [application](application.md) that implements a web API.
 
 ## Properties
 
@@ -25,7 +26,7 @@ Specifies settings for an application that implements a web API.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

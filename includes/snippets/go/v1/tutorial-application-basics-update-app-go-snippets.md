@@ -5,15 +5,15 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```go
 
 
+// Code snippets are only available for the latest major version. Current major version is $v1.*
+
+// Dependencies
 import (
 	  "context"
 	  msgraphsdk "github.com/microsoftgraph/msgraph-sdk-go"
 	  graphmodels "github.com/microsoftgraph/msgraph-sdk-go/models"
 	  //other-imports
 )
-
-graphClient := msgraphsdk.NewGraphServiceClientWithCredentials(cred, scopes)
-
 
 requestBody := graphmodels.NewApplication()
 tags := []string {
@@ -23,7 +23,7 @@ tags := []string {
 }
 requestBody.SetTags(tags)
 info := graphmodels.NewInformationalUrl()
-logoUrl := "https://cdn.pixabay.com/photo/2016/03/21/23/25/link-1271843_1280.png"
+logoUrl := "https://cdn.contoso.com/photo/2016/03/21/23/25/link-1271843_1280.png"
 info.SetLogoUrl(&logoUrl) 
 marketingUrl := "https://www.contoso.com/app/marketing"
 info.SetMarketingUrl(&marketingUrl) 
@@ -47,6 +47,7 @@ requestBody.SetWeb(web)
 serviceManagementReference := "Owners aliases: Finance @ contosofinance@contoso.com; The Phone Company HR consulting @ hronsite@thephone-company.com;"
 requestBody.SetServiceManagementReference(&serviceManagementReference) 
 
+// To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go
 applications, err := graphClient.Applications().ByApplicationId("application-id").Patch(context.Background(), requestBody, nil)
 
 

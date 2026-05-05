@@ -1,20 +1,20 @@
 ---
 title: "Create application"
 description: "Create a new application."
-author: "sureshja"
+author: "Jackson-Woods"
 ms.localizationpriority: high
 doc_type: apiPageType
 ms.subservice: "entra-applications"
+ms.date: 05/14/2024
 ---
 
 # Create application
 
 Namespace: microsoft.graph
 
-Create a new [application](../resources/application.md) object.
+Create a new [application](../resources/application.md) object. This API can also create an [agentIdentityBlueprint](../resources/agentidentityblueprint.md) object when the **@odata.type** property is set to `#microsoft.graph.agentIdentityBlueprint`.
 
 > [!IMPORTANT]
-> Adding [**passwordCredential**](../resources/passwordcredential.md) when creating applications is not supported. Use the [addPassword](application-addpassword.md) method to add passwords or secrets for an application.
 >
 > Do not share application client IDs (**appId**) in API documentation or code samples.
 
@@ -26,6 +26,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "application_post_applications" } -->
 [!INCLUDE [permissions-table](../includes/permissions/application-post-applications-permissions.md)]
+
+[!INCLUDE [rbac-application-apis-write](../includes/rbac-for-apis/rbac-application-apis-write.md)]
 
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
@@ -40,14 +42,19 @@ POST /applications
 | Content-Type   | application/json. Required.|
 
 ## Request body
-In the request body, supply a JSON representation of [application](../resources/application.md) object. The request body must contain  **displayName**, which is a required property.
+In the request body, supply a JSON representation of [application](../resources/application.md) object. The request body must contain  **displayName**, which is a required property. To create an [agentIdentityBlueprint](../resources/agentidentityblueprint.md), also set the **@odata.type** property to `#microsoft.graph.agentIdentityBlueprint`.
+
+You can optionally set the **managerApplications** property when creating an [agentIdentityBlueprint](../resources/agentidentityblueprint.md). This property is only supported on agent identity blueprint objects. Setting **managerApplications** on non-agent-blueprint applications returns a `400 Bad Request` error. Only Microsoft first-party application IDs can be added as managers; adding a third-party application returns a `400 Bad Request` error. The maximum allowed is 10 manager applications; exceeding this limit returns a `400 Bad Request` error.
 
 ## Response
 
-If successful, this method returns `201 Created` response code and an [application](../resources/application.md) object in the response body.
+If successful, this method returns `201 Created` response code and an [application](../resources/application.md) or [agentIdentityBlueprint](../resources/agentidentityblueprint.md) object in the response body.
 
 ## Examples
-### Request
+
+### Example 1: Create an application with the default settings
+
+#### Request
 The following example shows a request.
 
 
@@ -67,10 +74,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-application-from-applications-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-application-from-applications-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -99,7 +102,7 @@ Content-type: application/json
 
 ---
 
-### Response
+#### Response
 The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
@@ -164,6 +167,106 @@ Content-type: application/json
             "enableIdTokenIssuance": false,
             "enableAccessTokenIssuance": false
         }
+    }
+}
+```
+
+### Example 2: Create a new application and add a password secret
+
+#### Request
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_application_with_passwordcredentials"
+}-->
+```http
+POST https://graph.microsoft.com/v1.0/applications
+Content-type: application/json
+
+{
+  "displayName": "MyAppName",
+  "passwordCredentials": [
+    {
+      "displayName": "Password name"
+    }
+  ]
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-application-with-passwordcredentials-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-application-with-passwordcredentials-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-application-with-passwordcredentials-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-application-with-passwordcredentials-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-application-with-passwordcredentials-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-application-with-passwordcredentials-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-application-with-passwordcredentials-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response. The **secretText** property in the response object contains the strong passwords or secret generated by Microsoft Entra ID and is 16-64 characters in length. There is no way to retrieve this password in the future.
+
+> **Note**: The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.passwordCredential"
+} -->
+
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#applications/$entity",
+    "id": "83ab4737-da9d-4084-86f2-f8fbec220647",
+    "deletedDateTime": null,
+    "appId": "9519e58c-bd06-4120-a7fd-2220d4de8409",
+    "applicationTemplateId": null,
+    "disabledByMicrosoftStatus": null,
+    "createdDateTime": "2024-04-01T19:10:02.6626202Z",
+    "displayName": "MyAppName",
+    "description": null,
+    "keyCredentials": [],
+    "parentalControlSettings": {
+        "countriesBlockedForMinors": [],
+        "legalAgeGroupRule": "Allow"
+    },
+    "passwordCredentials": [
+        {
+            "customKeyIdentifier": null,
+            "displayName": "Password name",
+            "endDateTime": "2026-04-01T19:10:02.6576213Z",
+            "hint": "puE",
+            "keyId": "09a0c91a-1bc3-4eaf-a945-c88c041fad6c",
+            "secretText": "1234567890abcdefghijklmnopqrstuvwxyzabcd",
+            "startDateTime": "2024-04-01T19:10:02.6576213Z"
+        }
+    ],
+    "publicClient": {
+        "redirectUris": []
     }
 }
 ```

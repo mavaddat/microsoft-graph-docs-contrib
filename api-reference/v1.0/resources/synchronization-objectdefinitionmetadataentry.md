@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 author: "ArvindHarinder1"
 ms.subservice: "entra-applications"
+ms.date: 07/22/2024
 ---
 
 # objectDefinitionMetadataEntry resource type
@@ -16,7 +17,7 @@ Metadata for the given object.
 ## Properties
 | Property       | Type    |Description|
 |:---------------|:--------|:----------|
-|key|objectDefinitionMetadata|Possible values are: `PropertyNameAccountEnabled`, `PropertyNameSoftDeleted`, `IsSoftDeletionSupported`, `IsSynchronizeAllSupported`, `ConnectorDataStorageRequired`, `Extensions`, `LinkTypeName`. |
+|key|objectDefinitionMetadata|The possible values are: `PropertyNameAccountEnabled`, `PropertyNameSoftDeleted`, `IsSoftDeletionSupported`, `IsSynchronizeAllSupported`, `ConnectorDataStorageRequired`, `Extensions`, `LinkTypeName`. |
 |value|String|Value of the metadata property.|
 
 ### Supported key-value pairs
@@ -32,7 +33,7 @@ Metadata for the given object.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.objectDefinitionMetadataEntry"

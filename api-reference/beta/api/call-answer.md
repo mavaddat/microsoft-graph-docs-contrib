@@ -5,6 +5,7 @@ author: "rahulva-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 09/17/2024
 ---
 
 # call: answer
@@ -13,9 +14,23 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Enable a bot to answer an incoming [call](../resources/call.md). The incoming call request can be an invite from a participant in a group call or a peer-to-peer call. If an invite to a group call is received, the notification contains the [chatInfo](../resources/chatinfo.md) and [meetingInfo](../resources/meetinginfo.md) parameters.
+Enable a bot to answer an incoming [call](../resources/call.md). The incoming call request can be an invitation from a participant in a group call or a peer-to-peer call. If an invitation to a group call is received, the notification contains the [chatInfo](../resources/chatinfo.md) and [meetingInfo](../resources/meetinginfo.md) parameters.
 
 The bot is expected to answer, [reject](./call-reject.md) or [redirect](./call-redirect.md) the call before the call times out. The current timeout value is 15 seconds. The current timeout value is 15 seconds for regular scenarios, and 5 seconds for policy-based recording scenarios.
+
+This API supports the following PSTN scenarios:
+
++ Incoming call to bot's PSTN number and then bot invites another PSTN.
++ Incoming call to bot's PSTN number and then bot transfer to another PSTN.
++ Incoming call to bot's PSTN number and then bot redirects to another PSTN.
++ Incoming call to bot's instance identifier and then bot invites another PSTN.
++ Incoming call to bot's instance identifier and then bot transfer to another PSTN.
++ Incoming call to bot's instance identifier and then bot redirects to another PSTN.
++ Incoming call to bot's instance identifier from Scheduled Meeting and then bot invites PSTN.
++ Outgoing call from bot (with instance identifier) to a PSTN.
++ P2P call between bot and another peer (Teams user, PSTN), bot invites another PSTN.
++ P2P call between bot and another peer (Teams user, PSTN), bot invites another Teams user.
++ Bot join the scheduled meeting and then invite PSTN.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -47,7 +62,7 @@ In the request body, provide a JSON object with the following parameters.
 | Parameter           | Type                                                                                                                                 | Description                                                                                                                                                                                                         |
 | :-----------------  | :-----------------------------------------                                                                                           | :----------------------------------------------------------------------------------------------------------------------------------------------                                                                     |
 | callbackUri         | String                                                                                                                               | Allows bots to provide a specific callback URI for the concurrent call to receive later notifications. If this property hasn't been set, the bot's global callback URI is used instead. This must be `https`. |
-| acceptedModalities  | String collection                                                                                                                    | The list of accept modalities. Possible values are: `audio`, `video`, `videoBasedScreenSharing`. Required for answering a call.                                                                                      |
+| acceptedModalities  | String collection                                                                                                                    | The list of accept modalities. The possible values are: `audio`, `video`, `videoBasedScreenSharing`. Required for answering a call.                                                                                      |
 | callOptions            | [incomingCallOptions](../resources/incomingcalloptions.md)                                                         | The call options.   |
 | mediaConfig         | [appHostedMediaConfig](../resources/apphostedmediaconfig.md) or [serviceHostedMediaConfig](../resources/servicehostedmediaconfig.md) | The media configuration. Required.                                                                                                                                                                                 |
 | participantCapacity | Int                                                                                                                                  | The number of participants that the application can handle for the call, for [Teams policy-based recording](/MicrosoftTeams/teams-recording-policy) scenario.                                                     |
@@ -82,7 +97,9 @@ Content-Length: 211
   ],
   "callOptions": {
     "@odata.type": "#microsoft.graph.incomingCallOptions",
-    "isContentSharingNotificationEnabled": true
+    "isContentSharingNotificationEnabled": true,
+    "isDeltaRosterEnabled": true,
+    "isInteractiveRosterEnabled": true
   },
   "participantCapacity": 200
 }
@@ -90,10 +107,6 @@ Content-Length: 211
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/call-answer-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/call-answer-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -384,10 +397,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/call-answer-app-hosted-media-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/call-answer-app-hosted-media-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

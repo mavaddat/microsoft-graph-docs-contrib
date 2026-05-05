@@ -2,9 +2,10 @@
 title: "Update user"
 description: "Update the properties of a user object."
 author: "jaiprakashmb"
-localization_priority: Normal
-ms.subservice: "intune"
+ms.localizationpriority: medium
+ms.prod: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update user
@@ -17,9 +18,7 @@ Namespace: microsoft.graph
 
 Update the properties of a [user](../resources/intune-shared-user.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-## Permissions
+        ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
@@ -37,13 +36,15 @@ One of the following permissions is required to call this API. To learn more, in
 | &nbsp; &nbsp; **Onboarding** | DeviceManagementServiceConfig.ReadWrite.All|
 | &nbsp; &nbsp; **Troubleshooting** | DeviceManagementManagedDevices.ReadWrite.All|
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## HTTP Request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /users/{usersId}
 ```
 
@@ -76,7 +77,7 @@ If successful, this method returns a `200 OK` response code and an updated [user
 
 Here is an example of the request.
 
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/users/{usersId}
 Content-type: application/json
 Content-length: 2
@@ -88,7 +89,7 @@ Content-length: 2
 
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 95

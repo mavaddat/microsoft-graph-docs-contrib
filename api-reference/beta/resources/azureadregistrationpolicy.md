@@ -5,6 +5,7 @@ author: "myra-ramdenbourg"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 # azureADRegistrationPolicy resource type
 
@@ -12,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the policy scope of the Microsoft Entra tenant that controls the ability for users and groups to register device identities to your organization using **Microsoft Entra registered**. For more information, see [What is a device identity?](/azure/active-directory/devices/overview).
+Represents the policy scope of the Microsoft Entra tenant that controls the ability for users and groups to register device identities to your organization using **Microsoft Entra registered**. Configured in the **azureADRegistration** property of [device registration policy](../resources/deviceregistrationpolicy.md). For more information, see [What is a device identity?](/azure/active-directory/devices/overview).
 
 ## Properties
 
@@ -27,7 +28,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.azureADRegistrationPolicy"

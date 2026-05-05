@@ -2,9 +2,10 @@
 title: "windows10CompliancePolicy resource type"
 description: "This class contains compliance settings for Windows 10."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # windows10CompliancePolicy resource type
@@ -43,7 +44,7 @@ Inherits from [deviceCompliancePolicy](../resources/intune-deviceconfig-deviceco
 |passwordExpirationDays|Int32|The password expiration in days.|
 |passwordMinimumLength|Int32|The minimum password length.|
 |passwordMinimumCharacterSetCount|Int32|The number of character sets required in the password.|
-|passwordRequiredType|[requiredPasswordType](../resources/intune-deviceconfig-requiredpasswordtype.md)|The required password type. Possible values are: `deviceDefault`, `alphanumeric`, `numeric`.|
+|passwordRequiredType|[requiredPasswordType](../resources/intune-deviceconfig-requiredpasswordtype.md)|The required password type. The possible values are: `deviceDefault`, `alphanumeric`, `numeric`.|
 |passwordPreviousPasswordBlockCount|Int32|The number of previous passwords to prevent re-use of.|
 |requireHealthyDeviceReport|Boolean|Require devices to be reported as healthy by Windows Device Health Attestation.|
 |osMinimumVersion|String|Minimum Windows 10 version.|

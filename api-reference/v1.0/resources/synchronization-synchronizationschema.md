@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 author: "ArvindHarinder1"
 ms.subservice: "entra-applications"
+ms.date: 07/11/2024
 ---
 
 # synchronizationSchema resource type
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Defines what objects will be synchronized and how they are synchronized. The synchronization schema contains most of the setup information for a particular synchronization job. Typically, you customize some of the [attribute mappings](synchronization-attributemapping.md), or add a [scoping filter](synchronization-filter.md) to synchronize only objects that satisfy a certain condition.
 
-The following sections describe the high-level components of the synchronization schema.
+The following sections describe the high-level components of the synchronization schema. For more information, see [Understand the Microsoft Entra schema](/entra/identity/hybrid/cloud-sync/concept-attributes) and [Attribute mapping - Active Directory to Microsoft Entra ID](/entra/identity/hybrid/cloud-sync/how-to-attribute-mapping).
 
 ## Directory definitions
 
@@ -31,11 +32,11 @@ The following sections describe the high-level components of the synchronization
 
 | Method                                                                                                | Return Type                                                                                                 | Description                                                                                                                |
 |:------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
-| [Get schema](../api/synchronization-synchronizationschema-get.md)                                     | [synchronizationSchema](synchronization-synchronizationschema.md)                                           | Read properties and relationships of the **synchronizationSchema** object.                                                 |
-| [Update schema](../api/synchronization-synchronizationschema-update.md)                               | None                                                                                                        | Update the synchronization schema.                                                                                         |
-| [Delete schema](../api/synchronization-synchronizationschema-delete.md)                               | None                                                                                                        | Delete the customized schema, resetting the schema to the default configuration.                                           |
-| [List filter operators](../api/synchronization-synchronizationschema-filteroperators.md)              | [filterOperatorSchema](../resources/synchronization-filteroperatorschema.md) collection                      | List all operators supported in the scoping filters.                                                                       |
-| [List attribute mapping functions](../api/synchronization-synchronizationschema-functions.md)         | [attributeMappingFunctionSchema](../resources/synchronization-attributemappingfunctionschema.md) collection | List all functions supported in the attribute mapping expressions.                                                         |
+| [Get](../api/synchronization-synchronizationschema-get.md)                                     | [synchronizationSchema](synchronization-synchronizationschema.md)                                           | Read properties and relationships of the **synchronizationSchema** object.                                                 |
+| [Update](../api/synchronization-synchronizationschema-update.md)                               | None                                                                                                        | Update the synchronization schema.                                                                                         |
+| [Reset](../api/synchronization-synchronizationschema-delete.md)                               | None                                                                                                        | Delete the customized schema, resetting the schema to the default configuration.                                           |
+| [Get schema filter operators](../api/synchronization-synchronizationschema-filteroperators.md)              | [filterOperatorSchema](../resources/synchronization-filteroperatorschema.md) collection                      | List all operators supported in the scoping filters.                                                                       |
+| [Get schema functions](../api/synchronization-synchronizationschema-functions.md)         | [attributeMappingFunctionSchema](../resources/synchronization-attributemappingfunctionschema.md) collection | List all functions supported in the attribute mapping expressions.                                                         |
 | [Parse attribute mapping expression](../api/synchronization-synchronizationschema-parseexpression.md) | [parseExpressionResponse](synchronization-parseexpressionresponse.md)                                       | Parse a string expression into an [attributeMappingSource](../resources/synchronization-attributemappingsource.md) object. |
 
 
@@ -54,7 +55,7 @@ The following sections describe the high-level components of the synchronization
 |directories|[directoryDefinition](../resources/synchronization-directorydefinition.md) collection|Contains the collection of directories and all of their objects.|
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

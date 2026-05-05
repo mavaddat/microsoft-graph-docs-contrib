@@ -3,8 +3,9 @@ title: "userSource resource type"
 description: "The container for a custodian's mailbox and OneDrive for Business site."
 author: "mahage-msft"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # userSource resource type
@@ -12,6 +13,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 The container for a [custodian's](ediscovery-custodian.md) mailbox and OneDrive for Business site.
 
@@ -33,7 +36,7 @@ The container for a [custodian's](ediscovery-custodian.md) mailbox and OneDrive 
 |displayName|String|The display name associated with the mailbox and site.|
 |email|String|Email address of the user's mailbox.|
 |id|String|The ID of the **userSource**. This is not the ID of the actual group|
-|includedSources|microsoft.graph.ediscovery.sourceType|Specifies which sources are included in this group. Possible values are: `mailbox`, `site`.|
+|includedSources|microsoft.graph.ediscovery.sourceType|Specifies which sources are included in this group. The possible values are: `mailbox`, `site`.|
 |siteWebUrl|String|The URL of the user's OneDrive for Business site. Read-only.|
 
 ### sourceType values
@@ -51,7 +54,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

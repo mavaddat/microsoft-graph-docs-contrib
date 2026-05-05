@@ -5,6 +5,7 @@ description: "Add item to a bundle of driveItems."
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Add item to a bundle
@@ -18,7 +19,7 @@ Add an extra [driveItem][] from a drive to a [bundle][].
 [bundle]: ../resources/bundle.md
 [driveItem]: ../resources/driveItem.md
 
-[!INCLUDE [national-cloud-support](../../includes/global-china.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 

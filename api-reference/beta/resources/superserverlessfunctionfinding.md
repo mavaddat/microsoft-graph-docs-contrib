@@ -4,8 +4,9 @@ description: "Represents the super serverless functions in AWS, Azure, or GCP."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # superServerlessFunctionFinding resource type
@@ -13,6 +14,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Represents the super serverless functions in AWS, Azure, or GCP.
 
@@ -22,9 +25,9 @@ Inherits from [identityFinding](../resources/identityfinding.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List superServerlessFunctionFinding objects](../api/superserverlessfunctionfinding-list.md)|[superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md) collection|Get a list of the [superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md) objects and their properties.|
-|[Get superServerlessFunctionFinding](../api/superserverlessfunctionfinding-get.md)|[superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md)|Read the properties and relationships of a [superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md) object.|
-|[aggregatedSummary](../api/superserverlessfunctionfinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
+|[List](../api/superserverlessfunctionfinding-list.md)|[superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md) collection|Get a list of the [superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md) objects and their properties.|
+|[Get](../api/superserverlessfunctionfinding-get.md)|[superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md)|Read the properties and relationships of a [superServerlessFunctionFinding](../resources/superserverlessfunctionfinding.md) object.|
+|[Aggregated summary](../api/superserverlessfunctionfinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
 
 ## Properties
 |Property|Type|Description|
@@ -66,4 +69,5 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+
 

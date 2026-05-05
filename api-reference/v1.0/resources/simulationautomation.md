@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # simulationAutomation resource type
@@ -53,7 +54,7 @@ Inherits from [entity](../resources/entity.md).
 |runs|[simulationAutomationRun](../resources/simulationautomationrun.md) collection|A collection of simulation automation runs. |
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

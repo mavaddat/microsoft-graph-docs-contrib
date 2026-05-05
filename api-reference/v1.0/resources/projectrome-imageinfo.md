@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 ms.subservice: "project-rome"
 author: "ailae"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # imageInfo resource type
@@ -23,7 +24,7 @@ A complex type for representing the **attribution** property in the [visualInfo]
 
 ## JSON Representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

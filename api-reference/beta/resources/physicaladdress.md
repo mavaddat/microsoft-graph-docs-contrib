@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "iamgirishck"
 ms.subservice: "outlook"
 doc_type: resourcePageType
+ms.date: 07/23/2024
 ---
 
 # physicalAddress resource type
@@ -25,12 +26,15 @@ Represents the street address of a resource such as a contact or event.
 |postOfficeBox|String|The post office box number.|
 |state|String|The state.|
 |street|String|The street.|
-|type|physicalAddressType|The type of address. Possible values are: `unknown`, `home`, `business`, `other`.|
+|type|physicalAddressType|The type of address. The possible values are: `unknown`, `home`, `business`, `other`.|
 
+## Relationships
+
+None.
 
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

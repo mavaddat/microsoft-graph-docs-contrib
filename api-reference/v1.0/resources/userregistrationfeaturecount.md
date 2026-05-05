@@ -5,6 +5,7 @@ author: "kvenkit"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # userRegistrationFeatureCount resource type
@@ -17,7 +18,7 @@ Represents the number of users registered or capable for multifactor authenticat
 
 |Property|Type|Description|
 |:---|:---|:---|
-|feature|authenticationMethodFeature|Number of users registered or capable for multifactor authentication, self-service password reset, and passwordless authentication. Possible values are: `ssprRegistered`, `ssprEnabled`, `ssprCapable`, `passwordlessCapable`, `mfaCapable`, `unknownFutureValue`.|
+|feature|authenticationMethodFeature|Number of users registered or capable for multifactor authentication, self-service password reset, and passwordless authentication. The possible values are: `ssprRegistered`, `ssprEnabled`, `ssprCapable`, `passwordlessCapable`, `mfaCapable`, `unknownFutureValue`.|
 |userCount|Int64|Number of users.|
 
 ## Relationships
@@ -26,7 +27,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

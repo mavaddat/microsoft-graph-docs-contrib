@@ -3,15 +3,16 @@ title: "dataSubject resource type"
 description: "Contains information related to the subject of a content search."
 author: "skadam-msft"
 ms.localizationpriority: medium
-ms.prod: "compliance"
+ms.subservice: "compliance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # dataSubject resource type
 
 Namespace: microsoft.graph
 
-Contains information related to the subject of a content search. This resource is an open type and supports adding addition properties; for example, customer ID.
+Contains information related to the subject of a content search. This resource is an open type that allows additional properties beyond those documented here.
 
 ## Properties
 |Property|Type|Description|
@@ -25,7 +26,7 @@ Contains information related to the subject of a content search. This resource i
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.dataSubject"
@@ -37,8 +38,7 @@ The following is a JSON representation of the resource.
   "email": "String",
   "firstName": "String",
   "lastName": "String",
-  "residency": "String",
-  "SSN": "String"
+  "residency": "String"
 }
 ```
 

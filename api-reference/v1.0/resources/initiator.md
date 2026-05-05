@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "ArvindHarinder1"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 03/21/2024
 ---
 
 # initiator resource type
@@ -19,11 +20,11 @@ Describes who or what initiated the provisioning event.
 |:-------------|:------------|:------------|
 |displayName|String|Name of the person or service that initiated the provisioning event.|
 |id|String|Uniquely identifies the person or service that initiated the provisioning event.|
-|initiatorType|initiatorType| Type of initiator. Possible values are: `user`, `application`, `system`, `unknownFutureValue`.|
+|initiatorType|initiatorType| Type of initiator. The possible values are: `user`, `application`, `system`, `unknownFutureValue`.|
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

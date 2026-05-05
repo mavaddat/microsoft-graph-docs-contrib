@@ -1,17 +1,18 @@
 ---
 title: "Delete userFlowLanguagePage"
-description: "Deletes the values in a userFlowLanguagePage object."
+description: "Delete the values in a userFlowLanguagePage object."
 author: "jkdouglas"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 07/09/2024
 ---
 
 # Delete userFlowLanguagePage
 
 Namespace: microsoft.graph
 
-Deletes the values in an [userFlowLanguagePage](../resources/userflowlanguagepage.md) object. You may only delete the values in an overridesPage, which is used to customize the values shown to a user during a user journey defined by a user flow.
+Delete the values in an [userFlowLanguagePage](../resources/userflowlanguagepage.md) object. You may only delete the values in an overridesPage, which is used to customize the values shown to a user during a user journey defined by a user flow.
 
 ## Permissions
 
@@ -20,10 +21,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "userflowlanguagepage_delete" } -->
 [!INCLUDE [permissions-table](../includes/permissions/userflowlanguagepage-delete-permissions.md)]
 
-The work or school account needs to belong to one of the following roles:
-
-* Global administrator
-* External Identity User Flow administrator
+[!INCLUDE [rbac-b2xb2c-user-flows-apis](../includes/rbac-for-apis/rbac-b2xb2c-user-flows-apis.md)]
 
 ## HTTP request
 
@@ -34,7 +32,7 @@ To reference the content within the object, you must use `$value`, which returns
 }
 -->
 
-``` http
+```http
 DELETE /identity/b2cUserFlows/{id}/languages/{id}/overridesPages/$value
 DELETE /identity/b2xUserFlows/{id}/languages/{id}/overridesPages/$value
 ```
@@ -57,8 +55,7 @@ If successful, this method returns a `204 No Content` response code.
 
 ### Request
 
-Here's an example  of the request.
-
+The following example shows a request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -68,19 +65,43 @@ Here's an example  of the request.
 }
 -->
 
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/identity/b2cUserFlows/B2C_1_Customer/languages/en/overridesPages/phonefactor/$value
 ```
 
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/delete-userflowlanguagepage-beta-e1-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/delete-userflowlanguagepage-beta-e1-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/delete-userflowlanguagepage-beta-e1-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/delete-userflowlanguagepage-beta-e1-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/delete-userflowlanguagepage-beta-e1-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/delete-userflowlanguagepage-beta-e1-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/delete-userflowlanguagepage-beta-e1-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 ---
 
 ### Response
 
-Here's an example  of the response.
+The following example shows the response.
 
 <!-- {
   "blockType": "response",
@@ -88,6 +109,6 @@ Here's an example  of the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

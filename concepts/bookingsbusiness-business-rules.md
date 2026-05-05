@@ -5,6 +5,8 @@ ms.localizationpriority: medium
 author: kwekua
 ms.subservice: "microsoft-bookings"
 doc_type: conceptualPageType
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Business rules for Bookings appointments

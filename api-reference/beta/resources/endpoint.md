@@ -6,6 +6,7 @@ doc_type: resourcePageType
 ms.subservice: "entra-groups"
 author: "yuhko-msft"
 ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
+ms.date: 04/03/2024
 ---
 
 # Endpoint resource type
@@ -40,7 +41,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

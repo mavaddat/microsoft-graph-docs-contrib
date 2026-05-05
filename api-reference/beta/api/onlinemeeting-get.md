@@ -5,6 +5,7 @@ author: "awang119"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 11/01/2024
 ---
 
 # Get onlineMeeting
@@ -24,19 +25,105 @@ For example, you can:
 Teams live event attendee report **(deprecated)** and Teams live event recordings **(deprecated)** are online meeting artifacts. For details, see [Online meeting artifacts and permissions](/graph/cloud-communications-online-meeting-artifacts). 
 
 > [!CAUTION]
-> 
-> The online meeting APIs that support Microsoft Teams live events stopped returning data on September 30, 2024. For details about the removal of these APIs and upcoming new APIs to replace them, see the [Deprecation of Teams live events API on Microsoft Graph](https://devblogs.microsoft.com/microsoft365dev/deprecation-of-teams-live-events-api-on-microsoft-graph/) blog post. 
+> Teams live events was not removed on September 30, 2024, as previously announced. You can continue to use Teams live events; however, to get the latest new features and experiences, we recommend that you use [Teams town halls](https://support.microsoft.com/en-us/office/switch-from-microsoft-teams-live-events-to-town-halls-c71bf6e2-ece1-4809-900e-51271f39ac72) and the [Microsoft Graph virtual event townhall APIs](../resources/virtualeventtownhall.md) instead.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow [best practices](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions) to request least privileged permissions. For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "onlinemeeting_get" } -->
+Permissions for the following HTTP requests:
+
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /me/onlineMeetings/{meetingId}
+GET /me/onlineMeetings?$filter=JoinWebUrl%20eq%20'{joinWebUrl}'
+GET /me/onlineMeetings?$filter=joinMeetingIdSettings/joinMeetingId%20eq%20'{joinMeetingId}'
+```
+
+<!-- { 
+  "blockType": "permissions", 
+  "name": "onlinemeeting_get", 
+  "requestUrls": ["GET /me/onlineMeetings/{meetingId}", "GET /me/onlineMeetings?$filter=JoinWebUrl%20eq%20'{joinWebUrl}'", "GET /me/onlineMeetings?$filter=joinMeetingIdSettings/joinMeetingId%20eq%20'{joinMeetingId}'"],
+  "mergePermissions": true
+ } -->
 [!INCLUDE [permissions-table](../includes/permissions/onlinemeeting-get-permissions.md)]
 
-To use application permission for this API, tenant administrators must create an [application access policy](/graph/cloud-communication-online-meeting-application-access-policy) and grant it to a user to authorize the app configured in the policy to fetch online meetings and/or online meeting artifacts on behalf of that user (with user ID specified in the request path).
+Permissions for the following HTTP requests:
+
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /users/{userId}/onlineMeetings/{meetingId}
+GET /users/{userId}/onlineMeetings?$filter=JoinWebUrl%20eq%20'{joinWebUrl}'
+GET /users/{userId}/onlineMeetings?$filter=joinMeetingIdSettings/joinMeetingId%20eq%20'{joinMeetingId}'
+GET /app/onlineMeetings/?$filter=VideoTeleconferenceId%20eq%20'{videoTeleconferenceId}'
+GET /communications/onlineMeetings/?$filter=VideoTeleconferenceId%20eq%20'{videoTeleconferenceId}'
+```
+
+<!-- { 
+  "blockType": "permissions", 
+  "name": "onlinemeeting_get_2", 
+  "requestUrls": ["GET /users/{userId}/onlineMeetings/{meetingId}", "GET /users/{userId}/onlineMeetings?$filter=JoinWebUrl%20eq%20'{joinWebUrl}'", "GET /users/{userId}/onlineMeetings?$filter=joinMeetingIdSettings/joinMeetingId%20eq%20'{joinMeetingId}'", "GET /app/onlineMeetings/?$filter=VideoTeleconferenceId%20eq%20'{videoTeleconferenceId}'", "GET /communications/onlineMeetings/?$filter=VideoTeleconferenceId%20eq%20'{videoTeleconferenceId}'"],
+  "mergePermissions": true
+ } -->
+[!INCLUDE [permissions-table](../includes/permissions/onlinemeeting-get-2-permissions.md)]
+
+Permissions for the following HTTP requests:
+
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /me/onlineMeetings/{meetingId}/attendeeReport
+GET /users/{userId}/onlineMeetings/{meetingId}/attendeeReport
+```
+
+<!-- { 
+  "blockType": "permissions", 
+  "name": "onlinemeeting_get_3", 
+  "requestUrls": ["GET /me/onlineMeetings/{meetingId}/attendeeReport", "GET /users/{userId}/onlineMeetings/{meetingId}/attendeeReport"],
+  "mergePermissions": true
+ } -->
+[!INCLUDE [permissions-table](../includes/permissions/onlinemeeting-get-3-permissions.md)]
+
+Permissions for the following HTTP requests:
+
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /me/onlineMeetings/{meetingId}/recording
+GET /me/onlineMeetings/{meetingId}/alternativeRecording
+```
+
+<!-- { 
+  "blockType": "permissions", 
+  "name": "onlinemeeting_get_4", 
+  "requestUrls": ["GET /me/onlineMeetings/{meetingId}/recording", "GET /me/onlineMeetings/{meetingId}/alternativeRecording"],
+  "mergePermissions": true
+ } -->
+[!INCLUDE [permissions-table](../includes/permissions/onlinemeeting-get-4-permissions.md)]
+
+Permissions for the following HTTP requests:
+
+<!-- { "blockType": "ignored" } -->
+
+```http
+GET /users/{userId}/onlineMeetings/{meetingId}/recording
+GET /users/{userId}/onlineMeetings/{meetingId}/alternativeRecording
+```
+
+<!-- { 
+  "blockType": "permissions", 
+  "name": "onlinemeeting_get_5", 
+  "requestUrls": ["GET /users/{userId}/onlineMeetings/{meetingId}/recording", "GET /users/{userId}/onlineMeetings/{meetingId}/alternativeRecording"],
+  "mergePermissions": true
+ } -->
+[!INCLUDE [permissions-table](../includes/permissions/onlinemeeting-get-5-permissions.md)]
+
+> [!NOTE]
+> To use application permission for this API, tenant administrators must create an [application access policy](/graph/cloud-communication-online-meeting-application-access-policy) and grant it to a user to authorize the app configured in the policy to fetch online meetings and/or online meeting artifacts on behalf of that user (with user ID specified in the request path).
 
 > [!CAUTION]
 > Only the _OnlineMeetingArtifact.Read.All_ permissions are required if you fetch online meeting artifacts. You can still fetch meeting artifacts without them until **January 15, 2022**. For details, see [Online meeting artifacts and permissions](/graph/cloud-communications-online-meeting-artifacts).
@@ -96,6 +183,7 @@ GET /users/{userId}/onlineMeetings/{meetingId}/alternativeRecording
 >- `meetingId` is the **id** of an [onlineMeeting](../resources/onlinemeeting.md) object.
 > - **videoTeleconferenceId** is generated for Cloud-Video-Interop licensed users and can be found in an [onlineMeeting](../resources/onlinemeeting.md) object. For details, see [VTC conference id](/microsoftteams/cloud-video-interop-for-teams-set-up).
 >- `joinWebUrl` must be URL encoded.
+>- The format of `joinWebUrl` might differ from the following examples, depending on how the URLs were obtained. These variations don't affect how `joinWebUrl` is used in the API.
 >- `joinMeetingId` is the meeting ID to be used to join a meeting.
 
 ## Optional query parameters
@@ -144,10 +232,6 @@ GET https://graph.microsoft.com/beta/communications/onlineMeetings/?$filter=Vide
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-onlinemeeting-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-onlinemeeting-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -208,6 +292,7 @@ Content-Length: 1574
   },
   "creationDateTime": "2018-05-30T00:12:19.0726086Z",
   "endDateTime": "2018-05-30T01:00:00Z",
+  "expiryDateTime": "2025-04-12T23:57:47.6388574Z",
   "id": "112f7296-5fa4-42ca-bae8-6a692b15d4b8_19:cbee7c1c860e465f8258e3cebf7bee0d@thread.skype",
   "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3a:meeting_NTg0NmQ3NTctZDVkZDZk@thread.v2/0?context=%7b%22Tid%22%3a%aa674c-875-432d-bd41-3720e0a%22%2c%22Oid%22%3a%2f7296-5fa4-42ca-bae8-6a4b8%22%7d",
   "participants": {
@@ -252,10 +337,12 @@ Content-Length: 1574
     "joinMeetingId": "1234567890",
     "passcode": null
   },
+  "meetingSpokenLanguageTag": "en-US",
   "isEntryExitAnnounced": true,
   "allowedPresenters": "everyone",
   "allowMeetingChat": "enabled",
-  "allowTeamworkReactions": true
+  "allowTeamworkReactions": true,
+  "meetingOptionsWebUrl": "https://teams.microsoft.com/meetingOptions/?meetingId=abc123"
 }
 ```
 >**Note:** If 'Accept-Language: ja' is specified to indicate Japanese, for example, the response will include the following.
@@ -300,6 +387,7 @@ The following example shows the response.
     "creationDateTime": "2020-09-29T22:35:33.1594516Z",
     "startDateTime": "2020-09-29T22:35:31.389759Z",
     "endDateTime": "2020-09-29T23:35:31.389759Z",
+    "expiryDateTime": "2025-04-12T23:57:47.6388574Z",
     "joinWebUrl": "https://teams.microsoft.com/l/meetup-join/19%3ameeting_MGQ4YxODYzMmY2%40thread.v2/0?context=%7b%22Tid%22%3a%22c581-5130-43e9-88f3-fc82cde37%22%2c%22Oid%22%3a%22674c-81d9-4adb-bb2-8f62e4622%22%7d",
     "subject": null,
     "autoAdmittedUsers": "EveryoneInCompany",
@@ -308,6 +396,9 @@ The following example shows the response.
     "allowMeetingChat": "enabled",
     "allowTeamworkReactions": true,
     "videoTeleconferenceId": "(redacted)",
+    "sensitivityLabelAssignment": {
+      "sensitivityLabelId": "c7f2d7a7-6a36-4a41-9a6b-0d2761a9f4f0"
+    },
     "participants": {
         "organizer": {
             "upn": "(redacted)",
@@ -333,7 +424,9 @@ The following example shows the response.
         "isPasscodeRequired": false,
         "joinMeetingId": "1234567890",
         "passcode": null
-    }
+    },
+    "meetingOptionsWebUrl": "https://teams.microsoft.com/meetingOptions/?meetingId=abc123"
+    "meetingSpokenLanguageTag": "en-US"
 }
 ```
 
@@ -403,7 +496,11 @@ The following example shows the response.
                 "isPasscodeRequired": false,
                 "joinMeetingId": "1234567890",
                 "passcode": null
+            },
+            "sensitivityLabelAssignment": {
+              "sensitivityLabelId": "c7f2d7a7-6a36-4a41-9a6b-0d2761a9f4f0"
             }
+            "meetingOptionsWebUrl": "https://teams.microsoft.com/meetingOptions/?meetingId=abc123"
         }
     ]
 }
@@ -428,10 +525,6 @@ GET https://graph.microsoft.com/beta/me/onlineMeetings?$filter=joinMeetingIdSett
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-an-online-meeting-by-joinmeetingid-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-an-online-meeting-by-joinmeetingid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -521,7 +614,11 @@ Content-Type: application/json
                 "isPasscodeRequired": false,
                 "joinMeetingId": "1234567890",
                 "passcode": null
-            }
+            },
+            "sensitivityLabelAssignment": {
+              "sensitivityLabelId": "c7f2d7a7-6a36-4a41-9a6b-0d2761a9f4f0"
+            },
+            "meetingOptionsWebUrl": "https://teams.microsoft.com/meetingOptions/?meetingId=abc123"
         }
     ]
 }
@@ -548,10 +645,6 @@ GET https://graph.microsoft.com/beta/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZ
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-attendee-report-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-attendee-report-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -622,10 +715,6 @@ GET https://graph.microsoft.com/beta/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZ
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-live-event-recording-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-live-event-recording-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

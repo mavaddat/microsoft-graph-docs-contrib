@@ -5,6 +5,7 @@ author: "mlafleur"
 ms.localizationpriority: medium
 ms.subservice: "industry-data-etl"
 doc_type: apiPageType
+ms.date: 05/15/2024
 ---
 
 # Get referenceDefinition
@@ -75,10 +76,6 @@ GET https://graph.microsoft.com/beta/external/industryData/referenceDefinitions/
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-referencedefinition-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-referencedefinition-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-referencedefinition-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -125,6 +122,7 @@ Content-Type: application/json
 {
   "code": "01",
   "createdDateTime": "0001-01-01T00:00:00Z",
+  "displayName": "English Language and Literature",
   "id": "RefAcademicSubject-01",
   "isDisabled": false,
   "lastModifiedDateTime": "0001-01-01T00:00:00Z",

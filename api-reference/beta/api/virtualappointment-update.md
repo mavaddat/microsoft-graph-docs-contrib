@@ -5,6 +5,7 @@ author: "benmicrosoft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Update virtualAppointment (deprecated)
@@ -34,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /me/onlineMeetings/{onlineMeetingId}/virtualAppointment
 PATCH /users/{userId}/onlineMeetings/{onlineMeetingId}/virtualAppointment
 ```
@@ -76,7 +77,7 @@ The following example shows a request.
   "sampleKeys": ["MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi"]
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi/virtualAppointment 
 Content-Type: application/json
 If-Match: W/"ZfYdV7Meckeip07P//nwjAAADyI7NQ=="
@@ -116,7 +117,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

@@ -5,6 +5,7 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Create deviceManagementTroubleshootingEvent
@@ -31,7 +32,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /deviceManagement/troubleshootingEvents
 ```
 
@@ -61,10 +62,8 @@ If successful, this method returns a `201 Created` response code and a [deviceMa
 
 ### Request
 Here is an example of the request.
-
-<!-- { "blockType": "request" , "name" : "intune_troubleshooting_devicemanagementtroubleshootingevent_create_create_devicemanagementtroubleshootingevent" }-->
-``` http
-POST https://graph.microsoft.com/v1/deviceManagement/troubleshootingEvents
+```http
+POST https://graph.microsoft.com/v1.0/deviceManagement/troubleshootingEvents
 Content-type: application/json
 Content-length: 179
 
@@ -77,9 +76,7 @@ Content-length: 179
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-
-<!-- { "blockType": "response" , "@odata.type" : "microsoft.graph." }-->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 Content-Length: 228
@@ -91,7 +88,3 @@ Content-Length: 228
   "correlationId": "Correlation Id value"
 }
 ```
-
-
-
-

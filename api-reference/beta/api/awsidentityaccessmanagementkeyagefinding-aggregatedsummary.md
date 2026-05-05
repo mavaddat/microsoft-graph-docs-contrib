@@ -4,14 +4,17 @@ description: "Get a raw count of AWS IAM Access Keys and their ages"
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 06/26/2024
 ---
 
 # awsIdentityAccessManagementKeyAgeFinding: aggregatedSummary
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Get a raw count of AWS IAM Access Keys and their ages in an AWS environment.
 
@@ -34,7 +37,6 @@ GET /identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.awsIde
 
 ## Function parameters
 In the request URL, provide the following query parameters with values.
-The following table lists the parameters that are required when you call this function.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
@@ -92,3 +94,4 @@ Content-Type: application/json
     "findingsCountOverLimit": 15
 }
 ```
+

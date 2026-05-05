@@ -5,6 +5,7 @@ author: "nanguil"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 05/14/2024
 ---
 
 # onAttributeCollectionListener resource type
@@ -18,24 +19,20 @@ Used for configuring the collection of attributes during user sign-up as defined
 Inherits from [authenticationEventListener](../resources/authenticationeventlistener.md).
 
 ## Methods
-|Method|Return type|Description|
-|:---|:---|:---|
-|[List authenticationEventListeners](../api/identitycontainer-list-authenticationeventlisteners.md)|[authenticationEventListener](../resources/authenticationeventlistener.md) collection|Retrieve a list of the following object types derived from authenticationEventListener: <br/> <li>[onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) <li>[onInteractiveAuthFlowStartListener](../resources/oninteractiveauthflowstartlistener.md) <li>[onAuthenticationMethodLoadStartListener](../resources/onauthenticationmethodloadstartlistener.md) <li>[onAttributeCollectionListener](../resources/onattributecollectionlistener.md)<li>[onUserCreateStartListener](../resources/onusercreatestartlistener.md)<li>[onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)<li>[onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)|
-|[Create authenticationEventListener](../api/identitycontainer-post-authenticationeventlisteners.md)|[authenticationEventListener](../resources/authenticationeventlistener.md)|Create a new [onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) object type. The type can be one of the following subtypes derived from authenticationEventListener: <br/> <li>[onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) <li>[onInteractiveAuthFlowStartListener](../resources/oninteractiveauthflowstartlistener.md) <li>[onAuthenticationMethodLoadStartListener](../resources/onauthenticationmethodloadstartlistener.md) <li>[onAttributeCollectionListener](../resources/onattributecollectionlistener.md)<li>[onUserCreateStartListener](../resources/onusercreatestartlistener.md)<li>[onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)<li>[onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)|
-|[Get authenticationEventListener](../api/authenticationeventlistener-get.md)|[authenticationEventListener](../resources/authenticationeventlistener.md)|Read the properties and relationships of an [onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) object type. The type can be one of the following subtypes derived from authenticationEventListener: <br/> <li>[onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) <li>[onInteractiveAuthFlowStartListener](../resources/oninteractiveauthflowstartlistener.md) <li>[onAuthenticationMethodLoadStartListener](../resources/onauthenticationmethodloadstartlistener.md) <li>[onAttributeCollectionListener](../resources/onattributecollectionlistener.md)<li>[onUserCreateStartListener](../resources/onusercreatestartlistener.md)<li>[onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)<li>[onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)|
-|[Update authenticationEventListener](../api/authenticationeventlistener-update.md)|None|Update the properties of an [onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) object type. The type can be one of the following subtypes derived from authenticationEventListener: <br/> <li>[onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) <li>[onInteractiveAuthFlowStartListener](../resources/oninteractiveauthflowstartlistener.md) <li>[onAuthenticationMethodLoadStartListener](../resources/onauthenticationmethodloadstartlistener.md) <li>[onAttributeCollectionListener](../resources/onattributecollectionlistener.md)<li>[onUserCreateStartListener](../resources/onusercreatestartlistener.md)<li>[onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)<li>[onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)|
-|[Delete authenticationEventListener](../api/authenticationeventlistener-delete.md)|None|Delete an [onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) object type. The type can be one of the following subtypes derived from authenticationEventListener: <br/> <li>[onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md) <li>[onInteractiveAuthFlowStartListener](../resources/oninteractiveauthflowstartlistener.md) <li>[onAuthenticationMethodLoadStartListener](../resources/onauthenticationmethodloadstartlistener.md) <li>[onAttributeCollectionListener](../resources/onattributecollectionlistener.md)<li>[onUserCreateStartListener](../resources/onusercreatestartlistener.md)<li>[onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)<li>[onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)|
+None.
+
+For the list of API operations for managing this resource type, see the [authenticationEventListener](../resources/authenticationeventlistener.md) resource type.
 
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|id|String|Required. Inherited from [entity](../resources/entity.md).|
-|conditions|[authenticationConditions](../resources/authenticationconditions.md)|Required. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
-|priority|Int32|Required. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
 |authenticationEventsFlowId|String| Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|conditions|[authenticationConditions](../resources/authenticationconditions.md)|Required. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|displayName|String|The display name of the listener. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
 |handler|[onAttributeCollectionHandler](../resources/onattributecollectionhandler.md)|Required. Configuration for what to invoke if the event resolves to this listener.|
-
+|id|String|Required. Inherited from [entity](../resources/entity.md).|
+|priority|Int32|Required. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
 
 ## Relationships
 None.
@@ -55,6 +52,7 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.onAttributeCollectionListener",
   "id": "String (identifier)",
   "priority": "Integer",
+  "displayName": "String",
   "conditions": {
     "@odata.type": "microsoft.graph.authenticationConditions"
   },

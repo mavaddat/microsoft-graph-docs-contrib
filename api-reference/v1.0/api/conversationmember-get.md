@@ -5,6 +5,7 @@ author: "akjo"
 ms.localizationpriority: high
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 04/02/2024
 ---
 
 # Get conversationMember
@@ -25,7 +26,8 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported.|
 |Application| For **user** or **chat** resource: Not supported.<br/><br/>For **channel** resource: TeamMember.Read.Group, ChannelMember.Read.All, ChannelMember.ReadWrite.All |
 
-> **Note:** The TeamMember.Read.Group permmission uses [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
+> [!NOTE]
+> The TeamMember.Read.Group permmission uses [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
 
 
 ## HTTP request
@@ -72,10 +74,6 @@ GET https://graph.microsoft.com/v1.0/chats/{id}/members/{id}
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/conversation-member--get2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/conversation-member--get2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

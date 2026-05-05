@@ -6,6 +6,7 @@ doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 03/21/2024
 ---
 
 # governanceSchedule resource type
@@ -28,9 +29,12 @@ Represents the schedule for a [governanceRoleAssignmentRequest](../resources/gov
 |type|String|The role assignment schedule type. Only `Once` is supported for now.
 |duration|Duration|The duration of a role assignment. It is in format of a TimeSpan.|
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -2,9 +2,10 @@
 title: "windowsInformationProtectionIPRangeCollection resource type"
 description: "Windows Information Protection IP Range Collection"
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # windowsInformationProtectionIPRangeCollection resource type

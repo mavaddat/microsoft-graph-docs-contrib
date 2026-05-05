@@ -5,6 +5,7 @@ author: "sthapliyal"
 ms.subservice: "teams"
 doc_type: apiPageType
 ms.localizationpriority: medium
+ms.date: 04/18/2024
 ---
 
 # Delete chat
@@ -18,6 +19,8 @@ Soft-delete a [chat](../resources/chat.md). When invoked with delegated permissi
 > This API deletes 1:1 chats, meeting chats, and group chat threads. It does not delete channel chat threads.
 > After chats are deleted, tenant admins have seven days to restore them. Chats deleted for more than seven days can't be restored.
 > One delete request per second per tenant is allowed. 
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -64,10 +67,6 @@ DELETE https://graph.microsoft.com/v1.0/chats/19:7d898072-792c-4006-bb10-5ca9f25
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/chat-delete-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/chat-delete-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

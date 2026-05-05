@@ -6,6 +6,7 @@ author: "lisaychuang"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 04/01/2025
 ---
 
 # conditionalAccessSessionControls resource type
@@ -28,6 +29,7 @@ All the session controls inherit from [conditionalAccessSessionControl](conditio
 |persistentBrowser|[persistentBrowserSessionControl](persistentbrowsersessioncontrol.md)| Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly. |
 |secureSignInSession|[secureSignInSessionControl](securesigninsessioncontrol.md)|Session control to require sign in sessions to be bound to a device.|
 |signInFrequency|[signInFrequencySessionControl](signinfrequencysessioncontrol.md)| Session control to enforce signin frequency.|
+|globalSecureAccessFilteringProfile|[globalSecureAccessFilteringProfileSessionControl](globalsecureaccessfilteringprofilesessioncontrol.md)|Session control to link to Global Secure Access security profiles or filtering profiles.|
 
 ## Relationships
 
@@ -35,7 +37,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
@@ -45,7 +47,9 @@ Here's a JSON representation of the resource.
     "continuousAccessEvaluation",
     "disableResilienceDefaults",
     "persistentBrowser",
-    "signInFrequency"
+    "signInFrequency",
+    "globalSecureAccessFilteringProfile",
+    "networkAccessSecurity"
   ],
   "@odata.type": "microsoft.graph.conditionalAccessSessionControls",
   "baseType": null
@@ -60,6 +64,7 @@ Here's a JSON representation of the resource.
   "signInFrequency": {"@odata.type": "microsoft.graph.signInFrequencySessionControl"},
   "disableResilienceDefaults": false,
   "secureSignInSession": {"@odata.type": "microsoft.graph.secureSignInSessionControl"},
+  "globalSecureAccessFilteringProfile": {"@odata.type": "microsoft.graph.globalSecureAccessFilteringProfileSessionControl"}
 }
 ```
 

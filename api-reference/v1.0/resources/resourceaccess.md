@@ -4,7 +4,8 @@ description: "Specifies an OAuth 2.0 permission scope or an app role that an app
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-sign-in"
-author: "psignoret"
+author: "eringreenlee"
+ms.date: 07/22/2024
 ---
 
 # resourceAccess resource type
@@ -21,7 +22,7 @@ Object used to specify an OAuth 2.0 permission scope or an app role that an appl
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -4,8 +4,9 @@ description: "Represents the super AWS resources."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
-doc_type: apiPageType
+ms.subservice: entra-permissions-management
+doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # superAwsResourceFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents the super AWS resources.
 
 Inherits from [identityFinding](../resources/identityfinding.md).
@@ -21,9 +24,9 @@ Inherits from [identityFinding](../resources/identityfinding.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List superAwsResourceFinding objects](../api/superawsresourcefinding-list.md)|[superAwsResourceFinding](../resources/superawsresourcefinding.md) collection|Get a list of the [superAwsResourceFinding](../resources/superawsresourcefinding.md) objects and their properties.|
-|[Get superAwsResourceFinding](../api/superawsresourcefinding-get.md)|[superAwsResourceFinding](../resources/superawsresourcefinding.md)|Read the properties and relationships of a [superAwsResourceFinding](../resources/superawsresourcefinding.md) object.|
-|[aggregatedSummary](../api/superawsresourcefinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
+|[List](../api/superawsresourcefinding-list.md)|[superAwsResourceFinding](../resources/superawsresourcefinding.md) collection|Get a list of the [superAwsResourceFinding](../resources/superawsresourcefinding.md) objects and their properties.|
+|[Get](../api/superawsresourcefinding-get.md)|[superAwsResourceFinding](../resources/superawsresourcefinding.md)|Read the properties and relationships of a [superAwsResourceFinding](../resources/superawsresourcefinding.md) object.|
+|[Aggregated summary](../api/superawsresourcefinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
 
 ## Properties
 |Property|Type|Description|
@@ -66,4 +69,5 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+
 

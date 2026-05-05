@@ -5,6 +5,7 @@ author: Moti-ba
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
 # Update forwardingOptions
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /networkAccess/settings/forwardingOptions
 ```
 
@@ -46,7 +47,7 @@ PATCH /networkAccess/settings/forwardingOptions
 
 |Property|Type|Description|
 |:---|:---|:---|
-|signalingStatus|microsoft.graph.networkaccess.status|The skipDnsLookupState flag is a boolean value that determines whether DNS lookup should be performed at the client-side. When this flag is enabled (true), DNS lookup is skipped, and Microsoft 365 (M365) traffic is directly forwarded to the Front Door using the client-resolved destination IP address. The possible values are: `enabled`, `disabled`. Required.|
+|signalingStatus|microsoft.graph.networkaccess.status|The skipDnsLookupState flag is a Boolean value that determines whether DNS lookup should be performed at the client-side. When this flag is enabled (true), DNS lookup is skipped, and Microsoft 365 (M365) traffic is directly forwarded to the Front Door using the client-resolved destination IP address. The possible values are: `enabled`, `disabled`. Required.|
 
 
 
@@ -64,7 +65,7 @@ The following example shows a request.
   "name": "update_forwardingoptions"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/networkAccess/settings/forwardingOptions
 Content-Type: application/json
 
@@ -75,10 +76,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-forwardingoptions-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-forwardingoptions-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -97,6 +94,10 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/php/update-forwardingoptions-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/update-forwardingoptions-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/update-forwardingoptions-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -110,6 +111,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

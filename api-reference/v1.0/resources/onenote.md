@@ -5,6 +5,7 @@ author: "jewan-microsoft"
 ms.localizationpriority: high
 ms.subservice: "onenote"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # onenote resource type
@@ -53,7 +54,7 @@ For information about the permissions required to work with OneNote APIs, see [N
 |[Create page](../api/onenote-post-pages.md) |[page](page.md)| Create a page by posting to the pages collection.|
 |[List pages](../api/onenote-list-pages.md) |[page](page.md) collection| Get a collection of pages.|
 |[List section groups](../api/onenote-list-sectiongroups.md) |[sectionGroup](sectiongroup.md) collection| Get a collection of section groups.|
-|[List sections](../api/onenote-list-sections.md) |[onenoteSection](section.md) collection| Get a collection of sections.|
+|[List sections](../api/onenote-list-sections.md) |[onenoteSection](onenotesection.md) collection| Get a collection of sections.|
 
 ## Relationships
 | Relationship | Type	|Description|
@@ -63,11 +64,11 @@ For information about the permissions required to work with OneNote APIs, see [N
 |pages|[onenotePage](page.md) collection|The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.|
 |resources|[onenoteResource](resource.md) collection |The image and other file resources in OneNote pages. Getting a resources collection isn't supported, but you can [get the binary content of a specific resource](resource.md). Read-only. Nullable.|
 |sectionGroups|[sectionGroup](sectiongroup.md) collection|The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.|
-|sections|[onenoteSection](section.md) collection|The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.|
+|sections|[onenoteSection](onenotesection.md) collection|The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.|
 
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!--{
   "blockType": "resource",
   "baseType": "microsoft.graph.entity",

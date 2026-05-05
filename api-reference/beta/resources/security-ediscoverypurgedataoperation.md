@@ -3,8 +3,9 @@ title: "ediscoveryPurgeDataOperation resource type"
 description: "Represents the process of purging data of an eDiscovery search."
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 10/31/2024
 ---
 
 # ediscoveryPurgeDataOperation resource type
@@ -22,35 +23,37 @@ None.
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|action|[microsoft.graph.security.caseAction](../resources/security-caseoperation.md#caseaction-values)| The type of action the operation represents. Possible values are: `addToReviewSet`,`applyTags`,`contentExport`,`convertToPdf`,`estimateStatistics`, `purgeData`|
-|completedDateTime|DateTimeOffset| The date and time the operation was completed. |
-|createdBy|[identitySet](../resources/identityset.md)| The user that created the operation. |
-|createdDateTime|DateTimeOffset| The date and time the operation was created. |
-|id|String| The ID for the operation. Read-only. |
-|percentProgress|Int32| The progress of the operation. |
-|resultInfo|[resultInfo](../resources/resultinfo.md)| Contains success and failure-specific result information. |
-|status|[microsoft.graph.security.caseOperationStatus](../resources/security-caseoperation.md#caseoperationstatus-values)| The status of the case operation. Possible values are: `notStarted`, `submissionFailed`, `running`, `succeeded`, `partiallySucceeded`, `failed`.|
+|action|[microsoft.graph.security.caseAction](../resources/security-caseoperation.md#caseaction-values)| The type of action the operation represents. The possible values are: `contentExport`, `applyTags`, `convertToPdf`, `index`, `estimateStatistics`, `addToReviewSet`, `holdUpdate`, `unknownFutureValue`, `purgeData`, `exportReport`, `exportResult`, `holdPolicySync`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `purgeData`, `exportReport`, `exportResult`, `holdPolicySync`. Inherited from [caseOperation](../resources/security-caseoperation.md).|
+|completedDateTime|DateTimeOffset| The date and time the operation was completed. Inherited from [caseOperation](../resources/security-caseoperation.md).|
+|createdBy|[identitySet](../resources/identityset.md)| The user that created the operation. Inherited from [caseOperation](../resources/security-caseoperation.md).|
+|createdDateTime|DateTimeOffset| The date and time the operation was created. Inherited from [caseOperation](../resources/security-caseoperation.md).|
+|id|String| The ID for the operation. Read-only. Inherited from [caseOperation](../resources/security-caseoperation.md).|
+|percentProgress|Int32| The progress of the operation. Inherited from [caseOperation](../resources/security-caseoperation.md).|
+|reportFileMetadata|[microsoft.graph.security.reportFileMetadata](../resources/security-ediscoveryreportfilemetadata.md) collection|The purge job report file metadata. It contains the properties for report file metadata, including **downloadUrl**, **fileName**, and **size**.|
+|resultInfo|[resultInfo](../resources/resultinfo.md)| Contains success and failure-specific result information. Inherited from [caseOperation](../resources/security-caseoperation.md).|
+|status|[microsoft.graph.security.caseOperationStatus](../resources/security-caseoperation.md#caseoperationstatus-values)| The status of the case operation. The possible values are: `notStarted`, `submissionFailed`, `running`, `succeeded`, `partiallySucceeded`, `failed`, `unknownFutureValue`. Inherited from [caseOperation](../resources/security-caseoperation.md).|
 
 ### purgeType values
 
 |Name|Description|
 |:----|-----------|
 |recoverable|Purged data is recoverable.|
-|permanentlyDeleted|Purged data is permanently deleted.|
-|unknownFutureValue|Reserved for future options.|
+|unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
+|permanentlyDelete|Purged data is permanently deleted.|
+
 ### purgeAreas values
 
 |Name|Description|
 |:----|-----------|
 |mailboxes|Purges data from Exchange mailboxes.|
 |teamsMessages|Purges Teams messages.|
-|unknownFutureValue|Reserved for future options.|
+|unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
 ## Relationships
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
@@ -62,18 +65,15 @@ The following is a JSON representation of the resource.
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.ediscoveryPurgeDataOperation",
-  "id": "String (identifier)",
-  "createdDateTime": "String (timestamp)",
-  "completedDateTime": "String (timestamp)",
   "action": "String",
-  "createdBy": {
-    "@odata.type": "microsoft.graph.identitySet"
-  },
-  "percentProgress": "Integer",
-  "status": "String",
-  "resultInfo": {
-    "@odata.type": "microsoft.graph.resultInfo"
-  }
+  "completedDateTime": "String (timestamp)",
+  "createdBy": {"@odata.type": "microsoft.graph.identitySet"},
+  "createdDateTime": "String (timestamp)",
+  "id": "String (identifier)",
+  "percentProgress": "Int32",
+  "reportFileMetadata": [{"@odata.type": "microsoft.graph.reportFileMetadata"}],
+  "resultInfo": {"@odata.type": "microsoft.graph.resultInfo"},
+  "status": "String"
 }
 ```
 

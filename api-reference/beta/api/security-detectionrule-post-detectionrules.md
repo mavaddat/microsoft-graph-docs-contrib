@@ -5,6 +5,7 @@ author: "mmekler"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # Create detectionRule
@@ -31,14 +32,14 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/rules/detectionRules
 ```
 
 ## Request headers
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
@@ -56,7 +57,7 @@ The following example shows a request.
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/security/rules/detectionRules
 Content-Type: application/json
 {
@@ -103,7 +104,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

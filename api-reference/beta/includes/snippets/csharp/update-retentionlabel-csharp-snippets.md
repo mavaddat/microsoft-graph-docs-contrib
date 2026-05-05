@@ -12,14 +12,11 @@ using Microsoft.Graph.Beta.Models.Security;
 var requestBody = new RetentionLabel
 {
 	OdataType = "#microsoft.graph.security.retentionLabel",
-	RetentionDuration = new RetentionDuration
+	RetentionDuration = new RetentionDurationInDays
 	{
-		OdataType = "microsoft.graph.security.retentionDuration",
+		OdataType = "microsoft.graph.security.retentionDurationInDays",
+		Days = 2555,
 	},
-	DescriptionForAdmins = "String",
-	DescriptionForUsers = "String",
-	LabelToBeApplied = "String",
-	DefaultRecordBehavior = DefaultRecordBehavior.StartLocked,
 };
 
 // To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=csharp

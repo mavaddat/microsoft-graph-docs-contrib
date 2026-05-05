@@ -5,6 +5,7 @@ author: braedenp-msft
 ms.localizationpriority: medium
 ms.subservice: universal-print
 doc_type: resourcePageType
+ms.date: 07/23/2024
 ---
 
 # printerStatus resource type
@@ -36,9 +37,13 @@ Represents the processing status of the printer, including any errors.
 
 [printerProcessingStateDetail enum type](./printerprocessingstatedetail.md)
 
+## Relationships
+
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

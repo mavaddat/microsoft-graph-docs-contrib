@@ -5,6 +5,7 @@ author: "AlexFilipin"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # taskProcessingResult resource type
@@ -21,7 +22,7 @@ Inherits from [entity](../resources/entity.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[resume](../api/identitygovernance-taskprocessingresult-resume.md)|None|Resumes the **taskProcessingResult** as part of the Azure Logic App integration.|
+|[Resume](../api/identitygovernance-taskprocessingresult-resume.md)|None|Resumes the **taskProcessingResult** as part of the Azure Logic App integration.|
 
 ## Properties
 
@@ -31,7 +32,7 @@ Inherits from [entity](../resources/entity.md).
 |createdDateTime|DateTimeOffset|The date time when the taskProcessingResult was created.<br><br>Supports `$filter`(`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderby`.|
 |failureReason|String|Describes why the taskProcessingResult has failed.|
 |id|String|Identifier used for individually addressing a specific task processing result. Inherited from [entity](../resources/entity.md).<br><br>Supports `$filter`(`eq`, `ne`) and `$orderby`.|
-|processingStatus|[microsoft.graph.identityGovernance.lifecycleWorkflowProcessingStatus](../resources/identitygovernance-taskprocessingresult.md)|Describes the execution status of the `taskProcessingResult`. The possible values are: `queued`, `inProgress`, `completed`, `completedWithErrors`, `canceled`, `failed`, `unknownFutureValue`.<br><br>Supports `$filter`(`eq`, `ne`) and `$orderby`.|
+|processingStatus|[microsoft.graph.identityGovernance.lifecycleWorkflowProcessingStatus](../resources/enums-identitygovernance-lifecycleworkflowprocessingstatus.md)|Describes the execution status of the `taskProcessingResult`. <br><br>Supports `$filter`(`eq`, `ne`) and `$orderby`.|
 |startedDateTime|DateTimeOffset|The date time when taskProcessingResult execution started. Value is `null` if task execution has not yet started.<br><br>Supports `$filter`(`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderby`.|
 
 ## Relationships
@@ -43,7 +44,7 @@ Inherits from [entity](../resources/entity.md).
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

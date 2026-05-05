@@ -1,10 +1,11 @@
 ---
 title: "federatedTokenValidationPolicy resource type"
 description: "Represents a policy to control enabling or disabling validation of federation authentication tokens. It allows matching an on-premises federated account and a mapped Microsoft Entra ID account's root domain."
-author: "rahul-nagraj"
+author: "vimrang"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # federatedTokenValidationPolicy resource type
@@ -21,9 +22,9 @@ Inherits from [directoryObject](../resources/directoryobject.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List federatedTokenValidationPolicies](../api/policyroot-list-federatedtokenvalidationpolicy.md)|[federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) collection|Get a list of the [federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) objects and their properties.|
-|[Get federatedTokenValidationPolicy](../api/federatedtokenvalidationpolicy-get.md)|[federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md)|Read the properties and relationships of a [federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) object.|
-|[Update federatedTokenValidationPolicy](../api/federatedtokenvalidationpolicy-update.md)|[federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md)|Update the properties of a [federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) object.|
+|[List](../api/policyroot-list-federatedtokenvalidationpolicy.md)|[federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) collection|Get a list of the [federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) objects and their properties.|
+|[Get](../api/federatedtokenvalidationpolicy-get.md)|[federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md)|Read the properties and relationships of a [federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) object.|
+|[Update](../api/federatedtokenvalidationpolicy-update.md)|[federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md)|Update the properties of a [federatedTokenValidationPolicy](../resources/federatedtokenvalidationpolicy.md) object.|
 
 ## Properties
 |Property|Type|Description|

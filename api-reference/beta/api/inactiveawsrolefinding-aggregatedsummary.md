@@ -4,14 +4,17 @@ description: "Retrieve the raw count of inactive roles relative to the total rol
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 06/26/2024
 ---
 
 # inactiveAwsRoleFinding: aggregatedSummary
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Retrieve the raw count of inactive roles relative to the total roles in an AWS authorization system onboarded to Permissions Management.
 
@@ -34,7 +37,6 @@ GET /identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.inacti
 
 ## Function parameters
 In the request URL, provide the following query parameters with values.
-The following table lists the parameters that are required when you call this function.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
@@ -62,7 +64,7 @@ The following example shows a request.
   "name": "inactiveawsrolefindingthis.aggregatedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.inactiveAwsRoleFinding/aggregatedSummary(authorizationSystemIds=['377596131774'])
 ```
 
@@ -90,3 +92,4 @@ Content-type: application/json
     "findingsCount": 295
 }
 ```
+

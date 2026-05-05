@@ -5,6 +5,7 @@ author: "madansr7"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Create certificateBasedApplicationConfiguration
@@ -22,7 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "certificateauthoritypath_post_certificatebasedapplicationconfigurations" } -->
 [!INCLUDE [permissions-table](../includes/permissions/certificateauthoritypath-post-certificatebasedapplicationconfigurations-permissions.md)]
 
-[!INCLUDE [app-cert-config-apis](../includes/rbac-for-apis/app-cert-config-apis.md)]
+[!INCLUDE [rbac-trusted-app-cert-config-apis](../includes/rbac-for-apis/rbac-trusted-app-cert-config-apis.md)]
 
 ## HTTP request
 
@@ -53,7 +54,7 @@ You can specify the following properties when you create a **certificateBasedApp
 |:---|:---|:---|
 |description|String|The description for the configuration. Optional.|
 |displayName|String|The friendly name for the configuration. Optional.|
-|trustedCertificateAuthorities	|[certificateAuthorityAsEntity](../resources/certificateauthorityasentity.md)|Multi-value property that represents a list of trusted certificate authorities. At least one trusted certificate authority must be provided when you create a certificate-based application configuration.  |
+|trustedCertificateAuthorities    |[certificateAuthorityAsEntity](../resources/certificateauthorityasentity.md)|Multi-value property that represents a list of trusted certificate authorities. At least one trusted certificate authority must be provided when you create a certificate-based application configuration.  |
 
 
 ## Response
@@ -63,13 +64,14 @@ If successful, this method returns a `200 OK` response code and a [certificateBa
 ## Examples
 
 ### Request
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_certificatebasedapplicationconfiguration"
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/certificateAuthorityPath/certificateBasedApplicationConfigurations
+POST https://graph.microsoft.com/beta/directory/certificateAuthorities/certificateBasedApplicationConfigurations
 Content-Type: application/json
 
 {
@@ -83,6 +85,32 @@ Content-Type: application/json
   ]
 }
 ```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-certificatebasedapplicationconfiguration-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-certificatebasedapplicationconfiguration-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-certificatebasedapplicationconfiguration-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-certificatebasedapplicationconfiguration-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-certificatebasedapplicationconfiguration-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-certificatebasedapplicationconfiguration-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 The following example shows the response.

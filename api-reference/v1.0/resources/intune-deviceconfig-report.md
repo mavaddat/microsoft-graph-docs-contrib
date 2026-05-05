@@ -2,9 +2,10 @@
 title: "report resource type"
 description: "Device Configuration profile History reports."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # report resource type
@@ -18,7 +19,7 @@ Device Configuration profile History reports.
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|content|Stream|Not yet documented|
+|content|Stream||
 
 ## Relationships
 None

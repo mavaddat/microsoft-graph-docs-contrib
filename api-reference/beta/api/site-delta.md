@@ -5,6 +5,7 @@ title: "site: delta"
 ms.localizationpriority: "medium"
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 06/22/2024
 ---
 
 # site: delta
@@ -22,7 +23,9 @@ Your application should continue making calls using the **@odata.nextLink** unti
 After you receive all the changes, you can apply them to your local state.
 To monitor future changes, call the **delta** API by using the **@odata.deltaLink** in the previous response.
 
-Deleted sites are returned with the @removed annotation with the reason of removal. Any resources marked as deleted should be removed from your local state.
+Any resources marked as deleted should be removed from your local state.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -53,7 +56,7 @@ This method also supports the `$select`, `$expand`, and `$top` [OData query para
 
 |Header       |Value                    |
 |-------------|-------------------------|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -100,10 +103,6 @@ GET https://graph.microsoft.com/beta/sites/delta
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-sites-delta-first-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-sites-delta-first-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -180,10 +179,6 @@ GET https://graph.microsoft.com/beta/sites/delta?token=1230919asd190410jlka
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-sites-delta-last-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-sites-delta-last-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-sites-delta-last-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -232,9 +227,6 @@ Content-type: application/json
             "displayName": "All Company",
             "isPersonalSite": false,
             "id": "bd565af7-7963-4658-9a77-26e11ac73186",
-            "@removed": {
-                "reason": "deleted"
-            },
             "root": {}
         }
     ]
@@ -261,10 +253,6 @@ GET https://graph.microsoft.com/beta/sites/delta?token=latest
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-sites-delta-latest-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-sites-delta-latest-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

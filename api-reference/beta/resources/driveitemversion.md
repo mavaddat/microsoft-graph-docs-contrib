@@ -5,6 +5,7 @@ title: "driveItemVersion resource type"
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # driveItemVersion resource type
@@ -15,21 +16,14 @@ Namespace: microsoft.graph
 
 Represents a specific version of a [driveItem](driveitem.md).
 
-The following tasks are available for **driveItemVersion** resources.
+## Methods
 
-| Common task                        | HTTP method                                                        |
-| :--------------------------------- | :----------------------------------------------------------------- |
-| [List versions][version-list]      | `GET /drive/items/{item-id}/versions`                              |
-| [Get version][version-get]         | `GET /drive/items/{item-id}/versions/{version-id}`                 |
-| [Get contents][content-get]        | `GET /drive/items/{item-id}/versions/{version-id}/content`         |
-| [Restore version][version-restore] | `POST /drive/items/{item-id}/versions/{version-id}/restoreversion` |
-
-[version-list]: ../api/driveitem-list-versions.md
-[version-get]: ../api/driveitemversion-get.md
-[content-get]: ../api/driveitemversion-get-contents.md
-[version-restore]: ../api/driveitemversion-restore.md
-
-In the previous table, the examples use `/drive`, but there are many valid requests.
+| Method | Return type | Description |
+|:---|:---|:---|
+| [List](../api/driveitem-list-versions.md)                           | [driveItemVersion](../resources/driveitemversion.md) collection | Retrieve the [versions](../resources/driveitemversion.md) of a [file](../resources/driveitem.md).|
+| [Get](../api/driveitemversion-get.md)                                | [driveItemVersion](../resources/driveitemversion.md) | Retrieve the metadata for a specific [version](../resources/driveitemversion.md) of a [driveItem](../resources/driveitem.md).|
+| [Download version](../api/driveitemversion-get-contents.md)                  | download URL | Retrieve the contents of a specific [version](../resources/driveitemversion.md) of a [driveItem](../resources/driveitem.md). |
+| [Restore version](../api/driveitemversion-restoreversion.md)                        | None | Restore a previous [version](../resources/driveitemversion.md) of a [driveItem](../resources/driveitem.md) to be the current **version**.|
 
 ## Properties
 
@@ -49,7 +43,7 @@ In the previous table, the examples use `/drive`, but there are many valid reque
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- { "blockType": "resource","keyProperty":"id", "@odata.type": "microsoft.graph.driveItemVersion", "@type.aka": "oneDrive.driveItemVersion" } -->
 

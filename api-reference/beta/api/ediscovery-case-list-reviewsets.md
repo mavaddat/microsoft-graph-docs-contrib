@@ -3,8 +3,9 @@ title: "List reviewSets"
 description: "Get the reviewSet resources from a case object."
 author: "mahage-msft"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 06/10/2024
 ---
 
 # List reviewSets
@@ -12,6 +13,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 Get the list of [reviewSets](../resources/ediscovery-reviewset.md) from a [case](../resources/ediscovery-case.md) object.
 
@@ -34,7 +37,7 @@ One of the following permissions is required to call this API. To learn more, in
 }
 -->
 
-``` http
+```http
 GET /compliance/ediscovery/cases/{caseId}/reviewSets
 ```
 
@@ -68,16 +71,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/compliance/ediscovery/cases/{caseId}/reviewSets
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-reviewset-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-reviewset-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -116,7 +115,7 @@ GET https://graph.microsoft.com/beta/compliance/ediscovery/cases/{caseId}/review
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

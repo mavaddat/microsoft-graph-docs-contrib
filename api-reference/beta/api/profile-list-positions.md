@@ -3,8 +3,9 @@ title: "List positions"
 description: "Retrieve a list of workPosition objects."
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 07/15/2024
 ---
 
 # List positions
@@ -77,10 +78,6 @@ GET https://graph.microsoft.com/beta/me/profile/positions
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-positions-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-positions-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -157,6 +154,7 @@ Content-type: application/json
           "displayName": "Adventureworks Ltd.",
           "pronunciation": null,
           "department": "Consulting",
+          "companyCode": "A-101",
           "officeLocation": "AW23/344",
           "address": {
             "type": "business",

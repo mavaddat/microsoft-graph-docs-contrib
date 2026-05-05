@@ -4,14 +4,17 @@ description: "Read the properties and relationships of an inactiveAzureServicePr
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get inactiveAzureServicePrincipalFinding
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Read the properties and relationships of an [inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md) object, representing inactive service principals in your Azure environment.
 
@@ -27,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/azure/findings/{id}/microsoft.graph.inactiveAzureServicePrincipalFinding
 ```
 
@@ -58,7 +61,7 @@ The following example shows a request.
   "name": "get_inactiveazureserviceprincipalfinding"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/azure/findings/MSxJbmFjdGl2ZUF6dXJlU2VydmljZVByaW5jaXBhbEZpbmRpbmcsMTA3NDQz/microsoft.graph.inactiveAzureServicePrincipalFinding
 ```
 
@@ -77,7 +80,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.inactiveAzureServicePrincipalFinding"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -117,4 +120,5 @@ Content-Type: application/json
     }
 }
 ```
+
 

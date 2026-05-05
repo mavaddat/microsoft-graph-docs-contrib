@@ -2,9 +2,10 @@
 title: "managedEBookAssignment resource type"
 description: "Contains properties used to assign a eBook to a group."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # managedEBookAssignment resource type
@@ -29,7 +30,7 @@ Contains properties used to assign a eBook to a group.
 |:---|:---|:---|
 |id|String|Key of the entity.|
 |target|[deviceAndAppManagementAssignmentTarget](../resources/intune-shared-deviceandappmanagementassignmenttarget.md)|The assignment target for eBook.|
-|installIntent|[installIntent](../resources/intune-shared-installintent.md)|The install intent for eBook. Possible values are: `available`, `required`, `uninstall`, `availableWithoutEnrollment`.|
+|installIntent|[installIntent](../resources/intune-shared-installintent.md)|The install intent for eBook. The possible values are: `available`, `required`, `uninstall`, `availableWithoutEnrollment`.|
 
 ## Relationships
 None

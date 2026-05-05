@@ -5,6 +5,7 @@ author: "sacsai"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: apiPageType
+ms.date: 07/08/2024
 ---
 
 # recommendation: tenantSecureScores
@@ -12,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the historical Secure Score data for your Microsoft Entra tenant. This API returns the latest score and doesn't include the details for each control. To view detailed information, see the [secureScore resource type](../resources/securescores.md) and its associated methods.
+Get the historical Secure Score data for your Microsoft Entra tenant. This API returns the latest score and doesn't include the details for each control. To view detailed information, see the [secureScore resource type](../resources/securescore.md) and its associated methods.
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /directory/recommendations/tenantSecureScores
 ```
 
@@ -54,16 +55,12 @@ The following example shows a request.
   "name": "recommendationthis.tenantsecurescores"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/directory/recommendations/tenantSecureScores
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/recommendationthistenantsecurescores-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/recommendationthistenantsecurescores-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -101,7 +98,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.tenantSecureScore)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

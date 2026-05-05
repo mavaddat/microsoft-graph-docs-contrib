@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "akumar39"
 ms.subservice: "teams"
 doc_type: "resourcePageType"
+ms.date: 07/26/2024
 ---
 
 # workforceIntegrationEncryption resource type
@@ -19,12 +20,16 @@ An encryption entity defining the protocol and secret for a [workforceintegratio
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|protocol|String| Possible values are: `sharedSecret`, `unknownFutureValue`.|
+|protocol|String| The possible values are: `sharedSecret`, `unknownFutureValue`.|
 |secret|String|Encryption shared secret.|
+
+## Relationships
+
+None.
 
 ## JSON representation
 
-HEre's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

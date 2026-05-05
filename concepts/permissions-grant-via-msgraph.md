@@ -1,6 +1,6 @@
 ---
 title: "Grant or revoke API permissions programmatically"
-description: "Learn how to use Microsoft Graph to programmatically grant and revoke delegated and application API permissions for an app. This method is an alternative to interactive admin consent."
+description: "Learn how to use Microsoft Graph to grant and revoke API permissions for an app without interactive admin consent."
 author: FaithOmbongi
 ms.author: ombongifaith
 ms.reviewer: psignoret, jackson.woods
@@ -8,43 +8,38 @@ ms.localizationpriority: medium
 ms.subservice: entra-applications
 zone_pivot_groups: grant-api-permissions
 ms.topic: how-to
-ms.date: 07/25/2023
+ms.date: 04/25/2025
 #Customer intent: As a developer, I want to learn how to grant and revoke API permissions for an app using Microsoft Graph, and bypass the interactive consent prompt available on the Microsoft Entra portal.
 ---
 
 # Grant or revoke API permissions programmatically
 
-When you grant API permissions to a client app in Microsoft Entra ID, the permission grants are recorded as objects that can be accessed, updated, or deleted like your data. Using Microsoft Graph to directly create permission grants is a programmatic alternative to [interactive consent](/azure/active-directory/manage-apps/consent-and-permissions-overview) and can be useful for automation scenarios, bulk management, or other custom operations in your organization.
+Granting API permissions to a client app in Microsoft Entra ID records the permission grants as objects that you read, update, or delete like any other data. You can use Microsoft Graph to grant or revoke API permissions for an app. This method avoids [interactive admin consent](/azure/active-directory/manage-apps/consent-and-permissions-overview) and is useful for automation or bulk management.
 
 <!-- start the grant-application-permissions zone -->
 ::: zone pivot="grant-application-permissions"
 
-In this guide, you'll learn how to grant and revoke app roles for an app using Microsoft Graph. **App roles**, also called *application permissions*, or *direct access permissions*, allow an app to call an API with its own identity.
+[Application permissions](permissions-overview.md#application-permissions), also called *app roles* or *direct access permissions*, let an app call an API using its own identity. Follow these steps to grant or revoke app roles.
 
 > [!CAUTION]
-> Be careful! Permissions granted programmatically are not subject to review or confirmation. They take effect immediately.
+> Be careful! Permissions granted programmatically aren't subject to review or confirmation and take effect immediately.
 
 ## Prerequisites
 
-To complete these instructions, you need the following resources and privileges:
+To complete these instructions, you need:
 
-- A working Microsoft Entra tenant.
-- You'll run the requests in this article as a user. You must complete the following steps:
-    - Sign in to an API client such as [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) as a user with privileges to create applications in the tenant.
-    - In the app you've signed in to, consent to the *Application.Read.All* and *AppRoleAssignment.ReadWrite.All* delegated permissions on behalf of the signed-in user. You don't need to consent on behalf of your organization.
-    - Get the object ID of the client service principal to which you'll grant app roles. In this article, the client service principal is identified by ID `b0d9b9e3-0ecf-4bfd-8dab-9273dd055a94`. In the Microsoft Entra admin center, go to **Identity** > **Applications** > **Enterprise applications** > **App applications** to find the client service principal. Select it and on the **Overview** page, copy the Object ID value.
-
-<!--
-> [!CAUTION]
-> The `AppRoleAssignment.ReadWrite.All` permission allows an app or service to manage permission grants and elevate privileges for any app, user, or group in your organization. Access to this service must be properly secured and should be limited to as few users as possible.
--->
+- A Microsoft Entra tenant.
+- To run the requests in this article in a delegated context. Complete these steps:
+    - Sign in to an API client like [Graph Explorer](https://aka.ms/ge) as a user with privileges to create applications in the tenant. The privileges to create permission grants can be limited or controlled in your tenant through admin-configured [app consent policies](/entra/identity/enterprise-apps/manage-app-consent-policies).
+    - In the app you're signed in to, consent to the *Application.Read.All* and *AppRoleAssignment.ReadWrite.All* delegated permissions for the signed-in user. You don't need to consent on behalf of your organization.
+- Get the object ID of the client service principal to which you grant app roles. In this article, the client service principal is identified by ID `b0d9b9e3-0ecf-4bfd-8dab-9273dd055a94`. In the Microsoft Entra admin center, expand **Identity** > **Applications** > **Enterprise applications** > **App applications** to find the client service principal. Select it and on the **Overview** page, copy the Object ID value.
 
 > [!CAUTION]
-> Apps that have been granted the *AppRoleAssignment.ReadWrite.All* permission should only be accessed by appropriate users.
+> Only appropriate users should access apps granted the *AppRoleAssignment.ReadWrite.All* permission.
 
-## Step 1: Get the appRoles of the resource service principal
+## Step 1: Get the app roles of the resource service principal
 
-Before you can grant app roles, you must first identify the app roles to grant and the resource service principal that exposes the app roles. App roles are defined in the **appRoles** object of a service principal. In this article, you'll use the Microsoft Graph service principal in the tenant as your resource service principal.
+First, find the app roles exposed by the resource service principal. App roles are defined in the **appRoles** object of the service principal. This article uses the Microsoft Graph service principal in your tenant as the resource service principal.
 
 ### Request
 
@@ -57,15 +52,11 @@ The following request retrieves the app roles defined by the Microsoft Graph ser
   "name": "get-approles-for-microsoftgraph"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=displayName eq 'Microsoft Graph'&$select=id,displayName,appId,appRoles
+GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=appId eq '00000003-0000-0000-c000-000000000000'&$select=id,displayName,appId,appRoles
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/get-approles-for-microsoftgraph-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-approles-for-microsoftgraph-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -96,7 +87,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=displayName eq 'M
 
 ### Response
 
-The following object is an example of the response.
+The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
 
@@ -107,7 +98,7 @@ The following object is an example of the response.
 } -->
 ```http
 HTTP/1.1 201 Created
-Content-type: application/json
+Content-Type: application/json
 
 {
     "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#servicePrincipals(id,displayName,appId,appRoles)",
@@ -136,14 +127,14 @@ Content-type: application/json
 
 ## Step 2: Grant an app role to a client service principal
 
-In this step, you'll grant your app an app role that's exposed by Microsoft Graph, thereby creating an **app role assignment**. From Step 1, the object ID of Microsoft Graph is `7ea9e944-71ce-443d-811c-71e8047b557a` and the app role `User.Read.All` is identified by ID `df021288-bdef-4463-88db-98f22de89214`. 
+In this step, grant your app an app role that's exposed by Microsoft Graph, resulting in an **app role assignment**. From Step 1, the object ID of Microsoft Graph is `7ea9e944-71ce-443d-811c-71e8047b557a`, and the app role `User.Read.All` is identified by ID `df021288-bdef-4463-88db-98f22de89214`. 
 
 ### Request
 
 The following request grants your client app (the principal of ID `b0d9b9e3-0ecf-4bfd-8dab-9273dd055a94`) an app role of ID `df021288-bdef-4463-88db-98f22de89214` that's exposed by a resource service principal of ID `7ea9e944-71ce-443d-811c-71e8047b557a`.
 
 > [!NOTE] 
-> If you're using the Python SDK, import the following libraries:
+> If you use the Python SDK, import the following libraries:
 > ```
 > from msgraph.generated.models.app_role_assignment import AppRoleAssignment
 > from msgraph.generated.models.service_principal import ServicePrincipal
@@ -167,10 +158,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/grant-approles-using-approleassignedto-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/grant-approles-using-approleassignedto-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -226,7 +213,7 @@ Content-type: application/json
 
 ### Confirm the app role assignment
 
-To confirm all principals with role assignments to the resource service principal, run the following request.
+Verify the principals with role assignments to the resource service principal by running the following request.
 
 #### Request
 
@@ -242,10 +229,6 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals/7ea9e944-71ce-443d-811c-7
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/get-approles-for-sp-approleassignedto-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-approles-for-sp-approleassignedto-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -276,7 +259,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals/7ea9e944-71ce-443d-811c-7
 
 #### Response
 
-The response object includes a collection of app role assignments to your resource service principal and includes the app role assignment you created using the POST request.
+The response object includes a collection of app role assignments to your resource service principal and includes the app role assignment you created in the preceding request.
 
 <!-- {
   "blockType": "response",
@@ -323,10 +306,6 @@ DELETE https://graph.microsoft.com/v1.0/servicePrincipals/7ea9e944-71ce-443d-811
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/revoke-approles-using-approleassignedto-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/revoke-approles-using-approleassignedto-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/v1/revoke-approles-using-approleassignedto-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -362,14 +341,10 @@ DELETE https://graph.microsoft.com/v1.0/servicePrincipals/7ea9e944-71ce-443d-811
 HTTP/1.1 204 No Content
 ```
 
-## Conclusion
-
-You've learned how to manage app role grants for a service principal. This method of granting permissions using Microsoft Graph is an alternative [interactive consent](/azure/active-directory/develop/application-consent-experience) and should be used with caution.
-
 ## Related content
 
-+ [Tutorial: Grant app roles in Microsoft Entra ID using Microsoft Graph PowerShell](/powershell/microsoftgraph/tutorial-grant-app-only-api-permissions)
-+ [appRoleAssignment resource type](/graph/api/resources/approleassignment)
++ [Grant app roles using Microsoft Graph PowerShell](/powershell/microsoftgraph/tutorial-grant-app-only-api-permissions)
++ Learn more about the [appRoleAssignment resource type](/graph/api/resources/approleassignment).
 
 ::: zone-end
 
@@ -378,36 +353,31 @@ You've learned how to manage app role grants for a service principal. This metho
 
 ::: zone pivot="grant-delegated-permissions"
 
-In this guide, you'll learn how to grant and revoke delegated permissions for an app using Microsoft Graph. **Delegated permissions**, also called *scopes* or *OAuth2 permissions*, allow an app to call an API on behalf of a signed-in user.
+[Delegated permissions](permissions-overview.md#delegated-permissions), also called *app roles* or *OAuth2 permissions*, let an app call an API on behalf of a signed-in user. Follow these steps to grant or revoke delegated permissions.
 
 > [!CAUTION]
-> Be careful! Permissions granted programmatically are not subject to review or confirmation. They take effect immediately.
+> Be careful! Permissions granted programmatically aren't subject to review or confirmation. They take effect immediately.
 
 ## Prerequisites
 
-To complete these instructions, you need the following resources and privileges:
+To complete these instructions, you need:
 
-- A working Microsoft Entra tenant.
-- You'll run the requests in this article as a user. You must complete the following steps:
-    - Sign in to an API client such as [Graph Explorer](https://aka.ms/ge) as a user with privileges to create applications in the tenant.
-    - In the app you've signed in to, consent to the *Application.Read.All*, *DelegatedPermissionGrant.ReadWrite.All* delegated permissions on behalf of the signed-in user. You don't need to consent on behalf of your organization.
-    - Get the object ID of the client service principal to which you'll grant delegated permissions on behalf of a user. In this article, the client service principal is identified by ID `b0d9b9e3-0ecf-4bfd-8dab-9273dd055a94`.
-
-<!--
-> [!CAUTION]
-> The `DelegatedPermissionGrant.ReadWrite.All` permission allows an app or service to manage permission grants and elevate privileges for any app or user in your organization. Access to this service must be properly secured and should be limited to as few users as possible.
--->
+- A valid Microsoft Entra tenant.
+- To run the requests in this article as a user. Complete these steps:
+    - Sign in to an API client like [Graph Explorer](https://aka.ms/ge) as a user with the *Cloud Application Administrator* Microsoft Entra role. This role is the least privileged role for creating applications and granting consent to delegated permissions in the tenant. The privileges to create permission grants can be limited or controlled in your tenant through admin-configured [app consent policies](/entra/identity/enterprise-apps/manage-app-consent-policies).
+    - In the app you're signed in to, consent to the *Application.Read.All* and *DelegatedPermissionGrant.ReadWrite.All* delegated permissions for the signed-in user. You don't need to consent on behalf of your organization.
+    - Get the object ID of the client service principal to which you grant delegated permissions on behalf of a user. In this article, the client service principal is identified by ID `b0d9b9e3-0ecf-4bfd-8dab-9273dd055a94`. In the Microsoft Entra admin center, expand **Identity** > **Applications** > **Enterprise applications** > **App applications** to find the client service principal. Select it and on the **Overview** page, copy the Object ID value.
 
 > [!CAUTION]
-> Apps that have been granted the *DelegatedPermissionGrant.ReadWrite.All* permission should only be accessed by appropriate users.
+> Only appropriate users should access apps granted the *DelegatedPermissionGrant.ReadWrite.All* permission.
 
-## Step 1: Get the delegated permissions of the resource service principal
+## Step 1: Get delegated permissions of the resource service principal
 
-Before you can grant delegated permissions, you must first identify the delegated permissions to grant and the resource service principal that exposes the delegated permissions. Delegated permissions are defined in the **oauth2PermissionScopes** object of a service principal. In this article, you'll use the Microsoft Graph service principal in the tenant as your resource service principal.
+First, find the delegated permissions exposed by the resource service principal. Delegated permissions are defined in the **oauth2PermissionScopes** object of the service principal. This article uses the Microsoft Graph service principal in your tenant as the resource service principal.
 
 ### Request
 
-The following request retrieves the delegated permissions defined by the Microsoft Graph service principal in the tenant.
+This request retrieves the delegated permissions defined by the Microsoft Graph service principal in the tenant.
 
 
 # [HTTP](#tab/http)
@@ -416,15 +386,11 @@ The following request retrieves the delegated permissions defined by the Microso
   "name": "get-scopes-for-microsoftgraph"
 }-->
 ```msgraph-interactive
-GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=displayName eq 'Microsoft Graph'&$select=id,displayName,appId,oauth2PermissionScopes
+GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=appId eq '00000003-0000-0000-c000-000000000000'&$select=id,displayName,appId,oauth2PermissionScopes
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/get-scopes-for-microsoftgraph-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-scopes-for-microsoftgraph-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -455,7 +421,7 @@ GET https://graph.microsoft.com/v1.0/servicePrincipals?$filter=displayName eq 'M
 
 ### Response
 
-The following object is an example of the response.
+The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
 
@@ -466,7 +432,7 @@ The following object is an example of the response.
 } -->
 ```http
 HTTP/1.1 201 Created
-Content-type: application/json
+Content-Type: application/json
 
 {
     "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#servicePrincipals(id,displayName,appId,oauth2PermissionScopes)",
@@ -502,10 +468,10 @@ Content-type: application/json
 }
 ```
 
-## Step 2: Grant a delegated permission to the client service principal on behalf of a user
+## Step 2: Grant delegated permission to the client service principal on behalf of a user
 
 ### Request
-In this step, you'll grant your app, on behalf of a user, a delegated permission that's exposed by Microsoft Graph, thereby creating an **delegated permission grant**. 
+In this step, grant your app delegated permission that's exposed by Microsoft Graph on behalf of a user, resulting in a **delegated permission grant**.
 
 + From Step 1, the object ID of Microsoft Graph in the tenant is `7ea9e944-71ce-443d-811c-71e8047b557a`
 + The delegated permissions `User.Read.All` and `Group.Read.All` are identified by the globally unique IDs `a154be20-db9c-4678-8ab7-66f6cc099a59` and `5f8c59db-677d-491f-a6b8-5f174b11ec1d` respectively.
@@ -535,10 +501,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/grant-delegated-perms-sp-oauth2permissiongrants-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/grant-delegated-perms-sp-oauth2permissiongrants-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/v1/grant-delegated-perms-sp-oauth2permissiongrants-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -565,11 +527,11 @@ Content-Type: application/json
 
 ---
 
-While the preceding request grants consent on behalf of a single user, you can choose to grant consent on behalf of all users in the tenant. The request body is similar to the previous request body except with the following changes:
+The preceding request grants consent on behalf of a single user, but you can also grant consent on behalf of all users in the tenant. The request body is similar to the previous request body except with the following changes:
 - The **consentType** is `AllPrincipals`, indicating that you're consenting on behalf of all users in the tenant.
 - The **principalId** property isn't supplied or can be `null`.
 
-An example request body for granting consent on behalf all users is as follows:
+Here is an example request body for granting consent on behalf of all users:
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/v1.0/oauth2PermissionGrants
@@ -610,7 +572,7 @@ If you granted consent for all users in the tenant, the **consentType** in the r
 
 ### Confirm the permission grant
 
-To confirm the delegated permissions assigned to the service principal on behalf of the user, you run the following request.
+Verify the principals with delegated permissions to the resource service principal by running the following request.
 
 #### Request
 
@@ -626,10 +588,6 @@ GET https://graph.microsoft.com/v1.0/oauth2PermissionGrants?$filter=clientId eq 
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/get-delegated-perms-sp-oauth2permissiongrants-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-delegated-perms-sp-oauth2permissiongrants-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -683,16 +641,66 @@ Content-type: application/json
 }
 ```
 
-## Step 3: Revoke delegated permissions granted to a service principal on behalf of a user [Optional]
+### Update the permission grant
 
-If a service principal has been granted multiple delegated permission grants on behalf of a user, you can choose to revoke either specific grants or all grants. Use this method to remove and revoke consent for the delegated permissions that you've assigned to Graph Explorer.
+To add more permissions or remove some permissions for the client to the resource service principal for the user, update the **oauth2PermissionGrant** object as shown in the following request. The request returns a `204 No Content` response.
 
-+ To revoke one or some grants, run a PATCH request on the oauth2PermissionGrant object and specify only the delegated permissions to retain in the **scope** parameter.
-+ To revoke all grants, run a DELETE request on the oauth2PermissionGrant object.
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "update-delegated-perms-sp-oauth2permissiongrants"
+}-->
+```msgraph-interactive
+PATCH https://graph.microsoft.com/v1.0/oauth2PermissionGrants/47nZsM8O_UuNq5Jz3QValETpqX7OcT1EgRxx6AR7VXqdkr0_VoxiRIUeDrmns6Kl
+Content-type: application/json
+
+{
+    "scope": "openid profile offline_access DelegatedPermissionGrant.ReadWrite.All AccessReview.ReadWrite.All AgentIdentityBlueprint.ReadWrite.All"
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/v1/update-delegated-perms-sp-oauth2permissiongrants-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/v1/update-delegated-perms-sp-oauth2permissiongrants-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/v1/update-delegated-perms-sp-oauth2permissiongrants-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/v1/update-delegated-perms-sp-oauth2permissiongrants-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/v1/update-delegated-perms-sp-oauth2permissiongrants-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/v1/update-delegated-perms-sp-oauth2permissiongrants-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/v1/update-delegated-perms-sp-oauth2permissiongrants-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+---
+
+## Step 3: Revoke delegated permissions granted to a service principal on behalf of a user [optional]
+
+If a service principal has been granted multiple delegated permission grants on behalf of a user, you can choose to revoke either specific grants or all grants. Use this method to remove and revoke consent for the delegated permissions that you assigned to the client service principal.
+
++ To revoke one or more grants, run a PATCH request on the oauth2PermissionGrant object and specify only the delegated permissions to retain in the **scope** parameter.
++ To revoke all grants, send a DELETE request to the oauth2PermissionGrant object.
 
 ### Request
 
-The following request revokes all permission grants and retains only the `User.Read.All` permission grant. The permissions are removed and the consent that was previously granted is revoked.
+This request revokes all permission grants except the `User.Read.All` permission grant. It removes the permissions and revokes the previously granted consent.
 
 
 # [HTTP](#tab/http)
@@ -711,10 +719,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/revoke-scopes-oauth2permissiongrants-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/revoke-scopes-oauth2permissiongrants-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -754,7 +758,7 @@ HTTP/1.1 204 No Content
 
 ### Request
 
-The following request revokes all permission grants for a service principal on behalf of a user.
+This request revokes all permission grants for a service principal on behalf of a user.
 
 
 # [HTTP](#tab/http)
@@ -768,10 +772,6 @@ DELETE https://graph.microsoft.com/v1.0/oauth2PermissionGrants/47nZsM8O_UuNq5Jz3
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/revoke-all-scopes-oauth2permissiongrants-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/revoke-all-scopes-oauth2permissiongrants-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -809,14 +809,10 @@ DELETE https://graph.microsoft.com/v1.0/oauth2PermissionGrants/47nZsM8O_UuNq5Jz3
 HTTP/1.1 204 No Content
 ```
 
-## Conclusion
-
-You've granted delegated permissions (or scopes) to a service principal. This method of granting permissions using Microsoft Graph is an alternative to [interactive consent](/azure/active-directory/develop/application-consent-experience) and should be used with caution.
-
 ## Related content
 
-- [Tutorial: Grant delegated permissions in Microsoft Entra ID using Microsoft Graph PowerShell](/powershell/microsoftgraph/tutorial-grant-delegated-api-permissions)
-- [oAuth2PermissionGrant resource type](/graph/api/resources/oauth2permissiongrant)
+- [Grant delegated permissions roles using PowerShell](/powershell/microsoftgraph/tutorial-grant-app-only-api-permissions)
+- [OAuth2PermissionGrant resource type](/graph/api/resources/oauth2permissiongrant)
 
 ::: zone-end
 

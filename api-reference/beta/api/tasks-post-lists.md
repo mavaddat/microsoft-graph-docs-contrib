@@ -5,6 +5,7 @@ author: "devindrajit"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Create baseTaskList (deprecated)
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /me/tasks/lists
 POST /users/{userId|userPrincipalName}/tasks/lists
 ```
@@ -64,7 +65,7 @@ If successful, this method returns a `201 Created` response code and a [baseTask
   "name": "create_tasklist_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/me/tasks/lists
 Content-Type: application/json
 
@@ -88,7 +89,7 @@ Content-Type: application/json
   "@odata.type": "microsoft.graph.taskList"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

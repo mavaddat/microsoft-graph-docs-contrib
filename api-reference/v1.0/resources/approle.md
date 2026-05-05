@@ -4,7 +4,8 @@ description: "Represents an application role that may be requested by a client a
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "psignoret"
+author: "eringreenlee"
+ms.date: 04/03/2024
 ---
 
 # appRole resource type
@@ -16,6 +17,8 @@ Represents an application role that can be requested by (and granted to) a clien
 To add, update, or remove app roles for an application, [update the application](../api/application-update.md) for the app or service. App roles on the application entity will be available in all tenants where the application is used. To define app roles that are only applicable in your tenant (for example, app roles representing custom roles in your instance of a multitenant application), you can also [update the service principal](../api/serviceprincipal-update.md) for the app, to add or update app roles to the **appRoles** collection.
 
 With [appRoleAssignments](approleassignment.md), app roles can be assigned to users, groups, or other applications' service principals.
+
+See [Example 2: Update the appRoles for an application](../api/application-update.md#example-2-update-the-approles-for-an-application) for a practical example.
 
 ## Properties
 
@@ -31,7 +34,7 @@ With [appRoleAssignments](approleassignment.md), app roles can be assigned to us
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

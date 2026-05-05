@@ -5,6 +5,7 @@ author: "jeeshnair"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # usageRight resource type
@@ -19,8 +20,8 @@ A usage right represents a license that a user or device has for either third pa
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List user usageRights](../api/user-list-usagerights.md)|[usageRight](../resources/usageright.md) collection|Get the list of usage rights for a user.|
-|[List device usageRights](../api/device-list-usagerights.md)|[usageRight](../resources/usageright.md) collection|Get the list of usage rights for a device.|
+|[List user usage rights](../api/user-list-usagerights.md)|[usageRight](../resources/usageright.md) collection|Get the list of usage rights for a user.|
+|[List device usage rights](../api/device-list-usagerights.md)|[usageRight](../resources/usageright.md) collection|Get the list of usage rights for a device.|
 
 ## Properties
 
@@ -29,9 +30,9 @@ A usage right represents a license that a user or device has for either third pa
 |catalogId|String|Product id corresponding to the usage right.|
 |id|String|The id of the usage right.|
 |serviceIdentifier|String|Identifier of the service corresponding to the usage right.|
-|state|usageRightState|The state of the usage right. Possible values are: `active`, `inactive`, `warning`, `suspended`.|
+|state|usageRightState|The state of the usage right. The possible values are: `active`, `inactive`, `warning`, `suspended`.|
 
-### usageRightState values 
+### usageRightState values
 
 | Member             |  Description               |
 | :----------------- |  :------------------------ |
@@ -43,15 +44,13 @@ A usage right represents a license that a user or device has for either third pa
 
 >**Note:** Only the active and warning states represent a usable benefit. All other states should be treated as not resulting in a usable benefit.
 
-
-
 ## Relationships
 
 None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

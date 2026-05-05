@@ -5,6 +5,7 @@ author: "liamfernandez"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 09/18/2024
 ---
 
 # Update settings
@@ -22,9 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "sharepointsettings_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/sharepointsettings-update-permissions.md)]
 
-When calling on behalf of a user, the user needs to belong to one of the following admin roles. To learn more about admin roles, see [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles):
-* Global Administrator
-* SharePoint Administrator
+When calling on behalf of a user, the user needs to belong to the SharePoint Administrator role. To learn more about admin roles, see [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles).
 
 ## HTTP request
 
@@ -32,7 +31,7 @@ When calling on behalf of a user, the user needs to belong to one of the followi
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /admin/sharepoint/settings
 ```
 
@@ -51,7 +50,7 @@ PATCH /admin/sharepoint/settings
 | deletedUserPersonalSiteRetentionPeriodInDays       | Int32                        | The number of days for preserving a deleted user's OneDrive.                                                                                                                                                   |
 | excludedFileExtensionsForSyncApp                   | String collection            | Collection of file extensions not uploaded by the OneDrive sync app.                                                                                                                                           |
 | idleSessionSignOut                                 | [microsoft.graph.idleSessionSignOut](../resources/idlesessionsignout.md)           | Specifies the idle session sign-out policies for the tenant.                                                                                     |
-| imageTaggingOption                                 | imageTaggingChoice           | Specifies the image tagging option for the tenant. Possible values are: `disabled`, `basic`, `enhanced`.                                                                                                       |
+| imageTaggingOption                                 | imageTaggingChoice           | Specifies the image tagging option for the tenant. The possible values are: `disabled`, `basic`, `enhanced`.                                                                                                       |
 | isCommentingOnSitePagesEnabled                     | Boolean                      | Indicates whether comments are allowed on modern site pages in SharePoint.                                                                                                                                     |
 | isFileActivityNotificationEnabled                  | Boolean                      | Indicates whether push notifications are enabled for OneDrive events.                                                                                                                                          |
 | isLegacyAuthProtocolsEnabled                       | Boolean                      | Indicates whether legacy authentication protocols are enabled for the tenant.                                                                                                                                  |
@@ -70,8 +69,8 @@ PATCH /admin/sharepoint/settings
 | personalSiteDefaultStorageLimitInMB                | Int64                        | The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).                                                                           |
 | sharingAllowedDomainList                           | String collection            | Collection of email domains that are allowed for sharing outside the organization.                                                                                                                             |
 | sharingBlockedDomainList                           | String collection            | Collection of email domains that are blocked for sharing outside the organization.                                                                                                                             |
-| sharingCapability                                  | sharingCapabilities          | Sharing capability for the tenant. Possible values are: `disabled`, `externalUserSharingOnly`, `externalUserAndGuestSharing`, `existingExternalUserSharingOnly`.                                               |
-| sharingDomainRestrictionMode                       | sharingDomainRestrictionMode | Specifies the external sharing mode for domains. Possible values are: `none`, `allowList`, `blockList`.                                                                                                        |
+| sharingCapability                                  | sharingCapabilities          | Sharing capability for the tenant. The possible values are: `disabled`, `externalUserSharingOnly`, `externalUserAndGuestSharing`, `existingExternalUserSharingOnly`.                                               |
+| sharingDomainRestrictionMode                       | sharingDomainRestrictionMode | Specifies the external sharing mode for domains. The possible values are: `none`, `allowList`, `blockList`.                                                                                                        |
 | siteCreationDefaultManagedPath                     | String                       | The value of the team site managed path. This is the path under which new team sites will be created.                                                                                                          |
 | siteCreationDefaultStorageLimitInMB                | Int32                        | The default storage quota for a new site upon creation. Measured in megabytes (MB).                                                                                                                            |
 | tenantDefaultTimezone                              | String                       | The default timezone of a tenant for newly created sites. For a list of possible values, see [SPRegionalSettings.TimeZones property](/sharepoint/dev/schema/regional-settings-schema).                                      |
@@ -94,7 +93,7 @@ The following example shows a request.
   "name": "update_tenant_settings"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/admin/sharepoint/settings
 Content-Type: application/json
 Content-length: 1323
@@ -113,10 +112,6 @@ Content-length: 1323
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-tenant-settings-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-tenant-settings-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -156,7 +151,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.sharepointSettings"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

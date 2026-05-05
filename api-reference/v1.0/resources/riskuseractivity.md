@@ -5,6 +5,7 @@ author: "tracyshi"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 05/15/2024
 ---
 
 # riskUserActivity resource type
@@ -16,7 +17,7 @@ Represents the risk activities of a Microsoft Entra user as determined by Micros
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|detail|riskDetail|Details of the detected risk. Possible values are: `none`, `adminGeneratedTemporaryPassword`, `userPerformedSecuredPasswordChange`, `userPerformedSecuredPasswordReset`, `adminConfirmedSigninSafe`, `aiConfirmedSigninSafe`, `userPassedMFADrivenByRiskBasedPolicy`, `adminDismissedAllRiskForUser`, `adminConfirmedSigninCompromised`, `hidden`, `adminConfirmedUserCompromised`, `unknownFutureValue`. <br/>For more information about each value, see [Risk types and detection](/entra/id-protection/concept-identity-protection-risks#risk-types-and-detection).|
+|detail|[riskDetail](../resources/riskdetail.md)|For more information, see [riskDetail](../resources/riskdetail.md).|
 |riskEventTypes|String collection|The type of risk event detected.|
 
 ## Relationships

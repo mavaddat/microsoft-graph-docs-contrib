@@ -5,6 +5,7 @@ author: "mlafleur"
 ms.localizationpriority: medium
 ms.subservice: "industry-data-etl"
 doc_type: apiPageType
+ms.date: 05/29/2024
 ---
 
 # List inboundFlows
@@ -74,10 +75,6 @@ GET https://graph.microsoft.com/beta/external/industryData/inboundFlows
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-inboundflow-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-inboundflow-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/list-inboundflow-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -131,6 +128,15 @@ Content-Type: application/json
       "expirationDateTime": "2023-03-13T11:10:46.924769Z",
       "id": "7bd62d17-8c37-4494-f68d-08daddab2911",
       "readinessStatus": "ready"
+    },
+    {
+      "@odata.type": "#microsoft.graph.industryData.inboundApiFlow",
+      "dataDomain": "educationRostering",
+      "displayName": "Inbound API Flow",
+      "effectiveDateTime": "2024-03-12T11:10:46.924769Z",
+      "expirationDateTime": "2024-03-13T11:10:46.924769Z",
+      "id": "af37f530-9eeb-4a68-862c-fca4baf6410e",
+      "readinessStatus": "ready",
     }
   ]
 }

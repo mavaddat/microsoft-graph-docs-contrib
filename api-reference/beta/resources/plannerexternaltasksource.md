@@ -5,6 +5,7 @@ author: "DanluCui"
 ms.localizationpriority: medium
 ms.subservice: "planner"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # plannerExternalTaskSource resource type
@@ -36,7 +37,7 @@ This type is derived from [plannerTaskCreation](plannerTaskCreation.md).
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.plannerExternalTaskSource"

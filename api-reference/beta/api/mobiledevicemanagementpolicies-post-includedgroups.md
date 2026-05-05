@@ -5,6 +5,7 @@ author: "ravennMSFT"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 10/30/2024
 ---
 
 # Add includedGroups
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Add groups to be included in a mobile app management policy.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -23,6 +24,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "mobiledevicemanagementpolicies_post_includedgroups" } -->
 [!INCLUDE [permissions-table](../includes/permissions/mobiledevicemanagementpolicies-post-includedgroups-permissions.md)]
+
+[!INCLUDE [rbac-mam-mdm-policies-apis-write](../includes/rbac-for-apis/rbac-mam-mdm-policies-apis-write.md)]
 
 ## HTTP request
 
@@ -66,7 +69,7 @@ If successful, this method returns a `204 No Content` response code and a [group
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/policies/mobileDeviceManagementPolicies/dc3d2ce5-7c5e-4dca-a0ef-2145bf6e53ef/includedGroups/$ref
 Content-Type: application/json
 
@@ -77,10 +80,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-group-from-specifiedgroup-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-group-from-specifiedgroup-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -117,6 +116,6 @@ Content-Type: application/json
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

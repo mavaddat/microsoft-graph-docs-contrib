@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 12/01/2024
 ---
 
 # Get payloadDetail
@@ -26,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/attackSimulation/payloads/{payloadId}/detail
 ```
 
@@ -54,15 +55,22 @@ If successful, this method returns a `200 OK` response code and a [payloadDetail
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_payloadDetail",
   "sampleKeys": ["f1b13829-3829-f1b1-2938-b1f12938b1a"]
 }
 -->
-``` http
-GET https://graph.microsoft.com/v1.0/security/attackSimulation/payload/f1b13829-3829-f1b1-2938-b1f12938b1a/detail
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/security/attackSimulation/payloads/f1b13829-3829-f1b1-2938-b1f12938b1a/detail
 ```
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-payloaddetail-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 
@@ -75,7 +83,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.payloadDetail"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

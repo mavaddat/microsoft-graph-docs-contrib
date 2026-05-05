@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 author: "ArvindHarinder1"
 ms.subservice: "entra-applications"
+ms.date: 03/21/2024
 ---
 
 # synchronizationTemplate resource type
@@ -44,7 +45,7 @@ You can provide multiple templates for an application, and designate a default t
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -5,6 +5,7 @@ author: "namkedia"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Update samlOrWsFedExternalDomainFederation
@@ -22,10 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "samlorwsfedexternaldomainfederation_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/samlorwsfedexternaldomainfederation-update-permissions.md)]
 
-The work or school account needs to belong to one of the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-
-* Global Administrator
-* External Identity Provider Administrator
+[!INCLUDE [rbac-identity-provider-apis](../includes/rbac-for-apis/rbac-identity-provider-apis.md)]
 
 ## HTTP request
 
@@ -34,7 +32,7 @@ The work or school account needs to belong to one of the following [Microsoft En
 }
 -->
 
-``` http
+```http
 PATCH directory/federationConfigurations/graph.samlOrWsFedExternalDomainFederation/{samlOrWsFedExternalDomainFederation ID}
 ```
 
@@ -75,7 +73,7 @@ If successful, this method returns a `200 OK` response code and an updated [saml
 }
 -->
 
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/directory/federationConfigurations/graph.samlOrWsFedExternalDomainFederation/d5a56845-6845-d5a5-4568-a5d54568a5d5
 Content-Type: application/json
 
@@ -108,7 +106,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

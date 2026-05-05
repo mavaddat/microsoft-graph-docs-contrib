@@ -3,8 +3,9 @@ title: "Update itememail"
 description: "Update the properties of an itemEmail object in a user's profile."
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 06/26/2024
 ---
 
 # Update itememail
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /me/profile/emails/{id}
 PATCH /users/{id | userPrincipalName}/profile/emails/{id}
 ```
@@ -43,18 +44,18 @@ PATCH /users/{id | userPrincipalName}/profile/emails/{id}
 
 ## Request body
 
-In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance, don't include existing values that haven't changed.
+In the request body, supply the values for relevant fields that should be updated. Existing properties that aren't included in the request body maintain their previous values or are recalculated based on changes to other property values. For best performance, don't include existing values that haven't changed.
 
 The following table shows the properties that are possible to update within an existing [itemEmail](../resources/itememail.md) object in a user's [profile](../resources/profile.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
 |address|String|The email address itself.|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |displayName|String|The name or label a user has associated with a particular email address.|
 |inference|[inferenceData](../resources/inferencedata.md)|Contains inference detail if the entity is inferred by the creating or modifying application. Inherited from [itemFacet](../resources/itemfacet.md).|
 |source|[personDataSource](../resources/persondatasource.md)|Where the values originated if synced from another service. Inherited from [itemFacet](../resources/itemfacet.md).|
-|type|emailType|The type of email address. Possible values are: `unknown`, `work`, `personal`, `main`, `other`.|
+|type|emailType|The type of email address. The possible values are: `unknown`, `work`, `personal`, `main`, `other`.|
 
 ## Response
 
@@ -69,7 +70,7 @@ If successful, this method returns a `200 OK` response code and an updated [item
   "name": "update_itememail"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/users/{userId}/profile/emails/{id}
 Content-Type: application/json
 
@@ -81,10 +82,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-itememail-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-itememail-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -121,7 +118,7 @@ Content-Type: application/json
   "@odata.type": "microsoft.graph.itemEmail"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

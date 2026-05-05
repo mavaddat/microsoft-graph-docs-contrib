@@ -5,6 +5,7 @@ author: "liamfernandez"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 09/14/2024
 ---
 
 # Get settings
@@ -23,7 +24,6 @@ Choose the permission or permissions marked as least privileged for this API. Us
 [!INCLUDE [permissions-table](../includes/permissions/sharepointsettings-get-permissions.md)]
 
 When calling on behalf of a user, the user needs to belong to one of the following admin roles. To learn more about admin roles, see [About admin roles in the Microsoft 365 admin center](/microsoft-365/admin/add-users/about-admin-roles):
-* Global Administrator
 * Global Reader
 * SharePoint Administrator
 
@@ -33,7 +33,7 @@ When calling on behalf of a user, the user needs to belong to one of the followi
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/sharepoint/settings
 ```
 
@@ -65,16 +65,12 @@ The following example shows a request.
   "name": "get_settings_at_tenant_level"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/sharepoint/settings
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-settings-at-tenant-level-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-settings-at-tenant-level-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -114,7 +110,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.sharepointSettings"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

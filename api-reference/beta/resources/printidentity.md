@@ -5,6 +5,7 @@ author: braedenp-msft
 ms.localizationpriority: medium
 ms.subservice: universal-print
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # printIdentity resource type
@@ -21,9 +22,12 @@ Represents an identity within the Universal Print service. Maps to an [Microsoft
 |id|String|The printIdentity's identifier. Read-only.|
 |displayName|String|The printIdentity's display name.|
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

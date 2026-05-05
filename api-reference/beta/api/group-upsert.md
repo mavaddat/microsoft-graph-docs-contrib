@@ -5,6 +5,7 @@ author: "Jordanndahl"
 ms.localizationpriority: medium
 ms.subservice: "entra-groups"
 doc_type: apiPageType
+ms.date: 09/13/2024
 ---
 
 # Upsert group
@@ -19,16 +20,18 @@ You can create or update the following types of group:
 - Microsoft 365 group (unified group)
 - Security group
 
- By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see thethe [Properties](../resources/group.md#properties) section of the [group](../resources/group.md) resource. To get properties that are _not_ returned by default, do a [GET operation](group-get.md) and specify the properties in a `$select` OData query option.
+ By default, this operation returns only a subset of the properties for each group. For a list of properties that are returned by default, see the [Properties](../resources/group.md#properties) section of the [group](../resources/group.md) resource. To get properties that are _not_ returned by default, do a [GET operation](group-get.md) and specify the properties in a `$select` OData query option.
 
-**Note**: To create a [team](../resources/team.md), first create a group then add a team to it, see [create team](../api/team-put-teams.md).
+> **Note**: To create a [team](../resources/team.md), first create a group, and then add a team to it. For more information, see [Create team](../api/team-put-teams.md).
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "group_post_groups" } -->
-[!INCLUDE [permissions-table](../includes/permissions/group-post-groups-permissions.md)]
+<!-- { "blockType": "permissions", "name": "group_upsert" } -->
+[!INCLUDE [permissions-table](../includes/permissions/group-upsert-permissions.md)]
 
 In order for an app with Group.Create permission to create a group with owners or members, it must have the privileges to read the object type that it wants to assign as the group owner or member. Therefore:
 
@@ -41,17 +44,17 @@ In order for an app with Group.Create permission to create a group with owners o
 
 <!-- { "blockType": "ignored" } -->
 
-``` http
-PATCH /groups/(uniqueName='uniqueName')
+```http
+PATCH /groups(uniqueName='uniqueName')
 ```
 
 ## Request headers
 
 | Name          | Description  |
 |:--------------|:---|
-| Authorization | Bearer {token}. Required.|
+| Authorization |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type  | application/json. Required.|
-| Prefer        | `create-if-missing`. Required for upsert behavior, otherwise the request is treated as an update operation. |
+| Prefer        | `create-if-missing`. Required for upsert behavior. Otherwise the request is treated as an update operation. |
 
 ## Request body
 
@@ -61,18 +64,16 @@ The following table lists the properties that are required when you create the [
 
 | Property        | Type    | Description                                                                                                                                                                                                                                                                                                                                |
 | :-------------- | :------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| displayName     | string  | The name to display in the address book for the group. Maximum length is 256 characters. Required.                                                                                                                                                                                                                                         |
-| mailEnabled     | boolean | Set to `true` for mail-enabled groups. Required.                                                                                                                                                                                                                                                                                           |
-| mailNickname    | string  | The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the [ASCII character set 0 - 127](/office/vba/language/reference/user-interface-help/character-set-0127) except the following: ` @ () \ [] " ; : <> , SPACE`. Required. |
-| securityEnabled | boolean | Set to `true` for security-enabled groups, including Microsoft 365 groups. Required. **Note:** Groups created using the Microsoft Entra admin center or the Azure portal always have **securityEnabled** initially set to `true`.                                                                                                                                    |
+| displayName     | String  | The name to display in the address book for the group. Maximum length is 256 characters. Required.                                                                                                                                                                                                                                         |
+| mailEnabled     | Boolean | Set to `true` for mail-enabled groups. Required.                                                                                                                                                                                                                                                                                           |
+| mailNickname    | String  | The mail alias for the group, unique for Microsoft 365 groups in the organization. Maximum length is 64 characters. This property can contain only characters in the [ASCII character set 0 - 127](/office/vba/language/reference/user-interface-help/character-set-0127) except the following characters: ` @ () \ [] " ; : <> , SPACE`. Required. |
+| securityEnabled | Boolean | Set to `true` for security-enabled groups, including Microsoft 365 groups. Required. **Note:** Groups created using the Microsoft Entra admin center or the Azure portal always have **securityEnabled** initially set to `true`.                                                                                                                                    |
 
 > [!IMPORTANT]
->
 > - Creating a group using the **Group.Create** application permission without specifying owners will create the group anonymously and the group will not be modifiable. Add owners to the group while creating it to specify owners who can modify the group.
->
 > - Creating a Microsoft 365 group programmatically with an app-only context and without specifying owners will create the group anonymously. Doing so can result in the associated SharePoint Online site not being created automatically until further manual action is taken.
->
-> - To following properties can't be set in the initial POST request and must be set in a subsequent PATCH request: **allowExternalSenders**, **autoSubscribeNewMembers**, **hideFromAddressLists**, **hideFromOutlookClients**, **isSubscribedByMail**, **unseenCount**.
+> - A non-admin user can't add themselves to the group owners collection. For more information, see the related [known issue](/graph/known-issues#non-admin-user-cant-add-self-as-group-owner-during-group-creation-or-update).
+> - The following properties can't be set in the initial POST request and must be set in a subsequent PATCH request: **allowExternalSenders**, **autoSubscribeNewMembers**, **hideFromAddressLists**, **hideFromOutlookClients**, **isSubscribedByMail**, **unseenCount**, **welcomeMessageEnabled**.
 
 Because the **group** resource supports [extensions](/graph/extensibility-overview), you can add custom properties with your own data to the group while creating it.
 
@@ -87,15 +88,17 @@ Use the **groupTypes** property to control the type of group and its membership,
 
 ## Response
 
-If successful, if the object with the **uniqueName** doesn't exist, this method returns a `201 Created` response code and a new [group](../resources/group.md) object in the response body.
+If an object with the **uniqueName** doesn't exist, this method returns a `201 Created` response code and a new [group](../resources/group.md) object in the response body.
 
-If the object with the **uniqueName** already exists, this method updates the [group](../resources/group.md) object and returns a `204 No Content` response code.
+If an object with **uniqueName** doesn't exist and the `Prefer: create-if-missing` header is *not* specified, this method returns a `404 Not Found` error code.
+
+If an object with the **uniqueName** already exists, this method updates the [group](../resources/group.md) object and returns a `204 No Content` response code.
 
 ## Examples
 
 ### Example 1: Create a Microsoft 365 group if it doesn't exist
 
-The following example creates a Microsoft 365 group because a group with the specified **uniqueName** value does not exist. Because the owners have not been specified, the calling user is automatically added as the owner of the group.
+The following example creates a Microsoft 365 group because a group with the specified **uniqueName** value does not exist. Because the owners are not specified, the calling user is automatically added as the owner of the group.
 
 #### Request
 
@@ -124,10 +127,6 @@ Prefer: create-if-missing
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/upsert-group-create-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/upsert-group-create-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -212,7 +211,9 @@ Content-type: application/json
 
 ### Example 2: Create a security group with an owner and members if it doesn't exist
 
-The following example creates a security group with an owner and members specified because a group with the specified **uniqueName** value does not exist. Note that a maximum of 20 relationships, such as owners and members, can be added as part of group creation. You can subsequently add multiple additional members by using  [add member](/graph/api/group-post-members?view=graph-rest-beta&preserve-view=true) API or JSON batching.
+The following example creates a security group with an owner and members specified because a group with the specified **uniqueName** value does not exist. Note that a maximum of 20 relationships, such as owners and members, can be added as part of group creation. You can then add more members by using the [add member](/graph/api/group-post-members?view=graph-rest-beta&preserve-view=true) API or JSON batching.
+
+A non-admin user can't add themselves to the group owners collection. For more information, see the related [known issue](/graph/known-issues#non-admin-user-cant-add-self-as-group-owner-during-group-creation-or-update).
 
 #### Request
 
@@ -250,10 +251,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/upsert-create-prepopulated-group-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/upsert-create-prepopulated-group-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/upsert-create-prepopulated-group-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -282,7 +279,7 @@ Content-Type: application/json
 
 #### Response
 
-The following is an example of a successful response. It includes only default properties. You can subsequently get the **owners** or **members** navigation properties of the group to verify the owner or members. The value of the **preferredDataLocation** property is inherited from the group creator's preferred data location.
+The following example shows a successful response. It includes only default properties. You can then get the **owners** or **members** navigation properties of the group to verify the owner or members. The value of the **preferredDataLocation** property is inherited from the group creator's preferred data location.
 
 > **Note:** The response object shown here might be shortened for readability.
 
@@ -346,6 +343,8 @@ Content-type: application/json
 
 In this example, the specified group already exists, so the operation is treated as an update.
 
+A non-admin user can't add themselves to the group owners collection. For more information, see the related [known issue](/graph/known-issues#non-admin-user-cant-add-self-as-group-owner-during-group-creation-or-update).
+
 #### Request
 
 The following example shows a request.
@@ -384,10 +383,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/upsert-update-prepopulated-group-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/upsert-update-prepopulated-group-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/upsert-update-prepopulated-group-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -422,11 +417,11 @@ The following example shows the response. The value of the **preferredDataLocati
   "blockType": "response"
 } -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 
-## See also
+## Related content
 
 - [Add custom data to resources using extensions](/graph/extensibility-overview)
 - [Add custom data to users using open extensions (preview)](/graph/extensibility-open-users)

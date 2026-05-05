@@ -4,8 +4,9 @@ description: "Get groups, directory roles, and administrative units that the use
 ms.localizationpriority: medium
 author: "yuhko-msft"
 ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
-ms.prod: "users"
+ms.subservice: entra-users
 doc_type: apiPageType
+ms.date: 10/22/2024
 ---
 
 # List a user's memberships (direct and transitive)
@@ -22,21 +23,43 @@ Get [groups](../resources/group.md), [directory roles](../resources/directoryrol
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "user_list_transitivememberof" } -->
+### Permissions for the signed-in user's memberships
+
+<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
 [!INCLUDE [permissions-table](../includes/permissions/user-list-transitivememberof-permissions.md)]
+
+### Permissions for another user's memberships
+
+<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
+[!INCLUDE [permissions-table](../includes/permissions/user-list-transitivememberof-2-permissions.md)]
+
+[!INCLUDE [limited-info](../../includes/limited-info.md)]
+
+> [!TIP]
+> - Calling the `/me/transitiveMemberOf` endpoint requires a signed-in user and therefore a delegated permission. Application permissions are not supported when you use the `/me/transitiveMemberOf` endpoint.
+> - To list the members of a group with hidden membership, the `Member.Read.Hidden` permission is required.
 
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
-
 ```http
 GET /me/transitiveMemberOf
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+<!-- { "blockType": "ignored" } -->
+```http
 GET /users/{id | userPrincipalName}/transitiveMemberOf
 ```
 
 ## Optional query parameters
 
-This method supports the [OData query parameters](/graph/query-parameters) to help customize the response, including `$select`, `$search`, `$count`, and `$filter`. OData cast is also enabled, for example, you can cast to get just the transitive membership in groups. You can use `$search` on the **displayName** property. The default and maximum page sizes are 100 and 999 objects respectively.
+This method supports the `$filter`, `$count`, `$select`, `$search`, `$top` [OData query parameters](/graph/query-parameters) to help customize the response.
+- OData cast is also enabled. For example, you can cast to get just the transitive membership in groups.
+- `$search` is supported on the **displayName** property only.
+- The default and maximum page size is 100 and 999 objects respectively.
+- The use of query parameters with this API is supported only with advanced query parameters. For more information, see [Advanced query capabilities on directory objects](/graph/aad-advanced-queries).
 
 ## Request headers
 
@@ -76,10 +99,6 @@ GET https://graph.microsoft.com/beta/users/{id}/transitiveMemberOf
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-transitivememberof-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-transitivememberof-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-transitivememberof-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -108,7 +127,7 @@ GET https://graph.microsoft.com/beta/users/{id}/transitiveMemberOf
 
 #### Response
 
-Here's an example  of the response.
+The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
 
@@ -148,7 +167,7 @@ Content-type: application/json
 
 #### Request
 
-Here's an example  of the request.
+The following example shows a request.
 
 <!-- {
   "blockType": "ignored",
@@ -162,7 +181,7 @@ ConsistencyLevel: eventual
 
 #### Response
 
-Here's an example  of the response.
+The following example shows the response.
 
 <!-- {
   "blockType": "response",
@@ -182,7 +201,7 @@ Content-type: text/plain
 
 #### Request
 
-Here's an example  of the request.
+The following example shows a request.
 
 <!-- {
   "blockType": "ignored",
@@ -196,7 +215,7 @@ ConsistencyLevel: eventual
 
 #### Response
 
-Here's an example  of the response.
+The following example shows the response.
 
 <!-- {
   "blockType": "response",
@@ -214,7 +233,7 @@ Content-type: text/plain
 
 #### Request
 
-Here's an example  of the request.
+The following example shows a request.
 
 <!-- {
   "blockType": "ignored",
@@ -228,15 +247,14 @@ ConsistencyLevel: eventual
 
 #### Response
 
-Here's an example  of the response.
+The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
 
 <!-- {
   "blockType": "response",
   "truncated": true,
-  "@odata.type": "microsoft.graph.group",
-  "isCollection": true
+  "@odata.type": "Collection(microsoft.graph.group)"
 } -->
 
 ```http
@@ -259,7 +277,7 @@ Content-type: application/json
 
 #### Request
 
-Here's an example  of the request.
+The following example shows a request.
 
 <!-- {
   "blockType": "ignored",
@@ -273,7 +291,7 @@ ConsistencyLevel: eventual
 
 #### Response
 
-Here's an example  of the response.
+The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
 
@@ -301,7 +319,6 @@ Content-type: application/json
     }
   ]
 }
-
 ```
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

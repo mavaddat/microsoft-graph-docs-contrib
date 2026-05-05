@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get simulationReportOverview
@@ -24,7 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/attackSimulation/simulations/{simulationId}/report/overview
 ```
 
@@ -53,7 +54,7 @@ The following example shows a request.
   "name": "get_simulationreportoverview"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/security/attackSimulation/simulations/f1b13829-3829-f1b1-2938-b1f12938b1a/report/overview
 ```
 
@@ -73,7 +74,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.simulationReportOverview"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

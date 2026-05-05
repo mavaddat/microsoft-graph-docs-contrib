@@ -5,6 +5,7 @@ author: "ravennMSFT"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 10/30/2024
 ---
 
 # List mobileAppManagementPolicies
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Get a list of the [mobilityManagementPolicy](../resources/mobilitymanagementpolicy.md) objects and their properties.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -24,6 +25,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "mobileappmanagementpolicies_list" } -->
 [!INCLUDE [permissions-table](../includes/permissions/mobileappmanagementpolicies-list-permissions.md)]
 
+[!INCLUDE [rbac-mam-mdm-policies-apis-read](../includes/rbac-for-apis/rbac-mam-mdm-policies-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
@@ -31,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 GET /policies/mobileAppManagementPolicies
 ```
 
@@ -71,16 +74,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/policies/mobileAppManagementPolicies
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-mobilemanagementpolicies-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-mobilemanagementpolicies-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -119,7 +118,7 @@ GET https://graph.microsoft.com/beta/policies/mobileAppManagementPolicies
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

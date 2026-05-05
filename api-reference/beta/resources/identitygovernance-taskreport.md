@@ -1,10 +1,11 @@
 ---
 title: "taskReport resource type"
 description: "Reports on the results of processing tasks in a lifecycle workflow which are aggregated on task and run level"
-author: "AlexFilipin"
+author: "KristinaSmith"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # taskReport resource type
@@ -21,9 +22,9 @@ Inherits from [entity](../resources/entity.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List taskReports](../api/identitygovernance-workflow-list-taskreports.md)|[microsoft.graph.identityGovernance.taskReport](../resources/identitygovernance-taskreport.md) collection|Get a list of the [taskReport](../resources/identitygovernance-taskreport.md) objects and their properties.|
-|[Summary](../api/identitygovernance-taskreport-summary.md)|[microsoft.graph.identityGovernance.taskReportSummary](../resources/identitygovernance-taskreportsummary.md)|Read the properties and relationships of a [taskReport](../resources/identitygovernance-taskreport.md) object.|
-|[List taskProcessingResults](../api/identitygovernance-taskreport-list-taskprocessingresults.md)|[microsoft.graph.identityGovernance.taskProcessingResult](../resources/identitygovernance-taskprocessingresult.md) collection|Get the taskProcessingResult resources for a task report.|
+|[List task reports](../api/identitygovernance-workflow-list-taskreports.md)|[microsoft.graph.identityGovernance.taskReport](../resources/identitygovernance-taskreport.md) collection|Get a list of the [taskReport](../resources/identitygovernance-taskreport.md) objects and their properties.|
+|[Get summary](../api/identitygovernance-taskreport-summary.md)|[microsoft.graph.identityGovernance.taskReportSummary](../resources/identitygovernance-taskreportsummary.md)|Read the properties and relationships of a [taskReport](../resources/identitygovernance-taskreport.md) object.|
+|[List task processing results](../api/identitygovernance-taskreport-list-taskprocessingresults.md)|[microsoft.graph.identityGovernance.taskProcessingResult](../resources/identitygovernance-taskprocessingresult.md) collection|Get the taskProcessingResult resources for a task report.|
 
 ## Properties
 
@@ -33,7 +34,7 @@ Inherits from [entity](../resources/entity.md).
 |failedUsersCount|Int32|The number of users in the run execution for which the associated task failed.<br><br>Supports `$filter`(`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderby`.|
 |id|String|The unique identifier of the task report. Inherited from [entity](../resources/entity.md).<br><br>Supports `$filter`(`eq`, `ne`) and `$orderby`.|
 |lastUpdatedDateTime|DateTimeOffset|The date and time that the task report was last updated.|
-|processingStatus|[microsoft.graph.identityGovernance.lifecycleWorkflowProcessingStatus](../resources/identitygovernance-taskprocessingresult.md)|The processing status of the associated task based on the taskProcessingResults. The possible values are based on the number of `queued`, `inProgress`, `completed`, `completedWithErrors`, `canceled`, `failed`, and `unknownFutureValue`.<br><br>Supports `$filter`(`eq`, `ne`) and `$orderby`.|
+|processingStatus|[microsoft.graph.identityGovernance.lifecycleWorkflowProcessingStatus](../resources/enums-identitygovernance-lifecycleworkflowprocessingstatus.md)|The processing status of the associated task based on the taskProcessingResults. <br><br>Supports `$filter`(`eq`, `ne`) and `$orderby`.|
 |runId|String|The unique identifier of the associated [run](../resources/identitygovernance-run.md).|
 |startedDateTime|DateTimeOffset|The date time that the associated run started. Value is `null` if the run has not started.|
 |successfulUsersCount|Int32|The number of users in the run execution for which the associated task succeeded.<br><br>Supports `$filter`(`lt`, `le`, `gt`, `ge`, `eq`, `ne`) and `$orderby`.|
@@ -50,7 +51,7 @@ Inherits from [entity](../resources/entity.md).
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

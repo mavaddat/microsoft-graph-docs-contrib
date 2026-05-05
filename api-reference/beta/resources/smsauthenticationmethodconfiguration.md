@@ -6,6 +6,8 @@ ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+toc.title: SMS
+ms.date: 07/19/2024
 ---
 
 # smsAuthenticationMethodConfiguration resource type
@@ -29,7 +31,7 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 |:---|:---|:---|
 |excludeTargets|[excludeTarget](../resources/excludetarget.md) collection|Groups of users that are excluded from the policy.|
 |id|String|The authentication method policy identifier.|
-|state|authenticationMethodState|Possible values are: `enabled`, `disabled`.|
+|state|authenticationMethodState|The possible values are: `enabled`, `disabled`.|
 
 ## Relationships
 |Relationship|Type|Description|
@@ -37,7 +39,7 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 |includeTargets|[smsAuthenticationMethodTarget](../resources/smsauthenticationmethodtarget.md) collection|A collection of groups that are enabled to use the authentication method.|
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

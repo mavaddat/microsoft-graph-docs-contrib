@@ -5,6 +5,7 @@ author: "RuiHou105"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: resourcePageType
+ms.date: 08/29/2024
 ---
 
 # cloudPcWindowsSetting resource type
@@ -35,6 +36,6 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.cloudPcWindowsSetting",
-  "language": "String"
+  "locale": "String"
 }
 ```

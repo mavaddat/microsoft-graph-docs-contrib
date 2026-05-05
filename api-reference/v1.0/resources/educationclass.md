@@ -5,6 +5,8 @@ ms.localizationpriority: medium
 author: "mlafleur"
 ms.subservice: "education"
 doc_type: resourcePageType
+toc.title: Class
+ms.date: 09/11/2024
 ---
 
 # educationClass resource type
@@ -19,13 +21,14 @@ Inherits from [entity](../resources/entity.md).
 
 | Method                                                   | Return type                                                 | Description                                                                                          |
 | :------------------------------------------------------- | :---------------------------------------------------------- | :--------------------------------------------------------------------------------------------------- |
-| [List educationClasses](../api/educationclass-list.md)   | [educationClass](../resources/educationclass.md) collection | Get a list of the [educationClass](../resources/educationclass.md) objects and their properties.     |
+| [List classes](../api/educationclass-list.md)   | [educationClass](../resources/educationclass.md) collection | Get a list of the [educationClass](../resources/educationclass.md) objects and their properties.     |
 | [List modules](../api/educationclass-list-modules.md)    | [educationModule]collection  | Get an **educationModule** object collection.        |
-| [Create educationClass](../api/educationclass-post.md) | [educationClass](../resources/educationclass.md)            | Create a new [educationClass](../resources/educationclass.md) object.                                |
-| [Get educationClass](../api/educationclass-get.md)       | [educationClass](../resources/educationclass.md)            | Read the properties and relationships of an [educationClass](../resources/educationclass.md) object. |
-| [Update educationClass](../api/educationclass-update.md) | [educationClass](../resources/educationclass.md)            | Update the properties of an [educationClass](../resources/educationclass.md) object.                 |
-| [Delete educationClass](../api/educationclass-delete.md) | None                                                        | Delete an [educationClass](../resources/educationclass.md) object.                                  |
-| [Get delta](../api/educationclass-delta.md)                  | [educationClass](educationclass.md) collection              | Get incremental changes for **educationClasses**.                                          |
+| [Create class](../api/educationclass-post.md) | [educationClass](../resources/educationclass.md)            | Create a new [educationClass](../resources/educationclass.md) object.                                |
+| [Get class](../api/educationclass-get.md)       | [educationClass](../resources/educationclass.md)            | Read the properties and relationships of an [educationClass](../resources/educationclass.md) object. |
+| [Update class](../api/educationclass-update.md) | [educationClass](../resources/educationclass.md)            | Update the properties of an [educationClass](../resources/educationclass.md) object.                 |
+| [Delete class](../api/educationclass-delete.md) | None                                                        | Delete an [educationClass](../resources/educationclass.md) object.                                  |
+| [Get delta](../api/educationclass-delta.md)                  | [educationClass](educationclass.md) collection              | Get incremental changes for **educationClasses**.   
+|[Get recently modified submissions](../api/educationclass-getrecentlymodifiedsubmissions.md)|[educationSubmission](../resources/educationsubmission.md) collection|Retrieve submissions modified in the previous seven days.|                     
 
 ## Properties
 
@@ -36,7 +39,7 @@ Inherits from [entity](../resources/entity.md).
 | description          | String                                         | Description of the class.                                          |
 | displayName          | String                                         | Name of the class.                                                 |
 | externalId           | String                                         | ID of the class from the syncing system.                           |
-| externalSource       | educationExternalSource                        | How this class was created. Possible values are: `sis`, `manual`.  |
+| externalSource       | educationExternalSource                        | How this class was created. The possible values are: `sis`, `manual`.  |
 | externalSourceDetail | String                                         | The name of the external source this resource was generated from. |
 | externalName         | String                                         | Name of the class in the syncing system.                           |
 | grade                | String                                         | Grade level of the class.                                          |

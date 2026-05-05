@@ -5,6 +5,7 @@ author: "dkershaw10"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # dataPolicyOperation resource type
@@ -17,7 +18,7 @@ Represents a submitted data policy operation. It contains necessary information 
 
 | Method		   | Return Type	|Description|
 |:---------------|:--------|:----------|
-|[Get dataPolicyOperation](../api/datapolicyoperation-get.md) | [dataPolicyOperation](datapolicyoperation.md) |Retrieve properties of the **dataPolicyOperation** object.|
+|[Get](../api/datapolicyoperation-get.md) | [dataPolicyOperation](datapolicyoperation.md) |Retrieve properties of the **dataPolicyOperation** object.|
 |[Export personal data](../api/user-exportpersonaldata.md) | None |Submit a data policy operation request to export organizational user's data which can later be read using [Get dataPolicyOperation](../api/datapolicyoperation-get.md)|
 
 ## Properties
@@ -28,7 +29,7 @@ Represents a submitted data policy operation. It contains necessary information 
 |:---------------|:--------|:----------|
 |completedDateTime|DateTimeOffset|Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Null until the operation completes.|
 |id|String| Unique key for this operation. |
-|status|dataPolicyOperationStatus| Possible values are: `notStarted`, `running`, `complete`, `failed`, `unknownFutureValue`.|
+|status|dataPolicyOperationStatus| The possible values are: `notStarted`, `running`, `complete`, `failed`, `unknownFutureValue`.|
 |storageLocation|String|The URL location to where data is being exported for export requests.|
 |userId|String|The id for the user on whom the operation is performed.|
 |submittedDateTime|DateTimeOffset|Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`|
@@ -40,7 +41,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -2,9 +2,10 @@
 title: "List users"
 description: "List properties and relationships of the user objects."
 author: "jaiprakashmb"
-localization_priority: Normal
-ms.subservice: "intune"
+ms.localizationpriority: medium
+ms.prod: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # List users
@@ -17,9 +18,7 @@ Namespace: microsoft.graph
 
 List properties and relationships of the [user](../resources/intune-shared-user.md) objects.
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-## Permissions
+        ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).  The specific permission depends on the context.
 
@@ -37,13 +36,15 @@ One of the following permissions is required to call this API. To learn more, in
 | &nbsp; &nbsp; **Onboarding** | DeviceManagementServiceConfig.ReadWrite.All, DeviceManagementServiceConfig.Read.All |
 | &nbsp; &nbsp; **Troubleshooting** | DeviceManagementManagedDevices.ReadWrite.All, DeviceManagementManagedDevices.Read.All |
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## HTTP Request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /users
 ```
 
@@ -68,7 +69,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 Here is an example of the request.
 
-``` http
+```http
 GET https://graph.microsoft.com/beta/users
 ```
 
@@ -76,7 +77,7 @@ GET https://graph.microsoft.com/beta/users
 
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 136

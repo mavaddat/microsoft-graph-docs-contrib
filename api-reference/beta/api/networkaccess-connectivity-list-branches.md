@@ -1,16 +1,20 @@
 ---
-title: "List branches"
+title: "List branches (deprecated)"
 description: "Retrieve a list of branches within a tenant connected to the Global Secure Access services."
 author: Moti-ba
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
-# List branches
+# List branches (deprecated)
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!IMPORTANT]
+> Deprecated and to be retired soon. Use the [remoteNetwork resource type](../resources/networkaccess-remotenetwork.md) and its associated methods instead.
 
 Retrieve a list of branches within a tenant connected to the Global Secure Access services.
 
@@ -30,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /networkAccess/connectivity/branches
 ```
 
@@ -59,16 +63,12 @@ The following example shows a request.
   "name": "list_branchsite"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/networkAccess/connectivity/branches
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-branchsite-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-branchsite-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -87,6 +87,10 @@ GET https://graph.microsoft.com/beta/networkAccess/connectivity/branches
 [!INCLUDE [sample-code](../includes/snippets/php/list-branchsite-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/list-branchsite-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/list-branchsite-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -102,7 +106,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.networkaccess.branchSite)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

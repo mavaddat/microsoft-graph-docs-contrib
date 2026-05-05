@@ -5,6 +5,7 @@ author: "jewan-microsoft"
 ms.localizationpriority: medium
 ms.subservice: "onenote"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # Create onenotePage
@@ -40,7 +41,7 @@ POST /sites/{id}/onenote/pages
 ## Request headers  
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Type | string | `text/html` or `application/xhtml+xml` for the HTML content, including for the required "Presentation" part of multipart requests. Multipart requests use the `multipart/form-data; boundary=your-boundary` content type. |
 
 ## Request body
@@ -101,10 +102,6 @@ Content-Type:application/pdf
 
 --MyPartBoundary198374--
 ```
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/onenote-post-pages-v1-e1-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/onenote-post-pages-v1-e1-javascript-snippets.md)]

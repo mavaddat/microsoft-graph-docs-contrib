@@ -5,6 +5,7 @@ author: "eringreenlee"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # appConsentRequest resource type
@@ -20,16 +21,16 @@ The user can create a consent request when an app or a permission requires admin
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List appConsentRequests](../api/appconsentapprovalroute-list-appconsentrequests.md)|[appConsentRequest](../resources/appconsentrequest.md) collection|Retrieve a collection of [appConsentRequest](appconsentrequest.md) objects and their properties.|
-|[Get appConsentRequest](../api/appconsentrequest-get.md)|[appConsentRequest](../resources/appconsentrequest.md)|Read the properties and relationships of an [appConsentRequest](../resources/appconsentrequest.md) object.|
-|[filterByCurrentUser](../api/appconsentrequest-filterByCurrentUser.md)|[appConsentRequest](../resources/appconsentrequest.md)|Read the properties of [appConsentRequest](../resources/appconsentrequest.md) objects for which the current user is the reviewer and the status of the user consent request is `InProgress`.|
+|[List](../api/appconsentapprovalroute-list-appconsentrequests.md)|[appConsentRequest](../resources/appconsentrequest.md) collection|Retrieve a collection of [appConsentRequest](appconsentrequest.md) objects and their properties.|
+|[Get](../api/appconsentrequest-get.md)|[appConsentRequest](../resources/appconsentrequest.md)|Read the properties and relationships of an [appConsentRequest](../resources/appconsentrequest.md) object.|
+|[Filter by current user](../api/appconsentrequest-filterbycurrentuser.md)|[appConsentRequest](../resources/appconsentrequest.md)|Read the properties of [appConsentRequest](../resources/appconsentrequest.md) objects for which the current user is the reviewer and the status of the user consent request is `InProgress`.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |appDisplayName|String|The display name of the app for which consent is requested. Required. Supports `$filter` (`eq` only) and `$orderby`. |
 |appId|String|The identifier of the application. Required. Supports `$filter` (`eq` only) and `$orderby`. |
-|consentType|String|The consent type of the request. Possible values are: `Static` and `Dynamic`. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports `$filter` (`eq` only) and `$orderby`. Required.|
+|consentType|String|The consent type of the request. The possible values are: `Static` and `Dynamic`. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports `$filter` (`eq` only) and `$orderby`. Required.|
 |id|String|The identifier of the app consent request. Required.|
 |pendingScopes|[appConsentRequestScope](../resources/appconsentrequestscope.md) collection|A list of pending scopes waiting for approval. This is empty if the consentType is `Static`. Required.|
 
@@ -39,7 +40,7 @@ The user can create a consent request when an app or a permission requires admin
 |userConsentRequests|[userConsentRequest](../resources/userconsentrequest.md) collection|A list of pending user consent requests. Supports `$filter` (`eq`).|
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

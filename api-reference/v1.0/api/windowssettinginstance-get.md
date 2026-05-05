@@ -5,6 +5,7 @@ author: "MS-Arko"
 ms.localizationpriority: medium
 ms.subservice: "project-rome"
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get windowsSettingInstance
@@ -12,6 +13,8 @@ doc_type: apiPageType
 Namespace: microsoft.graph
 
 Read the properties and relationships of a [windowsSettingInstance](../resources/windowssettinginstance.md) object by passing the Windows setting ID and Windows setting instance ID in the URL. This method gets a **windowsSettingInstance** for the signed-in user.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -67,10 +70,6 @@ GET https://graph.microsoft.com/v1.0/me/settings/windows/{windowsSettingId}/inst
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-windowssettinginstance-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-windowssettinginstance-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

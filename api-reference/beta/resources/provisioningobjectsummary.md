@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "ArvindHarinder1"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # provisioningObjectSummary resource type
@@ -23,7 +24,7 @@ Inherits from [entity](../resources/entity.md).
 
 | Method  | Return Type | Description |
 |:-------------|:------------|:------------|
-| [List provisioningObjectSummary](../api/provisioningobjectsummary-list.md) | [provisioningObjectSummary](provisioningobjectsummary.md) | Get a list of all provisioning events that occurred in your tenant. |
+| [List](../api/provisioningobjectsummary-list.md) | [provisioningObjectSummary](provisioningobjectsummary.md) | Get a list of all provisioning events that occurred in your tenant. |
 
 
 ## Properties
@@ -38,7 +39,7 @@ Inherits from [entity](../resources/entity.md).
 |initiatedBy|[initiator](initiator.md)|Details of who initiated this provisioning. Supports `$filter` (`eq`, `contains`).|
 |jobId|String|The unique ID for the whole provisioning job. Supports `$filter` (`eq`, `contains`).|
 |modifiedProperties|[modifiedProperty](modifiedproperty.md) collection|Details of each property that was modified in this provisioning action on this object.|
-|provisioningAction|string|Indicates the activity name or the operation name. Possible values are: `create`, `update`, `delete`, `stageddelete`, `disable`, `other` and `unknownFutureValue`. For a list of activities logged, refer to Microsoft Entra activity list. Supports `$filter` (`eq`, `contains`).|
+|provisioningAction|string|Indicates the activity name or the operation name. The possible values are: `create`, `update`, `delete`, `stageddelete`, `disable`, `other` and `unknownFutureValue`. For a list of activities logged, refer to Microsoft Entra activity list. Supports `$filter` (`eq`, `contains`).|
 |provisioningSteps|[provisioningStep](provisioningstep.md) collection|Details of each step in provisioning.|
 |provisioningStatusInfo|[provisioningStatusInfo](provisioningstatusinfo.md)|Details of provisioning status. Supports `$filter` (`eq`, `contains`) for **status**.|
 |servicePrincipal|[servicePrincipal](serviceprincipal.md) collection|Represents the service principal used for provisioning. Supports `$filter` (`eq`) for **id** and **name**.|
@@ -56,7 +57,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

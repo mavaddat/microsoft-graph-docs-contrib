@@ -3,8 +3,9 @@ title: "List anniversaries"
 description: "Retrieve a list of personAnniversary objects."
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 06/10/2024
 ---
 
 # List anniversaries
@@ -79,10 +80,6 @@ GET https://graph.microsoft.com/beta/me/profile/anniversaries
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-anniversaries-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-anniversaries-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-anniversaries-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -117,7 +114,7 @@ GET https://graph.microsoft.com/beta/me/profile/anniversaries
   "@odata.type": "collection(microsoft.graph.personAnniversary)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

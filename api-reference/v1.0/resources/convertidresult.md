@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "outlook"
 author: "SuryaLashmiS"
+ms.date: 04/03/2024
 ---
 
 # convertIdResult resource type
@@ -23,7 +24,7 @@ The result of an ID format conversion performed by the [translateExchangeIds](..
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

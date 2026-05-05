@@ -1,10 +1,11 @@
 ---
 title: "product: getKnownIssuesByTimeRange"
 description: "Get known issues related to a particular product based on a specified timeframe in the past."
-author: "skandula"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: "windows-update-business"
+ms.subservice: windows-autopatch
 doc_type: apiPageType
+ms.date: 01/27/2026
 ---
 
 # product: getKnownIssuesByTimeRange
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/windows/updates/products/{id}/GetKnownIssuesByTimeRange(daysInPast={daysInPast},includeAllActive={includeAllActive})
 ```
 
@@ -41,7 +42,7 @@ The following table shows the parameters that must be used with this function.
 |Parameter|Type|Description|
 |:---|:---|:---|
 |daysInPast|Int32|The number of days to look up in the past. This filter is applied on all known issues that are in final status and have a resolved date time.|
-|includeAllActive|Boolean|If set to `true`, the response includes all active known issues. If set to `false`, the response doesn't include any active known issues.| 
+|includeAllActive|Boolean|If set to `true`, the response includes all active known issues. If set to `false`, the response doesn't include any active known issues.|
 
 ## Request headers
 
@@ -70,16 +71,12 @@ The following example shows a request.
   "sampleKeys": ["1"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/windows/updates/products/1/GetKnownIssuesByTimeRange(daysInPast=70,includeAllActive=false)
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/windowsupdatesgetknownissuesbytimerange-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/windowsupdatesgetknownissuesbytimerange-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -96,6 +93,10 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/products/1/GetKnownIs
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/windowsupdatesgetknownissuesbytimerange-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/windowsupdatesgetknownissuesbytimerange-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -116,7 +117,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.windowsUpdates.knownIssue)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

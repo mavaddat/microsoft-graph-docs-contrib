@@ -4,14 +4,17 @@ description: "List the gcpAuthorizationSystemResource objects and their properti
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # List resources (for a GCP authorization system)
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 List the [gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) objects and their properties for a provided GCP authorization system.
 
@@ -31,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/resources
 ```
 
@@ -60,7 +63,7 @@ The following example shows a request.
   "name": "list_gcpauthorizationsystemresource"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/external/authorizationSystems/{id}/microsoft.graph.gcpAuthorizationSystem/resources
 ```
 
@@ -79,7 +82,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.gcpAuthorizationSystemResource)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -107,4 +110,5 @@ Content-Type: application/json
   ]
 }
 ```
+
 

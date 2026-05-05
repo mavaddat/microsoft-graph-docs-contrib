@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # inviteParticipantsOperation resource type
@@ -21,11 +22,11 @@ Represents the status of a long-running participant invitation operation, trigge
 | id                             | String                      | The server operation id. Read-only.                                                                                              |
 | participants | [invitationParticipantInfo](invitationParticipantInfo.md) collection | The participants to invite. |
 | resultInfo                     | [resultInfo](resultinfo.md) | The result information.  Read-only.                                                                                             |
-| status                         | String                      | Possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only.                                                  |
+| status                         | String                      | The possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only.                                                  |
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

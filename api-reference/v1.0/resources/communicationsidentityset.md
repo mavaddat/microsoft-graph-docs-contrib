@@ -5,6 +5,7 @@ author: "rahulva-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 05/28/2024
 ---
 
 # communicationsIdentitySet resource type
@@ -24,7 +25,7 @@ Inherits from [identitySet](identityset.md).
 | assertedIdentity | [communicationsUserIdentity](communicationsuseridentity.md) or [communicationsPhoneIdentity](communicationsphoneidentity.md) | An **identity** the participant would like to present itself as to the other participants in the call. |
 | azureCommunicationServicesUser | [azureCommunicationServicesUserIdentity](azurecommunicationservicesuseridentity.md) | The Azure Communication Services user associated with this action. |
 | encrypted | [communicationsEncryptedIdentity](communicationsencryptedidentity.md) | The encrypted user associated with this action. |
-| endpointType | endpointType | Type of endpoint that the participant uses. Possible values are: `default`, `voicemail`, `skypeForBusiness`, `skypeForBusinessVoipPhone`, `unknownFutureValue`. |
+| endpointType | endpointType | Type of endpoint that the participant uses. The possible values are: `default`, `voicemail`, `skypeForBusiness`, `skypeForBusinessVoipPhone`, `unknownFutureValue`. |
 | guest | [communicationsGuestIdentity](communicationsguestidentity.md) | The guest user associated with this action. |
 | onPremises | [communicationsUserIdentity](communicationsuseridentity.md) | The Skype for Business on-premises user associated with this action. |
 | phone | [communicationsPhoneIdentity](communicationsphoneidentity.md) | The phone user associated with this action. |
@@ -39,15 +40,15 @@ The following JSON representation shows the resource type.
   "@odata.type": "microsoft.graph.communicationsIdentitySet",
   "optionalProperties": [
     "application",
-    "user",
-    "phone",
-    "guest",
-    "encrypted",
-    "azureCommunicationServicesUser",
     "applicationInstance",
-    "onPremises",
     "assertedIdentity",
-    "endpointType"
+    "azureCommunicationServicesUser",
+    "encrypted",
+    "endpointType",
+    "guest",
+    "onPremises",
+    "phone",
+    "user"
   ],
 } -->
 ```json

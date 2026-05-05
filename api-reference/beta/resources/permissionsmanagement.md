@@ -4,8 +4,9 @@ description: "The base container for the relationships that define the requests 
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 04/18/2024
 ---
 
 # permissionsManagement resource type
@@ -13,6 +14,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 The base container for the relationships that define the requests for permissions in an authorization system onboarded to Microsoft Entra Permissions Management.
 
@@ -42,4 +45,5 @@ The following JSON representation shows the resource type.
   "@odata.type": "#microsoft.graph.permissionsManagement"
 }
 ```
+
 

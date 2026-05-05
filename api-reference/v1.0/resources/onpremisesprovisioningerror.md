@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "dhruvinrshah"
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # onPremisesProvisioningError resource type
@@ -23,7 +24,7 @@ Represents directory synchronization errors for the [user](user.md), [group](gro
 |value|String| Value of the property causing the error. |
 
 ## JSON representation
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

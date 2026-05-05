@@ -4,8 +4,10 @@ description: "Represents an Azure resource in an Azure authorization system onbo
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+toc.title: Azure resources
+ms.date: 07/25/2024
 ---
 
 # azureAuthorizationSystemResource resource type
@@ -14,6 +16,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents an Azure resource in an Azure authorization system onboarded to Permissions Management.
 
 Inherits from [authorizationSystemResource](../resources/authorizationsystemresource.md).
@@ -21,8 +25,8 @@ Inherits from [authorizationSystemResource](../resources/authorizationsystemreso
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List azureAuthorizationSystemResources](../api/azureauthorizationsystem-list-resources.md)|[azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md) collection|Get a list of the [azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md) objects and their properties.|
-|[Get azureAuthorizationSystemResource](../api/azureauthorizationsystemresource-get.md)|[azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md)|Read the properties and relationships of an [azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md) object.|
+|[List](../api/azureauthorizationsystem-list-resources.md)|[azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md) collection|Get a list of the [azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md) objects and their properties.|
+|[Get](../api/azureauthorizationsystemresource-get.md)|[azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md)|Read the properties and relationships of an [azureAuthorizationSystemResource](../resources/azureauthorizationsystemresource.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -57,4 +61,5 @@ The following JSON representation shows the resource type.
   "resourceType": "String"
 }
 ```
+
 

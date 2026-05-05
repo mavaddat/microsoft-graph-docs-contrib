@@ -2,9 +2,10 @@
 title: "windowsPhone81CompliancePolicy resource type"
 description: "This class contains compliance settings for Windows 8.1 Mobile."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # windowsPhone81CompliancePolicy resource type
@@ -41,7 +42,7 @@ Inherits from [deviceCompliancePolicy](../resources/intune-deviceconfig-deviceco
 |passwordMinimumLength|Int32|Minimum length of passwords.|
 |passwordMinutesOfInactivityBeforeLock|Int32|Minutes of inactivity before a password is required.|
 |passwordMinimumCharacterSetCount|Int32|The number of character sets required in the password.|
-|passwordRequiredType|[requiredPasswordType](../resources/intune-deviceconfig-requiredpasswordtype.md)|The required password type. Possible values are: `deviceDefault`, `alphanumeric`, `numeric`.|
+|passwordRequiredType|[requiredPasswordType](../resources/intune-deviceconfig-requiredpasswordtype.md)|The required password type. The possible values are: `deviceDefault`, `alphanumeric`, `numeric`.|
 |passwordPreviousPasswordBlockCount|Int32|Number of previous passwords to block. Valid values 0 to 24|
 |passwordRequired|Boolean|Whether or not to require a password.|
 |osMinimumVersion|String|Minimum Windows Phone version.|

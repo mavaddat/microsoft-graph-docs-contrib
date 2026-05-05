@@ -1,12 +1,13 @@
 ---
 title: Delete taxAreas 
-description: Deletes a tax area object in Dynamics 365 Business Central.
+description: Delete a tax area object in Dynamics 365 Business Central.
 services: project-madeira
 documentationcenter: ''
 author: SusanneWindfeldPedersen
 ms.localizationpriority: medium
 ms.subservice: "d365-business-central"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Delete taxAreas
@@ -45,7 +46,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns ```204 No Content``` response code. It doesn't return anything in the response body.
+If successful, this method returns `204 No Content` response code. It doesn't return anything in the response body.
 
 ## Example
 

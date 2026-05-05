@@ -5,6 +5,7 @@ author: "awang119"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 08/06/2024
 ---
 
 # virtualEventWebinar: getByUserRole
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /solutions/virtualEvents/webinars/getByUserRole(role='{role}')
 ```
 
@@ -37,7 +38,7 @@ In the request URL, provide the following query parameters with values.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|role|String|User role of the signed-in user in the webinar. Possible values are: `organizer`, `coOrganizer`.|
+|role|String|User role of the signed-in user in the webinar. The possible values are: `organizer`, `coOrganizer`.|
 
 
 ## Request headers
@@ -62,16 +63,12 @@ The following example shows a request.
   "name": "virtualeventwebinarthis.getbyuserrole"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/solutions/virtualEvents/webinars/getByUserRole(role='organizer')
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/virtualeventwebinarthisgetbyuserrole-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/virtualeventwebinarthisgetbyuserrole-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -109,7 +106,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.virtualEventWebinar)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -145,6 +142,15 @@ Content-Type: application/json
           "id": "7b7e1acd-a3e0-4533-8c1d-c1a4ca0b2e2b",
           "displayName": "Kenneth Brown",
           "tenantId": "77229959-e479-4a73-b6e0-ddac27be315c"
+        }
+      ],
+      "settings": {
+        "isAttendeeEmailNotificationEnabled": false
+      },
+      "externalEventInformation": [
+        {
+          "applicationId" : "67a527ba-ef0e-4ba2-88b6-4fa5e9711757",
+          "externalEventId": "myExternalEventId"
         }
       ]
     }

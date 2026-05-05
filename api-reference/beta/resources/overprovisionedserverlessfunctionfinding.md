@@ -4,8 +4,9 @@ description: "Represents over-provisioned serverless functions in AWS, Azure, or
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # overprovisionedServerlessFunctionFinding resource type
@@ -13,6 +14,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Represents over-provisioned serverless functions in AWS, Azure, or GCP.
 
@@ -22,8 +25,8 @@ Inherits from [identityFinding](../resources/identityfinding.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List overprovisionedServerlessFunctionFinding objects](../api/overprovisionedserverlessfunctionfinding-list.md)|[overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md) collection|Get a list of the [overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md) objects and their properties.|
-|[Get overprovisionedServerlessFunctionFinding](../api/overprovisionedserverlessfunctionfinding-get.md)|[overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md)|Read the properties and relationships of an [overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md) object.|
+|[List](../api/overprovisionedserverlessfunctionfinding-list.md)|[overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md) collection|Get a list of the [overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md) objects and their properties.|
+|[Get](../api/overprovisionedserverlessfunctionfinding-get.md)|[overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md)|Read the properties and relationships of an [overprovisionedServerlessFunctionFinding](../resources/overprovisionedserverlessfunctionfinding.md) object.|
 |
 
 ## Properties
@@ -68,3 +71,4 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+

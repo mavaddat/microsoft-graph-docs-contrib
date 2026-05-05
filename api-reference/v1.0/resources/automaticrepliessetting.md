@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "SuryaLashmiS"
 ms.subservice: mail
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # automaticRepliesSetting resource type
@@ -28,7 +29,7 @@ respond to emails.
 
 ## JSON representation
 
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -5,6 +5,8 @@ author: "sharad-sharma-msft"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: resourcePageType
+toc.title: Assignment settings
+ms.date: 06/10/2024
 ---
 
 # educationAssignmentSettings resource type
@@ -16,23 +18,26 @@ Specifies class-level assignments settings.
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get educationAssignmentSettings](../api/educationassignmentsettings-get.md)|[educationAssignmentSettings](../resources/educationassignmentsettings.md)|Read the properties and relationships of an [educationAssignmentSettings](../resources/educationassignmentsettings.md) object.|
-|[Update educationAssignmentSettings](../api/educationassignmentsettings-update.md)|[educationAssignmentSettings](../resources/educationassignmentsettings.md)|Update the properties of an [educationAssignmentSettings](../resources/educationassignmentsettings.md) object.|
+|[Get](../api/educationassignmentsettings-get.md)|[educationAssignmentSettings](../resources/educationassignmentsettings.md)|Read the properties and relationships of an [educationAssignmentSettings](../resources/educationassignmentsettings.md) object.|
+|[Update](../api/educationassignmentsettings-update.md)|[educationAssignmentSettings](../resources/educationassignmentsettings.md)|Update the properties of an [educationAssignmentSettings](../resources/educationassignmentsettings.md) object.|
+|[Add default grading scheme](../api/educationassignmentsettings-put-defaultgradingscheme.md)|[educationGradingScheme](../resources/educationgradingscheme.md)|Add the default [educationGradingScheme](../resources/educationgradingscheme.md) to an [educationAssignmentSettings](../resources/educationassignmentsettings.md) object.|
 |[Update educationGradingCategory](../api/educationgradingcategory-update.md)|[educationGradingCategory](../resources/educationgradingcategory.md)|Update the gradingCategory on the assignment settings.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|id|String|Unique identifier for the educationAssignmentSettings.|
+|id|String|Unique identifier for the **educationAssignmentSettings**.|
 |submissionAnimationDisabled|Boolean|Indicates whether to show the turn-in celebration animation. If `true`, indicates to skip the animation. The default value is `false`.|
 
 ## Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
+|defaultGradingScheme|[educationGradingScheme](educationgradingscheme.md) |The default grading scheme for assignments created in this class. |
 |gradingCategories|[educationGradingCategory](educationgradingcategory.md) collection| When set, enables users to weight assignments differently when computing a class average grade.|
+|gradingSchemes|[educationGradingScheme](educationgradingscheme.md) collection| The grading schemes that can be attached to assignments created in this class. |
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
@@ -43,7 +48,6 @@ Here's a JSON representation of the resource.
 ``` json
 {
   "id": "String (identifier)",
-  "submissionAnimationDisabled": false
+  "submissionAnimationDisabled": "Boolean"
 }
 ```
-

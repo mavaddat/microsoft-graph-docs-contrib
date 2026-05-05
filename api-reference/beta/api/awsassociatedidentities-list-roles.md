@@ -4,14 +4,17 @@ description: "Get the awsRole resources from the awsRoles navigation property."
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # List roles (in an AWS authorization system)
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Get the awsRole resources from the awsRoles navigation property.
 
@@ -101,3 +104,4 @@ Content-Type: application/json
   ]
 }
 ```
+

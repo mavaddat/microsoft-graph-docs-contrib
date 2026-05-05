@@ -5,6 +5,7 @@ author: Moti-ba
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 09/20/2024
 ---
 
 # Get filteringRule
@@ -12,7 +13,10 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a [filteringRule](../resources/networkaccess-filteringrule.md) object.
+Get a [filteringRule](../resources/networkaccess-filteringrule.md) object. The following derived types are supported:
+
+- [fqdnFilteringRule](../resources/networkaccess-fqdnfilteringrule.md)
+- [webCategoryFilteringRule](../resources/networkaccess-webcategoryfilteringrule.md)
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -30,12 +34,12 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /networkaccess/filteringPolicies/{filteringPoliciesId}/policyRules/{policyRulesId}
 ```
 
 ## Optional query parameters
-This method does not supports OData query parameters.
+This method doesn't support OData query parameters.
 
 ## Request headers
 |Name|Description|
@@ -47,7 +51,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a [microsoft.graph.networkaccess.filteringRule](../resources/networkaccess-filteringrule.md) object in the response body.
+If successful, this method returns a `200 OK` response code and a [microsoft.graph.networkaccess.filteringRule](../resources/networkaccess-filteringrule.md) object in the response body. The **@odata.type** property in the response object indicates the type of the **filteringRule** object.
 
 ## Examples
 
@@ -59,16 +63,12 @@ The following example shows a request.
   "name": "get_filteringrule"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/networkaccess/filteringPolicies/ac253559-37a0-4f72-b666-103420b94e38/policyRules/0823cb1e-644b-4585-80db-1c1055894ec7
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-filteringrule-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-filteringrule-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -87,6 +87,10 @@ GET https://graph.microsoft.com/beta/networkaccess/filteringPolicies/ac253559-37
 [!INCLUDE [sample-code](../includes/snippets/php/get-filteringrule-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-filteringrule-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/get-filteringrule-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -102,7 +106,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.networkaccess.filteringRule"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -111,12 +115,12 @@ Content-Type: application/json
     "id": "f76a8f4d-7e9f-4aa0-ae1a-e88330c5634c",
     "name": "Contoso",
     "ruleType": "fqdn",
-        "destinations": [
-            {
-                "@odata.type": "#microsoft.graph.networkaccess.fqdn",
-                "value": "www.contoso.com"
-            }
-          ]
+    "destinations": [
+        {
+            "@odata.type": "#microsoft.graph.networkaccess.fqdn",
+            "value": "www.contoso.com"
+        }
+    ]
 }
 ```
 

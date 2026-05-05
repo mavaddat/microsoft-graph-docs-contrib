@@ -5,6 +5,7 @@ author: "RamjotSingh"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # callEndedEventMessageDetail resource type
@@ -21,13 +22,13 @@ Inherits from [eventMessageDetail](../resources/eventmessagedetail.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |callDuration|Duration|Duration of the call.|
-|callEventType|teamworkCallEventType|Represents the call event type. Possible values are: `call`, `meeting`, `screenShare`, `unknownFutureValue`.|
+|callEventType|teamworkCallEventType|Represents the call event type. The possible values are: `call`, `meeting`, `screenShare`, `unknownFutureValue`.|
 |callId|String|Unique identifier of the call.|
 |callParticipants|[callParticipantInfo](../resources/callparticipantinfo.md) collection|List of call participants.|
 |initiator|[identitySet](../resources/identityset.md)|Initiator of the event.|
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.callEndedEventMessageDetail",

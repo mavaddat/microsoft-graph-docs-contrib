@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "qiwhuang"
 ms.subservice: "reports"
 doc_type: apiPageType
+ms.date: 08/10/2024
 ---
 
 # Get adminReportSettings
@@ -26,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "adminreportsettings_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/adminreportsettings-get-permissions.md)]
 
-> **Note:** For delegated permissions to allow apps to get report settings on behalf of a user, the tenant administrator must have assigned the user the appropriate Microsoft Entra ID limited administrator role. For more details, see [Authorization for APIs to read Microsoft 365 usage reports](/graph/reportroot-authorization).
+> **Note:** For delegated permissions to allow apps to get report settings on behalf of a user, the tenant administrator must have assigned the user the appropriate Microsoft Entra ID limited administrator role. For more information, see [Authorization for APIs to read Microsoft 365 usage reports](/graph/reportroot-authorization).
 
 ## HTTP request
 
@@ -35,6 +36,10 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ```http
 GET /admin/reportSettings
 ```
+
+## Optional query parameters
+
+This method supports the `$select` [OData query parameter](/graph/query-parameters) to help customize the response.
 
 ## Request headers
 
@@ -62,16 +67,12 @@ The following example shows a request.
   "name": "get_adminreportsettings"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/reportSettings
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-adminreportsettings-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-adminreportsettings-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,7 +111,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.adminReportSettings"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

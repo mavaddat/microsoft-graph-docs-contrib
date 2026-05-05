@@ -4,8 +4,9 @@ description: "View AWS serverless functions that have privileges to read, modify
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # secretInformationAccessAwsServerlessFunctionFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 View AWS serverless functions that have privileges to read, modify, or delete secret information.
 
 Inherits from [awsSecretInformationAccessFinding](../resources/awssecretinformationaccessfinding.md).
@@ -21,8 +24,8 @@ Inherits from [awsSecretInformationAccessFinding](../resources/awssecretinformat
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List secretInformationAccessAwsServerlessFunctionFinding objects](../api/secretinformationaccessawsserverlessfunctionfinding-list.md)|[secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md) collection|Get a list of the [secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md) objects and their properties.|
-|[Get secretInformationAccessAwsServerlessFunctionFinding](../api/secretinformationaccessawsserverlessfunctionfinding-get.md)|[secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md)|Read the properties and relationships of a [secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md) object.|
+|[List](../api/secretinformationaccessawsserverlessfunctionfinding-list.md)|[secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md) collection|Get a list of the [secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md) objects and their properties.|
+|[Get](../api/secretinformationaccessawsserverlessfunctionfinding-get.md)|[secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md)|Read the properties and relationships of a [secretInformationAccessAwsServerlessFunctionFinding](../resources/secretinformationaccessawsserverlessfunctionfinding.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -60,4 +63,5 @@ The following JSON representation shows the resource type.
   "lastActiveDateTime": "String (timestamp)"
 }
 ```
+
 

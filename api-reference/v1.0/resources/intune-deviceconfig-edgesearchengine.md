@@ -2,9 +2,10 @@
 title: "edgeSearchEngine resource type"
 description: "Allows IT admins to set a predefined default search engine for MDM-Controlled devices."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # edgeSearchEngine resource type
@@ -21,7 +22,7 @@ Inherits from [edgeSearchEngineBase](../resources/intune-deviceconfig-edgesearch
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|edgeSearchEngineType|[edgeSearchEngineType](../resources/intune-deviceconfig-edgesearchenginetype.md)|Allows IT admins to set a predefined default search engine for MDM-Controlled devices. Possible values are: `default`, `bing`.|
+|edgeSearchEngineType|[edgeSearchEngineType](../resources/intune-deviceconfig-edgesearchenginetype.md)|Allows IT admins to set a predefined default search engine for MDM-Controlled devices. The possible values are: `default`, `bing`.|
 
 ## Relationships
 None

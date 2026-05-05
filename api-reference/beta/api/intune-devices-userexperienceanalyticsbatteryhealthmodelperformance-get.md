@@ -2,16 +2,17 @@
 title: "Get userExperienceAnalyticsBatteryHealthModelPerformance"
 description: "Read properties and relationships of the userExperienceAnalyticsBatteryHealthModelPerformance object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Get userExperienceAnalyticsBatteryHealthModelPerformance
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /deviceManagement/userExperienceAnalyticsBatteryHealthModelPerformance/{userExperienceAnalyticsBatteryHealthModelPerformanceId}
 ```
 
@@ -56,16 +57,16 @@ If successful, this method returns a `200 OK` response code and [userExperienceA
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 GET https://graph.microsoft.com/beta/deviceManagement/userExperienceAnalyticsBatteryHealthModelPerformance/{userExperienceAnalyticsBatteryHealthModelPerformanceId}
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 626
+Content-Length: 742
 
 {
   "value": {
@@ -74,6 +75,8 @@ Content-Length: 626
     "activeDevices": 13,
     "model": "Model value",
     "manufacturer": "Manufacturer value",
+    "deviceModelName": "Device Model Name value",
+    "deviceManufacturerName": "Device Manufacturer Name value",
     "averageMaxCapacityPercentage": 12,
     "averageEstimatedRuntimeInMinutes": 0,
     "averageBatteryAgeInDays": 7,

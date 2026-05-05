@@ -5,6 +5,8 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
+ROBOTS: NOINDEX
+ms.date: 03/21/2024
 ---
 
 # governanceSubject resource type
@@ -12,6 +14,8 @@ author: "rkarim-ms"
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [pim-v2ResourceRoles-deprecation](../../includes/pim-v2ResourceRoles-deprecation.md)]
 
 Represents users, groups, and service principals being managed in Privileged Identity Management (PIM).
 
@@ -31,7 +35,7 @@ None
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

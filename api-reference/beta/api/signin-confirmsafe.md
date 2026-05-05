@@ -5,6 +5,7 @@ author: "egreenberg14"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # signIn: confirmSafe
@@ -12,9 +13,9 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Allow admins to mark an event in Microsoft Entra sign-in logs as safe. Admins can either mark the events flagged as risky by Microsoft Entra ID Protection as safe, or they can mark unflagged events as safe. For details about investigating Identity Protection risks, see [How to investigate risk](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk).
+Allow admins to mark an event in Microsoft Entra [sign-in](../resources/signin.md) logs as safe. Admins can either mark the events flagged as risky by Microsoft Entra ID Protection as safe, or they can mark unflagged events as safe. For details about investigating Identity Protection risks, see [How to investigate risk](/azure/active-directory/identity-protection/howto-identity-protection-investigate-risk).
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -22,13 +23,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "signin_confirmsafe" } -->
 [!INCLUDE [permissions-table](../includes/permissions/signin-confirmsafe-permissions.md)]
 
+[!INCLUDE [rbac-signin-apis-write](../includes/rbac-for-apis/rbac-signin-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /auditLogs/signIns/confirmSafe
 ```
 
@@ -63,7 +66,7 @@ If successful, this action returns a `204 No Content` response code.
   "name": "signinthis.confirmsafe"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/auditLogs/signIns/confirmSafe
 Content-Type: application/json
 
@@ -78,10 +81,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/signinthisconfirmsafe-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/signinthisconfirmsafe-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -116,6 +115,6 @@ Content-Type: application/json
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

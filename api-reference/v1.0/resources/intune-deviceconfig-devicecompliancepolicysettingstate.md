@@ -2,9 +2,10 @@
 title: "deviceCompliancePolicySettingState resource type"
 description: "Device Compilance Policy Setting State for a given device."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # deviceCompliancePolicySettingState resource type
@@ -21,7 +22,7 @@ Device Compilance Policy Setting State for a given device.
 |setting|String|The setting that is being reported|
 |settingName|String|Localized/user friendly setting name that is being reported|
 |instanceDisplayName|String|Name of setting instance that is being reported.|
-|state|[complianceStatus](../resources/intune-shared-compliancestatus.md)|The compliance state of the setting. Possible values are: `unknown`, `notApplicable`, `compliant`, `remediated`, `nonCompliant`, `error`, `conflict`, `notAssigned`.|
+|state|[complianceStatus](../resources/intune-shared-compliancestatus.md)|The compliance state of the setting. The possible values are: `unknown`, `notApplicable`, `compliant`, `remediated`, `nonCompliant`, `error`, `conflict`, `notAssigned`.|
 |errorCode|Int64|Error code for the setting|
 |errorDescription|String|Error description|
 |userId|String|UserId|

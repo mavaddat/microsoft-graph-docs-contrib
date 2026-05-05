@@ -2,16 +2,17 @@
 title: "Update androidWorkProfileWiFiConfiguration"
 description: "Update the properties of a androidWorkProfileWiFiConfiguration object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update androidWorkProfileWiFiConfiguration
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceManagement/deviceConfigurations/{deviceConfigurationId}
 PATCH /deviceManagement/deviceConfigurations/{deviceConfigurationId}/groupAssignments/{deviceConfigurationGroupAssignmentId}/deviceConfiguration
 PATCH /deviceManagement/deviceConfigurations/{deviceConfigurationId}/microsoft.graph.windowsDomainJoinConfiguration/networkAccessConfigurations/{deviceConfigurationId}
@@ -63,11 +64,15 @@ The following table shows the properties that are required when you create the [
 |description|String|Admin provided description of the Device Configuration. Inherited from [deviceConfiguration](../resources/intune-shared-deviceconfiguration.md)|
 |displayName|String|Admin provided name of the device configuration. Inherited from [deviceConfiguration](../resources/intune-shared-deviceconfiguration.md)|
 |version|Int32|Version of the device configuration. Inherited from [deviceConfiguration](../resources/intune-shared-deviceconfiguration.md)|
-|networkName|String|Network Name|
+|networkName|String|The name of the Wi-Fi network.|
 |ssid|String|This is the name of the Wi-Fi network that is broadcast to all devices.|
-|connectAutomatically|Boolean|Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.|
-|connectWhenNetworkNameIsHidden|Boolean|When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.|
-|wiFiSecurityType|[androidWiFiSecurityType](../resources/intune-deviceconfig-androidwifisecuritytype.md)|Indicates whether Wi-Fi endpoint uses an EAP based security type. Possible values are: `open`, `wpaEnterprise`, `wpa2Enterprise`.|
+|connectAutomatically|Boolean|When set to true, device will connect automatically to the Wi-Fi network when in range, skipping the user prompt. When false, user will need to connect manually through Settings on the Android device. Default value is false.|
+|connectWhenNetworkNameIsHidden|Boolean|When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices. When false, device will not automatically connect to hidden networks. Default value is false.|
+|wiFiSecurityType|[androidWiFiSecurityType](../resources/intune-deviceconfig-androidwifisecuritytype.md)|The possible security types for Android Wi-Fi profiles. Default value Open, indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. WpaEnterprise and Wpa2Enterprise options are available for Enterprise Wi-Fi profiles. Wep and WpaPersonal (supports WPA and WPA2) options are available for Basic Wi-Fi profiles. Possible values are: `open`, `wpaEnterprise`, `wpa2Enterprise`, `wep`, `wpaPersonal`, `unknownFutureValue`.|
+|preSharedKey|String|Specify the pre-shared key for a WEP or WPA personal Wi-Fi network. Restrictions depend on the value set for wiFiSecurityType. If WEP type security is used, then preSharedKey must be a valid passphrase (5 or 13 characters) or a valid HEX key (10 or 26 hexidecimal characters). If WPA security type is used, then preSharedKey can be any string between 8 and 64 characters long.|
+|preSharedKeyIsSet|Boolean|When set to true, indicates that the pre-shared key is configured. When set to false, indicates that pre-shared key is not configured (any values set for preSharedKey will be ignored). Default value is false.|
+|proxySettings|[wiFiProxySetting](../resources/intune-deviceconfig-wifiproxysetting.md)|Proxy Type for this Wi-Fi connection. Possible values are: `none`, `manual`, `automatic`, `unknownFutureValue`.|
+|proxyAutomaticConfigurationUrl|String|URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.|
 
 
 
@@ -78,10 +83,10 @@ If successful, this method returns a `200 OK` response code and an updated [andr
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations/{deviceConfigurationId}
 Content-type: application/json
-Content-length: 1219
+Content-length: 1414
 
 {
   "@odata.type": "#microsoft.graph.androidWorkProfileWiFiConfiguration",
@@ -117,16 +122,20 @@ Content-length: 1219
   "ssid": "Ssid value",
   "connectAutomatically": true,
   "connectWhenNetworkNameIsHidden": true,
-  "wiFiSecurityType": "wpaEnterprise"
+  "wiFiSecurityType": "wpaEnterprise",
+  "preSharedKey": "Pre Shared Key value",
+  "preSharedKeyIsSet": true,
+  "proxySettings": "manual",
+  "proxyAutomaticConfigurationUrl": "https://example.com/proxyAutomaticConfigurationUrl/"
 }
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 1391
+Content-Length: 1586
 
 {
   "@odata.type": "#microsoft.graph.androidWorkProfileWiFiConfiguration",
@@ -165,6 +174,10 @@ Content-Length: 1391
   "ssid": "Ssid value",
   "connectAutomatically": true,
   "connectWhenNetworkNameIsHidden": true,
-  "wiFiSecurityType": "wpaEnterprise"
+  "wiFiSecurityType": "wpaEnterprise",
+  "preSharedKey": "Pre Shared Key value",
+  "preSharedKeyIsSet": true,
+  "proxySettings": "manual",
+  "proxyAutomaticConfigurationUrl": "https://example.com/proxyAutomaticConfigurationUrl/"
 }
 ```

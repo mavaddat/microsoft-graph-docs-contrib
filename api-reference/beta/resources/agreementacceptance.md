@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: AlexFilipin
+ms.date: 07/22/2024
 ---
 
 # agreementAcceptance resource type
@@ -19,7 +20,7 @@ Represents the current status of a user's response to a company's customizable t
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
-| [List agreementAcceptances for a user](../api/user-list-agreementacceptances.md) | [agreementAcceptance](agreementacceptance.md) | Retrieve a user's agreementAcceptance objects. |
+| [List agreement acceptances for a user](../api/user-list-agreementacceptances.md) | [agreementAcceptance](agreementacceptance.md) | Retrieve a user's agreementAcceptance objects. |
 | [List acceptances](../api/agreement-list-acceptances.md) | [agreementAcceptance](agreementacceptance.md) | Retrieve acceptance for an agreement.  |
 
 ## Properties
@@ -34,7 +35,7 @@ Represents the current status of a user's response to a company's customizable t
 |expirationDateTime|DateTimeOffset|The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Supports `$filter` (`eq`, `ge`, `le`) and `eq` for `null` values.|
 |id|String| The identifier of the agreement acceptance. Read-only. Supports `$filter` (`eq`).|
 |recordedDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Supports `$filter` (`eq`) and `eq` for `null` values.|
-|state|string| Possible values are: `accepted`, `declined`. Supports `$filter` (`eq`).|
+|state|string| The possible values are: `accepted`, `declined`. Supports `$filter` (`eq`).|
 |userDisplayName|String|Display name of the user when the acceptance was recorded.|
 |userEmail|String|Email of the user when the acceptance was recorded.|
 |userId|String|ID of the user who accepted the agreement. Supports `$filter` (`eq`).|
@@ -46,7 +47,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

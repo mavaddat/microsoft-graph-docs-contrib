@@ -5,6 +5,7 @@ author: "malabikaroy"
 ms.localizationpriority: medium
 ms.subservice: "viva-learning"
 doc_type: apiPageType
+ms.date: 03/19/2024
 ---
 
 # List learningContents
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /employeeExperience/learningProviders/{learningProviderId}/learningContents
 ```
 
@@ -61,16 +62,12 @@ The following example shows a request.
   "sampleKeys": ["13727311-e7bb-470d-8b20-6a23d9030d70"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/employeeExperience/learningProviders/13727311-e7bb-470d-8b20-6a23d9030d70/learningContents 
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-learningcontent-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-learningcontent-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -105,12 +102,14 @@ The following example shows the response.
   "isCollection": true
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
 {
     "@odata.context": "https://graph.microsoft.com/beta/$metadata#learningProviders('13727311-e7bb-470d-8b20-6a23d9030d70')/learningContents",
+    "@odata.nextLink": "https://graph.microsoft.com/beta/$metadata#learningProviders('13727311-e7bb-470d-8b20-6a23d9030d70')/learningContents?skip=2&top=2",
+    "@odata.count": 10,
     "value": [
         {
             "id": "99029577-a660-46b6-ba58-3ce4d21d5f50",

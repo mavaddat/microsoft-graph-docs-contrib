@@ -5,6 +5,7 @@ author: "Sureshpadimi88"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: apiPageType
+ms.date: 08/29/2024
 ---
 
 # Get educationCategory
@@ -31,7 +32,9 @@ GET /education/classes/{id}/assignmentCategories/{id}
 
 ## Optional query parameters
 
-This method supports the `$select` OData query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select` and `$orderby` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+
+You can use `$orderby` with the **displayName** property of the [educationCategory](../resources/educationcategory.md) resource.
 
 ## Request headers
 | Header        | Value                     |
@@ -64,10 +67,6 @@ GET https://graph.microsoft.com/v1.0/education/classes/acdefc6b-2dc6-4e71-b1e9-6
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-class-category-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-class-category-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

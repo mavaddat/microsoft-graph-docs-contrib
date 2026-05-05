@@ -5,6 +5,7 @@ author: "SarahBar"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get azureADAuthentication
@@ -12,7 +13,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of an [azureADAuthentication](../resources/azureadauthentication.md) object to find the level of Microsoft Entra authentication availability for your tenant. The Microsoft Entra service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in [Microsoft Entra SLA performance](/azure/active-directory/reports-monitoring/reference-azure-ad-sla-performance). This object provides you with your tenant’s actual performance against this commitment.
+Read the properties and relationships of an [azureADAuthentication](../resources/azureadauthentication.md) object to find the level of Microsoft Entra authentication availability for your tenant. The Microsoft Entra service Level Agreement (SLA) commits to at least 99.99% authentication availability, as described in [Microsoft Entra SLA performance](/azure/active-directory/reports-monitoring/reference-azure-ad-sla-performance). This object provides you with your tenant's actual performance against this commitment.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -22,13 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "azureadauthentication_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/azureadauthentication-get-permissions.md)]
 
-In addition to the delegated permissions, the signed-in user needs to belong to one of the following directory roles that allow them to read sign-in reports. To learn more about directory roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-+ Global Administrator
-+ Global Reader
-+ Reports Reader
-+ Security Administrator
-+ Security Operator
-+ Security Reader
+[!INCLUDE [rbac-entra-health-service-activity-apis](../includes/rbac-for-apis/rbac-entra-health-service-activity-apis.md)]
 
 ## HTTP request
 
@@ -53,7 +48,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an [azureADAuthentication](../resources/azureadauthentication.md) object in the response body. Each returned value includes a score indicating the availability percentage of the tenant’s authentications for the month, along with a startDate and endDate indicating the month that the availability percentage is assigned to.
+If successful, this method returns a `200 OK` response code and an [azureADAuthentication](../resources/azureadauthentication.md) object in the response body. Each returned value includes a score indicating the availability percentage of the tenant's authentications for the month, along with a startDate and endDate indicating the month that the availability percentage is assigned to.
 
 ## Examples
 
@@ -71,10 +66,6 @@ GET https://graph.microsoft.com/beta/reports/sla/azureADAuthentication
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-azureadauthentication-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-azureadauthentication-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

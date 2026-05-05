@@ -4,6 +4,8 @@ description: "Use OneDrive, the files hub in Microsoft 365, to access files no m
 ms.localizationpriority: high
 ms.subservice: "onedrive"
 ms.custom: scenarios:getting-started
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # OneDrive file storage API overview
@@ -78,5 +80,5 @@ Looking for the API reference for this service?
 [formats]: /graph/api/driveitem-get-content-format
 [thumbnails]: /graph/api/driveitem-list-thumbnails
 [preview]: /graph/api/driveitem-preview
-[webhooks]: /graph/api/resources/webhooks
+[webhooks]: /graph/api/resources/change-notifications-api-overview
 [Drive API]: /graph/api/resources/onedrive

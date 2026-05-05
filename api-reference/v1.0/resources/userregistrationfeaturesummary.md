@@ -5,6 +5,8 @@ author: "kvenkit"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: resourcePageType
+ms.date: 05/23/2024
+ms.custom: sfi-ga-nochange
 ---
 
 # userRegistrationFeatureSummary resource type
@@ -17,7 +19,7 @@ Represents the summary of users capable of multi-factor authentication, self-ser
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
-| [usersRegisteredByFeature](../api/authenticationmethodsroot-usersregisteredbyfeature.md) | [userRegistrationFeatureSummary](../resources/userregistrationfeaturesummary.md) | Get the number of users capable of multi-factor authentication, self-service password reset, and passwordless authentication. |
+| [List](../api/authenticationmethodsroot-usersregisteredbyfeature.md) | [userRegistrationFeatureSummary](../resources/userregistrationfeaturesummary.md) | Get the number of users capable of multi-factor authentication, self-service password reset, and passwordless authentication. |
 
 ## Properties
 
@@ -25,10 +27,10 @@ Represents the summary of users capable of multi-factor authentication, self-ser
 |:---|:---|:---|
 |totalUserCount|Int64|Total number of users accounts, excluding those that are blocked.|
 |userRegistrationFeatureCounts|[userRegistrationFeatureCount](../resources/userregistrationfeaturecount.md) collection|Number of users registered or capable for multi-factor authentication, self-service password reset, and passwordless authentication.|
-|userRoles|includedUserRoles|The role type of the user. Possible values are: `all`, `privilegedAdmin`, `admin`, `user`, `unknownFutureValue`.|
-|userTypes|includedUserTypes|User type. Possible values are: `all`, `member`, `guest`, `unknownFutureValue`.|
+|userRoles|includedUserRoles|The role type of the user. The possible values are: `all`, `privilegedAdmin`, `admin`, `user`, `unknownFutureValue`.|
+|userTypes|includedUserTypes|User type. The possible values are: `all`, `member`, `guest`, `unknownFutureValue`.|
 
-The value `privilegedAdmin` consists of the following privileged admin roles:
+The value `privilegedAdmin` consists of the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).:
 
 * Global Administrator
 * Security Administrator
@@ -48,7 +50,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

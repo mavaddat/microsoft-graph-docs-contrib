@@ -3,8 +3,9 @@ title: "user: getPasswordSingleSignOnCredentials"
 description: "Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings."
 author: "AllisonAm"
 ms.localizationpriority: medium
-ms.prod: "users"
+ms.subservice: entra-users
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # user: getPasswordSingleSignOnCredentials
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /users/{usersId}/getPasswordSingleSignOnCredentials
 ```
 
@@ -38,7 +39,7 @@ POST /users/{usersId}/getPasswordSingleSignOnCredentials
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -59,16 +60,12 @@ The following example shows a request.
   "name": "userthis.getpasswordsinglesignoncredentials"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/users/{usersId}/getPasswordSingleSignOnCredentials
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/userthisgetpasswordsinglesignoncredentials-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/userthisgetpasswordsinglesignoncredentials-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -107,7 +104,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.passwordSingleSignOnCredentialSet)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

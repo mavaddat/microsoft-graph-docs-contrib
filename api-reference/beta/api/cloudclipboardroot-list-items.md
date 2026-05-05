@@ -5,6 +5,7 @@ author: "yuechen7"
 ms.localizationpriority: medium
 ms.subservice: "project-rome"
 doc_type: apiPageType
+ms.date: 07/08/2024
 ---
 
 # List cloudClipboard items
@@ -20,6 +21,8 @@ Get a list of the [cloudClipboardItem](../resources/cloudclipboarditem.md) objec
 
 This API doesn't support using another user's credentials to get a [cloudClipboardItem](../resources/cloudclipboarditem.md) for a user. 
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -33,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/cloudClipboard/items
 ```
 
@@ -48,7 +51,7 @@ This method supports `$skipToken` [OData query parameters](/graph/query-paramete
 
 | Name          | Description                                                                                                                                                                                                  |
 |:--------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Authorization | Bearer {token}. Required.                                                                                                                                                                                    |
+| Authorization |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Prefer        | odata.maxpagesize={x}. Optional. Specifies a preferred integer {x} page size for paginated results. Acceptable values are 1 to 200, inclusive. If not specified in the header, the default page size is 110. |
 
 ## Request body
@@ -67,7 +70,7 @@ In addition to [general errors](/graph/errors) that apply to Microsoft Graph, so
 |400|Bad request|The request is malformed or incorrect, such as invalid page size or invalid `$skipToken` value.|
 |403|Forbidden|The caller can't perform the action. It indicates that the user has not consented to share [cloudClipboardItem](../resources/cloudclipboarditem.md).|
 |409|Conflict|The current state conflicts with what the request expects. It usually indicates that the user isn't eligible for the cloud clipboard feature because they don't have at least two devices authenticated through multi-factor authentication during the sign-in process.|
-|429|Too many requests|The request rate limit has been exceeded. Wait for the time specified in the `Retry-After` header and try again.| 
+|429|Too many requests|The request rate limit has been exceeded. Wait for the time specified in the `Retry-After` header and try again.|
 
 ## Examples
 
@@ -80,16 +83,12 @@ The following example shows a request.
   "name": "list_cloudclipboarditem"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/cloudClipboard/items
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-cloudclipboarditem-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-cloudclipboarditem-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -124,7 +123,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.cloudClipboardItem)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

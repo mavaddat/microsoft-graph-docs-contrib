@@ -3,6 +3,8 @@ title: "Use the activity feed API to enable cross-device experiences"
 description: "Using Microsoft Graph, you can enable experiences that flow seamlessly between devices, create richer activities with Adaptive Cards, and help drive app usage."
 ms.localizationpriority: medium
 ms.subservice: "project-rome"
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Use the activity feed API in Microsoft Graph to enable cross-device experiences

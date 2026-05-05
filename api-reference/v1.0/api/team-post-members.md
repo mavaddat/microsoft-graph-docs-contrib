@@ -1,10 +1,11 @@
 ---
 title: "Add member to team"
 description: "Add a new member to a team."
-author: "nkramer"
+author: "MSFTRickyCastaneda"
 ms.localizationpriority: high
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 08/19/2024
 ---
 
 # Add member to team
@@ -13,7 +14,9 @@ Namespace: microsoft.graph
 Add a new [conversationMember](../resources/conversationmember.md) to a [team](../resources/team.md).
 
 > [!NOTE]
-> The **roles** property will be empty by default for all members. This property only contains additional qualifiers when relevant - for example, if the member has `owner` privileges, the roles property contains `owner` as one of the values. Similarly, if the member is a guest, the **roles** property contains `guest` as one of the values. A basic member should not have any values specified in the **roles** property.
+> * The **roles** property is empty by default for all members. This property only contains additional qualifiers when relevant; for example, if the member has `owner` privileges, the **roles** property contains `owner` as one of the values. Similarly, if the member is a guest, the **roles** property contains `guest` as one of the values. A basic member shouldn't have any values specified in the **roles** property.
+> * After adding a new [conversation member](../resources/conversationmember.md) to a [team](../resources/team.md), it might take some time for the addition to be reflected. Users can use [change notifications](../resources/change-notifications-api-overview.md) to subscribe to notifications for membership changes in a particular team.
+
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -34,7 +37,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /teams/{team-id}/members
 ```
 
@@ -51,7 +54,7 @@ In the request body, supply a JSON representation of the [conversationMember](..
 
 If successful, this method returns a `201 Created` response code and a [conversationMember](../resources/conversationmember.md) object in the response body.
 
-For best results, stagger calls with a 2 second buffer.
+For best results, stagger calls with a 2-second buffer.
 
 > [!NOTE]
 > The response code `404 Not Found` is returned when you attempt to add a disabled/blocked user.
@@ -68,7 +71,7 @@ For best results, stagger calls with a 2 second buffer.
   "name": "create_conversationmember_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/teams/ee0f5ae2-8bc6-4ae5-8466-7daeebbfa062/members
 Content-type: application/json
 
@@ -81,10 +84,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-conversationmember-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-conversationmember-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -124,7 +123,7 @@ Content-type: application/json
 }
 -->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 
@@ -142,16 +141,20 @@ Content-type: application/json
 
 ### Example 2: Add a member to a team using user principal name
 
+The following example shows how to add a member to a team using the user principal name.
+
+> [!NOTE]
+> You can't use the user principal name (UPN) to add a guest user to a team.
+
 #### Request
-
-
+The following example shows a request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_conversationmember_upn"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/teams/ee0f5ae2-8bc6-4ae5-8466-7daeebbfa062/members
 Content-type: application/json
 
@@ -164,10 +167,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-conversationmember-upn-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-conversationmember-upn-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -196,15 +195,16 @@ Content-type: application/json
 
 ---
 
-### Response
-**Note:** The response object shown here might be shortened for readability.
+#### Response
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
   "truncated": true,
   "@odata.type": "microsoft.graph.conversationMember"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 

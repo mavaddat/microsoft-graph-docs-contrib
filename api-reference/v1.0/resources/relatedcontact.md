@@ -5,6 +5,7 @@ author: "marcla"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # relatedContact resource type
@@ -21,11 +22,11 @@ Represents a contact record related to an [educationUser](../resources/education
 | displayName   | String                | Name of the contact. Required.                                                                                                            |
 | emailAddress  | String                | Primary email address of the contact. Required.                                                                                           |
 | mobilePhone   | String                | Mobile phone number of the contact.                                                                                                       |
-| relationship  | contactRelationship | Relationship to the user. Possible values are: `parent`, `relative`, `aide`, `doctor`, `guardian`, `child`, `other`, `unknownFutureValue`.|
+| relationship  | contactRelationship | Relationship to the user. The possible values are: `parent`, `relative`, `aide`, `doctor`, `guardian`, `child`, `other`, `unknownFutureValue`.|
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

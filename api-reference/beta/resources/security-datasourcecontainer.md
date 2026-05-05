@@ -3,8 +3,9 @@ title: "dataSourceContainer resource type"
 description: "Base class for Custodians and Non-Custodial data sources."
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 06/11/2024
 ---
 
 # dataSourceContainer resource type
@@ -29,7 +30,7 @@ None.
 |id|String|Unique identifier of the dataSourceContainer. Inherited from [entity](../resources/entity.md)|
 |lastModifiedDateTime|DateTimeOffset|Last modified date and time of the dataSourceContainer.|
 |releasedDateTime|DateTimeOffset|Date and time that the dataSourceContainer was released from the case.|
-|status|microsoft.graph.security.dataSourceContainerStatus|Latest status of the dataSourceContainer. Possible values are: `Active`, `Released`.|
+|status|microsoft.graph.security.dataSourceContainerStatus|Latest status of the dataSourceContainer. The possible values are: `Active`, `Released`.|
 
 
 ### dataSourceContainerStatus values
@@ -54,7 +55,7 @@ None.
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

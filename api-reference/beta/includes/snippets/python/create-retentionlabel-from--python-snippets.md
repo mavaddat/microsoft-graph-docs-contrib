@@ -4,31 +4,40 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```python
 
-from msgraph import GraphServiceClient
-from msgraph.generated.models.retention_label import RetentionLabel
-from msgraph.generated.models.retention_duration import RetentionDuration
-from msgraph.generated.models.identity_set import IdentitySet
-from msgraph.generated.models.file_plan_descriptor import FilePlanDescriptor
-
-graph_client = GraphServiceClient(credentials, scopes)
-
+# Code snippets are only available for the latest version. Current version is 1.x
+from msgraph_beta import GraphServiceClient
+from msgraph_beta.generated.models.security.retention_label import RetentionLabel
+from msgraph_beta.generated.models.behavior_during_retention_period import BehaviorDuringRetentionPeriod
+from msgraph_beta.generated.models.action_after_retention_period import ActionAfterRetentionPeriod
+from msgraph_beta.generated.models.retention_trigger import RetentionTrigger
+from msgraph_beta.generated.models.security.retention_duration_in_days import RetentionDurationInDays
+from msgraph_beta.generated.models.security.disposition_review_stage import DispositionReviewStage
+from msgraph_beta.generated.models.security.file_plan_descriptor import FilePlanDescriptor
+from msgraph_beta.generated.models.default_record_behavior import DefaultRecordBehavior
+# To initialize your graph_client, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=python
 request_body = RetentionLabel(
 	odata_type = "#microsoft.graph.security.retentionLabel",
-	display_name = "String",
-	behavior_during_retention_period = BehaviorDuringRetentionPeriod.DoNotRetain,
-	action_after_retention_period = ActionAfterRetentionPeriod.None,
-	retention_trigger = RetentionTrigger.DateLabeled,
-	retention_duration = RetentionDuration(
-		odata_type = "microsoft.graph.security.retentionDuration",
+	display_name = "Retention Schedule 10005",
+	behavior_during_retention_period = BehaviorDuringRetentionPeriod.Retain,
+	action_after_retention_period = ActionAfterRetentionPeriod.StartDispositionReview,
+	retention_trigger = RetentionTrigger.DateOfEvent,
+	retention_duration = RetentionDurationInDays(
+		odata_type = "microsoft.graph.security.retentionDurationInDays",
+		days = 2555,
 	),
-	is_in_use = Boolean,
-	description_for_admins = "String",
-	description_for_users = "String",
-	created_by = IdentitySet(
-		odata_type = "microsoft.graph.identitySet",
-	),
-	label_to_be_applied = "String",
-	default_record_behavior = DefaultRecordBehavior.StartLocked,
+	disposition_review_stages = [
+		DispositionReviewStage(
+			stage_number = 1,
+			name = "Stage1",
+			additional_data = {
+					"reviewers_email_addresses " : [
+						"Admin@contoso.onmicrosoft.com",
+					],
+			}
+		),
+	],
+	description_for_admins = "retain for 7 years",
+	description_for_users = "retain for 7 years",
 	descriptors = FilePlanDescriptor(
 		additional_data = {
 				"authority_template@odata_bind" : "https://graph.microsoft.com/beta/security/labels/authorities('fie3f4fc-b966-4c40-94de-fb8a383658e4')",
@@ -38,6 +47,10 @@ request_body = RetentionLabel(
 				"file_plan_reference_template@odata_bind" : "https://graph.microsoft.com/beta/security/labels/filePlanReferences('e095f4fc-b966-4c40-94de-fb8a383658e4')",
 		}
 	),
+	default_record_behavior = DefaultRecordBehavior.StartLocked,
+	additional_data = {
+			"retention_event_type@odata_bind" : "https://graph.microsoft.com/beta/security/triggerTypes/retentionEventTypes('e095f4fc-b966-4c40-94de-fb8a383658e4')",
+	}
 )
 
 result = await graph_client.security.labels.retention_labels.post(request_body)

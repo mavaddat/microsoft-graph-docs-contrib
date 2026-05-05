@@ -2,9 +2,10 @@
 title: "getEffectiveDeviceEnrollmentConfigurations function"
 description: "Intune Shared User Geteffectivedeviceenrollmentconfigurations Api ."
 author: "jaiprakashmb"
-localization_priority: Normal
-ms.subservice: "intune"
+ms.localizationpriority: medium
+ms.prod: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # getEffectiveDeviceEnrollmentConfigurations function
@@ -17,9 +18,7 @@ Namespace: microsoft.graph
 
 
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-## Permissions
+        ## Permissions
 
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
@@ -30,13 +29,16 @@ One of the following permissions is required to call this API. To learn more, in
 |Delegated (personal Microsoft account)|Not supported.|
 |Application||
 | &nbsp; &nbsp; **Onboarding** | DeviceManagementServiceConfig.ReadWrite.All|
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## HTTP Request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /users/{usersId}/getEffectiveDeviceEnrollmentConfigurations
 ```
 
@@ -61,7 +63,7 @@ If successful, this function returns a `200 OK` response code and a [deviceEnrol
 
 Here is an example of the request.
 
-``` http
+```http
 GET https://graph.microsoft.com/beta/users/{usersId}/getEffectiveDeviceEnrollmentConfigurations
 ```
 
@@ -69,7 +71,7 @@ GET https://graph.microsoft.com/beta/users/{usersId}/getEffectiveDeviceEnrollmen
 
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 422

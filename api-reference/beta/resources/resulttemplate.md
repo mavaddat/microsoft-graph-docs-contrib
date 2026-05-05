@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "cristianv-ms"
 ms.subservice: "search"
 doc_type: "resourcePageType"
+ms.date: 07/25/2024
 ---
 
 # resultTemplate resource type
@@ -23,26 +24,27 @@ A dictionary of **resultTemplateIds** and associated values, which includes the 
 |displayName|String|Name of the result template.|
 |body|Json|JSON schema of the result template.|
 
+## Relationships
+
+None.
+
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
   "optionalProperties": [
 
   ],
-  "@odata.type": "microsoft.graph.resultTemplate",
-  "baseType": null
+  "@odata.type": "microsoft.graph.resultTemplate"
 }-->
 
 
 ```json
 {
-   "resultTemplateId": {
-      "displayName": "String",
-      "body": "Json schema"
-   }
+    "displayName": "String",
+    "body": "Json schema"
 }
 ```
 

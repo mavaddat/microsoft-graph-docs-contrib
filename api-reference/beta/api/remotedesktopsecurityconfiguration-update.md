@@ -1,10 +1,11 @@
 ---
 title: "Update remoteDesktopSecurityConfiguration"
-description: "Update the properties of a remoteDesktopSecurityConfiguration object on the servicePincipal."
-author: "SanDeo-MSFT"
+description: "Update the properties of a remoteDesktopSecurityConfiguration object on the servicePrincipal."
+author: "mjsantani"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 01/02/2026
 ---
 
 # Update remoteDesktopSecurityConfiguration
@@ -14,7 +15,7 @@ Namespace: microsoft.graph
 
 Update the properties of a [remoteDesktopSecurityConfiguration](../resources/remotedesktopsecurityconfiguration.md) object on the servicePrincipal. Use this configuration to enable or disable the Microsoft Entra ID [Remote Desktop Services (RDS) authentication protocol](/openspecs/windows_protocols/ms-rdpbcgr/dc43f040-d75d-49a9-90c6-0c9999281136) to authenticate a user to [Microsoft Entra joined](/azure/active-directory/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) devices.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -26,12 +27,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+You can address the service principal using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in app registrations in the Microsoft Entra admin center.
+
 <!-- {
   "blockType": "ignored"
 }
 -->
 ``` http
-PATCH /servicePrincipals/{servicePrincipalsId}/remoteDesktopSecurityConfiguration
+PATCH /servicePrincipals/{id}/remoteDesktopSecurityConfiguration
+PATCH /servicePrincipals(appId='{appId}')/remoteDesktopSecurityConfiguration
 ```
 
 ## Request headers
@@ -76,10 +80,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-remotedesktopsecurityconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-remotedesktopsecurityconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

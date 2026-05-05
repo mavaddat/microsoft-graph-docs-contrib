@@ -6,6 +6,7 @@ author: "luc-msft"
 ms.reviewer: intelligentaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 07/31/2025
 ---
 
 # Update phoneAuthenticationMethod
@@ -18,7 +19,9 @@ You can't change a phone's type. To change a phone's type, add a new number of t
 
 If a user is enabled by policy to use SMS to sign in and the `mobile` number is changed, the system will attempt to register the number for use in that system.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+Self-service operations aren't supported.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -29,13 +32,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 [!INCLUDE [rbac-authentication-methods-apis-write-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-write-others.md)]
 
-Users cannot update their own phone authentication method.
-
 ## HTTP request
 
-Update another user's phone authentication method.
+Update another user's phone authentication method. Users can't update their own phone authentication method.
 <!-- { "blockType": "ignored" } -->
-``` http
+```http
 PATCH /users/{id | userPrincipalName}/authentication/phoneMethods/{phoneMethodId}
 ```
 
@@ -58,7 +59,7 @@ In the request body, supply the values for relevant fields that should be update
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
 |phoneNumber|String|The phone number to text or call for authentication. Phone numbers use the format `+{country code} {number}x{extension}`, with extension optional. For example, `+1 5555551234` or `+1 5555551234x123` are valid. Numbers are rejected when creating or updating if they do not match the required format.|
-|phoneType|string| Possible values are: `mobile`, `alternateMobile`, or `office`.|
+|phoneType|string| The possible values are: `mobile`, `alternateMobile`, or `office`.|
 
 ## Response
 
@@ -90,10 +91,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-phoneauthenticationmethod-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-phoneauthenticationmethod-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

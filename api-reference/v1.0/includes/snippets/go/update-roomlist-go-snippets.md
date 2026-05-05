@@ -5,15 +5,15 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```go
 
 
+// Code snippets are only available for the latest major version. Current major version is $v1.*
+
+// Dependencies
 import (
 	  "context"
 	  msgraphsdk "github.com/microsoftgraph/msgraph-sdk-go"
 	  graphmodels "github.com/microsoftgraph/msgraph-sdk-go/models"
 	  //other-imports
 )
-
-graphClient := msgraphsdk.NewGraphServiceClientWithCredentials(cred, scopes)
-
 
 requestBody := graphmodels.NewPlace()
 displayName := "Building 1"
@@ -29,7 +29,7 @@ state := "NY"
 address.SetState(&state) 
 postalCode := "98052"
 address.SetPostalCode(&postalCode) 
-countryOrRegion := "USA"
+countryOrRegion := "US"
 address.SetCountryOrRegion(&countryOrRegion) 
 requestBody.SetAddress(address)
 geoCoordinates := graphmodels.NewOutlookGeoCoordinates()
@@ -45,6 +45,7 @@ altitudeAccuracy := null
 geoCoordinates.SetAltitudeAccuracy(&altitudeAccuracy) 
 requestBody.SetGeoCoordinates(geoCoordinates)
 
+// To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go
 places, err := graphClient.Places().ByPlaceId("place-id").Patch(context.Background(), requestBody, nil)
 
 

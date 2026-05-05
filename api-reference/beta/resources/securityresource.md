@@ -1,15 +1,19 @@
 ---
-title: "securityResource resource type"
+title: "securityResource resource type (deprecated)"
 description: "Represents the resources related to an alert."
 ms.localizationpriority: medium
 author: "preetikr"
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
+ROBOTS: NOINDEX
 ---
 
-# securityResource resource type
+# securityResource resource type (deprecated)
 
 Namespace: microsoft.graph
+
+[!INCLUDE [security-alerts-v1-deprecation](../includes/security-alerts-v1-deprecation.md)]
 
 Represents the resources related to an alert.
 
@@ -18,7 +22,7 @@ Represents the resources related to an alert.
 | Property   | Type|Description|
 |:---------------|:--------|:----------|
 |resource|String|Name of the resource that is related to current alert. **Required**.|
-|resourceType|[securityResourceType](#securityresourcetype-values)|Represents type of security resources related to an alert. Possible values are: `attacked`, `related`.|
+|resourceType|[securityResourceType](#securityresourcetype-values)|Represents type of security resources related to an alert. The possible values are: `attacked`, `related`.|
 
 ### securityResourceType values
 
@@ -27,9 +31,12 @@ Represents the resources related to an alert.
 |attacked|1|The resource was attacked in the alert.|
 |related|2|The resource is related to the alert, though not directly attacked.|
 
+## Relationships
+None.
+
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

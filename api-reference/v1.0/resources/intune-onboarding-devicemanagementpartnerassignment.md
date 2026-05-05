@@ -2,9 +2,10 @@
 title: "deviceManagementPartnerAssignment resource type"
 description: "User group targeting for Device Management Partner"
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # deviceManagementPartnerAssignment resource type
@@ -34,8 +35,9 @@ Here is a JSON representation of the resource.
 {
   "@odata.type": "#microsoft.graph.deviceManagementPartnerAssignment",
   "target": {
-    "@odata.type": "microsoft.graph.configurationManagerCollectionAssignmentTarget",
-    "collectionId": "String"
+    "@odata.type": "microsoft.graph.scopeTagGroupAssignmentTarget",
+    "targetType": "String",
+    "entraObjectId": "String"
   }
 }
 ```

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 author: "ArvindHarinder1"
 ms.subservice: "entra-applications"
+ms.date: 04/03/2024
 ---
 
 # attributeMappingSource resource type
@@ -20,7 +21,7 @@ Defines how a value should be extracted (or transformed) from the source object.
 |expression             |String                     |Equivalent expression representation of this **attributeMappingSource** object.|
 |name                   |String                     |Name parameter of the mapping source. Depending on the **type** property value, this can be the name of the function, the name of the source attribute, or a constant value to be used. |
 |parameters             |[stringKeyAttributeMappingSourceValuePair](synchronization-stringkeyattributemappingsourcevaluepair.md) collection | If this object represents a function, lists function parameters. Parameters consist of **attributeMappingSource** objects themselves, allowing for complex expressions. If **type** isn't `Function`, this property is null/empty array. |
-|type                   | attributeMappingSourceType                    |The type of this attribute mapping source. Possible values are: `Attribute`, `Constant`, `Function`. Default is `Attribute`.|
+|type                   | attributeMappingSourceType                    |The type of this attribute mapping source. The possible values are: `Attribute`, `Constant`, `Function`. Default is `Attribute`.|
 
 ### Sample syntaxes
 
@@ -76,7 +77,7 @@ Expression extracting first eight characters from the source attribute.
 ```
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.attributeMappingSource"

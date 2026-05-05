@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 ms.subservice: "reports"
 author: "sarahwxy"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # reportRoot: getSharePointActivityPages
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Get the number of unique pages visited by users.
 
-> **Note:** For details about different report views and names, see [Microsoft 365 reports - SharePoint activity](https://support.office.com/client/SharePoint-activity-a91c958f-1279-499d-9959-12f0de08dc8f).
+> **Note:** For details about different report views and names, see [Microsoft 365 reports - SharePoint activity](/microsoft-365/admin/activity-reports/sharepoint-activity-ww).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -82,10 +83,6 @@ GET https://graph.microsoft.com/v1.0/reports/getSharePointActivityPages(period='
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/reportroot-getsharepointactivitypages-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/reportroot-getsharepointactivitypages-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

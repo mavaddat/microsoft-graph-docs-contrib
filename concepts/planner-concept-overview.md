@@ -4,6 +4,8 @@ description: "Use the Planner API in Microsoft Graph to create plans, organize a
 author: "TarkanSevilmis"
 ms.localizationpriority: high
 ms.subservice: "planner"
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Planner tasks and plans API overview
@@ -24,7 +26,7 @@ Planner provides a shared space where you can build a team, [create tasks](/grap
 
 ### Collaborate across Microsoft 365
 
-Planner integrates into collaboration experiences across Microsoft 365. In addition to Planner web and mobile clients, users can view and update Planner plans and tasks from within SharePoint and Microsoft Teams.  
+Planner integrates into collaboration experiences across Microsoft 365. In addition to Planner web and mobile clients, users can view and update Planner plans, Project tasks, and tasks from within SharePoint and Microsoft Teams. Note that the changes to Project tasks are limited to updating the progress (percentage complete) of the task and marking the task as complete.
 
 Planner itself is also powered by the Microsoft Graph and the Microsoft 365 group service. Files that you upload and attach to Planner tasks are stored in SharePoint. Planner comments are based on Outlook group conversations.
 

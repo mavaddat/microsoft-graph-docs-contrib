@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: apiPageType
 author: "namkedia"
 ms.subservice: "entra-sign-in"
+ms.date: 08/13/2024
 ---
 
 # List identityProviders
@@ -25,11 +26,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "identitycontainer_list_identityproviders" } -->
 [!INCLUDE [permissions-table](../includes/permissions/identitycontainer-list-identityproviders-permissions.md)]
 
-The work or school account needs to belong to one of the following roles:
-
-* Global Administrator
-* External Identity Provider Administrator
-* External ID user flow administrator
+[!INCLUDE [rbac-identity-provider-apis](../includes/rbac-for-apis/rbac-identity-provider-apis.md)]
 
 ## HTTP request
 
@@ -77,10 +74,6 @@ GET https://graph.microsoft.com/v1.0/identity/identityProviders
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-identityproviderbase-azure-ad-tenant-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-identityproviderbase-azure-ad-tenant-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -167,10 +160,6 @@ GET https://graph.microsoft.com/v1.0/identity/identityProviders
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-identityproviderbase-2-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-identityproviderbase-2-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-identityproviderbase-2-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -236,4 +225,95 @@ Content-type: application/json
     ]
 }
 
+```
+
+### Example 3: List all identity providers configured in a Microsoft Entra External ID in an external tenant
+
+#### Request
+The following example shows a request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "get_identityproviderbase_CIAM"
+}
+-->
+
+``` http
+GET https://graph.microsoft.com/v1.0/identity/identityProviders
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/get-identityproviderbase-ciam-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/get-identityproviderbase-ciam-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/get-identityproviderbase-ciam-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/get-identityproviderbase-ciam-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/get-identityproviderbase-ciam-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-identityproviderbase-ciam-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/get-identityproviderbase-ciam-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+The following example shows the response.
+
+>**Note:** The response object shown here might be shortened for readability.
+
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.identityProviderBase",
+  "isCollection": true
+} -->
+
+```http
+HTTP/1.1 200 OK
+Content-type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#identity/identityProviders",
+    "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET identity/identityProviders?$select=displayName",
+    "value": [
+        {
+            "@odata.type": "#microsoft.graph.builtInIdentityProvider",
+            "id": "AADSignup-OAUTH",
+            "displayName": "Azure Active Directory Sign up",
+            "identityProviderType": "AADSignup",
+            "state": null
+        },
+        {
+            "@odata.type": "#microsoft.graph.builtInIdentityProvider",
+            "id": "EmailOtpSignup-OAUTH",
+            "displayName": "Email One Time Passcode",
+            "identityProviderType": "EmailOTP",
+            "state": null
+        },
+        {
+            "@odata.type": "#microsoft.graph.builtInIdentityProvider",
+            "id": "EmailPassword-OAUTH",
+            "displayName": "Email with password",
+            "identityProviderType": "EmailPassword",
+            "state": null
+        }
+    ]
+}
 ```

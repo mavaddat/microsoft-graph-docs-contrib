@@ -4,6 +4,8 @@ description: "Integrate with Windows 365 Cloud PC to create Azure network connec
 author: "cohanley"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Overview for Windows 365 Cloud PC on Microsoft Graph
@@ -26,9 +28,9 @@ Create [provisioning policies](/graph/api/resources/cloudpcprovisioningpolicy) a
 
 Upload and manage operating system [images](/graph/api/resources/cloudpcdeviceimage) for Cloud PCs to determine which version of Windows with what apps and other image details should be used for Cloud PCs when provisioned.  
 
-### View end users’ Cloud PCs and their properties
+### View end users' Cloud PCs and their properties
 
-Once provisioned, list and view end users’ [Cloud PCs](/graph/api/resources/cloudpc) and all associated properties. This Cloud PC visibility allows for hands-on management and ease of troubleshooting when needed. 
+Once provisioned, list and view end users' [Cloud PCs](/graph/api/resources/cloudpc) and all associated properties. This Cloud PC visibility allows for hands-on management and ease of troubleshooting when needed. 
 
 ## API reference
 
@@ -39,4 +41,5 @@ Looking for the API reference for the service?
 
 ## Next step
 
-- Try out the Windows 365 Cloud PC APIs by using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer).
+> [!div class="nextstepaction"]
+> [Try the Windows 365 Cloud PC APIs by using [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer)

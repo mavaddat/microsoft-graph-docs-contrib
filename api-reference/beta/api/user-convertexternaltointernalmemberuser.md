@@ -4,8 +4,9 @@ description: "Convert an external user to an internal member."
 author: "yyuank"
 ms.reviewer: "iamut"
 ms.localizationpriority: medium
-ms.prod: "users"
+ms.subservice: entra-users
 doc_type: apiPageType
+ms.date: 10/15/2024
 ---
 
 # user: convertExternalToInternalMemberUser
@@ -16,6 +17,8 @@ Namespace: microsoft.graph
 
 Convert an externally authenticated user into an internal user. The user is able to sign into the host tenant as an internal user and access resources as a member. For more information about this conversion, see [Convert external users to internal users](/entra/identity/users/convert-external-users-internal).
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -23,7 +26,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "user_convertexternaltointernalmemberuser" } -->
 [!INCLUDE [permissions-table](../includes/permissions/user-convertexternaltointernalmemberuser-permissions.md)]
 
-In delegated scenarios, the calling user must have at least the *User Administrator* [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
+> [!IMPORTANT]
+> 
+> In delegated scenarios with work or school accounts, the signed-in user must be assigned a supported [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json) or a custom role with a supported role permission. *User Administrator* is the least privileged role supported for this operation.
 
 ## HTTP request
 
@@ -31,7 +36,7 @@ In delegated scenarios, the calling user must have at least the *User Administra
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /users/{usersId}/convertExternalToInternalMemberUser
 ```
 
@@ -39,7 +44,7 @@ POST /users/{usersId}/convertExternalToInternalMemberUser
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
@@ -89,10 +94,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/userthisconvertexternaltointernalmemberuser-cloudonly-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/userthisconvertexternaltointernalmemberuser-cloudonly-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/userthisconvertexternaltointernalmemberuser-cloudonly-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -107,6 +108,10 @@ Content-type: application/json
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/userthisconvertexternaltointernalmemberuser-cloudonly-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/userthisconvertexternaltointernalmemberuser-cloudonly-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -167,10 +172,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/userthisconvertexternaltointernalmemberuser-cloudonly-with-mail-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/userthisconvertexternaltointernalmemberuser-cloudonly-with-mail-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/userthisconvertexternaltointernalmemberuser-cloudonly-with-mail-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -185,6 +186,10 @@ Content-type: application/json
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/userthisconvertexternaltointernalmemberuser-cloudonly-with-mail-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/userthisconvertexternaltointernalmemberuser-cloudonly-with-mail-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -203,7 +208,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.conversionUserDetails"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -235,10 +240,6 @@ POST https://graph.microsoft.com/beta/users/0b8cc234-ef87-4015-9785-cbb42000d41c
 [!INCLUDE [sample-code](../includes/snippets/csharp/userthisconvertexternaltointernalmemberuser-synceduser-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/userthisconvertexternaltointernalmemberuser-synceduser-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/userthisconvertexternaltointernalmemberuser-synceduser-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -253,6 +254,10 @@ POST https://graph.microsoft.com/beta/users/0b8cc234-ef87-4015-9785-cbb42000d41c
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/userthisconvertexternaltointernalmemberuser-synceduser-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/userthisconvertexternaltointernalmemberuser-synceduser-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -271,7 +276,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.conversionUserDetails"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

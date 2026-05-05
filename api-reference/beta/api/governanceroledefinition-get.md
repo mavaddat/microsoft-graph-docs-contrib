@@ -1,14 +1,15 @@
 ---
-title: "Get governanceRoleDefinition"
+title: "Get governanceRoleDefinition (deprecated)"
 description: "Retrieve the properties and relationships of a governanceRoleDefinition."
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 08/02/2024
 ---
 
-# Get governanceRoleDefinition
+# Get governanceRoleDefinition (deprecated)
 
 Namespace: microsoft.graph
 
@@ -44,7 +45,7 @@ This method does **not** support the [OData Query Parameters](/graph/query-param
 ## Request headers
 | Name      |Description|
 |:----------|:----------|
-| Authorization  | Bearer {code}|
+| Authorization  | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 
 ## Request body

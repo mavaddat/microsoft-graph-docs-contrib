@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: apiPageType
 author: "nanguil"
 ms.subservice: "entra-sign-in"
+ms.date: 04/05/2024
 ---
 
 # Get identityUserFlowAttribute
@@ -60,16 +61,12 @@ If successful, this method returns a `200 OK` response code and a [identityUserF
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identity/userFlowAttributes/{id}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-userflowattributes-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-userflowattributes-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

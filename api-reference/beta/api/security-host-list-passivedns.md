@@ -5,6 +5,7 @@ author: "joerattazzi-microsoft"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 06/07/2024
 ---
 
 # List passiveDns
@@ -17,12 +18,12 @@ Namespace: microsoft.graph.security
 
 Get a list of [passiveDnsRecord](../resources/security-passivednsrecord.md) resources associated with a [host](../resources/security-host.md).
 
-This is a forward DNS lookup which queries the IP address of the specified host using its hostname. 
+This method is a forward DNS lookup that queries the IP address of the specified host using its hostname. 
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
-Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For more information about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "security_host_list_passivedns" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-host-list-passivedns-permissions.md)]
@@ -33,13 +34,41 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/threatIntelligence/hosts/{hostId}/passiveDns
 ```
 
 ## Optional query parameters
 
-This method supports some of the OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$count`, `$select`, `$filter`, `$orderBy`, `$top`, and `$skip` OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+
+| Name     | Description                                                                                                                                                                                                                    |
+| :------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $count   | `$count` is supported to return a holistic count of the number of [passiveDnsRecord](../resources/security-passivednsrecord.md) objects. `$count` is supported as a query parameter (`?$count=true`) or as a path parameter (`/$count`). |
+| $orderby | `$orderby` supports some properties of the **passiveDns** resource. For more information, see [Supported properties with $orderby](#supported-properties-with-orderby).                                                                |
+| $filter  | `$filter` is **required** in the request URL of this API. The API currently only supports filtering by one field in a call. For more information, see [Supported properties with $filter](#supported-properties-with-filter).           |
+| $select  | `$select` is supported to limit the properties returned in this query.                                                                                                                                                         |
+| $skip    | `$skip` is supported to skip over elements in pages. Combine with `$top` to perform pagination or use the `@odata.nextLink` for server-side pagination.                                                                        |
+| $top     | `$top` is supported to limit the number of elements per page. Combine with `$skip` to perform pagination or use the `@odata.nextLink` for server-side pagination.                                                              |
+
+
+### Supported properties with $filter
+
+The following properties can be used for `$filter` calls:
+
+| Property    | Example                                   
+| :---------- | :----------------------------------------- |
+| recordType       | `$filter=recordType eq 'A'`          |
+
+
+### Supported properties with $orderby
+
+The following properties can be used for `$orderby` calls.
+
+| Property             | Example                              
+| :------------------- | :-----------------------------------  |
+| firstSeenDateTime   | `$orderby=firstSeenDateTime desc`   |
+| lastSeenDateTime | `$orderby=lastSeenDateTime desc` |   
 
 ## Request headers
 
@@ -67,16 +96,12 @@ The following example shows a request.
   "sampleKeys": ["contoso.com"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/security/threatIntelligence/hosts/contoso.com/passiveDns
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-passivedns-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-passivedns-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

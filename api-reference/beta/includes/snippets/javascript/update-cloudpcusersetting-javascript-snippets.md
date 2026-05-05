@@ -19,6 +19,17 @@ const cloudPcUserSetting = {
     frequencyType: 'sixteenHours',
     userRestoreEnabled: true
   },
+  crossRegionDisasterRecoverySetting: {
+    crossRegionDisasterRecoveryEnabled: false,
+    maintainCrossRegionRestorePointEnabled: true,
+    disasterRecoveryNetworkSetting: {
+      regionName: 'westus',
+      regionGroup: 'usEast'
+    },
+    disasterRecoveryType: 'premium',
+    userInitiatedDisasterRecoveryAllowed: true
+  },
+  provisioningSourceType: 'image',
   localAdminEnabled: false,
   resetEnabled: true
 };

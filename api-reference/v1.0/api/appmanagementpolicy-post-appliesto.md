@@ -2,9 +2,10 @@
 title: "Assign appliesTo"
 description: "Assign an appManagementPolicy to an application or service principal object."
 ms.localizationpriority: medium
-author: "madansr7"
+author: "aricrowe57"
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 07/30/2024
 ---
 
 # Assign appliesTo
@@ -17,14 +18,10 @@ Assign an [appManagementPolicy](../resources/appManagementPolicy.md) policy obje
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-| Permission type                        | Permissions (from least to most privileged)                        |
-| :------------------------------------- | :----------------------------------------------------------------- |
-| Delegated (work or school account)     | Application.Read.All and Policy.ReadWrite.ApplicationConfiguration |
-| Delegated (personal Microsoft account) | Not supported.                                                     |
-| Application                            | Application.Read.All and Policy.ReadWrite.ApplicationConfiguration |
+[!INCLUDE [permissions-table](../includes/permissions/appmanagementpolicy-post-appliesto-permissions.md)]
 
 [!INCLUDE [rbac-app-auth-method-custom-policy-api-update](../includes/rbac-for-apis/rbac-app-auth-method-custom-policy-api-update.md)]
 
@@ -79,10 +76,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/assign-appliesto-ex1-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/assign-appliesto-ex1-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/assign-appliesto-ex1-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -134,7 +127,7 @@ The following example shows a request to assign an appManagementPolicy to a serv
   "name": "assign_appliesTo_ex2"
 }-->
 
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/servicePrincipals/{id}/appManagementPolicies/$ref
 
 {
@@ -143,10 +136,6 @@ POST https://graph.microsoft.com/v1.0/servicePrincipals/{id}/appManagementPolici
 ```
 
 # [C#](#tab/csharp)
-[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

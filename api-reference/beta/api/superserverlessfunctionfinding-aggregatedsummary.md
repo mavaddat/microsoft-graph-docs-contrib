@@ -4,14 +4,17 @@ description: "View the raw count of super serverless functions in the specified 
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 06/26/2024
 ---
 
 # superServerlessFunctionFinding: aggregatedSummary
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 View the raw count of super serverless functions in the specified AWS, Azure, or GCP authorization systems in your multicloud environment.
 
@@ -28,7 +31,7 @@ For an AWS authorization system:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.superServerlessFunctionFinding/aggregatedSummary(authorizationSystemIds=['awsAuthSystemId'])
 ```
 
@@ -37,7 +40,7 @@ For an Azure authorization system:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/azure/findings/microsoft.graph.superServerlessFunctionFinding/aggregatedSummary(authorizationSystemIds=['azureAuthSystemId'])
 ```
 
@@ -46,13 +49,12 @@ For a GCP authorization system:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.superServerlessFunctionFinding/aggregatedSummary(authorizationSystemIds=['gcpAuthSystemId'])
 ```
 
 ## Function parameters
 In the request URL, provide the following query parameters with values.
-The following table lists the parameters that are required when you call this function.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
@@ -81,7 +83,7 @@ The following example shows a request.
   "name": "superserverlessfunctionfindingthis.aggregatedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.superServerlessFunctionFinding/aggregatedSummary(authorizationSystemIds=['377596131774'])
 ```
 
@@ -100,7 +102,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.permissionsAnalyticsAggregatedIdentitySummary"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -110,3 +112,4 @@ Content-Type: application/json
     "findingsCount": 0
 }
 ```
+

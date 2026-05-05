@@ -5,6 +5,7 @@ author: "RuiHou105"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: resourcePageType
+ms.date: 08/19/2024
 ---
 
 # virtualEndpoint resource type
@@ -49,6 +50,7 @@ Inherits from [entity](../resources/entity.md).
 |galleryImages|[cloudPcGalleryImage](../resources/cloudpcgalleryimage.md) collection|A collection of gallery image resources on Cloud PC.|
 |onPremisesConnections|[cloudPcOnPremisesConnection](../resources/cloudpconpremisesconnection.md) collection|A defined collection of Azure resource information that can be used to establish Azure network connections for Cloud PCs.|
 |provisioningPolicies|[cloudPcProvisioningPolicy](../resources/cloudpcprovisioningpolicy.md) collection|A collection of Cloud PC provisioning policies.|
+|report|[cloudPcReport](../resources/cloudpcreport.md)|Cloud PC-related reports. Read-only.|
 |userSettings|[cloudPcUserSetting](../resources/cloudpcusersetting.md) collection|A collection of Cloud PC user settings. |
 
 ## JSON representation

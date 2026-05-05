@@ -5,6 +5,15 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicyApprovalRule;
+use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicyRuleTarget;
+use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicyRuleTargetOperations;
+use Microsoft\Graph\Generated\Models\ApprovalSettings;
+use Microsoft\Graph\Generated\Models\UnifiedApprovalStage;
+use Microsoft\Graph\Generated\Models\SubjectSet;
+use Microsoft\Graph\Generated\Models\SingleUser;
+use Microsoft\Graph\Generated\Models\GroupMembers;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
@@ -27,7 +36,6 @@ $setting->setIsApprovalRequiredForExtension(false);
 $setting->setIsRequestorJustificationRequired(true);
 $setting->setApprovalMode('SingleStage');
 $approvalStagesUnifiedApprovalStage1 = new UnifiedApprovalStage();
-$approvalStagesUnifiedApprovalStage1->setOdataType('microsoft.graph.unifiedApprovalStage');
 $approvalStagesUnifiedApprovalStage1->setApprovalStageTimeOutInDays(1);
 $approvalStagesUnifiedApprovalStage1->setIsApproverJustificationRequired(true);
 $approvalStagesUnifiedApprovalStage1->setEscalationTimeInMinutes(0);

@@ -5,6 +5,7 @@ author: "soneff"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/16/2024
 ---
 
 # Create authenticationEventListener
@@ -21,7 +22,15 @@ Create a new [authenticationEventListener](../resources/authenticationeventliste
 - [onUserCreateStartListener resource type](../resources/onusercreatestartlistener.md)
 - [onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)
 - [onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)
+- [onPhoneMethodLoadStartListener](../resources/onphonemethodloadstartlistener.md)
+- [onEmailOtpSendListener](../resources/onemailotpsendlistener.md)
+- [onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md)
+- [onFraudProtectionLoadStartListener](../resources/onfraudprotectionloadstartlistener.md) resource type
+- [onVerifiedIdClaimValidationListener](../resources/onverifiedidclaimvalidationlistener.md) resource type
 
+> [!NOTE]
+>
+> You can have a maximum of 250 event listeners.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -31,13 +40,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "identitycontainer_post_authenticationeventlisteners" } -->
 [!INCLUDE [permissions-table](../includes/permissions/identitycontainer-post-authenticationeventlisteners-permissions.md)]
 
+[!INCLUDE [rbac-custom-auth-ext-apis-write](../includes/rbac-for-apis/rbac-custom-auth-ext-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /identity/authenticationEventListeners
 ```
 
@@ -56,6 +67,7 @@ You can specify the following properties when creating an **authenticationEventL
 |:---|:---|:---|
 |authenticationEventsFlowId|String|The identifier of the authentication events flow. Optional.|
 |conditions|[authenticationConditions](../resources/authenticationconditions.md)|The conditions on which this authenticationEventListener should trigger. Optional.|
+|displayName|String|The display name of the authentication event listener policy. Optional.|
 |handler|[onAttributeCollectionHandler](../resources/ontokenissuancestarthandler.md)|The handler to invoke when conditions are met. Can be set for the **onAttributeCollectionListener** listener type.|
 |handler|[onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)|The handler to invoke when conditions are met. Can be set for the **onAttributeCollectionStartListener** listener type.|
 |handler|[onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)|The handler to invoke when conditions are met. Can be set for the **onAttributeCollectionSubmitListener** listener type.|
@@ -63,7 +75,12 @@ You can specify the following properties when creating an **authenticationEventL
 |handler|[onInteractiveAuthFlowStartHandler](../resources/ontokenissuancestarthandler.md)|The handler to invoke when conditions are met. Can be set for the **onInteractiveAuthFlowStartListener** listener type.|
 |handler|[onTokenIssuanceStartHandler](../resources/ontokenissuancestarthandler.md)|The handler to invoke when conditions are met. Can be set for the **onTokenIssuanceStartListener** listener type.|
 |handler|[onUserCreateStartHandler](../resources/ontokenissuancestarthandler.md)|The handler to invoke when conditions are met. Can be set for the **onUserCreateStartListener** listener type.|
+|handler|[onPhoneMethodLoadStartHandler](../resources/onphonemethodloadstarthandler.md) | The handler to invoke when conditions are met. Can be set for the **onPhoneMethodLoadStartListener** listener type. |
+|handler|[onPasswordSubmitHandler](../resources/onpasswordsubmithandler.md) | The handler to invoke when conditions are met. Can be set for the **onPasswordSubmitListener** listener type. |
+|handler|[onFraudProtectionLoadStartHandler](../resources/onFraudProtectionLoadStartHandler.md) | The handler to invoke when conditions are met. Can be updated for the **onFraudProtectionLoadStartListener** type. |
+|handler|[onVerifiedIdClaimValidationCustomExtensionHandler](../resources/onverifiedidclaimvalidationcustomextensionhandler.md) | The handler to invoke when conditions are met. Can be set for the **onVerifiedIdClaimValidationListener** listener type. |
 |priority|Int32| The priority of this handler. Between 0 (lower priority) and 1000 (higher priority). Required.|
+
 
 ## Response
 
@@ -82,7 +99,7 @@ The following example shows a request.
   "name": "create_authenticationeventlistener_onTokenIssuanceStartListener"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
 Content-Type: application/json
 Content-length: 312
@@ -94,7 +111,7 @@ Content-length: 312
             "includeAllApplications": false,
             "includeApplications": [
                 {
-                    "appId": "a13d0fc1-04ab-4ede-b215-63de0174cbb4"
+                    "appId": "0001111-aaaa-2222-bbbb-3333cccc4444"
                 }
             ]
         }
@@ -111,10 +128,6 @@ Content-length: 312
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-ontokenissuancestartlistener-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-authenticationeventlistener-ontokenissuancestartlistener-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -152,7 +165,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationEventListener"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -167,7 +180,7 @@ Content-Type: application/json
             "includeAllApplications": false,
             "includeApplications": [
                 {
-                    "appId": "a13d0fc1-04ab-4ede-b215-63de0174cbb4"
+                    "appId": "0001111-aaaa-2222-bbbb-3333cccc4444"
                 }
             ]
         }
@@ -193,7 +206,7 @@ The following example shows a request.
   "name": "create_authenticationeventlistener_onAttributeCollectionStartListener"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
 Content-Type: application/json
 
@@ -205,7 +218,7 @@ Content-Type: application/json
             "includeAllApplications": false,
             "includeApplications": [
                 {
-                    "appId": "a7eed01f-a333-4983-bc6b-d359ec9e5eef"
+                    "appId": "0001111-aaaa-2222-bbbb-3333cccc4444"
                 }
             ]
         }
@@ -221,10 +234,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-onattributecollectionstartlistener-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-authenticationeventlistener-onattributecollectionstartlistener-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -263,7 +272,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationEventListener"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -296,7 +305,7 @@ The following example shows a request.
   "name": "create_authenticationeventlistener_onAttributeCollectionSubmitListener"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
 Content-Type: application/json
 
@@ -308,7 +317,7 @@ Content-Type: application/json
             "includeAllApplications": false,
             "includeApplications": [
                 {
-                    "appId": "a7eed01f-a333-4983-bc6b-d359ec9e5eef"
+                    "appId": "0001111-aaaa-2222-bbbb-3333cccc4444"
                 }
             ]
         }
@@ -324,10 +333,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-onattributecollectionsubmitlistener-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-authenticationeventlistener-onattributecollectionsubmitlistener-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -366,7 +371,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationEventListener"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -384,6 +389,557 @@ Content-Type: application/json
     "handler": {
         "@odata.type": "#microsoft.graph.onAttributeCollectionSubmitCustomExtensionHandler",
         "configuration": null
+    }
+}
+```
+
+### Example 3: Activate telecom for select regions
+
+#### Request
+The following example shows a request that activates telecom in region codes 222 and 998.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_authenticationeventlistener_onPhoneMethodLoadStartExternalUsersAuthHandler_activate"
+}
+-->
+```http
+POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
+Content-Type: application/json
+
+{  
+    "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartListener",  
+    "conditions": {  
+        "applications": {  
+            "includeApplications": [  
+                "3dfff01b-0afb-4a07-967f-d1ccbd81102a"  
+            ]  
+        }  
+    },  
+    "priority": 500,  
+    "handler": {  
+        "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartExternalUsersAuthHandler", 
+        "smsOptions": { 
+            "includeAdditionalRegions": [222, 998], 
+            "excludeRegions": [] 
+        }
+    }
+} 
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-activate-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-activate-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-activate-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-activate-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-activate-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-activate-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-activate-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.authenticationEventListener"
+}
+-->
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{ 
+    "@odata.context": "https://microsoft.graph.microsoft.com/beta/$metadata#identity/authenticationEventListeners/$entity", 
+    "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartListener", 
+    "id": "2be3336b-e3b4-44f3-9128-b6fd9ad39bb8", 
+    "conditions": {  
+        "applications": { 
+            "includeApplications": [  
+                "3dfff01b-0afb-4a07-967f-d1ccbd81102a"  
+            ] 
+        }   
+    },   
+    "handler": {   
+        "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartExternalUsersAuthHandler ",  
+        "smsOptions": { 
+            "includeAdditionalRegions": [222, 998], 
+            "excludeRegions": [] 
+        }, 
+    }
+} 
+```
+
+
+### Example 4: Deactivate telecom in select regions
+
+#### Request
+The following example shows a request that deactivates telecom in region codes 1001, 99, and 777.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_authenticationeventlistener_onPhoneMethodLoadStartExternalUsersAuthHandler_deactivate"
+}
+-->
+```http
+POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
+Content-Type: application/json
+  
+{  
+    "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartListener",  
+    "conditions": {  
+        "applications": {  
+            "includeApplications": [  
+                "3dfff01b-0afb-4a07-967f-d1ccbd81102a"  
+            ]  
+        }  
+    },  
+    "priority": 500,  
+    "handler": {  
+        "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartExternalUsersAuthHandler",
+        "smsOptions": { 
+            "includeAdditionalRegions": [], 
+            "excludeRegions": [1001, 99, 777] 
+        }
+    } 
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-deactivate-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-deactivate-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-deactivate-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-deactivate-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-deactivate-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-deactivate-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-authenticationeventlistener-onphonemethodloadstartexternalusersauthhandler-deactivate-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.authenticationEventListener"
+}
+-->
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{ 
+    "@odata.context": "https://microsoft.graph.microsoft.com/beta/$metadata#identity/authenticationEventListeners/$entity", 
+    "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartListener", 
+    "id": "2be3336b-e3b4-44f3-9128-b6fd9ad39bb8", 
+    "conditions": {  
+        "applications": { 
+            "includeApplications": [  
+                "3dfff01b-0afb-4a07-967f-d1ccbd81102a"  
+            ] 
+        }   
+    },   
+    "handler": {  
+        "@odata.type": "#microsoft.graph.onPhoneMethodLoadStartExternalUsersAuthHandler",
+        "smsOptions": { 
+            "includeAdditionalRegions": [], 
+            "excludeRegions": [1001, 99, 777] 
+        }
+    }
+}
+```
+
+### Example 5: Enable Fraud Protection during sign-up with Arkose Labs 
+
+#### Request
+The following example shows a request that enables fraud protection during sign-up using Arkose Labs.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_authenticationeventlistener_onFraudProtectionLoadStartListener_Arkose"
+}
+-->
+```http
+POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
+Content-Type: application/json
+
+{   
+  "@odata.type": "#microsoft.graph.onFraudProtectionLoadStartListener", 
+  "conditions": { 
+    "applications": { 
+      "includeApplications": [ 
+        { 
+          "appId": "0001111-aaaa-2222-bbbb-3333cccc4444" 
+        } 
+      ] 
+    } 
+  }, 
+  "handler": { 
+    "@odata.type": 
+"#microsoft.graph.onFraudProtectionLoadStartExternalUsersAuthHandler", 
+    "signUp": { 
+      "@odata.type": "#microsoft.graph.fraudProtectionProviderConfiguration", 
+      "fraudProtectionProvider": { 
+        "@odata.type": "#microsoft.graph.arkoseFraudProtectionProvider", 
+        "id": "6fedd01b-0afb-4a07-967f-d1ccbd81102b" 
+      } 
+    } 
+  } 
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-onfraudprotectionloadstartlistener-arkose-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventlistener-onfraudprotectionloadstartlistener-arkose-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-authenticationeventlistener-onfraudprotectionloadstartlistener-arkose-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-authenticationeventlistener-onfraudprotectionloadstartlistener-arkose-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-authenticationeventlistener-onfraudprotectionloadstartlistener-arkose-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-authenticationeventlistener-onfraudprotectionloadstartlistener-arkose-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-authenticationeventlistener-onfraudprotectionloadstartlistener-arkose-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.authenticationEventListener"
+}
+-->
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/authenticationEventListeners/$entity",
+  "@odata.type": "#microsoft.graph.onFraudProtectionLoadStartListener",
+  "id": "49eb23d9-998b-47df-a462-aa12a20ae5fb",
+  "conditions": {
+    "applications": {
+      "includeApplications": [
+        {
+          "appId": "0001111-aaaa-2222-bbbb-3333cccc4444"
+        }
+      ]
+    }
+  },
+  "handler": {
+    "@odata.type": "#microsoft.graph.onFraudProtectionLoadStartExternalUsersAuthHandler",
+    "signUp": {
+      "fraudProtectionProvider": {
+        "@odata.type": "#microsoft.graph.arkoseFraudProtectionProvider",
+        "id": "fabe5100-cc02-46c1-bd0e-ce885fe367fd"
+      }
+    }
+  }
+}
+```
+
+### Example 6: Enable Fraud Protection during sign-up with HUMAN Security 
+
+#### Request
+The following example shows a request that enables fraud protection during sign-up using HUMAN Security.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_authenticationeventlistener_onFraudProtectionLoadStartListener_HUMANSecurity"
+}
+-->
+```http
+POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
+Content-Type: application/json
+
+{   
+  "@odata.type": "#microsoft.graph.onFraudProtectionLoadStartListener", 
+  "conditions": { 
+    "applications": { 
+      "includeApplications": [ 
+        { 
+          "appId": "0001111-aaaa-2222-bbbb-3333cccc4444" 
+        } 
+      ] 
+    } 
+  }, 
+  "handler": { 
+    "@odata.type": 
+"#microsoft.graph.onFraudProtectionLoadStartExternalUsersAuthHandler", 
+    "signUp": { 
+      "@odata.type": "#microsoft.graph.fraudProtectionProviderConfiguration", 
+      "fraudProtectionProvider": { 
+        "@odata.type": "#microsoft.graph.humanSecurityFraudProtectionProvider", 
+        "id": "fabe5100-cc02-46c1-bd0e-ce885fe367fd" 
+      } 
+    } 
+  } 
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-onfraudprotectionloadstartlistener-humansecurity-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventlistener-onfraudprotectionloadstartlistener-humansecurity-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-authenticationeventlistener-onfraudprotectionloadstartlistener-humansecurity-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-authenticationeventlistener-onfraudprotectionloadstartlistener-humansecurity-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-authenticationeventlistener-onfraudprotectionloadstartlistener-humansecurity-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-authenticationeventlistener-onfraudprotectionloadstartlistener-humansecurity-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-authenticationeventlistener-onfraudprotectionloadstartlistener-humansecurity-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.authenticationEventListener"
+}
+-->
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/authenticationEventListeners/$entity",
+  "@odata.type": "#microsoft.graph.onFraudProtectionLoadStartListener",
+  "id": "49eb23d9-998b-47df-a462-aa12a20ae5fb",
+  "conditions": {
+    "applications": {
+      "includeApplications": [
+        {
+          "appId": "0001111-aaaa-2222-bbbb-3333cccc4444"
+        }
+      ]
+    }
+  },
+  "handler": {
+    "@odata.type": "#microsoft.graph.onFraudProtectionLoadStartExternalUsersAuthHandler",
+    "signUp": {
+      "isContinueOnProviderErrorEnabled": false,
+      "fraudProtectionProvider": {
+        "@odata.type": "#microsoft.graph.humanSecurityFraudProtectionProvider",
+        "id": "fabe5100-cc02-46c1-bd0e-ce885fe367fd"
+      }
+    }
+  }
+}
+```
+
+### Example 7: Create an onVerifiedIdClaimValidationListener object
+
+#### Request
+The following example shows a request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_authenticationeventlistener_onVerifiedIdClaimValidationListener"
+}
+-->
+```http
+POST https://graph.microsoft.com/beta/identity/authenticationEventListeners
+Content-Type: application/json
+
+{
+    "@odata.type": "#microsoft.graph.onVerifiedIdClaimValidationListener",
+    "displayName": "Verified ID Claim Validation Listener",
+    "priority": 500,
+    "conditions": {
+        "applications": {
+            "includeAllApplications": false,
+            "includeApplications": [
+                {
+                    "appId": "63856651-13d9-4784-9abf-20758d509e19"
+                }
+            ]
+        }
+    },
+    "authenticationEventsFlowId": "5a8e8f57-82b2-4cbf-b145-3e6e0c154897",
+    "handler": {
+        "@odata.type": "#microsoft.graph.onVerifiedIdClaimValidationCustomExtensionHandler",
+        "configuration": {
+            "@odata.type": "#microsoft.graph.customExtensionOverwriteConfiguration",
+            "clientConfiguration": {
+                "@odata.type": "#microsoft.graph.customExtensionClientConfiguration",
+                "maximumRetries": 1,
+                "timeoutInMilliseconds": 2000
+            },
+            "behaviorOnError": {
+                "@odata.type": "#microsoft.graph.customExtensionBehaviorOnError"
+            }
+        },
+        "customExtension": {
+            "id": "6a0a3429-be77-0aed-951e-1c8aed62bf8a"
+        }
+    }
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventlistener-onverifiedidclaimvalidationlistener-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventlistener-onverifiedidclaimvalidationlistener-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-authenticationeventlistener-onverifiedidclaimvalidationlistener-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-authenticationeventlistener-onverifiedidclaimvalidationlistener-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-authenticationeventlistener-onverifiedidclaimvalidationlistener-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-authenticationeventlistener-onverifiedidclaimvalidationlistener-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-authenticationeventlistener-onverifiedidclaimvalidationlistener-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.authenticationEventListener"
+}
+-->
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/authenticationEventListeners/$entity",
+    "@odata.type": "#microsoft.graph.onVerifiedIdClaimValidationListener",
+    "id": "6a7455ef-0906-bbc3-f902-0f9ab8903082",
+    "displayName": "Verified ID Claim Validation Listener",
+    "priority": 500,
+    "conditions": {
+        "applications": {
+            "includeAllApplications": false,
+            "includeApplications": [
+                {
+                    "appId": "63856651-13d9-4784-9abf-20758d509e19"
+                }
+            ]
+        }
+    },
+    "authenticationEventsFlowId": "5a8e8f57-82b2-4cbf-b145-3e6e0c154897",
+    "handler": {
+        "@odata.type": "#microsoft.graph.onVerifiedIdClaimValidationCustomExtensionHandler",
+        "configuration": {
+            "@odata.type": "#microsoft.graph.customExtensionOverwriteConfiguration",
+            "clientConfiguration": {
+                "@odata.type": "#microsoft.graph.customExtensionClientConfiguration",
+                "maximumRetries": 1,
+                "timeoutInMilliseconds": 2000
+            },
+            "behaviorOnError": {
+                "@odata.type": "#microsoft.graph.customExtensionBehaviorOnError"
+            }
+        },
+        "customExtension": {
+            "id": "6a0a3429-be77-0aed-951e-1c8aed62bf8a"
+        }
     }
 }
 ```

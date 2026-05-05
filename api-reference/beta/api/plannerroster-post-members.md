@@ -5,6 +5,7 @@ author: "tarkansevilmis"
 ms.localizationpriority: medium
 ms.subservice: "planner"
 doc_type: apiPageType
+ms.date: 06/05/2024
 ---
 
 # Create plannerRosterMember
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /planner/rosters/{plannerRosterId}/members
 ```
 
@@ -49,13 +50,15 @@ The following table lists the properties that are required when you create the [
 
 |Property|Type|Description|
 |:---|:---|:---|
-|roles|String collection|Additional roles assigned to the user. Optional. Currently, no additional roles are available for users.|
-|tenantId|String|Identifier of the tenant the user belongs to. Optional. Currently, roster members cannot be from different tenants.|
+|roles|String collection|Other roles assigned to the user. Optional. Currently, no other roles are available for users.|
+|tenantId|String|Identifier of the tenant the user belongs to. Optional. Currently, roster members can't be from different tenants.|
 |userId|String|Identifier of the user.|
 
 ## Response
 
 If successful, this method returns a `201 Created` response code and a [plannerRosterMember](../resources/plannerrostermember.md) object in the response body.
+
+This method returns a `403 Forbidden` response code if the sensitivity label on the roster disallows the addition of guests and the request adds guests to the **plannerRoster**. The request fails, and the **code** property in the error resource type has the value `addingGuestUsersProhibitedByLabel`.
 
 ## Examples
 
@@ -69,7 +72,7 @@ The following example shows a request.
   "name": "create_plannerrostermember_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/planner/rosters/6519868f-868f-6519-8f86-19658f861965/members
 Content-Type: application/json
 
@@ -81,10 +84,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-plannerrostermember-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-plannerrostermember-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -122,7 +121,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.plannerRosterMember"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -134,3 +133,4 @@ Content-Type: application/json
   ]
 }
 ```
+

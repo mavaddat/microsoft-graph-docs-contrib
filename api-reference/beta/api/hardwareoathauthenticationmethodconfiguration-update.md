@@ -6,6 +6,7 @@ ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Update hardwareOathAuthenticationMethodConfiguration
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/hardwareOath
 ```
 
@@ -47,7 +48,7 @@ PATCH /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/h
 |Property|Type|Description|
 |:---|:---|:---|
 |excludeTargets|[excludeTarget](../resources/excludetarget.md) collection|Groups of users that are excluded from the policy.|
-|state|authenticationMethodState|Possible values are: `enabled`, `disabled`.|
+|state|authenticationMethodState|The possible values are: `enabled`, `disabled`.|
 |includeTargets|[authenticationMethodTarget](../resources/authenticationmethodtarget.md) collection|A collection of groups that are enabled to use the authentication method.|
 
 
@@ -67,7 +68,7 @@ The following example shows a request.
   "name": "update_hardwareoathauthenticationmethodconfiguration"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/hardwareOath
 Content-Type: application/json
 
@@ -79,10 +80,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-hardwareoathauthenticationmethodconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-hardwareoathauthenticationmethodconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -118,6 +115,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

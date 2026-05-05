@@ -3,6 +3,8 @@ title: "Integrate your iOS app with the client-side SDK (deprecated)"
 description: "After you register your app and onboard your cross-device experiences, integrate your client app with the client-side SDK for iOS apps (deprecated)."
 ms.localizationpriority: high
 ms.subservice: "notifications"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Integrate your iOS app with the client-side SDK for user notifications (deprecated)
@@ -190,7 +192,7 @@ MCDConnectedDevicesNotification* notification = [MCDConnectedDevicesNotification
 if (notification != nil) {
     [_platformManager.platform processNotificationAsync:notification
             completion:^(NSError* error __unused) {
-        // NOTE: it may be useful to attach completion to this async in order to know when the
+        // NOTE: it might be useful to attach completion to this async in order to know when the
         // notification is done being processed.
         // This would be a good time to stop a background service or otherwise cleanup.
     }];

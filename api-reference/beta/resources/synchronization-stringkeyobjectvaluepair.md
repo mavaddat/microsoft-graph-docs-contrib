@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 author: "ArvindHarinder1"
 ms.subservice: "entra-applications"
+ms.date: 07/22/2024
 ---
 
 # stringKeyObjectValuePair resource type
@@ -13,16 +14,19 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a key. This resource is an open type that allows other properties to be passed in.
+Represents a key. This resource is an open type that allows additional properties beyond those documented here.
 
 ## Properties
 | Property | Type   | Description |
 |:---------|:-------|:------------|
 | key      | String | Key.        |
 
+## Relationships
+None.
+
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

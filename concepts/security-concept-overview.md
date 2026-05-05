@@ -5,6 +5,8 @@ author: "preetikr"
 ms.localizationpriority: high
 ms.subservice: "security"
 ms.custom: scenarios:getting-started
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Microsoft Graph security API overview

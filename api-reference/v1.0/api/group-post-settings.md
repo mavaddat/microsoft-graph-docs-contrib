@@ -6,13 +6,14 @@ author: "yuhko-msft"
 ms.reviewer: "mbhargav, khotzteam, aadgroupssg"
 ms.subservice: "entra-groups"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Create settings
 
 Namespace: microsoft.graph
 
-Create a new setting based on the templates available in [groupSettingTemplates](../resources/groupsettingtemplate.md). These settings can be at the tenant-level or at the group level.
+Create a new [group setting](../resources/groupsetting.md) based on the templates available in [groupSettingTemplates](../resources/groupsettingtemplate.md). These settings can be at the tenant-level or at the group level.
 
 Group settings apply to only Microsoft 365 groups. The template named `Group.Unified` can be used to configure tenant-wide Microsoft 365 group settings, while the template named `Group.Unified.Guest` can be used to configure group-specific settings.
 
@@ -22,10 +23,15 @@ Group settings apply to only Microsoft 365 groups. The template named `Group.Uni
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
+### Create tenant-wide settings
 <!-- { "blockType": "permissions", "name": "group_post_settings" } -->
 [!INCLUDE [permissions-table](../includes/permissions/group-post-settings-permissions.md)]
 
 [!INCLUDE [rbac-group-directorysettings-all](../includes/rbac-for-apis/rbac-group-directorysettings-all.md)]
+
+### Create group-specific settings
+<!-- { "blockType": "permissions", "name": "group_post_settings_2" } -->
+[!INCLUDE [permissions-table](../includes/permissions/group-post-settings-2-permissions.md)]
 
 ## HTTP request
 
@@ -67,9 +73,11 @@ The following properties are required when creating the [groupSetting](../resour
 
 If successful, this method returns `201 Created` response code and [groupSetting](../resources/groupsetting.md) object in the response body.
 
-## Example 1: Create a new setting for all Microsoft 365 groups in the tenant
+## Examples
 
-### Request
+### Example 1: Create a new setting for all Microsoft 365 groups in the tenant
+
+#### Request
 
 Only the [groupSettingTemplates](../resources/groupsettingtemplate.md) object named `Group.Unified` can be applied to all Microsoft 365 groups at the tenant-level.
 
@@ -111,10 +119,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-groupsetting-from-groupsettings-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-groupsetting-from-groupsettings-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-groupsetting-from-groupsettings-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -141,7 +145,7 @@ Content-type: application/json
 
 ---
 
-### Response
+#### Response
 
 > **Note:** The response object shown here might be shortened for readability.
 
@@ -183,9 +187,9 @@ Content-type: application/json
 
 The **displayName** property and other name-value pairs will be populated with the default values from the [groupSettingTemplates](../resources/groupsettingtemplate.md) object that matches the **templateId**.
 
-## Example 2: Create a setting to block guests for a specific Microsoft 365 group
+### Example 2: Create a setting to block guests for a specific Microsoft 365 group
 
-### Request
+#### Request
 
 Only the [groupSettingTemplates](../resources/groupsettingtemplate.md) object named `Group.Unified.Guest` can be applied to specific Microsoft 365 groups.
 
@@ -213,10 +217,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-groupsetting-from-groupsettings-for-guests-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-groupsetting-from-groupsettings-for-guests-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -247,7 +247,7 @@ Content-type: application/json
 
 In the request body, supply a JSON representation of [groupSetting](../resources/groupsetting.md) object.
 
-### Response
+#### Response
 
 > **Note:** The response object shown here might be shortened for readability.
 

@@ -1,10 +1,11 @@
 ---
 title: "chat: getAllRetainedMessages"
-description: "Get retained messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats."
+description: "Get all retained messages from all chats that a user is a participant in, including one-on-one chats, group chats, and meeting chats."
 author: "AgnesLiu"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 09/26/2024
 ---
 
 # chat: getAllRetainedMessages
@@ -13,9 +14,13 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get all retained messages from all [chats](../resources/chatmessage.md) that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
+Get all retained [messages](../resources/chatmessage.md) from all [chats](../resources/chat.md) that a user is a participant in, including one-on-one chats, group chats, and meeting chats.
 
-[!INCLUDE [teams-metered-apis](../../includes/teams-metered-apis.md)]
+To learn more about how to use the Microsoft Teams export APIs to export content, see [Export content with the Microsoft Teams export APIs](/microsoftteams/export-teams-content).
+
+
+> [!NOTE]  
+> This API requires [Teams retention policies](/purview/create-retention-policies?tabs=teams-retention) to be configured. For more information, see [Learn about retention for Microsoft Teams](/purview/retention-policies-teams).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -38,13 +43,6 @@ GET /users/{id}/chats/getAllRetainedMessages
 
 ## Optional query parameters
 
-The following example shows how to use the `model` query parameter with values `A` or `B` to select the preferred [licensing and payment model](/graph/teams-licenses). If you don't specify a payment model, [evaluation mode](/graph/teams-licenses#evaluation-mode-default-requirements) is used by default.
-
-```http
-GET /users/{id}/chats/getAllRetainedMessages?model=A
-GET /users/{id}/chats/getAllRetainedMessages?model=B
-```
-
 This method supports the following OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 | Name    |Description|
@@ -57,6 +55,17 @@ The following example shows a request that uses the `$top` and `$filter` query p
 ```http
 GET /users/{id}/chats/getAllRetainedMessages?$top=50&$filter=lastModifiedDateTime gt 2020-06-04T18:03:11.591Z and lastModifiedDateTime lt 2020-06-05T21:00:09.413Z
 ```
+
+The following table lists examples that show how to use the `$filter` parameter.
+
+|Scenario                                  | `$filter` parameter                                                                       |Possible values                                                                                             |
+|:-----------------------------------------|:---------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
+|Get messages sent by user identity type   |$filter=from/user/userIdentityType eq '{teamworkUserIdentityType}'                      |`aadUser`, `onPremiseAadUser`, `anonymousGuest`, `federatedUser`, `personalMicrosoftAccountUser`, `skypeUser`, `phoneUser`|
+|Get messages sent by application type     |$filter=from/application/applicationIdentityType eq '{teamworkApplicationIdentity}'     |`aadApplication`, `bot`, `tenantBot`, `office365Connector`, `outgoingWebhook`                                         |
+|Get messages sent by user ID              |$filter=from/user/id eq '{oid}'                                                         ||
+|Get control (system event) messages       |$filter=messageType eq 'systemEventMessage'                                             ||
+|Exclude control (system event) messages   |$filter=messageType ne 'systemEventMessage'                                             ||
+
 ## Request headers
 
 |Name|Description|
@@ -89,10 +98,6 @@ GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/chatthisgetallretainedmessages-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/chatthisgetallretainedmessages-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

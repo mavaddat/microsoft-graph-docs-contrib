@@ -5,6 +5,7 @@ author: "mcm223"
 doc_type: conceptualPageType
 ms.subservice: cloud-communications
 ms.localizationpriority: high
+ms.date: 03/06/2024
 ---
 
 # Working with the call records API in Microsoft Graph
@@ -43,6 +44,6 @@ In the diagram above, the numbers denote how many children of each type can be p
 
 ## Related content
 
-- [Webhook subscriptions](/graph/api/resources/webhooks?view=graph-rest-beta&preserve-view=true)
+- [Set up notifications for changes in resource data](/graph/api/resources/change-notifications-api-overview)
 
 

@@ -5,6 +5,7 @@ author: nilakhan
 ms.localizationpriority: medium
 ms.subservice: universal-print
 doc_type: apiPageType
+ms.date: 03/06/2024
 ---
 
 # Get printSettings
@@ -25,7 +26,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /print/settings
 ```
 
@@ -53,7 +54,7 @@ If successful, this method returns a `200 OK` response code and a [printSettings
   "name": "get_printsettings"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/print/settings
 ```
 
@@ -71,7 +72,7 @@ GET https://graph.microsoft.com/v1.0/print/settings
   "@odata.type": "microsoft.graph.printSettings"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

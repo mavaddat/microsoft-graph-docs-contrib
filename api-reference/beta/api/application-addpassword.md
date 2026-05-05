@@ -2,9 +2,10 @@
 title: "application: addPassword"
 description: "Add a strong password to an application."
 ms.localizationpriority: medium
-author: "sureshja"
+author: "Jackson-Woods"
 ms.subservice: "entra-applications"
 doc_type: "apiPageType"
+ms.date: 04/16/2024
 ---
 
 # application: addPassword
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Adds a strong password to an [application](../resources/application.md).
+Adds a strong password to an [application](../resources/application.md). You can also [add passwords while creating the application](../api/application-post-applications.md#example-2-create-a-new-application-and-add-a-password-secret).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -23,6 +24,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "application_addpassword" } -->
 [!INCLUDE [permissions-table](../includes/permissions/application-addpassword-permissions.md)]
+
+[!INCLUDE [rbac-apps-serviceprincipal-creds-apis](../includes/rbac-for-apis/rbac-apps-serviceprincipal-creds-apis.md)]
 
 ## HTTP request
 
@@ -44,7 +47,7 @@ POST /applications(appId='{appId}')/addPassword
 
 In the request body, provide an optional `passwordCredential` object with the following properties.
 
-| Property	   | Type	|Description|
+| Property       | Type    |Description|
 |:---------------|:--------|:----------|
 | displayName | String | Friendly name for the password. Optional. |
 | endDateTime | DateTimeOffset | The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Optional. The default value is "startDateTime + 2 years". |
@@ -81,10 +84,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/application-addpassword-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/application-addpassword-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

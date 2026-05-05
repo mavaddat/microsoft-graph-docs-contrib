@@ -5,6 +5,7 @@ author: "markwahl-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/23/2024
 ---
 
 # entitlementManagement resource type
@@ -16,10 +17,6 @@ Namespace: microsoft.graph
 The entitlement management singleton is the container for entitlement management resources, including [accessPackageCatalog](accesspackagecatalog.md), [connectedOrganization](connectedorganization.md), and [entitlementManagementSettings](entitlementmanagementsettings.md).  For a full list of resources see [entitlement management overview](entitlementmanagement-overview.md).
 
 Inherits from [entity](entity.md).
-
-## Methods
-
-None.
 
 ## Properties
 
@@ -41,17 +38,20 @@ None.
 |accessPackages|[accessPackage](../resources/accesspackage.md) collection|Represents access package objects.|
 |assignmentRequests|[accessPackageAssignmentRequest](../resources/accesspackageassignmentrequest.md) collection|Represents access package assignment requests created by or on behalf of a user.|
 |connectedOrganizations|[connectedOrganization](../resources/connectedorganization.md) collection|Represents references to a directory or domain of another organization whose users can request access.|
+|controlConfigurations|[controlConfiguration](../resources/controlconfiguration.md) collection|Represents the policies that control lifecycle and access to access packages across the organization.|
+|externalOriginResourceConnectors|[externalOriginResourceConnector](../resources/externaloriginresourceconnector.md) collection|Represents the connectors used to communicate with external resource systems.|
 |settings|[entitlementManagementSettings](../resources/entitlementmanagementsettings.md)|Represents the settings that control the behavior of Microsoft Entra entitlement management.|
 |subjects|[accessPackageSubject](../resources/accesspackagesubject.md)|Represents the subjects within entitlement management.|
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
   "@odata.type": "microsoft.graph.entitlementManagement",
-  "openType": false
+  "openType": false,
+  "baseType": "microsoft.graph.entity"
 }
 -->
 ``` json

@@ -3,8 +3,9 @@ title: "languageProficiency resource type"
 description: "languageProficiency resource type"
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # languageProficiency resource type
@@ -21,17 +22,17 @@ Inherits from [itemFacet](itemFacet.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List languages](../api/profile-list-languages.md)|[languageProficiency](../resources/languageproficiency.md) collection|Get the languageProficiency resources from the languages navigation property.|
-|[Create languageProficiency](../api/profile-post-languages.md)|[languageProficiency](../resources/languageproficiency.md)|Create a new languageProficiency object.|
-|[Get languageProficiency](../api/languageproficiency-get.md)|[languageProficiency](../resources/languageproficiency.md)|Read the properties and relationships of a [languageProficiency](../resources/languageproficiency.md) object.|
-|[Update languageProficiency](../api/languageproficiency-update.md)|[languageProficiency](../resources/languageproficiency.md)|Update the properties of a [languageProficiency](../resources/languageproficiency.md) object.|
-|[Delete languageProficiency](../api/languageproficiency-delete.md)|None|Deletes a [languageProficiency](../resources/languageproficiency.md) object.|
+|[List](../api/profile-list-languages.md)|[languageProficiency](../resources/languageproficiency.md) collection|Get the languageProficiency resources from the languages navigation property.|
+|[Create](../api/profile-post-languages.md)|[languageProficiency](../resources/languageproficiency.md)|Create a new languageProficiency object.|
+|[Get](../api/languageproficiency-get.md)|[languageProficiency](../resources/languageproficiency.md)|Read the properties and relationships of a [languageProficiency](../resources/languageproficiency.md) object.|
+|[Update](../api/languageproficiency-update.md)|[languageProficiency](../resources/languageproficiency.md)|Update the properties of a [languageProficiency](../resources/languageproficiency.md) object.|
+|[Delete](../api/languageproficiency-delete.md)|None|Deletes a [languageProficiency](../resources/languageproficiency.md) object.|
 
 ## Properties
 
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |createdBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that created the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
 |createdDateTime|DateTimeOffset|Provides the dateTimeOffset for when the entity was created. Inherited from [itemFacet](../resources/itemfacet.md).|
 |displayName|String|Contains the long-form name for the language. |
@@ -39,17 +40,17 @@ Inherits from [itemFacet](itemFacet.md).
 |inference|[inferenceData](../resources/inferencedata.md)|Contains inference detail if the entity is inferred by the creating or modifying application. Inherited from [itemFacet](../resources/itemfacet.md).|
 |lastModifiedBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that last modified the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
 |lastModifiedDateTime|DateTimeOffset|Provides the dateTimeOffset for when the entity was created. Inherited from [itemFacet](../resources/itemfacet.md).|
-|reading|languageProficiencyLevel|Represents the users reading comprehension for the language represented by the object. Possible values are: `elementary`, `conversational`, `limitedWorking`, `professionalWorking`, `fullProfessional`, `nativeOrBilingual`, `unknownFutureValue`.|
+|reading|languageProficiencyLevel|Represents the users reading comprehension for the language represented by the object. The possible values are: `elementary`, `conversational`, `limitedWorking`, `professionalWorking`, `fullProfessional`, `nativeOrBilingual`, `unknownFutureValue`.|
 |source|[personDataSource](../resources/persondatasource.md)|Where the values originated if synced from another service. Inherited from [itemFacet](../resources/itemfacet.md).|
-|spoken|languageProficiencyLevel|Represents the users spoken proficiency for the language represented by the object. Possible values are: `elementary`, `conversational`, `limitedWorking`, `professionalWorking`, `fullProfessional`, `nativeOrBilingual`, `unknownFutureValue`.|
+|spoken|languageProficiencyLevel|Represents the users spoken proficiency for the language represented by the object. The possible values are: `elementary`, `conversational`, `limitedWorking`, `professionalWorking`, `fullProfessional`, `nativeOrBilingual`, `unknownFutureValue`.|
 |tag|String|Contains the four-character BCP47 name for the language (en-US, no-NB, en-AU).|
-|written|languageProficiencyLevel|Represents the users written proficiency for the language represented by the object. Possible values are: `elementary`, `conversational`, `limitedWorking`, `professionalWorking`, `fullProfessional`, `nativeOrBilingual`, `unknownFutureValue`.|
+|written|languageProficiencyLevel|Represents the users written proficiency for the language represented by the object. The possible values are: `elementary`, `conversational`, `limitedWorking`, `professionalWorking`, `fullProfessional`, `nativeOrBilingual`, `unknownFutureValue`.|
 
 ## Relationships
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

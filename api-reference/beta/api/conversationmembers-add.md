@@ -1,10 +1,11 @@
 ---
 title: "conversationMember: add"
 description: "Add members in bulk to a team."
-author: "nkramer"
+author: "MSFTRickyCastaneda"
 doc_type: "apiPageType"
 ms.localizationpriority: high
 ms.subservice: "teams"
+ms.date: 08/16/2024
 ---
 
 # conversationMember: add
@@ -14,6 +15,9 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Add multiple members in a single request to a [team](../resources/team.md). The response provides details about which memberships could and couldn't be created.
+
+> [!NOTE]
+> Sometimes it takes time to reflect the addition of a member after they're added. Users can use [change notifications](../resources/change-notifications-api-overview.md) to subscribe to notifications for membership changes in a particular team.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -95,10 +99,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/bulkaddmembers-team-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/bulkaddmembers-team-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/bulkaddmembers-team-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -130,6 +130,7 @@ Content-Type: application/json
 The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability.
+
 <!-- {
   "blockType": "response",
   "truncated": true,
@@ -160,10 +161,14 @@ Content-Type: application/json
 
 ### Example 2: Add members in bulk to a team using user principal name
 
+The following example shows how to add multiple members to a team using the user principal name of the members.
+
+> [!NOTE]
+> You can't use the user principal name (UPN) to add a guest user to a team.
+
 #### Request
 
-The following example shows a request to add multiple members to a team using user principal name of the members.
-
+The following example shows a request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -195,10 +200,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/bulkaddmembers-team-upn-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/bulkaddmembers-team-upn-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/bulkaddmembers-team-upn-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -227,7 +228,7 @@ Content-Type: application/json
 
 #### Response
 
-The following is the response.
+The following example shows the response.
 
 > **Note:** The response object shown here might be shortened for readability. 
 <!-- {

@@ -5,6 +5,7 @@ author: "AshleyYangSZ"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 08/19/2024
 ---
 
 # Get cloudPcProvisioningPolicy
@@ -77,10 +78,6 @@ GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/provisioni
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpcprovisioningpolicy-1-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpcprovisioningpolicy-1-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-cloudpcprovisioningpolicy-1-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -137,6 +134,18 @@ Content-Type: application/json
         "type": "hybridAzureADJoin"
       }
     ],
+    "microsoftManagedDesktop": {
+        "managedType": "starterManaged",
+        "profile": null
+    },
+    "autopatch": {
+        "autopatchGroupId": "91197a0b-3a74-408d-ba88-bce3fdc4e5eb"
+    },
+    "autopilotConfiguration": {
+        "devicePreparationProfileId": "59e5d3d2-ec68-4bfe-9693-27975b318990",
+        "applicationTimeoutInMinutes": 60,
+        "onFailureDeviceAccessDenied": false
+    },
     "enableSingleSignOn": true,
     "id": "1d164206-bf41-4fd2-8424-a3192d39ffff",
     "imageDisplayName": "Image Display Name value",
@@ -146,7 +155,11 @@ Content-Type: application/json
         "locale": "en-US"
     },
     "managedBy": "windows365",
-    "provisioningType": "dedicated"
+    "provisioningType": "dedicated",
+    "userSettingsPersistenceConfiguration": {
+        "userSettingsPersistenceEnabled": false,
+        "userSettingsPersistenceStorageSizeCategory": "fourGB"
+    }
 }
 ```
 
@@ -169,10 +182,6 @@ GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/provisioni
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpcprovisioningpolicy-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpcprovisioningpolicy-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -231,6 +240,18 @@ Content-Type: application/json
         "type": "hybridAzureADJoin"
       }
     ],
+    "microsoftManagedDesktop": {
+        "managedType": "starterManaged",
+        "profile": null
+    },
+    "autopatch": {
+        "autopatchGroupId": "91197a0b-3a74-408d-ba88-bce3fdc4e5eb"
+    },
+    "autopilotConfiguration": {
+        "devicePreparationProfileId": "59e5d3d2-ec68-4bfe-9693-27975b318990",
+        "applicationTimeoutInMinutes": 60,
+        "onFailureDeviceAccessDenied": false
+    },
     "enableSingleSignOn": true,
     "id": "1d164206-bf41-4fd2-8424-a3192d39ffff",
     "imageDisplayName": "Image Display Name value",
@@ -250,7 +271,11 @@ Content-Type: application/json
       }
     ],
     "managedBy": "windows365",
-    "provisioningType": "dedicated"
+    "provisioningType": "dedicated",
+    "userSettingsPersistenceConfiguration": {
+        "userSettingsPersistenceEnabled": false,
+        "userSettingsPersistenceStorageSizeCategory": "fourGB"
+    }
 }
 ```
 
@@ -276,10 +301,6 @@ GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/provisioni
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpcprovisioningpolicy-3-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpcprovisioningpolicy-3-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -351,6 +372,10 @@ Content-Type: application/json
     "windowsSetting": {
         "locale": "en-US"
     },
-    "provisioningType": "dedicated"
+    "provisioningType": "dedicated",
+    "userSettingsPersistenceConfiguration": {
+        "userSettingsPersistenceEnabled": false,
+        "userSettingsPersistenceStorageSizeCategory": "fourGB"
+    }
 }
 ```

@@ -4,8 +4,9 @@ description: "Represents a request for permissions on resources in a target auth
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # scheduledPermissionsRequest resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents a request for permissions on resources in a target authorization system that an identity makes through Microsoft Entra Permissions Management, either directly or indirectly. An authorized administrator can grant, reject, or cancel the request.
 
 Inherits from [entity](../resources/entity.md).
@@ -21,8 +24,8 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Create scheduledPermissionsRequest](../api/permissionsmanagement-post-scheduledpermissionsrequests.md)|[scheduledPermissionsRequest](../resources/scheduledpermissionsrequest.md)|Create a new [scheduledPermissionsRequest](../resources/scheduledpermissionsrequest.md) object.|
-|[Cancel scheduledPermissionsRequest](../api/scheduledpermissionsrequest-cancelall.md)|None|Cancels a [scheduledPermissionsRequest](../resources/scheduledpermissionsrequest.md).|
+|[Create](../api/permissionsmanagement-post-scheduledpermissionsrequests.md)|[scheduledPermissionsRequest](../resources/scheduledpermissionsrequest.md)|Create a new [scheduledPermissionsRequest](../resources/scheduledpermissionsrequest.md) object.|
+|[Cancel all](../api/scheduledpermissionsrequest-cancelall.md)|None|Cancels a [scheduledPermissionsRequest](../resources/scheduledpermissionsrequest.md).|
 
 ## Properties
 |Property|Type|Description|
@@ -68,4 +71,5 @@ The following JSON representation shows the resource type.
   "statusDetail": "String"
 }
 ```
+
 

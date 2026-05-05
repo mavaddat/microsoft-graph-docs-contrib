@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # recordOperation resource type
@@ -22,14 +23,14 @@ This resource type contains information related to audio recording.
 | recordingAccessToken           | String                      | The access token required to retrieve the recording.                                                                                              |
 | recordingLocation              | String                      | The location where the recording is located.                                                                                                      |
 | resultInfo                     | [resultInfo](resultinfo.md) | The result information.  Read-only.                                                                                              |
-| status                         | String                      | Possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only.                                                |
+| status                         | String                      | The possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only.                                                |
 
 ## Relationships
 None
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

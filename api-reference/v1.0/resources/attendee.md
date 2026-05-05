@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "iamgirishck"
 ms.subservice: calendar
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # attendee resource type
@@ -25,7 +26,7 @@ Derived from [attendeeBase](attendeebase.md).
 
 ## JSON representation
 
-Here's a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

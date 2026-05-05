@@ -4,8 +4,9 @@ description: "Represents the findings for roles that allow for external system a
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # awsExternalSystemAccessRoleFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents the findings for roles that allow for external system access.
 
 Inherits from [finding](../resources/finding.md).
@@ -21,8 +24,8 @@ Inherits from [finding](../resources/finding.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List awsExternalSystemAccessRoleFinding objects](../api/awsexternalsystemaccessrolefinding-list.md)|[awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md) collection|Get a list of the [awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md) objects and their properties.|
-|[Get awsExternalSystemAccessRoleFinding](../api/awsexternalsystemaccessrolefinding-get.md)|[awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md)|Read the properties and relationships of an [awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md) object.|
+|[List](../api/awsexternalsystemaccessrolefinding-list.md)|[awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md) collection|Get a list of the [awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md) objects and their properties.|
+|[Get](../api/awsexternalsystemaccessrolefinding-get.md)|[awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md)|Read the properties and relationships of an [awsExternalSystemAccessRoleFinding](../resources/awsexternalsystemaccessrolefinding.md) object.|
 
 
 ## Properties
@@ -61,4 +64,5 @@ The following JSON representation shows the resource type.
   ]
 }
 ```
+
 

@@ -4,14 +4,17 @@ description: "List the authorizationSystem objects and their properties."
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # List authorizationSystems
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 List the [authorizationSystem](../resources/authorizationsystem.md) objects onboarded to Permissions Management and their properties.
 
@@ -33,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /external/authorizationSystems
 ```
 
@@ -64,16 +67,12 @@ The following example shows a request.
   "name": "list_authorizationsystem"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/external/authorizationSystems
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-authorizationsystem-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-authorizationsystem-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -111,7 +110,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.authorizationSystem)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -169,7 +168,7 @@ Content-Type: application/json
       "authorizationSystemId": "carbide-bonsai-205017",
       "authorizationSystemName": "ck-staging",
       "authorizationSystemType": "GCP",
-      "dataCollectionInfo@odata.context": "https://canary.graph.microsoft.com/beta/$metadata#external/authorizationSystems('Y2FyYmlkZS1ib25zYWktMjA1MDE3')/microsoft.graph.gcpAuthorizationSystem/dataCollectionInfo/$entity",
+      "dataCollectionInfo@odata.context": "https://graph.microsoft.com/beta/$metadata#external/authorizationSystems('Y2FyYmlkZS1ib25zYWktMjA1MDE3')/microsoft.graph.gcpAuthorizationSystem/dataCollectionInfo/$entity",
       "dataCollectionInfo": {
         "entitlements": {
           "@odata.type": "microsoft.graph.entitlementsDataCollection",
@@ -194,16 +193,12 @@ The following example shows a request.
   "name": "list_authorizationsystem_filter"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/external/authorizationSystems?$filter=dataCollectionInfo/entitlements/microsoft.graph.entitlementsDataCollection/permissionsModificationCapability eq 'enabled' and dataCollectionInfo/entitlements/microsoft.graph.entitlementsDataCollection/status eq 'online'
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-authorizationsystem-filter-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-authorizationsystem-filter-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -241,7 +236,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.authorizationSystem)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -268,3 +263,4 @@ Content-Type: application/json
   "@odata.nextLink": "https://graph.microsoft.com/beta/external/authorizationSystems?$filter=dataCollectionInfo%2fentitlements%2fmicrosoft.graph.entitlementsDataCollection%2fpermissionsModificationCapability+eq+%27enabled%27+and+dataCollectionInfo%2fentitlements%2fmicrosoft.graph.entitlementsDataCollection%2fstatus+eq+%27online%27&$skiptoken=MQ",  
 }  
 ```
+

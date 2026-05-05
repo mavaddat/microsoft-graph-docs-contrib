@@ -5,6 +5,7 @@ author: "nickgmicrosoft"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # clientCertificateAuthentication resource type
@@ -23,9 +24,12 @@ Inherits from [apiAuthenticationConfigurationBase](../resources/apiauthenticatio
 |:---|:---|:---|
 |certificateList| [pkcs12CertificateInformation](../resources/pkcs12CertificateInformation.md) collection| The list of certificates uploaded for this API connector.|
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.clientCertificateAuthentication"

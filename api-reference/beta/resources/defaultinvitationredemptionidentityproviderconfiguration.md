@@ -5,6 +5,7 @@ author: "jkdouglas"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # defaultInvitationRedemptionIdentityProviderConfiguration resource type
@@ -21,8 +22,8 @@ Inherits from [invitationRedemptionIdentityProviderConfiguration](../resources/i
 
 |Property|Type|Description|
 |:---|:---|:---|
-| primaryIdentityProviderPrecedenceOrder | b2bIdentityProvidersType collection | Collection of identity providers in priority order of preference to be used for guest invitation redemption. Possible values are: `azureActiveDirectory`, `externalFederation`, or `socialIdentityProviders`. |
-| fallbackIdentityProvider | b2bIdentityProvidersType | The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. Possible values are: `defaultConfiguredIdp`, `emailOneTimePasscode`, or `microsoftAccount`. |
+| primaryIdentityProviderPrecedenceOrder | b2bIdentityProvidersType collection | Collection of identity providers in priority order of preference to be used for guest invitation redemption. The possible values are: `azureActiveDirectory`, `externalFederation`, or `socialIdentityProviders`. |
+| fallbackIdentityProvider | b2bIdentityProvidersType | The fallback identity provider to be used in case no primary identity provider can be used for guest invitation redemption. The possible values are: `defaultConfiguredIdp`, `emailOneTimePasscode`, or `microsoftAccount`. |
 
 ## Relationships
 
@@ -30,7 +31,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.defaultInvitationRedemptionIdentityProviderConfiguration"

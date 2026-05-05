@@ -5,6 +5,7 @@ author: "ecmadao"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 06/03/2024
 ---
 
 # List auditEvents
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 GET /deviceManagement/virtualEndpoint/auditEvents
 ```
 
@@ -65,16 +66,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/auditEvents
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-cloudpcauditevent-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-cloudpcauditevent-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -114,7 +111,7 @@ GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/auditEvent
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -123,53 +120,51 @@ Content-Type: application/json
     {
       "@odata.type": "#microsoft.graph.cloudPcAuditEvent",
       "id": "250473f5-029f-4037-813d-ba4768201d61",
-      "displayName": "Display Name value",
-      "componentName": "Component Name value",  
-      "activity": "Activity value",  
-      "activityDateTime": "2021-02-14T13:10:51.814636+08:00",  
-      "activityType": " Activity Type value",  
-      "activityOperationType": "Activity Operation Type value",  
-      "activityResult": "Activity Result value",  
-      "correlationId": "a5c71cc6-2271-4d5c-9bfe-d94781e83fe6",  
-      "category": "Category value",
+      "displayName": "Delete OnPremisesConnection",
+      "componentName": "CloudPcOnPremisesConnectionsController",
+      "activity": null,
+      "activityDateTime": "2021-02-14T13:10:51.814636+08:00",
+      "activityType": "Delete CloudPcOnPremisesConnection",
+      "activityOperationType": "Delete",
+      "activityResult": "Success",
+      "correlationId": "a5c71cc6-2271-4d5c-9bfe-d94781e83fe6",
+      "category": "Cloud PC",
       "actor": {
-          "@odata.type": "microsoft.graph.cloudPcAuditActor",
-          "type": "Type value",
-          "userPermissions": [
-              "User Permissions value"
-          ],
-          "applicationId": "Application Id value",
-          "applicationDisplayName": "Application Display Name value",
-          "userPrincipalName": "User Principal Name value",
-          "servicePrincipalName": "Service Principal Name value",
-          "ipAddress": "Ip Address value",
-          "userId": "User Id value",
-          "userRoleScopeTags": [
-              {
-                  "@odata.type": "microsoft.graph.cloudPcUserRoleScopeTagInfo",
-                  "displayName": "Display Name value",
-                  "roleScopeTagId": "Role Scope Tag Id value"
-              }
-          ],
-          "remoteTenantId": "Remote Tenant Id value",
-          "remoteUserId": "Remote User Id value"
+        "@odata.type": "microsoft.graph.cloudPcAuditActor",
+        "type": "application",
+        "userPermissions": [],
+        "applicationId": "69cc3193-b6c4-4172-98e5-ed0f38ab3ff8",
+        "applicationDisplayName": "Cloud PC Ibiza",
+        "userPrincipalName": null,
+        "servicePrincipalName": null,
+        "ipAddress": null,
+        "userId": "ccaf0214-2d5c-4c72-b23f-191ff2c87313",
+        "userRoleScopeTags": [
+          {
+            "@odata.type": "microsoft.graph.cloudPcUserRoleScopeTagInfo",
+            "displayName": "Europe",
+            "roleScopeTagId": "8ad48104-cb5c-497c-b144-6fc9927354ab"
+          }
+        ],
+        "remoteTenantId": "33c73c76-bf5d-45ba-ab4f-ee49c9a9be76",
+        "remoteUserId": "ccaf0214-2d5c-4c72-b23f-191ff2c87313"
       },
       "resources": [
         {
           "@odata.type": "microsoft.graph.cloudPcAuditResource",
-          "displayName": "Display Name value",
+          "displayName": "ecmadao-test-azureconnection-1",
           "modifiedProperties": [
             {
               "@odata.type": "microsoft.graph.cloudPcAuditProperty",
-              "displayName": "Display Name value",
-              "oldValue": "Old Value value",
-              "newValue": "New Value value"
+              "displayName": "AdDomainUsername",
+              "oldValue": "12312",
+              "newValue": "new-adDomainUsername"
             }
           ],
-          "type": "Type value",
-          "resourceId": "Resource Id value"
+          "resourceType": "CloudPcOnPremisesConnection",
+          "resourceId": "a7508af8-d334-41ba-83a7-26cc88959724"
         }
-      ],
+      ]
     }
   ]
 }

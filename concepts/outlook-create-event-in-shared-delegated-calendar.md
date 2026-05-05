@@ -4,6 +4,8 @@ description: "Learn how to create a meeting event in a shared or delegated Outlo
 author: "juforan"
 ms.localizationpriority: high
 ms.subservice: "outlook"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Create Outlook events in a shared or delegated calendar
@@ -47,10 +49,6 @@ GET https://graph.microsoft.com/v1.0/me/calendars
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/get-adele-calendars-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/get-adele-calendars-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -140,6 +138,8 @@ Signed in as Adele, use the calendar ID obtained from step 1 to create an [event
 
 Use the least privileged delegated permission, `Calendars.ReadWrite.Shared`. For more information, see [Calendars.ReadWrite.Shared permission in the permissions reference](permissions-reference.md#calendarsreadwriteshared).
 
+# [HTTP](#tab/http)
+
 <!-- {
   "blockType": "request",
   "sampleKeys": ["AAMkADRpAABf0JlzAAA="],
@@ -189,10 +189,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/create-send-invitation-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -438,10 +434,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/event-reply-tentativelyaccept-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/event-reply-tentativelyaccept-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/v1/event-reply-tentativelyaccept-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -502,10 +494,6 @@ GET https://graph.microsoft.com/v1.0/me/messages/AAMkADI4oeRpAABf0HJUAAA=
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/message-get-reply-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/message-get-reply-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -632,10 +620,6 @@ GET https://graph.microsoft.com/v1.0/me/calendar/events/AAMkADJXJGu0AABf02qwAAA=
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/event-get-responses-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/event-get-responses-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -776,11 +760,7 @@ Content-type: application/json
 ```
 
 
-## Next steps
-
-Find out more about:
+## Related content
 
 - [Get Outlook events in a shared or delegated calendar](outlook-get-shared-events-calendars.md)
 - [Share or delegate a calendar in Outlook (preview)](outlook-share-or-delegate-calendar.md)
-- [Why integrate with Outlook calendar](outlook-calendar-concept-overview.md)
-- The [calendar API](/graph/api/resources/calendar) in Microsoft Graph v1.0.

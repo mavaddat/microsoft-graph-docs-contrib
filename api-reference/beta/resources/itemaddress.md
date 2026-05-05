@@ -3,8 +3,9 @@ title: "itemAddress resource type"
 description: "itemAddress resource type"
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # itemAddress resource type
@@ -18,16 +19,16 @@ Inherits from [itemFacet](../resources/itemfacet.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List addresses](../api/profile-list-addresses.md)|[itemAddress](../resources/itemaddress.md) collection|Get the itemAddress resources from the addresses navigation property.|
-|[Create itemAddress](../api/profile-post-addresses.md)|[itemAddress](../resources/itemaddress.md)|Create a new itemAddress object.|
-|[Get itemAddress](../api/itemaddress-get.md)|[itemAddress](../resources/itemaddress.md)|Read the properties and relationships of an [itemAddress](../resources/itemaddress.md) object.|
-|[Update itemAddress](../api/itemaddress-update.md)|[itemAddress](../resources/itemaddress.md)|Update the properties of an [itemAddress](../resources/itemaddress.md) object.|
-|[Delete itemAddress](../api/itemaddress-delete.md)|None|Deletes an [itemAddress](../resources/itemaddress.md) object.|
+|[List](../api/profile-list-addresses.md)|[itemAddress](../resources/itemaddress.md) collection|Get the itemAddress resources from the addresses navigation property.|
+|[Create](../api/profile-post-addresses.md)|[itemAddress](../resources/itemaddress.md)|Create a new itemAddress object.|
+|[Get](../api/itemaddress-get.md)|[itemAddress](../resources/itemaddress.md)|Read the properties and relationships of an [itemAddress](../resources/itemaddress.md) object.|
+|[Update](../api/itemaddress-update.md)|[itemAddress](../resources/itemaddress.md)|Update the properties of an [itemAddress](../resources/itemaddress.md) object.|
+|[Delete](../api/itemaddress-delete.md)|None|Deletes an [itemAddress](../resources/itemaddress.md) object.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |createdBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that created the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
 |createdDateTime|DateTimeOffset|Provides the dateTimeOffset for when the entity was created. Inherited from [itemFacet](../resources/itemfacet.md).|
 |detail|[physicalAddress](../resources/physicaladdress.md)|Details about the address itself.|
@@ -43,7 +44,7 @@ Inherits from [itemFacet](../resources/itemfacet.md).
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

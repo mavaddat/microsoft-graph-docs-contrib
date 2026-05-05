@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "lumine2008"
 ms.subservice: "excel"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # TableCollection: add
@@ -48,7 +49,7 @@ In the request body, provide a JSON object with the following parameters.
 | Parameter	   | Type	|Description|
 |:---------------|:--------|:----------|
 |address|string|Address or name of the range object representing the data source. If the address doesn't contain a sheet name, the currently active sheet is used.|
-|hasHeaders|boolean|Boolean value that indicates whether the data being imported has column labels. If the source doesn't contain headers (when this property set to false), Excel will automatically generate header shifting the data down by one row.|
+|hasHeaders|Boolean|Boolean value that indicates whether the data being imported has column labels. If the source doesn't contain headers (when this property set to false), Excel will automatically generate header shifting the data down by one row.|
 
 ## Response
 
@@ -76,10 +77,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/tablecollection-add-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/tablecollection-add-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

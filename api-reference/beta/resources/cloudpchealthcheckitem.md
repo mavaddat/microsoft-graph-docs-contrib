@@ -5,6 +5,7 @@ author: "yayang3"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # cloudPcHealthCheckItem resource type
@@ -21,13 +22,13 @@ Represents the details of the Cloud PC connectivity health check item.
 |additionalDetails|string|Additional message for this health check.|
 |displayName|string|The connectivity health check item name.|
 |lastHealthCheckDateTime|DateTimeOffset|Timestamp when the last check occurs. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as `2014-01-01T00:00:00Z`. |
-|result|[cloudPcConnectivityEventResult](../resources/cloudpcconnectivityevent.md#cloudpcconnectivityeventresult-values)|The result of this health check item. Possible values are: `unknown`, `success`, `failure`.|
+|result|[cloudPcConnectivityEventResult](../resources/cloudpcconnectivityevent.md#cloudpcconnectivityeventresult-values)|The result of this health check item. The possible values are: `unknown`, `success`, `failure`.|
 
 ## Relationships
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.cloudPcHealthCheckItem"

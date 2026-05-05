@@ -3,8 +3,9 @@ title: "Get profilePhoto"
 description: "Get the specified profilePhoto or its metadata (profilePhoto properties)."
 ms.localizationpriority: medium
 author: "kristinmcleod"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 08/08/2024
 ---
 
 # Get profilePhoto
@@ -40,9 +41,9 @@ The following tables show the least privileged permission or permissions require
 <!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
 |Permission type      | Least privileged permissions             | Higher privileged permissions             |
 |:--------------------|:-----------------------------------------|:------------------------------------------|
-|Delegated (work or school account)      |   Group.Read.All | Group.ReadWrite.All           |
+|Delegated (work or school account)      |  ProfilePhoto.Read.All | ProfilePhoto.ReadWrite.All, Group.Read.All, Group.ReadWrite.All           |
 |Delegated (personal Microsoft account)      |   Not supported.            |  Not supported. |
-|Application      |    Group.Read.All | Group.ReadWrite.All           |
+|Application      |   ProfilePhoto.Read.All | ProfilePhoto.ReadWrite.All, Group.Read.All, Group.ReadWrite.All           |
 
 ### To retrieve the profile photo of a team
 
@@ -58,15 +59,14 @@ The following tables show the least privileged permission or permissions require
 <!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
 |Permission type      | Least privileged permissions             | Higher privileged permissions             |
 |:--------------------|:-----------------------------------------|:------------------------------------------|
-|Delegated (work or school account)      |   User.Read | User.ReadBasic.All, User.Read.All, User.ReadWrite, User.ReadWrite.All           |
+|Delegated (work or school account)      |  ProfilePhoto.Read.All | ProfilePhoto.ReadWrite.All, User.Read, User.ReadBasic.All, User.Read.All, User.ReadWrite, User.ReadWrite.All           |
 |Delegated (personal Microsoft account)      |   User.Read | User.ReadWrite            |
-|Application      |    User.Read.All | User.ReadWrite.All           |
+|Application      |   ProfilePhoto.Read.All | ProfilePhoto.ReadWrite.All, User.Read.All, User.ReadWrite.All           |
 
 > [!NOTE]
 > 
-> - Metadata operation isn't supported for personal Microsoft accounts.
-> - An app with only application permissions cannot access a group's photo.
 > - Retrieving a user's photo using the Microsoft Graph API is currently not supported in Azure AD B2C tenants.
+> - Guest users can view profile photos of users, even when the **Guest user access** settings are configured to the **most restrictive** option in Azure Active Directory External Identities settings.
 
 ## HTTP request
 
@@ -81,7 +81,7 @@ GET /me/contacts/{id}/photo/$value
 GET /users/{id | userPrincipalName}/contacts/{id}/photo/$value
 GET /me/contactfolders/{contactFolderId}/contacts/{id}/photo/$value
 GET /users/{id | userPrincipalName}/contactfolders/{contactFolderId}/contacts/{id}/photo/$value
-GET /team/{id}/photo/$value
+GET /teams/{id}/photo/$value
 ```
 
 ### Get the metadata of the photo
@@ -96,7 +96,7 @@ GET /me/contacts/{id}/photo
 GET /users/{id | userPrincipalName}/contacts/{id}/photo
 GET /me/contactfolders/{contactFolderId}/contacts/{id}/photo
 GET /users/{id | userPrincipalName}/contactfolders/{contactFolderId}/contacts/{id}/photo
-GET /team/{id}/photo
+GET /teams/{id}/photo
 ```
 
 ### Get the metadata for a specific photo size
@@ -121,7 +121,7 @@ This method supports the [OData query parameters](/graph/query-parameters) to he
 
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 Don't supply a request body for this method.
@@ -147,10 +147,6 @@ GET https://graph.microsoft.com/v1.0/me/photo/$value
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-photo-value-v1-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-photo-value-v1-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -207,10 +203,6 @@ Content-Type: image/jpg
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-photo-value-48x-v1-e2-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-photo-value-48x-v1-e2-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-photo-value-48x-v1-e2-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -264,10 +256,6 @@ GET https://graph.microsoft.com/v1.0/me/photo
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-photo-value-metadata-v1-e3-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-photo-value-metadata-v1-e3-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -364,10 +352,6 @@ GET https://graph.microsoft.com/v1.0/teams/172b0cce-e65d-44ce-9a49-91d9f2e8491e/
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-team-photo-metadata-v1-e4-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-team-photo-metadata-v1-e4-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-team-photo-metadata-v1-e4-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -436,10 +420,6 @@ GET https://graph.microsoft.com/v1.0/teams/172b0cce-e65d-44ce-9a49-91d9f2e8491e/
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-team-photo-v1-e5-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-team-photo-v1-e5-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

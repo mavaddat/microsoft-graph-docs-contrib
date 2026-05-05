@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "lumine2008"
 ms.subservice: "excel"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # workbookRange: resizedRange
@@ -51,7 +52,7 @@ If successful, this method returns a `200 OK` response code and a [workbookRange
 ## Example
 
 ### Request
-Here's an example  of the request.
+The following example shows a request.
 <!-- {
   "blockType": "request",
   "name": "workbookrange_resizedrange"
@@ -61,7 +62,7 @@ POST https://graph.microsoft.com/beta/drive/root/workbook/worksheets/{id}/range/
 ```
 
 ### Response
-Here's an example  of the response. 
+The following example shows the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",

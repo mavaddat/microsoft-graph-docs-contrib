@@ -5,13 +5,12 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 author: "ArvindHarinder1"
 ms.subservice: "entra-applications"
+ms.date: 07/22/2024
 ---
 
 # synchronizationQuarantine resource type
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Provides information about the quarantine state of a [synchronizationJob](synchronization-synchronizationjob.md).
 
@@ -27,7 +26,7 @@ Provides information about the quarantine state of a [synchronizationJob](synchr
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -5,6 +5,7 @@ author: "subray"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 04/19/2024
 ---
 
 # Update tab in chat
@@ -14,7 +15,9 @@ Namespace: microsoft.graph
 Update the properties of the specified [tab](../resources/teamstab.md) in a [chat](../resources/chat.md). 
 This can be used to configure the content of the tab.
 
-> **Note**: If the chat is associated with an [onlineMeeting](../resources/onlinemeeting.md) instance, then, effectively, the tab pinned in the meeting will be updated.
+> [!NOTE] 
+> - If the chat is associated with an [onlineMeeting](../resources/onlinemeeting.md) instance, then, effectively, the tab pinned in the meeting will be updated.
+> - You can't use this API to update a static tab. An attempt to update a static tab returns a `400 Bad Request` response code.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -73,10 +76,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-tabs-in-chat-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-tabs-in-chat-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

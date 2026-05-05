@@ -4,14 +4,17 @@ description: "Get a list of the superUserFinding objects and their properties."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/17/2024
 ---
 
 # List superUserFinding objects
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Get a list of the [superUserFinding](../resources/superuserfinding.md) objects and their properties.
 
@@ -28,7 +31,7 @@ List AWS super users:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.superUserFinding
 ```
 
@@ -37,7 +40,7 @@ List Azure super users:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/azure/findings/microsoft.graph.superUserFinding
 ```
 
@@ -46,7 +49,7 @@ List GCP super users:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.superUserFinding
 ```
 
@@ -76,16 +79,12 @@ The following example shows a request.
   "name": "list_superuserfinding"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.superUserFinding
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-superuserfinding-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-superuserfinding-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -123,7 +122,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.superUserFinding)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -172,3 +171,4 @@ Content-Type: application/json
   ]
 }
 ```
+

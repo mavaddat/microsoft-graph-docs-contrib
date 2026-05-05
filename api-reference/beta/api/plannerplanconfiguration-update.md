@@ -5,6 +5,7 @@ author: "TarkanSevilmis"
 ms.localizationpriority: medium
 ms.subservice: "business-scenarios"
 doc_type: apiPageType
+ms.date: 08/08/2024
 ---
 
 # Update plannerPlanConfiguration
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the properties of a [plannerPlanConfiguration](../resources/plannerplanconfiguration.md) object for a [businessScenario](../resources/businessscenario.md).
+Update the properties of a [plannerPlanConfiguration](../resources/plannerplanconfiguration.md) object and its [plannerPlanConfigurationLocalization](../resources/plannerplanconfigurationlocalization.md) collection for a [businessScenario](../resources/businessscenario.md).
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -33,13 +34,13 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 For the plan configuration based on a business scenario ID:
 
-``` http
+```http
 PATCH /solutions/businessScenarios/{businessScenarioId}/planner/planConfiguration
 ```
 
 For the plan configuration based on the unique name of a business scenario:
 
-``` http
+```http
 PATCH /solutions/businessScenarios(uniqueName='{uniqueName}')/planner/planConfiguration
 ```
 
@@ -56,8 +57,9 @@ PATCH /solutions/businessScenarios(uniqueName='{uniqueName}')/planner/planConfig
 
 |Property|Type|Description|
 |:---|:---|:---|
-|defaultLanguage|String|The language that should be used for creating plans when no language has been specified. Required.|
-|buckets|[plannerPlanConfigurationBucketDefinition](../resources/plannerplanconfigurationbucketdefinition.md) collection|Buckets that will be available in the plan. Required.|
+|defaultLanguage|String|The language that should be used for creating plans when no language has been specified.|
+|buckets|[plannerPlanConfigurationBucketDefinition](../resources/plannerplanconfigurationbucketdefinition.md) collection|Buckets available in the plan.|
+|localizations|[plannerPlanConfigurationLocalization](../resources/plannerplanconfigurationlocalization.md) collection|Localized names for the plan configuration.|
 
 ## Response
 
@@ -76,12 +78,11 @@ The following example shows a request.
   "sampleKeys": ["c5d514e6c6864911ac46c720affb6e4d"]
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/solutions/businessScenarios/c5d514e6c6864911ac46c720affb6e4d/planner/planConfiguration
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.plannerPlanConfiguration",
   "defaultLanguage": "en-us",
   "buckets": [
     {
@@ -96,16 +97,60 @@ Content-Type: application/json
     {
       "externalBucketId": "returnProcessingBucket"
     }
+  ],
+  "localizations": [
+    {
+      "id": "en-us",
+      "languageTag": "en-us",
+      "planTitle": "Order Tracking",
+      "buckets": [
+        {
+          "externalBucketId": "deliveryBucket",
+          "name": "Deliveries"
+        },
+        {
+          "externalBucketId": "storePickupBucket",
+          "name": "Pickup"
+        },
+        {
+          "externalBucketId": "specialOrdersBucket",
+          "name": "Special Orders"
+        },
+        {
+          "externalBucketId": "returnProcessingBucket",
+          "name": "Customer Returns"
+        }
+      ]
+    },
+    {
+      "id": "es-es",
+      "languageTag": "es-es",
+      "planTitle": "Seguimiento de pedidos",
+      "buckets": [
+        {
+          "externalBucketId": "deliveryBucket",
+          "name": "Entregas"
+        },
+        {
+          "externalBucketId": "storePickupBucket",
+          "name": "Recogida"
+        },
+        {
+          "externalBucketId": "specialOrdersBucket",
+          "name": "Pedidos especiales"
+        },
+        {
+          "externalBucketId": "specialOrdersBucket",
+          "name": "Devoluciones de clientes"
+        }
+      ]
+    }
   ]
 }
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-plannerplanconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-plannerplanconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -144,7 +189,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.plannerPlanConfiguration"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -164,6 +209,54 @@ Content-Type: application/json
     },
     {
       "externalBucketId": "returnProcessingBucket"
+    }
+  ],
+  "localizations": [
+    {
+      "id": "en-us",
+      "languageTag": "en-us",
+      "planTitle": "Order Tracking",
+      "buckets": [
+        {
+          "externalBucketId": "deliveryBucket",
+          "name": "Deliveries"
+        },
+        {
+          "externalBucketId": "storePickupBucket",
+          "name": "Pickup"
+        },
+        {
+          "externalBucketId": "specialOrdersBucket",
+          "name": "Special Orders"
+        },
+        {
+          "externalBucketId": "returnProcessingBucket",
+          "name": "Customer Returns"
+        }
+      ]
+    },
+    {
+      "id": "es-es",
+      "languageTag": "es-es",
+      "planTitle": "Seguimiento de pedidos",
+      "buckets": [
+        {
+          "externalBucketId": "deliveryBucket",
+          "name": "Entregas"
+        },
+        {
+          "externalBucketId": "storePickupBucket",
+          "name": "Recogida"
+        },
+        {
+          "externalBucketId": "specialOrdersBucket",
+          "name": "Pedidos especiales"
+        },
+        {
+          "externalBucketId": "specialOrdersBucket",
+          "name": "Devoluciones de clientes"
+        }
+      ]
     }
   ]
 }

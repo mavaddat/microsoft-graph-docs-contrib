@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: excel
 author: "ruoyingl"
+ms.date: 03/21/2024
 ---
 
 # Json resource type
@@ -19,7 +20,7 @@ None.
 None.
 
 ## JSON Representation
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!--{
   "blockType": "resource",
   "@odata.type": "microsoft.graph.Json"

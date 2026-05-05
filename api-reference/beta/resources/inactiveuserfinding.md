@@ -4,8 +4,9 @@ description: "Represents the inactive users in AWS, Azure, or GCP."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # inactiveUserFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents the inactive users in AWS, Azure, or GCP.
 
 Inherits from [identityFinding](../resources/identityfinding.md).
@@ -21,9 +24,9 @@ Inherits from [identityFinding](../resources/identityfinding.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List inactiveUserFinding objects](../api/inactiveuserfinding-list.md)|[inactiveUserFinding](../resources/inactiveuserfinding.md) collection|Get a list of the [inactiveUserFinding](../resources/inactiveuserfinding.md) objects and their properties.|
-|[Get inactiveUserFinding](../api/inactiveuserfinding-get.md)|[inactiveUserFinding](../resources/inactiveuserfinding.md)|Read the properties and relationships of an [inactiveUserFinding](../resources/inactiveuserfinding.md) object.|
-|[aggregatedSummary](../api/inactiveuserfinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
+|[List](../api/inactiveuserfinding-list.md)|[inactiveUserFinding](../resources/inactiveuserfinding.md) collection|Get a list of the [inactiveUserFinding](../resources/inactiveuserfinding.md) objects and their properties.|
+|[Get](../api/inactiveuserfinding-get.md)|[inactiveUserFinding](../resources/inactiveuserfinding.md)|Read the properties and relationships of an [inactiveUserFinding](../resources/inactiveuserfinding.md) object.|
+|[Aggregated summary](../api/inactiveuserfinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
 
 ## Properties
 |Property|Type|Description|
@@ -65,4 +68,5 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+
 

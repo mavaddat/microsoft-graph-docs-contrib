@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # retentionEventType resource type
@@ -13,18 +14,18 @@ Namespace: microsoft.graph.security
 
 Represents a single group for the same type of retention events.
 
-When a [retention event](../resources/security-retentionevent.md) is created, it's associated with a specific event type that in turn is associated with a [retention label](/graph/api-reference/beta/resources/security-retentionlabel.md). Only content with that retention label applied will be retained for the specified retention period.
+When a [retention event](../resources/security-retentionevent.md) is created, it's associated with a specific event type that in turn is associated with a [retention label](/graph/api-reference/v1.0/resources/security-retentionlabel.md). Only content with that retention label applied will be retained for the specified retention period.
 For details, see [Start retention when an event occurs](/microsoft-365/compliance/event-driven-retention).
 
 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List retentionEventTypes](../api/security-retentioneventtype-list.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md) collection|Get a list of the [retentionEventType](../resources/security-retentioneventtype.md) objects and their properties.|
-|[Create retentionEventType](../api/security-retentioneventtype-post.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md)|Create a new [retentionEventType](../resources/security-retentioneventtype.md) object.|
-|[Get retentionEventType](../api/security-retentioneventtype-get.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md)|Read the properties and relationships of a [retentionEventType](../resources/security-retentioneventtype.md) object.|
-|[Update retentionEventType](../api/security-retentioneventtype-update.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md)|Update the properties of a [retentionEventType](../resources/security-retentioneventtype.md) object.|
-|[Delete retentionEventType](../api/security-retentioneventtype-delete.md)|None|Delete a [retentionEventType](../resources/security-retentioneventtype.md) object.|
+|[List](../api/security-retentioneventtype-list.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md) collection|Get a list of the [retentionEventType](../resources/security-retentioneventtype.md) objects and their properties.|
+|[Create](../api/security-retentioneventtype-post.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md)|Create a new [retentionEventType](../resources/security-retentioneventtype.md) object.|
+|[Get](../api/security-retentioneventtype-get.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md)|Read the properties and relationships of a [retentionEventType](../resources/security-retentioneventtype.md) object.|
+|[Update](../api/security-retentioneventtype-update.md)|[microsoft.graph.security.retentionEventType](../resources/security-retentioneventtype.md)|Update the properties of a [retentionEventType](../resources/security-retentioneventtype.md) object.|
+|[Delete](../api/security-retentioneventtype-delete.md)|None|Delete a [retentionEventType](../resources/security-retentioneventtype.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -41,7 +42,7 @@ For details, see [Start retention when an event occurs](/microsoft-365/complianc
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

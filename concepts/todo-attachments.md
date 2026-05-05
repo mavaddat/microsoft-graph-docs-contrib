@@ -4,6 +4,8 @@ description: "Learn how to attach large files to a Microsoft To Do task and how 
 author: "avijityadav"
 ms.localizationpriority: high
 ms.subservice: "outlook"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Attach files to a To Do task
@@ -43,7 +45,7 @@ The following example shows a request to create an upload session.
   "sampleKeys": ["AAMDiFkfh=", "AAMkADliMm="]
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/me/todo/lists/AAMDiFkfh=/tasks/AAMkADliMm=/attachments/createUploadSession
 Content-Type: application/json
 
@@ -58,10 +60,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/beta/todo-attachment-walkthrough-createuploadsession-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/beta/todo-attachment-walkthrough-createuploadsession-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -100,7 +98,7 @@ The following example shows the **uploadSession** resource returned for the task
   "@odata.type": "microsoft.graph.uploadSession"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -124,7 +122,7 @@ Specify the request headers and the request body as described in the following s
 
 | Name       | Type | Description|
 |:---------------|:--------|:----------|
-|Authorization | String | Bearer {token}. Required. |
+|Authorization | String |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Content-Length | Int32 | The number of bytes being uploaded in this operation. The upper limit of the number of bytes for each `PUT` operation is 4 MB. The request will fail for anything higher than 4 MB. Required. |
 | Content-Range | String | The 0-based byte range of the file being uploaded in this operation, expressed in the format `bytes {start}-{end}/{total}`. Required. |
 | Content-Type | String  | The MIME type. Specify `application/octet-stream`. Required. |

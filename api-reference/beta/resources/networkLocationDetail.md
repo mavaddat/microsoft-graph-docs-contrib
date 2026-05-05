@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "egreenberg14"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # networkLocationDetail resource type
@@ -20,11 +21,11 @@ Provides the name and type of network from which the user signed in.
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
 |networkNames|String collection|Provides the name of the network used when signing in.|
-|networkType|networkType| Provides the type of network used when signing in. Possible values are: `intranet`, `extranet`, `namedNetwork`, `trusted`, `unknownFutureValue`.|
+|networkType|networkType| Provides the type of network used when signing in. The possible values are: `intranet`, `extranet`, `namedNetwork`, `trusted`, `unknownFutureValue`.|
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

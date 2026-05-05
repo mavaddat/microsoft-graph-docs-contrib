@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "TarkanSevilmis"
 ms.subservice: "planner"
 doc_type: resourcePageType
+ms.date: 07/26/2024
 ---
 
 # plannerExternalReferences resource type
@@ -19,7 +20,7 @@ Properties of an Open Type can be defined by the client. In this case, the clien
 
 ## JSON representation
 
-Here's a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

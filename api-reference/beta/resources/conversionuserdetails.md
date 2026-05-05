@@ -4,8 +4,9 @@ description: "Represents information that the API returns after a user is conver
 author: "yyuank"
 ms.reviewer: "iamut"
 ms.localizationpriority: medium
-ms.prod: "users"
-doc_type: apiPageType
+ms.subservice: entra-users
+doc_type: resourcePageType
+ms.date: 07/31/2024
 ---
 
 # conversionUserDetails resource type
@@ -24,6 +25,9 @@ Represents information that the API returns after a user is [converted from exte
 |displayName|String|Name displayed for the user.|
 |mail|String|The SMTP address for the user.|
 |userPrincipalName|String|The user principal name (UPN) of the user.|
+
+## Relationships
+None.
 
 ## JSON representation
 

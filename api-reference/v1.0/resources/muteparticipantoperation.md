@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # MuteParticipantOperation resource type
@@ -20,14 +21,14 @@ Describes the response format of a call participant mute operation.
 | clientContext                  | String                      | Unique client context string. Can have a maximum of 256 characters.                                                                               |
 | id                             | String                      | The server operation ID. Read-only.                                                                                            |
 | resultInfo                     | [resultInfo](resultinfo.md) | The result information.  Read-only.                                                                                            |
-| status                         | String                      | Possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only.                                                 |
+| status                         | String                      | The possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only.                                                 |
 
 ## Relationships
 None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -4,6 +4,8 @@ description: "When you retrieve a chart image, the Excel API in Microsoft Graph 
 ms.localizationpriority: medium
 author: "lumine2008"
 ms.subservice: "excel"
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Display a chart image in Excel

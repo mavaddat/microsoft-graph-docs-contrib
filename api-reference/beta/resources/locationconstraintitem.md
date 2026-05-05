@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "vrod9429"
 ms.subservice: "outlook"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # locationConstraintItem resource type
@@ -17,9 +18,12 @@ The conditions stated by a client for the location of a meeting.
 
 Derived from [location](location.md).
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
@@ -50,7 +54,7 @@ Here is a JSON representation of the resource
 | coordinates | [outlookGeoCoordinates](outlookgeocoordinates.md) | The geographic coordinates and elevation of the location. |
 | displayName  | String | The name associated with the location.                       |
 | locationEmailAddress | String | Optional email address of the location. |
-| locationType | locationType | The type of location. Possible values are: `default`, `conferenceRoom`, `homeAddress`, `businessAddress`,`geoCoordinates`, `streetAddress`, `hotel`, `restaurant`, `localBusiness`, `postalAddress`. Read-only.|
+| locationType | locationType | The type of location. The possible values are: `default`, `conferenceRoom`, `homeAddress`, `businessAddress`,`geoCoordinates`, `streetAddress`, `hotel`, `restaurant`, `localBusiness`, `postalAddress`. Read-only.|
 | locationUri | String | Optional URI representing the location. |
 | resolveAvailability | Boolean | If set to true and the specified resource is busy, [findMeetingTimes](../api/user-findmeetingtimes.md) looks for another resource that is free. If set to false and the specified resource is busy, **findMeetingTimes** returns the resource best ranked in the user's cache without checking if it's free. Default is true. |
 | uniqueId | String | For internal use only.|

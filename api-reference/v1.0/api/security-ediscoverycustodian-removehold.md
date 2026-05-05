@@ -3,8 +3,9 @@ title: "ediscoveryCustodian: removeHold"
 description: "**TODO: Add Description**"
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 
 # ediscoveryCustodian: removeHold
@@ -20,13 +21,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "security_ediscoverycustodian_removehold" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-ediscoverycustodian-removehold-permissions.md)]
 
+[!INCLUDE [rbac-ediscovery-custodian](../includes/rbac-for-apis/rbac-ediscovery-custodian-export-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/cases/ediscoveryCases/{ediscoveryCaseId}/custodians/removeHold
 POST /security/cases/ediscoveryCases/{ediscoveryCaseId}/custodians/{eDiscoveryCustodianId}/removeHold
 ```
@@ -62,7 +65,7 @@ The following example shows a request.
   "name": "ediscoverycustodianthis.removehold_caseID_custodians"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/b0073e4e-4184-41c6-9eb7-8c8cc3e2288b/custodians/removeHold
 Content-Type: application/json
 
@@ -75,10 +78,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/ediscoverycustodianthisremovehold-caseid-custodians-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/ediscoverycustodianthisremovehold-caseid-custodians-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +114,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 ```
 
@@ -129,16 +128,12 @@ The following example shows a request.
   "name": "ediscoverycustodianthis.removehold_single_custodian"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/b0073e4e-4184-41c6-9eb7-8c8cc3e2288b/custodians/c25c3914f9f743ee9cbaa25377e0cec6/removeHold
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/ediscoverycustodianthisremovehold-single-custodian-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/ediscoverycustodianthisremovehold-single-custodian-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -175,6 +170,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 ```

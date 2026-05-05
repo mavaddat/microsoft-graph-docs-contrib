@@ -2,9 +2,10 @@
 title: "organization resource type"
 description: "The organization resource represents an instance of global settings and resources which operate and are provisioned at the tenant-level."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # organization resource type
@@ -27,7 +28,7 @@ The organization resource represents an instance of global settings and resource
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|The GUID for the object.|
-|mobileDeviceManagementAuthority|[mdmAuthority](../resources/intune-onboarding-mdmauthority.md)|Mobile device management authority. Possible values are: `unknown`, `intune`, `sccm`, `office365`.|
+|mobileDeviceManagementAuthority|[mdmAuthority](../resources/intune-onboarding-mdmauthority.md)|Mobile device management authority. The possible values are: `unknown`, `intune`, `sccm`, `office365`.|
 
 ## Relationships
 None

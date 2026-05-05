@@ -5,6 +5,7 @@ author: "simonhult"
 ms.localizationpriority: medium
 ms.subservice: "insights"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # sharedInsight resource type
@@ -22,7 +23,7 @@ An insight representing files shared with or by a specific user. The following s
 
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
-|[List shared](../api/insights-list-shared.md) |[sharedInsight](insights-shared.md) collection| Get a list of shared files.|
+|[List shared (deprecated)](../api/insights-list-shared.md) | [sharedInsight](insights-shared.md) collection| Get a list of shared files. This API is deprecated and will stop returning data after November 2026.|
 
 ## Properties
 
@@ -40,7 +41,7 @@ An insight representing files shared with or by a specific user. The following s
 | resource    	| entity collection	| Used for navigating to the item that was shared. For file attachments, the type is *fileAttachment*. For linked attachments, the type is *driveItem*. |
 
 ## JSON representation
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 <!--{
   "blockType":"resource",
   "keyProperty": "id",

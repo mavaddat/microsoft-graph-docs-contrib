@@ -5,6 +5,7 @@ ms.localizationpriority: high
 author: "preetikr"
 ms.subservice: "security"
 doc_type: conceptualPageType
+ms.date: 01/21/2026
 ---
 
 # Use the Microsoft Graph security API
@@ -22,7 +23,7 @@ The Microsoft Graph security API provides a unified interface and schema to inte
 The Microsoft Graph security API provides key features as described in the following sections.
 
 ## Advanced hunting
-Advanced hunting is a query-based threat hunting tool that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. The flexible access to data enables unconstrained hunting for both known and potential threats.
+Advanced hunting is a query-based threat-hunting tool that lets you explore up to 30 days of raw data. You can proactively inspect events in your network to locate threat indicators and entities. The flexible access to data enables unconstrained hunting for both known and potential threats.
 
 Use [runHuntingQuery](../api/security-security-runhuntingquery.md) to run a [Kusto Query Language](/azure/data-explorer/kusto/query/) (KQL) query on data stored in Microsoft 365 Defender. Use the returned result set to enrich an existing investigation or to uncover undetected threats in your network. 
 
@@ -36,14 +37,42 @@ The following conditions relate to all queries.
 3. You can make up to at least 45 calls per minute per tenant. The number of calls varies per tenant based on its size.
 4. Each tenant is allocated CPU resources, based on the tenant size. Queries are blocked if the tenant reaches 100% of the allocated resources until after the next 15-minute cycle. To avoid blocked queries due to excess consumption, follow the guidance in [Optimize your queries to avoid hitting CPU quotas](/microsoft-365/security/defender/advanced-hunting-best-practices). 
 5. If a single request runs for more than three minutes, it times out and returns an error.
-6. A `429` HTTP response code indicates that you reached the allocated CPU resources, either by number of requests sent, or by allotted running time. Read the response body to understand the limit you reached. 
+6. A `429` HTTP response code indicates that you reached the allocated CPU resources, either by the number of requests sent or by allotted running time. Read the response body to understand the limit you reached.
+7. Query results have an overall size limit of 50 MB. This limit doesn't just refer to the number of records; factors such as the number of columns, data types, and field lengths also contribute to the query result size.
+
+### Migrate from the older APIs
+
+The advanced hunting APIs in Microsoft Graph replace the older version of the API that was available through the `https://api.security.microsoft.com/api/advancedhunting/run` and `https://api.security.microsoft.com/api/advancedqueries/run` endpoints. The older APIs are now retired and will stop returning data on February 1, 2027.
+
+To migrate to the advanced hunting APIs in Microsoft Graph, update the following parameters in your application:
+
+|Subject  |Older parameters  |Microsoft Graph  |
+|---------|---------|---------|
+|Endpoints     | [https://api.securitycenter.microsoft.com/api/advancedqueries/run](/defender-endpoint/api/run-advanced-query-api) <br/><br/> [https://api.security.microsoft.com/api/advancedhunting/run](/defender-xdr/api-advanced-hunting)        | [https://graph.microsoft.com/beta/security/runHuntingQuery](../api/security-security-runhuntingquery.md)       |
+|Resource URI|Microsoft Defender for Endpoint on `https://api.securitycenter.microsoft.com`|Microsoft Graph on `https://graph.microsoft.com`|
+|API permissions     | *AdvancedQuery.Read* (delegated) and *AdvancedQuery.Read.All* (application) under Microsoft Defender for Endpoint (formerly Windows Defender Advanced Threat Protection) <br/><br/> *AdvancedHunting.Read* (delegated) and *AdvancedHunting.Read.All* (application) under Microsoft Threat Protection       | [*ThreatHunting.Read.All*](/graph/permissions-reference#threathuntingreadall) (delegated and application)       |
+|Request body     | **Query** property. For example `{"Query":"DeviceProcessEvents \|where InitiatingProcessFileName =~ 'powershell.exe' \|where ProcessCommandLine contains 'appdata'\|project Timestamp, FileName, InitiatingProcessFileName, DeviceId\|limit 2"}`        |  **Query** and **Timespan** properties. For example, `{"Query": "DeviceProcessEvents", "Timespan": "P90D"}`      |
+|Response     | **QueryResponse** object consisting of **Stats**, **Schema**, and **Results**        |  [huntingQueryResults resource type](../resources/security-huntingqueryresults.md)", consisting of **schema** (instead of **Schema**) and **results** (instead of **Results**).       |
+
+For more information about how to authorize your app to call Microsoft Graph APIs, see [Get access on behalf of a user](/graph/auth-v2-user) and [Get access without a user](/graph/auth-v2-service).
+
+#### Power Platform flow migration (PowerApps / Power Automate / Logic Apps) 
+
+Microsoft Graph does't have a built-in Advanced Hunting action that was available in the Power Platform connector for Microsoft Defender ATP. To continue using Advanced Hunting in your Power Platform flows, create a custom connector. For more information, see [Create a Microsoft Graph JSON Batch Custom Connector for Power Automate](/graph/tutorials/power-automate) and use the Microsoft Graph parameters described in the preceding table.
+
+#### Power BI flow migration
+
+If you're using a custom Power BI report created with the older API, update your Power BI query to use the Microsoft Graph parameters described in the preceding table. For more information, see [Create custom Microsoft Defender XDR reports using Microsoft Graph security API and Power BI](/defender-xdr/defender-xdr-custom-reports).
 
 ## Alerts
 Alerts are detailed warnings about suspicious activities in a customer's tenant that Microsoft or partner security providers identified and flagged for action. Attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is alerts from multiple security providers for multiple entities in the tenant. Piecing the individual alerts together to gain insight into an attack can be challenging and time-consuming.
 
-The security API offers two types of alerts that aggregate other alerts from security providers and make analyzing attacks and determining response easier: 
-- [Alerts and incidents](#alerts-and-incidents) - these are the latest generation of alerts in the Microsoft Graph security API. They are represented by the [alert](security-alert.md) resource and its collection, [incident](security-incident.md) resource, defined in the `microsoft.graph.security` namespace.
-- [Legacy alerts](#legacy-alerts) - these are the first generation of alerts in the Microsoft Graph security API. They are represented by the [alert](alert.md) resource defined in the `microsoft.graph` namespace.
+The security API offers two types of alerts that aggregate other alerts from security providers and make analyzing attacks and determining responses easier: 
+- [Alerts and incidents](#alerts-and-incidents) - these are the latest generation of alerts in the Microsoft Graph security API. They're represented by the [alert](security-alert.md) resource and its collection, [incident](security-incident.md) resource, defined in the `microsoft.graph.security` namespace.
+- [Legacy alerts](#legacy-alerts) - these are the first generation of alerts in the Microsoft Graph security AI. They're represented by the [alert](alert.md) resource defined in the `microsoft.graph` namespace.
+
+> [!IMPORTANT]
+> To view Sentinel alerts and incidents you must onboard Sentinel to the Defender Portal. For more information see [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops/microsoft-sentinel-onboard).
 
 ### Alerts and incidents
 
@@ -57,16 +86,20 @@ Alerts from the following security providers are available via these rich alerts
 - [Microsoft Defender for Identity](/defender-for-identity/alerts-overview) 
 - [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/overview?view=o365-worldwide&preserve-view=true)
 - [Microsoft Purview Data Loss Prevention](/microsoft-365/compliance/dlp-learn-about-dlp?view=o365-worldwide&preserve-view=true)
+- [Microsoft Purview Insider Risk Management](/purview/insider-risk-management?view=o365-worldwide&preserve-view=true) 
 
 ### Legacy alerts
 
-These [alert](alert.md) resources federate calling of supported Azure and Microsoft 365 Defender security providers. They aggregate common alert data among the different domains to allow applications to unify and streamline management of security issues across all integrated solutions. They enable applications to correlate alerts and context to improve threat protection and response.
+> [!NOTE]
+> The legacy alerts API is deprecated and will be removed by April 2026. We recommend that you migrate to the new [alerts and incidents](/graph/api/resources/security-alert) API.
 
-The legacy version of the security API offers the [alert](alert.md) resource which federates calling of supported Azure and Microsoft 365 Defender security providers. This **alert** resource aggregates alert data that’s common among the different domains to allow applications to unify and streamline management of security issues across all integrated solutions. This enables applications to correlate alerts and context to improve threat protection and response. 
+The legacy [alert](alert.md) resources federate calling of supported Azure and Microsoft 365 Defender security providers. They aggregate common alert data among the different domains to allow applications to unify and streamline management of security issues across all integrated solutions. They enable applications to correlate alerts and context to improve threat protection and response.
+
+The legacy version of the security API offers the [alert](alert.md) resource that federates calling of supported Azure and Microsoft 365 Defender security providers. This **alert** resource aggregates alert data that's common among the different domains to allow applications to unify and streamline management of security issues across all integrated solutions. This enables applications to correlate alerts and context to improve threat protection and response. 
 
 With the alert update capability, you can sync the status of specific alerts across different security products and services that are integrated with the Microsoft Graph security API by updating your **alert** entity.
 
-Alerts from the following providers are available via this **alert** resource. Support for GET alerts, PATCH alerts, and subscribe (via webhooks) is indicated in the following table.
+Alerts from the following providers are available via the **alert** resource. Support for GET alerts, PATCH alerts, and subscribe (via webhooks) is indicated in the following table.
 
 | Security provider | <p align="center">GET alert</p>| <p align="center">PATCH alert</p>| <p align="center">Subscribe to alert</p>|
 |:------------------|:---------|:-----------|:------------------|
@@ -78,24 +111,51 @@ Alerts from the following providers are available via this **alert** resource. S
 |[Microsoft Sentinel](/azure/sentinel/quickstart-get-visibility) (formerly Azure Sentinel)| <p align="center">&#x2713;</p> | <p align="center">Not supported in Microsoft Sentinel </p> | <p align="center">&#x2713;</p> |
 > **Note:** New providers are continuously onboarding to the Microsoft Graph security ecosystem. To request new providers or for extended support from existing providers, [file an issue in the Microsoft Graph security GitHub repo](https://github.com/microsoftgraph/security-api-solutions/issues/new).
 
-\* File issue: Alert status gets updated across Microsoft Graph security API integrated applications but not reflected in the provider’s management experience.
+\* File issue: Alert status gets updated across Microsoft Graph security API integrated applications but not reflected in the provider's management experience.
 
-\*\* Microsoft Defender for Endpoint requires additional [user roles](/windows/security/threat-protection/microsoft-defender-atp/user-roles) to those required by the Microsoft Graph security API. Only the users in both Microsoft Defender for Endpoint and Microsoft Graph security API roles can access the Microsoft Defender for Endpoint data. Because application-only authentication is not limited by this, we recommend that you use an application-only authentication token.
+\*\* Microsoft Defender for Endpoint requires additional [user roles](/windows/security/threat-protection/microsoft-defender-atp/user-roles) to those required by the Microsoft Graph security API. Only the users in both Microsoft Defender for Endpoint and Microsoft Graph security API roles can access the Microsoft Defender for Endpoint data. Because application-only authentication isn't limited by this, we recommend that you use an application-only authentication token.
 
-\*\*\* Microsoft Defender for Identity alerts are available via the Microsoft Defender for Cloud Apps integration. This means you will get Microsoft Defender for Identity alerts only if you joined Unified SecOps and connected Microsoft Defender for Identity into Microsoft Defender for Cloud Apps. Learn more about [how to integrate Microsoft Defender for Identity and Microsoft Defender for Cloud Apps](/defender-for-identity/mcas-integration).
+\*\*\* Microsoft Defender for Identity alerts are available via the Microsoft Defender for Cloud Apps integration. This means you get Microsoft Defender for Identity alerts only if you joined Unified SecOps and connected Microsoft Defender for Identity to Microsoft Defender for Cloud Apps. Learn more about [how to integrate Microsoft Defender for Identity and Microsoft Defender for Cloud Apps](/defender-for-identity/mcas-integration).
 
 ## Attack simulation and training
 
 [Attack simulation and training](/microsoft-365/security/office-365-security/attack-simulation-training) is part of [Microsoft Defender for Office 365](/microsoft-365/security/office-365-security/defender-for-office-365?view=o365-worldwide&preserve-view=true). This service lets users in a tenant experience a realistic benign phishing attack and learn from it. Social engineering simulation and training experiences for end users help reduce the risk of users being breached via those attack techniques. The attack simulation and training API enables tenant administrators to view launched [simulation](simulation.md) exercises and trainings, and get [reports](report-m365defender-reports-overview.md) on derived insights into online behaviors of users in the phishing simulations.
 
-
 ## eDiscovery
 
-[Microsoft Purview eDiscovery (Premium)](/microsoft-365/compliance/overview-ediscovery-20) provides an end-to-end workflow to preserve, collect, analyze, review, and export content that's responsive to your organization's internal and external investigations.
+[Microsoft Purview eDiscovery](/purview/edisc) provides an end-to-end workflow to preserve, collect, analyze, review, and export content that's responsive to your organization's internal and external investigations.
+
+## Audit log query
+
+[Microsoft Purview Audit](/purview/audit-solutions-overview) provides an integrated solution to help organizations effectively respond to security events, forensic investigations, internal investigations, and compliance obligations. Thousands of user and admin operations performed in dozens of Microsoft 365 services and solutions are captured, recorded, and retained in your organization's unified audit log. Audit records for these events are searchable by security ops, IT admins, insider risk teams, and compliance and legal investigators in your organization. This capability provides visibility into the activities performed across your Microsoft 365 organization.
+
+## Identities
+
+### Health issues
+
+The Microsoft Defender for Identity health issues API allows you to monitor the health status of your sensors and agents across your hybrid identity infrastructure. You can use the health issues API to retrieve information about the current health issues of your sensors, such as the issue type, status, configuration, and severity. You can also use this API to identify and resolve any issues that might affect the functionality or security of your sensors and agents.
+
+> **Note:** The Microsoft Defender for Identity health issues API is only available on the Defender for Identity plan or Microsoft 365 E5/A5/G5/F5 Security service plans.
+
+### Sensors
+
+The Defender for Identity sensors management APIs allows you to:
+- Create detailed reports of the sensors in your workspace, including information about the server name, sensor version, type, state, and health status.
+- Manage sensor settings, such as adding descriptions, enabling or disabling delayed updates, and specifying the domain controller that the sensor connects to for querying Entra ID.
+- Identify sensors that are ready to be activated.
+- Define whether the sensors in your infrastructure are to be activated automatically or manually.
+- Identify servers that are ready to be activated with the unified agent.
+- Enable or disable the automatic activation of eligible servers for the unified agent.
+- Activate or deactivate the unified agent on eligible servers.
+- Enable or disable the automatic enabling of the required events auditing configuration during the sensor’s activation.
+
+
+### identityAccounts
+The [identityAccounts resource and related APIs](../resources/security-identityaccounts.md) allows you to retrieve details of users that are flagged by Microsoft Defender for Identity alerts, and apply actions such as disabling accounts and resetting the user password for the compromised user.
 
 ## Incidents
 
-An [incident](security-incident.md) is a collection of correlated  [alerts](security-alert.md) and associated data that make up the story of an attack. Incident management is part of Microsoft 365 Defender, and is available in the Microsoft 365 Defender portal (https://security.microsoft.com/). 
+An [incident](security-incident.md) is a collection of correlated  [alerts](security-alert.md) and associated data that make up the story of an attack. Incident management is part of Microsoft 365 Defender and is available in the Microsoft 365 Defender portal (https://security.microsoft.com/). 
 
 Microsoft 365 services and apps create  alerts  when they detect a suspicious or malicious event or activity. Individual alerts provide valuable clues about a completed or ongoing attack. However, attacks typically employ various techniques against different types of entities, such as devices, users, and mailboxes. The result is multiple  alerts for multiple entities in your tenant. 
 
@@ -105,16 +165,21 @@ Grouping related alerts into an incident gives you a comprehensive view of an at
 
 - Where the attack started. 
 - What tactics were used. 
-- How far the attack has gone into your tenant. 
+- How far the attack went into your tenant. 
 - The scope of the attack, such as how many devices, users, and mailboxes were impacted. 
 - All of the data associated with the attack. 
 
-The  [incident](security-incident.md) resource and its APIs allow you to sort through incidents to create an informed cyber security response. It exposes a collection of incidents, with their related  [alerts](security-alert.md), that were flagged in your network, within the time range you specified in your environment retention policy. 
+The  [incident](security-incident.md) resource and its APIs allow you to sort through incidents to create an informed cybersecurity response. It exposes a collection of incidents, with their related  [alerts](security-alert.md), that were flagged in your network, within the time range you specified in your environment retention policy. 
 
 
 ## Information protection
 
-The Microsoft Graph threat assessment API helps organizations to assess the threat received by any user in a tenant. This empowers customers to report spam emails, phishing URLs or malware attachments they receive to Microsoft. The policy check result and rescan result can help tenant administrators understand the threat scanning verdict and adjust their organizational policy.
+The Microsoft Graph threat assessment API helps organizations assess the threat received by any user in a tenant. This empowers customers to report spam emails, phishing URLs, or malware attachments they receive to Microsoft. The policy check result and rescan result can help tenant administrators understand the threat scanning verdict and adjust their organizational policy.
+
+
+## Records management
+
+Most organizations need to manage data to proactively comply with industry regulations and internal policies, reduce risk in the event of litigation or a security breach, and let people effectively and agilely share knowledge that is current and relevant to them. You can use the [records management APIs](../resources/security-recordsmanagement-overview.md) to systematically apply [retention labels](security-retentionlabel.md) to different types of content that require different retention settings. For example, you can configure the start of the retention period from when the content was created, last modified, labeled, or when an event occurs for a particular event type. Further, you can use [file plan descriptors](security-fileplandescriptor.md) to improve the manageability of these retention labels.
 
 ## Secure Score
 
@@ -128,7 +193,7 @@ The threat intelligence APIs allow you to operationalize intelligence found with
 
 ## Common use cases
 
-The following are some of the most popular requests for working with the Microsoft Graph security API:
+The following are some of the most popular requests for working with the Microsoft Graph security API.
 
 | **Use cases**   | **REST resources** | **Try it in Graph Explorer** |
 |:---------------|:--------|:----------|
@@ -142,6 +207,9 @@ The following are some of the most popular requests for working with the Microso
 | **eDiscovery**|||
 |List eDiscovery cases|[List eDiscoveryCases](../api/security-casesroot-list-ediscoverycases.md)|[https://graph.microsoft.com/v1.0/security/cases/eDiscoveryCases](https://developer.microsoft.com/graph/graph-explorer?request=security%2Fcases%2FeDiscoverycases&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com)|
 |List eDiscovery case operations|[List caseOperations](../api/security-ediscoverycase-list-operations.md)|[https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/{id}/operations](https://developer.microsoft.com/graph/graph-explorer?request=security%2Fcases%2FeDiscoverycases%2F%7Bid%7D%2Foperations&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com)|
+| **Identities**|||
+| List health issues | [List health issues](../api/security-identitycontainer-list-healthissues.md) | [https://graph.microsoft.com/v1.0/security/identities/healthIssues](https://developer.microsoft.com/graph/graph-explorer?request=security/identities/healthIssues&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com) |
+| List sensors | [List sensors](../api/security-identitycontainer-list-sensors.md) | [https://graph.microsoft.com/v1.0/security/identities/sensors](https://developer.microsoft.com/graph/graph-explorer?request=security/identities/sensors&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com) | 
 | **Legacy alerts**|||
 | List alerts | [List alerts](../api/alert-list.md) | [https://graph.microsoft.com/v1.0/security/alerts](https://developer.microsoft.com/graph/graph-explorer?request=security/alerts&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com) |
 | Update alerts | [Update alert](../api/alert-update.md) | [https://graph.microsoft.com/v1.0/security/alerts/{alert-id}](https://developer.microsoft.com/graph/graph-explorer?request=security/alerts/{alert-id}&method=PATCH&version=v1.0&GraphUrl=https://graph.microsoft.com) |
@@ -152,7 +220,7 @@ The following are some of the most popular requests for working with the Microso
 |Get secure score control profile|[Get secureScoreControlProfile](../api/securescorecontrolprofile-get.md) |[https://graph.microsoft.com/v1.0/security/secureScoreControlProfiles/{id}](https://developer.microsoft.com/graph/graph-explorer?request=security/secureScoreControlProfiles/{id}&method=GET&version=v1.0&GraphUrl=https://graph.microsoft.com)|
 
 
-You can use Microsoft Graph [webhooks](/graph/webhooks) to subscribe to and receive notifications about updates to Microsoft Graph security entities.
+You can use Microsoft Graph [change notifications](/graph/change-notifications-overview) to subscribe to and receive notifications about updates to Microsoft Graph security entities.
 
 ## Resources
 
@@ -169,11 +237,11 @@ Engage with the community:
 
 ## Next steps
 
-The Microsoft Graph security API can open up new ways for you to engage with different security solutions from Microsoft and partners. Follow these steps to get started:
+The Microsoft Graph security API can open up new ways for you to engage with different security solutions from Microsoft and its partners. Follow these steps to get started:
 
 - Drill down into [alerts](alert.md), [secureScore](securescore.md), and [secureScoreControlProfiles](securescorecontrolprofile.md).
 - Try the API in the [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer). Under **Sample Queries**, choose **show more samples** and set the Security category to **on**.
-- Try [subscribing to and receiving notifications](/graph/webhooks) on entity changes.
+- Try [subscribing to and receiving notifications](/graph/change-notifications-overview) on entity changes.
 
 ## Related content
 

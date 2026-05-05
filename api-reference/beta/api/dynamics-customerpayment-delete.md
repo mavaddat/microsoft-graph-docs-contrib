@@ -1,12 +1,13 @@
 ---
 title: Delete customerPayments 
-description: Deletes a customer payment object in Dynamics 365 Business Central.
+description: Delete a customer payment object in Dynamics 365 Business Central.
 services: project-madeira
 documentationcenter: ''
 author: SusanneWindfeldPedersen
 ms.localizationpriority: medium
 ms.subservice: "d365-business-central"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Delete customerPayments

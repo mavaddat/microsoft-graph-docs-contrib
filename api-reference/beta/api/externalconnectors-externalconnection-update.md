@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "snlraju-msft"
 ms.subservice: "search"
 doc_type: "apiPageType"
+ms.date: 06/26/2024
 ---
 
 # Update connection
@@ -41,7 +42,7 @@ PATCH /external/connections/{id}
 
 ## Request body
 
-In the request body, supply the values for relevant fields that should be updated. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance, don't include existing values that haven't changed. The following properties can be updated.
+In the request body, supply the values for relevant fields that should be updated. Existing properties that aren't included in the request body maintain their previous values or are recalculated based on changes to other property values. For best performance, don't include existing values that haven't changed. The following properties can be updated.
 
 | Property      | Type                                           | Description |
 |:--------------|:-----------------------------------------------|:------------|
@@ -80,10 +81,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-connection-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-connection-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

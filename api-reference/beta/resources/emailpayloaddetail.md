@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 04/22/2024
 ---
 
 # emailPayloadDetail resource type
@@ -35,10 +36,11 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.emailPayloadDetail"
+  "@odata.type": "microsoft.graph.emailPayloadDetail",
+  "baseType": "microsoft.graph.payloadDetail"
 }
 -->
 ``` json

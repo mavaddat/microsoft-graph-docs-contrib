@@ -5,6 +5,7 @@ author: "simonhult"
 ms.localizationpriority: medium
 ms.subservice: "insights"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # usedInsight resource type
@@ -22,7 +23,7 @@ An insight representing documents used by a specific user. The insights return t
 
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
-|[List used](../api/insights-list-used.md) |[usedInsight](insights-used.md) collection| Get a list of used files.|
+|[List used (deprecated)](../api/insights-list-used.md) |[usedInsight](insights-used.md) collection| Get a list of used files. This API is deprecated and will stop returning data after November 2026.|
 
 ## Properties
 
@@ -40,7 +41,7 @@ An insight representing documents used by a specific user. The insights return t
 | resource    	| [entity](entity.md) collection	| Used for navigating to the item that was used. For file attachments, the type is *fileAttachment*. For linked attachments, the type is *driveItem*. |
 
 ## JSON representation
-Here's a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

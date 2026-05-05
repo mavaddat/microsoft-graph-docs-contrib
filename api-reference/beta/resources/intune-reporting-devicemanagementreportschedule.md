@@ -2,16 +2,17 @@
 title: "deviceManagementReportSchedule resource type"
 description: "Entity representing a schedule for which reports are delivered"
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # deviceManagementReportSchedule resource type
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ Entity representing a schedule for which reports are delivered
 |reportScheduleName|String|Name of the schedule|
 |subject|String|Subject of the scheduled reports that are delivered|
 |emails|String collection|Emails to which the scheduled reports are delivered|
-|recurrence|[deviceManagementScheduledReportRecurrence](../resources/intune-reporting-devicemanagementscheduledreportrecurrence.md)|Frequency of scheduled report delivery. Possible values are: `none`, `daily`, `weekly`, `monthly`.|
+|recurrence|[deviceManagementScheduledReportRecurrence](../resources/intune-reporting-devicemanagementscheduledreportrecurrence.md)|Frequency of scheduled report delivery. The possible values are: `none`, `daily`, `weekly`, `monthly`.|
 |startDateTime|DateTimeOffset|Time that the delivery of the scheduled reports starts|
 |endDateTime|DateTimeOffset|Time that the delivery of the scheduled reports ends|
 |userId|String|The Id of the User who created the report|
@@ -41,7 +42,7 @@ Entity representing a schedule for which reports are delivered
 |filter|String|Filters applied on the report|
 |select|String collection|Columns selected from the report|
 |orderBy|String collection|Ordering of columns in the report|
-|format|[deviceManagementReportFileFormat](../resources/intune-reporting-devicemanagementreportfileformat.md)|Format of the scheduled report. Possible values are: `csv`, `pdf`.|
+|format|[deviceManagementReportFileFormat](../resources/intune-reporting-devicemanagementreportfileformat.md)|Format of the scheduled report. The possible values are: `csv`, `pdf`.|
 
 ## Relationships
 None

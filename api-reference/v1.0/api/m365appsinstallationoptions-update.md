@@ -5,6 +5,7 @@ author: "yan-git"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 09/18/2024
 ---
 
 # Update m365AppsInstallationOptions
@@ -13,6 +14,8 @@ Namespace: microsoft.graph
 
 Update the properties of an [m365AppsInstallationOptions](../resources/m365appsInstallationoptions.md) object.
 
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -20,10 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "m365appsinstallationoptions_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/m365appsinstallationoptions-update-permissions.md)]
 
-When calling on behalf of a user, the user needs to belong to the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-
-+ Global administrator
-+ Office apps administrator
+When calling on behalf of a user, the user needs to belong to the Office apps administrator role.
 
 ## HTTP request
 
@@ -31,7 +31,7 @@ When calling on behalf of a user, the user needs to belong to the following [Mic
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /admin/microsoft365Apps/installationOptions
 ```
 
@@ -39,7 +39,7 @@ PATCH /admin/microsoft365Apps/installationOptions
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
@@ -69,7 +69,7 @@ The following examples show a requet to set the Microsoft 365 update channel.
   "name": "update_m365AppsInstallationOptions"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/admin/microsoft365Apps/installationOptions
 Content-Type: application/json
 
@@ -80,10 +80,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-m365appsinstallationoptions-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-m365appsinstallationoptions-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -117,7 +113,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 
 ```
@@ -128,7 +124,7 @@ HTTP/1.1 204 No Content
 
 The following example shows a request to set the Microsoft 365 apps installation options for a platform.
 
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/admin/microsoft365Apps/installationOptions
 Content-Type: application/json
 
@@ -149,7 +145,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 
 ```
@@ -160,7 +156,7 @@ HTTP/1.1 204 No Content
 
 The following example shows a request to set Microsoft 365 apps update channel and installation options simutaneously.
 
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/admin/microsoft365Apps/installationOptions
 Content-Type: application/json
 
@@ -188,7 +184,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 
 ```

@@ -5,6 +5,7 @@ author: "tracyshi"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # riskyUserHistoryItem resource type
@@ -23,7 +24,6 @@ Inherits from [riskyUser](../resources/riskyuser.md).
 |Method|Return type|Description|
 |:---|:---|:---|
 |[List history](../api/riskyuser-list-history.md)|[riskyUserHistoryItem](../resources/riskyuserhistoryitem.md) collection|Get the riskyUserHistoryItems from the history navigation property.|
-|[Get history](../api/riskyuser-get-riskyuserhistoryitem.md)|[riskyUserHistoryItem](../resources/riskyuserhistoryitem.md)|Read the properties and relationships of a [riskyUserHistoryItem](../resources/riskyuserhistoryitem.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -33,10 +33,10 @@ Inherits from [riskyUser](../resources/riskyuser.md).
 |initiatedBy|String|The ID of actor that does the operation.|
 |isDeleted|Boolean|Indicates whether the user is deleted. Inherited from [riskyUser](../resources/riskyuser.md).|
 |isProcessing|Boolean|Indicates whether a user's risky state is being processed by the backend. Inherited from [riskyUser](../resources/riskyuser.md).|
-|riskDetail|riskDetail|Details of the detected risk. Inherited from [riskyUser](../resources/riskyuser.md). Possible values are: `none`, `adminGeneratedTemporaryPassword`, `userPerformedSecuredPasswordChange`, `userPerformedSecuredPasswordReset`, `adminConfirmedSigninSafe`, `aiConfirmedSigninSafe`, `userPassedMFADrivenByRiskBasedPolicy`, `adminDismissedAllRiskForUser`, `adminConfirmedSigninCompromised`, `hidden`, `adminConfirmedUserCompromised`, `unknownFutureValue`.|
+|riskDetail|riskDetail|Details of the detected risk. Inherited from [riskyUser](../resources/riskyuser.md). The possible values are: `none`, `adminGeneratedTemporaryPassword`, `userPerformedSecuredPasswordChange`, `userPerformedSecuredPasswordReset`, `adminConfirmedSigninSafe`, `aiConfirmedSigninSafe`, `userPassedMFADrivenByRiskBasedPolicy`, `adminDismissedAllRiskForUser`, `adminConfirmedSigninCompromised`, `hidden`, `adminConfirmedUserCompromised`, `unknownFutureValue`.|
 |riskLastUpdatedDateTime|DateTimeOffset|The date and time when the risky user was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [riskyUser](../resources/riskyuser.md).|
-|riskLevel|riskLevel|Level of the detected risky user. Inherited from [riskyUser](../resources/riskyuser.md). Possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.|
-|riskState|riskState|State of the user's risk. Inherited from [riskyUser](../resources/riskyuser.md). Possible values are: `none`, `confirmedSafe`, `remediated`, `dismissed`, `atRisk`, `confirmedCompromised`, `unknownFutureValue`.|
+|riskLevel|riskLevel|Level of the detected risky user. Inherited from [riskyUser](../resources/riskyuser.md). The possible values are: `low`, `medium`, `high`, `hidden`, `none`, `unknownFutureValue`.|
+|riskState|riskState|State of the user's risk. Inherited from [riskyUser](../resources/riskyuser.md). The possible values are: `none`, `confirmedSafe`, `remediated`, `dismissed`, `atRisk`, `confirmedCompromised`, `unknownFutureValue`.|
 |userDisplayName|String|Risky user display name. Inherited from [riskyUser](../resources/riskyuser.md).|
 |userId|String|The ID of the user.|
 |userPrincipalName|String|Risky user principal name. Inherited from [riskyUser](../resources/riskyuser.md).|
@@ -47,7 +47,7 @@ Inherits from [riskyUser](../resources/riskyuser.md).
 |history|[riskyUserHistoryItem](../resources/riskyuserhistoryitem.md) collection| The activity related to user risk level change. Inherited from [riskyUser](../resources/riskyuser.md).|
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

@@ -3,8 +3,9 @@ title: "List responsibilities"
 description: "Get the personResponsibilities from the responsibilities navigation property."
 author: "kevinbellinger"
 ms.localizationpriority: medium
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 
 # List responsibilities
@@ -25,7 +26,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/responsibilities
 GET /users/{id | userPrincipalName}/responsibilities
 ```
@@ -82,7 +83,7 @@ GET https://graph.microsoft.com/beta/me/responsibilities
   "isCollection": true
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

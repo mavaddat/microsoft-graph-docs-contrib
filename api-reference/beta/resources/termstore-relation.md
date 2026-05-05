@@ -5,6 +5,7 @@ author: mohitpcad
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # relation resource type
@@ -24,15 +25,15 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List relations](../api/termstore-term-list-relations.md)|[microsoft.graph.termstore.relation](../resources/termstore-relation.md) collection|Retrieve a list of **relation** objects.|
-|[Create relation](../api/termstore-relation-post.md)|[microsoft.graph.termstore.relation](../resources/termstore-relation.md)|Create a new **relation** object.|
+|[List](../api/termstore-term-list-relations.md)|[microsoft.graph.termstore.relation](../resources/termstore-relation.md) collection|Retrieve a list of **relation** objects.|
+|[Create](../api/termstore-relation-post.md)|[microsoft.graph.termstore.relation](../resources/termstore-relation.md)|Create a new **relation** object.|
 
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|The ID of the relation.|
-|relationship|String|The type of relation. Possible values are: `pin`, `reuse`.|
+|relationship|String|The type of relation. The possible values are: `pin`, `reuse`.|
 
 ## Relationships
 |Relationship|Type|Description|
@@ -42,7 +43,7 @@ Inherits from [entity](../resources/entity.md).
 |toTerm|[microsoft.graph.termStore.term](../resources/termstore-term.md)|The to [term] of the relation. The term to which the relationship is defined.|
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

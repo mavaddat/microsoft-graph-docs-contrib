@@ -4,7 +4,8 @@ description: "Lists the preauthorized client applications"
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "psignoret"
+author: "eringreenlee"
+ms.date: 04/03/2024
 ---
 
 # preAuthorizedApplication resource type
@@ -23,7 +24,7 @@ In some rare cases, an identifier listed in the `delegatedPermissionIds` propert
 |delegatedPermissionIds|String collection| The unique identifier for the [oauth2PermissionScopes](permissionscope.md) the application requires. |
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

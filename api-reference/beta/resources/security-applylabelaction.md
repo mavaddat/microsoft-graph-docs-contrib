@@ -5,6 +5,7 @@ author: "tommoser"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # applyLabelAction resource type
@@ -22,7 +23,7 @@ Inherits from [informationProtectionAction](../resources/security-informationpro
 | Property                    | Type                                                                                           | Description                                                                                                                                   |
 | :-------------------------- | :--------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------- |
 | actions                     | [informationProtectionAction](../resources/security-informationprotectionaction.md) collection | The collection of actions that should be implemented by the caller.                                                                           |
-| actionSource                | [actionSource](../resources/enums.md#actionsource-values)                                      | Specifies why the label was selected. Possible values are: `manual`, `automatic`, `recommended`, `default`.                                   |
+| actionSource                | [actionSource](../resources/enums.md#actionsource-values)                                      | Specifies why the label was selected. The possible values are: `manual`, `automatic`, `recommended`, `default`.                                   |
 | responsibleSensitiveTypeIds | GUID collection                                                                                | If the label was the result of an automatic classification, supply the list of sensitive info type GUIDs that resulted in the returned label. |
 
 ## Relationships
@@ -32,7 +33,7 @@ Inherits from [informationProtectionAction](../resources/security-informationpro
 | sensitivityLabel | [microsoft.graph.security.sensitivityLabel](../resources/security-sensitivitylabel.md) | The label that corresponds to the set of actions returned by the API. |
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.applyLabelAction"

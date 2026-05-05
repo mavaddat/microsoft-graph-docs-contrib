@@ -8,7 +8,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 GraphServiceClient graphClient = new GraphServiceClient(requestAdapter);
 
-graphClient.me().calendar().delete();
+graphClient.me().calendars().byCalendarId("{calendar-id}").delete();
 
 
 ```

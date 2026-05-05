@@ -5,6 +5,7 @@ author: "idwilliams"
 ms.localizationpriority: medium
 ms.subservice: "m365-lighthouse"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get tenant
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /tenantRelationships/managedTenants/tenants/{tenantId}
 ```
 
@@ -57,16 +58,12 @@ If successful, this method returns a `200 OK` response code and a [tenant](../re
   "name": "get_tenant"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/tenantRelationships/managedTenants/tenants/{tenantId}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-tenant-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-tenant-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -103,7 +100,7 @@ GET https://graph.microsoft.com/beta/tenantRelationships/managedTenants/tenants/
   "@odata.type": "microsoft.graph.managedTenants.tenant"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

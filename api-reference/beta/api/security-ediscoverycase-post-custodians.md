@@ -3,8 +3,9 @@ title: "Create custodians"
 description: "Create a new ediscoveryCustodian object."
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: "apiPageType"
+ms.date: 06/11/2024
 ---
 
 # Create custodians
@@ -22,6 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "security_ediscoverycase_post_custodians" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-ediscoverycase-post-custodians-permissions.md)]
+[!INCLUDE [rbac-rbac-ediscovery-custodian-export-apis](../includes/rbac-for-apis/rbac-ediscovery-custodian-export-apis.md)]
 
 ## HTTP request
 
@@ -29,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/cases/ediscoveryCases/{ediscoveryCaseId}/custodians
 ```
 
@@ -63,7 +65,7 @@ The following example shows a request.
   "name": "create_ediscoverycustodian_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/security/cases/ediscoveryCases/{ediscoveryCaseId}/custodians
 Content-Type: application/json
 
@@ -74,10 +76,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-ediscoverycustodian-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-ediscoverycustodian-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +113,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.ediscoveryCustodian"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

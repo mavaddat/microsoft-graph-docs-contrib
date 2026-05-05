@@ -5,6 +5,7 @@ author: Moti-ba
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # reports: webCategoryReport
@@ -12,7 +13,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the number of users, devices, and transactions for destination URLs, grouped by web category.
+Get the [number of users, devices, and transactions for destination URLs](../resources/networkaccess-webcategoriessummary.md), grouped by web category.
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /networkAccessRoot/reports/webCategoryReport(startDateTime={startDateTime},endDateTime={endDateTime})
 ```
 
@@ -62,7 +63,7 @@ The following example shows a request.
   "name": "reportsthis.webcategoryreport"
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/beta/networkaccess/reports/webCategoriesReport(startDateTime=2023-08-20T12:12:59.076Z, endDateTime=2023-08-21T12:12:59.076Z) 
 ```
 
@@ -76,7 +77,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.networkaccess.webCategoriesSummary)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

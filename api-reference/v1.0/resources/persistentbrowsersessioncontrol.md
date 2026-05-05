@@ -6,6 +6,7 @@ author: "lisaychuang"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # persistentBrowserSessionControl resource type
@@ -19,7 +20,7 @@ Session control to define whether to persist cookies or not. Inherits from [Cond
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
 |isEnabled     |Boolean      | Specifies whether the session control is enabled. |
-|mode|persistentBrowserSessionMode| Possible values are: `always`, `never`.|
+|mode|persistentBrowserSessionMode| The possible values are: `always`, `never`.|
 
 ## Relationships
 
@@ -27,7 +28,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

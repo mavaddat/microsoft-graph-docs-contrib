@@ -1,16 +1,20 @@
 ---
-title: "Assign a forwardingProfile to a branchSite"
+title: "Assign a forwardingProfile (deprecated)"
 description: "Create a new branch and assign a forwarding profile."
 author: Moti-ba
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 03/27/2024
 ---
 
-# Create forwardingProfile
+# Create forwardingProfile (deprecated)
 Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+> [!IMPORTANT]
+> Deprecated and to be retired soon. Use the [remoteNetwork resource type](../resources/networkaccess-remotenetwork.md) and its associated methods instead.
 
 Create a new branch and assign a forwarding profile.
 
@@ -31,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /networkAccess/connectivity/branches/{branchSiteId}/forwardingProfiles
 ```
 
@@ -69,7 +73,7 @@ The following example shows a request.
   "name": "create_branch_and_assign_forwardingprofile"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/networkAccess/connectivity/branches/{branchSiteId}/
 Content-Type: application/json
 
@@ -124,7 +128,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.networkaccess.forwardingProfile"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

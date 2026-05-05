@@ -3,8 +3,9 @@ title: "Use the Microsoft Search API to query data"
 description: "Using the search API, apps can search Microsoft 365 data in the context of the authenticated user"
 ms.localizationpriority: high
 author: "njerigrevious"
+doc_type: conceptualPageType
 ms.subservice: "search"
-doc_type: resourcePageType
+ms.date: 05/13/2024
 ---
 
 # Use the Microsoft Search API to query data
@@ -64,7 +65,7 @@ Control pagination of the search results by specifying the following two propert
 Note the following limits if you're searching the **event** or **message** entity:
 
 - **from** must start at zero in the first page request; otherwise, the request results in an HTTP 400 `Bad request`.
-- The maximum number of results per page (**size**) is 25 for **message** and **event**. 
+- The maximum number of results per page (**size**) is 25 for **message** and **event**.
 
 The upper limit for SharePoint or OneDrive items is 1000. A reasonable page size is 200. A larger page size generally incurs higher latency.
 
@@ -98,7 +99,7 @@ If the **fields** specified in the request are either not present in the schema,
 If you do not specify any **fields** in the request,  you will get the default set of properties for all types. For extended properties, **listItem** and **externalItem** behave differently when no **fields** are passed in the request:
 
 - **listItem** will not return any custom field.
-- **externalItem** will return all the fields marked with the **retrievable** attribute in the Microsoft Graph connector schema for that particular connection.
+- **externalItem** will return all the fields marked with the **retrievable** attribute in the Microsoft 365 Copilot connector (formerly Microsoft Graph connectors) schema for that particular connection.
 
 ## Keyword Query Language (KQL) support
 
@@ -120,7 +121,7 @@ Note that collapsing results is currently supported for the following entity typ
 To use the collapse clause effectively, the properties you apply it to must be queryable, and either sortable or refinable.
 When using multi-level collapse,  it's important to note that each subsequent property's limit size specified in a multi-level request should be equal to or smaller than the previous one. If a subsequent property's limit size exceeds the previous one, the server will respond with an `HTTP 400 Bad Request` error.
 
-See [collapse search results](/graph/search-concept-collapse) for more collapse results examples. 
+See [collapse search results](/graph/search-concept-collapse) for more collapse results examples.
 
 ## Sort search results
 
@@ -149,7 +150,7 @@ The properties on which the aggregation is requested need to be refinable in the
 
 Once the response is returned containing the collection of [searchBucket](searchBucket.md) objects, it is possible to refine the search request to only the matching elements contained in one [searchBucket](searchBucket.md). This is achieved by passing back the  **aggregationsFilterToken** value in the **aggregationFilters** property of the subsequent [searchRequest](./searchrequest.md).
 
-Aggregations are currently supported for any refinable property on the following SharePoint and OneDrive types: [driveItem](driveitem.md), [listItem](listitem.md), [list](list.md), [site](site.md), and on Microsoft Graph connectors [externalItem](externalconnectors-externalitem.md).
+Aggregations are currently supported for any refinable property on the following SharePoint and OneDrive types: [driveItem](driveitem.md), [listItem](listitem.md), [list](list.md), [site](site.md), and on Copilot connectors [externalItem](externalconnectors-externalitem.md).
 
 For examples that show how to use aggregation to enhance and narrow down search results, see [Refine search results](/graph/search-concept-aggregation).
 
@@ -194,7 +195,7 @@ The search API has the following limitations:
     | externalItem | -       | -        | -       | -           | True  | True      | -     | True         | True | True     | -      | -    | True |
     | list         | -       | -        | -       | -           | True  | True      | -     | True         | True | True     | -      | -    | True |
     | listItem     | -       | -        | -       | -           | True  | True      | -     | True         | True | True     | -      | -    | True |
-    | message      | -       | -        | True    | -           | -     | -         | -     | -            | -    | -        | -      | -    | -    |  
+    | message      | -       | -        | True    | -           | -     | -         | -     | -            | -    | -        | -      | -    | -    |
     | person       | -       | -        | -       | -           | -     | -         | -     | -            | -    | -        | True   | -    | -    |
     | qna          | True    | True     | -       | -           | -     | -         | -     | -            | -    | -        | -      | True | -    |
     | site         | -       | -        | -       | -           | True  | True      | -     | True         | True | True     | -      | -    | True |

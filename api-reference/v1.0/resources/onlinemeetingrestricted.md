@@ -5,6 +5,7 @@ author: "zihzhan-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # onlineMeetingRestricted resource type
@@ -17,8 +18,8 @@ Indicates the reason or reasons media content from a participant is restricted.
 
 | Property               | Type                                                                                           | Description                                                                |
 |:-----------------------|:-----------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------|
-| contentSharingDisabled | [onlineMeetingContentSharingDisabledReason](#onlinemeetingcontentsharingdisabledreason-values) | Specifies the reason shared content from this participant is disabled. Possible values are: `watermarkProtection`, `unknownFutureValue`.  |
-| videoDisabled          | [onlineMeetingVideoDisabledReason](#onlinemeetingvideodisabledreason-values)                   | Specifies the reason video from this participant is disabled. Possible values are: `watermarkProtection`, `unknownFutureValue`.         |
+| contentSharingDisabled | [onlineMeetingContentSharingDisabledReason](#onlinemeetingcontentsharingdisabledreason-values) | Specifies the reason shared content from this participant is disabled. The possible values are: `watermarkProtection`, `unknownFutureValue`.  |
+| videoDisabled          | [onlineMeetingVideoDisabledReason](#onlinemeetingvideodisabledreason-values)                   | Specifies the reason video from this participant is disabled. The possible values are: `watermarkProtection`, `unknownFutureValue`.         |
 
 ### onlineMeetingContentSharingDisabledReason values
 
@@ -36,7 +37,7 @@ Indicates the reason or reasons media content from a participant is restricted.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -5,6 +5,7 @@ author: "rkarim-ms"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # unifiedRoleManagementPolicyAuthenticationContextRule resource type
@@ -25,7 +26,7 @@ A type derived from the [unifiedRoleManagementPolicyRule](../resources/unifiedro
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

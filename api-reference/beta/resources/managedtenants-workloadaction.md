@@ -5,6 +5,7 @@ author: "idwilliams"
 ms.localizationpriority: medium
 ms.subservice: "m365-lighthouse"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # workloadAction resource type
@@ -19,7 +20,7 @@ Represents an action that will be performed for a specific workload.
 |Property|Type|Description|
 |:---|:---|:---|
 |actionId|String|The unique identifier for the workload action. Required. Read-only.|
-|category|workloadActionCategory|The category for the workload action. Possible values are: `automated`, `manual`, `unknownFutureValue`. Optional. Read-only.|
+|category|workloadActionCategory|The category for the workload action. The possible values are: `automated`, `manual`, `unknownFutureValue`. Optional. Read-only.|
 |description|String|The description for the workload action. Optional. Read-only.|
 |displayName|String|The display name for the workload action. Optional. Read-only.|
 |service|String|The service associated with workload action. Optional. Read-only.|
@@ -29,7 +30,7 @@ Represents an action that will be performed for a specific workload.
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.managedTenants.workloadAction"

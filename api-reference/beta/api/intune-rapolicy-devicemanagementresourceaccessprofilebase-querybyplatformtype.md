@@ -2,16 +2,17 @@
 title: "queryByPlatformType action"
 description: "Intune Rapolicy Devicemanagementresourceaccessprofilebase Querybyplatformtype Api ."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # queryByPlatformType action
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /deviceManagement/resourceAccessProfiles/queryByPlatformType
 ```
 
@@ -61,7 +62,7 @@ If successful, this action returns a `200 OK` response code and a [deviceManagem
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 POST https://graph.microsoft.com/beta/deviceManagement/resourceAccessProfiles/queryByPlatformType
 
 Content-type: application/json
@@ -74,10 +75,10 @@ Content-length: 40
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 487
+Content-Length: 763
 
 {
   "value": [
@@ -91,6 +92,14 @@ Content-Length: 487
       "lastModifiedDateTime": "2017-01-01T00:00:35.1329464-08:00",
       "roleScopeTagIds": [
         "Role Scope Tag Ids value"
+      ],
+      "serverApplicabilityRules": [
+        {
+          "@odata.type": "microsoft.graph.osVersionApplicabilityRule",
+          "filterType": "include",
+          "minOSVersion": "Min OSVersion value",
+          "maxOSVersion": "Max OSVersion value"
+        }
       ]
     }
   ]

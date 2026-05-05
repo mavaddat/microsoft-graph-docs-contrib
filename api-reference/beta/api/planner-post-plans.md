@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "TarkanSevilmis"
 ms.subservice: "planner"
 doc_type: apiPageType
+ms.date: 04/12/2024
 ---
 
 # Create plannerPlan
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Create a new [plannerPlan](../resources/plannerplan.md).
+Create a new [plannerPlan](../resources/plannerplan.md) object.
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
-``` http
+```http
 POST /planner/plans
 ```
 
@@ -49,7 +50,7 @@ The following table lists the properties that are required when you create a [pl
 |container|[plannerPlanContainer](../resources/plannerplancontainer.md)|Identifies the container of the plan. Specify only the **url**, the **containerId** and **type**, or all properties. You can only change this property by moving a plan from one container to another using [plan move to container](../api/plannerplan-movetocontainer.md).|
 |title|String|The title of the plan.|
 
->**Note:** If the container is a Microsoft 365 group, the user who is creating the plan must be a member of the group that will contain the plan. When you create a new group by using [Create group](../api/group-post-groups.md), you are not added to the group as a member. After the group is created, add yourself as a member by using [group post members](../api/group-post-members.md).
+>**Note:** If the container is a Microsoft 365 group, the user who creates the plan must be a member of the group that contains the plan. When you create a new group by using [Create group](../api/group-post-groups.md), you aren't added to the group as a member. After the group is created, add yourself as a member by using [group post members](../api/group-post-members.md).
 
 ## Response
 
@@ -68,7 +69,7 @@ The following example shows a request.
   "blockType": "request",
   "name": "create_plannerplan_from_planner_e1"
 }-->
-``` http
+```http
 POST https://graph.microsoft.com/beta/planner/plans
 Content-type: application/json
 
@@ -82,10 +83,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-plannerplan-from-planner-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-plannerplan-from-planner-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -125,7 +122,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "microsoft.graph.plannerPlan"
 } -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-type: application/json
 

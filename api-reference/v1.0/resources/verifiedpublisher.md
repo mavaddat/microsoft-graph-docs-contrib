@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
 author: "xurobertMSFT"
+ms.date: 04/03/2024
 ---
 
 # verifiedPublisher resource type
@@ -23,7 +24,7 @@ Represents the verified publisher of the [application](application.md). For more
 
 
 ## JSON representation
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

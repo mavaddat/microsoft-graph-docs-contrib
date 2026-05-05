@@ -1,10 +1,11 @@
 ---
 title: "edition resource type"
 description: "Represents a specific edition of a Windows product, such as Enterprise, Core, or Education."
-author: "skandula"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.service: "windows-update-business"
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 01/27/2026
 ---
 
 # edition resource type

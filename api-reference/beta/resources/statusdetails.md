@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "ArvindHarinder1"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 03/21/2024
 ---
 
 # statusDetails resource type (deprecated)
@@ -21,7 +22,7 @@ Describes the status of the provisioning event and the associated errors. It's i
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|status|statusBase|Possible values are: `success`, `warning`, `failure`, `skipped`, `unknownFutureValue`. Inherited from statusBase.|
+|status|statusBase|The possible values are: `success`, `warning`, `failure`, `skipped`, `unknownFutureValue`. Inherited from statusBase.|
 |additionalDetails|String|Additional details if there is an error.|
 |errorCategory|String|Categorizes the error code. Possible values are `Failure`, `NonServiceFailure`, `Success`.|
 |errorCode|String|Unique error code if any occurred. [Learn more](/azure/active-directory/reports-monitoring/concept-provisioning-logs#error-codes)|
@@ -30,7 +31,7 @@ Describes the status of the provisioning event and the associated errors. It's i
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

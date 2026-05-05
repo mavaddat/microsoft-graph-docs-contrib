@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "SuryaLashmiS"
 ms.subservice: "outlook"
 doc_type: "resourcePageType"
+ms.date: 03/21/2024
 ---
 
 # attachmentItem resource type
@@ -19,7 +20,7 @@ Represents attributes of an item to be attached.
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|attachmentType|String| The type of attachment. Possible values are: `file`, `item`, `reference`. Required.|
+|attachmentType|String| The type of attachment. The possible values are: `file`, `item`, `reference`. Required.|
 |contentId|String| The CID or Content-Id of the attachment for referencing in case of in-line attachments using `<img src="cid:contentId">` tag in HTML messages. Optional.|
 |contentType|String|The nature of the data in the attachment. Optional.|
 |isInline|Boolean|`true` if the attachment is an inline attachment; otherwise, `false`. Optional.|
@@ -28,7 +29,7 @@ Represents attributes of an item to be attached.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

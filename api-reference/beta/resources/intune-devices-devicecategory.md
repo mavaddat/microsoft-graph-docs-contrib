@@ -1,17 +1,18 @@
 ---
 title: "deviceCategory resource type"
-description: "Intune Devices Devicecategory Source_Resources ."
+description: "Intune Devices Devicecategory Resources ."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # deviceCategory resource type
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -20,8 +21,8 @@ Namespace: microsoft.graph
 ## Methods
 |Method|Return Type|Description|
 |:---|:---|:---|
-|[Get deviceCategory](../api/intune-devices-devicecategory-get.md)|[deviceCategory](../resources/intune-devices-devicecategory.md)|Read properties and relationships of the [deviceCategory](../resources/intune-devices-devicecategory.md) object.|
-|[Update deviceCategory](../api/intune-devices-devicecategory-update.md)|[deviceCategory](../resources/intune-devices-devicecategory.md)|Update the properties of a [deviceCategory](../resources/intune-devices-devicecategory.md) object.|
+|[Get deviceCategory](../api/intune-devices-devicecategory-get.md)|[deviceCategory](../resources/intune-shared-devicecategory.md)|Read properties and relationships of the [deviceCategory](../resources/intune-shared-devicecategory.md) object.|
+|[Update deviceCategory](../api/intune-devices-devicecategory-update.md)|[deviceCategory](../resources/intune-shared-devicecategory.md)|Update the properties of a [deviceCategory](../resources/intune-shared-devicecategory.md) object.|
 
 ## Properties
 |Property|Type|Description|

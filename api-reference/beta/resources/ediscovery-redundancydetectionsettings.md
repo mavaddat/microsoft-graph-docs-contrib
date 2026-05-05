@@ -3,8 +3,9 @@ title: "redundancyDetectionSettings resource type"
 description: "Redundancy settings for an eDiscovery case."
 author: "mahage-msft"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # redundancyDetectionSettings resource type
@@ -12,6 +13,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 Redundancy (email threading and near duplicate detection) settings for an eDiscovery case.
 
@@ -30,7 +33,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.ediscovery.redundancyDetectionSettings"

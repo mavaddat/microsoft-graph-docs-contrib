@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "sharad-sharma-msft"
 ms.subservice: "education"
 doc_type: "apiPageType"
+ms.date: 07/18/2024
 ---
 
 # Delete educationRubric
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "ignored" } -->
 
 ```http
-DELETE /education/me/rubrics/{rubric-id}
+DELETE /education/me/rubrics/{id}
 ```
 
 ## Request headers
@@ -63,10 +64,6 @@ DELETE https://graph.microsoft.com/v1.0/education/me/rubrics/ceb3863e-6912-4ea9-
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-educationrubric-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-educationrubric-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

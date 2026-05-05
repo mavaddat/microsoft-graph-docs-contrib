@@ -5,6 +5,8 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Graph\Generated\Models\OnlineMeeting;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
@@ -13,6 +15,7 @@ $requestBody = new OnlineMeeting();
 $requestBody->setStartDateTime(new \DateTime('2020-09-09T14:33:30.8546353-07:00'));
 $requestBody->setEndDateTime(new \DateTime('2020-09-09T15:03:30.8566356-07:00'));
 $requestBody->setSubject('Patch Meeting Subject');
+$requestBody->setMeetingSpokenLanguageTag('en-US');
 
 $result = $graphServiceClient->me()->onlineMeetings()->byOnlineMeetingId('onlineMeeting-id')->patch($requestBody)->wait();
 

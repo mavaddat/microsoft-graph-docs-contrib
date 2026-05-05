@@ -5,6 +5,7 @@ author: "koravvams"
 ms.localizationpriority: medium
 ms.subservice: partner-customer-administration
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # delegatedAdminRelationshipCustomerParticipant resource type
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents identification details of a customer in a delegated admin relationship.
+Represents identification details of a customer in a [delegated admin relationship](../resources/delegatedadminrelationship.md) and [delegated admin access assignment](../resources/delegatedadminaccessassignment.md).
 
 ## Properties
 |Property|Type|Description|
@@ -25,7 +26,7 @@ Represents identification details of a customer in a delegated admin relationshi
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.delegatedAdminRelationshipCustomerParticipant"

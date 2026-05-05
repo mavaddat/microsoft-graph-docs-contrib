@@ -5,6 +5,7 @@ author: "saurabhjain0804"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # callRecord: getPstnBlockedUsersLog
@@ -82,10 +83,6 @@ GET https://graph.microsoft.com/beta/communications/callRecords/getPstnBlockedUs
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/callrecordthisgetpstnblockeduserslog-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/callrecordthisgetpstnblockeduserslog-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

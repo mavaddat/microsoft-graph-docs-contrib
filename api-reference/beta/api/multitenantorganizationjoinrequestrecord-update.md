@@ -5,14 +5,16 @@ author: "rolyon"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Update multiTenantOrganizationJoinRequestRecord
+
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Join a multi-tenant organization, after the owner of the multi-tenant organization has added your tenant to the multi-tenant organization as pending.
+Join a multi-tenant organization, after the owner of the multi-tenant organization adds your tenant to the multi-tenant organization as pending.
 
 Before a tenant added to a multi-tenant organization can participate in the multi-tenant organization, the administrator of the joining tenant must submit a join request.
 
@@ -36,7 +38,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /tenantRelationships/multiTenantOrganization/joinRequest
 ```
 
@@ -61,7 +63,7 @@ If successful, this method returns a `204 No Content` response code.
 
 A join request might be unsuccessful. The following are some scenarios:
 
-* The joining tenant has not been added to the multi-tenant organization by its owner.
+* The joining tenant isn't added to the multi-tenant organization by its owner.
 * The owner or joiner tenant exceeds the maximum number of internal users per tenant.
 * The multi-tenant organization would exceed the maximum number of tenants.
 * The joining tenant is already part of a different multi-tenant organization.
@@ -80,7 +82,7 @@ The following example shows a request by the current tenant to join a multi-tena
   "name": "update_multitenantorganizationjoinrequestrecord"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/tenantRelationships/multiTenantOrganization/joinRequest
 Content-Type: application/json
 
@@ -91,10 +93,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-multitenantorganizationjoinrequestrecord-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-multitenantorganizationjoinrequestrecord-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -130,7 +128,7 @@ Content-Type: application/json
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 
@@ -146,7 +144,7 @@ The following example shows a request by the current tenant to reset a failed jo
   "name": "update_multitenantorganizationjoinrequestrecord_joinfailed"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/tenantRelationships/multiTenantOrganization/joinRequest
 Content-Type: application/json
 
@@ -157,10 +155,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-multitenantorganizationjoinrequestrecord-joinfailed-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-multitenantorganizationjoinrequestrecord-joinfailed-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -196,6 +190,6 @@ Content-Type: application/json
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

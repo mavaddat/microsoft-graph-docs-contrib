@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: security
 author: "preetikr"
+ms.date: 07/22/2024
 ---
 
 # fileHash resource type
@@ -17,12 +18,15 @@ Contains stateful information about file hashes (cryptographic and location-sens
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|hashType|[fileHashType](filehashtypeenumtype.md) enum|File hash type. Possible values are: `unknown`, `sha1`, `sha256`, `md5`, `authenticodeHash256`, `lsHash`, `ctph`, `peSha1`, `peSha256`.|
+|hashType|[fileHashType](filehashtypeenumtype.md) enum|File hash type. The possible values are: `unknown`, `sha1`, `sha256`, `md5`, `authenticodeHash256`, `lsHash`, `ctph`, `peSha1`, `peSha256`.|
 |hashValue|String|Value of the file hash.|
+
+## Relationships
+None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

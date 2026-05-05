@@ -5,6 +5,7 @@ author: "idwilliams"
 ms.localizationpriority: medium
 ms.subservice: "m365-lighthouse"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # managementAction resource type
@@ -18,14 +19,14 @@ Represents a baseline management action for a given managed tenant. Examples of 
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List managementActions](../api/managedtenants-managedtenant-list-managementactions.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md) collection|Get a list of the [managementAction](../resources/managedtenants-managementaction.md) objects and their properties.|
-|[Get managementAction](../api/managedtenants-managementaction-get.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md)|Read the properties and relationships of a [managementAction](../resources/managedtenants-managementaction.md) object.|
-|[apply](../api/managedtenants-managementaction-apply.md)|[microsoft.graph.managedTenants.managementActionDeploymentStatus](../resources/managedtenants-managementactiondeploymentstatus.md)|Applies the management actions against the managed tenant.|
+|[List management action](../api/managedtenants-managedtenant-list-managementactions.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md) collection|Get a list of the [managementAction](../resources/managedtenants-managementaction.md) objects and their properties.|
+|[Get management action](../api/managedtenants-managementaction-get.md)|[microsoft.graph.managedTenants.managementAction](../resources/managedtenants-managementaction.md)|Read the properties and relationships of a [managementAction](../resources/managedtenants-managementaction.md) object.|
+|[Apply management action](../api/managedtenants-managementaction-apply.md)|[microsoft.graph.managedTenants.managementActionDeploymentStatus](../resources/managedtenants-managementactiondeploymentstatus.md)|Applies the management actions against the managed tenant.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|category|managementCategory|The category for the management action. Possible values are: `custom`, `devices`, `identity`, `unknownFutureValue`. Optional. Read-only.|
+|category|managementCategory|The category for the management action. The possible values are: `custom`, `devices`, `identity`, `unknownFutureValue`. Optional. Read-only.|
 |description|String|The description for the management action. Optional. Read-only.|
 |displayName|String|The display name for the management action. Optional. Read-only.|
 |id|String|The unique identifier for the management action. Required. Read-only.|
@@ -36,7 +37,7 @@ Represents a baseline management action for a given managed tenant. Examples of 
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

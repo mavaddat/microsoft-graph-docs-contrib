@@ -5,9 +5,11 @@ author: "shubhamguptacal"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
+toc.title: User last sign-in recommendation insight setting
 ---
 
-# userlastsignInrecommendationinsightsetting resource type
+# userLastSignInRecommendationInsightSetting resource type
 
 Namespace: microsoft.graph
 
@@ -29,7 +31,7 @@ Inherits from [accessReviewRecommendationInsightSetting](accessReviewRecommendat
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.userLastSignInRecommendationInsightSetting",

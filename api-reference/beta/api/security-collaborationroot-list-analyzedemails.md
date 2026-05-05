@@ -5,6 +5,7 @@ author: "ajaj-shaikh"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # List analyzedEmails
@@ -16,6 +17,8 @@ Namespace: microsoft.graph.security
 Get a list of [analyzedEmail](../resources/security-analyzedemail.md) objects and their properties.
 
 This API allows Security Operations teams to have direct access to hunt (query) for threats, IOCs, attack vectors, and evidences for a tenant. It is a powerful, near real-time tool to help Security Operations teams investigate and respond to threats. It consists of email metadata, verdict information, related underlying entities (attachments/URL), filters, and more.
+
+[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
 ## Permissions
 
@@ -30,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/collaboration/analyzedEmails
 ```
 
@@ -45,22 +48,23 @@ In the request URL, provide the following required query parameters with values.
 
 ### OData query parameters
 
-This method supports the following OData query parameters to help customize the response: `$count`, `$filter`, `$skip`, `$top`. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the following OData query parameters to help customize the response: `$count`, `$filter`, `$skiptoken`, `$top`. For general information, see [OData query parameters](/graph/query-parameters).
 
 The following example shows how to use the `$filter` parameter to customize the response.
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
-GET /security/collaboration/analyzedemails?startTime=2024-02-18&endTime=2024-02-20&filter=NetworkMessageId eq  'bde1f764-bbf4-5673-fbba-0asdhsgfhf1'
+```http
+GET /security/collaboration/analyzedemails?startTime=2024-02-18&endTime=2024-02-20&filter=networkMessageId eq 'bde1f764-bbf4-5673-fbba-0asdhsgfhf1'
+GET /security/collaboration/analyzedemails?startTime=2024-02-18&endTime=2024-02-20&filter=networkMessageId eq 'bde1f764-bbf4-5673-fbba-0asdhsgfhf1' and recipientEmailAddress eq 'tomas.richardson@contoso.com'
 ```
 
 ## Request headers
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -80,10 +84,9 @@ The following example shows a request.
   "name": "list_analyzedemail"
 }
 -->
-``` http
+```http
 GET https:security/collaboration/analyzedemails?startTime=2024-02-18&endTime=2024-02-20
 ```
-
 
 ### Response
 
@@ -95,7 +98,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.security.analyzedEmail)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -103,33 +106,29 @@ Content-Type: application/json
   "value": [
     {
       "@odata.type": "#microsoft.graph.security.analyzedEmail",
-      "id": "3570a93a-82b1-ffb9-8c26-a9a2ca002a17",
-      "loggedDateTime": "String (timestamp)",
+      "id": "String",
+      "loggedDateTime": "Datetime",
       "networkMessageId": "String",
       "internetMessageId": "String",
       "senderDetail": {
         "@odata.type": "microsoft.graph.security.analyzedEmailSenderDetail"
       },
-      "recipientEmailAddresses": [
-        "String"
-      ],
+      "recipientEmailAddress": "String",
       "distributionList": "String",
       "subject": "String",
       "returnPath": "String",
-      "directionality": "String",
+      "directionality": "microsoft.graph.security.antispamDirectionality",
       "originalDelivery": {
         "@odata.type": "microsoft.graph.security.analyzedEmailDeliveryDetail"
       },
       "latestDelivery": {
         "@odata.type": "microsoft.graph.security.analyzedEmailDeliveryDetail"
       },
-      "attachmentsCount": "Integer",
       "attachments": [
         {
           "@odata.type": "microsoft.graph.security.analyzedEmailAttachment"
         }
       ],
-      "urlsCount": "Integer",
       "urls": [
         {
           "@odata.type": "microsoft.graph.security.analyzedEmailUrl"
@@ -148,7 +147,9 @@ Content-Type: application/json
       "overrideSources": [
         "String"
       ],
-      "threatType": "String",
+      "threatTypes": [
+        "microsoft.graph.security.threatType"
+      ],
       "detectionMethods": [
         "String"
       ],
@@ -163,9 +164,31 @@ Content-Type: application/json
       "bulkComplaintLevel": "String",
       "emailClusterId": "String",
       "policyAction": "String",
-      "policy": "String"
+      "policy": "String",
+      "timelineEvents": [
+        {
+          "@odata.type": "microsoft.graph.security.timelineEvent"
+        }
+      ],
+      "threatDetectionDetails": [
+        {
+          "@odata.type": "microsoft.graph.security.threatDetectionDetail"
+        }
+      ],
+      "primaryOverrideSource": "String",
+      "inboundConnectorFormattedName": "String",
+      "policyType": "String",
+      "clientType": "String",
+      "dlpRules": [
+        {
+          "@odata.type": "microsoft.graph.security.analyzedEmailDlpRuleInfo"
+        }
+      ],
+      "forwardingDetail": "String",
+      "recipientDetail": {
+        "@odata.type": "microsoft.graph.security.analyzedEmailRecipientDetail"
+      }
     }
   ]
 }
 ```
-

@@ -6,6 +6,7 @@ author: "DougKirschner"
 ms.reviewer: msodsrbac
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 11/15/2024
 ---
 
 # Get authorizationPolicy
@@ -65,10 +66,6 @@ GET https://graph.microsoft.com/beta/policies/authorizationPolicy
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-authorizationpolicy-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-authorizationpolicy-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

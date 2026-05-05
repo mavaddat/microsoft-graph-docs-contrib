@@ -2,9 +2,10 @@
 title: "remoteAssistancePartner resource type"
 description: "RemoteAssistPartner resources represent the metadata and status of a given Remote Assistance partner service."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 09/13/2024
 ---
 
 # remoteAssistancePartner resource type
@@ -32,7 +33,7 @@ RemoteAssistPartner resources represent the metadata and status of a given Remot
 |id|String|Unique identifier of the partner.|
 |displayName|String|Display name of the partner.|
 |onboardingUrl|String|URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.|
-|onboardingStatus|[remoteAssistanceOnboardingStatus](../resources/intune-remoteassistance-remoteassistanceonboardingstatus.md)|A friendly description of the current TeamViewer connector status. Possible values are: `notOnboarded`, `onboarding`, `onboarded`.|
+|onboardingStatus|[remoteAssistanceOnboardingStatus](../resources/intune-remoteassistance-remoteassistanceonboardingstatus.md)|A friendly description of the current TeamViewer connector status. The possible values are: `notOnboarded`, `onboarding`, `onboarded`.|
 |lastConnectionDateTime|DateTimeOffset|Timestamp of the last request sent to Intune by the TEM partner.|
 
 ## Relationships

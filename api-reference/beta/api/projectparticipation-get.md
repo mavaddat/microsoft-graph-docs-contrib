@@ -3,8 +3,9 @@ title: "Get projectParticipation"
 description: "Retrieve the properties and relationships of a projectParticipation object."
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 07/11/2024
 ---
 
 # Get projectParticipation
@@ -69,10 +70,6 @@ GET https://graph.microsoft.com/beta/me/profile/projects/{id}
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-projectparticipation-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-projectparticipation-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -157,6 +154,7 @@ Content-type: application/json
       "displayName": "Adventureworks Inc.",
       "pronunciation": null,
       "department": "Consulting",
+      "companyCode": "C-100",
       "officeLocation": null,
       "address": null,
       "webUrl": "https://adventureworks.com"

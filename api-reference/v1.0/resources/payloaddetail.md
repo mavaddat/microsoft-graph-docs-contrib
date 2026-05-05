@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 05/15/2024
 ---
 
 # payloadDetail resource type
@@ -19,7 +20,7 @@ Base type of [emailPayloadDetail](../resources/emailpayloaddetail.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
-|coachmarks|[payloadCoachmark](../resources/payloadcoachmark.md) collection|Payload coachmark details.|
+|coachMarks|[payloadCoachmark](../resources/payloadcoachmark.md) collection|Payload coachmark details.|
 |content|String|Payload content details.|
 |phishingUrl|String|The phishing URL used to target a user.|
 

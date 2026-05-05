@@ -5,6 +5,7 @@ author: "mlafleur"
 ms.localizationpriority: medium
 ms.subservice: "industry-data-etl"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # fileValidateOperation resource type
@@ -27,8 +28,8 @@ Inherits from [validateOperation](industrydata-validateoperation.md).
 
 | Method                                                                            | Return type                                                                                              | Description                                                                                                          |
 | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
-| [List fileValidateOperations](../api/industrydata-filevalidateoperation-list.md) | [microsoft.graph.industryData.fileValidateOperation](industrydata-filevalidateoperation.md) collection | Get a list of the [fileValidateOperation](industrydata-filevalidateoperation.md) objects and their properties.     |
-| [Get fileValidateOperation](../api/industrydata-filevalidateoperation-get.md)    | [microsoft.graph.industryData.fileValidateOperation](industrydata-filevalidateoperation.md)            | Read the properties and relationships of an [fileValidateOperation](industrydata-filevalidateoperation.md) object. |
+| [List](../api/industrydata-filevalidateoperation-list.md) | [microsoft.graph.industryData.fileValidateOperation](industrydata-filevalidateoperation.md) collection | Get a list of the [fileValidateOperation](industrydata-filevalidateoperation.md) objects and their properties.     |
+| [Get](../api/industrydata-filevalidateoperation-get.md)    | [microsoft.graph.industryData.fileValidateOperation](industrydata-filevalidateoperation.md)            | Read the properties and relationships of an [fileValidateOperation](industrydata-filevalidateoperation.md) object. |
 
 ## Properties
 
@@ -39,7 +40,7 @@ Inherits from [validateOperation](industrydata-validateoperation.md).
 | id                 | String                                                   | The unique identifier for the operation. Inherited from [validateOperation](../resources/industrydata-validateoperation.md).                                                                                             |
 | lastActionDateTime | DateTimeOffset                                           | The date and time when the last action was run on this operation. Inherited from [validateOperation](../resources/industrydata-validateoperation.md).                                                                    |
 | resourceLocation   | String                                                   | The canonical URL of the resource. Inherited from [validateOperation](../resources/industrydata-validateoperation.md).                                                                                                   |
-| status             | longRunningOperationStatus                               | The status of the long-running operation. Inherited from [validateOperation](../resources/industrydata-validateoperation.md). Possible values are: `notStarted`, `running`, `succeeded`, `failed`, `unknownFutureValue`. |
+| status             | longRunningOperationStatus                               | The status of the long-running operation. Inherited from [validateOperation](../resources/industrydata-validateoperation.md). The possible values are: `notStarted`, `running`, `succeeded`, `failed`, `unknownFutureValue`. |
 | statusDetail       | String                                                   | The detail about the status value. Inherited from [validateOperation](../resources/industrydata-validateoperation.md).                                                                                                   |
 | validatedFiles     | String collection                                        | Set of files validated by the validate operation.                                                                                                                                                                        |
 | warnings           | [microsoft.graph.publicError](publicerror.md) collection | Set of warnings discovered through validation. Inherited from [validateOperation](../resources/industrydata-validateoperation.md).                                                                                       |
@@ -50,7 +51,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

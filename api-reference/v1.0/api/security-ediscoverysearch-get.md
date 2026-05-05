@@ -3,8 +3,9 @@ title: "Get ediscoverySearch"
 description: "Read the properties and relationships of an ediscoverySearch object."
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: "apiPageType"
+ms.date: 06/10/2024
 ---
 
 # Get ediscoverySearch
@@ -22,13 +23,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "security_ediscoverysearch_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-ediscoverysearch-get-permissions.md)]
 
+[!INCLUDE [rbac-ediscovery-read](../includes/rbac-for-apis/rbac-ediscovery-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/cases/ediscoveryCases/{ediscoveryCaseId}/searches/{ediscoverySearchId}
 ```
 
@@ -58,16 +61,12 @@ The following example shows a request.
   "name": "get_ediscoverysearch"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/58399dff-cebe-478f-b1af-d3227f1fd645/searches/60150269-9758-4439-9bc4-453c864d082f
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-ediscoverysearch-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-ediscoverysearch-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -105,7 +104,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.ediscoverySearch"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

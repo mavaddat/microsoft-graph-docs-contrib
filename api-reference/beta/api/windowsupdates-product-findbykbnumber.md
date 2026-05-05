@@ -1,10 +1,11 @@
 ---
 title: "product: findByKbNumber"
 description: "Find the product revisions associated with a knowledge base number and the known issues directly or indirectly related to the knowledge base number."
-author: "skandula"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: "windows-update-business"
+ms.subservice: windows-autopatch
 doc_type: apiPageType
+ms.date: 01/27/2026
 ---
 
 # product: findByKbNumber
@@ -14,6 +15,8 @@ Namespace: microsoft.graph.windowsUpdates
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Find the product revisions associated with a knowledge base number and the known issues directly or indirectly related to the knowledge base number.
+
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -30,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/windows/updates/products/FindByKbNumber(kbNumber={kbNumber})
 ```
 
@@ -68,16 +71,12 @@ The following example shows a request.
   "name": "windowsupdates.findByCatalogId"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/windows/updates/products/FindByKbNumber(kbNumber=5029332)?expand=revisions($expand=catalogEntry,knowledgeBaseArticle),knownIssues
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/windowsupdatesfindbycatalogid-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/windowsupdatesfindbycatalogid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -94,6 +93,10 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/products/FindByKbNumb
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/windowsupdatesfindbycatalogid-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/windowsupdatesfindbycatalogid-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -114,7 +117,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.windowsUpdates.product)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

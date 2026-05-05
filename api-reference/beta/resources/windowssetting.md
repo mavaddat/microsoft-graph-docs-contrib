@@ -5,6 +5,7 @@ author: "MS-Arko"
 ms.localizationpriority: medium
 ms.subservice: "project-rome"
 doc_type: resourcePageType
+ms.date: 04/24/2024
 ---
 
 # windowsSetting resource type
@@ -25,8 +26,9 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List Windows settings](../api/usersettings-list-windows.md)|[windowsSetting](../resources/windowssetting.md) collection|Get a list of the [windowsSetting](../resources/windowssetting.md) objects and their properties.|
-|[Get windowsSetting](../api/windowssetting-get.md)|[windowsSetting](../resources/windowssetting.md)|Read the properties and relationships of a [windowsSetting](../resources/windowssetting.md) object.|
+|[List](../api/usersettings-list-windows.md)|[windowsSetting](../resources/windowssetting.md) collection|Get a list of the [windowsSetting](../resources/windowssetting.md) objects and their properties.|
+|[Get](../api/windowssetting-get.md)|[windowsSetting](../resources/windowssetting.md)|Read the properties and relationships of a [windowsSetting](../resources/windowssetting.md) object.|
+|[Delete](../api/windowssetting-delete.md)|None|Delete all [windowsSetting](../resources/windowssetting.md) objects of a user.|
 |[List instances](../api/windowssetting-list-instances.md)|[windowsSettingInstance](../resources/windowssettinginstance.md) collection|Read the properties and relationships of a [windowsSettingInstance](../resources/windowssettinginstance.md) object by passing the Windows setting ID and Windows setting instance ID in the URL.|
 
 ## Properties
@@ -34,7 +36,7 @@ Inherits from [entity](../resources/entity.md).
 |:---|:---|:---|
 |id|String|The unique identifier of the object.|
 |payloadType|String|The type of setting payloads contained in the *instances* navigation property.|
-|settingType|**windowsSettingType**|The type of setting. Possible values are: `roaming`, `backup`, `unknownFutureValue`.|
+|settingType|**windowsSettingType**|The type of setting. The possible values are: `roaming`, `backup`, `unknownFutureValue`.|
 |windowsDeviceId|String|A unique identifier for the device the setting might belong to if it is of the **settingType** `backup`.|
 
 ## Relationships

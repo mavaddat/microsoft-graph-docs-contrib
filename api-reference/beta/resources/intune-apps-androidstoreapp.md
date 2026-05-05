@@ -2,16 +2,17 @@
 title: "androidStoreApp resource type"
 description: "Contains properties and inherited properties for Android store apps."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # androidStoreApp resource type
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -53,7 +54,6 @@ Inherits from [mobileApp](../resources/intune-shared-mobileapp.md)
 |supersedingAppCount|Int32|The total number of apps this app directly or indirectly supersedes. This property is read-only. Inherited from [mobileApp](../resources/intune-shared-mobileapp.md)|
 |supersededAppCount|Int32|The total number of apps this app is directly or indirectly superseded by. This property is read-only. Inherited from [mobileApp](../resources/intune-shared-mobileapp.md)|
 |packageId|String|The package identifier. This property is read-only.|
-|appIdentifier|String|The Identity Name. This property is read-only.|
 |appStoreUrl|String|The Android app store URL.|
 |minimumSupportedOperatingSystem|[androidMinimumOperatingSystem](../resources/intune-apps-androidminimumoperatingsystem.md)|The value for the minimum applicable operating system.|
 
@@ -62,6 +62,7 @@ Inherits from [mobileApp](../resources/intune-shared-mobileapp.md)
 |:---|:---|:---|
 |categories|[mobileAppCategory](../resources/intune-apps-mobileappcategory.md) collection|The list of categories for this app. Inherited from [mobileApp](../resources/intune-shared-mobileapp.md)|
 |assignments|[mobileAppAssignment](../resources/intune-apps-mobileappassignment.md) collection|The list of group assignments for this mobile app. Inherited from [mobileApp](../resources/intune-shared-mobileapp.md)|
+|targetAssignments|[deviceAndAppManagementPayloadAssignment](../resources/intune-apps-deviceandappmanagementpayloadassignment.md) collection|The list of target assignments for this mobile app. Initially, this property will just expose deployment assignments. Inherited from [mobileApp](../resources/intune-shared-mobileapp.md)|
 |relationships|[mobileAppRelationship](../resources/intune-apps-mobileapprelationship.md) collection|The set of direct relationships for this app. Inherited from [mobileApp](../resources/intune-shared-mobileapp.md)|
 
 ## JSON Representation
@@ -102,7 +103,6 @@ Here is a JSON representation of the resource.
   "supersedingAppCount": 1024,
   "supersededAppCount": 1024,
   "packageId": "String",
-  "appIdentifier": "String",
   "appStoreUrl": "String",
   "minimumSupportedOperatingSystem": {
     "@odata.type": "microsoft.graph.androidMinimumOperatingSystem",
@@ -121,7 +121,11 @@ Here is a JSON representation of the resource.
     "v8_1": true,
     "v9_0": true,
     "v10_0": true,
-    "v11_0": true
+    "v11_0": true,
+    "v12_0": true,
+    "v13_0": true,
+    "v14_0": true,
+    "v15_0": true
   }
 }
 ```

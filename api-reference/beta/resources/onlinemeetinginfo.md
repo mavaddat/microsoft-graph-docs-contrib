@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "ananmishr"
 ms.subservice: "teams"
 doc_type: "resourcePageType"
+ms.date: 03/21/2024
 ---
 
 # onlineMeetingInfo resource type
@@ -26,7 +27,7 @@ Details for an attendee to join the meeting online.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

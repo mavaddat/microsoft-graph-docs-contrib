@@ -4,6 +4,8 @@ description: "Use the Outlook mail API to share mail folders with others and man
 author: "SuryaLashmiS"
 ms.localizationpriority: high
 ms.subservice: "outlook"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Get Outlook messages in a shared or delegated folder

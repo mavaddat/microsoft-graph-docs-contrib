@@ -6,6 +6,8 @@ documentationcenter: ''
 author: SusanneWindfeldPedersen
 ms.localizationpriority: medium
 ms.subservice: "d365-business-central"
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Dynamics 365 Business Central API overview (preview)

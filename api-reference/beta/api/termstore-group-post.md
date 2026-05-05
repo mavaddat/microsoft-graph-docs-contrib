@@ -5,6 +5,7 @@ author: mohitpcad
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Create group
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /termStore/groups
 ```
 
@@ -62,7 +63,7 @@ If successful, this method returns a `201 Created` response code and a [group](.
   "displayName": "myGroup"
 }-->
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/termStore/groups
 Content-Type: application/json
 
@@ -80,7 +81,7 @@ Content-Type: application/json
   "@odata.type": "microsoft.graph.termStore.group"
 }-->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

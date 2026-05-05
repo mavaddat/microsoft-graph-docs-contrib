@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # trainingSetting resource type
@@ -21,7 +22,7 @@ Base type of [customTrainingSetting](../resources/customtrainingsetting.md), [mi
 
 |Property|Type|Description|
 |:---|:---|:---|
-|settingType|trainingSettingType|Type of setting. Possible values are: `microsoftCustom`, `microsoftManaged`, `noTraining`, `custom`, `unknownFutureValue`.|
+|settingType|trainingSettingType|Type of setting. The possible values are: `microsoftCustom`, `microsoftManaged`, `noTraining`, `custom`, `unknownFutureValue`.|
 
 ## Relationships
 
@@ -29,7 +30,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

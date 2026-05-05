@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "egreenberg14"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 03/21/2024
 ---
 
 # keyValue resource type
@@ -58,7 +59,7 @@ The configuration of this resource is shared by the following objects:
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

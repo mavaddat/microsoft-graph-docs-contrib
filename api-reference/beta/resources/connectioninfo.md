@@ -5,6 +5,7 @@ author: "markwahl-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # connectionInfo resource type
@@ -15,6 +16,10 @@ Namespace: microsoft.graph
 
 The connectionInfo object defines the resource locator that is used to communicate with a resource in Microsoft Entra Entitlement Management.
 
+The following types are derived from connectionInfo:
+
+- [externalTokenBasedSapIagConnectionInfo](../resources/externaltokenbasedsapiagconnectioninfo.md)
+
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
@@ -24,7 +29,7 @@ The connectionInfo object defines the resource locator that is used to communica
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.connectionInfo"

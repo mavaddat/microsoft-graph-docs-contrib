@@ -5,6 +5,7 @@ author: "jyothig123"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get accessReviewPolicy
@@ -22,13 +23,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "accessreviewpolicy_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/accessreviewpolicy-get-permissions.md)]
 
+[!INCLUDE [rbac-access-review-policy-apis-read](../includes/rbac-for-apis/rbac-access-review-policy-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /policies/accessReviewPolicy
 GET /identityGovernance/accessReviews/policy
 ```
@@ -55,16 +58,12 @@ If successful, this method returns a `200 OK` response code and an [accessReview
   "name": "get_accessreviewpolicy"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/policies/accessReviewPolicy
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-accessreviewpolicy-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-accessreviewpolicy-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -101,7 +100,7 @@ GET https://graph.microsoft.com/beta/policies/accessReviewPolicy
   "@odata.type": "microsoft.graph.accessReviewPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -123,16 +122,12 @@ Content-Type: application/json
   "name": "get_accessreviewpolicy_2"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/accessReviews/policy
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-accessreviewpolicy-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-accessreviewpolicy-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -169,7 +164,7 @@ GET https://graph.microsoft.com/beta/identityGovernance/accessReviews/policy
   "@odata.type": "microsoft.graph.accessReviewPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

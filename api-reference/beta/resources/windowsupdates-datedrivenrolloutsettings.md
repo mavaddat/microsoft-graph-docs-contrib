@@ -1,10 +1,11 @@
 ---
 title: "dateDrivenRolloutSettings resource type"
 description: "Represents settings for controlling how to roll out by a specific end date."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: windows-update-business
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 01/27/2026
 ---
 
 # dateDrivenRolloutSettings resource type
@@ -27,7 +28,7 @@ Inherits from [gradualRolloutSettings](../resources/windowsupdates-gradualrollou
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.windowsUpdates.dateDrivenRolloutSettings"

@@ -4,7 +4,8 @@ description: "Represents the definition of a delegated permission, sometimes ref
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-sign-in"
-author: "psignoret"
+author: "eringreenlee"
+ms.date: 04/03/2024
 ---
 
 # permissionScope resource type
@@ -30,7 +31,7 @@ Delegated permissions can be requested by client applications needing an access 
 
 ## JSON representation
 
-Here's a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

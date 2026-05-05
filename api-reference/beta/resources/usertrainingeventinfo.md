@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # userTrainingEventInfo resource type
@@ -19,7 +20,7 @@ Represents events of a training assigned to a user in an attack simulation and t
 |Property|Type|Description|
 |:---|:---|:---|
 |displayName|String|Display name of the training.|
-|latestTrainingStatus|trainingStatus|Latest status of the training assigned to the user. Possible values are: `unknown`, `assigned`, `inProgress`, `completed`, `overdue`, `unknownFutureValue`.|
+|latestTrainingStatus|trainingStatus|Latest status of the training assigned to the user. The possible values are: `unknown`, `assigned`, `inProgress`, `completed`, `overdue`, `unknownFutureValue`.|
 |trainingAssignedProperties|[userTrainingContentEventInfo](../resources/usertrainingcontenteventinfo.md)|Event details of the training when it was assigned to the user.|
 |trainingCompletedProperties|[userTrainingContentEventInfo](../resources/usertrainingcontenteventinfo.md)|Event details of the training when it was completed by the user.|
 |trainingUpdatedProperties|[userTrainingContentEventInfo](../resources/usertrainingcontenteventinfo.md)|Event details of the training when it was updated/in-progress by the user.|
@@ -28,7 +29,7 @@ Represents events of a training assigned to a user in an attack simulation and t
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.userTrainingEventInfo"

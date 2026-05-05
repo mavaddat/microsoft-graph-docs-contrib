@@ -2,9 +2,10 @@
 title: "Update deviceAppManagement"
 description: "Update the properties of a deviceAppManagement object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update deviceAppManagement
@@ -31,7 +32,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceAppManagement
 ```
 
@@ -62,7 +63,7 @@ Here is an example of the request.
 
 # [HTTP](#tab/http)
 <!-- { "blockType": "request" , "name" : "intune_policyset_deviceappmanagement_update_update_deviceappmanagement" }-->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/deviceAppManagement
 Content-type: application/json
 Content-length: 61
@@ -74,10 +75,6 @@ Content-length: 61
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/intune-policyset-deviceappmanagement-update-update-deviceappmanagement-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/intune-policyset-deviceappmanagement-update-update-deviceappmanagement-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,7 +107,7 @@ Content-length: 61
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
 
 <!-- { "blockType": "response" , "@odata.type" : "microsoft.graph.deviceAppManagement" }-->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 110

@@ -1,10 +1,11 @@
 ---
 title: "Get remoteDesktopSecurityConfiguration"
 description: "Read the properties and relationships of a remoteDesktopSecurityConfiguration object on a servicePrincipal."
-author: "SanDeo-MSFT"
+author: "mjsantani"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 01/02/2026
 ---
 
 # Get remoteDesktopSecurityConfiguration
@@ -14,7 +15,7 @@ Namespace: microsoft.graph
 
 Read the properties and relationships of a [remoteDesktopSecurityConfiguration](../resources/remotedesktopsecurityconfiguration.md) object on a servicePrincipal. Use this configuration to view the Microsoft Entra ID [Remote Desktop Services (RDS) authentication protocol](/openspecs/windows_protocols/ms-rdpbcgr/dc43f040-d75d-49a9-90c6-0c9999281136) to authenticate a user to [Microsoft Entra joined](/azure/active-directory/devices/concept-directory-join) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-hybrid-join) devices. Additionally you can view any targetDeviceGroups that have been configured for SSO.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -26,12 +27,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 ## HTTP request
 
+You can address the service principal using either its **id** or **appId**. **id** and **appId** are referred to as the **Object ID** and **Application (Client) ID**, respectively, in app registrations in the Microsoft Entra admin center.
+
 <!-- {
   "blockType": "ignored"
 }
 -->
 ``` http
-GET /servicePrincipals/{servicePrincipalsId}/remoteDesktopSecurityConfiguration
+GET /servicePrincipals/{id}/remoteDesktopSecurityConfiguration
+GET /servicePrincipals(appId='{appId}')/remoteDesktopSecurityConfiguration
 ```
 
 ## Optional query parameters
@@ -65,10 +69,6 @@ GET https://graph.microsoft.com/beta/servicePrincipals/00af5dfb-85da-4b41-a677-0
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-remotedesktopsecurityconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-remotedesktopsecurityconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -111,17 +111,15 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.type": "#microsoft.graph.remoteDesktopSecurityConfiguration",
-    "id": "ca738153-c98a-f822-a7d1-5a6e1058462b",
-    "isRemoteDesktopProtocolEnabled": true,
-    "targetDeviceGroups": [
-      {
-        "id": "1a9db3ab-0acf-4808-99ae-e8ed581cb2e0",
-        "displayName": "Device Group A"
-      }
-    ]
-  }
+  "@odata.type": "#microsoft.graph.remoteDesktopSecurityConfiguration",
+  "id": "ca738153-c98a-f822-a7d1-5a6e1058462b",
+  "isRemoteDesktopProtocolEnabled": true,
+  "targetDeviceGroups": [
+    {
+      "id": "1a9db3ab-0acf-4808-99ae-e8ed581cb2e0",
+      "displayName": "Device Group A"
+    }
+  ]
 }
 ```
 

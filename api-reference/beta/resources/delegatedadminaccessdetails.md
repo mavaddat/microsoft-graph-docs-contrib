@@ -5,6 +5,7 @@ author: "koravvams"
 ms.localizationpriority: medium
 ms.subservice: partner-customer-administration
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # delegatedAdminAccessDetails resource type
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the administrative roles that a Microsoft partner has in a customer tenant through a delegated admin relationship and delegated admin access assignment.
+Represents the administrative roles that a Microsoft partner has in a customer tenant through a [delegated admin relationship](../resources/delegatedadminrelationship.md) or [delegated admin access assignment](../resources/delegatedadminaccessassignment.md).
 
 ## Properties
 |Property|Type|Description|
@@ -24,7 +25,7 @@ Represents the administrative roles that a Microsoft partner has in a customer t
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.delegatedAdminAccessDetails"

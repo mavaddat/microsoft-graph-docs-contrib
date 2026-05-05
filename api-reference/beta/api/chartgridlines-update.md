@@ -5,6 +5,7 @@ author: "lumine2008"
 ms.localizationpriority: medium
 ms.subservice: "excel"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update chartgridlines
@@ -44,7 +45,7 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property | Type|Description|
 |:---------------|:--------|:----------|
-|visible|boolean|Boolean value representing if the axis gridlines are visible or not.|
+|visible|Boolean|Boolean value representing if the axis gridlines are visible or not.|
 
 ## Response
 
@@ -70,10 +71,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-chartgridlines-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-chartgridlines-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

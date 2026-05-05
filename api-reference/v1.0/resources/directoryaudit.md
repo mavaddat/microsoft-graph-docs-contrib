@@ -5,6 +5,7 @@ author: "egreenberg14"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # directoryAudit resource type
@@ -17,8 +18,8 @@ Represents the directory audit items and its collection.
 
 | Method           | Return Type    |Description|
 |:---------------|:--------|:----------|
-|[List directoryAudits](../api/directoryaudit-list.md) | [directoryAudit](directoryaudit.md) |List the directory audit items in the collection and their properties.|
-|[Get directoryAudit](../api/directoryaudit-get.md) | [directoryAudit](directoryaudit.md) |Get a specific directory audit item and its properties.|
+|[List](../api/directoryaudit-list.md) | [directoryAudit](directoryaudit.md) |List the directory audit items in the collection and their properties.|
+|[Get](../api/directoryaudit-get.md) | [directoryAudit](directoryaudit.md) |Get a specific directory audit item and its properties.|
 
 ## Properties
 
@@ -33,7 +34,7 @@ Represents the directory audit items and its collection.
 | initiatedBy         | [auditActivityInitiator](auditactivityinitiator.md) | Indicates information about the user or app initiated the activity. Supports `$filter` (`eq`) for **user**/**id**, **user**/**displayName**, **user**/**userPrincipalName**, **app**/**appId**, **app**/**displayName**; and `$filter` (`startswith`) for **user**/**userPrincipalName**.                                                                                                                                                                                                               |
 | loggedByService     | String                                              | Indicates information on which service initiated the activity (For example: `Self-service Password Management`, `Core Directory`, `B2C`, `Invited Users`, `Microsoft Identity Manager`, `Privileged Identity Management`. Supports `$filter` (`eq`).                                                                      |
 | operationType       | String                                              | Indicates the type of operation that was performed. The possible values include but are not limited to the following: `Add`, `Assign`, `Update`, `Unassign`, and `Delete`.                                                                                   |
-| result              | operationResult                                              | Indicates the result of the activity. Possible values are: `success`, `failure`, `timeout`, `unknownFutureValue`.                                                                                                                                                                   |
+| result              | operationResult                                              | Indicates the result of the activity. The possible values are: `success`, `failure`, `timeout`, `unknownFutureValue`.                                                                                                                                                                   |
 | resultReason        | String                                              | Indicates the reason for failure if the **result** is `failure` or `timeout`.                                                                                                                                                                                                                                 |
 | targetResources     | [targetResource](targetresource.md) collection      | Indicates information on which resource was changed due to the activity. Target Resource Type can be `User`, `Device`, `Directory`, `App`, `Role`, `Group`, `Policy` or `Other`. Supports `$filter` (`eq`) for **id** and **displayName**; and `$filter` (`startswith`) for **displayName**.                                                                                                                  |
 
@@ -43,7 +44,7 @@ None
 
 ## JSON representation
 
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

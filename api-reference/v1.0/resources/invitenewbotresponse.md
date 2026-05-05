@@ -5,6 +5,7 @@ author: "yizhenww"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # inviteNewBotResponse resource type
@@ -21,7 +22,7 @@ Contains a response to a request to have a participant joining notification sent
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

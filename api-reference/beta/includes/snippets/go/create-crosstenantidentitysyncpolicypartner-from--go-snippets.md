@@ -5,6 +5,9 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```go
 
 
+// Code snippets are only available for the latest major version. Current major version is $v0.*
+
+// Dependencies
 import (
 	  "context"
 	  msgraphsdk "github.com/microsoftgraph/msgraph-beta-sdk-go"
@@ -12,17 +15,19 @@ import (
 	  //other-imports
 )
 
-graphClient := msgraphsdk.NewGraphServiceClientWithCredentials(cred, scopes)
-
-
 requestBody := graphmodels.NewCrossTenantIdentitySyncPolicyPartner()
 displayName := "Fabrikam"
 requestBody.SetDisplayName(&displayName) 
+groupSyncInbound := graphmodels.NewCrossTenantGroupSyncInbound()
+isSyncAllowed := true
+groupSyncInbound.SetIsSyncAllowed(&isSyncAllowed) 
+requestBody.SetGroupSyncInbound(groupSyncInbound)
 userSyncInbound := graphmodels.NewCrossTenantUserSyncInbound()
 isSyncAllowed := true
 userSyncInbound.SetIsSyncAllowed(&isSyncAllowed) 
 requestBody.SetUserSyncInbound(userSyncInbound)
 
+// To initialize your graphClient, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=go
 identitySynchronization, err := graphClient.Policies().CrossTenantAccessPolicy().Partners().ByCrossTenantAccessPolicyConfigurationPartnerTenantId("crossTenantAccessPolicyConfigurationPartner-tenantId").IdentitySynchronization().Put(context.Background(), requestBody, nil)
 
 

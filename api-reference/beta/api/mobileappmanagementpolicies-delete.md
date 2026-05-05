@@ -5,6 +5,7 @@ author: "michaelrm97"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 10/31/2024
 ---
 
 # Delete mobileAppManagementPolicy
@@ -18,7 +19,7 @@ Delete a [mobilityManagementPolicy](../resources/mobilitymanagementpolicy.md) ob
 > [!NOTE]
 > This operation is only supported when the policy is no longer valid; that is, when the **isValid** property is false, which indicates that the service principal associated with the application for this policy has been deleted.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -27,6 +28,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "mobileappmanagementpolicies_delete" } -->
 [!INCLUDE [permissions-table](../includes/permissions/mobileappmanagementpolicies-delete-permissions.md)]
 
+[!INCLUDE [rbac-mam-mdm-policies-apis-write](../includes/rbac-for-apis/rbac-mam-mdm-policies-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
@@ -34,7 +37,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 DELETE /policies/mobileAppManagementPolicies/{id}
 ```
 
@@ -64,16 +67,12 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
 }
 -->
 
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/policies/mobileAppManagementPolicies/ab90bacf-55a3-4a3e-839a-aa4b74e4f020
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-mobilitymanagementpolicy-forid-app-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-mobilitymanagementpolicy-forid-app-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,6 +109,6 @@ DELETE https://graph.microsoft.com/beta/policies/mobileAppManagementPolicies/ab9
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

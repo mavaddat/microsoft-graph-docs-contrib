@@ -5,6 +5,7 @@ author: sangle7
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: apiPageType
+ms.date: 04/12/2024
 ---
 
 # Get horizontalSectionColumn
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Read the properties and relationships of a [horizontalSectionColumn](../resources/horizontalsectioncolumn.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -61,7 +64,7 @@ The following example shows a request.
 <!-- { "blockType": "ignored" } -->
 
 ```http
-GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}/columns/{horizontalSectionColumnId}
+GET https://graph.microsoft.com/beta/sites/7f50f45e-714a-4264-9c59-3bf43ea4db8f/pages/df69e386-6c58-4df2-afc0-ab6327d5b202/microsoft.graph.sitePage/canvasLayout/horizontalSections/1/columns/1
 ```
 
 #### Response
@@ -92,12 +95,12 @@ Content-Type: application/json
 ### Example 2: Get a horizontalSectionColumn using select and expand
 #### Request
 
-With `select` and `expand` statements, you can retrieve horizontalSectionColumn metadata and associated webParts in a single request.
+With `$select` and `$expand` statements, you can retrieve horizontalSectionColumn metadata and associated webParts in a single request.
 
 <!-- { "blockType": "ignored" } -->
 
 ```http
-GET https://graph.microsoft.com/beta/sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/horizontalSections/{horizontalSectionId}/columns/{horizontalSectionColumnId}?select=id,expand=webparts
+GET https://graph.microsoft.com/beta/sites/7f50f45e-714a-4264-9c59-3bf43ea4db8f/pages/df69e386-6c58-4df2-afc0-ab6327d5b202/microsoft.graph.sitePage/canvasLayout/horizontalSections/1/columns/1?$select=id&$expand=webparts
 ```
 
 #### Response

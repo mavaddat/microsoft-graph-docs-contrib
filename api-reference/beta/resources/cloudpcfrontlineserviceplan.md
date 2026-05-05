@@ -5,6 +5,8 @@ author: "Guoan-Tang"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: resourcePageType
+ms.date: 05/23/2024
+toc.title: "Cloud PC frontline service plan"
 ---
 
 # cloudPcFrontLineServicePlan resource type
@@ -19,16 +21,16 @@ Represents a service plan that provides an allotment of three Cloud PCs for the 
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List cloudPcFrontLineServicePlans](../api/virtualendpoint-list-frontlineserviceplans.md)|[cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md) collection|Get a list of the [cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md) objects and their properties.|
-|[Get cloudPcFrontLineServicePlan](../api/cloudpcfrontlineserviceplan-get.md)|[cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md)|Get the properties and relationships of a [cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md) object.|
+|[List](../api/virtualendpoint-list-frontlineserviceplans.md)|[cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md) collection|Get a list of the [cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md) objects and their properties.|
+|[Get](../api/cloudpcfrontlineserviceplan-get.md)|[cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md)|Get the properties and relationships of a [cloudPcFrontLineServicePlan](../resources/cloudpcfrontlineserviceplan.md) object.|
 
 ## Properties
 
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|The display name of the front-line service plan. For example, `2vCPU/8GB/128GB Front-line` or `4vCPU/16GB/256GB Front-line`.|
-|id|String|The unique identifier (ID) of the front-line service plan.|
-|totalCount|Int32|The total number of front-line service plans purchased by the customer.|
+|displayName|String|The display name of the frontline service plan. For example, `2vCPU/8GB/128GB Front-line` or `4vCPU/16GB/256GB Front-line`.|
+|id|String|The unique identifier (ID) of the frontline service plan.|
+|totalCount|Int32|The total number of frontline service plans purchased by the customer.|
 |usedCount|Int32|The number of service plans that have been used for the account.|
 
 ## Relationships

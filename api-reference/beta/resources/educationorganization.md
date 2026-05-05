@@ -5,6 +5,7 @@ author: "mmast-msft"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # educationOrganization resource type
@@ -21,7 +22,7 @@ Abstract entity used to model the commonality between different organization typ
 | :------------- | :----- | :-------------------------------------------------------------------------------- |
 | description    | String | Organization description.                                                         |
 | displayName    | String | Organization display name.                                                        |
-| externalSource | String | Where this user was created from. Possible values are: `sis`, `lms`, or `manual`. |
+| externalSource | String | Where this user was created from. The possible values are: `sis`, `lms`, or `manual`. |
 
 ## Relationships
 
@@ -29,7 +30,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

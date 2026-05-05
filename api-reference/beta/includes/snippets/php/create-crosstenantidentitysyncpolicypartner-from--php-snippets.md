@@ -5,12 +5,19 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\Beta\GraphServiceClient;
+use Microsoft\Graph\Beta\Generated\Models\CrossTenantIdentitySyncPolicyPartner;
+use Microsoft\Graph\Beta\Generated\Models\CrossTenantGroupSyncInbound;
+use Microsoft\Graph\Beta\Generated\Models\CrossTenantUserSyncInbound;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 $requestBody = new CrossTenantIdentitySyncPolicyPartner();
 $requestBody->setDisplayName('Fabrikam');
+$groupSyncInbound = new CrossTenantGroupSyncInbound();
+$groupSyncInbound->setIsSyncAllowed(true);
+$requestBody->setGroupSyncInbound($groupSyncInbound);
 $userSyncInbound = new CrossTenantUserSyncInbound();
 $userSyncInbound->setIsSyncAllowed(true);
 $requestBody->setUserSyncInbound($userSyncInbound);

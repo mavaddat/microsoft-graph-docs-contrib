@@ -3,8 +3,9 @@ title: "Update oAuth2PermissionGrant (a delegated permission grant)"
 description: "Update the properties of an oAuth2PermissionGrant, representing a delegated permission grant."
 ms.localizationpriority: medium
 doc_type: apiPageType
-ms.subservice: "entra-sign-in"
+ms.subservice: "entra-applications"
 author: "psignoret"
+ms.date: 07/09/2024
 ---
 
 # Update oAuth2PermissionGrant (a delegated permission grant)
@@ -26,6 +27,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "oauth2permissiongrant_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/oauth2permissiongrant-update-permissions.md)]
 
+[!INCLUDE [rbac-oauth2permissiongrant-apis-write](../includes/rbac-for-apis/rbac-oauth2permissiongrant-apis-write.md)]
+
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -36,7 +39,7 @@ PATCH /oauth2PermissionGrants/{id}
 
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -73,10 +76,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-oauth2permissiongrant-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-oauth2permissiongrant-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

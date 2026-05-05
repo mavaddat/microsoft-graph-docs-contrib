@@ -2,9 +2,10 @@
 title: "extension resource type"
 description: "An abstract type to support the OData v4 open type openTypeExtension."
 ms.localizationpriority: medium
-author: "keylimesoda"
+author: "FaithOmbongi"
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # extension resource type
@@ -15,7 +16,7 @@ An abstract type to support the OData v4 open type [openTypeExtension](opentypee
 
 ## JSON representation
 
-Here's a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "abstract": "true",

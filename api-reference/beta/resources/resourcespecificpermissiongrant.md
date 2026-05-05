@@ -5,6 +5,7 @@ author: "AkJo"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 10/04/2024
 ---
 
 # resourceSpecificPermissionGrant resource type
@@ -24,6 +25,7 @@ For more information about granting apps consent to access a specific instance o
 |[List permission grants of a chat](../api/chat-list-permissiongrants.md)   | [resourceSpecificPermissionGrant](resourcespecificpermissiongrant.md) collection | List resource-specific permissions that have been granted in a specific [chat](chat.md).  |
 |[List permission grants of a group](../api/group-list-permissiongrants.md) | [resourceSpecificPermissionGrant](resourcespecificpermissiongrant.md) collection | List resource-specific permissions that have been granted in a specific [group](group.md). |
 |[List permission grants of a team](../api/team-list-permissiongrants.md) | [resourceSpecificPermissionGrant](resourcespecificpermissiongrant.md) collection | List resource-specific permissions that have been granted in a specific [team](team.md). |
+|[List permission grants of a user](../api/user-list-permissiongrants.md) | [resourceSpecificPermissionGrant](resourcespecificpermissiongrant.md) collection | List resource-specific permissions that have been granted to a specific [user](user.md). |
 
 ## Properties
 
@@ -34,12 +36,15 @@ For more information about granting apps consent to access a specific instance o
 | clientId        | string        | ID of the Microsoft Entra app that has been granted access. Read-only.                            |
 | clientAppId     | string        | ID of the service principal of the Microsoft Entra app that has been granted access. Read-only.   |
 | resourceAppId   | string        | ID of the Microsoft Entra app that is hosting the resource. Read-only.                        |
-| permissionType  | string        | The type of permission. Possible values are: `Application`, `Delegated`. Read-only. |
+| permissionType  | string        | The type of permission. The possible values are: `Application`, `Delegated`. Read-only. |
 | permission      | string        | The name of the resource-specific permission. Read-only.                                                |
+
+## Relationships
+None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

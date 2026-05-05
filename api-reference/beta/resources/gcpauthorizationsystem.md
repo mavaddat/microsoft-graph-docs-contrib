@@ -4,8 +4,9 @@ description: "Represents a GCP authorization system onboarded to Permissions Man
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # gcpAuthorizationSystem resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents a GCP authorization system onboarded to Permissions Management.
 
 Inherits from [authorizationSystem](../resources/authorizationsystem.md).
@@ -21,7 +24,7 @@ Inherits from [authorizationSystem](../resources/authorizationsystem.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List gcpAuthorizationSystems](../api/gcpauthorizationsystem-list.md)|[gcpAuthorizationSystem](../resources/gcpauthorizationsystem.md) collection|Get a list of the [gcpAuthorizationSystem](../resources/gcpauthorizationsystem.md) objects and their properties.|
+|[List](../api/gcpauthorizationsystem-list.md)|[gcpAuthorizationSystem](../resources/gcpauthorizationsystem.md) collection|Get a list of the [gcpAuthorizationSystem](../resources/gcpauthorizationsystem.md) objects and their properties.|
 
 ## Properties
 |Property|Type|Description|
@@ -61,4 +64,5 @@ The following JSON representation shows the resource type.
   "authorizationSystemType": "String"
 }
 ```
+
 

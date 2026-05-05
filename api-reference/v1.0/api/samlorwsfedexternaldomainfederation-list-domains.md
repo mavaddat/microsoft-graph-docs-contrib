@@ -5,6 +5,7 @@ author: "namkedia"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # List domains
@@ -19,10 +20,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "samlorwsfedexternaldomainfederation_list_domains" } -->
 [!INCLUDE [permissions-table](../includes/permissions/samlorwsfedexternaldomainfederation-list-domains-permissions.md)]
 
-The work or school account needs to belong to one of the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-
-* Global Administrator
-* External Identity Provider Administrator
+[!INCLUDE [rbac-identity-provider-apis](../includes/rbac-for-apis/rbac-identity-provider-apis.md)]
 
 ## HTTP request
 
@@ -31,7 +29,7 @@ The work or school account needs to belong to one of the following [Microsoft En
 }
 -->
 
-``` http
+```http
 GET /directory/federationConfigurations/microsoft.graph.samlOrWsFedExternalDomainFederation/{samlOrWsFedExternalDomainFederation ID}/domains
 ```
 
@@ -61,8 +59,8 @@ If successful, this method returns a `200 OK` response code and a collection of 
 }
 -->
 
-``` http
-GET https://graph.microsoft.com/beta/directory/federationConfigurations/microsoft.graph.samlOrWsFedExternalDomainFederation/f1e11a04-0244-4592-99df-b01cfaadce15/domains
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/directory/federationConfigurations/microsoft.graph.samlOrWsFedExternalDomainFederation/f1e11a04-0244-4592-99df-b01cfaadce15/domains
 ```
 
 # [JavaScript](#tab/javascript)
@@ -82,12 +80,12 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#directory/federationConfigurations/microsoft.graph.samlOrWsFedExternalDomainFederation('f1e11a04-0244-4592-99df-b01cfaadce15')/domains",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#directory/federationConfigurations/microsoft.graph.samlOrWsFedExternalDomainFederation('f1e11a04-0244-4592-99df-b01cfaadce15')/domains",
     "value": [
         {
             "id": "fabrikam.com"

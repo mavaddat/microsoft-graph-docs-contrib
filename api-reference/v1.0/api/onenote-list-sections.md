@@ -5,13 +5,14 @@ author: "jewan-microsoft"
 ms.localizationpriority: medium
 ms.subservice: "onenote"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # List sections
 
 Namespace: microsoft.graph
 
-Retrieve a list of [onenoteSection](../resources/section.md) objects.
+Retrieve a list of [onenoteSection](../resources/onenotesection.md) objects.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -39,7 +40,7 @@ The default query expands `parentNotebook` and selects its `id`, `displayName`, 
 ## Request headers
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 | Accept | string | `application/json` |
 
 ## Request body
@@ -47,7 +48,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and collection of [onenoteSection](../resources/section.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and collection of [onenoteSection](../resources/onenotesection.md) objects in the response body.
 ## Example
 ##### Request
 The following example shows a request.
@@ -63,10 +64,6 @@ GET https://graph.microsoft.com/v1.0/me/onenote/sections
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/onenote-get-sections-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/onenote-get-sections-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,7 @@ author: "AlexFilipin"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # workflowBase resource type
@@ -36,13 +37,14 @@ None.
 
 |Relationship|Type|Description|
 |:---|:---|:---|
+|administrationScopeTargets|[microsoft.graph.directoryObject](../resources/directoryobject.md) collection|The [administrative units](../resources/administrativeunit.md) in the scope of the workflow. Optional. <br><br>Supports `$expand`.|
 |createdBy|[user](../resources/user.md)|The user who created the workflow.|
 |lastModifiedBy|[user](../resources/user.md)|The unique identifier of the Microsoft Entra identity that last modified the workflow.|
 |tasks|[microsoft.graph.identityGovernance.task](../resources/identitygovernance-task.md) collection|The tasks in the workflow.|
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

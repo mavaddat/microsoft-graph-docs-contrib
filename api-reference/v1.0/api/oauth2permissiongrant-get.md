@@ -3,8 +3,9 @@ title: "Get oAuth2PermissionGrant (a delegated permission grant)"
 description: "Retrieve the properties and relationships of single oAuth2PermissionGrant, representing a delegated permission grant."
 ms.localizationpriority: medium
 doc_type: apiPageType
-ms.subservice: "entra-sign-in"
+ms.subservice: "entra-applications"
 author: "psignoret"
+ms.date: 07/11/2024
 ---
 
 # Get oAuth2PermissionGrant (a delegated permission grant)
@@ -27,6 +28,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "oauth2permissiongrant_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/oauth2permissiongrant-get-permissions.md)]
 
+[!INCLUDE [rbac-oauth2permissiongrant-apis-read](../includes/rbac-for-apis/rbac-oauth2permissiongrant-apis-read.md)]
+
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
@@ -43,7 +46,7 @@ This method supports the [OData query parameters](/graph/query-parameters) to he
 
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -71,10 +74,6 @@ GET https://graph.microsoft.com/v1.0/oauth2PermissionGrants/QVzct6doFkStXRSoh_HG
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-oauth2permissiongrant-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-oauth2permissiongrant-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # positiveReinforcementNotification resource type
@@ -22,7 +23,7 @@ Inherits from [baseEndUserNotification](../resources/baseendusernotification.md)
 |Property|Type|Description|
 |:---|:---|:---|
 |defaultLanguage|String|Default language. Inherited from [baseEndUserNotification](../resources/baseendusernotification.md).|
-|deliveryPreference|notificationDeliveryPreference|Delivery preference. Possible values are: `unknown`, `deliverImmedietly`, `deliverAfterCampaignEnd`, `unknownFutureValue`.|
+|deliveryPreference|notificationDeliveryPreference|Delivery preference. The possible values are: `unknown`, `deliverImmedietly`, `deliverAfterCampaignEnd`, `unknownFutureValue`.|
 
 ## Relationships
 
@@ -32,7 +33,7 @@ Inherits from [baseEndUserNotification](../resources/baseendusernotification.md)
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.positiveReinforcementNotification"

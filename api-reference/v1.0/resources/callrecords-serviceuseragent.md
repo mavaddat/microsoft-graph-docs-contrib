@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mcm223"
 ms.subservice: "cloud-communications"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # serviceUserAgent resource type
@@ -20,11 +21,11 @@ Represents a service user agent of an endpoint in a call. Inherits from
 |:-------------|:------------|:------------|
 |applicationVersion|String|Identifies the version of application software used by this endpoint.|
 |headerValue|String|User-agent header value reported by this endpoint.|
-|role|microsoft.graph.callRecords.serviceRole|Identifies the role of the service used by this endpoint. Possible values are: `unknown`, `customBot`, `skypeForBusinessMicrosoftTeamsGateway`, `skypeForBusinessAudioVideoMcu`, `skypeForBusinessApplicationSharingMcu`, `skypeForBusinessCallQueues`, `skypeForBusinessAutoAttendant`, `mediationServer`, `mediationServerCloudConnectorEdition`, `exchangeUnifiedMessagingService`, `mediaController`, `conferencingAnnouncementService`, `conferencingAttendant`, `audioTeleconferencerController`, `skypeForBusinessUnifiedCommunicationApplicationPlatform`, `responseGroupServiceAnnouncementService`, `gateway`, `skypeTranslator`, `skypeForBusinessAttendant`, `responseGroupService`, `voicemail`, `unknownFutureValue`.|
+|role|microsoft.graph.callRecords.serviceRole|Identifies the role of the service used by this endpoint. The possible values are: `unknown`, `customBot`, `skypeForBusinessMicrosoftTeamsGateway`, `skypeForBusinessAudioVideoMcu`, `skypeForBusinessApplicationSharingMcu`, `skypeForBusinessCallQueues`, `skypeForBusinessAutoAttendant`, `mediationServer`, `mediationServerCloudConnectorEdition`, `exchangeUnifiedMessagingService`, `mediaController`, `conferencingAnnouncementService`, `conferencingAttendant`, `audioTeleconferencerController`, `skypeForBusinessUnifiedCommunicationApplicationPlatform`, `responseGroupServiceAnnouncementService`, `gateway`, `skypeTranslator`, `skypeForBusinessAttendant`, `responseGroupService`, `voicemail`, `unknownFutureValue`.|
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

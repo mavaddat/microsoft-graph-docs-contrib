@@ -1,10 +1,11 @@
 ---
 title: "updatableAssetGroup resource type"
 description: "A group of azureADDevice resources that can receive updates."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: windows-update-business
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 01/27/2026
 ---
 
 # updatableAssetGroup resource type
@@ -43,7 +44,7 @@ Inherits from [updatableAsset](../resources/windowsupdates-updatableasset.md).
 |members|[microsoft.graph.windowsUpdates.updatableAsset](../resources/windowsupdates-updatableasset.md) collection|Members of the group. Read-only.|
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

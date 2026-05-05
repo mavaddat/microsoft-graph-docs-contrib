@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "tommoser"
 ms.subservice: "security"
 doc_type: "resourcePageType"
+ms.date: 03/21/2024
 ---
 
 # customAction resource type (deprecated)
@@ -26,7 +27,7 @@ Represents any custom actions that a label may provide, if configured by the adm
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

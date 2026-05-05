@@ -4,8 +4,9 @@ description: "Represents the inactive Azure service principals."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # inactiveAzureServicePrincipalFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents the inactive Azure service principals.
 
 Inherits from [identityFinding](../resources/identityfinding.md).
@@ -21,9 +24,9 @@ Inherits from [identityFinding](../resources/identityfinding.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List inactiveAzureServicePrincipalFinding objects](../api/inactiveazureserviceprincipalfinding-list.md)|[inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md) collection|Get a list of the [inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md) objects and their properties.|
-|[Get inactiveAzureServicePrincipalFinding](../api/inactiveazureserviceprincipalfinding-get.md)|[inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md)|Read the properties and relationships of an [inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md) object.|
-|[aggregatedSummary](../api/inactiveazureserviceprincipalfinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
+|[List](../api/inactiveazureserviceprincipalfinding-list.md)|[inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md) collection|Get a list of the [inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md) objects and their properties.|
+|[Get](../api/inactiveazureserviceprincipalfinding-get.md)|[inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md)|Read the properties and relationships of an [inactiveAzureServicePrincipalFinding](../resources/inactiveazureserviceprincipalfinding.md) object.|
+|[Aggregated summary](../api/inactiveazureserviceprincipalfinding-aggregatedsummary.md)|[permissionsAnalyticsAggregatedIdentitySummary](../resources/permissionsanalyticsaggregatedidentitysummary.md)|Return the total number of an identity type and the total number of a specific finding for that identity in an authorization system.|
 
 
 ## Properties
@@ -66,4 +69,5 @@ The following JSON representation shows the resource type.
   }
 }
 ```
+
 

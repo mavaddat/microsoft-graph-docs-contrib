@@ -5,6 +5,7 @@ author: "iamgirishck"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: "resourcePageType"
+ms.date: 05/23/2024
 ---
 
 # calendarPermission resource type
@@ -25,7 +26,7 @@ Once a share recipient or delegate has been set up for a calendar, you can [upda
 |:-------------|:------------|:------------|
 | [List](../api/calendar-list-calendarpermissions.md) | [calendarPermission](calendarpermission.md) | Get a collection of calendarPermission objects that describe the identity and roles of users with whom the specified calendar has been shared or delegated. |
 | [Create](../api/calendar-post-calendarpermissions.md) | [calendarPermission](calendarpermission.md) | Create calendarPermission object. |
-| [Get calendarPermission](../api/calendarpermission-get.md) | [calendarPermission](calendarpermission.md) | Read properties and relationships of calendarPermission object. |
+| [Get](../api/calendarpermission-get.md) | [calendarPermission](calendarpermission.md) | Read properties and relationships of calendarPermission object. |
 | [Update](../api/calendarpermission-update.md) | [calendarPermission](calendarpermission.md) | Update calendarPermission object. |
 | [Delete](../api/calendarpermission-delete.md) | None | Delete calendarPermission object. |
 
@@ -33,7 +34,7 @@ Once a share recipient or delegate has been set up for a calendar, you can [upda
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|allowedRoles|[calendarRoleType](#calendarroletype-values) collection| List of allowed sharing or delegating permission levels for the calendar. Possible values are: `none`, `freeBusyRead`, `limitedRead`, `read`, `write`, `delegateWithoutPrivateEventAccess`, `delegateWithPrivateEventAccess`, `custom`.|
+|allowedRoles|[calendarRoleType](#calendarroletype-values) collection| List of allowed sharing or delegating permission levels for the calendar. The possible values are: `none`, `freeBusyRead`, `limitedRead`, `read`, `write`, `delegateWithoutPrivateEventAccess`, `delegateWithPrivateEventAccess`, `custom`.|
 |emailAddress|[emailAddress](emailaddress.md)| Represents a share recipient or delegate who has access to the calendar. For the "My Organization" share recipient, the **address** property is null. Read-only. |
 |id|String| The unique identifier of the user (recipient or delegate) with whom the calendar has been shared. Read-only.|
 |isInsideOrganization|Boolean| True if the user in context (recipient or delegate) is inside the same organization as the calendar owner.|
@@ -55,7 +56,7 @@ Once a share recipient or delegate has been set up for a calendar, you can [upda
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

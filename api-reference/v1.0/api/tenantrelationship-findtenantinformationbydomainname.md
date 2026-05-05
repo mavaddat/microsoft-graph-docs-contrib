@@ -5,6 +5,7 @@ author: "adimitui"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # tenantRelationship: findTenantInformationByDomainName
@@ -22,6 +23,9 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "tenantrelationship_findtenantinformationbydomainname" } -->
 [!INCLUDE [permissions-table](../includes/permissions/tenantrelationship-findtenantinformationbydomainname-permissions.md)]
 
+> [!IMPORTANT]
+> This API operation doesn't require the calling user to be assigned any [Microsoft Entra role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
+
 ## HTTP request
 
 <!-- {
@@ -29,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 GET /tenantRelationships/findTenantInformationByDomainName(domainName='{id}')
 ```
 
@@ -66,7 +70,7 @@ If successful, this method returns a `200 OK` response code and a [tenantInforma
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/tenantRelationships/findTenantInformationByDomainName(domainName='contoso.com')
 ```
 
@@ -86,7 +90,7 @@ GET https://graph.microsoft.com/v1.0/tenantRelationships/findTenantInformationBy
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

@@ -5,6 +5,7 @@ author: "jkdouglas"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Update userFlowLanguagePage
@@ -22,10 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "userflowlanguagepage_put" } -->
 [!INCLUDE [permissions-table](../includes/permissions/userflowlanguagepage-put-permissions.md)]
 
-The work or school account needs to belong to one of the following roles:
-
-* Global administrator
-* External Identity User Flow administrator
+[!INCLUDE [rbac-b2xb2c-user-flows-apis](../includes/rbac-for-apis/rbac-b2xb2c-user-flows-apis.md)]
 
 ## HTTP request
 
@@ -36,7 +34,7 @@ To reference the content within the object, you must use `$value`. This returns 
 }
 -->
 
-``` http
+```http
 PUT /identity/b2cUserFlows/{id}/languages/{id}/overridesPages/{id}/$value
 PUT /identity/b2xUserFlows/{id}/languages/{id}/overridesPages/{id}/$value
 ```
@@ -71,7 +69,7 @@ The following example shows a request.
 }
 -->
 
-``` http
+```http
 PUT https://graph.microsoft.com/beta/identity/b2cUserFlows/B2C_1_Customer/languages/en/overridesPages/phonefactor/$value
 Content-Type: application/json
 
@@ -90,10 +88,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-overridespages-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-overridespages-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Java](#tab/java)
@@ -129,6 +123,6 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

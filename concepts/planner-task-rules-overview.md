@@ -4,6 +4,8 @@ description: "Rules allow customization of what can and can't be done on tasks, 
 author: "TarkanSevilmis"
 ms.localizationpriority: medium
 ms.subservice: "business-scenarios"
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Configuring task rules in Planner (preview)
@@ -193,3 +195,23 @@ Specifies whether the task title can be changed. Accepted values are:
 * `allow`: Task title can be changed.
 
 The collection must contain only one of these values.
+
+### approvalAttachment
+
+The **approvalAttachment** property is configured with [fieldRules](/graph/api/resources/plannerfieldrules), providing default values and overrides for specific conditions. Accepted values are:
+
+* `block`: Approval can't be changed.
+* `add`: A new approval can be added.
+* `remove`: An existing approval can be removed.
+* `allow`: All Approval actions are allowed.
+
+### forms
+
+The **forms** property is configured with [fieldRules](/graph/api/resources/plannerfieldrules), providing default values and overrides for specific conditions. The possible values are:
+
+* `block`: Forms can't be changed.
+* `addResponse`: Responses can be added to the form.
+* `add`: New forms can be added.
+* `update`: Existing forms can be updated.
+* `remove`: Existing forms can be removed.
+* `allow`: All forms actions are allowed.

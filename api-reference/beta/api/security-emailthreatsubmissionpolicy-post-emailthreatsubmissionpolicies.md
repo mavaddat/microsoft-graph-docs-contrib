@@ -5,6 +5,7 @@ author: "caigen"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Create emailThreatSubmissionPolicy
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/threatSubmission/emailThreatSubmissionPolicies
 ```
 
@@ -76,7 +77,7 @@ The following example shows a request.
   "name": "create_emailthreatsubmissionpolicy_from_emailthreatsubmissionpolicies"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/security/threatSubmission/emailthreatSubmissionPolicies
 Content-type: application/json
 
@@ -87,10 +88,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-emailthreatsubmissionpolicy-from-emailthreatsubmissionpolicies-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-emailthreatsubmissionpolicy-from-emailthreatsubmissionpolicies-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -130,7 +127,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.emailThreatSubmissionPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

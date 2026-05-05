@@ -5,6 +5,7 @@ author: "RamjotSingh"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 05/29/2024
 ---
 
 # List chats
@@ -15,7 +16,9 @@ Retrieve the list of [chats](../resources/chat.md) that the user is part of.
 
 This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
 
->**Note:** This API works differently in one or more national clouds. For details, see [Implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
+> [!NOTE]
+> This API currently has the following limitation: when the API is called with the `$expand=members` query parameter, the response returns a maximum of **25 member items**, even if a larger `$top` value is specified. This behavior differs from the expected behavior where the `$top` parameter controls the maximum number of items returned. As a result, applications that rely on `$expand=members` might not retrieve the full list of members in a single request.
+> The API also behaves differently in one or more national clouds. For more information, see [Implementation differences in national clouds](/graph/teamwork-national-cloud-differences).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -102,10 +105,6 @@ GET https://graph.microsoft.com/v1.0/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-chats-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/list-chats-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -157,11 +156,12 @@ Content-type: application/json
             "createdDateTime": "2020-12-08T23:53:05.801Z",
             "lastUpdatedDateTime": "2020-12-08T23:58:32.511Z",
             "chatType": "meeting",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2021-06-03T08:05:49.521Z"
             },
-            "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_MjdhNjM4YzUtYzExZi00OTFkLTkzZTAtNTVlNmZmMDhkNGU2@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f"
+            "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_MjdhNjM4YzUtYzExZi00OTFkLTkzZTAtNTVlNmZmMDhkNGU2@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
+            "isHiddenForAllMembers": false
         },
         {
             "id": "19:561082c0f3f847a58069deb8eb300807@thread.v2",
@@ -169,11 +169,12 @@ Content-type: application/json
             "createdDateTime": "2020-12-03T19:41:07.054Z",
             "lastUpdatedDateTime": "2020-12-08T23:53:11.012Z",
             "chatType": "group",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2021-05-27T22:13:01.577Z"
             },
-            "webUrl": "https://teams.microsoft.com/l/chat/19%3A561082c0f3f847a58069deb8eb300807@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f"
+            "webUrl": "https://teams.microsoft.com/l/chat/19%3A561082c0f3f847a58069deb8eb300807@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
+            "isHiddenForAllMembers": false
         },
         {
             "id": "19:d74fc2ed-cb0e-4288-a219-b5c71abaf2aa_8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca@unq.gbl.spaces",
@@ -181,11 +182,12 @@ Content-type: application/json
             "createdDateTime": "2020-12-04T23:10:28.51Z",
             "lastUpdatedDateTime": "2020-12-04T23:10:36.925Z",
             "chatType": "oneOnOne",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "0001-01-01T00:00:00Z"
             },
-            "webUrl": "https://teams.microsoft.com/l/chat/19%3Ad74fc2ed-cb0e-4288-a219-b5c71abaf2aa_8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca@unq.gbl.spaces/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f"
+            "webUrl": "https://teams.microsoft.com/l/chat/19%3Ad74fc2ed-cb0e-4288-a219-b5c71abaf2aa_8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca@unq.gbl.spaces/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
+            "isHiddenForAllMembers": false
         }
     ]
 }
@@ -208,10 +210,6 @@ GET https://graph.microsoft.com/v1.0/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-chats-expand-members-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-expand-members-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -269,10 +267,11 @@ Content-type: application/json
             "createdDateTime": "2020-12-08T23:53:05.801Z",
             "lastUpdatedDateTime": "2020-12-08T23:58:32.511Z",
             "chatType": "meeting",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2021-04-02T08:15:02.091Z"
             },
+            "isHiddenForAllMembers": false,
             "webUrl": "https://teams.microsoft.com/l/chat/19%3Ameeting_MjdhNjM4YzUtYzExZi00OTFkLTkzZTAtNTVlNmZmMDhkNGU2@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
             "members": [
                 {
@@ -307,10 +306,11 @@ Content-type: application/json
             "createdDateTime": "2020-12-03T19:41:07.054Z",
             "lastUpdatedDateTime": "2020-12-08T23:53:11.012Z",
             "chatType": "group",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "0001-01-01T00:00:00Z"
             },
+            "isHiddenForAllMembers": false,
             "webUrl": "https://teams.microsoft.com/l/chat/19%3A561082c0f3f847a58069deb8eb300807@thread.v2/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
             "members": [
                 {
@@ -361,10 +361,11 @@ Content-type: application/json
             "createdDateTime": "2020-12-04T23:10:28.51Z",
             "lastUpdatedDateTime": "2020-12-04T23:10:36.925Z",
             "chatType": "oneOnOne",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2021-06-05T00:31:30.047Z"
             },
+            "isHiddenForAllMembers": false,
             "webUrl": "https://teams.microsoft.com/l/chat/19%3Ad74fc2ed-cb0e-4288-a219-b5c71abaf2aa_8c0a1a67-50ce-4114-bb6c-da9c5dbcf6ca@unq.gbl.spaces/0?tenantId=b33cbe9f-8ebe-4f2a-912b-7e2a427f477f",
             "members": [
                 {
@@ -422,10 +423,6 @@ GET https://graph.microsoft.com/v1.0/chats?$orderby=lastMessagePreview/createdDa
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-chats-orderby-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-orderby-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -487,7 +484,8 @@ Content-type: application/json
             "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2022-05-03T18:15:42.307Z"
-            }
+            },
+            "isHiddenForAllMembers": false
         },
         {
             "id": "19:82fe7758-5bb3-4f0d-a43f-e555fd399c6f_bfb5bb25-3a8d-487d-9828-7875ced51a30@unq.gbl.spaces",
@@ -501,7 +499,8 @@ Content-type: application/json
             "viewpoint": {
                 "isHidden": true,
                 "lastMessageReadDateTime": "2022-03-08T19:55:30.491Z"
-            }
+            },
+            "isHiddenForAllMembers": false
         }
     ]
 }
@@ -525,10 +524,6 @@ GET https://graph.microsoft.com/v1.0/chats?$expand=lastMessagePreview
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-chats-expand-lastmessagepreview-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-chats-expand-lastmessagepreview-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -582,10 +577,11 @@ Content-type: application/json
             "createdDateTime": "2021-06-05T00:31:30.767Z",
             "lastUpdatedDateTime": "2021-06-05T00:31:32.806Z",
             "chatType": "oneOnOne",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2021-06-05T00:31:30.047Z"
             },
+            "isHiddenForAllMembers": false,
             "lastMessagePreview": {
                 "id": "1622853091207",
                 "createdDateTime": "2021-06-05T00:31:31.207Z",
@@ -613,10 +609,11 @@ Content-type: application/json
             "createdDateTime": "2020-07-17T22:46:28.077Z",
             "lastUpdatedDateTime": "2021-06-03T08:05:49.788Z",
             "chatType": "oneOnOne",
-            "chatViewpoint": {
+            "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2021-06-03T08:05:49.521Z"
             },
+            "isHiddenForAllMembers": false,
             "lastMessagePreview": {
                 "id": "1622707540293",
                 "createdDateTime": "2021-06-03T08:05:40.293Z",
@@ -649,6 +646,7 @@ Content-type: application/json
                 "isHidden": false,
                 "lastMessageReadDateTime": "2021-06-04T05:34:23.712Z"
             },
+            "isHiddenForAllMembers": false,
             "lastMessagePreview": {
                 "id": "1622784857324",
                 "createdDateTime": "2021-06-04T05:34:17.324Z",
@@ -724,7 +722,8 @@ Content-type: application/json
             "viewpoint": {
                 "isHidden": false,
                 "lastMessageReadDateTime": "2023-06-29T10:22:15.024Z"
-            }
+            },
+            "isHiddenForAllMembers": false
         }
     ]
 

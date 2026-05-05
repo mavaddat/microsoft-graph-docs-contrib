@@ -5,6 +5,7 @@ author: "RamjotSingh"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # callStartedEventMessageDetail resource type
@@ -22,12 +23,15 @@ Inherits from [eventMessageDetail](../resources/eventmessagedetail.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|callEventType|teamworkCallEventType|Represents the call event type. Possible values are: `call`, `meeting`, `screenShare`, `unknownFutureValue`.|
+|callEventType|teamworkCallEventType|Represents the call event type. The possible values are: `call`, `meeting`, `screenShare`, `unknownFutureValue`.|
 |callId|String|Unique identifier of the call.|
 |initiator|[identitySet](../resources/identityset.md)|Initiator of the event.|
 
+## Relationships
+None.
+
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.callStartedEventMessageDetail",

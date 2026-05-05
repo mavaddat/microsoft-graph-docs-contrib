@@ -5,6 +5,7 @@ author: "joerattazzi-microsoft"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get whoisHistoryRecord
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/threatIntelligence/whoisHistoryRecord/{whoisHistoryRecordId}
 ```
 
@@ -62,7 +63,7 @@ The following example shows a request.
   "sampleKeys": ["Y29udG9zby5jb20kJDY5NjQ3ODEyMDc3NDY1NzI0MzM="]
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/v1.0/security/threatIntelligence/whoisHistoryRecord/Y29udG9zby5jb20kJDY5NjQ3ODEyMDc3NDY1NzI0MzM=
 ```
 

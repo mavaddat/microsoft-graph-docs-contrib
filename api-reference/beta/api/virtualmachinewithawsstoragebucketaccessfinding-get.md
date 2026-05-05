@@ -4,14 +4,17 @@ description: "Read the properties and relationships of a virtualMachineWithAwsSt
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get virtualMachineWithAwsStorageBucketAccessFinding
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Read the properties and relationships of a [virtualMachineWithAwsStorageBucketAccessFinding](../resources/virtualmachinewithawsstoragebucketaccessfinding.md) object.
 
@@ -27,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/{id}/microsoft.graph.virtualMachineWithAwsStorageBucketAccessFinding
 ```
 
@@ -56,7 +59,7 @@ The following example shows a request.
   "name": "get_virtualmachinewithawsstoragebucketaccessfinding"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/findings/MSxWaXJ0dWFsTWFjaGluZVdpdGhBd3NTdG9yYWdlQnVja2V0QWNjZXNzRmluZGluZyw0MzUwMg/microsoft.graph.virtualMachineWithAwsStorageBucketAccessFinding
 ```
 
@@ -75,7 +78,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.virtualMachineWithAwsStorageBucketAccessFinding"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -113,4 +116,5 @@ Content-Type: application/json
     }
 }
 ```
+
 

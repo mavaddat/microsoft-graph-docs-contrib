@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mcm223"
 ms.subservice: "cloud-communications"
 doc_type: "resourcePageType"
+ms.date: 04/03/2024
 ---
 
 # segment resource type
@@ -40,7 +41,7 @@ None
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

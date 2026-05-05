@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "vrod9429"
 ms.subservice: "outlook"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # meetingTimeSuggestion resource type
@@ -16,9 +17,12 @@ Namespace: microsoft.graph
 A meeting suggestion that includes information like meeting time, attendance likelihood, individual 
 availability, and available meeting locations.
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
@@ -48,7 +52,7 @@ Here is a JSON representation of the resource
 |locations|[location](location.md) collection|An array that specifies the name and geographic location of each meeting location for this meeting suggestion.|
 |meetingTimeSlot|[timeSlot](timeslot.md)|A time period suggested for the meeting.|
 |order|Int32|Order of meeting time suggestions sorted by their computed confidence value from high to low, then by chronology if there are suggestions with the same confidence. |
-|organizerAvailability|freeBusyStatus| Availability of the meeting organizer for this meeting suggestion. Possible values are: `free`, `tentative`, `busy`, `oof`, `workingElsewhere`, `unknown`.|
+|organizerAvailability|freeBusyStatus| Availability of the meeting organizer for this meeting suggestion. The possible values are: `free`, `tentative`, `busy`, `oof`, `workingElsewhere`, `unknown`.|
 |suggestionReason|String|Reason for suggesting the meeting time.|
 
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79

@@ -3,8 +3,9 @@ title: "itemPublication resource type"
 description: "itemPublication resource type"
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # itemPublication resource type
@@ -18,16 +19,16 @@ Inherits from [itemFacet](../resources/itemfacet.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List publications](../api/profile-list-publications.md)|[itemPublication](../resources/itempublication.md) collection|Get the itemPublication resources from the publications navigation property.|
-|[Create itemPublication](../api/profile-post-publications.md)|[itemPublication](../resources/itempublication.md)|Create a new itemPublication object.|
-|[Get itemPublication](../api/itempublication-get.md)|[itemPublication](../resources/itempublication.md)|Read the properties and relationships of an [itemPublication](../resources/itempublication.md) object.|
-|[Update itemPublication](../api/itempublication-update.md)|[itemPublication](../resources/itempublication.md)|Update the properties of an [itemPublication](../resources/itempublication.md) object.|
-|[Delete itemPublication](../api/itempublication-delete.md)|None|Deletes an [itemPublication](../resources/itempublication.md) object.|
+|[List](../api/profile-list-publications.md)|[itemPublication](../resources/itempublication.md) collection|Get the itemPublication resources from the publications navigation property.|
+|[Create](../api/profile-post-publications.md)|[itemPublication](../resources/itempublication.md)|Create a new itemPublication object.|
+|[Get](../api/itempublication-get.md)|[itemPublication](../resources/itempublication.md)|Read the properties and relationships of an [itemPublication](../resources/itempublication.md) object.|
+|[Update](../api/itempublication-update.md)|[itemPublication](../resources/itempublication.md)|Update the properties of an [itemPublication](../resources/itempublication.md) object.|
+|[Delete](../api/itempublication-delete.md)|None|Deletes an [itemPublication](../resources/itempublication.md) object.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |createdBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that created the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
 |createdDateTime|DateTimeOffset|Provides the dateTimeOffset for when the entity was created. Inherited from [itemFacet](../resources/itemfacet.md).|
 |description    |String      |Description of the publication.                   |
@@ -46,7 +47,7 @@ Inherits from [itemFacet](../resources/itemfacet.md).
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

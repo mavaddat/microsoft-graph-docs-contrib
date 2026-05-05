@@ -1,10 +1,11 @@
 ---
 title: "Get directoryObject"
 description: "Retrieve the properties and relationships of directoryObject object."
-author: "keylimesoda"
+author: "FaithOmbongi"
 ms.localizationpriority: high
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # Get directoryObject
@@ -33,7 +34,7 @@ GET /directoryObjects/{id}
 
 | Name       | Type | Description|
 |:-----------|:------|:----------|
-| Authorization  | string  | Bearer {token}. Required. |
+| Authorization  | string  |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 Don't supply a request body for this method.
@@ -58,10 +59,6 @@ GET https://graph.microsoft.com/v1.0/directoryObjects/{id}
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-directoryobject-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-directoryobject-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

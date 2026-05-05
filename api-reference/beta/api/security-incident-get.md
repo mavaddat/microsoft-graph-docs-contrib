@@ -25,13 +25,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "security_incident_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-incident-get-permissions.md)]
 
+[!INCLUDE [rbac-security-alerts-apis-read](../includes/rbac-for-apis/rbac-security-alerts-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/incidents/{incidentId}
 ```
 
@@ -61,16 +63,12 @@ The following example shows a request.
   "name": "get_incident"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/security/incidents/2972395
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-incident-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-incident-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -111,7 +109,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
@@ -130,25 +128,26 @@ Content-type: application/json
     "status": "Active",
     "severity": "Medium",
     "customTags": [
-      "Demo"
+        "Demo"
     ],
     "comments": [
-      {
-		"comment": "Demo incident",
-		"createdBy": "DavidS@contoso.com",
-		"createdTime": "2021-09-30T12:07:37.2756993Z"
-      }
-    ],
-    "systemTags" : [
-        "Defender Experts"
-    ],
-    "description" : "Microsoft observed Raspberry Robin worm activity spreading through infected USB on multiple devices in your environment. From available intel, these infections could be a potential precursor activity to ransomware deployment. ...",
-    "recommendedActions" : "Immediate Recommendations:  1.    Block untrusted and unsigned processes that run from USB (ASR Rule) 2.    Verify if the ASR rule is turned on for the devices and evaluate whether the ASR . ...",
-    "recommendedHuntingQueries" : [
         {
-             "kqlText" : "AlertInfo   | where Timestamp >= datetime(2022-10-20 06:00:52.9644915)   | where Title == 'Potential Raspberry Robin worm command'  | join AlertEvidence on AlertId   | distinct DeviceId"
+            "comment": "Demo incident",
+            "createdBy": "DavidS@contoso.com",
+            "createdTime": "2021-09-30T12:07:37.2756993Z"
         }
     ],
-    "lastModifiedBy": "DavidS@contoso.onmicrosoft.com"
+    "systemTags": [
+        "Defender Experts"
+    ],
+    "description": "Microsoft observed Raspberry Robin worm activity spreading through infected USB on multiple devices in your environment. From available intel, these infections could be a potential precursor activity to ransomware deployment. ...",
+    "recommendedActions": "Immediate Recommendations:  1.    Block untrusted and unsigned processes that run from USB (ASR Rule) 2.    Verify if the ASR rule is turned on for the devices and evaluate whether the ASR . ...",
+    "recommendedHuntingQueries": [
+        {
+            "kqlText": "AlertInfo   | where Timestamp >= datetime(2022-10-20 06:00:52.9644915)   | where Title == 'Potential Raspberry Robin worm command'  | join AlertEvidence on AlertId   | distinct DeviceId"
+        }
+    ],
+    "lastModifiedBy": "DavidS@contoso.onmicrosoft.com",
+    "summary": "Defender Experts has identified some malicious activity. This incident has been raised for your awareness and should be investigated as normal."
 }
 ```

@@ -5,6 +5,7 @@ author: "rzhang"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # callTranscriptionInfo resource type
@@ -18,11 +19,11 @@ Represents a single DTMF event.
 | Property       | Type    | Description|
 |:---------------|:--------|:----------|
 | lastModifiedDateTime | DateTime | The state modified time in UTC. |
-| state | String | Possible values are: `notStarted`, `active`, `inactive`. |
+| state | String | The possible values are: `notStarted`, `active`, `inactive`. |
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

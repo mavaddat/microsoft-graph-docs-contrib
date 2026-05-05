@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: non-product-specific
 author: "SuryaLashmiS"
+ms.date: 04/05/2024
 ---
 
 # Create single-value extended property
@@ -25,8 +26,11 @@ The following user resources are supported:
 - [event](../resources/event.md)
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
+- [note](../resources/note.md)
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
+- [todoTask](../resources/todotask.md)
+- [todoTaskList](../resources/todotasklist.md)
 
 The following group resources are supported:
 
@@ -34,8 +38,7 @@ The following group resources are supported:
 - group [event](../resources/event.md)
 - group [post](../resources/post.md)
 
-See [Extended properties overview](../resources/extended-properties-overview.md) for more information about when to use
-open extensions or extended properties, and how to specify extended properties.
+For more information about when to use open extensions or extended properties, and how to specify extended properties, see [Extended properties overview](../resources/extended-properties-overview.md).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -48,25 +51,28 @@ Depending on the resource you're creating the extended property in and the permi
 | [contact](../resources/contact.md) | Contacts.ReadWrite | Contacts.ReadWrite | Contacts.ReadWrite |
 | [contactFolder](../resources/contactfolder.md) | Contacts.ReadWrite | Contacts.ReadWrite | Contacts.ReadWrite |
 | [event](../resources/event.md) | Calendars.ReadWrite | Calendars.ReadWrite |  Calendars.ReadWrite|
-| group [calendar](../resources/calendar.md) | Group.ReadWrite.All | Not supported | Not supported |
-| group [event](../resources/event.md) | Group.ReadWrite.All | Not supported | Not supported |
-| group [post](../resources/post.md) | Group.ReadWrite.All | Not supported | Not supported |
+| group [calendar](../resources/calendar.md) | Group.ReadWrite.All | Not supported. | Not supported. |
+| group [event](../resources/event.md) | Group.ReadWrite.All | Not supported. | Not supported. |
+| group [post](../resources/post.md) | Group.ReadWrite.All | Not supported. | Not supported. |
 | [mailFolder](../resources/mailfolder.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
 | [message](../resources/message.md) | Mail.ReadWrite | Mail.ReadWrite | Mail.ReadWrite |
-| [Outlook task](../resources/outlooktask.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported |
-| [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported |
+| [note](../resources/note.md) | ShortNotes.ReadWrite | ShortNotes.ReadWrite | ShortNotes.ReadWrite |
+| [Outlook task](../resources/outlooktask.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
+| [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.ReadWrite | Tasks.ReadWrite | Not supported. |
+| [todoTask](../resources/todotask.md) | Tasks.ReadWrite | Not supported. | Not supported. |
+| [todoTaskList](../resources/todotasklist.md) | Tasks.ReadWrite | Not supported. | Not supported. |
 
 ## HTTP request
 You can create extended properties in a new or existing resource instance.
 
 To create one or more extended properties in a _new_ resource instance, use the same REST request as creating the
 instance, and include the properties of the new resource instance _and extended property_ in the request body.
-Some resources support creation in more than one way. For more information on creating these resource instances,
+Some resources support creation in more than one way. For more information on how to create these resource instances,
 see the corresponding topics for creating a [message](../resources/message.md), [mailFolder](../api/user-post-mailfolders.md),
 [event](../api/user-post-events.md), [calendar](../api/user-post-calendars.md),
 [contact](../api/user-post-contacts.md), [contactFolder](../api/user-post-contactfolders.md),
 [Outlook task](../resources/outlooktask.md), [Outlook task folder](../resources/outlooktaskfolder.md),
-[group event](../api/group-post-events.md), and [group post](../resources/post.md).
+[group event](../api/group-post-events.md), [group post](../resources/post.md), and [todoTask](../resources/todotask.md).
 
 The following is the syntax of the requests.
 
@@ -91,6 +97,9 @@ POST /users/{id|userPrincipalName}/contacts
 POST /me/contactFolders
 POST /users/{id|userPrincipalName}/contactFolders
 
+POST /me/notes
+POST /users/{id|userPrincipalName}/notes
+
 POST /me/outlook/tasks
 POST /users/{id|userPrincipalName}/outlook/tasks
 POST /me/outlook/taskFolders/{id}/tasks
@@ -103,6 +112,11 @@ POST /users/{id|userPrincipalName}/outlook/taskFolders
 POST /me/outlook/taskGroups/{id}/taskFolders
 POST /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders
 
+POST /me/todo/lists/{todoTaskListId}/tasks/{todoTaskId}?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+POST /me/todo/lists/{todoTaskListId}/tasks?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+
+POST /me/todo/lists?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+
 POST /groups/{id}/events
 
 POST /groups/{id}/threads/{id}/posts/{id}/reply
@@ -112,6 +126,8 @@ POST /groups/{id}/conversations/{id}/threads/{id}/reply
 POST /groups/{id}/threads
 POST /groups/{id}/conversations
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 To create one or more extended properties in an existing resource instance, specify the instance in the
 request, and include the extended property in the request body.
@@ -139,6 +155,9 @@ PATCH /users/{id|userPrincipalName}/contacts/{id}
 PATCH /me/contactFolders/{id}
 PATCH /users/{id|userPrincipalName}/contactFolders/{id}
 
+PATCH /me/notes/{id}
+PATCH /users/{id|userPrincipalName}/notes/{id}
+
 PATCH /me/outlook/tasks/{id}
 PATCH /users/{id|userPrincipalName}/outlook/tasks/{id}
 PATCH /me/outlook/taskFolders/{id}/tasks/{id}
@@ -151,8 +170,15 @@ PATCH /users/{id|userPrincipalName}/outlook/taskFolders/{id}
 PATCH /me/outlook/taskGroups/{id}/taskFolders/{id}
 PATCH /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders/{id}
 
+PATCH /me/todo/lists/{todoTaskListId}/tasks?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+PATCH /me/todo/lists/{todoTaskListId}/tasks/{todoTaskId}?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+
+PATCH /me/todo/lists/{todoTaskListId}?$expand=singleValueExtendedProperties($filter=id eq '{singleValueExtendedPropertyId}')
+
 PATCH /groups/{id}/events/{id}
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 ## Request headers
 | Name       | Value |
@@ -165,37 +191,34 @@ PATCH /groups/{id}/events/{id}
 Provide a JSON body of each [singleValueLegacyExtendedProperty](../resources/singlevaluelegacyextendedproperty.md) object in the
 **singleValueExtendedProperties** collection property of the resource instance.
 
-|**Property**|**Type**|**Description**|
+|Property|Type|Description|
 |:-----|:-----|:-----|
 |singleValueExtendedProperties|[singleValueLegacyExtendedProperty](../resources/singlevaluelegacyextendedproperty.md) collection| An array of one or more single-valued extended properties. |
-|id|String|For each property in the **singleValueExtendedProperties** collection, specify this to identify the property. It must follow one of the supported formats. See [Outlook extended properties overview](../resources/extended-properties-overview.md) for more information. Required.|
+|id|String|For each property in the **singleValueExtendedProperties** collection, specify this to identify the property. It must follow one of the supported formats. For more information, see [Extended properties overview](../resources/extended-properties-overview.md). Required.|
 |value|string|For each property in the **singleValueExtendedProperties** collection, specify the property value. Required.|
 
 When creating an extended property in a _new_ resource instance, in addition to the
 new **singleValueExtendedProperties** collection, provide a JSON representation of that resource instance (that is, a [message](../resources/message.md),
-[mailFolder](../resources/mailfolder.md), [event](../resources/event.md), etc.)
+[mailFolder](../resources/mailfolder.md), [event](../resources/event.md), [todoTask](../resources/todotask.md), etc.)
 
 ## Response
 
-#### Response code
-An operation successful in creating an extended property in a new resource instance returns `201 Created`, except in a new group post,
-depending on the method used, the operation can return `200 OK` or `202 Accepted`.
+### Response code
+
+An operation that successfully creates an extended property in a new resource instance returns a `201 Created` response code. In the case of a new group post, depending on the method used, the operation returns either a `200 OK` or a `202 Accepted` response code.
 
 In an existing resource instance, a successful create operation returns `200 OK`.
 
+### Response body
 
-#### Response body
-
-When creating an extended property, the response includes only the new or existing instance but not the new extended property. To see the newly
+When you create an extended property, the response includes only the new or existing instance but not the new extended property. To see the newly
 created extended property, [get the instance expanded with the extended property](../api/singlevaluelegacyextendedproperty-get.md).
 
-When creating an extended property in a _new_ [group post](../resources/post.md) by replying to a thread or post, the response includes only
+When you create an extended property in a _new_ [group post](../resources/post.md) by replying to a thread or post, the response includes only
 a response code but not the new post nor the extended property.
 
-
-
-## Example
-##### Request 1
+## Examples
+### Request 1
 
 The first example creates a new event and a single-value extended property in the same POST operation. Apart from the properties you'd normally
 include for a new event, the request body includes the **singleValueExtendedProperties** collection that contains one single-value
@@ -234,14 +257,14 @@ Content-Type: application/json
   ],
   "singleValueExtendedProperties": [
      {
-           "id":"String {66f5a359-4659-4830-9070-00040ec6ac6e} Name Fun",
-           "value":"Food"
+       "id":"String {66f5a359-4659-4830-9070-00040ec6ac6e} Name Fun",
+       "value":"Food"
      }
   ]
 }
 ```
 
-##### Response 1
+### Response 1
 
 A successful response is indicated by an `HTTP 201 Created` response code, and includes the new event
 in the response body, similar to the response from [creating just an event](../api/user-post-events.md).
@@ -252,7 +275,7 @@ To see the newly created extended property, [get the event expanded with the ext
 
 ****
 
-##### Request 2
+### Request 2
 
 The second example creates one single-value extended property for the specified existing message. That extended property is the only
 element in the **singleValueExtendedProperties** array. The request body includes the following for the
@@ -276,7 +299,7 @@ Content-Type: application/json
 }
 ```
 
-##### Response 2
+### Response 2
 
 A successful response is indicated by an `HTTP 200 OK` response code, and includes the specified message in the response body,
 similar to the response from [updating a message](../api/message-update.md). The response doesn't

@@ -5,6 +5,7 @@ author: "hanky0301"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # cloudPcRemoteActionCapability resource type
@@ -19,8 +20,8 @@ Represents the action name and capability of a supported Cloud PC remote action.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|actionCapability|[actionCapability](#actioncapability-values)|Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: `enabled`, `disabled`. Default value is `enabled`.|
-|actionName|[cloudPcRemoteActionName](#cloudpcremoteactionname-values)|The name of the supported Cloud PC remote action. Possible values are: `unknown`, `restart`, `rename`, `restore`, `resize`, `reprovision`, `troubleShoot`, `changeUserAccountType`, `placeUnderReview`. Default value is `unknown`.|
+|actionCapability|[actionCapability](#actioncapability-values)|Indicates the state of the supported action capability to perform a Cloud PC remote action. The possible values are: `enabled`, `disabled`. Default value is `enabled`.|
+|actionName|[cloudPcRemoteActionName](#cloudpcremoteactionname-values)|The name of the supported Cloud PC remote action. The possible values are: `unknown`, `restart`, `rename`, `restore`, `resize`, `reprovision`, `troubleShoot`, `changeUserAccountType`, `placeUnderReview`. Default value is `unknown`.|
 
 ### cloudPcRemoteActionName values
 
@@ -51,7 +52,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.cloudPcRemoteActionCapability"

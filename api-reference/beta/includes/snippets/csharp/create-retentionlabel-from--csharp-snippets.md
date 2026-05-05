@@ -8,28 +8,38 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 // Dependencies
 using Microsoft.Graph.Beta.Models.Security;
-using Microsoft.Graph.Beta.Models;
 
 var requestBody = new RetentionLabel
 {
 	OdataType = "#microsoft.graph.security.retentionLabel",
-	DisplayName = "String",
-	BehaviorDuringRetentionPeriod = BehaviorDuringRetentionPeriod.DoNotRetain,
-	ActionAfterRetentionPeriod = ActionAfterRetentionPeriod.None,
-	RetentionTrigger = RetentionTrigger.DateLabeled,
-	RetentionDuration = new RetentionDuration
+	DisplayName = "Retention Schedule 10005",
+	BehaviorDuringRetentionPeriod = BehaviorDuringRetentionPeriod.Retain,
+	ActionAfterRetentionPeriod = ActionAfterRetentionPeriod.StartDispositionReview,
+	RetentionTrigger = RetentionTrigger.DateOfEvent,
+	RetentionDuration = new RetentionDurationInDays
 	{
-		OdataType = "microsoft.graph.security.retentionDuration",
+		OdataType = "microsoft.graph.security.retentionDurationInDays",
+		Days = 2555,
 	},
-	IsInUse = boolean,
-	DescriptionForAdmins = "String",
-	DescriptionForUsers = "String",
-	CreatedBy = new IdentitySet
+	DispositionReviewStages = new List<DispositionReviewStage>
 	{
-		OdataType = "microsoft.graph.identitySet",
+		new DispositionReviewStage
+		{
+			StageNumber = 1,
+			Name = "Stage1",
+			AdditionalData = new Dictionary<string, object>
+			{
+				{
+					"reviewersEmailAddresses " , new List<string>
+					{
+						"Admin@contoso.onmicrosoft.com",
+					}
+				},
+			},
+		},
 	},
-	LabelToBeApplied = "String",
-	DefaultRecordBehavior = DefaultRecordBehavior.StartLocked,
+	DescriptionForAdmins = "retain for 7 years",
+	DescriptionForUsers = "retain for 7 years",
 	Descriptors = new FilePlanDescriptor
 	{
 		AdditionalData = new Dictionary<string, object>
@@ -49,6 +59,13 @@ var requestBody = new RetentionLabel
 			{
 				"filePlanReferenceTemplate@odata.bind" , "https://graph.microsoft.com/beta/security/labels/filePlanReferences('e095f4fc-b966-4c40-94de-fb8a383658e4')"
 			},
+		},
+	},
+	DefaultRecordBehavior = DefaultRecordBehavior.StartLocked,
+	AdditionalData = new Dictionary<string, object>
+	{
+		{
+			"retentionEventType@odata.bind" , "https://graph.microsoft.com/beta/security/triggerTypes/retentionEventTypes('e095f4fc-b966-4c40-94de-fb8a383658e4')"
 		},
 	},
 };

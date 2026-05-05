@@ -10,13 +10,10 @@ GraphServiceClient graphClient = new GraphServiceClient(requestAdapter);
 
 com.microsoft.graph.beta.models.security.RetentionLabel retentionLabel = new com.microsoft.graph.beta.models.security.RetentionLabel();
 retentionLabel.setOdataType("#microsoft.graph.security.retentionLabel");
-com.microsoft.graph.beta.models.security.RetentionDuration retentionDuration = new com.microsoft.graph.beta.models.security.RetentionDuration();
-retentionDuration.setOdataType("microsoft.graph.security.retentionDuration");
+com.microsoft.graph.beta.models.security.RetentionDurationInDays retentionDuration = new com.microsoft.graph.beta.models.security.RetentionDurationInDays();
+retentionDuration.setOdataType("microsoft.graph.security.retentionDurationInDays");
+retentionDuration.setDays(2555);
 retentionLabel.setRetentionDuration(retentionDuration);
-retentionLabel.setDescriptionForAdmins("String");
-retentionLabel.setDescriptionForUsers("String");
-retentionLabel.setLabelToBeApplied("String");
-retentionLabel.setDefaultRecordBehavior(com.microsoft.graph.beta.models.security.DefaultRecordBehavior.StartLocked);
 com.microsoft.graph.models.security.RetentionLabel result = graphClient.security().labels().retentionLabels().byRetentionLabelId("{retentionLabel-id}").patch(retentionLabel);
 
 

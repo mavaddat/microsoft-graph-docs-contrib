@@ -2,9 +2,10 @@
 title: "passwordSingleSignOnCredentialSet resource type"
 description: "Indicates a set of credentials that completely define a sign in flow for a user or group to an application."
 ms.localizationpriority: medium
-author: "sureshja"
+author: "Jackson-Woods"
 ms.subservice: "entra-applications"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # passwordSingleSignOnCredentialSet resource type
@@ -27,7 +28,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

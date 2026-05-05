@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # participantInfo resource type
@@ -20,7 +21,7 @@ Contains additional properties about the participant identity
 | Property         | Type                            | Description                                                                                                                                                                                                      |
 | :--------------- | :------------------------------ | :-----------------------------------------------------------------------------------------------------------------------------------------------------------                                                     |
 | countryCode      | String                          | The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.                                                                                   |
-| endpointType     | endpointType                          | The type of endpoint the participant is using. Possible values are: `default`, `voicemail`, `skypeForBusiness`, `skypeForBusinessVoipPhone` and `unknownFutureValue`. Read-only.                                                                    |
+| endpointType     | endpointType                          | The type of endpoint the participant is using. The possible values are: `default`, `voicemail`, `skypeForBusiness`, `skypeForBusinessVoipPhone` and `unknownFutureValue`. Read-only.                                                                    |
 | identity         | [identitySet](identityset.md)   | The [identitySet](identityset.md) associated with this participant. Read-only.                                                                                                                                   |
 | languageId       | String                          | The language culture string. Read-only.                                                                                                                                                                          |
 | region           | String                          | The home region of the participant, and can be a country, a continent, or a larger geographic region. The region doesn't change based on the participant's current physical location, unlike countryCode. Read-only. |
@@ -28,9 +29,12 @@ Contains additional properties about the participant identity
 | participantId    | String                          | The participant ID of the participant. Read-only.    |
 
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -1,11 +1,12 @@
 ---
 title: "authenticationMethodModeDetail resource type"
-description: "A representation of a specific mode of an authentication method that can be used as part of an authentication method combination in an authentication strength."
+description: "Represents a specific mode of an authentication method that can be used as part of an authentication method combination in an authentication strength."
 author: "InbarckMS"
 ms.reviewer: conditionalaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # authenticationMethodModeDetail resource type
@@ -23,13 +24,13 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List authenticationMethodModeDetails](../api/authenticationstrengthroot-list-authenticationmethodmodes.md)|[authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md) collection|Get a list of the [authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md) objects and their properties.|
-|[Get authenticationMethodModeDetail](../api/authenticationmethodmodedetail-get.md)|[authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md)|Read the properties and relationships of an [authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md) object.|
+|[List authentication combinations and method modes](../api/authenticationstrengthroot-list-authenticationmethodmodes.md)|[authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md) collection|Get a list of the [authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md) objects and their properties.|
+|[Get authentication method modes](../api/authenticationmethodmodedetail-get.md)|[authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md)|Read the properties and relationships of an [authenticationMethodModeDetail](../resources/authenticationmethodmodedetail.md) object.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|authenticationMethod|baseAuthenticationMethod|The authentication method that this mode modifies. The possible values are: `password`, `voice`, `hardwareOath`, `softwareOath`, `sms`, `fido2`, `windowsHelloForBusiness`, `microsoftAuthenticator`, `temporaryAccessPass`, `email`, `x509Certificate`, `federation`, `unknownFutureValue`.|
+|authenticationMethod|[baseAuthenticationMethod](../resources/baseauthenticationmethod.md)|The authentication method that this mode modifies.|
 |displayName|String|The display name of this mode|
 |id|String|The system-generated identifier for this mode. Inherited from [entity](../resources/entity.md).|
 
@@ -37,7 +38,7 @@ Inherits from [entity](../resources/entity.md).
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

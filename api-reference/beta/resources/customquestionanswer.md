@@ -24,11 +24,15 @@ Represents a registrant's answer to the [custom registration question](meetingre
 | questionId | String | ID the custom registration question. Read-only.|
 | value | String | Answer to the custom registration question. |
 
+## Relationships
+None.
+
 ## JSON representation
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.customQuestionAnswer"
+  "@odata.type": "microsoft.graph.customQuestionAnswer",
+  "baseType": "microsoft.graph.entity"
 }-->
 
 ```json

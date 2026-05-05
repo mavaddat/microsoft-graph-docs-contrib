@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 03/06/2024
 ---
 
 # oAuthConsentAppDetail resource type
@@ -17,7 +18,7 @@ Represents details required for the oAuth technique. Admins can configure the sc
 
 |Property|Type|Description|
 |:---|:---|:---|
-|appScope|oAuthAppScope|App scope. Possible values are: `unknown`, `readCalendar`, `readContact`, `readMail`, `readAllChat`, `readAllFile`, `readAndWriteMail`, `sendMail`, `unknownFutureValue`.|
+|appScope|oAuthAppScope|App scope. The possible values are: `unknown`, `readCalendar`, `readContact`, `readMail`, `readAllChat`, `readAllFile`, `readAndWriteMail`, `sendMail`, `unknownFutureValue`.|
 |displayLogo|String|App display logo.|
 |displayName|String|App name.|
 

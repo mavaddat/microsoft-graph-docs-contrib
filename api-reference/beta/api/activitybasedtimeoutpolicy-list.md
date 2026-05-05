@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "lujiangfeng666"
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 04/05/2024
 ---
 
 # List activityBasedTimeoutPolicies
@@ -70,10 +71,6 @@ GET https://graph.microsoft.com/beta/policies/activityBasedTimeoutPolicies
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-activitybasedtimeoutpolicies-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-activitybasedtimeoutpolicies-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-activitybasedtimeoutpolicies-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -118,16 +115,19 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "value": [
-    {
-      "definition": [
-        "definition-value"
-      ],
-      "displayName": "displayName-value",
-      "isOrganizationDefault": true,
-      "id": "id-value"
-    }
-  ]
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#policies/activityBasedTimeoutPolicies",
+    "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET policies/activityBasedTimeoutPolicies?$select=definition,isOrganizationDefault",
+    "value": [
+        {
+            "id": "cf70ac6c-8a1a-40cd-a523-a2b4a56de0df",
+            "deletedDateTime": null,
+            "definition": [
+                "{\"ActivityBasedTimeoutPolicy\":{\"Version\":1,\"ApplicationPolicies\":[{\"ApplicationId\":\"default\",\"WebSessionIdleTimeout\":\"00:05:00\"}]}}"
+            ],
+            "displayName": "activityBasedTimeoutPolicies test",
+            "isOrganizationDefault": true
+        }
+    ]
 }
 ```
 

@@ -6,6 +6,7 @@ ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # excludeTarget resource type
@@ -20,13 +21,13 @@ Represents the users or groups of users that are excluded from a policy.
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|The object identifier of a Microsoft Entra group.|
-|targetType|authenticationMethodTargetType|The type of the authentication method target. Possible values are: `group` and `unknownFutureValue`.|
+|targetType|authenticationMethodTargetType|The type of the authentication method target. The possible values are: `group` and `unknownFutureValue`.|
 
 ## Relationships
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.excludeTarget"

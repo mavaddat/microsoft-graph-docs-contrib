@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Get retentionEvent
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/triggers/retentionEvents/{retentionEventId}
 ```
 
@@ -50,23 +51,19 @@ If successful, this method returns a `200 OK` response code and a [microsoft.gra
 ## Examples
 
 ### Request
-
+Here's an example of a request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "get_retentionevent"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/security/triggers/retentionEvents/{retentionEventId}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-retentionevent-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-retentionevent-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -96,6 +93,7 @@ GET https://graph.microsoft.com/beta/security/triggers/retentionEvents/{retentio
 ---
 
 ### Response
+Here's an example of the response.
 >**Note:** The response object shown here might be shortened for readability.
 <!-- {
   "blockType": "response",
@@ -103,7 +101,7 @@ GET https://graph.microsoft.com/beta/security/triggers/retentionEvents/{retentio
   "@odata.type": "microsoft.graph.security.retentionEvent"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -115,7 +113,7 @@ Content-Type: application/json
     "description": "String",
     "eventQueries": [
       {
-        "@odata.type": "microsoft.graph.security.eventQueries"
+        "@odata.type": "microsoft.graph.security.eventQuery"
       }
     ],
     "eventTriggerDateTime": "String (timestamp)",

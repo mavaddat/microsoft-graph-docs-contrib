@@ -3,14 +3,15 @@ title: "ediscoveryCustodian: applyHold"
 description: "Start the process of applying hold to eDiscovery custodians."
 author: "SeunginLyu"
 ms.localizationpriority: medium
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: "apiPageType"
+ms.date: 06/10/2024
 ---
 
 # ediscoveryCustodian: applyHold
 Namespace: microsoft.graph.security
 
-Start the process of applying hold on [eDiscovery custodians](../resources/security-ediscoverycustodian.md). After the operation is created, you can get the status by retrieving the `Location` parameter from the response headers. The location provides a URL that will return an [eDiscoveryHoldOperation](../resources/security-ediscoveryholdoperation.md) object.
+Start the process of applying hold on [eDiscovery custodians](../resources/security-ediscoverycustodian.md). After the operation is created, you can use [Get ediscoveryCustodian](security-ediscoverycustodian-get.md) to retrieve the status of an [ediscoveryCustodian](../resources/security-ediscoverycustodian.md).
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
@@ -20,13 +21,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "security_ediscoverycustodian_applyhold" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-ediscoverycustodian-applyhold-permissions.md)]
 
+[!INCLUDE [rbac-ediscovery-custodian](../includes/rbac-for-apis/rbac-ediscovery-custodian-export-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/cases/ediscoveryCases/{ediscoveryCaseId}/custodians/applyHold
 POST /security/cases/ediscoveryCases/{ediscoveryCaseId}/custodians/{eDiscoveryCustodianId}/applyHold
 ```
@@ -63,7 +66,7 @@ The following example shows a request.
   "name": "ediscoverycustodianthis.applyhold_ID_custodians"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/b0073e4e-4184-41c6-9eb7-8c8cc3e2288b/custodians/applyHold
 Content-Type: application/json
 
@@ -76,10 +79,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/ediscoverycustodianthisapplyhold-id-custodians-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/ediscoverycustodianthisapplyhold-id-custodians-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +114,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 ```
 
@@ -129,16 +128,12 @@ The following example shows a request.
   "name": "ediscoverycustodianthis.applyhold_singlecustodian"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/b0073e4e-4184-41c6-9eb7-8c8cc3e2288b/custodians/c25c3914f9f743ee9cbaa25377e0cec6/applyHold
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/ediscoverycustodianthisapplyhold-singlecustodian-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/ediscoverycustodianthisapplyhold-singlecustodian-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -174,6 +169,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 ```

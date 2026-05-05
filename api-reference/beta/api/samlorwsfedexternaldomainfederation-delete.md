@@ -5,6 +5,7 @@ author: "namkedia"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Delete samlOrWsFedExternalDomainFederation
@@ -23,10 +24,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "samlorwsfedexternaldomainfederation_delete" } -->
 [!INCLUDE [permissions-table](../includes/permissions/samlorwsfedexternaldomainfederation-delete-permissions.md)]
 
-The work or school account needs to belong to one of the following [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-
-* Global Administrator
-* External Identity Provider Administrator
+[!INCLUDE [rbac-identity-provider-apis](../includes/rbac-for-apis/rbac-identity-provider-apis.md)]
 
 ## HTTP request
 
@@ -35,7 +33,7 @@ The work or school account needs to belong to one of the following [Microsoft En
 }
 -->
 
-``` http
+```http
 DELETE directory/federationConfigurations/{samlOrWsFedExternalDomainFederation ID}
 ```
 
@@ -64,16 +62,12 @@ If successful, this method returns a `204 No Content` response code.
 }
 -->
 
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/directory/federationConfigurations/96db02e2-80c1-5555-bc3a-de92ffb8c5be
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-samlorwsfedexternaldomainfederation-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-samlorwsfedexternaldomainfederation-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,6 +104,6 @@ DELETE https://graph.microsoft.com/beta/directory/federationConfigurations/96db0
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

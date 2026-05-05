@@ -5,6 +5,7 @@ author: "nanguil"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 06/19/2024
 ---
 
 # identityUserFlowAttributeAssignment resource type
@@ -17,11 +18,11 @@ Represents how attributes are collected in an identity user flow. and allows cus
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[Get identityUserFlowAttributeAssignment](../api/identityuserflowattributeassignment-get.md)|[identityUserFlowAttributeAssignment](../resources/identityuserflowattributeassignment.md)|Read the properties and relationships of an identityUserFlowAttributeAssignment object.|
-|[Update identityUserFlowAttributeAssignment](../api/identityuserflowattributeassignment-update.md)|None|Update the properties of an identityUserFlowAttributeAssignment object.|
-|[Delete identityUserFlowAttributeAssignment](../api/identityuserflowattributeassignment-delete.md)|None|Delete a specific identityUserFlowAttributeAssignment object.|
-|[getOrder](../api/identityuserflowattributeassignment-getorder.md)|[assignmentOrder](../resources/assignmentorder.md)|Gets the order of the identityUserFlowAttributes being collected within a user flow.|
-|[setOrder](../api/identityuserflowattributeassignment-setorder.md)|None|Sets the order of the identityUserFlowAttributes being collected within a user flow.|
+|[Get](../api/identityuserflowattributeassignment-get.md)|[identityUserFlowAttributeAssignment](../resources/identityuserflowattributeassignment.md)|Read the properties and relationships of an identityUserFlowAttributeAssignment object.|
+|[Update](../api/identityuserflowattributeassignment-update.md)|None|Update the properties of an identityUserFlowAttributeAssignment object.|
+|[Delete](../api/identityuserflowattributeassignment-delete.md)|None|Delete a specific identityUserFlowAttributeAssignment object.|
+|[Get order](../api/identityuserflowattributeassignment-getorder.md)|[assignmentOrder](../resources/assignmentorder.md)|Gets the order of the identityUserFlowAttributes being collected within a user flow.|
+|[Set order](../api/identityuserflowattributeassignment-setorder.md)|None|Sets the order of the identityUserFlowAttributes being collected within a user flow.|
 
 ## Properties
 
@@ -32,7 +33,7 @@ Represents how attributes are collected in an identity user flow. and allows cus
 |isOptional|Boolean|Determines whether the identityUserFlowAttribute is optional. `true` means the user doesn't have to provide a value. `false` means the user can't complete sign-up without providing a value.|
 |requiresVerification|Boolean|Determines whether the identityUserFlowAttribute requires verification, and is only used for verifying the user's phone number or email address.|
 |userAttributeValues|[userAttributeValuesItem](../resources/userattributevaluesitem.md) collection|The input options for the user flow attribute. Only applicable when the userInputType is `radioSingleSelect`, `dropdownSingleSelect`, or `checkboxMultiSelect`.|
-|userInputType|identityUserFlowAttributeInputType|The input type of the user flow attribute. Possible values are: `textBox`, `dateTimeDropdown`, `radioSingleSelect`, `dropdownSingleSelect`, `emailBox`, `checkboxMultiSelect`.|
+|userInputType|identityUserFlowAttributeInputType|The input type of the user flow attribute. The possible values are: `textBox`, `dateTimeDropdown`, `radioSingleSelect`, `dropdownSingleSelect`, `emailBox`, `checkboxMultiSelect`.|
 
 ## Relationships
 
@@ -42,7 +43,7 @@ Represents how attributes are collected in an identity user flow. and allows cus
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 07/24/2024
 ---
 
 # List payloads
@@ -47,13 +48,15 @@ The following are examples of their use:
 }
 -->
 ``` http
-GET /security/attackSimulation/payloads?$filter=source eq 'Tenant' and $count=true
-GET /security/attackSimulation/payloads?$filter=source eq 'Tenant' and $filter={property} eq '{property-value}'
-GET /security/attackSimulation/payloads?$filter=source eq 'Tenant' and $filter={property} eq '{property-value}'&$top=5
-GET /security/attackSimulation/payloads?$filter=source eq 'Tenant' and $orderby={property}
-GET /security/attackSimulation/payloads?$filter=source eq 'Tenant' and $skipToken={skipToken}
-GET /security/attackSimulation/payloads?$filter=source eq 'Tenant' and $top=1
-GET /security/attackSimulation/payloads?$filter=source eq 'Tenant' and $select={property}
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&$count=true
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&{property} eq '{property-value}'
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&{property} eq '{property-value}' &$top=5
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&$filter={property} eq '{property-value}'
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&$filter={property} eq '{property-value}'&$top=5
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&$orderby={property}
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&$skipToken={skipToken}
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&$top=1
+GET /security/attackSimulation/payloads?$filter=source eq 'Tenant'&$select={property}
 ```
 
 ## Request headers
@@ -88,10 +91,6 @@ GET https://graph.microsoft.com/beta/security/attackSimulation/payloads?$filter=
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-payloads-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-payloads-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

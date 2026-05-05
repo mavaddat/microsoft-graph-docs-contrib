@@ -5,6 +5,7 @@ author: "namkedia"
 ms.localizationpriority: high
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # claimsMapping resource type
@@ -26,7 +27,7 @@ After the custom identity provider sends an ID token back to Azure AD B2C, Azure
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.claimsMapping"

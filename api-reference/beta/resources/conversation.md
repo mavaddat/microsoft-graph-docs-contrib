@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mikemcleanlive"
 ms.subservice: "entra-groups"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # conversation resource type
@@ -15,14 +16,14 @@ Namespace: microsoft.graph
 
 A conversation is a collection of [threads](conversationthread.md), and a thread contains posts to that thread. All threads and posts in a conversation share the same subject.
 
-This resource supports subscribing to [change notifications](/graph/webhooks).
+This resource supports subscribing to [change notifications](/graph/change-notifications-overview).
 
 ## Methods
 
 | Method       | Return Type  |Description|
 |:---------------|:--------|:----------|
 |[List conversations](../api/group-list-conversations.md) | [conversation](conversation.md) collection |Get the list of conversations in this group.|
-|[Create](../api/group-post-conversations.md) |[conversation](conversation.md)| Create a new conversation by including a thread and a post.|
+|[Create conversation](../api/group-post-conversations.md) |[conversation](conversation.md)| Create a new conversation by including a thread and a post.|
 |[Get conversation](../api/conversation-get.md) | [conversation](conversation.md) |Read properties and relationships of conversation object.|
 |[Delete](../api/conversation-delete.md) | None |Delete conversation object. |
 |[List conversation threads](../api/conversation-list-threads.md) |[conversationThread](conversationthread.md) collection| Get all the threads in a group conversation.|
@@ -32,10 +33,10 @@ This resource supports subscribing to [change notifications](/graph/webhooks).
 | Property       | Type    |Description|
 |:---------------|:--------|:----------|
 |hasAttachments|Boolean|Indicates whether any of the posts within this Conversation has at least one attachment. Supports `$filter` (`eq`, `ne`) and `$search`.|
-|id|String|The conversations's unique identifier. Read-only.|
+|id|String|The conversation's unique identifier. Read-only.|
 |lastDeliveredDateTime|DateTimeOffset|The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Supports `$filter` (`eq`, `ne`, `le`, `ge`).|
 |preview|String|A short summary from the body of the latest post in this conversation.|
-|topic|String|The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.|
+|topic|String|The topic of the conversation. This property can be set when the conversation is created, but it can't be updated.|
 |uniqueSenders|String collection|All the users that sent a message to this Conversation.|
 
 ## Relationships
@@ -45,7 +46,7 @@ This resource supports subscribing to [change notifications](/graph/webhooks).
 
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

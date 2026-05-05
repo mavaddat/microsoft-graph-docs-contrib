@@ -5,13 +5,21 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\Beta\GraphServiceClient;
+use Microsoft\Graph\Beta\Generated\Models\EducationAssignment;
+use Microsoft\Graph\Beta\Generated\Models\EducationItemBody;
+use Microsoft\Graph\Beta\Generated\Models\BodyType;
+use Microsoft\Graph\Beta\Generated\Models\EducationAssignmentPointsGradeType;
+use Microsoft\Graph\Beta\Generated\Models\EducationAssignmentClassRecipient;
+use Microsoft\Graph\Beta\Generated\Models\EducationAssignmentStatus;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 $requestBody = new EducationAssignment();
-$requestBody->setDueDateTime(new \DateTime('2022-09-16T00:00:00Z'));
-$requestBody->setDisplayName('Reading test 09.14 Beta');
+$requestBody->setDueDateTime(new \DateTime('2025-09-16T00:00:00Z'));
+$requestBody->setDisplayName('Reading test 09.14');
+$requestBody->setLanguageTag('es-MX');
 $instructions = new EducationItemBody();
 $instructions->setContentType(new BodyType('text'));
 $instructions->setContent('Read chapter 4');

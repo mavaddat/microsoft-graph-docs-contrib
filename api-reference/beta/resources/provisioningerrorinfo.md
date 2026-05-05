@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "ArvindHarinder1"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 03/21/2024
 ---
 
 # provisioningErrorInfo resource type
@@ -27,7 +28,7 @@ Describes the status of the provisioning event and the associated errors.
 
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

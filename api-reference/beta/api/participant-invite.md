@@ -5,6 +5,7 @@ author: "rahulva-msft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 06/07/2024
 ---
 
 # participant: invite
@@ -17,7 +18,9 @@ Invite participants to the active call.
 
 For more information about how to handle operations, see [commsOperation](../resources/commsoperation.md).
 
->**Note:** Inviting multiple participants in one request is only supported for group calls.
+>**Note:**
+> * Inviting multiple participants in one request is only supported for group calls.
+> * Inviting more than one bot to a meeting or group call isn't allowed.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -95,10 +98,6 @@ Content-Length: 464
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/call-participant-invite-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/call-participant-invite-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -316,10 +315,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/participant-invite-multiple-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/participant-invite-multiple-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -542,9 +537,7 @@ Content-Type: application/json
 ### Example 3: Invite participants to an existing group call, replacing an existing Peer-to-Peer call
 
 
-The invite API supports only one participant when replacing an existing peer-to-peer call. 
-When multiple participants are provided in the request body, only the first participant 
-will be read and the rest of the participants will be ignored.
+The invite API supports only one participant when you replace an existing peer-to-peer call. When multiple participants are provided in the request body, only the first participant is read and the rest of the participants are ignored.
 
 
 > **Note:** The invite API supports only one participant when `replacesCallId` is provided. 
@@ -586,10 +579,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/participant-invite-existing-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/participant-invite-existing-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/participant-invite-existing-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -624,7 +613,7 @@ Content-Type: application/json
   "@odata.type": "microsoft.graph.inviteParticipantsOperation"
 }-->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -657,7 +646,7 @@ Content-Type: application/json
 
 #### Notification - operation completed
 
-``` http
+```http
 POST https://bot.contoso.com/api/calls
 Content-Type: application/json
 ```
@@ -796,10 +785,6 @@ Content-Length: 464
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/participant-invite-2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/participant-invite-2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -1015,10 +1000,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/participant-invite-move-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/participant-invite-move-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/participant-invite-move-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -1056,7 +1037,7 @@ The following example shows the response.
   "name": "participant-invite-move"
 }-->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -1090,7 +1071,7 @@ Content-Type: application/json
 
 #### Notification - operation completed
 
-``` http
+```http
 POST https://bot.contoso.com/api/calls
 Content-Type: application/json
 ```

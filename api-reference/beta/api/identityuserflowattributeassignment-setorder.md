@@ -5,6 +5,7 @@ author: "jkdouglas"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/18/2024
 ---
 
 # identityUserFlowAttributeAssignment: setOrder
@@ -22,6 +23,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "identityuserflowattributeassignment_setorder" } -->
 [!INCLUDE [permissions-table](../includes/permissions/identityuserflowattributeassignment-setorder-permissions.md)]
 
+[!INCLUDE [rbac-b2xb2c-user-flows-apis](../includes/rbac-for-apis/rbac-b2xb2c-user-flows-apis.md)]
+
 ## HTTP request
 
 <!-- {
@@ -29,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /identity/b2cUserFlows/{b2cIdentityUserFlowId}/userAttributeAssignments/setOrder
 POST /identity/b2xUserFlows/{b2xIdentityUserFlowId}/userAttributeAssignments/setOrder
 ```
@@ -67,7 +70,7 @@ If successful, this action returns a `204 No Content` response code.
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/b2cUserFlows/{id}/userAttributeAssignments/setOrder
 Content-Type: application/json
 
@@ -83,10 +86,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/identityuserflowattributeassignment-setorder-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/identityuserflowattributeassignment-setorder-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -123,6 +122,6 @@ Content-Type: application/json
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

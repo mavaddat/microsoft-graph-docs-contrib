@@ -4,15 +4,14 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```python
 
+# Code snippets are only available for the latest version. Current version is 1.x
 from msgraph import GraphServiceClient
 from msgraph.generated.models.subscription import Subscription
-
-graph_client = GraphServiceClient(credentials, scopes)
-
+# To initialize your graph_client, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=python
 request_body = Subscription(
 	change_type = "created,updated,deleted",
 	notification_url = "https://webhook.azurewebsites.net/api/send/myNotifyClient",
-	resource = "/users/87d349ed-44d7-43e1-9a83-5f2406dee5bd/chats/getAllMessages?model=B",
+	resource = "/users/87d349ed-44d7-43e1-9a83-5f2406dee5bd/chats/getAllMessages",
 	expiration_date_time = "2023-01-10T18:56:49.112603+00:00",
 	client_state = "ClientSecret",
 	include_resource_data = True,

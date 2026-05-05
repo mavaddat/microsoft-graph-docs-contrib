@@ -5,6 +5,7 @@ author: "benmicrosoft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # virtualAppointment: sendVirtualAppointmentSms
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /me/onlineMeetings/{onlineMeetingId}/sendVirtualAppointmentSms
 POST /users/{userId}/onlineMeetings/{onlineMeetingId}/sendVirtualAppointmentSms
 ```
@@ -66,7 +67,7 @@ The following example shows a request.
   "sampleKeys": ["MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi"]
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi/sendVirtualAppointmentSms
 
 { 
@@ -86,10 +87,6 @@ POST https://graph.microsoft.com/v1.0/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRh
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-virtualappointment-sendvirtualappointmentsms-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-virtualappointment-sendvirtualappointmentsms-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -128,7 +125,7 @@ The following example shows the response.
   "@odata.type": "Edm.String"
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 
 {}

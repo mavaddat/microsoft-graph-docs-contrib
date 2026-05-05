@@ -4,8 +4,9 @@ description: "View AWS resources that can administer security tools."
 author: "ashyasingh"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # securityToolAwsResourceAdministratorFinding resource type
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 View AWS resources that can administer security tools.
 
 Inherits from [awsSecurityToolAdministrationFinding](../resources/awssecuritytooladministrationfinding.md).
@@ -21,8 +24,8 @@ Inherits from [awsSecurityToolAdministrationFinding](../resources/awssecuritytoo
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List securityToolAwsResourceAdministratorFinding objects](../api/securitytoolawsresourceadministratorfinding-list.md)|[securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md) collection|Get a list of the [securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md) objects and their properties.|
-|[Get securityToolAwsResourceAdministratorFinding](../api/securitytoolawsresourceadministratorfinding-get.md)|[securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md)|Read the properties and relationships of a [securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md) object.|
+|[List](../api/securitytoolawsresourceadministratorfinding-list.md)|[securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md) collection|Get a list of the [securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md) objects and their properties.|
+|[Get](../api/securitytoolawsresourceadministratorfinding-get.md)|[securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md)|Read the properties and relationships of a [securityToolAwsResourceAdministratorFinding](../resources/securitytoolawsresourceadministratorfinding.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -60,4 +63,5 @@ The following JSON representation shows the resource type.
   "lastActiveDateTime": "String (timestamp)"
 }
 ```
+
 

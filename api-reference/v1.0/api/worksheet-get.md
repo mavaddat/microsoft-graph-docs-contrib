@@ -5,9 +5,10 @@ author: "lumine2008"
 ms.localizationpriority: medium
 ms.subservice: "excel"
 doc_type: apiPageType
+ms.date: 05/10/2024
 ---
 
-# Get Worksheet
+# Get worksheet
 
 Namespace: microsoft.graph
 
@@ -41,7 +42,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and [WorkbookWorksheet](../resources/worksheet.md) object in the response body.
+If successful, this method returns a `200 OK` response code and [workbookWorksheet](../resources/workbookworksheet.md) object in the response body.
 ## Example
 ##### Request
 The following example shows a request.
@@ -57,10 +58,6 @@ GET https://graph.microsoft.com/v1.0/me/drive/items/{id}/workbook/worksheets/{id
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-worksheet-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-worksheet-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -97,10 +94,10 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "id": "id-value",
-  "position": 99,
-  "name": "name-value",
-  "visibility": "visibility-value"
+  "id": "{FC034FA8-F8CC-4D24-9C0A-02A81B7792A0}",
+  "position": 1,
+  "name": "Sheet1",
+  "visibility": "Visible"
 }
 ```
 

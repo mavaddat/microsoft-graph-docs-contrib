@@ -1,33 +1,37 @@
 ---
 title: "workbookCommentReply resource type"
-description: "Definition of workbookCommentReply resource type"
+description: "Represents a reply to an Excel comment."
 ms.localizationpriority: medium
-author: "grangeryy"
+author: "AmandaHan123"
 ms.subservice: "excel"
 doc_type: "resourcePageType"
+toc.title: Comment reply
+ms.date: 09/05/2025
 ---
 
 # workbookCommentReply resource type
 
 Namespace: microsoft.graph
 
-Represents a reply to an excel comment.
+Represents a reply to an Excel comment.
 
 ## Methods
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
-| [List workbookCommentReplies](../api/workbookcomment-list-replies.md) | [workbookCommentReply](workbookcommentreply.md) collection | Retrieve a list of workbookcommentreply objects. |
-| [Get workbookCommentReply](../api/workbookcommentreply-get.md) | [workbookCommentReply](workbookcommentreply.md) | Read properties and relationships of workbookCommentReply object. |
-| [Create workbookCommentReply](../api/workbookcomment-post-replies.md) | [workbookCommentReply](workbookcommentreply.md) | Create a new workbookCommentReply. |
+| [List](../api/workbookcomment-list-replies.md) | [workbookCommentReply](workbookcommentreply.md) collection | Get a list of comment replies. |
+| [Create](../api/workbookcomment-post-replies.md) | [workbookCommentReply](workbookcommentreply.md) | Create a new comment reply. |
+| [Get](../api/workbookcommentreply-get.md) | [workbookCommentReply](workbookcommentreply.md) | Read the properties and relationships of a comment reply. |
 
 ## Properties
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|content|String|The content of replied comment.|
-|contentType|String|Indicates the type for the replied comment.|
-|id|String|Represents the comment identifier. Read-only.|
+|content|String|The content of the reply that is the displayed to end-users.|
+|contentType|String|The content type for the reply. Supported values are: `plain`, `mention`.|
+|id|String|The unique identifier for the reply. Read-only.|
+|mentions|[workbookCommentMention](workbookcommentmention.md) collection|A collection that contains all the people mentioned within the reply. When **contentType** is `plain`, this property is an empty array. Read-only.|
+|richContent|String|The rich content of the reply (for example, reply content with mentions, where the first mentioned entity has an ID attribute of `0` and the second has an ID attribute of `1`). When **contentType** is `plain`, this property is empty. Read-only.|
 
 ## Relationships
 
@@ -37,7 +41,7 @@ Represents a reply to an excel comment.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
@@ -52,7 +56,9 @@ The following is a JSON representation of the resource.
 {
   "content": "String",
   "contentType": "String",
-  "id": "String (identifier)"
+  "id": "String (identifier)",
+  "mentions": [{ "@odata.type": "microsoft.graph.workbookCommentMention" }],
+  "richContent": "String"
 }
 ```
 

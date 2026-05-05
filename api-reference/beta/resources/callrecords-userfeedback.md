@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mcm223"
 ms.subservice: "cloud-communications"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # userFeedback resource type
@@ -19,13 +20,13 @@ Represents the feedback provided by the user an endpoint about the quality of th
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|rating|microsoft.graph.callRecords.userFeedbackRating|The rating provided by the user of this endpoint about the quality of this Session. Possible values are: `notRated`, `bad`, `poor`, `fair`, `good`, `excellent`, `unknownFutureValue`.|
+|rating|microsoft.graph.callRecords.userFeedbackRating|The rating provided by the user of this endpoint about the quality of this Session. The possible values are: `notRated`, `bad`, `poor`, `fair`, `good`, `excellent`, `unknownFutureValue`.|
 |text|String|The feedback text provided by the user of this endpoint for the session.|
 |tokens|[microsoft.graph.callRecords.feedbackTokenSet](callrecords-feedbacktokenset.md)|The set of feedback tokens provided by the user of this endpoint for the session. This is a set of Boolean properties. The property names should not be relied upon since they may change depending on what tokens are offered to the user.|
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

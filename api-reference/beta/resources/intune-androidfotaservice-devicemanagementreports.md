@@ -2,16 +2,17 @@
 title: "deviceManagementReports resource type"
 description: "Device management reports entity"
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # deviceManagementReports resource type
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -22,6 +23,8 @@ Device management reports entity
 |:---|:---|:---|
 |[Get deviceManagementReports](../api/intune-androidfotaservice-devicemanagementreports-get.md)|[deviceManagementReports](../resources/intune-androidfotaservice-devicemanagementreports.md)|Read properties and relationships of the [deviceManagementReports](../resources/intune-androidfotaservice-devicemanagementreports.md) object.|
 |[Update deviceManagementReports](../api/intune-androidfotaservice-devicemanagementreports-update.md)|[deviceManagementReports](../resources/intune-androidfotaservice-devicemanagementreports.md)|Update the properties of a [deviceManagementReports](../resources/intune-androidfotaservice-devicemanagementreports.md) object.|
+|[retrieveFotaDeploymentReport action](../api/intune-androidfotaservice-devicemanagementreports-retrievefotadeploymentreport.md)|Stream||
+|[retrieveFotaDeviceRegistrationReport action](../api/intune-androidfotaservice-devicemanagementreports-retrievefotadeviceregistrationreport.md)|Stream||
 |[getZebraFotaDeploymentReport action](../api/intune-androidfotaservice-devicemanagementreports-getzebrafotadeploymentreport.md)|Stream||
 
 ## Properties

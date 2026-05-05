@@ -6,6 +6,7 @@ ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 07/31/2024
 ---
 
 # Update emailAuthenticationMethodConfiguration
@@ -46,11 +47,15 @@ PATCH /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/e
 
 ## Request body
 
-In the request body, supply a JSON representation of the [emailAuthenticationMethodConfiguration](../resources/emailauthenticationmethodconfiguration.md) object. Existing properties that are not included in the request body will maintain their previous values or be recalculated based on changes to other property values. For best performance, don't include existing values that haven't changed.
+[!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
-For the list of properties that can be updated, see [emailAuthenticationMethodConfiguration](../resources/emailauthenticationmethodconfiguration.md).
+|Property|Type|Description|
+|:---|:---|:---|
+|allowExternalIdToUseEmailOtp|externalEmailOtpState|Determines whether email OTP is usable by external users for authentication. The possible values are: `default`, `enabled`, `disabled`, `unknownFutureValue`.|
+|excludeTargets|[excludeTarget](../resources/excludetarget.md) collection|Groups of users that are excluded from the policy.|
+|state|authenticationMethodState|Indicates whether this authentication method is enabled or not. The possible values are: `enabled`, `disabled`.|
 
->**Note:** The `@odata.type` property with a value of `#microsoft.graph.emailAuthenticationMethodConfiguration` must be included in the body.
+>**Note:** You must include the `@odata.type` property with a value of `#microsoft.graph.emailAuthenticationMethodConfiguration` in the request body.
 
 ## Response
 
@@ -79,10 +84,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-emailauthenticationmethodconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-emailauthenticationmethodconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,18 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Graph\Generated\Models\X509CertificateAuthenticationMethodConfiguration;
+use Microsoft\Graph\Generated\Models\AuthenticationMethodState;
+use Microsoft\Graph\Generated\Models\X509CertificateUserBinding;
+use Microsoft\Graph\Generated\Models\X509CertificateAuthenticationModeConfiguration;
+use Microsoft\Graph\Generated\Models\X509CertificateAuthenticationMode;
+use Microsoft\Graph\Generated\Models\X509CertificateRule;
+use Microsoft\Graph\Generated\Models\X509CertificateRuleType;
+use Microsoft\Graph\Generated\Models\X509CertificateCRLValidationConfiguration;
+use Microsoft\Graph\Generated\Models\X509CertificateCRLValidationConfigurationState;
+use Microsoft\Graph\Generated\Models\AuthenticationMethodTarget;
+use Microsoft\Graph\Generated\Models\AuthenticationMethodTargetType;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
@@ -35,6 +47,10 @@ $rulesArray []= $rulesX509CertificateRule2;
 $authenticationModeConfiguration->setRules($rulesArray);
 
 $requestBody->setAuthenticationModeConfiguration($authenticationModeConfiguration);
+$crlValidationConfiguration = new X509CertificateCRLValidationConfiguration();
+$crlValidationConfiguration->setState(new X509CertificateCRLValidationConfigurationState('disabled'));
+$crlValidationConfiguration->setExemptedCertificateAuthoritiesSubjectKeyIdentifiers([]);
+$requestBody->setCrlValidationConfiguration($crlValidationConfiguration);
 $includeTargetsAuthenticationMethodTarget1 = new AuthenticationMethodTarget();
 $includeTargetsAuthenticationMethodTarget1->setTargetType(new AuthenticationMethodTargetType('group'));
 $includeTargetsAuthenticationMethodTarget1->setId('all_users');

@@ -1,17 +1,18 @@
 ---
 title: "List webinars"
-description: "Get the list of all virtual event webinars created in a tenant."
+description: "Get the list of all virtualEventWebinar objects created in a tenant."
 author: "awang119"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 10/08/2024
 ---
 
 # List webinars
 
 Namespace: microsoft.graph
 
-Get the list of all [virtualEventWebinar](../resources/virtualeventwebinar.md) objects created in the tenant.
+Get the list of all [virtualEventWebinar](../resources/virtualeventwebinar.md) objects created in a tenant.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -33,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 GET /solutions/virtualEvents/webinars
 ```
 
@@ -67,16 +68,12 @@ The following example shows a request.
   "name": "list_virtualeventwebinars"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/solutions/virtualEvents/webinars
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/solutions/virtualEvents/webinars
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-virtualeventwebinars-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-virtualeventwebinars-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +112,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.virtualEventWebinar)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -151,6 +148,15 @@ Content-Type: application/json
           "id": "7b7e1acd-a3e0-4533-8c1d-c1a4ca0b2e2b",
           "displayName": "Kenneth Brown",
           "tenantId": "77229959-e479-4a73-b6e0-ddac27be315c"
+        }
+      ],
+      "settings": {
+        "isAttendeeEmailNotificationEnabled": false
+      },
+      "externalEventInformation": [
+        {
+          "applicationId" : "67a527ba-ef0e-4ba2-88b6-4fa5e9711757",
+          "externalEventId": "myExternalEventId"
         }
       ]
     }

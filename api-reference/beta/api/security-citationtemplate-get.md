@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Get citationTemplate
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/labels/citations/{citationTemplateId}
 GET /security/labels/retentionLabels/{retentionLabelId}/descriptors/citationTemplate
 ```
@@ -58,16 +59,12 @@ The following example shows a request.
   "name": "get_citationtemplate"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/security/labels/citations/{citationTemplateId}
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/security/labels/citations/c0475d01-d532-8a53-6e26-14ea58c640bf
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-citationtemplate-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-citationtemplate-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -105,7 +102,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.citationTemplate"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -113,13 +110,16 @@ Content-Type: application/json
   "value": {
     "@odata.type": "#microsoft.graph.security.citationTemplate",
     "id": "c0475d01-d532-8a53-6e26-14ea58c640bf",
-    "displayName": "String",
+    "displayName": "Contoso Company Policy",
     "createdBy": {
-      "@odata.type": "microsoft.graph.identitySet"
-    },
-    "createdDateTime": "String (timestamp)",
-    "citationUrl": "String",
-    "citationJurisdiction": "String"
+    "user": {
+      "id": "efee1b77-fb3b-4f65-99d6-274c11914d12",
+      "displayName": "Admin"
+    }
+  },
+  "createdDateTime" : "2021-03-24T02:09:08Z",
+    "citationUrl": "www.citationUrl.com",
+    "citationJurisdiction": "Contoso"
   }
 }
 ```

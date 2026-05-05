@@ -1,10 +1,11 @@
 ---
 title: "Get virtualEventWebinar"
 description: "Read the properties and relationships of a virtualEventWebinar object."
-author: "awang119"
+author: "frankpeng7"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 10/18/2024
 ---
 
 # Get virtualEventWebinar
@@ -26,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 > [!NOTE]
 >
-> To use application permissions for this API, tenant administrators must create an [application access policy](/graph/cloud-communication-online-meeting-application-access-policy) and assign it to a user. This allows the authorized application to access registrants' information from virtual events created by that specific user.
+> To use application permissions with this API, tenant administrators must create an [application access policy](/graph/cloud-communication-online-meeting-application-access-policy) and assign it to a user. This allows the authorized application to access registrants' information from virtual events created by that specific user.
 
 ## HTTP request
 
@@ -34,13 +35,13 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
-GET /solutions/virtualEvents/webinars/{webinarId}
+```http
+GET /solutions/virtualEvents/webinars/{id}
 ```
 
 ## Optional query parameters
 
-This method does not support the OData query parameters. For general information, see [OData query parameters](/graph/query-parameters).
+This method doesn't support the OData query parameters. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -67,16 +68,12 @@ The following example shows a request.
   "name": "get_virtualeventwebinar"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/solutions/virtualEvents/webinars/{webinarId}
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/solutions/virtualEvents/webinars/88b245ac-b0b2-f1aa-e34a-c81c27abdac2@f9448ec4-804b-46af-b810-62085248da33
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-virtualeventwebinar-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-virtualeventwebinar-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +112,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.virtualEventWebinar"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -125,7 +122,10 @@ Content-Type: application/json
     "id": "88b245ac-b0b2-f1aa-e34a-c81c27abdac2@f9448ec4-804b-46af-b810-62085248da33",
     "status": "published",
     "displayName": "The Impact of Tech on Our Lives",
-    "description": "Discusses how technology has changed the way we communicate, work, and interact with each other.",
+    "description": {
+      "contentType": "text",
+      "content": "Discusses how technology has changed the way we communicate, work, and interact with each other."
+    },
     "startDateTime": {
       "dateTime": "2023-03-30T10:00:00",
       "timeZone": "PacificSt"
@@ -150,6 +150,15 @@ Content-Type: application/json
         "id": "7b7e1acd-a3e0-4533-8c1d-c1a4ca0b2e2b",
         "displayName": "Kenneth Brown",
         "tenantId": "77229959-e479-4a73-b6e0-ddac27be315c"
+      }
+    ],
+    "settings": {
+      "isAttendeeEmailNotificationEnabled": false
+    },
+    "externalEventInformation": [
+      {
+        "applicationId" : "67a527ba-ef0e-4ba2-88b6-4fa5e9711757",
+        "externalEventId": "myExternalEventId"
       }
     ]
   }

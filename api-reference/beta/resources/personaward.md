@@ -1,10 +1,11 @@
 ---
 title: "personAward resource type"
-description: "personAward resource type"
+description: "Represents an award that has been associated with a user's profile."
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # personAward resource type
@@ -18,16 +19,16 @@ Inherits from [itemFacet](../resources/itemfacet.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List awards](../api/profile-list-awards.md)|[personAward](../resources/personaward.md) collection|Get the personAward resources from the awards navigation property.|
-|[Create personAward](../api/profile-post-awards.md)|[personAward](../resources/personaward.md)|Create a new personAward object.|
-|[Get personAward](../api/personaward-get.md)|[personAward](../resources/personaward.md)|Read the properties and relationships of an [personAward](../resources/personaward.md) object.|
-|[Update personAward](../api/personaward-update.md)|[personAward](../resources/personaward.md)|Update the properties of an [personAward](../resources/personaward.md) object.|
-|[Delete personAward](../api/personaward-delete.md)|None|Deletes an [personAward](../resources/personaward.md) object.|
+|[List](../api/profile-list-awards.md)|[personAward](../resources/personaward.md) collection|Get the personAward resources from the awards navigation property.|
+|[Create](../api/profile-post-awards.md)|[personAward](../resources/personaward.md)|Create a new personAward object.|
+|[Get](../api/personaward-get.md)|[personAward](../resources/personaward.md)|Read the properties and relationships of an [personAward](../resources/personaward.md) object.|
+|[Update](../api/personaward-update.md)|[personAward](../resources/personaward.md)|Update the properties of an [personAward](../resources/personaward.md) object.|
+|[Delete](../api/personaward-delete.md)|None|Delete an [personAward](../resources/personaward.md) object.|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |createdBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that created the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
 |createdDateTime|DateTimeOffset|Provides the dateTimeOffset for when the entity was created. Inherited from [itemFacet](../resources/itemfacet.md).|
 |description|String|Descpription of the award or honor. |
@@ -46,7 +47,7 @@ Inherits from [itemFacet](../resources/itemfacet.md).
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

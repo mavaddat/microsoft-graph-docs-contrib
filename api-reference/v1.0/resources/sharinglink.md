@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 description: "The sharingLink resource groups link-related data items into a single structure."
 ms.subservice: onedrive
 doc_type: resourcePageType
+ms.date: 04/03/2024
 ---
 
 # sharingLink resource type
@@ -17,7 +18,7 @@ If a [**permission**](permission.md) resource has a non-null **sharingLink** fac
 
 ## JSON representation
 
-Here is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

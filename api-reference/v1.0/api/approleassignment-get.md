@@ -5,6 +5,7 @@ author: "psignoret"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 10/15/2024
 ---
 
 # Get appRoleAssignment
@@ -15,45 +16,6 @@ Read the properties and relationships of an [appRoleAssignment](../resources/app
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
-
-<!--
-### For client service principals
-<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-<!--
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Application.Read.All, Directory.Read.All, Application.ReadWrite.All, Directory.ReadWrite.All  |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Application.Read.All, Directory.Read.All, Application.ReadWrite.OwnedBy, Application.ReadWrite.All, Directory.ReadWrite.All |
-
-### For resource service principals
-<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-<!--
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Application.Read.All, Directory.Read.All, Application.ReadWrite.All, Directory.ReadWrite.All  |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Application.Read.All, Directory.Read.All, Application.ReadWrite.OwnedBy, Application.ReadWrite.All, Directory.ReadWrite.All |
-
-### For groups
-<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-<!--
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | Group.Read.All, Directory.Read.All, AppRoleAssignment.ReadWrite.All, Directory.ReadWrite.All  |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Group.Read.All, Directory.Read.All, AppRoleAssignment.ReadWrite.All, Directory.ReadWrite.All |
-
-### For users
-<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-<!--
-|Permission type      | Permissions (from least to most privileged)              |
-|:--------------------|:---------------------------------------------------------|
-|Delegated (work or school account) | User.Read, User.ReadBasic.All, Directory.Read.All, AppRoleAssignment.ReadWrite.All  |
-|Delegated (personal Microsoft account) | Not supported.    |
-|Application | Directory.Read.All, AppRoleAssignment.ReadWrite.All |
-
--->
 
 The following table shows the least privileged permission or permissions required to call this API on each supported resource type. Follow [best practices](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions) to request least privileged permissions. For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
@@ -67,6 +29,18 @@ The following table shows the least privileged permission or permissions require
 
 [!INCLUDE [rbac-approleassignments-apis-read](../includes/rbac-for-apis/rbac-approleassignments-apis-read.md)]
 
+### Other supported permissions
+
+The following higher privileged permissions are supported by each resource:
+- Groups:
+  - Delegated and application permissions: Directory.Read.All, AppRoleAssignment.ReadWrite.All, Directory.ReadWrite.All
+- Users: 
+  - Delegated permissions: User.ReadBasic.All, Directory.Read.All, AppRoleAssignment.ReadWrite.All
+  - Application permissions: Directory.Read.All, AppRoleAssignment.ReadWrite.All
+- Service principals:
+  - Delegated permissions: Directory.Read.All, Application.ReadWrite.All, Directory.ReadWrite.All
+  - Application permissions: Application.ReadWrite.OwnedBy, Application.ReadWrite.All, Directory.ReadWrite.All
+
 ## HTTP request
 
 To get details of an appRole granted to a service principal:
@@ -74,7 +48,7 @@ To get details of an appRole granted to a service principal:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /servicePrincipals/{client-serviceprincipal-id}/appRoleAssignments/{appRoleAssignment-id}
 GET /servicePrincipals(appId='{client-servicePrincipal-appId}')/appRoleAssignments/{appRoleAssignment-id}
 ```
@@ -84,7 +58,7 @@ To get details of an appRole granted to a user, group, or client service princip
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /servicePrincipals(appId='{resource-servicePrincipal-appId}')/appRoleAssignedTo/{appRoleAssignment-id}
 GET /servicePrincipals/{resource-serviceprincipal-id}/appRoleAssignedTo/{appRoleAssignment-id}
 ```
@@ -94,7 +68,7 @@ To get details of an appRole granted to a group:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /groups/{group-id}/appRoleAssignments/{appRoleAssignment-id}
 ```
 
@@ -103,10 +77,12 @@ To get details of an appRole granted to a user:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /users/{user-id}/appRoleAssignments/{appRoleAssignment-id}
 GET /me/appRoleAssignments/{appRoleAssignment-id}
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 ## Optional query parameters
 This method supports the `$select` OData query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
@@ -135,7 +111,7 @@ The following request queries the resource service principal to get details of a
   "sampleKeys": ["00000003-0000-0000-c000-000000000000", "ep6PKgGvOkGVksMuwOXBpxV3dkHvwM1ElSjMUzZtaIA"]
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='00000003-0000-0000-c000-000000000000')/appRoleAssignedTo/ep6PKgGvOkGVksMuwOXBpxV3dkHvwM1ElSjMUzZtaIA
 ```
 
@@ -150,7 +126,7 @@ The following example shows the response. It shows a client service principal na
   "@odata.type": "microsoft.graph.appRoleAssignment"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -178,7 +154,7 @@ The following request queries the client service principal to get details of an 
   "sampleKeys": ["ceb96a54-de95-49a0-b38c-c55263fcf421", "ep6PKgGvOkGVksMuwOXBpxV3dkHvwM1ElSjMUzZtaIA"]
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/v1.0/servicePrincipals(appId='ceb96a54-de95-49a0-b38c-c55263fcf421')/appRoleAssignments/ep6PKgGvOkGVksMuwOXBpxV3dkHvwM1ElSjMUzZtaIA
 ```
 
@@ -192,7 +168,7 @@ The following example shows the response. It shows a client service principal na
   "@odata.type": "microsoft.graph.appRoleAssignment"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -220,16 +196,12 @@ The following request queries the signed-in user's appRoleAssignments.
   "name": "get_approleassignment"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/me/appRoleAssignments/Lo6gEKI-4EyAy9X91LBepo6Aq0Rt6QxBjWRl76txk8I
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-approleassignment-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-approleassignment-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -268,7 +240,7 @@ The following example shows the response. It shows the signed-in user has the de
   "@odata.type": "microsoft.graph.appRoleAssignment"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

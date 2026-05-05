@@ -4,7 +4,8 @@ description: "Use the people API in Microsoft Graph to browse or search for the 
 ms.date: 4/9/2019
 author: "anthona"
 ms.localizationpriority: high
-ms.prod: "insights"
+ms.subservice: "insights"
+ms.topic: how-to
 ---
 
 # Use the people API to get information about the people most relevant to you

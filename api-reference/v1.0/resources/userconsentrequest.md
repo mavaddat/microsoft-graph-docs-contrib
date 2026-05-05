@@ -5,6 +5,7 @@ author: "eringreenlee"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # userConsentRequest resource type
@@ -19,9 +20,9 @@ The user can create a consent request when an app or a permission requires admin
 
 Method|Return type|Description|
 |:---|:---|:---|
-|[List userConsentRequests](../api/appconsentrequest-list-userconsentrequests.md)|[userConsentRequest](../resources/userconsentrequest.md) collection|Retrieve a collection of [userConsentRequest](userconsentrequest.md) objects for an [appConsentRequest](appconsentrequest.md).|
-|[Get userConsentRequest](../api/userconsentrequest-get.md)|[userConsentRequest](../resources/userconsentrequest.md)|Read the properties and relationships of a [userConsentRequest](../resources/userconsentrequest.md) object.|
-|[filterByCurrentUser](../api/userconsentrequest-filterByCurrentUser.md)|[userConsentRequest](../resources/userconsentrequest.md) collection|Read the properties of [userConsentRequest](../resources/userconsentrequest.md) objects for an [appConsentRequest](appconsentrequest.md) for which the current user is the reviewer.|
+|[List](../api/appconsentrequest-list-userconsentrequests.md)|[userConsentRequest](../resources/userconsentrequest.md) collection|Retrieve a collection of [userConsentRequest](userconsentrequest.md) objects for an [appConsentRequest](appconsentrequest.md).|
+|[Get](../api/userconsentrequest-get.md)|[userConsentRequest](../resources/userconsentrequest.md)|Read the properties and relationships of a [userConsentRequest](../resources/userconsentrequest.md) object.|
+|[Filter by current user](../api/userconsentrequest-filterbycurrentuser.md)|[userConsentRequest](../resources/userconsentrequest.md) collection|Read the properties of [userConsentRequest](../resources/userconsentrequest.md) objects for an [appConsentRequest](appconsentrequest.md) for which the current user is the reviewer.|
 
 ## Properties
 
@@ -34,7 +35,7 @@ Method|Return type|Description|
 |customData|String|Free text field to define any custom data for the user consent request. Not used.|
 |id|String|Identifier of the request. |
 |reason|String|The user's justification for requiring access to the app. Supports `$filter` (`eq` only) and `$orderby`.  |
-|status|String|The status of the user's app consent request. Possible values are: `Initializing`, `InProgress`, `Expired`, and `Completed`. Supports `$filter` (`eq` only) and `$orderby`. |
+|status|String|The status of the user's app consent request. The possible values are: `Initializing`, `InProgress`, `Expired`, and `Completed`. Supports `$filter` (`eq` only) and `$orderby`. |
 
 ## Relationships
 
@@ -44,7 +45,7 @@ Method|Return type|Description|
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

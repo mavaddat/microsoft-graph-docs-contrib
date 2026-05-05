@@ -1,10 +1,11 @@
 ---
 title: "onAttributeCollectionStartCustomExtension resource type"
 description: "Used for creating a new custom extension based on the onAttributeCollectionStart event."
-author: "garrodonnell"
+author: "nanguil"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # onAttributeCollectionStartCustomExtension resource type
@@ -17,12 +18,12 @@ Used for creating a new custom extension based on the **onAttributeCollectionSta
 
 Inherits from [customAuthenticationExtension](../resources/customauthenticationextension.md).
 
-## Methods
+[Try out this event in the Woodgrove demo tenant](/entra/identity-platform/custom-extension-overview#attribute-collection-start).
 
-|Method|Return type|Description|
-|:---|:---|:---|
-|[Get onAttributeCollectionStartCustomExtension](../api/onattributecollectionstartcustomextension-get.md)|[onAttributeCollectionStartCustomExtension](../resources/onattributecollectionstartcustomextension.md)|Read the properties and relationships of an [onAttributeCollectionStartCustomExtension](../resources/onattributecollectionstartcustomextension.md) object.|
-|[Update onAttributeCollectionStartCustomExtension](../api/onattributecollectionstartcustomextension-update.md)|[onAttributeCollectionStartCustomExtension](../resources/onattributecollectionstartcustomextension.md)|Update the properties of an [onAttributeCollectionStartCustomExtension](../resources/onattributecollectionstartcustomextension.md) object.|
+## Methods
+None.
+
+For the list of API operations for managing this resource type, see the [customAuthenticationExtension](../resources/customauthenticationextension.md) resource type.
 
 ## Properties
 |Property|Type|Description|

@@ -5,6 +5,8 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```php
 
 <?php
+use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Graph\Generated\Models\Subscription;
 
 
 $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
@@ -12,7 +14,7 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 $requestBody = new Subscription();
 $requestBody->setChangeType('created,updated,deleted');
 $requestBody->setNotificationUrl('https://webhook.azurewebsites.net/api/send/myNotifyClient');
-$requestBody->setResource('/users/87d349ed-44d7-43e1-9a83-5f2406dee5bd/chats/getAllMessages?model=B');
+$requestBody->setResource('/users/87d349ed-44d7-43e1-9a83-5f2406dee5bd/chats/getAllMessages');
 $requestBody->setExpirationDateTime(new \DateTime('2023-01-10T18:56:49.112603+00:00'));
 $requestBody->setClientState('ClientSecret');
 $requestBody->setIncludeResourceData(true);

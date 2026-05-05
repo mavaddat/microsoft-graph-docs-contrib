@@ -3,8 +3,9 @@ title: "personAnniversary resource type"
 description: "personAnniversary resource type"
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # personAnniversary resource type
@@ -21,17 +22,17 @@ Inherits from [itemFacet](itemFacet.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List anniversaries](../api/profile-list-anniversaries.md)|[personAnniversary](../resources/personanniversary.md) collection|Get the personAnniversary resources from the anniversaries navigation property.|
-|[Create personAnniversary](../api/profile-post-anniversaries.md)|[personAnniversary](../resources/personanniversary.md)|Create a new personAnniversary object.|
-|[Get personAnniversary](../api/personanniversary-get.md)|[personAnniversary](../resources/personanniversary.md)|Read the properties and relationships of a [personAnniversary](../resources/personanniversary.md) object.|
-|[Update personAnniversary](../api/personanniversary-update.md)|[personAnniversary](../resources/personanniversary.md)|Update the properties of a [personAnniversary](../resources/personanniversary.md) object.|
-|[Delete personAnniversary](../api/personanniversary-delete.md)|None|Deletes a [personAnniversary](../resources/personanniversary.md) object.|
+|[List](../api/profile-list-anniversaries.md)|[personAnniversary](../resources/personanniversary.md) collection|Get the personAnniversary resources from the anniversaries navigation property.|
+|[Create](../api/profile-post-anniversaries.md)|[personAnniversary](../resources/personanniversary.md)|Create a new personAnniversary object.|
+|[Get](../api/personanniversary-get.md)|[personAnniversary](../resources/personanniversary.md)|Read the properties and relationships of a [personAnniversary](../resources/personanniversary.md) object.|
+|[Update](../api/personanniversary-update.md)|[personAnniversary](../resources/personanniversary.md)|Update the properties of a [personAnniversary](../resources/personanniversary.md) object.|
+|[Delete](../api/personanniversary-delete.md)|None|Deletes a [personAnniversary](../resources/personanniversary.md) object.|
 
 ## Properties
 
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |createdBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that created the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
 |createdDateTime|DateTimeOffset|Provides the dateTimeOffset for when the entity was created. Inherited from [itemFacet](../resources/itemfacet.md).|
 |date|Date|Contains the date associated with the anniversary type.|
@@ -40,13 +41,13 @@ Inherits from [itemFacet](itemFacet.md).
 |lastModifiedBy|[identitySet](../resources/identityset.md)|Provides the identifier of the user and/or application that last modified the entity. Inherited from [itemFacet](../resources/itemfacet.md).|
 |lastModifiedDateTime|DateTimeOffset|Provides the dateTimeOffset for when the entity was created. Inherited from [itemFacet](../resources/itemfacet.md).|
 |source|[personDataSource](../resources/persondatasource.md)|Where the values originated if synced from another service. Inherited from [itemFacet](../resources/itemfacet.md).|
-|type|anniversaryType|The type of anniversary the date represents. Possible values are: `birthday`, `wedding`, `unknownFutureValue`.|
+|type|anniversaryType|The type of anniversary the date represents. The possible values are: `birthday`, `wedding`, `unknownFutureValue`.|
 
 ## Relationships
 None.
 
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

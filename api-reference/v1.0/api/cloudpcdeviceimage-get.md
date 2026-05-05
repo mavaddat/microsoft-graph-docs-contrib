@@ -5,6 +5,7 @@ author: "ChyouChyou"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 09/27/2024
 ---
 
 # Get cloudPcDeviceImage
@@ -12,6 +13,8 @@ doc_type: apiPageType
 Namespace: microsoft.graph
 
 Read the properties and relationships of a specific [cloudPcDeviceImage](../resources/cloudpcdeviceimage.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -70,10 +73,6 @@ GET https://graph.microsoft.com/v1.0/deviceManagement/virtualEndpoint/deviceImag
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpcdeviceimage-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpcdeviceimage-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-cloudpcdeviceimage-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -88,6 +87,10 @@ GET https://graph.microsoft.com/v1.0/deviceManagement/virtualEndpoint/deviceImag
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/get-cloudpcdeviceimage-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/get-cloudpcdeviceimage-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -119,11 +122,13 @@ Content-Type: application/json
   "expirationDate": "2024-06-11",
   "osBuildNumber": "21H2",
   "osStatus": "supported",
-  "operatingSystem": "Windows 10 Enterprise",
+  "operatingSystem": "Windows 11 Enterprise",
   "version": "0.0.1",
   "sourceImageResourceId": "/subscriptions/0ac520ee-14c0-480f-b6c9-0a90c58ffff/resourceGroups/Example/providers/Microsoft.Compute/images/exampleImageForDev",
   "lastModifiedDateTime": "2023-11-03T07:03:44.97Z",
   "status": "ready",
-  "errorCode": null
+  "errorCode": null,
+  "osVersionNumber": "10.0.22631.3593",
+  "sizeInGB": 64
 }
 ```

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "arvindmicrosoft"
 ms.subservice: "microsoft-bookings"
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
 # Update bookingbusiness
@@ -13,7 +14,10 @@ Namespace: microsoft.graph
 
 Update the properties of a [bookingBusiness](../resources/bookingbusiness.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+> [!IMPORTANT]
+> Using the PATCH method to set the email or display name isn't supported. To update these properties for a booking business, use the `Set-Mailbox cmdlet` in Exchange Online PowerShell.
+
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -29,33 +33,31 @@ PATCH /solutions/bookingBusinesses/{id}
 ## Request headers
 | Name       | Description|
 |:-----------|:-----------|
-| Authorization  | Bearer {code}|
+| Authorization  | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 [!INCLUDE [table-intro](../../includes/update-property-table-intro.md)]
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|address|[physicalAddress](../resources/physicaladdress.md)|The street address of the business. The attribute **type** of physicalAddress is not supported in v1.0. Internally we map the addresses to the type `others`.|
+|address|[physicalAddress](../resources/physicaladdress.md)|The street address of the business. The attribute **type** of physicalAddress is not supported in v1.0. Internally, we map the addresses to the type `others`.|
 |businessHours|[bookingWorkHours](../resources/bookingworkhours.md) collection|The hours of operation for the business.|
 |businessType|String|The type of business.|
 |defaultCurrencyIso|String|The code for the currency that the business operates in on Microsoft Bookings.|
-|displayName|String|A name for the business that interfaces with customers.|
-|email|String|The email address for the business.|
 |phone|String|The telephone number for the business.|
 |schedulingPolicy|[bookingSchedulingPolicy](../resources/bookingschedulingpolicy.md)|Specifies how bookings can be created for this business.|
-|webSiteUrl|String|The URL of the business web site.|
+|webSiteUrl|String|The URL of the business website.|
 
 ## Response
 If successful, this method returns a `204 No Content` response code. It doesn't return anything in the response body.
 ## Example
 ### Request
-The following example updates the business email address and scheduling policy, to change the business default booking time slot to an hour, and advance booking up to 30 days.
+The following example updates the business email address and scheduling policy to change the business default booking time slot to an hour, and advance booking up to 30 days.
 
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
-  "name" : "bookingbusinesupdate",
+  "name": "bookingbusinesupdate",
   "sampleKeys": ["fabrikam@contoso.com"]
 }-->
 ```http
@@ -76,10 +78,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/bookingbusinesupdate-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/bookingbusinesupdate-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

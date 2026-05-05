@@ -5,6 +5,7 @@ author: "nanguil"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # List defaultPages
@@ -22,10 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "userflowlanguageconfiguration_list_defaultpages" } -->
 [!INCLUDE [permissions-table](../includes/permissions/userflowlanguageconfiguration-list-defaultpages-permissions.md)]
 
-The work or school account needs to belong to one of the following roles:
-
-* Global administrator
-* External Identity User Flow administrator
+[!INCLUDE [rbac-b2xb2c-user-flows-apis](../includes/rbac-for-apis/rbac-b2xb2c-user-flows-apis.md)]
 
 ## HTTP request
 
@@ -34,7 +32,7 @@ The work or school account needs to belong to one of the following roles:
 }
 -->
 
-``` http
+```http
 GET /identity/b2xUserFlows/{id}/languages/{id}/defaultPages
 ```
 
@@ -65,7 +63,7 @@ The following example shows a request.
 }
 -->
 
-``` http
+```http
 GET https://graph.microsoft.com/v1.0/identity/b2cUserFlows/B2X_1_Partner/languages/en/defaultPages
 ```
 
@@ -81,7 +79,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

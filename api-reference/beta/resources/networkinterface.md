@@ -4,8 +4,8 @@ description: "Represents a Network Interface Card (NIC) associated with this hos
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: cloud-pc
-ms.technology: microsoft-graph
 author: "preetikr"
+ms.date: 07/08/2024
 ---
 
 # networkInterface resource type
@@ -24,9 +24,12 @@ Represents a Network Interface Card (NIC) associated with this host.
 |localIpV6Address|String|Last local (link-local or site-local) IPv6 address associated with this NIC.|
 |macAddress|String|MAC address of the NIC on this host.|
 
+## Relationships
+None.
+
 ## JSON representation
 
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

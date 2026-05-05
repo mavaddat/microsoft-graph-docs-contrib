@@ -1,14 +1,14 @@
 ---
 title: "Get incremental changes for users"
-description: "Use delta query to discover changes without fetching the entire set of users to compare changes. Example shows a series of requests to track changes to users."
+description: "Learn how to use delta query in Microsoft Graph to discover changes without fetching the entire set of users to compare changes."
 author: FaithOmbongi
 ms.author: ombongifaith
-ms.reviewer: keylimesoda
+ms.reviewer: jessieli-ad
 ms.topic: tutorial
-ms.prod: change-notifications
+ms.subservice: change-notifications
 ms.localizationpriority: high
 ms.custom: graphiamtop20
-ms.date: 01/12/2024
+ms.date: 01/15/2025
 #customer intent: As a developer, I want to track changes to users, so that I can build apps that process the changes according to the business requirements.
 ---
 
@@ -44,25 +44,23 @@ To track changes in the user resource, make a request and include the **delta** 
 
 Take note of the following items:
 
-- The optional `$select` query parameter is included in the request to demonstrate how query parameters are automatically included in future requests. If required, query parameters must be specified in the initial request.
+- The optional `$select` query parameter is included in the request to demonstrate how query parameters are automatically included in future requests. If you want to use query parameters to control how much data is returned, you must include them in the initial request.
   - Only properties included in `$select` are tracked for changes. If `$select` isn't specified, all properties of the object are tracked for changes.
 - The initial request doesn't include a state token. State tokens are used in subsequent requests.
+- Subsequent requests can't be modified.
+- [Limitations of query parameters in delta functions](delta-query-overview.md#optional-query-parameters).
 
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "delta-query-users-initial-request"
 }-->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users/delta?$select=displayName,givenName,surname
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/delta-query-users-initial-request-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/delta-query-users-initial-request-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -93,7 +91,7 @@ GET https://graph.microsoft.com/v1.0/users/delta?$select=displayName,givenName,s
 
 ### Initial response
 
-If successful, this method returns `200 OK` response code and [user](/graph/api/resources/user) collection object in the response body. Assuming the entire set of users is too large, the response includes a `@odata.nextLink` state token in an `@odata.nextLink` parameter.
+If successful, this method returns `200 OK` response code and [user](/graph/api/resources/user) collection object in the response body. If the entire set of users is too large, the response includes a `@odata.nextLink` state token in an `@odata.nextLink` parameter.
 
 In this example, a `@odata.nextLink` URL is returned indicating there are more pages of data to be retrieved in the session. Notice the `$skiptoken` in the URL. The `$select` query parameter from the initial request is encoded into the `@odata.nextLink` URL.
 
@@ -152,16 +150,12 @@ The second request specifies the `skipToken` returned from the previous response
   "blockType": "request",
   "name": "delta-query-users-nextlink-request"
 }-->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users/delta?$skiptoken=oEBwdSP6uehIAxQOWq_3Ksh_TLol6KIm3stvdc6hGhZRi1hQ7Spe__dpvm3U4zReE4CYXC2zOtaKdi7KHlUtC2CbRiBIUwOxPKLa
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/delta-query-users-nextlink-request-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/delta-query-users-nextlink-request-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -233,16 +227,12 @@ The third request uses the latest `skipToken` returned from the last sync reques
   "blockType": "request",
   "name": "delta-query-users-nextlink-request2"
 }-->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users/delta?$skiptoken=pqwSUjGYvb3jQpbwVAwEL7yuI3dU1LecfkkfLPtnIjtQ5LOhVoS7qQG_wdVCHHlbQpga7
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/delta-query-users-nextlink-request2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/delta-query-users-nextlink-request2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -314,16 +304,12 @@ Using the `deltatoken` from the [last response](#final-nextlink-response), you g
   "blockType": "request",
   "name": "delta-query-users-deltalink-request"
 }-->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users/delta?$deltatoken=oEcOySpF_hWYmTIUZBOIfPzcwisr_rPe8o9M54L45qEXQGmvQC6T2dbL-9O7nSU-njKhFiGlAZqewNAThmCVnNxqPu5gOBegrm1CaVZ-ZtFZ2tPOAO98OD9y0ao460
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/v1/delta-query-users-deltalink-request-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/v1/delta-query-users-deltalink-request-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

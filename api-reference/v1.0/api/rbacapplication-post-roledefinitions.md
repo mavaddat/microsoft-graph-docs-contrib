@@ -6,6 +6,7 @@ author: "DougKirschner"
 ms.reviewer: msodsrbac
 ms.subservice: "entra-directory-management"
 doc_type: "apiPageType"
+ms.date: 07/26/2024
 ---
 
 # Create roleDefinitions
@@ -22,6 +23,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "rbacapplication_post_roledefinitions" } -->
 [!INCLUDE [permissions-table](../includes/permissions/rbacapplication-post-roledefinitions-permissions.md)]
+
+[!INCLUDE [rbac-role-definition-apis-write](../includes/rbac-for-apis/rbac-role-definition-apis-write.md)]
 
 ## HTTP request
 
@@ -92,10 +95,6 @@ Content-type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-unifiedroledefinition-from-rbacapplication-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-unifiedroledefinition-from-rbacapplication-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-unifiedroledefinition-from-rbacapplication-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -150,7 +149,7 @@ Content-type: application/json
         {
             "allowedResourceActions": [
                 "microsoft.directory/applications/standard/read",
-				"microsoft.directory/applications/basic/update"
+                "microsoft.directory/applications/basic/update"
             ],
             "condition": null
         }

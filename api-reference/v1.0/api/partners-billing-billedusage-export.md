@@ -5,6 +5,7 @@ author: "sourishdeb"
 ms.localizationpriority: medium
 ms.subservice: "reports"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # billedUsage: export
@@ -30,7 +31,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /reports/partners/billing/usage/billed/export
 ```
 
@@ -38,7 +39,7 @@ POST /reports/partners/billing/usage/billed/export
 
 |Name|Description|
 |:---|:---|
-|Authorization|Bearer {token}. Required.|
+|Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
@@ -49,7 +50,7 @@ The following table shows the parameters that you can use with this action.
 
 |Parameter|Type|Description|
 |:---|:---|:---|
-|attributeSet|[microsoft.graph.partners.billing.attributeSet](../resources/partners-billing-attributeset.md)|Attributes that should be exported. Possible values are: `full`, `basic`, `unknownFutureValue`. The default value is `full`. Choose `full` for a complete response or `basic` for a subset of attributes. Optional.|
+|attributeSet|[microsoft.graph.partners.billing.attributeSet](../resources/partners-billing-attributeset.md)|Attributes that should be exported. The possible values are: `full`, `basic`, `unknownFutureValue`. The default value is `full`. Choose `full` for a complete response or `basic` for a subset of attributes. Optional.|
 |invoiceId|String|The invoice ID for which the partner requested to export data. Required.|
 
 ## Response
@@ -68,7 +69,7 @@ The following example shows a request.
   "name": "billedusagethis.export"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/reports/partners/billing/usage/billed/export
 Content-Type: application/json
 
@@ -80,10 +81,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/billedusagethisexport-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/billedusagethisexport-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -121,7 +118,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 202 Accepted
 Location: https://graph.microsoft.com/v1.0/reports/partners/billing/operations/9ab9cb54-d07f-4f52-9ea6-a09d7de52c14
 ```

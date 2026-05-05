@@ -1,17 +1,18 @@
 ---
-title: "Update chartgridlines"
-description: "Update the properties of chartgridlines object."
+title: "Update chartGridLines"
+description: "Update the properties of chartGridLines object."
 author: "lumine2008"
 ms.localizationpriority: medium
 ms.subservice: "excel"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
-# Update chartgridlines
+# Update chartGridLines
 
 Namespace: microsoft.graph
 
-Update the properties of chartgridlines object.
+Update the properties of chartGridLines object.
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
@@ -42,11 +43,11 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|visible|boolean|Boolean value representing if the axis gridlines are visible or not.|
+|visible|Boolean|Boolean value representing if the axis gridlines are visible or not.|
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and updated [WorkbookChartGridlines](../resources/chartgridlines.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [workbookChartGridlines](../resources/workbookchartgridlines.md) object in the response body.
 ## Example
 ##### Request
 The following example shows a request.
@@ -67,10 +68,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-chartgridlines-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-chartgridlines-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

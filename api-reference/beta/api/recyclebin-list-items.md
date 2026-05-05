@@ -5,6 +5,7 @@ description: "Get a collection of recycleBinItem resources in the recycleBin of 
 ms.localizationpriority: "medium"
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # List items
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Get a collection of [recycleBinItem](../resources/recyclebinitem.md) resources in the [recycleBin](../resources/recyclebin.md) of the specified SharePoint [site](../resources/site.md).
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
-``` http
+```http
 GET /sites/{siteId}/recycleBin/items
 ```
 
@@ -61,16 +62,12 @@ The following example shows a request to list all **recycleBinItem** resources u
   "name": "list_recycleBinItems",
   "sampleKeys": ["contoso.sharepoint.com,48f1898f-77d9-4a1b-bddc-1f49bb6dc134,7206fc09-e4af-48b3-8730-ed7321396d7a"]
 }-->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/contoso.sharepoint.com,48f1898f-77d9-4a1b-bddc-1f49bb6dc134,7206fc09-e4af-48b3-8730-ed7321396d7a/recycleBin/items
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-recyclebinitems-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-recyclebinitems-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -104,7 +101,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "Collection(microsoft.graph.recycleBinItem)"
 } -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

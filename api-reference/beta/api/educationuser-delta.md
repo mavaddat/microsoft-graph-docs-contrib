@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mlafleur"
 ms.subservice: "education"
 doc_type: apiPageType
+ms.date: 08/02/2024
 ---
 
 # educationUser: delta
@@ -36,7 +37,7 @@ GET /education/users/delta
 
 | Name          | Description   |
 | :------------ | :------------ |
-| Authorization | Bearer {code} |
+| Authorization | Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -70,10 +71,6 @@ GET https://graph.microsoft.com/beta/education/users/delta
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/educationuser-delta-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/educationuser-delta-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

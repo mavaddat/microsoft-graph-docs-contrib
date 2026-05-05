@@ -3,8 +3,9 @@ title: "projectParticipation resource type"
 description: "projectParticipation resource type"
 ms.localizationpriority: medium
 author: "kevinbellinger"
-ms.prod: "people"
+ms.subservice: "people"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # projectParticipation resource type
@@ -21,17 +22,17 @@ Inherits from [itemFacet](itemfacet.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List projects](../api/profile-list-projects.md)|[projectParticipation](../resources/projectparticipation.md) collection|Get the projectParticipation resources from the projects navigation property.|
-|[Create projectParticipation](../api/profile-post-projects.md)|[projectParticipation](../resources/projectparticipation.md)|Create a new projectParticipation object.|
-|[Get projectParticipation](../api/projectparticipation-get.md)|[projectParticipation](../resources/projectparticipation.md)|Read the properties and relationships of a [projectParticipation](../resources/projectparticipation.md) object.|
-|[Update projectParticipation](../api/projectparticipation-update.md)|[projectParticipation](../resources/projectparticipation.md)|Update the properties of a [projectParticipation](../resources/projectparticipation.md) object.|
-|[Delete projectParticipation](../api/projectparticipation-delete.md)|None|Deletes a [projectParticipation](../resources/projectparticipation.md) object.|
+|[List](../api/profile-list-projects.md)|[projectParticipation](../resources/projectparticipation.md) collection|Get the projectParticipation resources from the projects navigation property.|
+|[Create](../api/profile-post-projects.md)|[projectParticipation](../resources/projectparticipation.md)|Create a new projectParticipation object.|
+|[Get](../api/projectparticipation-get.md)|[projectParticipation](../resources/projectparticipation.md)|Read the properties and relationships of a [projectParticipation](../resources/projectparticipation.md) object.|
+|[Update](../api/projectparticipation-update.md)|[projectParticipation](../resources/projectparticipation.md)|Update the properties of a [projectParticipation](../resources/projectparticipation.md) object.|
+|[Delete](../api/projectparticipation-delete.md)|None|Deletes a [projectParticipation](../resources/projectparticipation.md) object.|
 
 ## Properties
 
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |categories|String collection|Contains categories a user has associated with the project (for example, digital transformation, oil rig). |
 |client|[companyDetail](../resources/companydetail.md)|Contains detailed information about the client the project was for. |
 |collaborationTags|String collection|Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: `askMeAbout`, `ableToMentor`, `wantsToLearn`, `wantsToImprove`.|
@@ -52,7 +53,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

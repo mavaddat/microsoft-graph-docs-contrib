@@ -3,8 +3,9 @@ title: "Get trainingCampaignReportOverview"
 description: "Get an overview of a training campaign."
 author: "akgraph"
 ms.localizationpriority: medium
-ms.prod: "security"
+ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 06/11/2024
 ---
 
 # Get trainingCampaignReportOverview
@@ -18,7 +19,7 @@ Get an overview of a training campaign.
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "trainingcampaignreportoverview_get" } -->
-[!INCLUDE [permissions-table](../includes/permissions/trainingcampaign-get-permissions.md)]
+[!INCLUDE [permissions-table](../includes/permissions/trainingcampaignreportoverview-get-permissions.md)]
 
 ## HTTP request
 
@@ -26,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/attackSimulation/trainingCampaigns/{trainingCampaignId}/report/overview
 ```
 
@@ -51,7 +52,7 @@ The following example shows a request.
   "blockType": "request"
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/beta/security/attackSimulation/trainingCampaigns/f1b13829-3829-f1b1-2938-b1f12938b1a/report/overview
 ```
 
@@ -68,7 +69,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.trainingCampaignReportOverview"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "sharad-sharma-msft"
 ms.subservice: "education"
 doc_type: "apiPageType"
+ms.date: 09/10/2024
 ---
 
 # Create educationCategories
@@ -33,8 +34,7 @@ POST /education/classes/{id}/assignments/{id}/categories/$ref
 | Content-Type  | application/json  |
 
 ## Request body
-In the request body, supply the odata.id of the existing [educationCategory](../resources/educationcategory.md) object(s) to add to this assignment.
-
+In the request body, supply the **odata.id** of an existing [educationCategory](../resources/educationcategory.md) object to add to this assignment.
 
 ## Response
 If successful, this method returns a `204 No Content` response code.
@@ -57,15 +57,10 @@ Content-type: application/json
 {
   "@odata.id": "https://graph.microsoft.com/v1.0/education/classes/acdefc6b-2dc6-4e71-b1e9-6d9810ab1793/assignmentCategories/ec98f158-341d-4fea-9f8c-14a250d489ac"
 }
-
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/add-educationcategory-to-educationassignment-ref-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/add-educationcategory-to-educationassignment-ref-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -94,21 +89,15 @@ Content-type: application/json
 
 ---
 
-In the request body, supply the odata.id of the existing [educationCategory](../resources/educationcategory.md) object to add to this assignment.
-
 ### Response
 The following example shows the response.
 
 <!-- {
   "blockType": "response",
-  "truncated": true,
-  "@odata.type": "microsoft.graph.educationAssignmentResource"
+  "truncated": true
 } -->
 ```http
 HTTP/1.1 204 No Content
-
-{
-}
 ```
 <!-- uuid: 8fcb5dbc-d5aa-4681-8e31-b001d5168d79
 2015-10-25 14:57:30 UTC -->

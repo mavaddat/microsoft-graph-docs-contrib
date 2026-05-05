@@ -1,10 +1,11 @@
 ---
 title: "Delete mobileAppTroubleshootingEvent"
 description: "Describes the Delete mobileAppTroubleshootingEvent method of the Microsoft Graph API for Intune, which supports multiple workflows."
-localization_priority: Normal
+ms.localizationpriority: medium
 author: "jaiprakashmb"
-ms.subservice: "intune"
+ms.prod: "Intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Delete mobileAppTroubleshootingEvent
@@ -17,9 +18,7 @@ Namespace: microsoft.graph
 
 Deletes a [mobileAppTroubleshootingEvent](../resources/intune-shared-mobileapptroubleshootingevent.md).
 
-[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
-
-## Permissions
+        ## Permissions
 One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
 
 |Permission type|Permissions (from most to least privileged)|
@@ -32,12 +31,14 @@ One of the following permissions is required to call this API. To learn more, in
 |&nbsp; &nbsp; **Device management**|DeviceManagementManagedDevices.ReadWrite.All|
 |&nbsp; &nbsp; **Troubleshooting**|DeviceManagementManagedDevices.ReadWrite.All|
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## HTTP Request
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /deviceManagement/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEventId}
 DELETE /users/{usersId}/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEventId}
 ```
@@ -58,12 +59,12 @@ If successful, this method returns a `204 No Content` response code.
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/deviceManagement/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEventId}
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

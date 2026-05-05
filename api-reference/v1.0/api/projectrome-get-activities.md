@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 ms.subservice: "project-rome"
 author: "ailae"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # Get user activities
@@ -36,7 +37,7 @@ This method supports some [OData Query Parameters](/graph/query-parameters) to h
 
 - $expand for the **historyItems** navigation property.
 - $top to limit the maximum number of items across pages.
-- $filter on the **lastModifiedDateTime** property for either activities or **historyItems**, if expanded.
+- $filter on the **lastModifiedDateTime** property for either activities or **activityHistoryItems**, if expanded.
 
 The following are some examples of supported queries with URL encoding:
 
@@ -52,7 +53,7 @@ The following are some examples of supported queries with URL encoding:
 
 |Name | Type | Description|
 |:----|:-----|:-----------|
-|Authorization | string | Bearer {token}. Required.|
+|Authorization | string |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -80,10 +81,6 @@ GET https://graph.microsoft.com/v1.0/me/activities
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-activities-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-activities-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

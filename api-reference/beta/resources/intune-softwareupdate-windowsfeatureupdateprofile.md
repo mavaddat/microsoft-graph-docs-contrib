@@ -2,16 +2,17 @@
 title: "windowsFeatureUpdateProfile resource type"
 description: "Windows Feature Update Profile"
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # windowsFeatureUpdateProfile resource type
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -41,6 +42,7 @@ Windows Feature Update Profile
 |deployableContentDisplayName|String|Friendly display name of the quality update profile deployable content|
 |endOfSupportDate|DateTimeOffset|The last supported date for a feature update|
 |installLatestWindows10OnWindows11IneligibleDevice|Boolean|If true, the latest Microsoft Windows 10 update will be installed on devices ineligible for Microsoft Windows 11|
+|installFeatureUpdatesOptional|Boolean|If true, the Windows 11 update will become optional|
 
 ## Relationships
 |Relationship|Type|Description|
@@ -75,6 +77,7 @@ Here is a JSON representation of the resource.
   ],
   "deployableContentDisplayName": "String",
   "endOfSupportDate": "String (timestamp)",
-  "installLatestWindows10OnWindows11IneligibleDevice": true
+  "installLatestWindows10OnWindows11IneligibleDevice": true,
+  "installFeatureUpdatesOptional": true
 }
 ```

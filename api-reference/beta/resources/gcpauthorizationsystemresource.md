@@ -1,11 +1,13 @@
 ---
 title: "gcpAuthorizationSystemResource resource type"
-description: "Represents a GCP resource in an GCP authorization system."
+description: "Represents a GCP resource in a GCP authorization system."
 author: "mrudulahg01"
 ms.reviewer: ciem_pm
 ms.localizationpriority: medium
-ms.prod: "multicloud-permissions-management"
+ms.subservice: entra-permissions-management
 doc_type: resourcePageType
+toc.title: GCP resources
+ms.date: 07/25/2024
 ---
 
 # gcpAuthorizationSystemResource resource type
@@ -14,6 +16,8 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
+
 Represents a GCP resource in a GCP authorization system.
 
 Inherits from [authorizationSystemResource](../resources/authorizationsystemresource.md).
@@ -21,8 +25,8 @@ Inherits from [authorizationSystemResource](../resources/authorizationsystemreso
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List gcpAuthorizationSystemResources](../api/gcpauthorizationsystem-list-resources.md)|[gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) collection|Get a list of the [gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) objects and their properties.|
-|[Get gcpAuthorizationSystemResource](../api/gcpauthorizationsystemresource-get.md)|[gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md)|Read the properties and relationships of a [gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) object.|
+|[List](../api/gcpauthorizationsystem-list-resources.md)|[gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) collection|Get a list of the [gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) objects and their properties.|
+|[Get](../api/gcpauthorizationsystemresource-get.md)|[gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md)|Read the properties and relationships of a [gcpAuthorizationSystemResource](../resources/gcpauthorizationsystemresource.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -36,7 +40,7 @@ Inherits from [authorizationSystemResource](../resources/authorizationsystemreso
 |Relationship|Type|Description|
 |:---|:---|:---|
 |authorizationSystem|[authorizationSystem](../resources/authorizationsystem.md)|The authorization system that the resource is in. Inherited from [microsoft.graph.authorizationSystemResource](../resources/authorizationsystemresource.md)|
-|service|[authorizationSystemTypeService](../resources/authorizationsystemtypeservice.md)|The service associated with the resource in an GCP authorization system. This object is auto-expanded.|
+|service|[authorizationSystemTypeService](../resources/authorizationsystemtypeservice.md)|The service associated with the resource in a GCP authorization system. This object is autoexpanded.|
 
 ## JSON representation
 The following JSON representation shows the resource type.
@@ -57,4 +61,5 @@ The following JSON representation shows the resource type.
   "resourceType": "String"
 }
 ```
+
 

@@ -5,6 +5,7 @@ author: sangle7
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: apiPageType
+ms.date: 04/12/2024
 ---
 
 # Create webPart
@@ -15,8 +16,10 @@ Namespace: microsoft.graph
 
 Create a new [webPart] at a specified position in the [sitePage].
 
-[sitepage]: ../resources/sitePage.md
+[sitePage]: ../resources/sitePage.md
 [webPart]: ../resources/webPart.md
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -66,7 +69,7 @@ The following example shows how to create a new webpart.
 <!-- { "blockType": "ignored" } -->
 
 ```http
-POST /sites/{sitesId}/pages/{sitePageId}/microsoft.graph.sitePage/canvasLayout/verticalSection/webparts
+POST /sites/7f50f45e-714a-4264-9c59-3bf43ea4db8f/pages/df69e386-6c58-4df2-afc0-ab6327d5b202/microsoft.graph.sitePage/canvasLayout/verticalSection/webparts
 Content-Type: application/json
 
 {

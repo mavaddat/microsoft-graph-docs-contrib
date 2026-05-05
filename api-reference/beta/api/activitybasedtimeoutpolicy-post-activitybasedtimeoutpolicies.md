@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "lujiangfeng666"
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 04/05/2024
 ---
 
 # Create activityBasedTimeoutPolicy
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "ignored" } -->
 
 ```http
-POST policies/activityBasedTimeoutPolicies
+POST /policies/activityBasedTimeoutPolicies
 ```
 
 ## Request headers
@@ -64,20 +65,14 @@ POST https://graph.microsoft.com/beta/policies/activityBasedTimeoutPolicies
 Content-type: application/json
 
 {
-  "definition": [
-    "definition-value"
-  ],
-  "displayName": "displayName-value",
+  "definition": ["{\"ActivityBasedTimeoutPolicy\":{\"Version\":1,\"ApplicationPolicies\":[{\"ApplicationId\":\"default\",\"WebSessionIdleTimeout\":\"00:05:00\"}]}}"],
+  "displayName": "activityBasedTimeoutPolicies test",
   "isOrganizationDefault": true
 }
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-activitybasedtimeoutpolicy-from-activitybasedtimeoutpolicies-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-activitybasedtimeoutpolicy-from-activitybasedtimeoutpolicies-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -123,12 +118,14 @@ HTTP/1.1 201 Created
 Content-type: application/json
 
 {
-  "definition": [
-    "definition-value"
-  ],
-  "displayName": "displayName-value",
-  "isOrganizationDefault": true,
-  "id": "id-value"
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#policies/activityBasedTimeoutPolicies/$entity",
+    "id": "cf70ac6c-8a1a-40cd-a523-a2b4a56de0df",
+    "deletedDateTime": null,
+    "definition": [
+        "{\"ActivityBasedTimeoutPolicy\":{\"Version\":1,\"ApplicationPolicies\":[{\"ApplicationId\":\"default\",\"WebSessionIdleTimeout\":\"00:05:00\"}]}}"
+    ],
+    "displayName": "activityBasedTimeoutPolicies test",
+    "isOrganizationDefault": true
 }
 ```
 

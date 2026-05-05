@@ -5,6 +5,7 @@ author: "razortbone"
 ms.localizationpriority: medium
 ms.subservice: "microsoft-bookings"
 doc_type: apiPageType
+ms.date: 04/19/2024
 ---
 
 # Delete bookingCustomQuestion
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Delete the specified [bookingCustomQuestion](../resources/bookingcustomquestion.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -65,10 +66,6 @@ DELETE https://graph.microsoft.com/beta/solutions/bookingbusinesses/contosolunch
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-bookingcustomquestions-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-bookingcustomquestions-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -6,6 +6,7 @@ ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 05/01/2024
 ---
 
 # authenticationMethodConfiguration resource type
@@ -28,13 +29,13 @@ The following authentication methods are derived from the **authenticationMethod
 |:---|:---|:---|
 |excludeTargets|[excludeTarget](../resources/excludetarget.md) collection|Groups of users that are excluded from a policy.|
 |id|String|The policy name.|
-|state|authenticationMethodState|The state of the policy. Possible values are: `enabled`, `disabled`.|
+|state|authenticationMethodState|The state of the policy. The possible values are: `enabled`, `disabled`.|
 
 ## Relationships
 None.
 
 ## JSON representation
-Here's a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

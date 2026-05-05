@@ -5,6 +5,7 @@ author: "rkarim-ms"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Create roleEligibilityScheduleRequests
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /roleManagement/directory/roleEligibilityScheduleRequests
 ```
 
@@ -50,7 +51,7 @@ The following table shows the optional and required properties when you create t
 |action|String|Represents the type of the operation on the role eligibility assignment. The possible values are: <ul><li>`AdminAssign`: For administrators to assign role eligibility to users or groups to roles.</li><li>`AdminExtend`: For administrators to extend expiring assignments.</li><li>`AdminUpdate`: For administrators to change existing role assignments.</li><li>`AdminRenew`: For administrators to renew expired assignments.</li><li>`AdminRemove`: For administrators to remove users or groups from eligible roles.</li><li>`UserAdd`: For users to activate their eligible assignments.</li><li>`UserExtend`: For users to request to extend their expiring eligible assignments.</li><li>`UserRemove`: For users to deactivate their active eligible assignments.</li><li>`UserRenew`: For users to request to renew their expired eligible assignments.</li></ul>|
 |appScopeId|String|Identifier of the app-specific scope when the assignment scope is app-specific. The scope of an assignment determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use `/` for tenant-wide app scopes. Use **directoryScopeId** to limit the scope to particular directory objects, for example, administrative units or all users.|
 |directoryScopeId|String|Identifier of the directory object representing the scope of the assignment. The scope of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use `/` for tenant-wide scope. Use **appScopeId** to limit the scope to an application only.|
-|isValidationOnly|Boolean|A boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.|
+|isValidationOnly|Boolean|A Boolean that determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.|
 |justification|String|A message provided by users and administrators when create the request about why it is needed. Optional when **action** is `AdminRemove`.|
 |principalId|String|Identifier of the principal to which the assignment is being granted to. For example, a user or a group. For groups, they must be assignable to roles, that is, the **isAssignableToRole** of the group property set to `true`.|
 |roleDefinitionId|String|Identifier of the unifiedRoleDefinition the assignment is for. Required. Read only.|
@@ -77,7 +78,7 @@ In the following request, the admin creates a request to assign eligibility of a
   "name": "create_unifiedroleeligibilityschedulerequest_from_unifiedroleeligibilityschedulerequests_e1"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/roleManagement/directory/roleEligibilityScheduleRequests
 Content-Type: application/json
 
@@ -99,10 +100,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-unifiedroleeligibilityschedulerequest-from-unifiedroleeligibilityschedulerequests-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-unifiedroleeligibilityschedulerequest-from-unifiedroleeligibilityschedulerequests-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -141,7 +138,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.unifiedRoleEligibilityScheduleRequest"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -198,7 +195,7 @@ In the following request, the admin creates a request to revoke the eligibility 
   "name": "create_unifiedroleeligibilityschedulerequest_from_unifiedroleeligibilityschedulerequests_AdminRemove_e2"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/roleManagement/directory/roleEligibilityScheduleRequests
 Content-Type: application/json
 
@@ -220,10 +217,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-unifiedroleeligibilityschedulerequest-from-unifiedroleeligibilityschedulerequests-adminremove-e2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-unifiedroleeligibilityschedulerequest-from-unifiedroleeligibilityschedulerequests-adminremove-e2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -263,7 +256,7 @@ The following example shows the response. The request returns a response object 
   "@odata.type": "microsoft.graph.unifiedRoleEligibilityScheduleRequest"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

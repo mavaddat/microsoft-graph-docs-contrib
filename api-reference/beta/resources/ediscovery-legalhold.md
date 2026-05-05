@@ -3,8 +3,9 @@ title: "legalHold resource type"
 description: "legalHold resource type"
 ms.localizationpriority: medium
 author: "mahage-msft"
-ms.prod: "ediscovery"
+ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # legalHold resource type
@@ -12,6 +13,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 Represents a legal hold. Legal holds are holds that are tied to an eDiscovery case. Legal holds should not be confused with retention holds, which are used to control retention policies for Microsoft 365 content. eDiscovery legal holds are for holding content indefinitely for litigation, internal investigations, and other legal actions where content needs to be protected against deletion. For more information, see [Manage holds in Advanced eDiscovery](/microsoft-365/compliance/managing-holds)
 
@@ -21,15 +24,15 @@ Inherits from [entity](../resources/entity.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List legalHolds](../api/ediscovery-case-list-legalholds.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md) collection|Get a list of the  **legalHold** objects and their properties.|
-|[Create legalHold](../api/ediscovery-case-post-legalholds.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md)|Create a new **legalHold** object.|
-|[Get legalHold](../api/ediscovery-legalhold-get.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md)|Read the properties and relationships of a **legalHold** object.|
-|[Update legalHold](../api/ediscovery-legalhold-update.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md)|Update the properties of a **legalHold** object.|
-|[Delete legalHold](../api/ediscovery-legalhold-delete.md)|None|Delete a **legalHold** object.|
-|[List siteSources](../api/ediscovery-legalhold-list-sitesources.md)|[microsoft.graph.ediscovery.siteSource](../resources/ediscovery-sitesource.md) collection|Get the list of [siteSource](../resources/ediscovery-sitesource.md) objects associated with a legal hold.|
-|[Create siteSource](../api/ediscovery-legalhold-post-sitesources.md)|[microsoft.graph.ediscovery.siteSource](../resources/ediscovery-sitesource.md)|Create a new siteSource object.|
-|[List userSources](../api/ediscovery-legalhold-list-usersources.md)|[microsoft.graph.ediscovery.userSource](../resources/ediscovery-usersource.md) collection|Get the list of [userSource](../resources/ediscovery-usersource.md) objects associated with a legal hold.|
-|[Create userSource](../api/ediscovery-legalhold-post-usersources.md)|[microsoft.graph.ediscovery.userSource](../resources/ediscovery-usersource.md)|Create a new **userSource** object.|
+|[List](../api/ediscovery-case-list-legalholds.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md) collection|Get a list of the  **legalHold** objects and their properties.|
+|[Create](../api/ediscovery-case-post-legalholds.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md)|Create a new **legalHold** object.|
+|[Get](../api/ediscovery-legalhold-get.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md)|Read the properties and relationships of a **legalHold** object.|
+|[Update](../api/ediscovery-legalhold-update.md)|[microsoft.graph.ediscovery.legalHold](../resources/ediscovery-legalhold.md)|Update the properties of a **legalHold** object.|
+|[Delete](../api/ediscovery-legalhold-delete.md)|None|Delete a **legalHold** object.|
+|[List site sources](../api/ediscovery-legalhold-list-sitesources.md)|[microsoft.graph.ediscovery.siteSource](../resources/ediscovery-sitesource.md) collection|Get the list of [siteSource](../resources/ediscovery-sitesource.md) objects associated with a legal hold.|
+|[Create site source](../api/ediscovery-legalhold-post-sitesources.md)|[microsoft.graph.ediscovery.siteSource](../resources/ediscovery-sitesource.md)|Create a new siteSource object.|
+|[List user sources](../api/ediscovery-legalhold-list-usersources.md)|[microsoft.graph.ediscovery.userSource](../resources/ediscovery-usersource.md) collection|Get the list of [userSource](../resources/ediscovery-usersource.md) objects associated with a legal hold.|
+|[Create user source](../api/ediscovery-legalhold-post-usersources.md)|[microsoft.graph.ediscovery.userSource](../resources/ediscovery-usersource.md)|Create a new **userSource** object.|
 
 ## Properties
 
@@ -45,7 +48,7 @@ Inherits from [entity](../resources/entity.md).
 |isEnabled|Boolean|Indicates whether the hold is enabled and actively holding content. |
 |lastModifiedBy|[identitySet](../resources/identityset.md)|the user who last modified the legal hold.|
 |lastModifiedDateTime|DateTimeOffset|The date and time the legal hold was last modified. |
-|status|microsoft.graph.ediscovery.legalHoldStatus|The status of the legal hold. Possible values are: `Pending`, `Error`, `Success`, `UnknownFutureValue`.|
+|status|microsoft.graph.ediscovery.legalHoldStatus|The status of the legal hold. The possible values are: `Pending`, `Error`, `Success`, `UnknownFutureValue`.|
 
 ### legalHoldStatus values
 
@@ -64,7 +67,7 @@ Inherits from [entity](../resources/entity.md).
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

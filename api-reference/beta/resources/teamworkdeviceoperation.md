@@ -5,11 +5,14 @@ author: "adsrivastava2"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # teamworkDeviceOperation resource type
 
 Namespace: microsoft.graph
+
+[!INCLUDE [beta-deprecation-disclaimer](../../includes/beta-deprecation-disclaimer.md)]
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
@@ -20,8 +23,8 @@ Inherits from [entity](../resources/entity.md).
 ## Methods
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List teamworkDeviceOperations](../api/teamworkdeviceoperation-list.md)|[teamworkDeviceOperation](../resources/teamworkdeviceoperation.md) collection|Get a list of the [teamworkDeviceOperation](../resources/teamworkdeviceoperation.md) objects and their properties.|
-|[Get teamworkDeviceOperation](../api/teamworkdeviceoperation-get.md)|[teamworkDeviceOperation](../resources/teamworkdeviceoperation.md)|Read the properties and relationships of a [teamworkDeviceOperation](../resources/teamworkdeviceoperation.md) object.|
+|[List](../api/teamworkdeviceoperation-list.md)|[teamworkDeviceOperation](../resources/teamworkdeviceoperation.md) collection|Get a list of the [teamworkDeviceOperation](../resources/teamworkdeviceoperation.md) objects and their properties.|
+|[Get](../api/teamworkdeviceoperation-get.md)|[teamworkDeviceOperation](../resources/teamworkdeviceoperation.md)|Read the properties and relationships of a [teamworkDeviceOperation](../resources/teamworkdeviceoperation.md) object.|
 
 ## Properties
 |Property|Type|Description|
@@ -38,8 +41,11 @@ Inherits from [entity](../resources/entity.md).
 |status|String|The current status of the async operation, for example, `Queued`, `Scheduled`, `InProgress`,  `Successful`, `Cancelled`, and `Failed`.|
 
 
+## Relationships
+None.
+
 ## JSON representation
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

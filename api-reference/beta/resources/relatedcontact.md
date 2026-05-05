@@ -5,6 +5,7 @@ author: "mmast-msft"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # relatedContact resource type
@@ -29,7 +30,7 @@ Contact record related to an [educationUser](../resources/educationuser.md) that
 | accessConsent | Boolean             | Indicates whether the user has been consented to access student data.                                                                      |
 | emailAddress  | String              | Email address of the contact.                                                                                                              |
 | mobilePhone   | String              | Mobile phone number of the contact.                                                                                                        |
-| relationship  | contactRelationship | Relationship to the user. Possible values are: `parent`, `relative`, `aide`, `doctor`, `guardian`, `child`, `other`, `unknownFutureValue`. |
+| relationship  | contactRelationship | Relationship to the user. The possible values are: `parent`, `relative`, `aide`, `doctor`, `guardian`, `child`, `other`, `unknownFutureValue`. |
 
 ## Relationships
 
@@ -37,7 +38,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

@@ -1,11 +1,12 @@
 ---
 title: "Get fido2AuthenticationMethod"
 description: "Read the properties and relationships of a fido2AuthenticationMethod object."
-author: "calvinlui"
+author: "hanki71"
 ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 10/23/2024
 ---
 
 # Get fido2AuthenticationMethod
@@ -13,36 +14,37 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Retrieve a user's single [FIDO2 Security Key Authentication Method](../resources/fido2authenticationmethod.md) object.
+Retrieve a user's single [FIDO2 security key authentication method](../resources/fido2authenticationmethod.md) object.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
-The following tables show the least privileged permission or permissions required to call this API on each supported resource type. Follow [best practices](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions) to request least privileged permissions. For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-### Permissions acting on self
-
-<!-- { "blockType": "permissions", "name": "fido2authenticationmethod_get" } -->
+<!-- { 
+  "blockType": "permissions", 
+  "name": "fido2authenticationmethod_get", 
+  "requestUrls": ["GET /users/{id | userPrincipalName}/authentication/fido2Methods/{id}"]
+ } -->
 [!INCLUDE [permissions-table](../includes/permissions/fido2authenticationmethod-get-permissions.md)]
-
-### Permissions acting on other users
-
-<!-- { "blockType": "permissions", "name": "fido2authenticationmethod_get_2" } -->
-[!INCLUDE [permissions-table](../includes/permissions/fido2authenticationmethod-get-2-permissions.md)]
 
 [!INCLUDE [rbac-authentication-methods-apis-read-others](../includes/rbac-for-apis/rbac-authentication-methods-apis-read-others.md)]
 
 ## HTTP request
 
 Get details of your own FIDO2 authentication method.
-<!-- { "blockType": "ignored" } -->
-``` http
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+```http
 GET /me/authentication/fido2Methods/{id}
 ```
 
 Get details of your own or another user's FIDO2 authentication method.
-<!-- { "blockType": "ignored" } -->
-``` http
+
+[!INCLUDE [authentication-methods-apis-users-selfservice](../includes/authentication-methods-apis-users-selfservice.md)]
+
+```http
 GET /users/{id | userPrincipalName}/authentication/fido2Methods/{id}
 ```
 
@@ -58,10 +60,13 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code and the requested [fido2AuthenticationMethod](../resources/fido2authenticationmethod.md) object in the response body.
 
+> [!NOTE]
+> This method also returns credentials key IDs formatted in Base64URL with a padding number suffix. To decode the key IDs, convert the trailing integer value of 0, 1, or 2 to the same number of base64 padding characters.
+
 ## Examples
 
 ### Request
-
+The following example shows a request.
 
 # [HTTP](#tab/http)
 <!-- {
@@ -70,16 +75,12 @@ If successful, this method returns a `200 OK` response code and the requested [f
   "sampleKeys": ["-2_GRUg2-HYz6_1YG4YRAQ2"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/authentication/fido2Methods/-2_GRUg2-HYz6_1YG4YRAQ2
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-fido2authenticationmethod-1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-fido2authenticationmethod-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -111,14 +112,15 @@ GET https://graph.microsoft.com/beta/me/authentication/fido2Methods/-2_GRUg2-HYz
 ### Response
 The following example shows the response.
 
-**Note:** The response object shown here might be shortened for readability.
+>**Note:** The response object shown here might be shortened for readability.
+
 <!-- {
   "blockType": "response",
   "truncated": true,
   "@odata.type": "microsoft.graph.fido2AuthenticationMethod"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
@@ -127,12 +129,14 @@ Content-type: application/json
       "id": "-2_GRUg2-HYz6_1YG4YRAQ2",
       "displayName": "Red key",
       "createdDateTime": "2020-08-10T06:44:09Z",
+      "lastUsedDateTime": "2022-11-06T23:16:12Z",
       "aaGuid": "2fc0579f-8113-47ea-b116-555a8db9202a",
       "model": "NFC key",
       "attestationCertificates": [
           "dbe793efdf1945e2df25d93653a1e8a3268a9075"
       ],
-      "attestationLevel": "attested"
+      "attestationLevel": "attested",
+      "passkeyType": "deviceBound"
   }
 }
 ```

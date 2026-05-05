@@ -5,6 +5,7 @@ author: "soneff"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/16/2024
 ---
 
 # List authenticationEventListeners
@@ -16,11 +17,16 @@ Get a list of the [authenticationEventListener](../resources/authenticationevent
 
 - [onTokenIssuanceStartListener](../resources/ontokenissuancestartlistener.md)
 - [onInteractiveAuthFlowStartListener](../resources/oninteractiveauthflowstartlistener.md)
-- [onAuthenticationMethodStartListener](../resources/onauthenticationmethodloadstartlistener.md)
+- [onAuthenticationMethodLoadStartListener](../resources/onauthenticationmethodloadstartlistener.md)
 - [onAttributeCollectionListener](../resources/onattributecollectionlistener.md)
 - [onUserCreateStartListener](../resources/onusercreatestartlistener.md)
 - [onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md)
 - [onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md)
+- [onPhoneMethodLoadStartListener](../resources/onphonemethodloadstartlistener.md)
+- [onEmailOtpSendListener](../resources/onemailotpsendlistener.md)
+- [onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md)
+- [onFraudProtectionLoadStartListener](../resources/onfraudprotectionloadstartlistener.md)
+- [onVerifiedIdClaimValidationListener](../resources/onverifiedidclaimvalidationlistener.md)
 
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
@@ -31,13 +37,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "identitycontainer_list_authenticationeventlisteners" } -->
 [!INCLUDE [permissions-table](../includes/permissions/identitycontainer-list-authenticationeventlisteners-permissions.md)]
 
+[!INCLUDE [rbac-custom-auth-ext-apis-read](../includes/rbac-for-apis/rbac-custom-auth-ext-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identity/authenticationEventListeners
 ```
 
@@ -66,16 +74,12 @@ The following example shows a request.
   "name": "list_authenticationeventlistener"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identity/authenticationEventListeners
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-authenticationeventlistener-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-authenticationeventlistener-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -113,7 +117,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.authenticationEventListener)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

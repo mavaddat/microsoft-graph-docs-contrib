@@ -1,10 +1,11 @@
 ---
 title: "orgContact resource type"
-description: "Here is a JSON representation of the resource"
+description: "The following JSON representation shows the resource type."
 ms.localizationpriority: medium
 author: "dkershaw10"
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 11/26/2024
 ---
 
 # orgContact resource type
@@ -17,24 +18,31 @@ Represents an organizational contact. Organizational contacts are managed by an 
 
 Inherits from [directoryObject](directoryobject.md).
 
-This resource supports using [delta query](/graph/delta-query-overview) to track incremental additions, deletions, and updates, by providing a [delta](../api/orgcontact-delta.md) function. This resource is an open type that allows other properties to be passed in.
+This resource supports using [delta query](/graph/delta-query-overview) to track incremental additions, deletions, and updates, by providing a [delta](../api/orgcontact-delta.md) function. This resource is an open type that allows additional properties beyond those documented here.
 
 ## Methods
 
 | Method | Return Type | Description |
 | ------ | ----------- | ----------- |
 | **Organizational contacts** |
-| [List organizational contacts](../api/orgcontact-list.md) | [orgContact](orgcontact.md) collection | List properties of organizational contacts. |
-| [Get organizational contact](../api/orgcontact-get.md) | [orgContact](orgcontact.md) | Read properties and relationships of orgContact object. |
+| [List](../api/orgcontact-list.md) | [orgContact](orgcontact.md) collection | List properties of organizational contacts. |
+| [Get](../api/orgcontact-get.md) | [orgContact](orgcontact.md) | Read properties and relationships of orgContact object. |
+| [Get delta](../api/orgcontact-delta.md) | [orgContact](orgcontact.md) collection| Get newly created, updated, or deleted organizational contacts without having to perform a full read of the entire collection. |
+| [Get delta for directory object](../api/directoryobject-delta.md) | [direcyoryObject](orgcontact.md) collection| Get newly created, updated, or deleted organizational contacts via the directory object collection without having to perform a full read of the entire collection. |
+| [List member of](../api/orgcontact-list-memberof.md) | String collection | Retrieve the list of groups and adminstrative units the contact is a member of. The check is transitive. |
+| [List transitive member of](../api/orgcontact-list-transitivememberof.md) | [directoryObject](directoryobject.md) collection | List the groups an organizational contact is a member of, including groups that the organizational contact is nested under. |
+| [Check member groups](../api/directoryobject-checkmembergroups.md) | String collection | Check for membership of an organizational contact in a list of groups. The check is transitive. |
+| [Get member groups](../api/directoryobject-getmembergroups.md) | String collection | Return all the groups that the organizational contact is a member of. The check is transitive. |
+|[Check member objects](../api/directoryobject-checkmemberobjects.md) | String collection | Check for membership of an organizational contact in a list of groups, directory role, or administrative unit objects. |
+|[Get member objects](../api/directoryobject-checkmemberobjects.md) | String collection | Return all groups, administrative units, and directory roles that the organizational contact is a member of. The check is transitive. |
+|[Retry service provisioning](../api/orgcontact-retryserviceprovisioning.md) | None | Retry the orgContact service provisioning. |
+| [Get transitive reports](../api/orgcontact-get-transitivereports.md) | Integer | Get the count of transitive reports for an organization contact from the transitiveReports navigation property. |
+| **On-premises sync behavior (Source of Authority)** |||
+|[Get](../api/onpremisessyncbehavior-get.md)|[onPremisesSyncBehavior](../resources/onpremisessyncbehavior.md)|Check whether the contact object's source of authority (SOA) is the cloud or on-premises Active Directory.|
+|[Update](../api/onpremisessyncbehavior-update.md)|[onPremisesSyncBehavior](../resources/onpremisessyncbehavior.md)|Update the contact object's source of authority (SOA) to the cloud or on-premises Active Directory.|
 | **Organizational hierarchy** |
 | [Get manager](../api/orgcontact-get-manager.md) | [directoryObject](directoryobject.md) | Get the contact's manager. |
-| [Get transitiveReports](../api/orgcontact-get-transitivereports.md) | Integer | Get the count of transitive reports for an organization contact from the transitiveReports navigation property. |
-| [List directReports](../api/orgcontact-list-directreports.md) | [directoryObject](directoryobject.md) collection | List the contact's direct reports. |
-| [List memberOf](../api/orgcontact-list-memberof.md) | [directoryObject](directoryobject.md) collection | Get a memberOf object collection. |
-| [checkMemberGroups](../api/directoryobject-checkmembergroups.md) | String collection | Check for group membership. |
-| [getMemberGroups](../api/directoryobject-getmembergroups.md) | String collection | Return all the groups that the specified contact is a member of. |
-| [checkMemberObjects](../api/directoryobject-checkmemberobjects.md) | String collection | Check for membership in groups, administrative units, and directory roles. |
-| [getMemberObjects](../api/directoryobject-getmemberobjects.md) | String collection | Get the list of groups, administrative units, and directory roles the contact is a member of. |
+| [List direct reports](../api/orgcontact-list-directreports.md) | [directoryObject](directoryobject.md) collection | List the contact's direct reports. |
 
 ## Properties
 
@@ -46,7 +54,7 @@ This resource supports using [delta query](/graph/delta-query-overview) to track
 | addresses | [physicalOfficeAddress](physicalofficeaddress.md) collection | Postal addresses for this organizational contact. For now a contact can only have one physical address. |
 | companyName | String | Name of the company that this organizational contact belong to. Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` for `null` values). |
 | department | String | The name for the department in which the contact works. Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` for `null` values). |
-| displayName | String | Display name for this organizational contact. Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` for `null` values), `$search`, and `$orderby`.  |
+| displayName | String | Display name for this organizational contact. Maximum length is 256 characters. Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` for `null` values), `$search`, and `$orderby`.  |
 | givenName | String | First name for this organizational contact. Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` for `null` values).  |
 | id | String | Unique identifier for this organizational contact. Supports `$filter` (`eq`, `ne`, `not`, `in`). |
 | jobTitle | String | Job title for this organizational contact. Supports `$filter` (`eq`, `ne`, `not`, `ge`, `le`, `in`, `startsWith`, and `eq` for `null` values). |
@@ -67,11 +75,12 @@ This resource supports using [delta query](/graph/delta-query-overview) to track
 | directReports | [directoryObject](directoryobject.md) collection | The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports `$expand`. |
 | manager | [directoryObject](directoryobject.md) | The user or contact that is this contact's manager. Read-only. Supports `$expand` and `$filter` (`eq`) by **id**. |
 | memberOf | [directoryObject](directoryobject.md) collection | Groups that this contact is a member of. Read-only. Nullable. Supports `$expand`. |
+| onPremisesSyncBehavior | [onPremisesSyncBehavior](../resources/onpremisessyncbehavior.md)  | Indicates the state of synchronization for an orgContact between the cloud and on-premises Active Directory. Supports `$filter` only with advanced query capabilities, for example, `$filter=onPremisesSyncBehavior/isCloudManaged eq true&$count=true`.|
 | transitiveReports | [directoryObject](directoryobject.md) collection | The transitive reports for a contact. Read-only. |
 
 ## JSON representation
 
-Here is a JSON representation of the resource
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

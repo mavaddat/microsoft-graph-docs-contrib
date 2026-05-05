@@ -5,19 +5,20 @@ author: "snlraju-msft"
 ms.localizationpriority: medium
 ms.subservice: "search"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # connectionQuota resource type
 
 Namespace: microsoft.graph.externalConnectors
 
-Represents the [connection](externalconnectors-externalconnection.md) quota that contains calculated information about the quota utilization of an external connection. It returns the allowed number of items that you can ingest into a connection by considering items ingested for the connection against the tenant-level quota for Microsoft Graph connectors.
+Represents the [connection](externalconnectors-externalconnection.md) quota that contains calculated information about the quota utilization of an external connection. It returns the allowed number of items that you can ingest into a connection by considering items ingested for the connection against the tenant-level quota for Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors).
 
 ## Methods
 
 |Method|Return type|Description|
 |:---|:---|:---|
-| [Get connectionQuota](../api/externalconnectors-connectionquota-get.md) |[connectionQuota](../resources/externalconnectors-connectionquota.md)| Retrieve the properties and relationships of a **connectionQuota**. |
+| [Get](../api/externalconnectors-connectionquota-get.md) |[connectionQuota](../resources/externalconnectors-connectionquota.md)| Retrieve the properties and relationships of a **connectionQuota**. |
 
 ## Properties
 
@@ -31,7 +32,7 @@ None.
 
 ## JSON representation
 
-The following is a JSON representation of the resource.
+The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",

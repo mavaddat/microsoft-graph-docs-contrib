@@ -2,9 +2,10 @@
 title: "Remove appliesTo"
 description: "Remove an appManagementPolicy from an application or service principal object."
 ms.localizationpriority: medium
-author: "madansr7"
+author: "aricrowe57"
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 07/26/2024
 ---
 
 # Remove appliesTo
@@ -17,14 +18,10 @@ Remove an [appManagementPolicy](../resources/appManagementPolicy.md) policy obje
 
 ## Permissions
 
-One of the following permissions is required to call this API. To learn more, including how to choose permissions, see [Permissions](/graph/permissions-reference).
+Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
-| Permission type                        | Permissions (from least to most privileged)                        |
-| :------------------------------------- | :----------------------------------------------------------------- |
-| Delegated (work or school account)     | Application.Read.All and Policy.ReadWrite.ApplicationConfiguration |
-| Delegated (personal Microsoft account) | Not supported.                                                     |
-| Application                            | Application.Read.All and Policy.ReadWrite.ApplicationConfiguration |
+<!-- { "blockType": "permissions", "name": "appmanagementpolicy_delete_appliesto" } -->
+[!INCLUDE [permissions-table](../includes/permissions/appmanagementpolicy-delete-appliesto-permissions.md)]
 
 [!INCLUDE [rbac-app-auth-method-custom-policy-api-update](../includes/rbac-for-apis/rbac-app-auth-method-custom-policy-api-update.md)]
 
@@ -72,10 +69,6 @@ DELETE https://graph.microsoft.com/v1.0/applications/3ccc9971-9ae7-45d6-8de8-263
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/remove-appliesto-e1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/remove-appliesto-e1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -129,15 +122,11 @@ The following example shows a request to remove an appManagementPolicy from a se
   "name": "remove_appliesTo_e2"
 }-->
 
-``` http
+```http
 DELETE https://graph.microsoft.com/v1.0/servicePrincipals/f284860e-368c-4a1f-8894-77f0a9676fb3/appManagementPolicies/15942288-d19b-458c-9be4-20377d0a2435/$ref
 ```
 
 # [C#](#tab/csharp)
-[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
 [!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 

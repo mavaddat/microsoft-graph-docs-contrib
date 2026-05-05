@@ -5,6 +5,7 @@ author: "aakanshanagwani"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Update accessPackageSubject
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update an existing [accessPackageSubject](../resources/accesspackagesubject.md) object to change the subject lifecycle.
+Update an external directory user represented by an existing [accessPackageSubject](../resources/accesspackagesubject.md) object to change the subject lifecycle.
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ```http
-PATCH /identityGovernance/entitlementManagement/subjects(objectId='{objectIdOfUser}')
+PATCH /identityGovernance/entitlementManagement/subjects(objectId='{objectIdOfExternalDirectoryUser}')
 ```
 
 ## Request headers
@@ -62,7 +63,7 @@ If successful, this method returns a `204 No Content` response code.
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/subjects(objectId='{objectIdOfUser}')
+PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/subjects(objectId='{objectIdOfExternalDirectoryUser}')
 Content-Type: application/json
 
 {
@@ -72,10 +73,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-accesspackagesubject-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-accesspackagesubject-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

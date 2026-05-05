@@ -2,16 +2,17 @@
 title: "Update macOsVppApp"
 description: "Update the properties of a macOsVppApp object."
 author: "jaiprakashmb"
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update macOsVppApp
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -24,16 +25,16 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|DeviceManagementConfiguration.ReadWrite.All, DeviceManagementApps.ReadWrite.All|
+|Delegated (work or school account)|DeviceManagementApps.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|DeviceManagementConfiguration.ReadWrite.All, DeviceManagementApps.ReadWrite.All|
+|Application|DeviceManagementApps.ReadWrite.All|
 
 ## HTTP Request
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceAppManagement/mobileApps/{mobileAppId}
 ```
 
@@ -80,6 +81,7 @@ The following table shows the properties that are required when you create the [
 |vppTokenAppleId|String|The Apple Id associated with the given Apple Volume Purchase Program Token.|
 |bundleId|String|The Identity Name.|
 |vppTokenId|String|Identifier of the VPP token associated with this app.|
+|vppTokenDisplayName|String|Display name of the VPP token associated with this app.|
 |revokeLicenseActionResults|[macOsVppAppRevokeLicensesActionResult](../resources/intune-apps-macosvppapprevokelicensesactionresult.md) collection|Results of revoke license actions on this app.|
 
 
@@ -91,10 +93,10 @@ If successful, this method returns a `200 OK` response code and an updated [macO
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/deviceAppManagement/mobileApps/{mobileAppId}
 Content-type: application/json
-Content-length: 1926
+Content-length: 1984
 
 {
   "@odata.type": "#microsoft.graph.macOsVppApp",
@@ -137,6 +139,7 @@ Content-length: 1926
   "vppTokenAppleId": "Vpp Token Apple Id value",
   "bundleId": "Bundle Id value",
   "vppTokenId": "Vpp Token Id value",
+  "vppTokenDisplayName": "Vpp Token Display Name value",
   "revokeLicenseActionResults": [
     {
       "@odata.type": "microsoft.graph.macOsVppAppRevokeLicensesActionResult",
@@ -156,10 +159,10 @@ Content-length: 1926
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 2098
+Content-Length: 2156
 
 {
   "@odata.type": "#microsoft.graph.macOsVppApp",
@@ -205,6 +208,7 @@ Content-Length: 2098
   "vppTokenAppleId": "Vpp Token Apple Id value",
   "bundleId": "Bundle Id value",
   "vppTokenId": "Vpp Token Id value",
+  "vppTokenDisplayName": "Vpp Token Display Name value",
   "revokeLicenseActionResults": [
     {
       "@odata.type": "microsoft.graph.macOsVppAppRevokeLicensesActionResult",

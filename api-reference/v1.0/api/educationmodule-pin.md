@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "v-rmanda"
 ms.subservice: "education"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # educationModule: pin
@@ -22,7 +23,6 @@ Only teachers can perform this action and only one module at a time can be pinne
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "educationmodule_pin" } -->
-
 [!INCLUDE [permissions-table](../includes/permissions/educationmodule-pin-permissions.md)]
 
 ## HTTP request
@@ -37,7 +37,7 @@ POST /education/classes/{id}/modules/{id}/pin
 
 | Header        | Value                     |
 | :------------ | :------------------------ |
-| Authorization | Bearer {token}. Required. |
+| Authorization |Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 
 ## Request body
 
@@ -66,10 +66,6 @@ POST https://graph.microsoft.com/v1.0/education/classes/37d99af7-cfc5-4e3b-8566-
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/educationmodule-pin-1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/educationmodule-pin-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

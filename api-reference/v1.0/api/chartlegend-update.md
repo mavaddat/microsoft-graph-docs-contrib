@@ -5,6 +5,7 @@ author: "lumine2008"
 ms.localizationpriority: medium
 ms.subservice: "excel"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update chartlegend
@@ -41,13 +42,13 @@ In the request body, supply the values for relevant fields that should be update
 
 | Property       | Type    |Description|
 |:---------------|:--------|:----------|
-|overlay|boolean|Boolean value for whether the chart legend should overlap with the main body of the chart.|
+|overlay|Boolean|Boolean value for whether the chart legend should overlap with the main body of the chart.|
 |position|string|Represents the position of the legend on the chart. The possible values are: `Top`, `Bottom`, `Left`, `Right`, `Corner`, `Custom`.|
-|visible|boolean|A boolean value that represents the visibility of a ChartLegend object.|
+|visible|Boolean|A Boolean value that represents the visibility of a ChartLegend object.|
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and updated [WorkbookChartLegend](../resources/chartlegend.md) object in the response body.
+If successful, this method returns a `200 OK` response code and updated [workbookChartLegend](../resources/workbookchartlegend.md) object in the response body.
 ## Example
 ##### Request
 The following example shows a request.
@@ -70,10 +71,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-chartlegend-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-chartlegend-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

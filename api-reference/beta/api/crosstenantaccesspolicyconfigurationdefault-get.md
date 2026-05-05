@@ -5,6 +5,7 @@ author: "jkdouglas"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/17/2024
 ---
 
 # Get crossTenantAccessPolicyConfigurationDefault
@@ -23,6 +24,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "crosstenantaccesspolicyconfigurationdefault_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/crosstenantaccesspolicyconfigurationdefault-get-permissions.md)]
+
+[!INCLUDE [rbac-xtap-apis-read](../includes/rbac-for-apis/rbac-xtap-apis-read.md)]
 
 ## HTTP request
 
@@ -65,10 +68,6 @@ GET https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/default
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-crosstenantaccesspolicyconfigurationdefault-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-crosstenantaccesspolicyconfigurationdefault-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,21 +114,17 @@ Content-Type: application/json
 
 {
   "isServiceDefault": true,
-  "inboundTrust":
-  {
+  "inboundTrust": {
     "isMfaAccepted": false,
     "isCompliantDeviceAccepted": false,
-    "isHybridAzureADJoinedDeviceAccepted": false,
+    "isHybridAzureADJoinedDeviceAccepted": false
   },
-  "automaticUserConsentSettings":
-  {
+  "automaticUserConsentSettings": {
     "inboundAllowed": false,
     "outboundAllowed": false
   },
-  "b2bCollaborationOutbound":
-  {
-    "usersAndGroups":
-    {
+  "b2bCollaborationOutbound": {
+    "usersAndGroups": {
       "accessType": "allowed",
       "targets": [
         {
@@ -138,31 +133,7 @@ Content-Type: application/json
         }
       ]
     },
-    "applications":
-    {
-      "accessType": "allowed",
-      "targets": [
-        {
-          "target": "AllApplications",
-          "targetType": "application"
-        }
-      ]
-    }
-  },
-  "b2bCollaborationInbound":
-  {
-    "usersAndGroups":
-    {
-      "accessType": "allowed",
-      "targets": [
-        {
-          "target": "AllUsers",
-          "targetType": "user"
-        }
-      ]
-    },
-    "applications":
-    {
+    "applications": {
       "accessType": "allowed",
       "targets": [
         {
@@ -172,10 +143,28 @@ Content-Type: application/json
       ]
     }
   },
-  "b2bDirectConnectOutbound":
-  {
-    "usersAndGroups":
-    {
+  "b2bCollaborationInbound": {
+    "usersAndGroups": {
+      "accessType": "allowed",
+      "targets": [
+        {
+          "target": "AllUsers",
+          "targetType": "user"
+        }
+      ]
+    },
+    "applications": {
+      "accessType": "allowed",
+      "targets": [
+        {
+          "target": "AllApplications",
+          "targetType": "application"
+        }
+      ]
+    }
+  },
+  "b2bDirectConnectOutbound": {
+    "usersAndGroups": {
       "accessType": "blocked",
       "targets": [
         {
@@ -184,8 +173,7 @@ Content-Type: application/json
         }
       ]
     },
-    "applications":
-    {
+    "applications": {
       "accessType": "blocked",
       "targets": [
         {
@@ -195,10 +183,8 @@ Content-Type: application/json
       ]
     }
   },
-  "b2bDirectConnectInbound":
-  {
-    "usersAndGroups":
-    {
+  "b2bDirectConnectInbound": {
+    "usersAndGroups": {
       "accessType": "blocked",
       "targets": [
         {
@@ -207,8 +193,7 @@ Content-Type: application/json
         }
       ]
     },
-    "applications":
-    {
+    "applications": {
       "accessType": "blocked",
       "targets": [
         {
@@ -218,10 +203,8 @@ Content-Type: application/json
       ]
     }
   },
-  "tenantRestrictions":
-  {
-    "usersAndGroups":
-    {
+  "tenantRestrictions": {
+    "usersAndGroups": {
       "accessType": "blocked",
       "targets": [
         {
@@ -230,8 +213,7 @@ Content-Type: application/json
         }
       ]
     },
-    "applications":
-    {
+    "applications": {
       "accessType": "blocked",
       "targets": [
         {
@@ -241,14 +223,46 @@ Content-Type: application/json
       ]
     }
   },
-  "invitationRedemptionIdentityProviderConfiguration": 
-  { 
-        "primaryIdentityProviderPrecedenceOrder": [ 
-            "externalFederation", 
-            "azureActiveDirectory", 
-            "socialIdentityProviders" 
-        ],
-        "fallbackIdentityProvider": "defaultConfiguredIdp" 
+  "invitationRedemptionIdentityProviderConfiguration": {
+    "primaryIdentityProviderPrecedenceOrder": [
+      "externalFederation",
+      "azureActiveDirectory",
+      "socialIdentityProviders"
+    ],
+    "fallbackIdentityProvider": "defaultConfiguredIdp"
+  },
+  "m365CollaborationInbound": {
+    "users": {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllUsers",
+          "targetType": "user"
+        }
+      ]
+    }
+  },
+  "m365CollaborationOutbound": {
+    "usersAndGroups": {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllUsers",
+          "targetType": "user"
+        }
+      ]
+    }
+  },
+  "appServiceConnectInbound": {
+    "applications": {
+      "accessType": "blocked",
+      "targets": [
+        {
+          "target": "AllApplications",
+          "targetType": "application"
+        }
+      ]
+    }
   }
 }
 ```

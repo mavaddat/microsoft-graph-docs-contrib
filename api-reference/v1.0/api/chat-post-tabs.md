@@ -5,6 +5,7 @@ author: "subray"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 08/19/2024
 ---
 
 # Add tab to chat
@@ -14,7 +15,9 @@ Namespace: microsoft.graph
 Add (pin) a [tab](../resources/teamstab.md) to the specified [chat](../resources/chat.md). 
 The corresponding app must already be [installed in the chat](../api/chat-list-installedapps.md).
 
-> **Note**: If the chat is associated with an [onlineMeeting](../resources/onlinemeeting.md) instance, then, effectively, the tab will get added to the meeting.
+> **Notes**:
+> * If the chat is associated with an [onlineMeeting](../resources/onlinemeeting.md) instance, then the tab is effectively added to the meeting.
+> * If the app manifest for a given **appId** contains a static tab that matches the current scope (`chat`/`groupChat`), the static tab is pinned by default.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -39,6 +42,9 @@ POST /chats/{chat-id}/tabs
 ## Request body
 
 In the request body include a JSON representation of a [teamsTab](../resources/teamstab.md).
+
+> [!NOTE] 
+> When you pin a static tab, Teams takes the **displayName** and **configuration** from the app manifest. If these properties are specified in the request body, this API returns a `400 Bad Request` response code.
 
 ## Response
 
@@ -77,10 +83,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/add-tab-to-chat-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/add-tab-to-chat-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
