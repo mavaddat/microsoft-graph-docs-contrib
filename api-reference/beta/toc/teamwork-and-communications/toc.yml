@@ -244,14 +244,6 @@ items:
       href: ../../api/user-list-permissiongrants.md
   - name: Complex types
     items:
-    - name: Group chat teams app installation scope info
-      href: ../../resources/groupchatteamsappinstallationscopeinfo.md
-    - name: Personal teams app installation scope info
-      href: ../../resources/personalteamsappinstallationscopeinfo.md
-    - name: Team teams app installation scope info
-      href: ../../resources/teamteamsappinstallationscopeinfo.md
-    - name: Teams app installation scope info
-      href: ../../resources/teamsappinstallationscopeinfo.md
     - name: Custom app settings
       href: ../../resources/customappsettings.md
 - name: Calls and online meetings
