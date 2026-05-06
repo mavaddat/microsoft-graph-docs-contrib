@@ -1,7 +1,7 @@
 ---
 title: "granularSiteRestoreArtifact resource type"
 description: "Represents the granular artifact of the SharePoint site."
-author: "manikantsinghms"
+author: "rahulprasad_ms"
 ms.date: 04/15/2026
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"

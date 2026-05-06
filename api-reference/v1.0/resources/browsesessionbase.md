@@ -1,7 +1,7 @@
 ---
 title: "browseSessionBase resource type"
 description: "An abstract entity that represents a browse session created on a specific restore point."
-author: "manikantsinghms"
+author: "rahulprasad_ms"
 ms.date: 04/15/2026
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
