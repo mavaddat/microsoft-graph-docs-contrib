@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents the installation scope details when the Teams app is installed, updated or deleted from a [chat](../resources/chat.md).
+Represents the installation scope details when the Teams app is installed, updated, or deleted from a [chat](../resources/chat.md).
 
 Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).
 
@@ -22,8 +22,8 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 
 |Property|Type|Description|
 |:---|:---|:---|
-|chatId|String|The ID of the chat where the Teams app is installed.|
-|scope|teamsAppInstallationScopes|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
+|chatId|string|The ID of the chat where the Teams app is installed.|
+|scope|teamsAppInstallationScope|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
 
 ## JSON representation
 

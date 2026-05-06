@@ -22,8 +22,8 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 
 |Property|Type|Description|
 |:---|:---|:---|
-|scope|teamsAppInstallationScopes|The scope in which the Teams app has been updated, installed, or deleted. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
-|userId|String|The ID of the user for whom the Teams app is installed.|
+|scope|teamsAppInstallationScope|The scope in which the Teams app has been updated, installed, or deleted. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
+|userId|string|The ID of the user for whom the Teams app is installed.|
 
 ## JSON representation
 

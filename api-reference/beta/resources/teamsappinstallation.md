@@ -67,8 +67,8 @@ The following JSON representation shows the resource type.
 ```json
 {
   "consentedPermissionSet": {"@odata.type": "#microsoft.graph.teamsAppPermissionSet"},
-  "id": "String (identifier)",
-  "scopeInfo": {"@odata.type": "microsoft.graph.teamsAppInstallationScopeInfo"}
+  "id": "string (identifier)",
+  "scopeInfo": {"@odata.type": "#microsoft.graph.teamsAppInstallationScopeInfo"}
 }
 ```
 
