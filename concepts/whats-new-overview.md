@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 04/28/2026
+ms.date: 05/05/2026
 ms.topic: whats-new
 ---
 
@@ -36,9 +36,14 @@ Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy
 
 ## May 2026: New in preview only
 
+### Change notifications
+
+Use the new Copilot change notifications API for meetings AI insights to subscribe to notifications for the generation of meeting AI summaries and receive a notification when the summaries are fully generated and available. For more information, see [Get change notifications for Copilot AI insights using Microsoft Graph](/microsoft-365/copilot/extensibility/api/ai-services/change-notifications/aiinsights-changenotifications).
+
 ### Identity and access | Identity and sign-in
 
-Added the [onVerifiedIdClaimValidationCustomExtension](/graph/api/resources/onverifiedidclaimvalidationcustomextension?view=graph-rest-beta&preserve-view=true) and [onVerifiedIdClaimValidationListener](/graph/api/resources/onverifiedidclaimvalidationlistener?view=graph-rest-beta&preserve-view=true) resource types and associated methods to support custom logic for claim validation from Verified ID credential presentations during authentication flows through Microsoft Entra custom authentication extensions in External ID.
+- Added the [onVerifiedIdClaimValidationCustomExtension](/graph/api/resources/onverifiedidclaimvalidationcustomextension?view=graph-rest-beta&preserve-view=true) and [onVerifiedIdClaimValidationListener](/graph/api/resources/onverifiedidclaimvalidationlistener?view=graph-rest-beta&preserve-view=true) resource types and associated methods to support custom logic for claim validation from Verified ID credential presentations during authentication flows through Microsoft Entra custom authentication extensions in External ID.
+- Added support for Microsoft 365 cross-tenant access policy capabilities that allow administrators to control access to Microsoft 365 resources and data when collaborating with external organizations. Use the [crossTenantAccessPolicyConfigurationDefault](/graph/api/resources/crosstenantaccesspolicyconfigurationdefault?view=graph-rest-beta&preserve-view=true) and [crossTenantAccessPolicyConfigurationPartner](/graph/api/resources/crosstenantaccesspolicyconfigurationpartner?view=graph-rest-beta&preserve-view=true) resources with the new **m365Capabilities** relationship to manage capabilities including profile sharing, calendar sharing, migration, mail tips, and Places booking across organizational boundaries.
 
 ## April 2026: New and generally available
 
@@ -61,7 +66,8 @@ Added the [onVerifiedIdClaimValidationCustomExtension](/graph/api/resources/onve
 
 ### Identity and access | Governance
 
-Use `approverRemove` as a new supported value for the **requestType** property of the [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest) resource. For more information, see [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest).
+- Added the **processingInfo** property to the [taskProcessingResult](/graph/api/resources/identitygovernance-taskprocessingresult) resource. Use this property to get additional human-readable context about task execution outcomes, particularly for cases where the task completed successfully but the expected action wasn't performed because the target was already in the desired state.
+- Use `approverRemove` as a new supported value for the **requestType** property of the [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest) resource. For more information, see [accessPackageAssignmentRequest](/graph/api/resources/accesspackageassignmentrequest).
 
 ### Identity and access | Identity and sign-in
 
@@ -119,8 +125,9 @@ Added the **inheritedAppRoleAssignments** and **inheritedOauth2PermissionGrants*
 
 ### Identity and access | Governance
 
-- Use `default`, `notVisible`, and `visible` as supported values for the **approverInformationVisibility** property of the [accessPackageApprovalStage](/graph/api/resources/accesspackageapprovalstage?view=graph-rest-beta&preserve-view=true) and [approvalStage](/graph/api/resources/approvalstage?view=graph-rest-beta&preserve-view=true) resources to indicate whether approver information is visible to the requestor.
+- Added the **processingInfo** property to the [taskProcessingResult](/graph/api/resources/identitygovernance-taskprocessingresult?view=graph-rest-beta&preserve-view=true) resource. Use this property to get additional human-readable context about task execution outcomes, particularly for cases where the task completed successfully but the expected action wasn't performed because the target was already in the desired state.
 - Added the [cancelProcessing](/graph/api/identitygovernance-workflow-cancelprocessing?view=graph-rest-beta&preserve-view=true) method to the [workflow](/graph/api/resources/identitygovernance-workflow?view=graph-rest-beta&preserve-view=true) resource to cancel workflow runs that are currently in progress or queued.
+- Use `default`, `notVisible`, and `visible` as supported values for the **approverInformationVisibility** property of the [accessPackageApprovalStage](/graph/api/resources/accesspackageapprovalstage?view=graph-rest-beta&preserve-view=true) and [approvalStage](/graph/api/resources/approvalstage?view=graph-rest-beta&preserve-view=true) resources to indicate whether approver information is visible to the requestor.
 - Added the **referenceId** property and the **files** relationship to [customDataProvidedResourceUploadSession](/graph/api/resources/customdataprovidedresourceuploadsession?view=graph-rest-beta&preserve-view=true) resource to identify the context for which data is being uploaded, such as an access review instance ID, and identify files uploaded during an upload session, respectively. Also added enhanced support for query capabilities for the [List customDataProvidedResourceUploadSession objects](/graph/api/accesspackageresource-list-uploadsessions?view=graph-rest-beta&preserve-view=true) API operation.
 
 ### Identity and access | Identity and sign-in
@@ -161,6 +168,10 @@ Updated the capabilities of the [auditLogQuery](/graph/api/resources/security-au
 ### Security | Microsoft Defender for Identity
 
 Use the **sensorTypes** property on [sensorCandidate](/graph/api/resources/security-sensorcandidate?view=graph-rest-beta&preserve-view=true) to get the list of device types for the sensor.
+
+### Cloud communications | Call
+
+Added [meeting engagement data](/graph/api/resources/meetingengagement?view=graph-rest-beta&preserve-view=true) to capture real-time participant interaction behaviors during a meeting, including reactions (like, love, applause, and so on), hand raises, camera toggles, and microphone mute/unmute events. This data is collected as part of the attendance report.
 
 ### Teamwork and communications | Messaging
 
