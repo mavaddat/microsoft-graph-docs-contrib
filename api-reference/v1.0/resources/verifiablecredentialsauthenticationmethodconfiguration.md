@@ -23,7 +23,7 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 |:---|:---|:---|
 |[List](../api/verifiablecredentialsauthenticationmethodconfiguration-list.md)|[verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md) collection|Get a list of the verifiableCredentialsAuthenticationMethodConfiguration objects and their properties.|
 |[Get](../api/verifiablecredentialsauthenticationmethodconfiguration-get.md)|[verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md)|Read the properties and relationships of [verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md) object.|
-|[Update](../api/verifiablecredentialsauthenticationmethodconfiguration-update.md)|[verifiableCredentialsAuthenticationMethodConfiguration](../resources/verifiablecredentialsauthenticationmethodconfiguration.md)|Update the properties of a verifiableCredentialsAuthenticationMethodConfiguration object.|
+|[Update](../api/verifiablecredentialsauthenticationmethodconfiguration-update.md)|None|Update the properties of a verifiableCredentialsAuthenticationMethodConfiguration object.|
 |[Delete](../api/verifiablecredentialsauthenticationmethodconfiguration-delete.md)|None|Delete a verifiableCredentialsAuthenticationMethodConfiguration object.|
 
 
