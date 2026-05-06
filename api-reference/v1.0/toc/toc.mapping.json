@@ -164,6 +164,7 @@
             {
               "name": "Browse session",
               "resources": [
+                "browseSessionBase",
                 "oneDriveForBusinessBrowseSession",
                 "sharePointBrowseSession"
               ]
