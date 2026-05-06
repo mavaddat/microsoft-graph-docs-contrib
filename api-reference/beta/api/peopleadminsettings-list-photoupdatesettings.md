@@ -1,6 +1,6 @@
 ---
 title: "List photoUpdateSettings"
-description: "Get a list of the photoUpdateSettings objects and their properties."
+description: "Get the properties of a photoUpdateSettings object."
 author: "fondieki"
 ms.localizationpriority: medium
 ms.subservice: "people"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get a list of the [photoUpdateSettings](../resources/photoupdatesettings.md) objects and their properties.
+Get the properties of a [photoUpdateSettings](../resources/photoupdatesettings.md) object.
 
 [!INCLUDE [national-cloud-support](../../includes/global-china.md)]
 
