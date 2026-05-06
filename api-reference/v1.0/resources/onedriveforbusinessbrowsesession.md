@@ -1,7 +1,7 @@
 ---
 title: "oneDriveForBusinessBrowseSession resource type"
 description: "Represents a browse session created on a restore point of a OneDrive"
-author: "rahulprasad_ms"
+author: "rahulprasad-ms"
 ms.date: 04/15/2026
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
