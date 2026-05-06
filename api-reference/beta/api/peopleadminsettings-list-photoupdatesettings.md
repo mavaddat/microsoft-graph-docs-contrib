@@ -37,7 +37,7 @@ GET /admin/people/photoUpdateSettings
 
 ## Optional query parameters
 
-This method doesn't support OData query parameters to help customize the response. For general information, see  [OData query parameters](/graph/query-parameters).
+This method doesn't support OData query parameters to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -51,7 +51,7 @@ Don't supply a request body for this method.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [photoUpdateSettings](../resources/photoupdatesettings.md) objects in the response body.
+If successful, this method returns a `200 OK` response code and a [photoUpdateSettings](../resources/photoupdatesettings.md) object in the response body.
 
 ## Examples
 

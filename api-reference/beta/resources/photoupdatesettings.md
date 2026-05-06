@@ -22,7 +22,7 @@ Inherits from [entity](../resources/entity.md).
 
 |Method|Return type|Description|
 |:---|:---|:---|
-|[List](../api/peopleadminsettings-list-photoupdatesettings.md)|[photoUpdateSettings](../resources/photoupdatesettings.md) collection|Get the properties of a [photoUpdateSettings](../resources/photoupdatesettings.md) object.|
+|[List](../api/peopleadminsettings-list-photoupdatesettings.md)|[photoUpdateSettings](../resources/photoupdatesettings.md)|Get the properties of a [photoUpdateSettings](../resources/photoupdatesettings.md) object.|
 |[Update](../api/photoupdatesettings-update.md)|[photoUpdateSettings](../resources/photoupdatesettings.md)|Update the properties of a [photoUpdateSettings](../resources/photoupdatesettings.md) object.|
 
 ## Properties
