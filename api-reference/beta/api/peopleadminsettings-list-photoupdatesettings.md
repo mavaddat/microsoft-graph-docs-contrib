@@ -82,11 +82,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "@odata.type": "#microsoft.graph.photoUpdateSettings",
-  "id": "20a03e03-52a3-3c97-6c4f-db600fca32ba",
-  "source": "String",
-  "allowedRoles": [
-    "String"
-  ]
+    "source": "cloud",
+    "allowedRoles": []
 }
 ```
