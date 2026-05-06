@@ -129,6 +129,20 @@ Namespace: microsoft.graph.windowsUpdates
 | html   |
 | unknownFutureValue |
 
+### remediationType values
+| Member |
+|:-------|
+| inPlaceUpgrade   |
+| unknownFutureValue |
+
+### approvalStatus values
+
+|Member|
+|:---|
+|approved|
+|suspended|
+|unknownFutureValue|
+
 <!--
 {
   "type": "#page.annotation",

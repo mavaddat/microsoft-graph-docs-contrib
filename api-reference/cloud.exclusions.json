@@ -95,26 +95,6 @@
     "cloud": "China"
   },
   {
-    "apiPath": "/chats/{chat-id}/sendActivityNotification",
-    "operation": "POST",
-    "cloud": "China"
-  },
-  {
-    "apiPath": "/teams/{team-id}/sendActivityNotification",
-    "operation": "POST",
-    "cloud": "China"
-  },
-  {
-    "apiPath": "/users/{user-id}/teamwork/sendActivityNotification",
-    "operation": "POST",
-    "cloud": "China"
-  },
-  {
-    "apiPath": "/teamwork/sendActivityNotificationToRecipients",
-    "operation": "POST",
-    "cloud": "China"
-  },
-  {
     "apiPath": "/teams/{team-id}/channels/{channel-id}/tabs",
     "operation": "GET",
     "cloud": "China"
@@ -207,6 +187,22 @@
   {
     "apiPath": "/teams/{team-id}/incomingChannels",
     "operation": "GET",
+    "cloud": "China"
+  },
+  {
+    "fileName": "opentypeextension-post-opentypeextension.md",
+    "cloud": "China"
+  },
+  {
+    "fileName": "opentypeextension-get.md",
+    "cloud": "China"
+  },
+  {
+    "fileName": "opentypeextension-update.md",
+    "cloud": "China"
+  },
+  {
+    "fileName": "opentypeextension-delete.md",
     "cloud": "China"
   },
   {

@@ -5,14 +5,14 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: enumPageType
-ms.date: 09/12/2024
+ms.date: 08/01/2024
 ---
 
 # wiFiSecurityType enum type
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -21,9 +21,11 @@ Wi-Fi Security Types.
 ## Members
 |Member|Value|Description|
 |:---|:---|:---|
-|open|0|Open (No Authentication).|
-|wpaPersonal|1|WPA-Personal.|
-|wpaEnterprise|2|WPA-Enterprise. Must use IOSEnterpriseWifiConfiguration type to configure enterprise options.|
-|wep|3|WEP Encryption.|
-|wpa2Personal|4|WPA2-Personal.|
-|wpa2Enterprise|5|WPA2-Enterprise. Must use WindowsWifiEnterpriseEAPConfiguration type to configure enterprise options.|
+|open|0|Default. Indicates Wi-Fi security type is associated with Open (No Authentication).|
+|wpaPersonal|1|Indicates Wi-Fi security type is associated with WPA-Personal.|
+|wpaEnterprise|2|Indicates Wi-Fi security type is associated with WPA-Enterprise. Must use IOSEnterpriseWifiConfiguration type to configure enterprise options.|
+|wep|3|Indicates Wi-Fi security type is associated with WEP Encryption.|
+|wpa2Personal|4|Indicates Wi-Fi security type is associated with WPA2-Personal.|
+|wpa2Enterprise|5|Indicates Wi-Fi security type is associated with WPA2-Enterprise. Must use WindowsWifiEnterpriseEAPConfiguration type to configure enterprise options.|
+|unknownFutureValue|6|Evolvable enumeration sentinel value. Do not use|
+|wpa3Personal|7|Indicates Wi-Fi security type is associated with WPA3-Personal. Provides stronger encryption using Simultaneous Authentication of Equals (SAE).|

@@ -38,16 +38,18 @@ Deactivate a hardware OATH authentication method assigned to you.
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /me/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethodId}/deactivate
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Deactivate a hardware OATH authentication method assigned to another user.
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /users/{usersId}/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethodId}/deactivate
 ```
 
@@ -76,16 +78,12 @@ The following example shows a request.
   "name": "hardwareoathauthenticationmethodthis.deactivate"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/me/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethodId}/deactivate
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/hardwareoathauthenticationmethodthisdeactivate-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/hardwareoathauthenticationmethodthisdeactivate-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -122,7 +120,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

@@ -31,6 +31,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 GET /me/ownedDevices
 GET /users/{id | userPrincipalName}/ownedDevices
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 ## Optional query parameters
 This method supports the `$count`, `$expand`, `$filter`, `$orderby`, `$search`, `$select`, and `$top` [OData query parameters](/graph/query-parameters) to help customize the response. For more information on properties that support query parameters, see the [device resource type](../resources/device.md#properties).
 
@@ -63,10 +65,6 @@ GET https://graph.microsoft.com/v1.0/me/ownedDevices
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-owneddevices-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-owneddevices-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

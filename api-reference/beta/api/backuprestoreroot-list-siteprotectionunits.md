@@ -77,10 +77,6 @@ GET https://graph.microsoft.com/beta/solutions/backupRestore/protectionUnits/mic
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-all-siteprotectionunit-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-all-siteprotectionunit-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/list-all-siteprotectionunit-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -129,6 +125,7 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDC", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "backupRetentionPeriodInDays": 180,
       "status": "unprotected",
       "protectionSources": "none",
       "createdBy": {
@@ -155,7 +152,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -164,6 +162,7 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC - 1", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCOne", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "backupRetentionPeriodInDays": 180,
       "status": "unprotectRequested",
       "protectionSources": "none",
       "createdBy": {
@@ -190,7 +189,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -199,6 +199,7 @@ HTTP/1.1 200 OK
       "siteId": "contoso-jpn.sharepoint.com,da60e844-ba1d-49bc-b4d4-d5e36bae9019,0271110f-634f-4300-a841-3a8a2e8517765",
       "siteName": "Enhanced Restore IDC - 2", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCTwo", // Newly Added
+      "backupRetentionPeriodInDays": 180,
       "status": "protected",
       "protectionSources": "manual",
       "createdBy": {
@@ -225,7 +226,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -233,6 +235,7 @@ HTTP/1.1 200 OK
       "siteId": "contoso-jpn.sharepoint.com,da60e844-ba1d-49bc-b4d4-d5e36bae9019,0271110f-634f-4300-a841-3a8a2e850987",
       "siteName": "Enhanced Restore IDC - 3", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCThree", // Newly Added
+      "backupRetentionPeriodInDays": 180,
       "status": "unprotected",
       "protectionSources": "none",
       "createdBy": {
@@ -259,7 +262,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -268,6 +272,7 @@ HTTP/1.1 200 OK
       "siteId": "contoso-jpn.sharepoint.com,da60e844-ba1d-49bc-b4d4-d5e36bae9019,1111110f-634f-4300-a841-3a8a2e851851",
       "siteName": "Who+", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/Whoplus", // Newly Added
+      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -294,7 +299,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     }
   ]
 }
@@ -319,10 +325,6 @@ GET https://graph.microsoft.com/beta/solutions/backupRestore/sharePointProtectio
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-siteprotectionunit-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-siteprotectionunit-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -374,6 +376,7 @@ HTTP/1.1 200 OK
       "siteName": "Who+", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/Whoplus", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -400,7 +403,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -409,6 +413,7 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDC", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -435,7 +440,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -444,6 +450,7 @@ HTTP/1.1 200 OK
       "siteName": "Enhanced Restore IDC - 1", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCOne", // Newly Added
       "policyId": "9fec8e78-bce4-4aaf-ab1b-5451cc387264",
+      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -470,7 +477,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -479,6 +487,7 @@ HTTP/1.1 200 OK
       "siteId": "contoso.sharepoint.com,fd1a778f-263e-4c43-acdf-d5c2519d80eb,c06016db-dfec-4f79-83a1-09c6dbfd5432",
       "siteName": "Enhanced Restore IDC - 2", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCTwo", // Newly Added
+      "backupRetentionPeriodInDays": 180,
       "status": "protectRequested",
       "protectionSources": "manual",
       "createdBy": {
@@ -505,7 +514,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.siteProtectionUnit",
@@ -514,6 +524,7 @@ HTTP/1.1 200 OK
       "siteId": "contoso.sharepoint.com,fd1a778f-263e-4c43-acdf-d5c2519d80eb,c06016db-dfec-4f79-83a1-09c6dbfd8765",
       "siteName": "Enhanced Restore IDC - 3", // Newly Added
       "siteWebUrl": "https://contoso.sharepoint.com/teams/ERIDCThree", // Newly Added
+      "backupRetentionPeriodInDays": 180,
       "status": "protected",
       "protectionSources": "manual",
       "createdBy": {
@@ -540,7 +551,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     }
   ]
 }

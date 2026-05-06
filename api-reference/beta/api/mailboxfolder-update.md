@@ -32,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}
 PATCH /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/childFolders/{mailboxFolderId}
 ```
@@ -56,6 +56,9 @@ PATCH /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/childFolde
 
 If successful, this method returns a `200 OK` response code and an updated [mailboxFolder](../resources/mailboxfolder.md) object in the response body.
 
+> [!NOTE]
+> *Archive mailboxes with autoexpanded folders:* When the target folder physically resides in an auxiliary (autoexpanded) archive mailbox, this API might return a redirect response that points to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](/graph/handle-archive-mailbox-redirects).
+
 ## Examples
 
 ### Request
@@ -68,7 +71,7 @@ The following example shows how to update certain folder properties of a mailbox
   "sampleKeys": ["MBX:e0648f21@aab09c93", "AAMkAGVmMDEzM"]
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0648f21@aab09c93/folders/AAMkAGVmMDEzM
 
 {
@@ -98,7 +101,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.mailboxFolder"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 Content-length: 179

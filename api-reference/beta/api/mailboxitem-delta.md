@@ -33,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/items/delta
 ```
 
@@ -70,6 +70,9 @@ Don't supply a request body for this method.
 
 If successful, this function returns a `200 OK` response code and a collection of [mailboxItem](../resources/mailboxitem.md) objects in the response body.
 
+> [!NOTE]
+> *Archive mailboxes with autoexpanded folders:* When the target folder or items physically reside in an auxiliary (autoexpanded) archive mailbox, this API might return a redirect response that points to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](/graph/handle-archive-mailbox-redirects).
+
 ## Examples
 
 ### Request
@@ -87,17 +90,13 @@ For an example that shows a round of delta query calls, see [Get incremental cha
   "sampleKeys": ["MBX:e0643f21@a7809c93", "AAMkAGUwNjQ4ZyTAAA="]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0643f21@a7809c93/folders/AAMkAGUwNjQ4ZyTAAA=/items/delta
 Prefer: odata.maxpagesize=2
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/mailboxitemthisdelta-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/mailboxitemthisdelta-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -135,7 +134,7 @@ The following example shows a `$skipToken` in an **@odata.nextLink** response he
   "@odata.type": "Collection(microsoft.graph.mailboxItem)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-length: 337

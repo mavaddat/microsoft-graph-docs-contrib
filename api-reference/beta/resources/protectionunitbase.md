@@ -26,10 +26,14 @@ Inherits from [entity](entity.md).
 |Method|Return type|Description|
 |:---|:---|:---|
 |[Get](../api/protectionunitbase-get.md)|[protectionUnitBase](../resources/protectionunitbase.md)|Read the properties and relationships of a [protectionUnitBase](../resources/protectionunitbase.md) object.|
+|[Offboard](../api/protectionunitbase-offboard.md)|[protectionUnitBase](../resources/protectionunitbase.md)|Offboard a [protectionUnitBase](../resources/protectionunitbase.md).|
+|[Cancel offboard](../api/protectionunitbase-canceloffboard.md)|[protectionUnitBase](../resources/protectionunitbase.md)|Cancel the offboarding of a [protectionUnitBase](../resources/protectionunitbase.md).|
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
+|backupRetentionPeriodInDays|Int32|The retention period of the backup, in days.|
+|billingPolicyId|String|The unique identifier of the billing policy assigned to the protection unit for cost allocation.|
 |createdBy|[identitySet](../resources/identityset.md)|The identity of person who created the protection unit.|
 |createdDateTime|DateTimeOffset|The time of creation of the protection unit.|
 |error|[publicError](../resources/publicerror.md)|Contains error details if an error occurred while creating a protection unit.|
@@ -39,6 +43,7 @@ Inherits from [entity](entity.md).
 |policyId|String|The unique identifier of the protection policy based on which protection unit was created.|
 |protectionSources|protectionSource|Indicates the sources by which a protection unit is currently protected. A protection unit protected by multiple sources is indicated by comma-separated values. The possible values are: `none`, `manual`, `dynamicRule`, `unknownFutureValue`.|
 |status|[protectionUnitStatus](../resources/protectionunitbase.md#protectionunitstatus-values)|The status of the protection unit. The possible values are: `protectRequested`, `protected`, `unprotectRequested`, `unprotected`, `removeRequested`, `unknownFutureValue`.|
+|offboardRequestedDateTime|DateTimeOffset|The time when protection unit offboard was requested.|
 
 ### protectionUnitStatus values
 |Member | Description |
@@ -48,6 +53,9 @@ Inherits from [entity](entity.md).
 |unprotectRequested | Disabling protection of the unit was requested. |
 |unprotected | The protection unit is successfully disabled.|
 |removeRequested |A request to remove the protected unit from the policy was made. |
+|offboardRequested |A request to offboard the protection unit. |
+|offboarded |The protection unit is successfully offboarded. |
+|cancelOffboardRequested |A request to cancel protection unit offboarding. |
 |unknownFutureValue | Evolvable enumeration sentinel value. Don't use.|
 
 ## Relationships
@@ -66,15 +74,17 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.protectionUnitBase",
+  "backupRetentionPeriodInDays": "Int32",
+  "billingPolicyId": "String",
   "createdBy": {"@odata.type": "microsoft.graph.identitySet"},
   "createdDateTime": "String (timestamp)",
   "error": {"@odata.type": "microsoft.graph.publicError"},
   "id": "String (identifier)",
   "lastModifiedBy": {"@odata.type": "microsoft.graph.identitySet"},
   "lastModifiedDateTime": "String (timestamp)",
+  "offboardRequestedDateTime": "String (timestamp)",
   "policyId": "String",
   "protectionSources": "String",
   "status": "String"
 }
 ```
-

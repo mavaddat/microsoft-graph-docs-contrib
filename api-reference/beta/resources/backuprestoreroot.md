@@ -38,6 +38,7 @@ Represents the Microsoft 365 Backup Storage service in a tenant.
 |:---|:---|:---|
 |driveInclusionRules|[driveProtectionRule](../resources/driveprotectionrule.md) collection|The list of drive inclusion rules applied to the tenant.|
 |driveProtectionUnits|[driveProtectionUnit](../resources/driveprotectionunit.md) collection|The list of drive protection units in the tenant.|
+|emailNotificationsSetting|[emailNotificationsSetting](../resources/emailnotificationssetting.md)|The email notification settings in the tenant.|
 |exchangeProtectionPolicies|[exchangeProtectionPolicy](../resources/exchangeprotectionpolicy.md) collection|The list of Exchange protection policies in the tenant.|
 |exchangeRestoreSessions|[exchangeRestoreSession](../resources/exchangerestoresession.md) collection|The list of Exchange restore sessions available in the tenant.|
 |mailboxInclusionRules|[mailboxProtectionRule](../resources/mailboxprotectionrule.md) collection|The list of mailbox inclusion rules applied to the tenant.|
@@ -53,6 +54,9 @@ Represents the Microsoft 365 Backup Storage service in a tenant.
 |sharePointRestoreSessions|[sharePointRestoreSession](../resources/sharepointrestoresession.md) collection|The list of SharePoint restore sessions available in the tenant.|
 |siteInclusionRules|[siteProtectionRule](../resources/siteprotectionrule.md) collection|The list of site inclusion rules applied to the tenant.|
 |siteProtectionUnits|[siteProtectionUnit](../resources/siteprotectionunit.md) collection|The list of site protection units in the tenant.|
+|browseSessions|[browseSessionBase](../resources/browsesessionbase.md) collection| The list of browse sessions in the tenant.|
+|sharePointBrowseSessions|[sharePointBrowseSession](../resources/sharepointbrowsesession.md) collection| The list of sharepoint browse sessions in the tenant.|
+|oneDriveForBusinessBrowseSessions|[oneDriveForBusinessBrowseSession](../resources/onedriveforbusinessbrowsesession.md) collections| The list of onedriveforbusiness browse sessions in the tenant.|
 
 ## JSON representation
 

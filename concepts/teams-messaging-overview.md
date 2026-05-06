@@ -6,6 +6,7 @@ ms.localizationpriority: high
 ms.subservice: "teams"
 ms.custom: scenarios:getting-started
 ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Working with Microsoft Teams messaging APIs in Microsoft Graph
@@ -71,7 +72,7 @@ The following example shows the schema for an adaptive card attachment when the 
 
 > **Note:** Microsoft Graph only supports cards that have the **OpenUrl** action set. Other actions like **ShowCard** aren't supported. Microsoft Graph does allow messages posted by bots that have other actions in them to be read.
 
-The following example shows the schema for a Loop component as two attachments.
+The following example shows the schema for a Loop component attachment.
 
 ```json
     "attachments": [
@@ -83,15 +84,6 @@ The following example shows the schema for a Loop component as two attachments.
             "name": null,
             "thumbnailUrl": null,
             "teamsAppId": "FluidEmbedCard"
-        },
-        {
-            "id": "placeholderCard",
-            "contentType": "application/vnd.microsoft.card.codesnippet",
-            "contentUrl": null,
-            "content": "{}",
-            "name": null,
-            "thumbnailUrl": null,
-            "teamsAppId": "FLUID_PLACEHOLDER_CARD"
         }
     ],
 ```
@@ -212,7 +204,8 @@ The **chatMessage** schema supports the following non-HTML elements that Teams a
     - id - The ID of the custom emoji.
     - alt - An alternate representation for the custom emoji; for example, the name of the custom emoji.
     - source - The hosted content of the custom emoji associated with the message.
-
+- codeblock - When the body of the message contains a code block, the `"<codeblock class=\"Json\"><code>Hello world</code></codeblock>"` element represents the properties of a code block.
+ 
 **Example: A message that @mentions a team**
 
 ```json
@@ -305,13 +298,35 @@ The **chatMessage** schema supports the following non-HTML elements that Teams a
 
 **Example: A message with a custom emoji**
 
->**Note:** Custom emojis are only available on the `/beta` endpoint.
-
 ```json
 {
     "body": {
         "contentType": "html",
         "content": "<p><customemoji id=\"dGVzdHNjOzAtd3VzLWQyLTdiNWRkZGQ2ZGVjMDNkYzIwNTgxY2NkYTE1MmEyZTM4\" alt=\"testsc\" source=\"https://graph.microsoft.com/beta/chats/19:bcf84b15c2994a909770f7d05bc4fe16@thread.v2/messages/1706638496169/hostedContents/aWQ9LHR5cGU9MSx1cmw9aHR0cHM6Ly91cy1jYW5hcnkuYXN5bmNndy50ZWFtcy5taWNyb3NvZnQuY29tL3YxL29iamVjdHMvMC13dXMtZDItN2I1ZGRkZDZkZWMwM2RjMjA1ODFjY2RhMTUyYTJlMzgvdmlld3MvaW1ndDJfYW5pbQ==/$value\"></customemoji></p>"
+    }
+}
+```
+
+**Example: A message with a code block**
+
+>**Note:** Highlighted code blocks aren't supported when a message with a code block is sent using the Microsoft Graph API.
+
+```json
+{
+    "body": {
+        "contentType": "html",
+        "content": "\n<codeblock class=\"\"><code>Hello world</code></codeblock>"
+    }
+}
+```
+
+**Example: A message with a code block that has language-specific highlighting**
+
+```json
+{
+    "body": {
+        "contentType": "html",
+        "content": "<p>&nbsp;</p>\n\n<codeblock class=\"Json\"><code>{<br> &nbsp;&nbsp; <span class=\"hljs-function\">\"body\"</span>:&nbsp;{<br> &nbsp;&nbsp; <span class=\"hljs-function\">\"contentType\"</span>:&nbsp;<span class=\"hljs-string\">\"html\"</span>,<br> &nbsp;&nbsp; <span class=\"hljs-function\">\"content\"</span>:&nbsp;<span class=\"hljs-string\">\"&lt;codeblock&gt;&lt;code&gt;Hello&nbsp;world&lt;/code&gt;&lt;/codeblock&gt;\"</span><br> &nbsp;&nbsp; }<br>}</code></codeblock>\n<p>&nbsp;</p>"
     }
 }
 ```

@@ -12,6 +12,22 @@ ms.date: 04/02/2024
 
 Namespace: microsoft.graph.identityGovernance
 
+### activationTaskScopeType values 
+
+|Member|
+|:---|
+|allTasks|
+|failedTasks|
+|unknownFutureValue|
+
+### activationUserScopeType values 
+
+|Member|
+|:---|
+|allUsers|
+|failedUsers|
+|unknownFutureValue|
+
 ### customTaskExtensionOperationStatus values 
 
 |Member|
@@ -41,20 +57,6 @@ Namespace: microsoft.graph.identityGovernance
 |unknownFutureValue|
 
 
-### lifecycleWorkflowProcessingStatus values 
-
-
-
-|Member|
-|:---|
-|queued|
-|inProgress|
-|completed|
-|completedWithErrors|
-|canceled|
-|failed|
-|unknownFutureValue|
-
 ### valueType values 
 
 
@@ -77,6 +79,7 @@ Namespace: microsoft.graph.identityGovernance
 |scheduled|
 |onDemand|
 |unknownFutureValue|
+|activatedWithScope|
 
 
 ### workflowTriggerTimeBasedAttribute values 

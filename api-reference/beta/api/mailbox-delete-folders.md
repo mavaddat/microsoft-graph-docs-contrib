@@ -29,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/$ref
 DELETE /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/childFolders/{mailboxFolderId}/$ref
 ```
@@ -48,6 +48,9 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `204 No Content` response code.
 
+> [!NOTE]
+> *Archive mailboxes with autoexpanded folders:* When the target folder physically resides in an auxiliary (autoexpanded) archive mailbox, this API might return a redirect response that points to the correct mailbox endpoint. For details, see [Handle archive mailbox redirects](/graph/handle-archive-mailbox-redirects).
+
 ## Examples
 
 ### Request
@@ -60,7 +63,7 @@ The following example shows how to delete a mailbox folder.
   "sampleKeys": ["MBX:e0648f21@aab09c93", "AAMkAGVmMDEzM"]
 }
 -->
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/admin/exchange/mailboxes/MBX:e0648f21@aab09c93/folders/AAMkAGVmMDEzM/$ref
 ```
 
@@ -79,6 +82,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

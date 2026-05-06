@@ -1,11 +1,11 @@
 ---
 title: "List deployment audience members"
 description: "List the updatableAsset resources that are members of a deploymentAudience."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
 ms.subservice: windows-autopatch
 doc_type: apiPageType
-ms.date: 09/16/2024
+ms.date: 01/27/2026
 ---
 
 # List deployment audience members
@@ -17,9 +17,9 @@ Namespace: microsoft.graph.windowsUpdates
 List the [updatableAsset](../resources/windowsupdates-updatableasset.md) resources that are members of a [deploymentAudience](../resources/windowsupdates-deploymentaudience.md).
 
 > [!NOTE]
-> This API has a [known issue](https://developer.microsoft.com/en-us/graph/known-issues/?search=13634) related to deployments created via Intune.
+> This API has a [known issue](/graph/known-issues#accessing-and-updating-deployment-audiences-is-not-supported) related to deployments created via Intune.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -35,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin//windows/updates/deploymentAudiences/{deploymentAudienceId}/members
 ```
 **Note:** Only `$skipToken` is supported for paging. Client-driven paging isn't implemented.
@@ -63,16 +63,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
   "name": "list_updatableasset_deploymentID"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/windows/updates/deploymentAudiences/be0538f6-91d8-4b4a-8dbc-d6f9b70da20b/members
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-updatableasset-deploymentid-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-updatableasset-deploymentid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -105,7 +101,7 @@ GET https://graph.microsoft.com/beta/admin/windows/updates/deploymentAudiences/b
   "@odata.type": "Collection(microsoft.graph.windowsUpdates.updatableAsset)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

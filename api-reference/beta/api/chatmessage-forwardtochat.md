@@ -33,7 +33,7 @@ Forward a **chatMessage** in a **chat** to a **chat**:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /chats/{chatId}/messages/forwardToChat
 ```
 
@@ -43,7 +43,7 @@ Forward a **chatMessage** in a **channel** to a **chat**:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /teams/{teamId}/channels/{channelId}/messages/forwardToChat
 POST /teams/{teamId}/channels/{channelId}/messages/{messageId}/replies/forwardToChat
 ```
@@ -64,7 +64,7 @@ The following table shows the parameters that can be used with this action.
 |Parameter|Type|Description|
 |:---|:---|:---|
 |additionalMessage|[chatMessage](../resources/chatmessage.md)|Message body of the forwarded message. |
-|messageIds|String collection|List of message IDs in a chat that are replied to with a quote. Currently, only one message ID is supported.|
+|messageIds|String collection|List of message IDs in a chat or channel that are being forwarded. Currently, only one message ID is supported.|
 |targetChatIds|String collection|List of target chat IDs where a message can be forwarded. Currently, only one target chat ID is supported.|
 
 ## Response
@@ -84,6 +84,7 @@ The following example shows how to forward a message from a chat to a chat.
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "chatmessage.forwardMessage_from_chat_to_chat",
@@ -109,6 +110,36 @@ Content-Type: application/json
 }
 ```
 
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/chatmessageforwardmessage-from-chat-to-chat-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/chatmessageforwardmessage-from-chat-to-chat-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/chatmessageforwardmessage-from-chat-to-chat-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/chatmessageforwardmessage-from-chat-to-chat-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/chatmessageforwardmessage-from-chat-to-chat-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/chatmessageforwardmessage-from-chat-to-chat-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/chatmessageforwardmessage-from-chat-to-chat-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 #### Response
 
 The following example shows the response.
@@ -120,7 +151,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.forwardToChatResult)"
 } -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -145,6 +176,7 @@ The following example shows how to forward a message from a channel to a chat.
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "chatmessage.forwardMessage_from_channel_to_chat",
@@ -170,6 +202,36 @@ Content-Type: application/json
 }
 ```
 
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/chatmessageforwardmessage-from-channel-to-chat-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/chatmessageforwardmessage-from-channel-to-chat-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/chatmessageforwardmessage-from-channel-to-chat-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/chatmessageforwardmessage-from-channel-to-chat-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/chatmessageforwardmessage-from-channel-to-chat-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/chatmessageforwardmessage-from-channel-to-chat-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/chatmessageforwardmessage-from-channel-to-chat-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 #### Response
 
 The following example shows the response.
@@ -181,7 +243,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.forwardToChatResult)"
 } -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -206,6 +268,7 @@ The following example shows how to forward a reply message from a channel to a c
 
 The following example shows a request.
 
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "chatmessage.forwardReplyMessage_from_channel_to_chat",
@@ -231,6 +294,36 @@ Content-Type: application/json
 }
 ```
 
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/chatmessageforwardreplymessage-from-channel-to-chat-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/chatmessageforwardreplymessage-from-channel-to-chat-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/chatmessageforwardreplymessage-from-channel-to-chat-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/chatmessageforwardreplymessage-from-channel-to-chat-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/chatmessageforwardreplymessage-from-channel-to-chat-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/chatmessageforwardreplymessage-from-channel-to-chat-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/chatmessageforwardreplymessage-from-channel-to-chat-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
 #### Response
 
 The following example shows the response.
@@ -241,7 +334,7 @@ The following example shows the response.
   "truncated": true,
   "@odata.type": "Collection(microsoft.graph.forwardToChatResult)"
 } -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

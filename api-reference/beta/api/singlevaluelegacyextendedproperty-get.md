@@ -37,8 +37,11 @@ The following user resources are supported:
 - [event](../resources/event.md)
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
+- [note](../resources/note.md)
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
+- [todoTask](../resources/todotask.md)
+- [todoTaskList](../resources/todotasklist.md)
 
 As well as the following group resources:
 
@@ -46,8 +49,7 @@ As well as the following group resources:
 - group [event](../resources/event.md)
 - group [post](../resources/post.md)
 
-See [Extended properties overview](../resources/extended-properties-overview.md) for more information about when to use
-open extensions or extended properties, and how to specify extended properties.
+For more information about when to use open extensions or extended properties, and how to specify extended properties, see [Extended properties overview](../resources/extended-properties-overview.md).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -60,14 +62,16 @@ Depending on the resource you're getting the extended property from and the perm
 | [contact](../resources/contact.md) | Contacts.Read | Contacts.Read | Contacts.Read |
 | [contactFolder](../resources/contactfolder.md) | Contacts.Read | Contacts.Read | Contacts.Read |
 | [event](../resources/event.md) | Calendars.Read | Calendars.Read |  Calendars.Read|
-| group [calendar](../resources/calendar.md) | Group.Read.All | Not supported | Not supported |
-| group [event](../resources/event.md) | Group.Read.All | Not supported | Not supported |
-| group [post](../resources/post.md) | Group.Read.All | Not supported | Group.Read.All |
+| group [calendar](../resources/calendar.md) | Group.Read.All | Not supported. | Not supported. |
+| group [event](../resources/event.md) | Group.Read.All | Not supported. | Not supported. |
+| group [post](../resources/post.md) | Group.Read.All | Not supported. | Group.Read.All |
 | [mailFolder](../resources/mailfolder.md) | Mail.Read | Mail.Read | Mail.Read |
 | [message](../resources/message.md) | Mail.Read | Mail.Read | Mail.Read |
-| [Outlook task](../resources/outlooktask.md) | Tasks.Read | Tasks.Read | Not supported |
-| [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.Read | Tasks.Read | Not supported |
-
+| [note](../resources/note.md) | ShortNotes.Read | ShortNotes.Read | ShortNotes.Read.All |
+| [Outlook task](../resources/outlooktask.md) | Tasks.Read | Tasks.Read | Not supported. |
+| [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.Read | Tasks.Read | Not supported. |
+| [todoTask](../resources/todotask.md) | Tasks.Read | Not supported. | Tasks.Read.All |
+| [todoTaskList](../resources/todotasklist.md) | Tasks.Read | Not supported. | Tasks.Read.All |
 
 ## HTTP request
 
@@ -83,6 +87,8 @@ GET /me/messages/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_v
 GET /users/{id|userPrincipalName}/messages/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 GET /me/mailFolders/{id}/messages/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get a **mailFolder** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -90,18 +96,24 @@ GET /me/mailFolders/{id}?$expand=singleValueExtendedProperties($filter=id eq '{i
 GET /users/{id|userPrincipalName}/mailFolders/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
 
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 Get an **event** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/events/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/events/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get a **calendar** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/calendars/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/calendars/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Get a **contact** instance:
 <!-- { "blockType": "ignored" } -->
@@ -111,12 +123,25 @@ GET /users/{id|userPrincipalName}/contacts/{id}?$expand=singleValueExtendedPrope
 GET /me/contactFolders/{id}/contacts/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/contactFolders/{id}/contacts/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get a **contactFolder** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/contactfolders/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/contactFolders/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **note** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /me/notes/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
+GET /users/{id|userPrincipalName}/notes/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Get an **outlookTask** instance:
 <!-- { "blockType": "ignored" } -->
@@ -128,6 +153,8 @@ GET /users/{id|userPrincipalName}/outlook/taskFolders/{id}/tasks/{id}?$expand=si
 GET /me/outlook/taskGroups/{id}/taskFolders/{id}/tasks/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders/{id}/tasks/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get an **outlookTaskFolder** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -136,6 +163,26 @@ GET /users/{id|userPrincipalName}/outlook/taskFolders/{id}?$expand=singleValueEx
 GET /me/outlook/taskGroups/{id}/taskFolders/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders/{id}?$expand=singleValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **todoTask** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /me/todo/lists/{todoTaskListId}/tasks/{todoTaskId}?$expand=singleValueExtendedProperties($filter=id eq '{propertyId}')
+GET /me/todo/lists/{todoTaskListId}/tasks?$expand=singleValueExtendedProperties($filter=id eq '{propertyId}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **todoTaskList** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /me/todo/lists/{todoTaskListId}?$expand=singleValueExtendedProperties($filter=id eq '{propertyId}')
+GET /me/todo/lists?$expand=singleValueExtendedProperties($filter=id eq '{propertyId}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Get a group **event** instance:
 <!-- { "blockType": "ignored" } -->
@@ -168,6 +215,8 @@ GET /me/messages?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_val
 GET /users/{id|userPrincipalName}/messages?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 GET /me/mailFolders/{id}/messages?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get **mailFolder** instances:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -175,18 +224,24 @@ GET /me/mailFolders?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_
 GET /users/{id|userPrincipalName}/mailFolders?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
 
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 Get **event** instances:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/events?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 GET /users/{id|userPrincipalName}/events?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get **calendar** instances:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/calendars?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 GET /users/{id|userPrincipalName}/calendars?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get **contact** instances:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -195,12 +250,25 @@ GET /users/{id|userPrincipalName}/contacts?$filter=singleValueExtendedProperties
 GET /me/contactFolders/{id}/contacts?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 GET /users/{id|userPrincipalName}/contactFolders/{id}/contacts?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get **contactFolder** instances:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/contactfolders?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 GET /users/{id|userPrincipalName}/contactFolders?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get **note** instances:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /me/notes?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
+GET /users/{id|userPrincipalName}/notes?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Get an **outlookTask** instance:
 <!-- { "blockType": "ignored" } -->
@@ -212,6 +280,8 @@ GET /users/{id|userPrincipalName}/outlook/taskFolders/{id}/tasks?$filter=singleV
 GET /me/outlook/taskGroups/{id}/taskFolders/{id}/tasks?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 GET /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders/{id}/tasks?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get an **outlookTaskFolder** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -220,6 +290,8 @@ GET /users/{id|userPrincipalName}/outlook/taskFolders?$filter=singleValueExtende
 GET /me/outlook/taskGroups/{id}/taskFolders?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 GET /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value eq '{property_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Get group **event** instances:
 <!-- { "blockType": "ignored" } -->
@@ -262,6 +334,8 @@ GET /users/{id|userPrincipalName}/messages?$filter=singleValueExtendedProperties
 GET /me/mailFolders/{id}/messages?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value ne '{property_value}')
 ```
 
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 Get **event** instances:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -278,6 +352,8 @@ GET /me/events?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value
 GET /users/{id|userPrincipalName}/events?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '{id_value}' and ep/value ne '{property_value}')
 ```
 
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 Get group **event** instances:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -288,10 +364,10 @@ GET /groups/{id}/events?$filter=singleValueExtendedProperties/Any(ep: ep/id eq '
 ```
 
 ## Path parameters
-|**Parameter**|**Type**|**Description**|
+|Parameter|Type|Description|
 |:-----|:-----|:-----|
-|id_value|String|The ID of the extended property to match. It must follow one of the supported formats. See [Outlook extended properties overview](../resources/extended-properties-overview.md) for more information. Required.|
-|property_value |String|The value of the extended property to match. Required where listed in the **HTTP request** section above. If {property_value} is not a string, make sure you explicitly cast `ep/value` to the appropriate Edm data type when comparing it with {property_value}. See [request 4](#request-4) below for examples. |
+|id_value|String|The ID of the extended property to match. It must follow one of the supported formats. For more information, see [Outlook extended properties overview](../resources/extended-properties-overview.md). Required.|
+|property_value |String|The value of the extended property to match. Required where listed in the **HTTP request** section above. If `{property_value}` isn't a string, make sure you explicitly cast `ep/value` to the appropriate Edm data type when comparing it with `{property_value}`. For examples, see [request 4](#request-4). |
 
 ## Request headers
 | Name      |Description|
@@ -305,11 +381,11 @@ Don't supply a request body for this method.
 
 If successful, this method returns a `200 OK` response code.
 
-#### GET resource instance using `$expand`
-The response body includes an object representing the requested resource instance, expanded with the matching [singleValueLegacyExtendedProperty](../resources/singlevaluelegacyextendedproperty.md) object.
+### GET resource instance using `$expand`
+The response body includes an object that represents the requested resource instance, expanded with the matching [singleValueLegacyExtendedProperty](../resources/singlevaluelegacyextendedproperty.md) object.
 
-#### GET resource instances that contain an extended property matching a filter
-The response body includes one or more objects representing the resource instances that contain a matching extended property. The response body does not include the extended property.
+### GET resource instances that contain an extended property matching a filter
+The response body includes one or more objects that represent the resource instances that contain a matching extended property. The response body doesn't include the extended property.
 
 ## Example
 #### Request 1
@@ -331,10 +407,6 @@ GET https://graph.microsoft.com/beta/me/messages/AAMkAGE1M2_bs88AACHsLqWAAA=/?$e
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-singlevaluelegacyextendedproperty-1-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-singlevaluelegacyextendedproperty-1-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
