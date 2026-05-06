@@ -22,8 +22,8 @@ Inherits from [teamsAppInstallationScopeInfo](../resources/teamsappinstallations
 
 |Property|Type|Description|
 |:---|:---|:---|
-|chatId|string|The ID of the chat where the Teams app is installed.|
-|scope|teamsAppInstallationScope|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
+|chatId|String|The ID of the chat where the Teams app is installed.|
+|scope|teamsAppInstallationScopes|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`. Inherited from [teamsAppInstallationScopeInfo](../resources/teamsappinstallationscopeinfo.md).|
 
 ## JSON representation
 

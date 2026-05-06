@@ -22,7 +22,7 @@ Base type of [groupChatTeamsAppInstallationScopeInfo](../resources/groupchatteam
 
 |Property|Type|Description|
 |:---|:---|:---|
-|scope|teamsAppInstallationScope|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`.|
+|scope|teamsAppInstallationScopes|The scope in which the Teams app is installed. The possible values are: `team`, `groupChat`, `personal`, `unknownFutureValue`.|
 
 ## JSON representation
 
