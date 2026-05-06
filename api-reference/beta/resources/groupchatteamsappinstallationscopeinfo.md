@@ -1,11 +1,11 @@
 ---
 title: "groupChatTeamsAppInstallationScopeInfo resource type"
-description: "Represents the installation scope details when the Teams app is installed in a chat."
+description: "Represents the installation scope details when the Teams app is installed, updated, or deleted from a chat."
 author: "sthapliyal"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
-ms.date: 12/11/2024
+ms.date: 06/05/2026
 ---
 
 # groupChatTeamsAppInstallationScopeInfo resource type
@@ -31,7 +31,8 @@ The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.groupChatTeamsAppInstallationScopeInfo"
+  "@odata.type": "microsoft.graph.groupChatTeamsAppInstallationScopeInfo",
+  "baseType": "microsoft.graph.teamsAppInstallationScopeInfo"
 }
 -->
 ``` json

@@ -5,7 +5,7 @@ author: "sthapliyal"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
-ms.date: 12/11/2024
+ms.date: 06/05/2026
 ---
 
 # teamsAppInstallationScopeInfo resource type
@@ -29,7 +29,8 @@ Base type of [groupChatTeamsAppInstallationScopeInfo](../resources/groupchatteam
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.teamsAppInstallationScopeInfo"
+  "@odata.type": "microsoft.graph.teamsAppInstallationScopeInfo",
+  "baseType": "microsoft.graph.teamsAppInstallationScopeInfo"
 }
 -->
 ``` json
