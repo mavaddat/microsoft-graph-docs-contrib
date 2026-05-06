@@ -150,7 +150,6 @@
           ],
           "resources": [
             "backupRestoreRoot",
-            "browseSessionBase",
             "protectionPolicyBase",
             "protectionRuleBase",
             "protectionUnitBase",
@@ -163,8 +162,8 @@
           "childNodes": [
             {
               "name": "Browse session",
+              "overview": "../../resources/browsesessionbase.md",
               "resources": [
-                "browseSessionBase",
                 "oneDriveForBusinessBrowseSession",
                 "sharePointBrowseSession"
               ]
