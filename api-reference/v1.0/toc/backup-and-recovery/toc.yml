@@ -300,8 +300,6 @@ items:
         href: ../../api/backuprestoreroot-post-onedriveforbusinessrestoresessions.md
       - name: List
         href: ../../api/onedriveforbusinessrestoresession-list-driverestoreartifacts.md
-      - name: List granularDriveRestoreArtifacts
-        href: ../../api/onedriveforbusinessrestoresession-list-granulardriverestoreartifacts.md
       - name: Update
         href: ../../api/onedriveforbusinessrestoresession-update.md
     - name: Exchange restore session
@@ -322,8 +320,6 @@ items:
         href: ../../api/backuprestoreroot-post-sharepointrestoresessions.md
       - name: List
         href: ../../api/sharepointrestoresession-list-siterestoreartifacts.md
-      - name: List granularSiteRestoreArtifacts
-        href: ../../api/sharepointrestoresession-list-granularsiterestoreartifacts.md
       - name: Update
         href: ../../api/sharepointrestoresession-update.md
   - name: Service app
