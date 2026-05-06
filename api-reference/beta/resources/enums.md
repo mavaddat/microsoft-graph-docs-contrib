@@ -13,6 +13,25 @@ ms.custom: sfi-ropc-nochange
 
 Namespace: microsoft.graph
 
+### meetingEngagementType values
+
+|Member|
+|:---|
+|reaction|
+|hand|
+|camera|
+|microphone|
+|unknownFutureValue|
+
+### notifyMembers values
+
+|Member|
+|:---|
+|all|
+|allowSelected|
+|blockSelected|
+|unknownFutureValue|
+
 ### structuredDataEntryValueType values
 
 |Member|
@@ -490,6 +509,22 @@ Namespace: microsoft.graph
 | cancelled |
 | unknownFutureValue |
 
+### plannerTaskChatMentionType values
+
+| Member |
+| -------------------- |
+| user |
+| application |
+| unknownFutureValue |
+
+### plannerTaskChatMessageType values
+
+| Member |
+| -------------------- |
+| richTextHtml |
+| plainText |
+| unknownFutureValue |
+
 ### applicationKeyOrigin values
 
 | Member |
@@ -943,15 +978,6 @@ Namespace: microsoft.graph
 | unknownFutureValue |
 | remoteDesktopToken |
 | refreshToken       |
-
-### approverInformationVisibility values
-
-| Member |
-| ---- |
-| no |
-| yes |
-| default |
-| unknownFutureValue |
 
 ### protocolType values
 
@@ -2707,6 +2733,14 @@ Namespace: microsoft.graph
 | declined |
 | notResponded |
 
+### privilegeLevel values
+
+|Member|
+|:---|
+|standard|
+|privileged|
+|unknownFutureValue|
+
 ### activityDomain values
 
 | Member |
@@ -3842,6 +3876,16 @@ Possible values for user account types (group membership), per Windows definitio
 | principal |
 | unknownFutureValue |
 
+### roleType values
+
+| Member |
+| ------ |
+| active |
+| eligible |
+| application |
+| delegated |
+| unknownFutureValue |
+
 ### cloudPcAuditActivityOperationType values
 
 | Member |
@@ -3884,6 +3928,17 @@ Possible values for user account types (group membership), per Windows definitio
 | regular |
 | quick |
 | strategic |
+| unknownFutureValue |
+
+### sectionIconSkinTone values
+
+| Member |
+| ------------------ |
+| light |
+| mediumLight |
+| medium |
+| mediumDark |
+| dark |
 | unknownFutureValue |
 
 ### serviceHealthClassificationType values
@@ -5015,6 +5070,14 @@ Possible values for user account types (group membership), per Windows definitio
 | authenticationTransfer |
 | unknownFutureValue |
 
+### connectorType values
+
+|Member|
+|:---|
+|sapIag|
+|sapAc|
+|unknownFutureValue|
+
 ### claimConditionUserType values
 
 | Member |
@@ -5035,6 +5098,14 @@ Possible values for user account types (group membership), per Windows definitio
 | contains |
 | unknownFutureValue |
 
+### matchConfidenceLevel values 
+
+|Member|
+|:---|
+|exact|
+|relaxed|
+|unknownFutureValue|
+
 ### matchOn values
 
 | Member |
@@ -5042,6 +5113,8 @@ Possible values for user account types (group membership), per Windows definitio
 | displayName |
 | samAccountName |
 | unknownFutureValue |
+
+
 
 ### samlAttributeNameFormat values
 
@@ -5932,4 +6005,25 @@ Possible values for user account types (group membership), per Windows definitio
 |:---|
 |none|
 |ai|
+|unknownFutureValue|
+
+### trafficRoutingMethod values 
+
+|Member|
+|:---|
+|none|
+|random|
+|sessionPersistence|
+|performance|
+|unknownFutureValue|
+
+### accessReviewInstanceDecisionItemApplyResult values
+
+|Member|
+|:---|
+|new|
+|appliedSuccessfully|
+|appliedWithUnknownFailure|
+|appliedSuccessfullyButObjectNotFound|
+|applyNotSupported|
 |unknownFutureValue|
