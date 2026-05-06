@@ -1,6 +1,6 @@
 ---
 title: "dnsEvidence resource type"
-description: "A dns that is reported in the alert as evidence."
+description: "A DNS that is reported in the alert as evidence."
 author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.subservice: "security"
@@ -24,8 +24,8 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |:------------|:-------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
 |domainName|String|The name of the DNS record associated with the alert.|
 |ipAddresses|[microsoft.graph.security.ipEvidence](security-ipevidence.md) collection|Entities of type 'ip' for the resolved IP address.|
-|dnsServerIp|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the Dns server resolving the request.|
-|hostIpAddress|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the Dns request client.|
+|dnsServerIp|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the DNS server resolving the request.|
+|hostIpAddress|[microsoft.graph.security.ipEvidence](security-ipevidence.md)|An entity of type 'ip' for the DNS request client.|
 
 ## Relationships
 

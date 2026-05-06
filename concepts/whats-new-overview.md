@@ -34,6 +34,10 @@ Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy
 - Added the [onVerifiedIdClaimValidationCustomExtension](/graph/api/resources/onverifiedidclaimvalidationcustomextension) and [onVerifiedIdClaimValidationListener](/graph/api/resources/onverifiedidclaimvalidationlistener) resource types and associated methods to support custom logic for claim validation from Verified ID credential presentations during authentication flows through Microsoft Entra custom authentication extensions in External ID.
 - Added claim validation and match-confidence capabilities to [Verified ID profiles](/graph/api/resources/verifiedidprofile), enabling stronger claim verification and more flexible matching.
 
+### Security
+
+Promoted 11 new alert evidence types to v1.0, including [dnsEvidence](/graph/api/resources/security-dnsevidence), [fileHashEvidence](/graph/api/resources/security-filehashevidence), [gitHubOrganizationEvidence](/graph/api/resources/security-githuborganizationevidence), [gitHubRepoEvidence](/graph/api/resources/security-githubrepoevidence), [gitHubUserEvidence](/graph/api/resources/security-githubuserevidence), [hostLogonSessionEvidence](/graph/api/resources/security-hostlogonsessionevidence), [malwareEvidence](/graph/api/resources/security-malwareevidence), [networkConnectionEvidence](/graph/api/resources/security-networkconnectionevidence), [sasTokenEvidence](/graph/api/resources/security-sastokenevidence), [servicePrincipalEvidence](/graph/api/resources/security-serviceprincipalevidence), and [submissionMailEvidence](/graph/api/resources/security-submissionmailevidence). These resources extend the [alertEvidence](/graph/api/resources/security-alertevidence) base type to provide detailed context about various artifacts involved in security alerts.
+
 ## May 2026: New in preview only
 
 ### Identity and access | Identity and sign-in
