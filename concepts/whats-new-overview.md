@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 04/28/2026
+ms.date: 05/05/2026
 ms.topic: whats-new
 ---
 
@@ -35,6 +35,10 @@ Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy
 - Added claim validation and match-confidence capabilities to [Verified ID profiles](/graph/api/resources/verifiedidprofile), enabling stronger claim verification and more flexible matching.
 
 ## May 2026: New in preview only
+
+### Change notifications
+
+Use the new Copilot change notifications API for meetings AI insights to subscribe to notifications for the generation of meeting AI summaries and receive a notification when the summaries are fully generated and available. For more information, see [Get change notifications for Copilot AI insights using Microsoft Graph](/microsoft-365/copilot/extensibility/api/ai-services/change-notifications/aiinsights-changenotifications).
 
 ### Identity and access | Identity and sign-in
 
