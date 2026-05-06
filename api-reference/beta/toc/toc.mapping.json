@@ -2930,12 +2930,6 @@
             "teamsTab",
             "resourceSpecificPermissionGrant"
           ],
-          "complexTypes": [
-            "groupChatTeamsAppInstallationScopeInfo",
-            "personalTeamsAppInstallationScopeInfo",
-            "teamsAppInstallationScopeInfo",
-            "teamTeamsAppInstallationScopeInfo"
-          ]
         },
         {
           "name": "Calls and online meetings",
