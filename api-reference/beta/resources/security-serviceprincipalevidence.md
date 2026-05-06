@@ -26,7 +26,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |appOwnerTenantId|String|Contains the tenant ID where the application is registered.|
 |servicePrincipalName|String|The display name for the service principal.|
 |servicePrincipalObjectId|String|The unique identifier for the service principal.|
-|servicePrincipalType|[microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values)|Type of the service principal: 'Unknown,' 'Application,' 'ManagedIdentity,' 'Legacy'.|
+|servicePrincipalType|[microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values)|Type of the service principal. Possible values are: `unknown`, `application`, `managedIdentity`, `legacy`, `unknownFutureValue`.|
 |tenantId|String|The Microsoft Entra tenant ID of Service Principal.|
 
 ### servicePrincipalType values

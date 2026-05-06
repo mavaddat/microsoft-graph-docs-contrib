@@ -24,7 +24,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |login|String|The user's login (GitHub handle).|
 |email|String|The email address of the user account.|
 |name|String|The user's name.|
-|webUrl|String|The URL of the user's profile web page. For example https://github.com/my-login).|
+|webUrl|String|The URL of the user's profile web page. For example, `https://github.com/my-login`.|
 
 ## Relationships
 

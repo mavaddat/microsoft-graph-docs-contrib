@@ -313,7 +313,7 @@ The following example shows a request.
 }
 -->
 ```http
-GET https://graph.microsoft.com/beta/security/alerts_v2?$filter=serviceSource eq 'microsoftSentinel'
+GET /security/alerts_v2?$filter=serviceSource eq 'microsoftSentinel'
 ```
 
 #### Response
@@ -345,7 +345,7 @@ Content-type: application/json
       "determination": "unknown",
       "serviceSource": "microsoftSentinel",
       "detectionSource": "scheduledAlerts",
-      "detectorId": "a1b2c3d4-e5f6-47g8-h9i0-j1k2l3m4n5o6",
+      "detectorId": "a1b2c3d4-e5f6-47a8-b9c0-d1e2f3a4b5c6",
       "tenantId": "b3c1b5fc-828c-45fa-a1e1-10d74f6d6e9c",
       "title": "Suspicious sign-in activity detected",
       "description": "Multiple failed sign-in attempts followed by a successful sign-in detected from an unusual location.",
