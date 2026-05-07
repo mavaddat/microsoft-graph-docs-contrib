@@ -55,6 +55,19 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.submissionMailEvidence",
+  "createdDateTime": "String (timestamp)",
+  "verdict": "String",
+  "remediationStatus": "String",
+  "remediationStatusDetails": "String",
+  "roles": [
+    "String"
+  ],
+  "detailedRoles": [
+    "String"
+  ],
+  "tags": [
+    "String"
+  ],
   "submissionId": "String",
   "submissionDateTime": "String (timestamp)",
   "submitter": "String",

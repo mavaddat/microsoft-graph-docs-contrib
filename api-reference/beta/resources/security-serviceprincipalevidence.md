@@ -62,6 +62,19 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.servicePrincipalEvidence",
+  "createdDateTime": "String (timestamp)",
+  "verdict": "String",
+  "remediationStatus": "String",
+  "remediationStatusDetails": "String",
+  "roles": [
+    "String"
+  ],
+  "detailedRoles": [
+    "String"
+  ],
+  "tags": [
+    "String"
+  ],
   "servicePrincipalName": "String",
   "servicePrincipalObjectId": "String",
   "appId": "String",

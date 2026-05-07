@@ -49,6 +49,19 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.gitHubRepoEvidence",
+  "createdDateTime": "String (timestamp)",
+  "verdict": "String",
+  "remediationStatus": "String",
+  "remediationStatusDetails": "String",
+  "roles": [
+    "String"
+  ],
+  "detailedRoles": [
+    "String"
+  ],
+  "tags": [
+    "String"
+  ],
   "repoId": "String",
   "login": "String",
   "owner": "String",
