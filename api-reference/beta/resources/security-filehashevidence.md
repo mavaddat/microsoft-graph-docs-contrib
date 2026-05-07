@@ -5,6 +5,7 @@ author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 05/07/2026
 ---
 
 # fileHashEvidence resource type

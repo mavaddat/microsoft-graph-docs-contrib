@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.subservice: "security"
 ms.prod: "security"
 doc_type: resourcePageType
+ms.date: 05/07/2026
 ---
 
 # dnsEvidence resource type
