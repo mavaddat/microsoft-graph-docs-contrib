@@ -614,7 +614,7 @@ This article explains how to configure the arguments property for built-in tasks
     },
     {
       "name": "customBody",
-      "value": "Hello \n\nwe are reaching out to let you know {{userDisplayName}} has moved in the organization and will no longer have sponsorship authority over agent IDs they previously sponsored with you.\n\nRegards\nYour IT department"
+      "value": "We are reaching out to let you know {{userDisplayName}} has moved in the organization and will no longer have sponsorship authority over agent IDs they previously sponsored with you.\n\nRegards\nYour IT department"
     },
     {
       "name": "locale",
