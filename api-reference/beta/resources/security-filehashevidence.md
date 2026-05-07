@@ -4,7 +4,6 @@ description: "Represents a file hash value that is reported in a security detect
 author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.subservice: "security"
-ms.date: 07/05/2026
 doc_type: resourcePageType
 ---
 

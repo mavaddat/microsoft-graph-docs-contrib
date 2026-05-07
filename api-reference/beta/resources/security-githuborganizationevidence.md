@@ -4,7 +4,6 @@ description: "Represents an organization in GitHub."
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.subservice: "security"
-ms.date: 07/05/2026
 doc_type: resourcePageType
 ---
 

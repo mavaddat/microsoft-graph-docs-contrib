@@ -4,7 +4,6 @@ description: "Represents a ServicePrincipal reported in a security detection ale
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.subservice: "security"
-ms.date: 07/05/2026
 doc_type: resourcePageType
 ---
 

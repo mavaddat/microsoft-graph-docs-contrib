@@ -4,7 +4,6 @@ description: "A DNS that is reported in the alert as evidence."
 author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.subservice: "security"
-ms.date: 07/05/2026
 doc_type: resourcePageType
 ---
 

@@ -4,7 +4,6 @@ description: "Represents a user-reported concern over an email, such as reportin
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.subservice: "security"
-ms.date: 07/05/2026
 doc_type: resourcePageType
 ---
 
