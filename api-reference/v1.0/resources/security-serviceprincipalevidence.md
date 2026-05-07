@@ -53,7 +53,8 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.security.servicePrincipalEvidence"
+  "@odata.type": "microsoft.graph.security.servicePrincipalEvidence",
+  "baseType": "microsoft.graph.security.alertEvidence"
 }
 -->
 

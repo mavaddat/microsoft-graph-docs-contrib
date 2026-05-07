@@ -42,7 +42,8 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.security.gitHubUserEvidence"
+  "@odata.type": "microsoft.graph.security.gitHubUserEvidence",
+  "baseType": "microsoft.graph.security.alertEvidence"
 }
 -->
 

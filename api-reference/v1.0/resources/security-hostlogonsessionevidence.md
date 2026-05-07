@@ -42,7 +42,8 @@ None.
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.security.hostLogonSessionEvidence"
+  "@odata.type": "microsoft.graph.security.hostLogonSessionEvidence",
+  "baseType": "microsoft.graph.security.alertEvidence"
 }
 -->
 
