@@ -1291,10 +1291,10 @@
         {
           "Id": "8fd6b82e-1aec-4702-86dc-37abd4c54255",
           "ApiChange": "Enum type",
-          "ChangedApiName": "teamsAppInstallationScope",
+          "ChangedApiName": "teamsAppInstallationScopes",
           "ChangeType": "Addition",
-          "Description": "Added the **teamsAppInstallationScope** enumeration type.",
-          "Target": "teamsAppInstallationScope"
+          "Description": "Added the **teamsAppInstallationScopes** enumeration type.",
+          "Target": "teamsAppInstallationScopes"
         }
       ],
       "Id": "305c3e33-1d62-4a9e-b77c-a2f4ce0bb078",
