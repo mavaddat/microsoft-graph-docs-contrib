@@ -57,7 +57,7 @@ The following JSON representation shows the resource type.
 -->
 ``` json
 {
-    "@odata.type": "#microsoft.graph.security.fileHashEvidence",
+  "@odata.type": "#microsoft.graph.security.fileHashEvidence",
   "createdDateTime": "String (timestamp)",
   "verdict": "String",
   "remediationStatus": "String",
@@ -71,7 +71,7 @@ The following JSON representation shows the resource type.
   "tags": [
     "String"
   ],
-    "algorithm": "String",
-    "value": "String"
+  "algorithm": "String",
+  "value": "String"
 }
 ```
