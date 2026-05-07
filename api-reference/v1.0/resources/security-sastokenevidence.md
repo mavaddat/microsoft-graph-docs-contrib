@@ -4,7 +4,7 @@ description: "Represents a Shared Access Signature (SAS) token entity for a stor
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.subservice: "security"
-ms.prod: "security"
+ms.date: 07/05/2026
 doc_type: resourcePageType
 ---
 
