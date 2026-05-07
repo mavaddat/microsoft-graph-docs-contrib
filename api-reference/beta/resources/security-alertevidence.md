@@ -16,9 +16,7 @@ Namespace: microsoft.graph.security
 
 Represents evidence related to an [alert](security-alert.md).
 
-The **alertEvidence** base type and its derived evidence types provide a means to organize and track rich data about
-each artifact involved in an **alert**. For example, an **alert** about an attacker's IP address signing in to a cloud
-service using a compromised user account can track the following evidence:
+The **alertEvidence** base type and its derived evidence types provide a way to organize and track rich data about each artifact involved in an **alert**. For example, an **alert** about an attacker's IP address that signs in to a cloud service by using a compromised user account can track the following evidence:
 
 - [IP evidence](security-ipevidence.md) with the roles of `attacker` and `source`, remediation status of `running`, and
   verdict of `malicious`.

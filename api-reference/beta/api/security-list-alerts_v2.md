@@ -313,7 +313,7 @@ The following example shows a request.
 }
 -->
 ```http
-GET /security/alerts_v2?$filter=serviceSource eq 'microsoftSentinel'
+GET https://graph.microsoft.com/beta/security/alerts_v2?$filter=serviceSource eq 'microsoftSentinel'
 ```
 
 #### Response
