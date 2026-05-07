@@ -655,11 +655,11 @@ This article explains how to configure the arguments property for built-in tasks
     },
     {
       "name": "customSubject",
-      "value": "[UserDisplayName]'s account has been inactive for [NumberofDays] days."
+      "value": "{{UserDisplayName}}'s account has been inactive for {{NumberofDays}} days."
     },
     {
       "name": "customBody",
-      "value": "We're notifying you that a recent sign-in for [UserDisplayName]'s user account has not been detected, and the account is considered inactive. The last sign in was [LastSigninDate]. To maintain a secure environment, your organization may have already started the process to disable or delete this user account.\n\nPlease check your organization's policies and take appropriate action if this user account is still needed.\n\nRegards\nYour IT department"
+      "value": "We're notifying you that a recent sign-in for {{UserDisplayName}}'s user account has not been detected, and the account is considered inactive. The last sign in was {{LastSigninDate}}. To maintain a secure environment, your organization may have already started the process to disable or delete this user account.\n\nPlease check your organization's policies and take appropriate action if this user account is still needed.\n\nRegards\nYour IT department"
     },
     {
       "name": "locale",
