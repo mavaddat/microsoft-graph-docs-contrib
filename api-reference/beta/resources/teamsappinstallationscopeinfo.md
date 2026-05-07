@@ -29,8 +29,7 @@ Base type of [groupChatTeamsAppInstallationScopeInfo](../resources/groupchatteam
 The following JSON representation shows the resource type.
 <!-- {
   "blockType": "resource",
-  "@odata.type": "microsoft.graph.teamsAppInstallationScopeInfo",
-  "baseType": "microsoft.graph.teamsAppInstallationScopeInfo"
+  "@odata.type": "microsoft.graph.teamsAppInstallationScopeInfo"
 }
 -->
 ``` json
