@@ -109,7 +109,7 @@
     },
     {
       "name": "Agents",
-      "overview": "",
+      "overview": "../../resources/agentid-platform-overview.md",
       "resources": [],
       "childNodes": [
         {
@@ -126,6 +126,12 @@
                 "inheritablePermission"
               ]
             }
+          ]
+        },
+        {
+          "name": "Agent user",
+          "resources": [
+            "agentUser"
           ]
         }
       ]
@@ -733,11 +739,14 @@
         "permission",
         "recycleBin",
         "recycleBinItem",
-        "sharedDriveItem"
+        "sharedDriveItem",
+        "sharePointGroup",
+        "sharePointGroupMember"
       ],
       "complexTypes": [
         "fileStorageContainerTypeRegistrationSettings",
-        "fileStorageContainerTypeSettings"
+        "fileStorageContainerTypeSettings",
+        "sharePointGroupIdentity"
       ],
       "childNodes": [
         {
@@ -1326,6 +1335,7 @@
                 "homeRealmDiscoveryPolicy",
                 "authenticationFlowsPolicy",
                 "authenticationStrengthPolicy",
+                "deviceRegistrationPolicy",
                 "featureRolloutPolicy",
                 "identitySecurityDefaultsEnforcementPolicy"
               ]
@@ -1359,6 +1369,12 @@
                 "userFlowLanguageConfiguration",
                 "identityApiConnector",
                 "identityUserFlow"
+              ]
+            },
+            {
+              "name": "Verified ID",
+              "resources": [
+                "verifiedIdProfile"
               ]
             }
           ]
@@ -1421,6 +1437,26 @@
             "multiValueLegacyExtendedProperty"
           ]
         }
+      ]
+    },
+        {
+      "name": "Mailbox import and export",
+      "overview": "../../resources/mailbox-import-export-api-overview.md",
+      "keywords": [
+        "Exchange",
+        "Exchange Import-Export",
+        "Mailbox",
+        "Mailbox import and export"
+      ],
+      "resources": [
+        "mailbox",
+        "mailboxItem",
+        "mailboxFolder",
+        "exchangeSettings"
+      ],
+      "complexTypes": [
+        "exportItemResponse",
+        "mailboxItemImportSession"
       ]
     },
     {
