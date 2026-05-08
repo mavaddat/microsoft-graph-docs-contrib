@@ -5,6 +5,7 @@ author: "yuhko-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 07/22/2024
 ---
 
 # Get permissionGrantPreApprovalPolicy
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /policies/permissionGrantPreApprovalPolicies/{id}
 ```
 
@@ -58,16 +59,12 @@ If successful, this method returns a `200 OK` response code and a [permissionGra
   "name": "get_permissiongrantpreapprovalpolicies"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/policies/permissionGrantPreApprovalPolicies/71ba13dc-5947-4e59-bcc5-0ad5c339a853
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-permissiongrantpreapprovalpolicies-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-permissiongrantpreapprovalpolicies-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -104,7 +101,7 @@ GET https://graph.microsoft.com/beta/policies/permissionGrantPreApprovalPolicies
   "@odata.type": "microsoft.graph.permissionGrantPreApprovalPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

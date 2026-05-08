@@ -5,11 +5,14 @@ author: "adsrivastava2"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # teamworkDeviceOperation resource type
 
 Namespace: microsoft.graph
+
+[!INCLUDE [beta-deprecation-disclaimer](../../includes/beta-deprecation-disclaimer.md)]
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
@@ -37,6 +40,9 @@ Inherits from [entity](../resources/entity.md).
 |startedDateTime|DateTimeOffset|Time at which the operation was started.|
 |status|String|The current status of the async operation, for example, `Queued`, `Scheduled`, `InProgress`,  `Successful`, `Cancelled`, and `Failed`.|
 
+
+## Relationships
+None.
 
 ## JSON representation
 The following JSON representation shows the resource type.

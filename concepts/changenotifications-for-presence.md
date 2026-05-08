@@ -5,6 +5,8 @@ author: "awang119"
 ms.localizationpriority: high
 ms.subservice: "cloud-communications"
 ms.custom: "scenarios:getting-started"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Get change notifications for presence updates in Microsoft Teams
@@ -14,7 +16,7 @@ Change notifications in Microsoft Graph enable you to subscribe to changes in [u
 Use webhooks to subscribe to users' presence information and get notifications when changes occur. For general information on webhooks, see [Microsoft Graph API change notifications](/graph/api/resources/change-notifications-api-overview).
 
 > [!NOTE]
-> Effective June 30 2024, to get changes that occurred to an active meeting call, we recommend that you subscribe to [rich notifications](#rich-notifications).
+> Effective June 30 2024, to get changes that occurred to an active meeting call, we recommend that you subscribe to [rich notifications](#rich-presence-notifications).
 
 ## Permissions
 
@@ -26,7 +28,7 @@ Use webhooks to subscribe to users' presence information and get notifications w
 
 ## Supported resources for presence
 
-Subscriptions have a maximum expiration time of an hour. A subscription can be renewed via the [Update subscription API](/graph/api/subscription-update) before it expires, or a new subscription can be created for the same resource after expiration. Presence subscriptions support notifications with resource data, allowing more detailed information to be delivered along with change notifications. For more information, see [Set up change notifications with resource data](change-notifications-with-resource-data.md).
+A single user can create one presence subscription per unique application with a maximum expiration time of an hour. A subscription can be renewed via the [Update subscription API](/graph/api/subscription-update) before it expires, or a new subscription can be created for the same resource after expiration. Presence subscriptions support notifications with resource data, allowing more detailed information to be delivered along with change notifications. For more information, see [Set up change notifications with resource data](change-notifications-with-resource-data.md).
 
 The following table lists the types of presence changes you can subscribe to. For more information, see [Create subscription](/graph/api/subscription-post-subscriptions).
 
@@ -107,7 +109,7 @@ For basic presence notifications, you receive information about which user's pre
 
 ### Rich presence notifications
 
-Rich notifications notify subscribers about the changes that occurred to a resource. For rich presence notifications, subscribers are notified when the user's `Availability` and `Activity` changes in `encryptedContent.data`. For information about subscribing to rich notifications and decrypting data, see [Set up change notifications that include resource data](/graph/webhooks-with-resource-data).
+Rich notifications notify subscribers about the changes that occurred to a resource. For rich presence notifications, subscribers are notified when the user's `Availability` and `Activity` changes in `encryptedContent.data`. For information about subscribing to rich notifications and decrypting data, see [Set up change notifications that include resource data](/graph/change-notifications-with-resource-data).
 
 > [!NOTE]
 > The availability and activity can be the same value.

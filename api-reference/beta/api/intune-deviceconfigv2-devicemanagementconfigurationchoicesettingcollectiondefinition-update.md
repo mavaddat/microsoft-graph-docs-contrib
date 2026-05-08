@@ -5,13 +5,14 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update deviceManagementConfigurationChoiceSettingCollectionDefinition
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceManagement/reusableSettings/{deviceManagementConfigurationSettingDefinitionId}
 PATCH /deviceManagement/inventorySettings/{deviceManagementConfigurationSettingDefinitionId}
 PATCH /deviceManagement/complianceSettings/{deviceManagementConfigurationSettingDefinitionId}
@@ -64,9 +65,10 @@ The following table shows the properties that are required when you create the [
 |offsetUri|String|Offset CSP Path from Base Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md)|
 |rootDefinitionId|String|Root setting definition id if the setting is a child setting. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md)|
 |categoryId|String|Specify category in which the setting is under. Support $filters. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md)|
-|settingUsage|[deviceManagementConfigurationSettingUsage](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingusage.md)|Indicate setting type for the setting. Possible values are: configuration, compliance, reusableSetting. Each setting usage has separate API end-point to call. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md). Possible values are: `none`, `configuration`, `compliance`, `unknownFutureValue`, `inventory`.|
+|settingUsage|[deviceManagementConfigurationSettingUsage](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingusage.md)|Indicate setting type for the setting. Possible values are: configuration, compliance, reusableSetting. Each setting usage has separate API end-point to call. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md). Possible values are: `none`, `configuration`, `compliance`, `unknownFutureValue`, `inventory`, `audit`.|
 |uxBehavior|[deviceManagementConfigurationControlType](../resources/intune-deviceconfigv2-devicemanagementconfigurationcontroltype.md)|Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md). Possible values are: `default`, `dropdown`, `smallTextBox`, `largeTextBox`, `toggle`, `multiheaderGrid`, `contextPane`, `unknownFutureValue`.|
 |visibility|[deviceManagementConfigurationSettingVisibility](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingvisibility.md)|Setting visibility scope to UX. Possible values are: none, settingsCatalog, template. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md). Possible values are: `none`, `settingsCatalog`, `template`, `unknownFutureValue`, `inventoryCatalog`.|
+|riskLevel|[deviceManagementConfigurationSettingRiskLevel](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingrisklevel.md)|Setting risklevel. Possible values are: low, medium, high Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md). Possible values are: `low`, `medium`, `high`.|
 |referredSettingInformationList|[deviceManagementConfigurationReferredSettingInformation](../resources/intune-deviceconfigv2-devicemanagementconfigurationreferredsettinginformation.md) collection|List of referred setting information. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md)|
 |id|String|Identifier for item Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md)|
 |description|String|Description of the setting. Inherited from [deviceManagementConfigurationSettingDefinition](../resources/intune-deviceconfigv2-devicemanagementconfigurationsettingdefinition.md)|
@@ -88,10 +90,10 @@ If successful, this method returns a `200 OK` response code and an updated [devi
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/deviceManagement/reusableSettings/{deviceManagementConfigurationSettingDefinitionId}
 Content-type: application/json
-Content-length: 19119
+Content-length: 30365
 
 {
   "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
@@ -121,6 +123,7 @@ Content-length: 19119
   "settingUsage": "configuration",
   "uxBehavior": "dropdown",
   "visibility": "settingsCatalog",
+  "riskLevel": "medium",
   "referredSettingInformationList": [
     {
       "@odata.type": "microsoft.graph.deviceManagementConfigurationReferredSettingInformation",
@@ -150,6 +153,19 @@ Content-length: 19119
               "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
               "settingInstanceTemplateId": "Setting Instance Template Id value"
             },
+            "auditRuleInformation": {
+              "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+              "auditType": "registry",
+              "auditRuleMetadata": {
+                "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                "metadataType": "stig",
+                "ruleId": "Rule Id value",
+                "ruleName": "Rule Name value",
+                "ruleDescription": "Rule Description value",
+                "ruleVersion": "Rule Version value",
+                "ruleSeverity": "Rule Severity value"
+              }
+            },
             "choiceSettingValue": {
               "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
               "settingValueTemplateReference": {
@@ -165,6 +181,19 @@ Content-length: 19119
                   "settingInstanceTemplateReference": {
                     "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                     "settingInstanceTemplateId": "Setting Instance Template Id value"
+                  },
+                  "auditRuleInformation": {
+                    "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                    "auditType": "registry",
+                    "auditRuleMetadata": {
+                      "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                      "metadataType": "stig",
+                      "ruleId": "Rule Id value",
+                      "ruleName": "Rule Name value",
+                      "ruleDescription": "Rule Description value",
+                      "ruleVersion": "Rule Version value",
+                      "ruleSeverity": "Rule Severity value"
+                    }
                   },
                   "choiceSettingValue": {
                     "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -182,6 +211,19 @@ Content-length: 19119
                           "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                           "settingInstanceTemplateId": "Setting Instance Template Id value"
                         },
+                        "auditRuleInformation": {
+                          "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                          "auditType": "registry",
+                          "auditRuleMetadata": {
+                            "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                            "metadataType": "stig",
+                            "ruleId": "Rule Id value",
+                            "ruleName": "Rule Name value",
+                            "ruleDescription": "Rule Description value",
+                            "ruleVersion": "Rule Version value",
+                            "ruleSeverity": "Rule Severity value"
+                          }
+                        },
                         "choiceSettingValue": {
                           "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                           "settingValueTemplateReference": {
@@ -197,6 +239,19 @@ Content-length: 19119
                               "settingInstanceTemplateReference": {
                                 "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                 "settingInstanceTemplateId": "Setting Instance Template Id value"
+                              },
+                              "auditRuleInformation": {
+                                "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                "auditType": "registry",
+                                "auditRuleMetadata": {
+                                  "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                  "metadataType": "stig",
+                                  "ruleId": "Rule Id value",
+                                  "ruleName": "Rule Name value",
+                                  "ruleDescription": "Rule Description value",
+                                  "ruleVersion": "Rule Version value",
+                                  "ruleSeverity": "Rule Severity value"
+                                }
                               },
                               "choiceSettingValue": {
                                 "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -214,6 +269,19 @@ Content-length: 19119
                                       "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                       "settingInstanceTemplateId": "Setting Instance Template Id value"
                                     },
+                                    "auditRuleInformation": {
+                                      "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                      "auditType": "registry",
+                                      "auditRuleMetadata": {
+                                        "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                        "metadataType": "stig",
+                                        "ruleId": "Rule Id value",
+                                        "ruleName": "Rule Name value",
+                                        "ruleDescription": "Rule Description value",
+                                        "ruleVersion": "Rule Version value",
+                                        "ruleSeverity": "Rule Severity value"
+                                      }
+                                    },
                                     "choiceSettingValue": {
                                       "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                       "settingValueTemplateReference": {
@@ -229,6 +297,19 @@ Content-length: 19119
                                           "settingInstanceTemplateReference": {
                                             "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                             "settingInstanceTemplateId": "Setting Instance Template Id value"
+                                          },
+                                          "auditRuleInformation": {
+                                            "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                            "auditType": "registry",
+                                            "auditRuleMetadata": {
+                                              "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                              "metadataType": "stig",
+                                              "ruleId": "Rule Id value",
+                                              "ruleName": "Rule Name value",
+                                              "ruleDescription": "Rule Description value",
+                                              "ruleVersion": "Rule Version value",
+                                              "ruleSeverity": "Rule Severity value"
+                                            }
                                           },
                                           "choiceSettingValue": {
                                             "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -246,6 +327,19 @@ Content-length: 19119
                                                   "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                   "settingInstanceTemplateId": "Setting Instance Template Id value"
                                                 },
+                                                "auditRuleInformation": {
+                                                  "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                  "auditType": "registry",
+                                                  "auditRuleMetadata": {
+                                                    "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                    "metadataType": "stig",
+                                                    "ruleId": "Rule Id value",
+                                                    "ruleName": "Rule Name value",
+                                                    "ruleDescription": "Rule Description value",
+                                                    "ruleVersion": "Rule Version value",
+                                                    "ruleSeverity": "Rule Severity value"
+                                                  }
+                                                },
                                                 "choiceSettingValue": {
                                                   "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                                   "settingValueTemplateReference": {
@@ -261,6 +355,19 @@ Content-length: 19119
                                                       "settingInstanceTemplateReference": {
                                                         "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                         "settingInstanceTemplateId": "Setting Instance Template Id value"
+                                                      },
+                                                      "auditRuleInformation": {
+                                                        "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                        "auditType": "registry",
+                                                        "auditRuleMetadata": {
+                                                          "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                          "metadataType": "stig",
+                                                          "ruleId": "Rule Id value",
+                                                          "ruleName": "Rule Name value",
+                                                          "ruleDescription": "Rule Description value",
+                                                          "ruleVersion": "Rule Version value",
+                                                          "ruleSeverity": "Rule Severity value"
+                                                        }
                                                       },
                                                       "choiceSettingValue": {
                                                         "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -278,6 +385,19 @@ Content-length: 19119
                                                               "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                               "settingInstanceTemplateId": "Setting Instance Template Id value"
                                                             },
+                                                            "auditRuleInformation": {
+                                                              "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                              "auditType": "registry",
+                                                              "auditRuleMetadata": {
+                                                                "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                                "metadataType": "stig",
+                                                                "ruleId": "Rule Id value",
+                                                                "ruleName": "Rule Name value",
+                                                                "ruleDescription": "Rule Description value",
+                                                                "ruleVersion": "Rule Version value",
+                                                                "ruleSeverity": "Rule Severity value"
+                                                              }
+                                                            },
                                                             "choiceSettingValue": {
                                                               "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                                               "settingValueTemplateReference": {
@@ -294,6 +414,19 @@ Content-length: 19119
                                                                     "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                                     "settingInstanceTemplateId": "Setting Instance Template Id value"
                                                                   },
+                                                                  "auditRuleInformation": {
+                                                                    "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                                    "auditType": "registry",
+                                                                    "auditRuleMetadata": {
+                                                                      "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                                      "metadataType": "stig",
+                                                                      "ruleId": "Rule Id value",
+                                                                      "ruleName": "Rule Name value",
+                                                                      "ruleDescription": "Rule Description value",
+                                                                      "ruleVersion": "Rule Version value",
+                                                                      "ruleSeverity": "Rule Severity value"
+                                                                    }
+                                                                  },
                                                                   "choiceSettingValue": {
                                                                     "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                                                     "settingValueTemplateReference": {
@@ -309,6 +442,19 @@ Content-length: 19119
                                                                         "settingInstanceTemplateReference": {
                                                                           "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                                           "settingInstanceTemplateId": "Setting Instance Template Id value"
+                                                                        },
+                                                                        "auditRuleInformation": {
+                                                                          "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                                          "auditType": "registry",
+                                                                          "auditRuleMetadata": {
+                                                                            "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                                            "metadataType": "stig",
+                                                                            "ruleId": "Rule Id value",
+                                                                            "ruleName": "Rule Name value",
+                                                                            "ruleDescription": "Rule Description value",
+                                                                            "ruleVersion": "Rule Version value",
+                                                                            "ruleSeverity": "Rule Severity value"
+                                                                          }
                                                                         },
                                                                         "choiceSettingValue": {
                                                                           "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -378,10 +524,10 @@ Content-length: 19119
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 19168
+Content-Length: 30414
 
 {
   "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionDefinition",
@@ -411,6 +557,7 @@ Content-Length: 19168
   "settingUsage": "configuration",
   "uxBehavior": "dropdown",
   "visibility": "settingsCatalog",
+  "riskLevel": "medium",
   "referredSettingInformationList": [
     {
       "@odata.type": "microsoft.graph.deviceManagementConfigurationReferredSettingInformation",
@@ -441,6 +588,19 @@ Content-Length: 19168
               "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
               "settingInstanceTemplateId": "Setting Instance Template Id value"
             },
+            "auditRuleInformation": {
+              "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+              "auditType": "registry",
+              "auditRuleMetadata": {
+                "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                "metadataType": "stig",
+                "ruleId": "Rule Id value",
+                "ruleName": "Rule Name value",
+                "ruleDescription": "Rule Description value",
+                "ruleVersion": "Rule Version value",
+                "ruleSeverity": "Rule Severity value"
+              }
+            },
             "choiceSettingValue": {
               "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
               "settingValueTemplateReference": {
@@ -456,6 +616,19 @@ Content-Length: 19168
                   "settingInstanceTemplateReference": {
                     "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                     "settingInstanceTemplateId": "Setting Instance Template Id value"
+                  },
+                  "auditRuleInformation": {
+                    "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                    "auditType": "registry",
+                    "auditRuleMetadata": {
+                      "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                      "metadataType": "stig",
+                      "ruleId": "Rule Id value",
+                      "ruleName": "Rule Name value",
+                      "ruleDescription": "Rule Description value",
+                      "ruleVersion": "Rule Version value",
+                      "ruleSeverity": "Rule Severity value"
+                    }
                   },
                   "choiceSettingValue": {
                     "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -473,6 +646,19 @@ Content-Length: 19168
                           "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                           "settingInstanceTemplateId": "Setting Instance Template Id value"
                         },
+                        "auditRuleInformation": {
+                          "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                          "auditType": "registry",
+                          "auditRuleMetadata": {
+                            "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                            "metadataType": "stig",
+                            "ruleId": "Rule Id value",
+                            "ruleName": "Rule Name value",
+                            "ruleDescription": "Rule Description value",
+                            "ruleVersion": "Rule Version value",
+                            "ruleSeverity": "Rule Severity value"
+                          }
+                        },
                         "choiceSettingValue": {
                           "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                           "settingValueTemplateReference": {
@@ -488,6 +674,19 @@ Content-Length: 19168
                               "settingInstanceTemplateReference": {
                                 "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                 "settingInstanceTemplateId": "Setting Instance Template Id value"
+                              },
+                              "auditRuleInformation": {
+                                "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                "auditType": "registry",
+                                "auditRuleMetadata": {
+                                  "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                  "metadataType": "stig",
+                                  "ruleId": "Rule Id value",
+                                  "ruleName": "Rule Name value",
+                                  "ruleDescription": "Rule Description value",
+                                  "ruleVersion": "Rule Version value",
+                                  "ruleSeverity": "Rule Severity value"
+                                }
                               },
                               "choiceSettingValue": {
                                 "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -505,6 +704,19 @@ Content-Length: 19168
                                       "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                       "settingInstanceTemplateId": "Setting Instance Template Id value"
                                     },
+                                    "auditRuleInformation": {
+                                      "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                      "auditType": "registry",
+                                      "auditRuleMetadata": {
+                                        "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                        "metadataType": "stig",
+                                        "ruleId": "Rule Id value",
+                                        "ruleName": "Rule Name value",
+                                        "ruleDescription": "Rule Description value",
+                                        "ruleVersion": "Rule Version value",
+                                        "ruleSeverity": "Rule Severity value"
+                                      }
+                                    },
                                     "choiceSettingValue": {
                                       "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                       "settingValueTemplateReference": {
@@ -520,6 +732,19 @@ Content-Length: 19168
                                           "settingInstanceTemplateReference": {
                                             "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                             "settingInstanceTemplateId": "Setting Instance Template Id value"
+                                          },
+                                          "auditRuleInformation": {
+                                            "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                            "auditType": "registry",
+                                            "auditRuleMetadata": {
+                                              "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                              "metadataType": "stig",
+                                              "ruleId": "Rule Id value",
+                                              "ruleName": "Rule Name value",
+                                              "ruleDescription": "Rule Description value",
+                                              "ruleVersion": "Rule Version value",
+                                              "ruleSeverity": "Rule Severity value"
+                                            }
                                           },
                                           "choiceSettingValue": {
                                             "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -537,6 +762,19 @@ Content-Length: 19168
                                                   "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                   "settingInstanceTemplateId": "Setting Instance Template Id value"
                                                 },
+                                                "auditRuleInformation": {
+                                                  "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                  "auditType": "registry",
+                                                  "auditRuleMetadata": {
+                                                    "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                    "metadataType": "stig",
+                                                    "ruleId": "Rule Id value",
+                                                    "ruleName": "Rule Name value",
+                                                    "ruleDescription": "Rule Description value",
+                                                    "ruleVersion": "Rule Version value",
+                                                    "ruleSeverity": "Rule Severity value"
+                                                  }
+                                                },
                                                 "choiceSettingValue": {
                                                   "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                                   "settingValueTemplateReference": {
@@ -552,6 +790,19 @@ Content-Length: 19168
                                                       "settingInstanceTemplateReference": {
                                                         "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                         "settingInstanceTemplateId": "Setting Instance Template Id value"
+                                                      },
+                                                      "auditRuleInformation": {
+                                                        "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                        "auditType": "registry",
+                                                        "auditRuleMetadata": {
+                                                          "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                          "metadataType": "stig",
+                                                          "ruleId": "Rule Id value",
+                                                          "ruleName": "Rule Name value",
+                                                          "ruleDescription": "Rule Description value",
+                                                          "ruleVersion": "Rule Version value",
+                                                          "ruleSeverity": "Rule Severity value"
+                                                        }
                                                       },
                                                       "choiceSettingValue": {
                                                         "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
@@ -569,6 +820,19 @@ Content-Length: 19168
                                                               "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                               "settingInstanceTemplateId": "Setting Instance Template Id value"
                                                             },
+                                                            "auditRuleInformation": {
+                                                              "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                              "auditType": "registry",
+                                                              "auditRuleMetadata": {
+                                                                "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                                "metadataType": "stig",
+                                                                "ruleId": "Rule Id value",
+                                                                "ruleName": "Rule Name value",
+                                                                "ruleDescription": "Rule Description value",
+                                                                "ruleVersion": "Rule Version value",
+                                                                "ruleSeverity": "Rule Severity value"
+                                                              }
+                                                            },
                                                             "choiceSettingValue": {
                                                               "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                                               "settingValueTemplateReference": {
@@ -585,6 +849,19 @@ Content-Length: 19168
                                                                     "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                                     "settingInstanceTemplateId": "Setting Instance Template Id value"
                                                                   },
+                                                                  "auditRuleInformation": {
+                                                                    "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                                    "auditType": "registry",
+                                                                    "auditRuleMetadata": {
+                                                                      "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                                      "metadataType": "stig",
+                                                                      "ruleId": "Rule Id value",
+                                                                      "ruleName": "Rule Name value",
+                                                                      "ruleDescription": "Rule Description value",
+                                                                      "ruleVersion": "Rule Version value",
+                                                                      "ruleSeverity": "Rule Severity value"
+                                                                    }
+                                                                  },
                                                                   "choiceSettingValue": {
                                                                     "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
                                                                     "settingValueTemplateReference": {
@@ -600,6 +877,19 @@ Content-Length: 19168
                                                                         "settingInstanceTemplateReference": {
                                                                           "@odata.type": "microsoft.graph.deviceManagementConfigurationSettingInstanceTemplateReference",
                                                                           "settingInstanceTemplateId": "Setting Instance Template Id value"
+                                                                        },
+                                                                        "auditRuleInformation": {
+                                                                          "@odata.type": "microsoft.graph.deviceManagementAuditPowerShellRuleDetail",
+                                                                          "auditType": "registry",
+                                                                          "auditRuleMetadata": {
+                                                                            "@odata.type": "microsoft.graph.deviceManagementAuditRuleMetadata",
+                                                                            "metadataType": "stig",
+                                                                            "ruleId": "Rule Id value",
+                                                                            "ruleName": "Rule Name value",
+                                                                            "ruleDescription": "Rule Description value",
+                                                                            "ruleVersion": "Rule Version value",
+                                                                            "ruleSeverity": "Rule Severity value"
+                                                                          }
                                                                         },
                                                                         "choiceSettingValue": {
                                                                           "@odata.type": "microsoft.graph.deviceManagementConfigurationChoiceSettingValue",

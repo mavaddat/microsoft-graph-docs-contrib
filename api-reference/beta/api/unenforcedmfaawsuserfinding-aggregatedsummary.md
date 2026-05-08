@@ -6,12 +6,15 @@ ms.reviewer: ciem_pm
 ms.localizationpriority: medium
 ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # unenforcedMfaAwsUserFinding: aggregatedSummary
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 View the count of AWS users with unenforced MFA for the specified authorization systems in your AWS environment.
 
@@ -27,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.unenforcedMfaAwsUserFinding/microsoft.graph.aggregatedSummary(authorizationSystemIds=['awsAuthSystemId'])
 ```
 
@@ -61,7 +64,7 @@ The following example shows a request.
   "name": "unenforcedmfaawsuserfindingthis.aggregatedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.unenforcedMfaAwsUserFinding/microsoft.graph.aggregatedSummary(authorizationSystemIds=['377596131774'])
 ```
 
@@ -80,7 +83,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.permissionsAnalyticsAggregatedIdentitySummary"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -90,3 +93,4 @@ Content-Type: application/json
     "findingsCount": 49
 }
 ```
+

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 author: "spgraph-docs-team"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # driveItem: preview
@@ -15,7 +16,11 @@ This action allows you to obtain a short-lived embeddable URL for an item in ord
 
 If you want to obtain long-lived embeddable links, use the [createLink][] API instead.
 
-> **Note:** The **preview** action is currently only available on SharePoint and OneDrive for Business.
+> [!NOTE]
+> The **preview** action is currently only available on SharePoint and OneDrive for Business.
+
+> [!CAUTION]
+> The preview URL is intended for the caller's own use and shouldn't be shared with other users. The preview renders on behalf of the calling identity, and anyone who accesses the URL acts as the caller with the caller's permissions. This is particularly important in application permission scenarios where your app has `read-write access` to the file but you intend to provide end users with `read-only` access. In such cases, take precautions such as restricting DOM access to page internals and obtaining the preview URL using an application identity with read-only access.
 
 [createLink]: driveitem-createlink.md
 
@@ -27,6 +32,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "driveitem_preview" } -->
 [!INCLUDE [permissions-table](../includes/permissions/driveitem-preview-permissions.md)]
+
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-driveitem-permissions.md)]
 
 ## HTTP request
 

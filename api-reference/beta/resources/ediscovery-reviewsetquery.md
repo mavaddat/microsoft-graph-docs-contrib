@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mahage-msft"
 ms.subservice: "ediscovery"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # reviewSetQuery resource type
@@ -12,6 +13,8 @@ doc_type: "resourcePageType"
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 Represents a review set query, which is used to query and cull data stored in an eDiscovery [reviewSet](ediscovery-reviewset.md).
 

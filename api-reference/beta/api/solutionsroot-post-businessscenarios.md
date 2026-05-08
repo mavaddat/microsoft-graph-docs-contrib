@@ -5,6 +5,7 @@ author: "TarkanSevilmis"
 ms.localizationpriority: medium
 ms.subservice: "business-scenarios"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Create businessScenario
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /solutions/businessScenarios
 ```
 
@@ -68,7 +69,7 @@ The following example shows a request.
   "name": "create_businessscenario_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/solutions/businessScenarios
 Content-Type: application/json
 
@@ -81,10 +82,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-businessscenario-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-businessscenario-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -123,7 +120,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.businessScenario"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

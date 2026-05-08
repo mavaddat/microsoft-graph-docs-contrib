@@ -5,6 +5,7 @@ author: "akgraph"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 
 # Update trainingCampaign
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /security/attackSimulation/trainingCampaigns/{trainingCampaignId}
 ```
 
@@ -74,7 +75,7 @@ The following example shows how to update the status of the training campaign. I
   "name": "update_trainingcampaign"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/security/attackSimulation/trainingCampaigns/{trainingCampaignId}
 Content-Type: application/json
 
@@ -139,10 +140,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-trainingcampaign-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-trainingcampaign-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Java](#tab/java)

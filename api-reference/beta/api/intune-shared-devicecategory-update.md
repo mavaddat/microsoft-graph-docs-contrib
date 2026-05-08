@@ -5,6 +5,7 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.prod: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update deviceCategory
@@ -41,7 +42,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceManagement/deviceManagementScripts/{deviceManagementScriptId}/deviceRunStates/{deviceManagementScriptDeviceStateId}/managedDevice/deviceCategory
 ```
 
@@ -51,7 +52,7 @@ PATCH /deviceManagement/deviceManagementScripts/{deviceManagementScriptId}/devic
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceManagement/deviceCategories/{deviceCategoryId}
 ```
 
@@ -85,7 +86,7 @@ If successful, this method returns a `200 OK` response code and an updated [devi
 
 Here are examples of the request.
 
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/deviceManagement/deviceCategories/{deviceCategoryId}
 Content-type: application/json
 Content-length: 82
@@ -102,7 +103,7 @@ PATCH /deviceManagement/deviceManagementScripts/{deviceManagementScriptId}/devic
 
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. Response properties will vary according to context.
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: 184

@@ -5,6 +5,7 @@ author: "malabikaroy"
 ms.localizationpriority: medium
 ms.subservice: "viva-learning"
 doc_type: apiPageType
+ms.date: 09/16/2024
 ---
 
 # Update learningCourseActivity
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 PATCH /employeeExperience/learningProviders/{registrationId}/learningCourseActivities/{learningCourseActivityId}
 ```
 
@@ -61,7 +62,7 @@ The following table lists the properties you can change for a self-initiated lea
 |:---|:---|:---|
 |completedDateTime|DateTimeOffset|Date and time when the assignment was completed. Optional.|
 |completionPercentage|Int32|The percentage of the course completed by the user. If a value is provided, it must be between `0` and `100` (inclusive). Optional.|
-|status|courseStatus|The status of the course activity. Possible values are: `inProgress`, `completed`. Required.|
+|status|courseStatus|The status of the course activity. The possible values are: `inProgress`, `completed`. Required.|
 |startedDateTime|DateTimeOffset|The date and time when the learner started the self-initiated course.|
 
 
@@ -74,7 +75,7 @@ If unsuccessful, this method returns one of the responses below:
 |Scenario|HTTP code|Code|Message|Details|
 |:---|:---|:---|:---|:---|
 |Method not supported for entity|405|methodNotAllowed|This method isn't supported for this entity type. See the Microsoft Graph documentation for the methods applicable to this entity.|
-|User doesn't have appropriate permission scope|403|Forbidden|Your account doesn't have access to this report or data. Contact your global administrator to request access.|
+|User doesn't have appropriate permission scope|403|Forbidden|Your account doesn't have access to this report or data. Contact your administrator to request access.|
 |Forbidden|403|Forbidden|You don't have an adequate service plan for this request.|
 |Bad request|400|badRequest|This provider isn't enabled for the given tenant.|
 |Bad request|400|badRequest|There was an issue with your request. Make sure the registrationId you entered is valid or registered for your tenant.|
@@ -102,7 +103,7 @@ The following example shows a request.
   "name": "update_assigned_learning_courseactivity"
 }-->
 
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/employeeExperience/learningProviders/01e8f81b-3060-4dec-acf0-0389665a0a38/learningCourseActivities/8ba2228a-e020-11ec-9d64-0242ac120003
 Content-Type: application/json
 
@@ -131,10 +132,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-assigned-learning-courseactivity-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-assigned-learning-courseactivity-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -168,7 +165,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 
@@ -184,7 +181,7 @@ The following example shows a request.
   "name": "update_selfinitiated_learning_courseactivity"
 }-->
 
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/employeeExperience/learningProviders/01e8f81b-3060-4dec-acf0-0389665a0a38/learningCourseActivities/8ba2228a-e020-11ec-9d64-0242ac120003
 Content-Type: application/json
 
@@ -202,10 +199,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-selfinitiated-learning-courseactivity-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-selfinitiated-learning-courseactivity-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -239,6 +232,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

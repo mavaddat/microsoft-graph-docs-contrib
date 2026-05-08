@@ -4,6 +4,8 @@ description: "Learn how to use the business scenarios API in Microsoft Graph to 
 author: "TarkanSevilmis"
 ms.localizationpriority: medium
 ms.subservice: "business-scenarios"
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Business scenarios API overview (preview)

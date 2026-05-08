@@ -5,6 +5,7 @@ description: Represents an item in a sharepoint list.
 ms.localizationpriority: high
 ms.subservice: "sharepoint"
 doc_type: resourcePageType
+ms.date: 10/09/2024
 ---
 
 # listItem resource type
@@ -24,6 +25,7 @@ All examples are relative to a **[list][]**: `https://graph.microsoft.com/v1.0/s
 
 | Method                                                                   | Return Type                        | Description                                                               |
 |:-------------------------------------------------------------------------|:-----------------------------------|:--------------------------------------------------------------------------|
+| [List](../api/listitem-list.md)                                          | listItem collection                | Get the collection of items in a list.                                    |
 | [Get][]                                                                  | listItem                           | Get an item in a list.                                                    |
 | [Get column values][Get]                                                 | listItem                           | Get column values from listItem.                                          |
 | [Get analytics][]                                                        | [itemAnalytics][]                  | Get analytics for this resource.                                          |
@@ -32,10 +34,11 @@ All examples are relative to a **[list][]**: `https://graph.microsoft.com/v1.0/s
 | [Delete][]                                                               | No Content                         | Removes an item from a list.                                              |
 | [Update][]                                                               | [fieldValueSet][]                  | Update the properties on a listItem.                                      |
 | [Update column values][Update]                                           | [fieldValueSet][]                  | Update column values on a listItem.                                       |
-| [List](../api/listitem-list-documentsetversions.md)  | [documentSetVersion][] collection  | Get a list of the versions of a document set item in a list.              |
+| [List document set version](../api/listitem-list-documentsetversions.md)  | [documentSetVersion][] collection  | Get a list of the versions of a document set item in a list.              |
 | [Create](../api/listitem-post-documentsetversions.md) | [documentSetVersion][]             | Create a new version of a document set item in a list.                    |
 | [Restore](../api/documentsetversion-restore.md)       | No Content                         | Restore the document set item to a specific version.                      |
 | [Get delta](../api/listitem-delta.md) | [listItem](../resources/listitem.md) collection | Get newly created, updated, or deleted [list items](../resources/listitem.md) without having to perform a full read of the entire items collection. |
+| [Get recent activities](../api/itemactivity-list.md)       | [itemActivity](../resources/itemactivity.md) collection | List the recent [activities](../resources/itemactivity.md) that took place on a [drive](../resources/drive.md), [list](../resources/list.md), item, or within an item hierarchy. |
 
 [Get]: ../api/listitem-get.md
 [Get analytics]: ../api/itemanalytics-get.md
@@ -62,6 +65,7 @@ The following properties are inherited from **[baseItem][]**.
 |:---------------------|:------------------|:-------------------------------------------------------------------------|
 | createdBy            | [identitySet][]   | Identity of the creator of this item. Read-only.                         |
 | createdDateTime      | DateTimeOffset    | The date and time the item was created. Read-only.                       |
+| deleted              | [deleted][]       | If present in the result of a delta enumeration, indicates that the item was deleted. Read-only. |
 | description          | string            | The descriptive text for the item.                                       |
 | eTag                 | string            | ETag for the item. Read-only.                                            |
 | id                   | string            | The unique identifier of the item. Read-only.                            |
@@ -87,6 +91,7 @@ The following properties are inherited from **[baseItem][]**.
 
 [baseItem]: baseitem.md
 [contentTypeInfo]: contenttypeinfo.md
+[deleted]: deleted.md
 [driveItem]: driveitem.md
 [fieldValueSet]: fieldvalueset.md
 [identitySet]: identityset.md
@@ -111,6 +116,7 @@ The following JSON representation shows the resource type.
 ```json
 {
   "contentType": { "@odata.type": "microsoft.graph.contentTypeInfo" },
+  "deleted": { "@odata.type": "microsoft.graph.deleted" },
   "fields": { "@odata.type": "microsoft.graph.fieldValueSet" },
   "sharepointIds": { "@odata.type": "microsoft.graph.sharepointIds" },
 

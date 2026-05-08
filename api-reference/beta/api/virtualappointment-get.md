@@ -5,6 +5,7 @@ author: "benmicrosoft"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get virtualAppointment (deprecated)
@@ -34,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/onlineMeetings/{onlineMeetingId}/virtualAppointment
 GET /users/{userId}/onlineMeetings/{onlineMeetingId}/virtualAppointment
 ```
@@ -68,7 +69,7 @@ The following example shows a request.
   "sampleKeys": ["MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/onlineMeetings/MSpkYzE3Njc0Yy04MWQ5LTRhZGItYmZi/virtualAppointment
 ```
 
@@ -87,7 +88,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.virtualAppointment"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 ETag: W/"ZfYdV7Meckeip07P//nwjAAADyI7NQ=="

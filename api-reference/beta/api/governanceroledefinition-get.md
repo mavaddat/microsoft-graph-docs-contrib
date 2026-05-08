@@ -1,14 +1,15 @@
 ---
-title: "Get governanceRoleDefinition"
+title: "Get governanceRoleDefinition (deprecated)"
 description: "Retrieve the properties and relationships of a governanceRoleDefinition."
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 08/02/2024
 ---
 
-# Get governanceRoleDefinition
+# Get governanceRoleDefinition (deprecated)
 
 Namespace: microsoft.graph
 

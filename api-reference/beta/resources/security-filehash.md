@@ -5,6 +5,7 @@ author: "MSRonBorysowski"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # fileHash resource type
@@ -19,7 +20,7 @@ Represents a file hash value that is reported as part of a security detection al
 
 | Property   | Type                                                                    | Description                                                           |
 |:-----------|:------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| algorithm  | [microsoft.graph.security.fileHashAlgorithm](#filehashalgorithm-values) | The hash algorithm type. Possible values are: `unknown`, `md5`, `sha1`, `sha256`, `sha256ac`, `unknownFutureValue`. |
+| algorithm  | [microsoft.graph.security.fileHashAlgorithm](#filehashalgorithm-values) | The hash algorithm type. The possible values are: `unknown`, `md5`, `sha1`, `sha256`, `sha256ac`, `unknownFutureValue`. |
 | value      | String                                                                  | The hash value. |
 
 

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: security
 author: "preetikr"
+ms.date: 07/22/2024
 ---
 
 # logonUser resource type
@@ -19,11 +20,14 @@ Contains stateful information about the logged on user on this host
 |:---------------|:--------|:----------|
 |accountDomain|String|Domain of user account used to logon.|
 |accountName|String|Account name of user account used to logon.|
-|accountType|String|User Account type, per Windows definition. Possible values are: `unknown`, `standard`, `power`, `administrator`.|
+|accountType|String|User Account type, per Windows definition. The possible values are: `unknown`, `standard`, `power`, `administrator`.|
 |firstSeenDateTime|DateTimeOffset|DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 |lastSeenDateTime|DateTimeOffset|DateTime at which the latest logon by this user account occurred. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.|
 |logonId|String|User logon ID.|
-|logonTypes|String collection|Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: `unknown`, `interactive`, `remoteInteractive`, `network`, `batch`, `service`.|
+|logonTypes|String collection|Collection of the logon types observed for the logged on user from when first to last seen. The possible values are: `unknown`, `interactive`, `remoteInteractive`, `network`, `batch`, `service`.|
+
+## Relationships
+None.
 
 ## JSON representation
 

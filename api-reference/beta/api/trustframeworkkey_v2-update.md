@@ -5,6 +5,7 @@ author: "gysingh"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/17/2024
 ---
 
 # Update trustFrameworkKey_v2
@@ -22,13 +23,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "trustframeworkkey_v2_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/trustframeworkkey_v2-update-permissions.md)]
 
+[!INCLUDE [rbac-b2c-trustframework-keyset-apis](../includes/rbac-for-apis/rbac-b2c-trustframework-keyset-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /trustFramework/keySets/{trustFrameworkKeySetId}/keys_v2/{trustFrameworkKey_v2Id}
 ```
 
@@ -61,7 +64,7 @@ The following example shows a request.
   "name": "update_trustframeworkkey_v2"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/trustFramework/keySets/{trustFrameworkKeySetId}/keys_v2/aTREvwojOB9ph3fr2r6eTf_5eD5fmQsfsapVMwYI3o
 Content-Type: application/json
 
@@ -85,6 +88,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

@@ -4,14 +4,17 @@
       "name": "Users",
       "overview": "../../resources/users.md",
       "resources": [
-        "user"
+        "user",
+        "invitation"
       ]
     },
     {
       "name": "Groups",
       "overview": "../../resources/groups-overview.md",
       "resources": [
-        "group"
+        "group",
+        "groupLifecyclePolicy",
+        "ownerlessGroupPolicy"
       ]
     },
     {
@@ -20,6 +23,7 @@
       "shouldSort": true,
       "resources": [
         "application",
+        "applicationTemplate",
         "servicePrincipal"
       ],
       "childNodes": [
@@ -27,15 +31,26 @@
           "name": "Application",
           "shouldSort": true,
           "resources": [
-            "applicationTemplate",
             "federatedIdentityCredential"
           ],
           "childNodes": [
             {
               "name": "Policies",
+              "shouldSort": true,
               "resources": [
                 "tokenIssuancePolicy",
                 "tokenLifetimePolicy"
+              ],
+              "childNodes": [
+                {
+                  "name": "Application management policy",
+                  "shouldSort": true,
+                  "overview": "../../resources/applicationauthenticationmethodpolicy.md",
+                  "resources": [
+                    "tenantAppManagementPolicy",
+                    "appManagementPolicy"
+                  ]
+                }
               ]
             }
           ]
@@ -50,11 +65,20 @@
               "resources": [
                 "tokenIssuancePolicy",
                 "tokenLifetimePolicy",
-                "remoteDesktopSecurityConfiguration",
                 "claimsMappingPolicy",
                 "customClaimsPolicy",
                 "homeRealmDiscoveryPolicy",
                 "permissionGrantPreApprovalPolicy"
+              ],
+              "childNodes": [
+                {
+                  "name": "Remote desktop security policy",
+                  "resources": [
+                    "remoteDesktopSecurityConfiguration",
+                    "approvedClientApp",
+                    "targetDeviceGroup"
+                  ]
+                }
               ]
             }
           ]
@@ -68,12 +92,15 @@
             "onPremisesAgent",
             "onPremisesAgentGroup",
             "onPremisesPublishingProfile",
-            "publishedResource"
+            "privateAccessSensor",
+            "publishedResource",
+            "ipApplicationSegment",
+            "webApplicationSegment",
+            "corsConfiguration_v2"
           ],
           "complexTypes": [
             "applicationSegment",
             "corsConfiguration",
-            "corsConfiguration_v2",
             "hybridAgentUpdaterConfiguration",
             "kerberosSignOnSettings",
             "keyCredential",
@@ -115,73 +142,159 @@
       ]
     },
     {
-      "name": "Backup storage",
+      "name": "Agents",
+      "overview": "../../resources/agentid-platform-overview.md",
       "shouldSort": true,
-      "keywords": [
-        "M365 Backup Storage",
-        "Microsoft 365 Backup Storage",
-        "Enhanced Restore"
-      ],
-      "resources": [
-        "backupRestoreRoot",
-        "protectionPolicyBase",
-        "protectionRuleBase",
-        "protectionUnitBase",
-        "restoreArtifactBase",
-        "restorePoint",
-        "restoreSessionBase",
-        "serviceApp"
-      ],
-      "childNodes": [
+      "childNodes": [ 
         {
-          "name": "Protection policy",
+          "name": "Agent identities",
           "resources": [
-            "exchangeProtectionPolicy",
-            "oneDriveForBusinessProtectionPolicy",
-            "sharePointProtectionPolicy"
+            "agentIdentityBlueprint",
+            "agentIdentityBlueprintPrincipal",
+            "agentIdentity"
+          ],
+          "childNodes": [
+            {
+              "name": "Agent identity blueprint",
+              "resources": [
+                "inheritablePermission"
+              ]
+            }
           ]
         },
         {
-          "name": "Protection rule",
+          "name": "Agent user",
           "resources": [
-            "driveProtectionRule",
-            "mailboxProtectionRule",
-            "siteProtectionRule"
+            "agentUser"
           ]
         },
         {
-          "name": "Protection unit",
+          "name": "Agent registry (preview)",
           "resources": [
-            "driveProtectionUnit",
-            "mailboxProtectionUnit",
-            "siteProtectionUnit"
-          ]
-        },
-        {
-          "name": "Restore artifact",
-          "resources": [
-            "granularMailBoxRestoreArtifact",
-            "driveRestoreArtifact",
-            "mailboxRestoreArtifact",
-            "siteRestoreArtifact"
-          ]
-        },
-        {
-          "name": "Restore session",
-          "resources": [
-            "oneDriveForBusinessRestoreSession",
-            "exchangeRestoreSession",
-            "sharePointRestoreSession"
+            "agentRegistry",
+            "agentInstance",
+            "agentCardManifest",
+            "agentCollection"
           ]
         }
-      ],
-      "complexTypes": [
-        "artifactQuery",
-        "restorePointSearchResponse",
-        "restorePointSearchResult",
-        "retentionSetting",
-        "serviceStatus",
-        "timePeriod"
+      ]
+    },
+    {
+      "name": "Backup and recovery",
+      "overview": "../../resources/tenants-backup-recovery-overview.md",
+      "childNodes": [
+        {
+          "name": "Entra backup and recovery",
+          "overview": "../../resources/entrarecoveryservices-backup-recovery-overview.md",
+          "resources": [
+            "microsoft.graph.entraRecoveryServices.recoveryJob",
+            "microsoft.graph.entraRecoveryServices.recoveryJobBase",
+            "microsoft.graph.entraRecoveryServices.recoveryPreviewJob",
+            "microsoft.graph.entraRecoveryServices.snapshot"
+          ]
+        },
+        {
+          "name": "Microsoft 365 backup and storage",
+          "shouldSort": true,
+          "keywords": [
+            "M365 Backup Storage",
+            "Microsoft 365 Backup Storage",
+            "Enhanced Restore"
+          ],
+          "resources": [
+            "backupRestoreRoot",
+            "emailNotificationsSetting",
+            "protectionPolicyBase",
+            "protectionRuleBase",
+            "protectionUnitBase",
+            "restoreArtifactBase",
+            "restoreArtifactsBulkRequestBase",
+            "restorePoint",
+            "restoreSessionBase",
+            "serviceApp"
+          ],
+          "childNodes": [
+            {
+              "name": "Browse session",
+              "overview": "../../resources/browsesessionbase.md",
+              "resources": [
+                "oneDriveForBusinessBrowseSession",
+                "sharePointBrowseSession"
+              ]
+            },
+            {
+              "name": "Protection policy",
+              "resources": [
+                "exchangeProtectionPolicy",
+                "oneDriveForBusinessProtectionPolicy",
+                "sharePointProtectionPolicy"
+              ]
+            },
+            {
+              "name": "Protection rule",
+              "resources": [
+                "driveProtectionRule",
+                "mailboxProtectionRule",
+                "siteProtectionRule"
+              ]
+            },
+            {
+              "name": "Protection unit",
+              "resources": [
+                "driveProtectionUnit",
+                "mailboxProtectionUnit",
+                "siteProtectionUnit"
+              ]
+            },
+            {
+              "name": "Protection units bulk job",
+              "resources": [
+                "protectionUnitsBulkJobBase",
+                "driveProtectionUnitsBulkAdditionJob",
+                "mailboxProtectionUnitsBulkAdditionJob",
+                "siteProtectionUnitsBulkAdditionJob"
+              ]
+            },
+            {
+              "name": "Restore artifact",
+              "resources": [
+                "granularMailBoxRestoreArtifact",
+                "driveRestoreArtifact",
+                "granularDriveRestoreArtifact",
+                "mailboxRestoreArtifact",
+                "siteRestoreArtifact",
+                "granularSiteRestoreArtifact"
+              ]
+            },
+            {
+              "name": "Restore artifacts bulk request",
+              "resources": [
+                "driveRestoreArtifactsBulkAdditionRequest",
+                "mailboxRestoreArtifactsBulkAdditionRequest",
+                "siteRestoreArtifactsBulkAdditionRequest"
+              ]
+            },
+            {
+              "name": "Restore session",
+              "resources": [
+                "oneDriveForBusinessRestoreSession",
+                "exchangeRestoreSession",
+                "sharePointRestoreSession"
+              ]
+            }
+          ],
+          "complexTypes": [
+            "artifactQuery",
+            "browseQueryResponseItem",
+            "notificationRecipients",
+            "protectionPolicyArtifactCount",
+            "restorePointSearchResponse",
+            "restorePointSearchResult",
+            "retentionSetting",
+            "serviceStatus",
+            "timePeriod"
+          ]
+        }
       ]
     },
     {
@@ -190,11 +303,15 @@
         "Outlook",
         "Outlook calendar"
       ],
+      "overview": "../../resources/calendar-overview.md",
       "resources": [
         "calendar",
         "event",
         "eventMessage",
         "attachment",
+        "fileAttachment",
+        "itemAttachment",
+        "referenceAttachment",
         "calendarGroup",
         "calendarPermission",
         "outlookCategory"
@@ -210,10 +327,62 @@
         },
         {
           "name": "Places",
+          "overview": "../../resources/places-api-overview.md",
           "resources": [
             "place",
+            "building",
+            "floor",
+            "section",
             "room",
+            "desk",
+            "workspace",
+            "checkInClaim",
+            "placeOperation",
             "roomList"
+          ],
+          "complexTypes": [            
+            "mailboxDetails",
+            "placeMode",
+            "assignedPlaceMode",
+            "dropInPlaceMode",
+            "reservablePlaceMode",
+            "unavailablePlaceMode",
+            "resourceLink",
+            "placeExecutionResult",
+            "placeOperationProgress"
+          ],
+           "childNodes": [
+            {
+              "name": "Devices (preview)",
+              "resources":[
+                "workplaceSensorDevice"
+              ]
+            },
+            {
+             "name": "Maps (preview)",
+             "resources":[
+               "buildingMap",
+               "fixtureMap",
+               "footprintMap",
+               "levelMap",
+               "sectionMap",
+               "unitMap"
+             ],
+              "complexTypes": [
+                "importBuildingMapSetting"
+              ]
+             }
+           ]
+         },
+         {
+          "name": "Work hours and locations",
+          "resources": [
+            "workHoursAndLocationsSetting",
+            "workPlanOccurrence",
+            "workPlanRecurrence"
+          ],
+          "complexTypes": [
+            "timeOffDetails"
           ]
         }
       ]
@@ -241,6 +410,12 @@
       ],
       "resources": [
         "subscription"
+      ],
+      "complexTypes": [
+        "changeNotificationCollection",
+        "changeNotification",
+        "changeNotificationEncryptedContent",
+        "resourceData"
       ]
     },
     {
@@ -256,7 +431,7 @@
       ],
       "childNodes": [
         {
-          "name": "eDiscovery (preview)",
+          "name": "eDiscovery (deprecated)",
           "overview": "../../resources/ediscovery-ediscoveryapioverview.md",
           "resources": [
             "microsoft.graph.ediscovery.case",
@@ -388,73 +563,131 @@
           ]
         },
         {
+          "name": "Cloud licensing (preview)",
+          "overview": "../../resources/cloud-licensing-api-overview.md",
+          "keywords": [
+            "Cloud licensing",
+            "Microsoft Cloud Licensing",
+            "licensing",
+            "license assignment",
+            "allotment"
+          ],
+          "resources": [
+            "microsoft.graph.cloudLicensing.allotment",
+            "microsoft.graph.cloudLicensing.assignment",
+            "microsoft.graph.cloudLicensing.assignmentError",
+            "microsoft.graph.cloudLicensing.usageRight",          
+            "microsoft.graph.cloudLicensing.waitingMember"
+          ],
+          "complexTypes": [
+            "microsoft.graph.cloudLicensing.groupCloudLicensing",
+            "microsoft.graph.cloudLicensing.service",
+            "microsoft.graph.cloudLicensing.subscription",
+            "microsoft.graph.cloudLicensing.userCloudLicensing"
+          ],
+          "childNodes": []
+        },
+        {
           "name": "Cloud PC",
           "overview": "../../resources/cloudpc-api-overview.md",
           "resources": [
             "cloudPC",
             "cloudPcAuditEvent",
+            "cloudPcBulkAction",
+            "cloudPcCloudApp",
             "cloudPcCrossCloudGovernmentOrganizationMapping",
             "cloudPcDeviceImage",
             "cloudPcExternalPartnerSetting",
+            "cloudPcExternalPartner",
             "cloudPcFrontLineServicePlan",
             "cloudPcGalleryImage",
+            "cloudPcManagedLicense",
             "cloudPcOnPremisesConnection",
             "cloudPcOrganizationSettings",
             "cloudPcProvisioningPolicy",
-            "cloudPcReports",
+            "cloudPcReport",
             "cloudPcServicePlan",
             "cloudPcSnapshot",
             "cloudPcSupportedRegion",
             "cloudPcUserSetting",
+            "cloudPCUserSettingsPersistenceDetail",
             "virtualEndpoint",
-            "cloudPcBulkAction"
+            "cloudPcReports"
           ],
           "complexTypes": [
             "appScope",
+            "cloudPcAgentHealthCheckDetail",
+            "cloudPcAgentHealthCheckStatusDetail",
+            "cloudPcAgentHealthCheckSummary",
+            "cloudPcAgentStatusDetail",
             "cloudPcAuditActor",
             "cloudPcAuditProperty",
             "cloudPcAuditResource",
+            "cloudPcBulkDisasterRecovery",
             "cloudPcBulkDisasterRecoveryFailback",
             "cloudPcBulkDisasterRecoveryFailover",
+            "cloudPcBulkMove",
             "cloudPcBulkPowerOff",
             "cloudPcBulkPowerOn",
+            "cloudPcBulkReinstallAgent",
             "cloudPcBulkReprovision",
             "cloudPcBulkResize",
             "cloudPcBulkRestart",
             "cloudPcBulkRestore",
             "cloudPcBulkTroubleshoot",
             "cloudPcBulkRemoteActionResult",
+            "cloudPcBulkCreateSnapshot",
+            "cloudPcBulkSetReviewStatus",
+            "cloudPcCloudAppDetail",
+            "cloudPcConnectionSetting",
             "cloudPcConnectivityEvent",
             "cloudPcConnectivityResult",
             "cloudPcCrossRegionDisasterRecoverySetting",
             "cloudPcDisasterRecoveryAzureConnectionSetting",
             "cloudPcDisasterRecoveryMicrosoftHostedNetworkSetting",
             "cloudPcDisasterRecoveryNetworkSetting",
+            "cloudPcDiscoveredApp",
             "cloudPcDomainJoinConfiguration",
+            "cloudpcexternalpartneractionreport",
+            "cloudpcexternalpartneractionresult",
+            "cloudpcexternalpartneragentsetting",
             "cloudPcForensicStorageAccount",
+            "cloudPcFrontlineSharedDeviceDetail",
             "cloudPcHealthCheckItem",
+            "cloudPcLaunchDetail",
             "cloudPcLaunchInfo",
             "cloudPcLoginResult",
             "cloudPcManagementAssignmentTarget",
             "cloudPcManagementGroupAssignmentTarget",
+            "cloudPcNotificationSetting",
             "cloudPcOnPremisesConnectionStatusDetail",
             "cloudPcOnPremisesConnectionStatusDetails",
+            "cloudPcOnPremisesConnectionSubnetIpDetail",
             "cloudPcPartnerAgentInstallResult",
             "cloudPcProvisioningPolicyAssignment",
+            "cloudPcProvisioningPolicyAutopatch",
             "cloudPcRemoteActionCapability",
             "cloudPcResizeValidationResult",
             "cloudPcRestorePointSetting",
             "cloudPcReviewStatus",
             "cloudPcScopedPermission",
+            "cloudPcSnapshotImportActionDetail",
+            "cloudPcSnapshotImportActionResult",
             "cloudPcSourceDeviceImage",
             "cloudPcStatusDetails",
             "cloudPcStatusDetail",
-            "CloudPcConnectionSetting",
+            "cloudPcStatusSummary",
+            "cloudPcStorageBlobDetail",
+            "cloudPcSupportedRegionRestrictionDetail",
             "cloudPcSubscription",
             "cloudPcUserRoleScopeTagInfo",
             "cloudPcUserSettingAssignment",
+            "cloudPcUserSettingsPersistenceConfiguration",
+            "cloudPCUserSettingsPersistenceProfile",
+            "cloudPCUserSettingsPersistenceUsageResult",
             "cloudPcWindowsSetting",
             "cloudPcWindowsSettings",
+            "frontlineCloudPcDetail",
             "keyValuePair",
             "microsoftManagedDesktop",
             "unifiedRolePermission"
@@ -478,6 +711,7 @@
         },
         {
           "name": "Cloud printing",
+          "overview": "../../resources/print-overview.md",
           "keywords": [
             "Universal Print"
           ],
@@ -572,8 +806,13 @@
             "microsoft.graph.windowsUpdates.deployment",
             "microsoft.graph.windowsUpdates.deploymentAudience",
             "microsoft.graph.windowsUpdates.operationalInsightsConnection",
+            "microsoft.graph.windowsUpdates.policy",
+            "microsoft.graph.windowsUpdates.qualityUpdatePolicy",
+            "microsoft.graph.windowsUpdates.policyApproval",
             "microsoft.graph.windowsUpdates.product",
             "microsoft.graph.windowsUpdates.resourceConnection",
+            "microsoft.graph.windowsUpdates.ring",
+            "microsoft.graph.windowsUpdates.qualityUpdateRing",
             "microsoft.graph.windowsUpdates.updatableAsset",
             "microsoft.graph.windowsUpdates.updatableAssetGroup",
             "microsoft.graph.windowsUpdates.updatePolicy"
@@ -584,6 +823,8 @@
             "adminWindowsUpdates",
             "microsoft.graph.windowsUpdates.applicableContent",
             "microsoft.graph.windowsUpdates.applicableContentDeviceMatch",
+            "microsoft.graph.windowsUpdates.approvalRule",
+            "microsoft.graph.windowsUpdates.assignedGroup",
             "microsoft.graph.windowsUpdates.azureADDeviceRegistrationError",
             "microsoft.graph.windowsUpdates.buildVersionDetails",
             "microsoft.graph.windowsUpdates.catalogContent",
@@ -602,9 +843,12 @@
             "microsoft.graph.windowsUpdates.driverUpdateFilter",
             "microsoft.graph.windowsUpdates.durationDrivenRolloutSettings",
             "microsoft.graph.windowsUpdates.edition",
+            "microsoft.graph.windowsUpdates.excludedGroupAssignment",
             "microsoft.graph.windowsUpdates.expediteSettings",
             "microsoft.graph.windowsUpdates.featureUpdateCatalogEntry",
             "microsoft.graph.windowsUpdates.gradualRolloutSettings",
+            "microsoft.graph.windowsUpdates.groupAssignment",
+            "microsoft.graph.windowsUpdates.includedGroupAssignment",
             "microsoft.graph.windowsUpdates.itemBody",
             "microsoft.graph.windowsUpdates.knowledgeBaseArticle",
             "microsoft.graph.windowsUpdates.knownIssue",
@@ -612,9 +856,14 @@
             "microsoft.graph.windowsUpdates.monitoringRule",
             "microsoft.graph.windowsUpdates.monitoringSettings",
             "microsoft.graph.windowsUpdates.productRevision",
+            "microsoft.graph.windowsUpdates.qualityUpdateApprovalRule",
             "microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry",
             "microsoft.graph.windowsUpdates.qualityUpdateCveSeverityInformation",
+            "microsoft.graph.windowsUpdates.qualityUpdateFilter",
             "microsoft.graph.windowsUpdates.rateDrivenRolloutSettings",
+            "microsoft.graph.windowsUpdates.recoveryApprovalRule",
+            "microsoft.graph.windowsUpdates.recoveryUpdateCatalogEntry",
+            "microsoft.graph.windowsUpdates.remediationUpdateFilter",
             "microsoft.graph.windowsUpdates.safeguardProfile",
             "microsoft.graph.windowsUpdates.safeguardSettings",
             "microsoft.graph.windowsUpdates.scheduleSettings",
@@ -741,15 +990,19 @@
         "educationRubricOutcome",
         "educationSubmission",
         "educationSubmissionResource",
-        "educationSynchronizationError",
-        "educationSynchronizationProfile",
-        "educationSynchronizationProfileStatus",
         "readingAssignmentSubmission",
+        "readingCoachPassage",
         "reflectCheckInResponse",
-        "relatedContact"
+        "relatedContact",
+        "speakerAssignmentSubmission"
       ],
       "complexTypes": [
         "challengingWord",
+        "educationAiFeedbackAudienceEngagementSettings",
+        "educationAiFeedbackContentSettings",
+        "educationAiFeedbackCriteria",
+        "educationAiFeedbackDeliverySettings",
+        "educationAiFeedbackSettings",
         "educationAssignmentClassRecipient",
         "educationAssignmentGrade",
         "educationAssignmentGradeType",
@@ -768,6 +1021,11 @@
         "educationMediaResource",
         "educationPowerPointResource",
         "educationResource",
+        "educationSpeakerCoachAudienceEngagementSettings",
+        "educationSpeakerCoachContentSettings",
+        "educationSpeakerCoachDeliverySettings",
+        "educationSpeakerCoachSettings",
+        "educationSpeakerProgressResource",
         "educationSubmissionIndividualRecipient",
         "educationSubmissionRecipient",
         "educationTeamsAppResource",
@@ -778,23 +1036,7 @@
         "rubricLevel",
         "rubricQuality",
         "rubricQualityFeedbackModel",
-        "rubricQualitySelectedColumnModel",
-        "educationCsvDataProvider",
-        "educationFileSynchronizationVerificationMessage",
-        "educationIdentityCreationConfiguration",
-        "educationIdentityDomain",
-        "educationIdentityMatchingConfiguration",
-        "educationIdentityMatchingOptions",
-        "educationIdentitySynchronizationConfiguration",
-        "educationOneRosterApiDataProvider",
-        "educationPowerSchoolDataProvider",
-        "educationSynchronizationConnectionSettings",
-        "educationSynchronizationCustomization",
-        "educationSynchronizationCustomizations",
-        "educationSynchronizationDataProvider",
-        "educationSynchronizationLicenseAssignment",
-        "educationSynchronizationOAuth1ConnectionSettings",
-        "educationSynchronizationOAuth2ClientCredentialsConnectionSettings"
+        "rubricQualitySelectedColumnModel"
       ]
     },
     {
@@ -805,7 +1047,18 @@
           "overview": "../../resources/engagement-api-overview.md",
           "resources": [
             "community",
-            "engagementAsyncOperation"
+            "employeeExperienceUser",
+            "engagementAsyncOperation",
+            "engagementRole",
+            "engagementRoleMember",
+            "storyline",
+            "storylineFollower",
+            "storylineFollowing"
+          ],
+          "complexTypes": [
+            "engagementConversationMessageAttachment",
+            "engagementConversationMessageMention",
+            "engagementIdentitySet"
           ]
         },
         {
@@ -855,6 +1108,7 @@
         "microsoft.graph.externalConnectors.itemIdResolver",
         "microsoft.graph.externalConnectors.property",
         "microsoft.graph.externalConnectors.propertyRule",
+        "microsoft.graph.externalConnectors.principal",
         "publicError",
         "publicErrorDetail",
         "publicInnerError",
@@ -872,15 +1126,68 @@
         "OneDrive for Business",
         "OneDrive business",
         "OneDrive personal",
-        "SharePoint"
+        "SharePoint",
+        "SharePoint Embedded"
       ],
       "resources": [
         "drive",
         "driveItem",
+        "driveItemVersion",
         "bundle",
-        "permission",
         "fileStorageContainer",
-        "sharedDriveItem"
+        "fileStorageContainerType",
+        "fileStorageContainerTypeAppPermissionGrant",
+        "fileStorageContainerTypeRegistration",
+        "permission",
+        "recycleBin",
+        "recycleBinItem",
+        "sharedDriveItem",
+        "sharePointGroup",
+        "sharePointGroupMember"
+      ],
+      "complexTypes": [
+        "fileStorageContainerTypeRegistrationSettings",
+        "fileStorageContainerTypeAgentSettings",
+        "fileStorageContainerTypeSettings",
+        "sharePointGroupIdentity"
+      ],
+      "childNodes": [
+        {
+          "name": "SharePoint migration",
+          "overview": "../../resources/sharepointmigration-api-overview.md",
+          "resources": [
+            "sharePointMigrationEvent",
+            "sharePointMigrationFinishManifestFileUploadEvent",
+            "sharePointMigrationJob",
+            "sharePointMigrationJobCancelledEvent",
+            "sharePointMigrationJobDeletedEvent",
+            "sharePointMigrationJobErrorEvent",
+            "sharePointMigrationJobPostponedEvent",
+            "sharePointMigrationJobProgressEvent",
+            "sharePointMigrationJobQueuedEvent",
+            "sharePointMigrationJobStartEvent"
+          ],
+          "complexTypes": [
+            "sharePointMigrationContainerInfo"
+          ]
+        },
+        {
+          "name": "SharePoint cross-tenant migration (preview)",
+          "overview": "../../resources/sharepoint-crossorganization-api-overview.md",
+          "resources": [
+            "sharePointGroupIdentityMapping",
+            "sharePointMigrationTask",
+            "sharePointUserIdentityMapping"
+          ],
+          "complexTypes": [
+            "sharePointIdentityMappingGroupMigrationData",
+            "sharePointIdentityMappingUserMigrationData",
+            "sharePointMigrationTaskParameters",
+            "sharePointUserMigrationTaskParameters",
+            "sharePointSiteMigrationTaskParameters",
+            "sharePointGroupMigrationTaskParameters"
+          ]
+        }
       ]
     },
     {
@@ -928,7 +1235,6 @@
           "shouldSort": true,
           "resources": [
             "administrativeUnit",
-            "appRoleAssignment",
             "contract",
             "directory",
             "device",
@@ -938,17 +1244,28 @@
             "directorySetting",
             "directorySettingTemplate",
             "domain",
+            "onPremAuthenticationPolicy",
             "onPremisesDirectorySynchronization",
+            "onPremisesSyncBehavior",
             "organization",
             "orgContact",
             "tenantInformation",
             "bitlockerRecoveryKey",
             "deviceLocalCredentialInfo",
             "featureRolloutPolicy",
-            "mobilityManagementPolicy",
-            "organizationSettings"
+            "organizationSettings",
+            "uxSetting",
+            "deviceTemplate",
+            "mutualTlsOauthConfiguration"
           ],
           "childNodes": [
+            {
+              "name": "Mobility management policy",
+              "resources": [
+                "mobileAppManagementPolicy",
+                "mobileDeviceManagementPolicy"
+              ]
+            },
             {
               "name": "Custom security attributes",
               "overview": "../../resources/custom-security-attributes-overview.md",
@@ -1010,13 +1327,6 @@
                     "unifiedRbacResourceAction"
                   ]
                 }
-              ]
-            },
-            {
-              "name": "Trusted certificate authorities for apps (preview)",
-              "resources": [
-                "certificateBasedApplicationConfiguration",
-                "certificateAuthorityAsEntity"
               ]
             }
           ]
@@ -1109,8 +1419,10 @@
               "resources": [
                 "accessPackage",
                 "accessPackageAssignment",
+                "accessPackageSuggestion",
                 "approval",
                 "approvalStep",
+                "availableAccessPackage",
                 "accessPackageResourceRoleScope",
                 "accessPackageAssignmentPolicy",
                 "accessPackageAssignmentRequest",
@@ -1118,14 +1430,22 @@
                 "accessPackageCatalog",
                 "accessPackageResourceRole",
                 "accessPackageResource",
+                "customDataProvidedResource",
                 "accessPackageResourceEnvironment",
                 "accessPackageResourceRequest",
                 "accessPackageAssignmentRequestWorkflowExtension",
                 "accessPackageAssignmentWorkflowExtension",
                 "accessPackageSubject",
                 "connectedOrganization",
+                "endUserSettings",
                 "entitlementManagementSettings",
-                "customAccessPackageWorkflowExtension"
+                "customAccessPackageWorkflowExtension",
+                "customDataProvidedResourceUploadSession",
+                "externalOriginResourceConnector",
+                "controlConfiguration",
+                "insiderRiskyUserApproval",
+                "entraIdProtectionRiskyUserApproval",
+                "customDataProvidedResourceUploadSession"
               ],
               "complexTypes": [
                 "accessPackageAnswer",
@@ -1142,6 +1462,9 @@
                 "accessPackageResourceAttributeQuestion",
                 "accessPackageResourceAttributeSource",
                 "accessPackageResourceScope",
+                "accessPackageSuggestionReason",
+                "accessPackageSuggestionRelatedPeopleBased",
+                "accessPackageSuggestionSelfAssignmentHistoryBased",
                 "accessPackageTextInputQuestion",
                 "accessPackageUserDirectoryAttributeStore",
                 "approvalSettings",
@@ -1190,7 +1513,10 @@
                 "verifiableCredentialType",
                 "verifiableCredentialVerified",
                 "verifiedCredentialClaims",
-                "verifiedCredentialData"
+                "verifiedCredentialData",
+                "customDataProvidedResourceUploadSessionRequest",
+                "accessReviewDataUploadTriggerCallbackData",
+                "customDataProvidedResourceFile"
               ]
             },
             {
@@ -1330,6 +1656,7 @@
                     "privilegedAccessGroupEligibilityScheduleRequest",
                     "privilegedAccessGroupEligibilitySchedule",
                     "privilegedAccessGroupEligibilityScheduleInstance",
+                    "groupResource",
                     "unifiedRoleManagementPolicy",
                     "unifiedRoleManagementPolicyRule",
                     "unifiedRoleManagementPolicyAssignment",
@@ -1340,7 +1667,7 @@
               ]
             },
             {
-              "name": "Privileged Identity Management iteration 2",
+              "name": "Privileged Identity Management iteration 2 (deprecated)",
               "overview": "../../resources/privilegedidentitymanagement-root.md",
               "childNodes": [
                 {
@@ -1375,15 +1702,47 @@
           "name": "Identity and sign-in",
           "shouldSort": true,
           "resources": [
+            "appRoleAssignment",
             "dataPolicyOperation",
             "oAuth2PermissionGrant",
-            "certificateBasedAuthConfiguration",
-            "externalIdentitiesPolicy",
-            "invitation",
-            "trustFrameworkKeySet",
-            "trustFrameworkPolicy"
+            "externalIdentitiesPolicy"
           ],
           "childNodes": [
+            {
+              "name": "Certificate-based authentication (CBA)",
+              "resources": [
+                "certificateBasedAuthConfiguration",
+                "certificateBasedAuthPki",
+                "certificateAuthorityDetail"
+              ]
+            },
+            {
+              "name": "Fraud protection provider",
+              "resources": [
+                "fraudProtectionProvider",
+                "arkoseFraudProtectionProvider",
+                "humanSecurityFraudProtectionProvider"
+              ]
+            },
+            {
+              "name": "Web application firewall",
+              "resources": [
+                "webApplicationFirewallProvider",
+                "akamaiWebApplicationFirewallProvider",
+                "cloudFlareWebApplicationFirewallProvider",
+                "webApplicationFirewallVerificationModel"
+              ]
+            },
+            {
+              "name": "Sign-in identifiers",
+              "resources": [
+                "signInIdentifierBase",
+                "customUsernameSignInIdentifier",
+                "emailSignInIdentifier",
+                "upnSignInIdentifier",
+                "usernameSignInIdentifier"
+              ]
+            },
             {
               "name": "Authentication event listeners",
               "resources": [
@@ -1392,9 +1751,20 @@
                 "onAttributeCollectionStartListener",
                 "onAttributeCollectionSubmitListener",
                 "onAuthenticationMethodLoadStartListener",
+                "onEmailOtpSendListener",
+                "onFraudProtectionLoadStartListener",
                 "onInteractiveAuthFlowStartListener",
+                "onPasswordSubmitListener",
+                "onVerifiedIdClaimValidationListener",
+                "onPhoneMethodLoadStartListener",
                 "onTokenIssuanceStartListener",
                 "onUserCreateStartListener"
+              ]
+            },
+            {
+              "name": "Verified ID",
+              "resources": [
+                "verifiedIdProfile"
               ]
             },
             {
@@ -1404,7 +1774,9 @@
                 "authentication",
                 "authenticationMethod",
                 "emailAuthenticationMethod",
+                "externalAuthenticationMethod",
                 "fido2AuthenticationMethod",
+                "hardwareOathAuthenticationMethod",
                 "microsoftAuthenticatorAuthenticationMethod",
                 "passwordAuthenticationMethod",
                 "phoneAuthenticationMethod",
@@ -1413,6 +1785,37 @@
                 "temporaryAccessPassAuthenticationMethod",
                 "windowsHelloForBusinessAuthenticationMethod",
                 "passwordlessMicrosoftAuthenticatorAuthenticationMethod"
+              ],
+              "childNodes": [
+                {
+                  "name": "QR code authentication",
+                  "resources": [
+                    "qrCodePinAuthenticationMethod",
+                    "qrCode",
+                    "qrPin"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Authentication methods policies",
+              "overview": "../../resources/authenticationmethodspolicies-overview.md",
+              "shouldSort": true,
+              "resources": [
+                "authenticationMethodsPolicy",
+                "emailAuthenticationMethodConfiguration",
+                "externalAuthenticationMethodConfiguration",
+                "fido2AuthenticationMethodConfiguration",
+                "hardwareOathAuthenticationMethodConfiguration",
+                "hardwareOathTokenAuthenticationMethodDevice",
+                "microsoftAuthenticatorAuthenticationMethodConfiguration",
+                "smsAuthenticationMethodConfiguration",
+                "temporaryAccessPassAuthenticationMethodConfiguration",
+                "softwareOathAuthenticationMethodConfiguration",
+                "voiceAuthenticationMethodConfiguration",
+                "verifiableCredentialsAuthenticationMethodConfiguration",
+                "x509CertificateAuthenticationMethodConfiguration",
+                "qrCodePinAuthenticationMethodConfiguration"
               ]
             },
             {
@@ -1427,12 +1830,22 @@
               ]
             },
             {
+              "name": "Azure AD B2C IEF",
+              "resources": [
+                "trustFrameworkKeyset",
+                "trustFrameworkKey_v2",
+                "trustFrameworkPolicy"
+              ]
+            },
+            {
               "name": "Conditional access",
               "resources": [
                 "conditionalAccessPolicy",
+                "whatIfAnalysisResult",
                 "namedLocation",
                 "authenticationContextClassReference",
-                "conditionalAccessTemplate"
+                "conditionalAccessTemplate",
+                "continuousAccessEvaluationPolicy"
               ],
               "childNodes": [
                 {
@@ -1456,7 +1869,31 @@
                 "crossTenantAccessPolicy",
                 "crossTenantAccessPolicyConfigurationDefault",
                 "crossTenantAccessPolicyConfigurationPartner",
-                "crossTenantIdentitySyncPolicyPartner"
+                "crossTenantIdentitySyncPolicyPartner",
+                "m365CapabilityBase"
+              ],
+              "childNodes": [
+                {
+                  "name": "Microsoft 365 capabilities",
+                  "resources": [
+                    "crossTenantCalendarAvailabilityBasic",
+                    "crossTenantCalendarAvailabilityLimitedDetails",
+                    "crossTenantCalendarSharingFreeBusyDetail",
+                    "crossTenantCalendarSharingFreeBusyReviewer",
+                    "crossTenantCalendarSharingFreeBusySimple",
+                    "crossTenantMailTipsAll",
+                    "crossTenantMailTipsLimited",
+                    "crossTenantMigration",
+                    "crossTenantOpenProfileCard",
+                    "crossTenantPlacesDeskBooking",
+                    "crossTenantPlacesRoomBooking"
+                  ],
+                  "complexTypes": [
+                    "m365CapabilityInboundAccess",
+                    "m365CapabilityResourceScope",
+                    "m365CapabilityResourceScopes"
+                  ]
+                }
               ]
             },
             {
@@ -1472,31 +1909,51 @@
                 "customAuthenticationExtension",
                 "onAttributeCollectionStartCustomExtension",
                 "onAttributeCollectionSubmitCustomExtension",
+                "onOtpSendCustomExtension",
+                "onPasswordSubmitCustomExtension",
+                "onVerifiedIdClaimValidationCustomExtension",
                 "onTokenIssuanceStartCustomExtension"
+              ]
+            },
+            {
+              "name": "Cross-tenant migration",
+              "overview": "../../resources/crosstenant-migration-overview.md",
+              "resources":[
+                "crossTenantMigrationJob",
+                "crossTenantMigrationTask",
+                "migrationsRoot"
+              ],
+              "complexTypes":[
+                "crossTenantMigrationServiceStatusDetails",
+                "error",
+                "exchangeOnlineCrossTenantMigrationSettings"
               ]
             },
             {
               "name": "Identity protection",
               "overview": "../../resources/identityprotection-overview.md",
               "resources": [
+                "agentRiskDetection",
                 "riskDetection",
+                "riskyAgent",
                 "riskyUser",
-                "servicePrincipalRiskDetection",
-                "riskyServicePrincipal"
+                "riskyUserHistoryItem",
+                "riskyServicePrincipal",
+                "servicePrincipalRiskDetection"
               ]
             },
             {
               "name": "Identity provider",
-              "resources": [
-                "identityProviderBase"
-              ],
+              "resources": [],
               "childNodes": [
                 {
                   "name": "External identities",
                   "resources": [
+                    "identityProviderBase",
                     "builtInIdentityProvider",
                     "socialIdentityProvider",
                     "appleManagedIdentityProvider",
+                    "oidcidentityProvider",
                     "openIdConnectIdentityProvider"
                   ]
                 },
@@ -1549,7 +2006,9 @@
               ],
               "resources": [
                 "organizationalBranding",
-                "organizationalBrandingLocalization"
+                "organizationalBrandingLocalization",
+                "organizationalBrandingTheme",
+                "organizationalBrandingThemeLocalization"
               ]
             },
             {
@@ -1559,54 +2018,24 @@
               "resources": [
                 "activityBasedTimeoutPolicy",
                 "authorizationPolicy",
-                "claimsMappingPolicy",
-                "customClaimsPolicy",
+                "b2bManagementPolicy",
                 "homeRealmDiscoveryPolicy",
                 "permissionGrantPolicy",
                 "permissionGrantPreApprovalPolicy",
-                "tokenIssuancePolicy",
-                "tokenLifetimePolicy",
                 "authenticationEventsPolicy",
                 "authenticationFlowsPolicy",
                 "b2cAuthenticationMethodsPolicy",
                 "featureRolloutPolicy",
-                "continuousAccessEvaluationPolicy",
                 "identitySecurityDefaultsEnforcementPolicy",
-                "deviceRegistrationPolicy"
-              ],
-              "childNodes": [
-                {
-                  "name": "Application authentication method policy",
-                  "overview": "../../resources/applicationauthenticationmethodpolicy.md",
-                  "resources": [
-                    "tenantAppManagementPolicy",
-                    "appManagementPolicy"
-                  ]
-                },
-                {
-                  "name": "Authentication methods policy",
-                  "overview": "../../resources/authenticationmethodspolicies-overview.md",
-                  "shouldSort": true,
-                  "resources": [
-                    "authenticationMethodsPolicy",
-                    "emailAuthenticationMethodConfiguration",
-                    "externalAuthenticationMethodConfiguration",
-                    "fido2AuthenticationMethodConfiguration",
-                    "microsoftAuthenticatorAuthenticationMethodConfiguration",
-                    "smsAuthenticationMethodConfiguration",
-                    "temporaryAccessPassAuthenticationMethodConfiguration",
-                    "softwareOathAuthenticationMethodConfiguration",
-                    "voiceAuthenticationMethodConfiguration",
-                    "x509CertificateAuthenticationMethodConfiguration"
-                  ]
-                },
-                {
-                  "name": "Remote desktop security configuration",
-                  "resources": [
-                    "remoteDesktopSecurityConfiguration",
-                    "targetDeviceGroup"
-                  ]
-                }
+                "deviceRegistrationPolicy",
+                "onPremAuthenticationPolicy"
+              ]
+            },
+            {
+              "name": "Trusted certificate authorities for apps (preview)",
+              "resources": [
+                "certificateBasedApplicationConfiguration",
+                "certificateAuthorityAsEntity"
               ]
             },
             {
@@ -1614,25 +2043,30 @@
               "resources": [
                 "authenticationEventsFlow",
                 "externalUsersSelfServiceSignUpEventsFlow",
-                "authenticationConditionApplication"
+                "authenticationConditionApplication",
+                "onAttributeCollectionHandler",
+                "onAttributeCollectionStartHandler",
+                "onAttributeCollectionStartCustomExtensionHandler",
+                "onAttributeCollectionSubmitHandler",
+                "onAttributeCollectionSubmitCustomExtensionHandler"
               ]
             },
             {
               "name": "User flows in workforce tenants and Azure AD B2C",
               "resources": [
-                "identityUserFlow",
                 "b2cIdentityUserFlow",
                 "b2xIdentityUserFlow",
                 "identityUserFlowAttribute",
                 "identityUserFlowAttributeAssignment",
                 "userFlowLanguageConfiguration",
-                "identityApiConnector"
+                "identityApiConnector",
+                "identityUserFlow"
               ]
             }
           ]
         },
         {
-          "name": "Multicloud permissions management (preview)",
+          "name": "Multicloud permissions management (deprecated)",
           "overview": "../../resources/permissions-management-api-overview.md",
           "resources": [
             "authorizationSystem"
@@ -1812,10 +2246,8 @@
           "resources": [
             "microsoft.graph.networkaccess.tenantStatus",
             "microsoft.graph.networkaccess.branchSite",
-            "microsoft.graph.networkaccess.enrichedAuditLogs",
-            "microsoft.graph.networkaccess.logs",
-            "microsoft.graph.networkaccess.reports",
-            "microsoft.graph.networkaccess.remoteNetwork"
+            "microsoft.graph.networkaccess.remoteNetwork",
+            "microsoft.graph.networkaccess.alert"
           ],
           "childNodes": [
             {
@@ -1830,7 +2262,8 @@
               "resources": [
                 "microsoft.graph.networkaccess.crossTenantAccessSettings",
                 "microsoft.graph.networkaccess.conditionalAccessSettings",
-                "microsoft.graph.networkaccess.forwardingOptions"
+                "microsoft.graph.networkaccess.forwardingOptions",
+                "microsoft.graph.networkaccess.customBlockPage"
               ]
             },
             {
@@ -1851,7 +2284,22 @@
                 "microsoft.graph.networkaccess.filteringProfile",
                 "microsoft.graph.networkaccess.filteringPolicy",
                 "microsoft.graph.networkaccess.filteringPolicyLink",
-                "microsoft.graph.networkaccess.filteringRule"
+                "microsoft.graph.networkaccess.filteringRule",
+                "microsoft.graph.networkaccess.fqdnFilteringRule",
+                "microsoft.graph.networkaccess.urlDestinationFilteringRule",
+                "microsoft.graph.networkaccess.webCategoryFilteringRule",
+                "microsoft.graph.networkAccess.threatIntelligencePolicy",
+                "microsoft.graph.networkAccess.threatIntelligencePolicyLink",
+                "microsoft.graph.networkAccess.threatIntelligenceRule"
+
+              ]
+            },
+            {
+              "name": "Cloud firewall",
+              "resources": [
+                "microsoft.graph.networkaccess.cloudFirewallPolicy",
+                "microsoft.graph.networkaccess.cloudFirewallRule",
+                "microsoft.graph.networkaccess.cloudFirewallPolicyLink"
               ]
             },
             {
@@ -1862,10 +2310,22 @@
               ]
             },
             {
-              "name": "Traffic logs",
+              "name": "TLS inspection",
               "resources": [
-                "microsoft.graph.networkaccess.networkAccessTraffic",
-                "microsoft.graph.networkaccess.remoteNetworkHealthEvent"
+                "microsoft.graph.networkaccess.externalCertificateAuthorityCertificate",
+                "microsoft.graph.networkaccess.tlsInspectionPolicy",
+                "microsoft.graph.networkaccess.tlsInspectionPolicyLink",
+                "microsoft.graph.networkaccess.tlsInspectionRule"
+              ]
+            },
+            {
+              "name": "Logs and monitoring",
+              "resources": [
+              "microsoft.graph.networkaccess.reports",
+              "microsoft.graph.networkaccess.alert",
+              "microsoft.graph.networkaccess.deployment",
+              "microsoft.graph.networkaccess.networkAccessTraffic",
+              "microsoft.graph.networkaccess.remoteNetworkHealthEvent"
               ]
             }
           ]
@@ -1891,12 +2351,6 @@
                 "delegatedAdminRelationshipRequest",
                 "delegatedAdminRelationshipOperation",
                 "delegatedAdminCustomer"
-              ],
-              "complexTypes": [
-                "delegatedAdminAccessContainer",
-                "delegatedAdminAccessDetails",
-                "delegatedAdminRelationshipCustomerParticipant",
-                "unifiedRole"
               ]
             }
           ]
@@ -2021,12 +2475,16 @@
         "attachment",
         "outlookCategory",
         "mailFolder",
+        "mailFolderOperation",
         "mailSearchFolder",
-        "messageRule"
+        "messageRule",
+        "note",
+        "exchangeMessageTrace",
+        "userConfiguration"
       ],
       "childNodes": [
         {
-          "name": "Focused Inbox",
+          "name": "Focused inbox",
           "overview": "../../resources/manage-focused-inbox.md",
           "resources": [
             "inferenceClassificationOverride"
@@ -2040,6 +2498,31 @@
             "multiValueLegacyExtendedProperty"
           ]
         }
+      ],
+      "complexTypes":[
+        "structuredDataEntry",
+        "structuredDataEntryTypedValue",
+        "updateAllMessagesReadStateOperation"
+      ]
+    },
+    {
+      "name": "Mailbox import and export",
+      "overview": "../../resources/mailbox-import-export-api-overview.md",
+      "keywords": [
+        "Exchange",
+        "Exchange Import-Export",
+        "Mailbox",
+        "Mailbox import and export"
+      ],
+      "resources": [
+        "mailbox",
+        "mailboxItem",
+        "mailboxFolder",
+        "exchangeSettings"
+      ],
+      "complexTypes": [
+        "exportItemResponse",
+        "mailboxItemImportSession"
       ]
     },
     {
@@ -2088,8 +2571,15 @@
         "insightsSettings",
         "pronounsSettings",
         "photoUpdateSettings",
+        "namePronunciationSettings",
+        "enhancedPersonalizationSetting",
         "profile",
+        "profileSource",
+        "profilePropertySetting",
         "userAnalytics"
+      ],
+      "complexTypes": [
+        "profileSourceLocalization"
       ],
       "childNodes": [
         {
@@ -2101,9 +2591,12 @@
         {
           "name": "People admin settings",
           "resources": [
-            "pronounsSettings",
+            "namePronunciationSettings",
+            "photoUpdateSettings",
             "profileCardProperty",
-            "photoUpdateSettings"
+            "profilePropertySetting",
+            "profileSource",
+            "pronounsSettings"
           ]
         },
         {
@@ -2128,6 +2621,11 @@
             "skillProficiency",
             "webAccount",
             "personWebsite"
+          ],
+          "complexTypes": [
+            "companyDetail",
+            "originTenantInfo",
+            "positionDetail"
           ]
         },
         {
@@ -2183,23 +2681,22 @@
       "childNodes": [
         {
           "name": "Identity and access reports",
+          "overview": "../../resources/report-identity-access.md",
           "childNodes": [
             {
               "name": "Microsoft Entra recommendations (preview)",
               "overview": "../../resources/recommendations-api-overview.md",
               "resources": [
                 "recommendation",
-                "impactedResource"
+                "impactedResource",
+                "recommendationConfiguration"
               ]
             },
             {
               "name": "Microsoft Entra activity reports",
-              "overview": "../../resources/report-identity-access.md",
               "shouldSort": true,
               "resources": [
                 "appCredentialSignInActivity",
-                "azureADAuthentication",
-                "serviceActivity",
                 "servicePrincipalSignInActivity"
               ],
               "childNodes": [
@@ -2231,7 +2728,32 @@
                   ]
                 },
                 {
-                  "name": "Registration and usage",
+                  "name": "Microsoft Entra Health (preview)",
+                  "childNodes": [
+                    {
+                      "name": "SLA attainment",
+                      "resources": [
+                        "azureADAuthentication"
+                      ]
+                    },
+                    {
+                      "name": "Service activity",
+                      "resources": [
+                        "serviceActivity"
+                      ]
+                    },
+                    {
+                      "name": "Health monitoring",
+                      "overview": "../../resources/healthmonitoring-overview.md",
+                      "resources": [
+                        "microsoft.graph.healthMonitoring.alert",
+                        "microsoft.graph.healthMonitoring.alertConfiguration"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Authentication methods registration and usage",
                   "overview": "../../resources/authenticationmethods-usage-insights-overview.md",
                   "resources": [
                     "credentialUsageSummary",
@@ -2240,21 +2762,45 @@
                     "userCredentialUsageDetails",
                     "userRegistrationDetails",
                     "userRegistrationFeatureSummary",
-                    "userRegistrationMethodSummary"
+                    "userRegistrationMethodSummary",
+                    "userEventsSummary",
+                    "userMfaSignInSummary",
+                    "userPasswordResetsAndChangesSummary",
+                    "userRegistrationActivitySummary",
+                    "userSignInUsageByAuthMethodActivity"
+                  ]
+                },
+                {
+                  "name": "Premium license utilization (preview)",
+                  "resources": [
+                    "azureADPremiumLicenseInsight"
                   ]
                 }
               ]
             },
             {
-              "name": "Microsoft Entra audit logs",
+              "name": "Microsoft Entra logs and reports",
               "overview": "../../resources/azure-ad-auditlog-overview.md",
+              "shouldSort": true,
               "resources": [
+                "auditActivityType",
                 "customSecurityAttributeAudit",
                 "directoryAudit",
+                "provisioningObjectSummary",
+                "selfServiceSignUp",
                 "signIn",
-                "provisioningObjectSummary"
+                "signInEventsActivity",
+                "signInEventsAppActivity",
+                "summarizedSignIn"
               ]
             }
+          ]
+        },
+        {
+          "name": "Monitoring reports (preview)",
+          "overview": "../../resources/m365-monitoring-api-overview.md",
+          "resources": [
+            "serviceActivity"
           ]
         },
         {
@@ -2293,6 +2839,7 @@
             "microsoft.graph.partners.billing.billedUsage",
             "microsoft.graph.partners.billing.manifest",
             "microsoft.graph.partners.billing.operation",
+            "microsoft.graph.partners.billing.unbilledReconciliation",
             "microsoft.graph.partners.billing.unbilledUsage"
           ]
         }
@@ -2371,10 +2918,17 @@
         },
         {
           "name": "Alerts and incidents",
-          "resources": [
+      "resources": [
             "microsoft.graph.security.alert",
             "microsoft.graph.security.alertEvidence",
-            "microsoft.graph.security.incident"
+            "microsoft.graph.security.incident",
+            "microsoft.graph.security.incidentTask"
+          ],
+          "complexTypes": [
+            "microsoft.graph.security.aiAgentEvidence",
+            "microsoft.graph.security.securityGroupEvidence",
+            "microsoft.graph.security.teamsMessageEvidence",
+            "microsoft.graph.security.userAccount"
           ]
         },
         {
@@ -2409,14 +2963,78 @@
           "resources": [
             "microsoft.graph.security.auditLogQuery",
             "microsoft.graph.security.auditLogRecord"
-          ],
-          "complexTypes": [
-            "microsoft.graph.security.auditData",
-            "microsoft.graph.security.defaultAuditData"
           ]
         },
         {
+          "name": "Cloud zones or scopes (preview)",
+          "resources": [
+            "microsoft.graph.security.zone",
+            "microsoft.graph.security.environment"
+          ],
+          "complexTypes": [
+            "microsoft.graph.security.auditInfo"
+          ]
+        },
+        {
+          "name": "Data security and compliance",
+          "resources": [
+            "contentActivity",
+            "microsoft.graph.security.sensitivityLabel",
+            "tenantDataSecurityAndGovernance",
+            "userDataSecurityAndGovernance"
+           ],
+            "complexTypes": [
+              "aiAgentInfo",
+              "aiInteractionEntity",
+              "activityMetadata",
+              "aiInteractionPlugin",
+              "autoLabeling",
+              "binaryContent",
+              "blockAccessAction",
+              "classifcationErrorBase",
+              "classificationError",
+              "classificationInnerError",
+              "computeRightsAndInheritanceResult",
+              "contentBase",
+              "customMetadataDictionary",
+              "deviceMetadata",
+              "dlpActionInfo",
+              "groupScope",
+              "integratedApplicationMetadata",
+              "labelActionBase",
+              "labelContentRight",
+              "labelPolicy",
+              "notifyUserAction",
+              "operatingSystemSpecifications",
+              "policyBinding",
+              "policyLocation",
+              "policyLocationApplication",
+              "policyLocationDomain",
+              "policyLocationUrl",
+              "policyScopeBase",
+              "policyTenantScope",
+              "policyUserScope",
+              "processContentBatchRequest",
+              "processContentRequest",
+              "processContentResponse",
+              "processContentResponses",
+              "processConversationMetadata",
+              "processFileMetadata",
+              "processingError",
+              "protectedApplicationMetadata",
+              "protectedContent",
+              "resourceAccessDetail",
+              "restrictAccessAction",
+              "restrictAccessActionBase",
+              "scopeBase",
+              "tenantScope",
+              "textContent",
+              "userScope"
+            ]
+          },
+        {
           "name": "eDiscovery",
+          "overview": "../../resources/security-ediscovery-apioverview.md",
           "resources": [
             "microsoft.graph.security.ediscoveryCase",
             "microsoft.graph.security.ediscoveryCaseSettings",
@@ -2426,7 +3044,16 @@
             "microsoft.graph.security.ediscoveryHoldPolicy",
             "microsoft.graph.security.ediscoverySearch",
             "microsoft.graph.security.ediscoveryReviewSet",
-            "microsoft.graph.security.ediscoveryReviewTag"
+            "microsoft.graph.security.ediscoveryReviewTag",
+            "microsoft.graph.security.ediscoveryCaseMember"
+          ],
+          "childNodes": [
+            {
+              "name": "eDiscovery review set",
+              "resources": [
+                "microsoft.graph.security.ediscoveryReviewSetQuery"
+              ]
+            }
           ]
         },
         {
@@ -2447,9 +3074,24 @@
           ]
         },
         {
-          "name": "Identities (preview)",
+          "name": "Identities",
           "resources": [
-            "microsoft.graph.security.healthIssue"
+            "microsoft.graph.security.healthIssue",
+            "microsoft.graph.security.sensor",
+            "microsoft.graph.security.identityAccounts",
+            "microsoft.graph.security.user",
+            "microsoft.graph.security.sensorCandidate",
+            "microsoft.graph.security.sensorCandidateActivationConfiguration",
+            "microsoft.graph.security.autoAuditingConfiguration"
+          ],
+          "complexTypes": [
+            "microsoft.graph.security.deploymentAccessKeyType",
+            "microsoft.graph.security.identityContainer",
+            "microsoft.graph.security.networkAdapter",
+            "microsoft.graph.security.sensorDeploymentPackage",
+            "microsoft.graph.security.sensorSettings",
+            "microsoft.graph.security.invokeActionResult",
+            "microsoft.graph.security.account"
           ]
         },
         {
@@ -2501,6 +3143,16 @@
                 "microsoft.graph.security.filePlanReference"
               ]
             }
+          ]
+        },
+        {
+          "name": "Security Copilot",
+          "resources": [
+            "microsoft.graph.security.securitycopilot.workspace",
+            "microsoft.graph.security.securitycopilot.session",
+            "microsoft.graph.security.securitycopilot.prompt",
+            "microsoft.graph.security.securitycopilot.evaluation",
+            "microsoft.graph.security.securitycopilot.plugin"
           ]
         },
         {
@@ -2557,6 +3209,19 @@
             "microsoft.graph.security.fileThreatSubmission",
             "microsoft.graph.security.urlThreatSubmission"
           ]
+        },
+        {
+          "name": "Discovered cloud apps (preview)",
+          "overview": "../../resources/security-cloudappdiscovery-overview.md",
+          "resources": [
+            "microsoft.graph.security.cloudAppDiscoveryReport",
+            "microsoft.graph.security.discoveredCloudAppDetail",
+            "microsoft.graph.security.discoveredCloudAppInfo",
+            "microsoft.graph.security.discoveredCloudAppUser",
+            "microsoft.graph.security.discoveredCloudAppIPAddress",
+            "microsoft.graph.security.discoveredCloudAppDevice",
+            "microsoft.graph.security.endpointDiscoveredCloudAppDetail"
+          ]
         }
       ]
     },
@@ -2583,13 +3248,22 @@
         "permission",
         "sharepointSettings"
       ],
+      "complexTypes": [
+        "identityInput"
+      ],
       "childNodes": [
         {
           "name": "Pages",
           "resources": [
             "baseSitePage",
+            "newsLinkPage",
+            "pageTemplate",
             "sitePage",
             "webPart"
+          ],
+          "complexTypes": [
+            "createFromTemplate",
+            "saveAsTemplate"
           ],
           "childNodes": [
             {
@@ -2634,12 +3308,14 @@
         "plannerPlanDetails",
         "plannerRoster",
         "plannerUser",
-        "plannerTaskDetails"
+        "plannerTaskDetails",
+        "teamsChannelPlanner"
       ],
       "complexTypes": [
         "businessScenarioGroupTarget",
         "businessScenarioProperties",
         "businessScenarioTaskTargetBase",
+        "contentSensitivityLabelAssignment",
         "identity",
         "identitySet",
         "itemBody",
@@ -2676,13 +3352,19 @@
         "plannerRuleOverride",
         "plannerSharedWithContainer",
         "plannerTaskCompletionRequirementDetails",
+        "plannerTaskChatMention",
+        "plannerTaskChatMessage",
+        "plannerTaskChatReaction",
+        "plannerTaskChatReactionEvent",
         "plannerTaskCreation",
         "plannerTaskPropertyRule",
         "plannerTaskRecurrence",
         "plannerTeamsPublicationInfo",
         "plannerUserIds",
+        "planUsageRight",
         "recurrencePattern",
-        "sensitivityLabelAssignment"
+        "sensitivityLabelAssignment",
+        "usageRightsInfo"
       ],
       "childNodes": [
         {
@@ -2723,6 +3405,25 @@
       ],
       "childNodes": [
         {
+          "name": "Administration",
+          "resources": [
+            "microsoft.graph.teamsAdministration.numberAssignment",
+            "microsoft.graph.teamsAdministration.telephoneNumberLongRunningOperation",
+            "microsoft.graph.teamsAdministration.telephoneNumberManagementRoot",
+            "microsoft.graph.teamsAdministration.teamsPolicyAssignment",
+            "microsoft.graph.teamsAdministration.teamsPolicyUserAssignment",
+            "microsoft.graph.teamsAdministration.teamsUserConfiguration",
+            "microsoft.graph.teamsAdministration.telephoneNumberLongRunningOperation"
+          ],
+          "complexTypes": [
+            "microsoft.graph.teamsAdministration.assignedTelephoneNumber",
+            "microsoft.graph.teamsAdministration.effectivePolicyAssignment",
+            "microsoft.graph.teamsAdministration.policyAssignment",
+            "microsoft.graph.teamsAdministration.policyIdentifierDetail",
+            "microsoft.graph.teamsAdministration.telephoneNumberLongRunningOperationDetails"
+          ]
+        },
+        {
           "name": "Approvals",
           "resources": [
             "approvalItem",
@@ -2742,6 +3443,13 @@
             "teamsAppSettings",
             "teamsTab",
             "resourceSpecificPermissionGrant"
+          ],
+          "complexTypes": [
+            "customAppSettings",
+            "groupChatTeamsAppInstallationScopeInfo",
+            "personalTeamsAppInstallationScopeInfo",
+            "teamsAppInstallationScopeInfo",
+            "teamTeamsAppInstallationScopeInfo"
           ]
         },
         {
@@ -2750,7 +3458,17 @@
           "resources": [
             "presence"
           ],
+          "complexTypes": [
+            "outOfOfficeSettings",
+            "userWorkLocation"
+          ],
           "childNodes": [
+            {
+              "name": "Ad hoc call",
+              "resources": [
+                "adhocCall"
+              ]
+            },
             {
               "name": "Calls",
               "resources": [
@@ -2759,6 +3477,28 @@
                 "contentSharingSession",
                 "participant",
                 "addLargeGalleryViewOperation"
+              ]
+            },
+            {
+              "name": "Call delegation",
+              "overview": "../../resources/calldelegation-api-overview.md",
+              "resources": [
+                "callSettings",
+                "delegationSettings"
+              ],
+              "complexTypes": [
+                "delegateAllowedActions",
+                "userCloudCommunication"
+              ]
+            },
+            {
+              "name": "Call events",
+              "resources": [
+                "callEvent",
+                "emergencyCallEvent"
+              ],
+              "complexTypes": [
+                "emergencyCallerInfo"
               ]
             },
             {
@@ -2781,6 +3521,7 @@
                 "meetingAttendanceReport",
                 "attendanceRecord",
                 "onlineMeeting",
+                "onlineMeetingEngagementConversation",
                 "externalMeetingRegistration",
                 "meetingRegistration",
                 "callRecording",
@@ -2804,6 +3545,14 @@
                     }
                   ]
                 }
+              ],
+              "complexTypes": [
+                "actionItem",
+                "aiOnlineMeeting",
+                "meetingNote",
+                "meetingNoteSubpoint",
+                "mentionEvent",
+                "identitySet"
               ]
             },
             {
@@ -2816,6 +3565,9 @@
                 "virtualEventSession",
                 "virtualEventTownhall",
                 "virtualEventWebinar"
+              ],
+              "complexTypes": [
+                "virtualEventExternalInformation"
               ]
             }
           ]
@@ -2874,6 +3626,7 @@
             "chatMessage",
             "pinnedChatMessageInfo",
             "deletedChat",
+            "targetedChatMessage",
             "team",
             "teamworkTag",
             "teamworkTagMember"
@@ -2899,7 +3652,20 @@
                   "href": "../../api/teamwork-sendactivitynotificationtorecipients.md"
                 }
               ]
+            },
+            {
+              "name": "Sections (preview)",
+              "resources": [
+                "teamworkSection",
+                "teamworkSectionItem"
+              ],
+              "complexTypes": [
+                "sectionDisplayIcon"
+              ]
             }
+          ],
+          "complexTypes": [
+            "forwardToChatResult"
           ]
         },
         {
@@ -2910,6 +3676,7 @@
             "openShift",
             "openShiftChangeRequest",
             "schedule",
+            "scheduleChangeRequest",
             "schedulingGroup",
             "shift",
             "shiftPreferences",
@@ -2920,8 +3687,7 @@
             "timeOffReason",
             "timeOffRequest",
             "workforceIntegration",
-            "workingTimeSchedule",
-            ""
+            "workingTimeSchedule"
           ],
           "complexTypes": [
             "geoCoordinates",
@@ -2947,6 +3713,46 @@
             "timeRange",
             "userSolutionRoot",
             "workforceIntegrationEncryption"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tenants",
+      "shouldSort": true,
+      "overview": "../../resources/tenants-overview.md",
+      "keywords": [
+        "tenant management",
+        "tenant configuration",
+        "tenant governance",
+        "Lighhouse",
+        "cross-tenant access",
+        "multitenant",
+        "backup",
+        "recovery"
+      ],
+      "childNodes": [
+        {
+          "name": "Configuration management",
+          "overview": "../../resources/unified-tenant-configuration-management-api-overview.md",
+          "resources": [
+            "configurationBaseline",
+            "configurationDrift",
+            "configurationMonitor",
+            "configurationMonitoringResult",
+            "configurationSnapshotJob"
+          ]
+        },
+        {
+          "name": "Governance (preview)",
+          "overview": "../../resources/tenantgovernanceservices-tenantgovernance-overview.md",
+          "resources": [
+            "microsoft.graph.tenantGovernanceServices.tenantGovernanceSetting",
+            "microsoft.graph.tenantGovernanceServices.relatedTenant",
+            "microsoft.graph.tenantGovernanceServices.governancePolicyTemplate",
+            "microsoft.graph.tenantGovernanceServices.governanceInvitation",
+            "microsoft.graph.tenantGovernanceServices.governanceRequest",
+            "microsoft.graph.tenantGovernanceServices.governanceRelationship"
           ]
         }
       ]
@@ -3043,6 +3849,7 @@
         "workbookChartPointFormat",
         "workbookChartSeriesFormat",
         "workbookChartTitleFormat",
+        "workbookCommentMention",
         "workbookDocumentTaskSchedule",
         "workbookEmailIdentity",
         "workbookFilterCriteria",
@@ -3067,6 +3874,11 @@
     {
       "resource": "partnerSecurityAlert",
       "overview": "../../resources/partner-security-partnersecurityalert-api-overview.md"
+    },
+    {
+      "resource": "incidentTask",
+      "overview": "../../resources/security-incidenttask.md"
     }
   ]
 }
+

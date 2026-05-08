@@ -6,6 +6,7 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 09/10/2024
 ---
 
 # Get restoreSessionBase
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /solutions/backupRestore/restoreSessions/{restoreSessionBaseId}
 ```
 
@@ -61,16 +62,12 @@ The following example shows a request.
   "name": "restoresessionbase_get"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/solutions/backupRestore/restoreSessions/959ba739-70b5-43c4-8c90-b2c22014f18b
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/restoresessionbase-get-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/restoresessionbase-get-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -89,6 +86,10 @@ GET https://graph.microsoft.com/v1.0/solutions/backupRestore/restoreSessions/959
 [!INCLUDE [sample-code](../includes/snippets/php/restoresessionbase-get-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/restoresessionbase-get-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/restoresessionbase-get-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -105,7 +106,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.restoreSessionBase"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -113,6 +114,13 @@ Content-Type: application/json
   "@odata.type": "#microsoft.graph.sharepointRestoreSession",
   "id": "959ba739-70b5-43c4-8c90-b2c22014f18b",
   "status": "active",
+  "restoreJobType": "standard",
+  "restoreSessionArtifactCount": {
+    "total": 2,
+    "completed": 1,
+    "inProgress": 1,
+    "failed": 0
+  },
   "createdBy": {
     "application": {
       "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",

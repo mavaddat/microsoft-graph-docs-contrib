@@ -5,6 +5,7 @@ author: "AlexFilipin"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 08/14/2024
 ---
 
 # Delete deletedItemContainer (permanently delete a deleted lifecycle workflow)
@@ -15,7 +16,7 @@ Namespace: microsoft.graph.identityGovernance
 
 Delete a [workflow](../resources/identitygovernance-workflow.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflowId}/
 ```
 
@@ -62,16 +63,12 @@ The following example shows a request.
   "name": "lifecycleworkflows_delete_deleteditems"
 }
 -->
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflowId}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/lifecycleworkflows-delete-deleteditems-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/lifecycleworkflows-delete-deleteditems-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -108,6 +105,6 @@ DELETE https://graph.microsoft.com/beta/identityGovernance/lifecycleWorkflows/de
   
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

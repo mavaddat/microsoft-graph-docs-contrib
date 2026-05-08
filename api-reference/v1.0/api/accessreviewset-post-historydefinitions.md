@@ -5,6 +5,7 @@ author: "jyothig123"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Create historyDefinitions
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /identityGovernance/accessReviews/historyDefinitions
 ```
 
@@ -78,7 +79,7 @@ The following example shows how to create an access review history definition sc
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/identityGovernance/accessReviews/historyDefinitions
 Content-Type: application/json
 
@@ -112,10 +113,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-accessreviewhistorydefinition-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-accessreviewhistorydefinition-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -154,7 +151,7 @@ Content-Type: application/json
 }
 -->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

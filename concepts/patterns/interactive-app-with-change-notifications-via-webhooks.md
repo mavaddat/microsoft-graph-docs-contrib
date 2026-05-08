@@ -2,7 +2,9 @@
 title: "Build interactive Microsoft Graph apps with real-time feed"
 description: "Learn how to use the Microsoft Graph integration pattern for interactive apps that use change notifications."
 author: "OlgaPodo"
-ms.localizationpriority: low
+ms.localizationpriority: medium
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Build interactive Microsoft Graph apps with real-time feed

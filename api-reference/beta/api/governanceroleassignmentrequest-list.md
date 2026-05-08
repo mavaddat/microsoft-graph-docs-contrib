@@ -1,14 +1,15 @@
 ---
-title: "List governanceRoleAssignmentRequests"
+title: "List governanceRoleAssignmentRequests (deprecated)"
 description: "Retrieve a collection of governanceRoleAssignmentRequests. "
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 08/02/2024
 ---
 
-# List governanceRoleAssignmentRequests
+# List governanceRoleAssignmentRequests (deprecated)
 
 Namespace: microsoft.graph
 

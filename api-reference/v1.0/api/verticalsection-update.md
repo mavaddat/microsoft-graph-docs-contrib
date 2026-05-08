@@ -5,6 +5,7 @@ author: sangle7
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 # Update verticalSection
 
@@ -13,6 +14,8 @@ Namespace: microsoft.graph
 Update the properties of a [verticalSection](../resources/verticalSection.md) object.
 
 If the vertical section does not exist, this method returns a `404 NotFound` response code.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 

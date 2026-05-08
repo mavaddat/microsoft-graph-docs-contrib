@@ -5,6 +5,7 @@ author: "soneff"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 10/15/2024
 ---
 
 # onTokenIssuanceStartListener resource type
@@ -18,12 +19,13 @@ Inherits from [authenticationEventListener](../resources/authenticationeventlist
 ## Methods
 None.
 
-For the list of API operations for managing this resource type, see the [authenticationEventListener](../resources/authenticationeventlistener.md) resource type.        
+For the list of API operations for managing this resource type, see the [authenticationEventListener](../resources/authenticationeventlistener.md) resource type.   
 
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
 |conditions|[authenticationConditions](../resources/authenticationconditions.md)|The conditions on which onTokenIssuanceStartListener should trigger. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
+|displayName|String|The display name of the listener. Inherited from [authenticationEventListener](../resources/authenticationeventlistener.md).|
 |handler|[onTokenIssuanceStartHandler](../resources/ontokenissuancestarthandler.md)|The handler to invoke when conditions are met for this onTokenIssuanceStartListener.|
 |id|String|Identifier for the onTokenIssuanceStartListener. Inherited from [entity](../resources/entity.md).|
 
@@ -44,6 +46,7 @@ The following JSON representation shows the resource type.
 {
   "@odata.type": "#microsoft.graph.onTokenIssuanceStartListener",
   "id": "String (identifier)",
+  "displayName": "String",
   "conditions": {
     "@odata.type": "microsoft.graph.authenticationConditions"
   },

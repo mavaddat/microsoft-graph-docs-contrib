@@ -6,6 +6,7 @@ ms.reviewer: ciem_pm
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Get inactiveAwsRoleFinding
@@ -57,7 +58,7 @@ The following example shows a request.
   "name": "get_inactiveawsrolefinding"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/findings/MSxJbmFjdGl2ZUF3c1JvbGVGaW5kaW5nLDY1MTY0MA/microsoft.graph.inactiveAwsRoleFinding
 ```
 
@@ -76,7 +77,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.inactiveAwsRoleFinding"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 

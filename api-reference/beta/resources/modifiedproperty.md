@@ -2,9 +2,10 @@
 title: "modifiedProperty resource type"
 description: "Describes the changes performed in the target system."
 ms.localizationpriority: medium
-author: "keylimesoda"
+author: "FaithOmbongi"
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # modifiedProperty resource type
@@ -22,6 +23,9 @@ Describes the changes performed in the target system.
 |displayName|String|Name of property that was modified.|
 |newValue|String|New property value.|
 |oldValue|String|Old property value.|
+
+## Relationships
+None.
 
 ## JSON representation
 

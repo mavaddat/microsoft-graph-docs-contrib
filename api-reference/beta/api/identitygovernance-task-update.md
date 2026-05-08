@@ -5,6 +5,7 @@ author: "AlexFilipin"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Update task
@@ -15,7 +16,7 @@ Namespace: microsoft.graph.identityGovernance
 
 Update the properties of a [task](../resources/identitygovernance-task.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /identityGovernance/lifecycleWorkflows/workflows/{workflowId}/tasks/{taskId}
 ```
 
@@ -71,7 +72,7 @@ The following example shows a request.
   "name": "lifecycleworkflows_update_task"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/identitygovernance/lifecycleWorkflows/workflows/8696088c-1aef-4f65-afe9-acd55343e327/tasks/eb0b8bc2-7756-4429-8ce8-b9f09063cf54
 Content-Type: application/json
 Content-length: 454
@@ -84,10 +85,6 @@ Content-length: 454
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/lifecycleworkflows-update-task-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/lifecycleworkflows-update-task-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -124,6 +121,6 @@ Content-length: 454
 
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

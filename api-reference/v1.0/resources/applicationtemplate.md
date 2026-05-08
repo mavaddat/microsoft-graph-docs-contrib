@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: 'luleonpla'
 ms.subservice: 'entra-applications'
 doc_type: resourcePageType
+ms.date: 07/16/2024
 ---
 
 # applicationTemplate resource type
@@ -25,9 +26,9 @@ Represents an application in the [Microsoft Entra application gallery](/azure/ac
 
 | Property                   | Type              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | :------------------------- | :---------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| categories                 | String collection | The list of categories for the application. Supported values can be: `Collaboration`, `Business Management`, `Consumer`, `Content management`, `CRM`, `Data services`, `Developer services`, `E-commerce`, `Education`, `ERP`, `Finance`, `Health`, `Human resources`, `IT infrastructure`, `Mail`, `Management`, `Marketing`, `Media`, `Productivity`, `Project management`, `Telecommunications`, `Tools`, `Travel`, and `Web design & hosting`. |
+| categories                 | String collection | The list of categories for the application. Supported values can be: `Collaboration`, `Business Management`, `Consumer`, `Content management`, `CRM`, `Data services`, `Developer services`, `E-commerce`, `Education`, `ERP`, `Finance`, `Health`, `Human resources`, `IT infrastructure`, `Mail`, `Management`, `Marketing`, `Media`, `Productivity`, `Project management`, `Telecommunications`, `Tools`, `Travel`, and `Web design & hosting`. <br/><br/> Supports `$filter` (`contains`). |
 | description                | String            | A description of the application.                                                                                                                                                                                                                                                                                                                                                                                                               |
-| displayName                | String            | The name of the application.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| displayName                | String            | The name of the application. Supports `$filter` (`contains`).                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | homePageUrl                | String            | The home page URL of the application.                                                                                                                                                                                                                                                                                                                                                                                                           |
 | id                         | String            | Unique identifier for the application. Read-only.                                                                                                                                                                                                                                                                                                                                                                                               |
 | logoUrl                    | String            | The URL to get the logo for this application.                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -64,6 +65,10 @@ The following JSON representation shows the resource type.
   "supportedSingleSignOnModes": ["supportedSingleSignOnModes-value"]
 }
 ```
+
+## Related content
+
+[Quickstart: Add an enterprise application from the Microsoft Entra gallery](/entra/identity/enterprise-apps/add-application-portal)
 
 <!-- uuid: 16cd6b66-4b1a-43a1-adaf-3a886856ed98
 2019-02-04 14:57:30 UTC -->

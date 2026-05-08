@@ -8,6 +8,7 @@ ms.subservice: "entra-monitoring-health"
 doc_type: resourcePageType
 toc.keywords: [ TAP ]
 toc.title: Temporary Access Pass
+ms.date: 07/22/2024
 ---
 
 # temporaryAccessPassAuthenticationMethod resource type
@@ -36,6 +37,7 @@ This is a derived type that inherits from the [authenticationMethod](authenticat
 |id|String|The identifier of the Temporary Access Pass registered to this user. Inherited from [entity](../resources/entity.md).|
 |isUsableOnce|Boolean|Determines whether the pass is limited to a one-time use. If `true`, the pass can be used once; if `false`, the pass can be used multiple times within the Temporary Access Pass lifetime.|
 |isUsable|Boolean|The state of the authentication method that indicates whether it's currently usable by the user.|
+|lastUsedDateTime|DateTimeOffset|The date and time the authentication method was last used by the user. Read-only. Optional. This optional value is `null` if the authentication method doesn't populate it. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [authenticationMethod](../resources/authenticationmethod.md).|
 |lifetimeInMinutes|Int32|The lifetime of the Temporary Access Pass in minutes starting at **startDateTime**. Must be between 10 and 43200 inclusive (equivalent to 30 days).|
 |methodUsabilityReason|String|Details about the usability state (**isUsable**). Reasons can include: `EnabledByPolicy`, `DisabledByPolicy`, `Expired`, `NotYetValid`, `OneTimeUsed`.|
 |startDateTime|DateTimeOffset|The date and time when the Temporary Access Pass becomes available to use and when **isUsable** is `true` is enforced.|
@@ -46,7 +48,6 @@ This is a derived type that inherits from the [authenticationMethod](authenticat
 None.
 
 The following JSON representation shows the resource type.
-The following is a JSON representation of the resource.
 <!-- {
   "blockType": "resource",
   "keyProperty": "id",
@@ -61,6 +62,7 @@ The following is a JSON representation of the resource.
   "id": "String (identifier)",
   "temporaryAccessPass": "String",
   "createdDateTime": "String (timestamp)",
+  "lastUsedDateTime": "String (timestamp)",
   "startDateTime": "String (timestamp)",
   "lifetimeInMinutes": "Integer",
   "isUsableOnce": "Boolean",

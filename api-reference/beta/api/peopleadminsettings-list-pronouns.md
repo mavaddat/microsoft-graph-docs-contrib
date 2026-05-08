@@ -5,6 +5,7 @@ author: "aymen-ms"
 ms.localizationpriority: medium
 ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 06/11/2024
 ---
 
 # List pronounsSettings
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/people/pronouns
 ```
 
@@ -62,16 +63,12 @@ The following example shows a request.
   "name": "list_pronounssettings"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/admin/people/pronouns
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-pronounssettings-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-pronounssettings-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,7 +107,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.pronounsSettings"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

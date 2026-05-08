@@ -1,10 +1,11 @@
 ---
 title: "List fileStorageContainer custom properties"
-description: "List the custom properties of a fileStorageContainer"
+description: "List the custom properties of a fileStorageContainer."
 author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 11/12/2024
 ---
 
 # List fileStorageContainer custom properties
@@ -21,13 +22,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "filestoragecontainer_list_customproperty" } -->
 [!INCLUDE [permissions-table](../includes/permissions/filestoragecontainer-list-customproperty-permissions.md)]
 
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-permissions.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /storage/fileStorage/containers/{containerId}/customProperties
 GET /storage/fileStorage/containers/{containerId}/customProperties/{propertyName}
 ```
@@ -43,16 +46,19 @@ If successful, this method returns a `200 OK` response code.
 
 ## Examples
 
-### Request
+### Example 1
+
+#### Request
 The following example shows how to get a custom property named `clientUniquieId`.
+
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "list_filestoragecontainer_customproperty_1"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/customProperties/clientUniqueId
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/customProperties/clientUniqueId
 ```
 
 # [JavaScript](#tab/javascript)
@@ -61,7 +67,9 @@ GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId
 
 ---
 
-### Response
+---
+
+#### Response
 The following example shows the response.
 <!-- {
   "blockType": "response",
@@ -69,7 +77,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.fileStorageContainerCustomPropertyValue)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 Ok
 Content-type: application/json
 
@@ -79,7 +87,8 @@ Content-type: application/json
 }
 
 ```
-### Request
+### Example 2
+#### Request
 The following example shows how to get all the custom properties of a **fileStorageContainer**.
 # [HTTP](#tab/http)
 <!-- {
@@ -87,13 +96,15 @@ The following example shows how to get all the custom properties of a **fileStor
   "name": "list_filestoragecontainer_customproperty_2"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/customProperties/
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/customProperties
 ```
 
 # [JavaScript](#tab/javascript)
 [!INCLUDE [sample-code](../includes/snippets/javascript/list-filestoragecontainer-customproperty-2-javascript-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ---
 
@@ -105,7 +116,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.fileStorageContainerCustomPropertyDictionary"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 Ok
 Content-type: application/json
 

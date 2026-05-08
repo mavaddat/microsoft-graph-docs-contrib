@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "arvindmicrosoft"
 ms.subservice: "microsoft-bookings"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # bookingService resource type
@@ -36,7 +37,7 @@ Inherits from [bookingNamedEntity](bookingNamedEntity.md).
 |defaultDuration|Duration|The default length of the service, represented in numbers of days, hours, minutes, and seconds. For example, P11D23H59M59.999999999999S. |
 |defaultLocation|[location](location.md)|The default physical location for the service.|
 |defaultPrice|Double|The default monetary price for the service.|
-|defaultPriceType|bookingPriceType|The default way the service is charged. Possible values are: `undefined`, `fixedPrice`, `startingAt`, `hourly`, `free`, `priceVaries`, `callUs`, `notSet`, `unknownFutureValue`.|
+|defaultPriceType|bookingPriceType|The default way the service is charged. The possible values are: `undefined`, `fixedPrice`, `startingAt`, `hourly`, `free`, `priceVaries`, `callUs`, `notSet`, `unknownFutureValue`.|
 |defaultReminders|[bookingReminder](bookingreminder.md) collection|The default set of reminders for an appointment of this service. The value of this property is available only when reading this **bookingService** by its ID.|
 |description|String|A text description for the service.|
 |displayName|String|A service name.|

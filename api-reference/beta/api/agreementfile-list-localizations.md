@@ -5,6 +5,7 @@ author: AlexFilipin
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # List agreementFileLocalizations
@@ -22,13 +23,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "agreementfile_list_localizations" } -->
 [!INCLUDE [permissions-table](../includes/permissions/agreementfile-list-localizations-permissions.md)]
 
+[!INCLUDE [rbac-tou-security-reader-apis](../includes/rbac-for-apis/rbac-tou-security-reader-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /agreements/{agreementsId}/file/localizations
 ```
 
@@ -57,16 +60,12 @@ The following example shows a request.
   "name": "list_agreementfile_localization"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/agreements/94410bbf-3d3e-4683-8149-f034e55c39dd/file/localizations
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-agreementfile-localization-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-agreementfile-localization-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -104,7 +103,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.agreementFileLocalization)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

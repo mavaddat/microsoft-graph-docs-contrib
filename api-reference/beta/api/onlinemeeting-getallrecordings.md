@@ -5,6 +5,7 @@ author: "suvanka"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 08/06/2024
 ---
 
 # onlineMeeting: getAllRecordings
@@ -29,20 +30,20 @@ To learn more about using the Microsoft Teams export APIs to export content, see
 
 The following known issues are associated with this API:
 
-- [Using the `$top` query parameter might not return the **@odata.nextLink**](https://developer.microsoft.com/en-us/graph/known-issues/?search=22931).
-- [Recordings aren't exported for meetings that don't have transcription turned on](https://developer.microsoft.com/en-us/graph/known-issues/?search=22933).
+- [Using the `$top` query parameter might not return the **@odata.nextLink**](/graph/known-issues#apis-that-export-online-meeting-artifacts-might-not-return-nextlink-when-the-request-uses-the-top-query-parameter).
+- [Recordings aren't exported for meetings that don't have transcription turned on](/graph/known-issues#apis-that-export-online-meeting-artifacts-dont-return-recordings-for-meetings-without-transcriptions-enabled).
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "onlinemeeting_getallrecordings" } -->
+<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
 [!INCLUDE [permissions-table](../includes/permissions/onlinemeeting-getallrecordings-permissions.md)]
 
 ## HTTP request
 
 <!-- { "blockType": "ignored" } -->
-``` http
+```http
 GET /users/{usersId}/onlineMeetings/getAllRecordings(meetingOrganizerUserId='{userId}',startDateTime={startDateTime},endDateTime={endDateTime})
 ```
 >**Note:** The request fails if you don't pass the function parameter **meetingOrganizerUserId**.
@@ -98,10 +99,6 @@ GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-allrecordings-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-allrecordings-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-allrecordings-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -119,7 +116,7 @@ GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/get-allrecordings-powershell-snippets.md)]
+[!INCLUDE [snippet-not-available](../includes/snippets/snippet-not-available.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -190,10 +187,6 @@ GET https://graph.microsoft.com/beta/users/8b081ef6-4792-4def-b2c9-c363a1bf41d5/
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-allrecordings-with-dates-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-allrecordings-with-dates-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

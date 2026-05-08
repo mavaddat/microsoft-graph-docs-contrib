@@ -5,6 +5,9 @@ ms.localizationpriority: medium
 author: "cristobal-buenrostro"
 ms.subservice: "education"
 doc_type: conceptualPageType
+ms.date: 11/07/2024
+ms.custom: sfi-ga-blocked
+ms.topic: how-to
 ---
 
 # Set up Microsoft Teams to work with tenant users

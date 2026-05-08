@@ -5,6 +5,7 @@ author: "tommoser"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # addWatermarkAction resource type
@@ -23,7 +24,7 @@ Inherits from [informationProtectionAction](../resources/security-informationpro
 | fontColor     | String | Color of the font to use for the watermark.                                 |
 | fontName      | String | Name of the font to use for the watermark.                                  |
 | fontSize      | Int32  | Font size to use for the watermark.                                         |
-| layout        | String | The layout of the watermark. Possible values are: `horizontal`, `diagonal`. |
+| layout        | String | The layout of the watermark. The possible values are: `horizontal`, `diagonal`. |
 | text          | String | The contents of the watermark itself.                                       |
 | uiElementName | String | The name of the UI element where the watermark should be placed.            |
 

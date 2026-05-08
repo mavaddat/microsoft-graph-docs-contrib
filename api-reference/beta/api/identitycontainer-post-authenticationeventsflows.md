@@ -5,6 +5,7 @@ author: "nanguil"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 08/09/2024
 ---
 
 # Create authenticationEventsFlow
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /identity/authenticationEventsFlows
 ```
 
@@ -78,7 +79,7 @@ The following example shows a request. In this example, you create a user flow n
   "name": "create_authenticationeventsflow_selfservicesignup"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/authenticationEventsFlows
 Content-Type: application/json
 
@@ -151,10 +152,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventsflow-selfservicesignup-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-authenticationeventsflow-selfservicesignup-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventsflow-selfservicesignup-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -191,7 +188,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationEventsFlow"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -270,7 +267,7 @@ The following example shows a request. In this example, you create a user flow n
   "name": "create_authenticationeventsflow_selfservicesignup_includeapplications"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/authenticationEventsFlows
 Content-Type: application/json
 
@@ -352,10 +349,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventsflow-selfservicesignup-includeapplications-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-authenticationeventsflow-selfservicesignup-includeapplications-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventsflow-selfservicesignup-includeapplications-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -392,7 +385,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationEventsFlow"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -476,7 +469,7 @@ The following example shows a request. In this example, you create a user flow n
   "name": "create_authenticationeventsflow__selfservicesignup_socialproviders_customattribute"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/authenticationEventsFlows
 Content-Type: application/json
 
@@ -572,10 +565,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-authenticationeventsflow--selfservicesignup-socialproviders-customattribute-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-authenticationeventsflow--selfservicesignup-socialproviders-customattribute-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-authenticationeventsflow--selfservicesignup-socialproviders-customattribute-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -611,7 +600,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationEventsFlow"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

@@ -5,6 +5,7 @@ author: "AshleyYangSZ"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 08/14/2024
 ---
 
 # virtualEndpoint: retrieveTenantEncryptionSetting
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 GET /deviceManagement/virtualEndpoint/retrieveTenantEncryptionSetting
 ```
 
@@ -55,7 +56,7 @@ If successful, this function returns a `200 OK` response code and a [cloudPcTena
 
 The following example shows the request.
 
-``` http
+```http
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/retrieveTenantEncryptionSetting
 ```
 

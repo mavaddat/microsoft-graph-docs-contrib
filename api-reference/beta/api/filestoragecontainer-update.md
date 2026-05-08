@@ -1,11 +1,11 @@
 ---
 title: "Update fileStorageContainer"
-
 description: "Update the properties of a fileStorageContainer object."
 author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 11/12/2024
 ---
 
 # Update fileStorageContainer
@@ -17,7 +17,7 @@ Namespace: microsoft.graph
 
 Update the properties of a [fileStorageContainer](../resources/filestoragecontainer.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -26,13 +26,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "filestoragecontainer_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/filestoragecontainer-update-permissions.md)]
 
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-permissions.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /storage/fileStorage/containers/{containerId}
 ```
 
@@ -52,31 +54,29 @@ If successful, this method returns a `200 OK` response code and an updated [file
 
 ### Request
 The following example shows a request.
+
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_filestoragecontainer"
 }
 -->
-``` http
-PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}
+```http
+PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z
 Content-Type: application/json
 
 {
   "displayName": "Updated Name",
   "description": "Updated Description",
   "settings": {
-    "isOcrEnabled": false
+    "isOcrEnabled": false,
+    "itemDefaultSensitivityLabelId": "3d8789ae-7375-4ded-8eeb-d6bc226e42fb"
   }
 }
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-filestoragecontainer-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-filestoragecontainer-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,7 +110,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.fileStorageContainer"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
@@ -123,7 +123,10 @@ Content-type: application/json
   "status": "active",
   "createdDateTime": "2021-11-24T15:41:52.347Z",
   "settings": {
-    "isOcrEnabled": false
+    "isOcrEnabled": false,
+    "itemMajorVersionLimit": 50,
+    "isItemVersioningEnabled": true,
+    "itemDefaultSensitivityLabelId": "3d8789ae-7375-4ded-8eeb-d6bc226e42fb"
   }
 }
 ```

@@ -5,6 +5,7 @@ author: "snlraju-msft"
 ms.localizationpriority: medium
 ms.subservice: "search"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Create externalGroup
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /external/connections/{connectionId}/groups
 ```
 
@@ -71,7 +72,7 @@ The following example shows a request.
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/external/connections/contosohr/groups
 Content-Type: application/json
 
@@ -84,10 +85,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-externalgroup-from-connection-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-externalgroup-from-connection-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -127,7 +124,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

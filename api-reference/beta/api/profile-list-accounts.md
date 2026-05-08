@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "kevinbellinger"
 ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 06/10/2024
 ---
 
 # List accounts
@@ -82,10 +83,6 @@ GET https://graph.microsoft.com/beta/me/profile/account
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-account-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-account-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-account-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -157,7 +154,9 @@ Content-type: application/json
       "ageGroup": "adult",
       "countryCode": "NO",
       "preferredLanguageTag": null,
-      "userPrincipalName": "innocenty.popov@adventureworks.com"
+      "userPrincipalName": "innocenty.popov@adventureworks.com",
+      "originTenantInfo": null,
+      "userPersona": null
     }
   ]
 }

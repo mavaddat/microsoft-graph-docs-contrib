@@ -6,6 +6,7 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 08/26/2024
 ---
 
 # Delete restoreSessionBase
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /solutions/backupRestore/restoreSessions/{restoreSessionBaseId}
 ```
 
@@ -62,16 +63,12 @@ The following example shows a request.
   "name": "restoresessionbase_delete"
 }
 -->
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/solutions/backupRestore/restoreSessions/61633878-8321-4950-bfaf-ed285bdd1461
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/restoresessionbase-delete-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/restoresessionbase-delete-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -108,6 +105,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

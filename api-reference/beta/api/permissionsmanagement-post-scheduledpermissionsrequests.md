@@ -6,12 +6,15 @@ ms.reviewer: ciem_pm
 ms.localizationpriority: medium
 ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Create scheduledPermissionsRequest
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Create a new [scheduledPermissionsRequest](../resources/scheduledpermissionsrequest.md) object.
 
@@ -33,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /identityGovernance/permissionsManagement/scheduledPermissionsRequests
 ```
 
@@ -76,7 +79,7 @@ The following example shows a request.
   "name": "create_scheduledpermissionsrequest_aws_policy"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identityGovernance/permissionsManagement/scheduledPermissionsRequests
 Content-Type: application/json
 
@@ -124,10 +127,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-scheduledpermissionsrequest-aws-policy-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-scheduledpermissionsrequest-aws-policy-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-scheduledpermissionsrequest-aws-policy-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -163,7 +162,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.scheduledPermissionsRequest"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -221,7 +220,7 @@ The following example shows a request.
   "name": "create_scheduledpermissionsrequest_azure_roles"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identityGovernance/permissionsManagement/scheduledPermissionsRequests
 Content-Type: application/json
 
@@ -273,10 +272,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-scheduledpermissionsrequest-azure-roles-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-scheduledpermissionsrequest-azure-roles-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-scheduledpermissionsrequest-azure-roles-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -312,7 +307,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.scheduledPermissionsRequest"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -373,7 +368,7 @@ The following example shows a request.
   "name": "create_scheduledpermissionsrequest_from_gcp_actions"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identityGovernance/permissionsManagement/scheduledPermissionsRequests
 Content-Type: application/json
 
@@ -419,10 +414,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-scheduledpermissionsrequest-from-gcp-actions-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-scheduledpermissionsrequest-from-gcp-actions-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-scheduledpermissionsrequest-from-gcp-actions-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -458,7 +449,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.scheduledPermissionsRequest"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -503,4 +494,5 @@ Content-Type: application/json
   "statusDetail": "submitted"
 }
 ```
+
 

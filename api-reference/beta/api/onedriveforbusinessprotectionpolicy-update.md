@@ -6,6 +6,7 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 08/26/2024
 ---
 # Update oneDriveForBusinessProtectionPolicy
 
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicyId}
 ```
 
@@ -68,7 +69,7 @@ The following example shows a request.
   "name": "onedriveforbusinessprotectionpolicy_update"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/845457dc-4bb2-4815-bef3-8628ebd1952e
 
 {
@@ -98,10 +99,6 @@ PATCH https://graph.microsoft.com/beta/solutions/backupRestore/oneDriveForBusine
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/onedriveforbusinessprotectionpolicy-update-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/onedriveforbusinessprotectionpolicy-update-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Java](#tab/java)
@@ -136,7 +133,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.oneDriveForBusinessProtectionPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 
 {

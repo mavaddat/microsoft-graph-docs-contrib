@@ -5,6 +5,7 @@ author: abhijeetsinha
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 06/22/2024
 ---
 
 # Assign forwardingProfile
@@ -35,7 +36,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /networkAccess/connectivity/remoteNetworks/{remoteNetworkId}/forwardingProfiles
 ```
 
@@ -64,7 +65,7 @@ To get the id of forwarding profiles of your organization, refer to this article
 ### Request
 The following example shows a request.
 
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/networkAccess/connectivity/remoteNetworks/{remoteNetworkId}/forwardingProfiles
 Content-Type: application/json
 
@@ -86,7 +87,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 ```
 

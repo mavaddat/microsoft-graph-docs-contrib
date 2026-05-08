@@ -5,6 +5,7 @@ author: "KuiGithui"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Update externalIdentitiesPolicy
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /policies/externalIdentitiesPolicy
 ```
 
@@ -61,7 +62,7 @@ If successful, this method returns a `204 No Content` response code. It doesn't 
   "name": "update_externalidentitiespolicy"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/policies/externalIdentitiesPolicy
 
 {
@@ -71,10 +72,6 @@ PATCH https://graph.microsoft.com/beta/policies/externalIdentitiesPolicy
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-externalidentitiespolicy-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-externalidentitiespolicy-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -109,6 +106,6 @@ PATCH https://graph.microsoft.com/beta/policies/externalIdentitiesPolicy
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

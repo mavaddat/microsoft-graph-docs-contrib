@@ -1,17 +1,21 @@
 ---
-title: "fileSecurityState resource type"
+title: "fileSecurityState resource type (deprecated)"
 description: " > **Important:** APIs under the /beta version in Microsoft Graph are in preview and are subject to change. Use of these APIs in production applications is not supported."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: security
 author: "preetikr"
+ms.date: 07/22/2024
+ROBOTS: NOINDEX
 ---
 
-# fileSecurityState resource type
+# fileSecurityState resource type (deprecated)
 
 Namespace: microsoft.graph
 
  [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [security-alerts-v1-deprecation](../includes/security-alerts-v1-deprecation.md)]
 
 Contains information about the file (not process) related to the alert.
 
@@ -23,6 +27,9 @@ Contains information about the file (not process) related to the alert.
 |name|String|File name (without path).|
 |path|String|Full file path of the file/imageFile.|
 |riskScore|String|Provider generated/calculated risk score of the alert file. Recommended value range of 0-1, which equates to a percentage.|
+
+## Relationships
+None.
 
 ## JSON representation
 

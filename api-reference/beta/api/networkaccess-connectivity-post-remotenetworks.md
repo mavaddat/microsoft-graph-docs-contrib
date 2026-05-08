@@ -5,6 +5,7 @@ author: abhijeetsinha
 ms.localizationpriority: medium
 ms.subservice: entra-global-secure-access
 doc_type: apiPageType
+ms.date: 08/13/2024
 ---
 
 # Create remoteNetwork
@@ -34,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /networkAccess/connectivity/remoteNetworks
 ```
 
@@ -70,7 +71,7 @@ The following example shows a request.
   "name": "create_remoteNetwork_basic"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/networkAccess/connectivity/remoteNetworks
 Content-Type: application/json
 
@@ -82,10 +83,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-remotenetwork-basic-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-remotenetwork-basic-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -123,7 +120,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.networkaccess.remoteNetwork"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -148,7 +145,7 @@ The following example shows a request.
   "name": "create_remoteNetwork_with_forwardingProfile"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/networkAccess/connectivity/remoteNetworks
 Content-Type: application/json
 
@@ -165,10 +162,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-remotenetwork-with-forwardingprofile-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-remotenetwork-with-forwardingprofile-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -206,7 +199,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.networkaccess.remoteNetwork"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -231,7 +224,7 @@ The following example shows a request.
   "name": "create_remoteNetwork_with_forwardingProfile_deviceLink"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/networkAccess/connectivity/remoteNetworks
 Content-Type: application/json
 
@@ -271,10 +264,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-remotenetwork-with-forwardingprofile-devicelink-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-remotenetwork-with-forwardingprofile-devicelink-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-remotenetwork-with-forwardingprofile-devicelink-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -310,7 +299,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.networkaccess.remoteNetwork"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

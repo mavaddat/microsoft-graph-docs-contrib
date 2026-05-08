@@ -5,6 +5,8 @@ ms.localizationpriority: high
 author: v-sdhakshina
 ms.author: v-sdhakshina
 ms.subservice: teams
+ms.date: 11/07/2024
+ms.topic: best-practice
 ---
 
 # Best practices for using Microsoft Graph permissions

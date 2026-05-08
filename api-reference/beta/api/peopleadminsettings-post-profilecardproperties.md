@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "rwaithera"
 ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 02/25/2026
 ---
 
 # Create profileCardProperty
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "peopleadminsettings_post_profilecardproperties" } -->
 [!INCLUDE [permissions-table](../includes/permissions/peopleadminsettings-post-profilecardproperties-permissions.md)]
 
->**Note:** Using delegated permissions for this operation requires the signed-in user to have a Tenant Administrator or Global Administrator role.
+[!INCLUDE [rbac-peopleadmin-apis-write](../includes/rbac-for-apis/rbac-peopleadmin-apis-write.md)]
 
 ## HTTP request
 
@@ -57,8 +58,9 @@ You can specify the following properties when you create a **profileCardProperty
 
 |Property|Type|Description|
 |:---|:---|:---|
-|annotations|[profileCardAnnotation](../resources/profilecardannotation.md) collection|Any alternative or localized labels that an administrator chose to specify.|
-|directoryPropertyName|String|The name of the directory property that is intended to surface on the profile card.|
+|annotations|[profileCardAnnotation](../resources/profilecardannotation.md) collection|Any alternative or localized labels that an administrator chose to specify. Optional.|
+|directoryPropertyName|String|The name of the directory property that is intended to surface on the profile card. Required.|
+|isVisible|Boolean|Indicates whether the given directory property should be shown on a user’s profile card. Optional.|
 
 ## Response
 
@@ -70,7 +72,6 @@ If successful, this method returns a `201 Created` response code and a new [prof
 
 The following example shows a request.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "create_profilecardproperty"
@@ -81,6 +82,7 @@ Content-type: application/json; charset=utf-8
 
 {
   "directoryPropertyName": "CustomAttribute1",
+  "isVisible": true,
   "annotations": [
     {
       "displayName": "Cost Center",
@@ -94,40 +96,6 @@ Content-type: application/json; charset=utf-8
   ]
 }
 ```
-
-# [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/create-profilecardproperty-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-profilecardproperty-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/create-profilecardproperty-go-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/create-profilecardproperty-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/create-profilecardproperty-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/create-profilecardproperty-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/create-profilecardproperty-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/create-profilecardproperty-python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
 
 ### Response
 
@@ -147,6 +115,7 @@ Content-type: application/json; charset=utf-8
 
 {
   "directoryPropertyName": "CustomAttribute1",
+  "isVisible": true,
   "annotations": [
     {
       "displayName": "Cost Center",

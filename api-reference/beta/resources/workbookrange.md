@@ -6,6 +6,7 @@ author: "lumine2008"
 ms.subservice: "excel"
 doc_type: resourcePageType
 toc.title: Range
+ms.date: 08/01/2024
 ---
 
 # workbookRange resource type
@@ -65,7 +66,7 @@ Represents a set of one or more contiguous cells in a workbook, such as a cell, 
 |rowHidden|Boolean|Indicates whether all rows of the current range are hidden.|
 |rowIndex|int|Returns the row number of the first cell in the range. Zero-indexed. Read-only.|
 |text|Json|Text values of the specified range. The text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.|
-|valueTypes|string|Represents the type of data of each cell. Possible values are: `Unknown`, `Empty`, `String`, `Integer`, `Double`, `Boolean`, `Error`. Read-only.|
+|valueTypes|string|Represents the type of data of each cell. The possible values are: `Unknown`, `Empty`, `String`, `Integer`, `Double`, `Boolean`, `Error`. Read-only.|
 |values|Json|Represents the raw values of the specified range. The data returned could be of type string, number, or a Boolean. Cell that contains an error returns the error string.|
 
 ## Relationships

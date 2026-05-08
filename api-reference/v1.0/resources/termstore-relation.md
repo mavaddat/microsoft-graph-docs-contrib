@@ -5,6 +5,7 @@ author: vishriv
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # relation resource type
@@ -30,7 +31,7 @@ Inherits from [entity](../resources/entity.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|The ID of the relation.|
-|relationship|microsoft.graph.termStore.relationType|The type of relation. Possible values are: `pin`, `reuse`.|
+|relationship|microsoft.graph.termStore.relationType|The type of relation. The possible values are: `pin`, `reuse`.|
 
 ## Relationships
 |Relationship|Type|Description|

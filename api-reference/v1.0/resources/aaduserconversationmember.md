@@ -5,6 +5,7 @@ ms.localizationpriority: high
 author: "akjo"
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 10/18/2024
 ---
 
 # aadUserConversationMember resource type
@@ -23,6 +24,7 @@ This type inherits from [conversationMember](conversationmember.md).
 |[Get team member](../api/team-get-members.md) | [conversationMember](conversationmember.md) collection | Get a member in the team.|
 |[Update team member's role](../api/team-update-members.md)|[conversationMember](../resources/conversationmember.md)|Change a member to an owner or back to a regular member.|
 |[Remove team member](../api/team-delete-members.md)|None|Remove an existing member from the team.|
+|[Remove team members in bulk](../api/conversationmember-remove.md)|[actionResultPart](../resources/actionresultpart.md) collection|Remove multiple members from a team in a single request.|
 |[List channel members](../api/channel-list-members.md) | [conversationMember](conversationmember.md) collection | Get the list of all members in a channel.|
 |[Add channel member](../api/channel-post-members.md) | [conversationMember](conversationmember.md) | Add a member to a channel. Only supported for `channel` with membershipType of `private`.|
 |[Get channel member](../api/channel-get-members.md) | [conversationMember](conversationmember.md) collection | Get a member in a channel.|
@@ -41,9 +43,17 @@ This type inherits from [conversationMember](conversationmember.md).
 |email| string  | The email address of the user. |
 |id|String| Read-only. Unique ID of the user.|
 |roles| string collection | The roles of the user such as owner, member, or guest. |
-|tenantId| string  | TenantId which the Microsoft Entra user belongs to. |
-|userId| string | The guid of the user. |
-|visibleHistoryStartDateTime| DateTimeOffset  | The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.|
+|tenantId| string  | The tenant ID of the Microsoft Entra user. |
+|userId| string | The user ID of the Microsoft Entra user. |
+|visibleHistoryStartDateTime| DateTimeOffset  | The timestamp that denotes how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.|
+
+### Instance attributes
+
+Instance attributes are properties with special behaviors. These properties are temporary and either a) define behavior the service should perform or b) provide short-term property values, like a download URL for an item that expires.
+
+| Property name| Type   | Description
+|:---|:---|:---|
+|@microsoft.graph.originalSourceMembershipUrl|String|This annotation represents the URL of the original source membership that distinguishes between direct and indirect members. Use this annotation with the [List allMembers](../api/channel-list-allmembers.md) API. |
 
 ## JSON representation
 

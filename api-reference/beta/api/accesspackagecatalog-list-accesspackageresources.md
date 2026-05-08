@@ -1,10 +1,11 @@
 ---
 title: "List accessPackageResources"
-description: "Retrieve a list of accesspackageresource objects."
+description: "Retrieve a list of accessPackageResource objects in an accessPackageCatalog."
 ms.localizationpriority: medium
 author: "markwahl-msft"
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 11/20/2024
 ---
 
 # List accessPackageResources
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Retrieve a list of [accessPackageResource](../resources/accesspackageresource.md) objects in an [accessPackageCatalog](../resources/accesspackagecatalog.md).  To request to add or remove an [accessPackageResource](../resources/accesspackageresource.md), use [create accessPackageResourceRequest](entitlementmanagement-post-accesspackageresourcerequests.md).
 
-[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -23,6 +24,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "accesspackagecatalog_list_accesspackageresources" } -->
 [!INCLUDE [permissions-table](../includes/permissions/accesspackagecatalog-list-accesspackageresources-permissions.md)]
+
+[!INCLUDE [rbac-entitlement-catalog-reader](../includes/rbac-for-apis/rbac-entitlement-management-catalog-reader-apis-read.md)]
 
 ## HTTP request
 
@@ -34,7 +37,7 @@ GET /identityGovernance/entitlementManagement/accessPackageCatalogs/{id}/accessP
 
 ## Optional query parameters
 
-This method supports OData query parameters to help customize the response. For example, to retrieve the access package resource scopes and environments for each resource, include `$expand=accessPackageResourceScopes,accessPackageResourceEnvironment` in the query. To retrieve the available roles of a resource, include `$expand=accessPackageResourceRoles`. To retrieve only resources for applications and not groups or sites, include `$filter=resourceType eq 'Application'` in the query. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports OData query parameters to help customize the response. For example, to retrieve the access package resource scopes and environments for each resource, include `$expand=accessPackageResourceScopes,accessPackageResourceEnvironment,externalOriginResourceConnector` in the query. To retrieve the available roles of a resource, include `$expand=accessPackageResourceRoles`. To retrieve only resources for applications and not groups or sites, include `$filter=resourceType eq 'Application'` in the query. For general information, see [OData query parameters](/graph/query-parameters).
 
 ## Request headers
 
@@ -68,10 +71,6 @@ GET https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/ac
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-accesspackageresources-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-accesspackageresources-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

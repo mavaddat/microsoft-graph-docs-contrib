@@ -5,6 +5,8 @@ ms.localizationpriority: medium
 author: "egreenberg14"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
+toc.title: Credential user registration details (deprecated)
 ---
 
 # credentialUserRegistrationDetails resource type
@@ -29,7 +31,7 @@ Represents the details of the usage of self-service password reset and multi-fac
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-| authMethods | registrationAuthMethod collection | Represents the authentication method that the user has registered. Possible values are: `email`, `mobilePhone`, `officePhone`,  `securityQuestion` (only used for self-service password reset), `appNotification`,  `appCode`, `alternateMobilePhone` (supported only in registration),  `fido`,  `appPassword`,  `unknownFutureValue`. |
+| authMethods | registrationAuthMethod collection | Represents the authentication method that the user has registered. The possible values are: `email`, `mobilePhone`, `officePhone`,  `securityQuestion` (only used for self-service password reset), `appNotification`,  `appCode`, `alternateMobilePhone` (supported only in registration),  `fido`,  `appPassword`,  `unknownFutureValue`. |
 | id | String | The unique identifier for the activity. Read-only.|
 | isCapable | Boolean | Indicates whether the user is ready to perform self-service password reset or MFA. |
 | isEnabled | Boolean | Indicates whether the user enabled to perform self-service password reset. |

@@ -5,13 +5,12 @@ author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: resourcePageType
+ms.date: 05/17/2024
 ---
 
 # storage resource type
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Facilitates the structures of fileStorageContainers.
 

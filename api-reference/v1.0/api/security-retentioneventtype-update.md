@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Update retentionEventType
@@ -26,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /security/labels/retentionLabels/{retentionLabelId}/eventType
 PATCH /security/triggerTypes/retentionEventTypes/{retentionEventTypeId}
 PATCH /security/triggers/retentionEvents/{retentionEventId}/retentionEventType
@@ -59,7 +60,7 @@ If successful, this method returns a `200 OK` response code and an updated [micr
   "name": "update_retentioneventtype"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/security/labels/retentionLabels/{retentionLabelId}/eventType
 Content-Type: application/json
 Content-length: 199
@@ -81,7 +82,7 @@ Content-length: 199
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

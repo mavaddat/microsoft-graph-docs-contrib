@@ -3,6 +3,8 @@ title: "Make API calls using the Microsoft Graph SDKs"
 description: "Provides instructions for creating Microsoft Graph HTTP requests using the SDKs."
 ms.localizationpriority: medium
 author: DarrelMiller
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 <!-- markdownlint-disable MD025 MD051 -->

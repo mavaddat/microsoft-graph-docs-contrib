@@ -5,6 +5,7 @@ author: "SuyliuMS"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Create cloudPcCrossCloudGovernmentOrganizationMapping
@@ -26,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping
 ```
 
@@ -54,7 +55,7 @@ If successful, this method returns a `200 OK` response code and a [cloudPcCrossC
   "name": "create_cloudpccrosscloudgovernmentorganizationmapping_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping
 Content-Type: application/json
 X-MS-CloudPC-USGovCloudTenantAADToken: {token}
@@ -75,7 +76,7 @@ X-MS-CloudPC-USGovCloudTenantAADToken: {token}
   "@odata.type": "microsoft.graph.cloudPcCrossCloudGovernmentOrganizationMapping"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

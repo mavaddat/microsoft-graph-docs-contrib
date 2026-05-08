@@ -4,6 +4,7 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```python
 
+# Code snippets are only available for the latest version. Current version is 1.x
 from msgraph_beta import GraphServiceClient
 from msgraph_beta.generated.models.on_token_issuance_start_listener import OnTokenIssuanceStartListener
 from msgraph_beta.generated.models.authentication_conditions import AuthenticationConditions
@@ -11,9 +12,7 @@ from msgraph_beta.generated.models.authentication_conditions_applications import
 from msgraph_beta.generated.models.authentication_condition_application import AuthenticationConditionApplication
 from msgraph_beta.generated.models.on_token_issuance_start_custom_extension_handler import OnTokenIssuanceStartCustomExtensionHandler
 from msgraph_beta.generated.models.on_token_issuance_start_custom_extension import OnTokenIssuanceStartCustomExtension
-
-graph_client = GraphServiceClient(credentials, scopes)
-
+# To initialize your graph_client, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=python
 request_body = OnTokenIssuanceStartListener(
 	odata_type = "#microsoft.graph.onTokenIssuanceStartListener",
 	conditions = AuthenticationConditions(
@@ -21,7 +20,7 @@ request_body = OnTokenIssuanceStartListener(
 			include_all_applications = False,
 			include_applications = [
 				AuthenticationConditionApplication(
-					app_id = "a13d0fc1-04ab-4ede-b215-63de0174cbb4",
+					app_id = "0001111-aaaa-2222-bbbb-3333cccc4444",
 				),
 			],
 		),

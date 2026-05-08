@@ -5,6 +5,7 @@ doc_type: "resourcePageType"
 description: "Represents a group used in a term store."
 ms.localizationpriority: medium
 ms.subservice: sharepoint
+ms.date: 05/23/2024
 ---
 
 # Group resource type
@@ -36,7 +37,7 @@ Inherits from [entity](../resources/entity.md).
 | displayName          | string             | Name of the group.|
 | id                   | string             | Unique identifier of the group. Read-Only.|
 | parentSiteId         | string             | ID of the parent site of this group.|
-| scope                | string             | Returns the type of the group. Possible values are: `global`, `system`, and `siteCollection`.|
+| scope                | string             | Returns the type of the group. The possible values are: `global`, `system`, and `siteCollection`.|
 
 ## Relationships
 | Relationship       | Type                        | Description|

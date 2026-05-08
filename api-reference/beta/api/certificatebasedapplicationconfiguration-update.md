@@ -5,6 +5,7 @@ author: "madansr7"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 11/06/2024
 ---
 
 # Update certificateBasedApplicationConfiguration
@@ -14,13 +15,15 @@ Namespace: microsoft.graph
 
 Update the properties of a [certificateBasedApplicationConfiguration](../resources/certificatebasedapplicationconfiguration.md) object. To update the **trustedCertificateAuthorities** within a certificateBasedApplicationConfiguration object, use the [Update certificateAuthorityAsEntity](../api/certificateauthorityasentity-update.md) operation.
 
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
+
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "certificatebasedapplicationconfiguration_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/certificatebasedapplicationconfiguration-update-permissions.md)]
 
-[!INCLUDE [app-cert-config-apis](../includes/rbac-for-apis/app-cert-config-apis.md)]
+[!INCLUDE [rbac-trusted-app-cert-config-apis](../includes/rbac-for-apis/rbac-trusted-app-cert-config-apis.md)]
 
 ## HTTP request
 
@@ -29,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-PATCH /certificateAuthorityPath/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfigurationId}
+PATCH /directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfigurationId}
 ```
 
 ## Request headers
@@ -74,10 +77,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-certificatebasedapplicationconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-certificatebasedapplicationconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

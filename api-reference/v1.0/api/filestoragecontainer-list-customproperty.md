@@ -5,6 +5,7 @@ author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 09/26/2024
 ---
 
 # List fileStorageContainer custom properties
@@ -42,9 +43,11 @@ GET /storage/fileStorage/containers/{containerId}/customProperties/{propertyName
 If successful, this method returns a `200 OK` response code.
 
 ## Examples
+### Example 1
 
-### Request
+#### Request
 The following example shows how to get a custom property named `clientUniquieId`.
+
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
@@ -61,7 +64,9 @@ GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/b!ISJs1WRro0
 
 ---
 
-### Response
+---
+
+#### Response
 The following example shows the response.
 <!-- {
   "blockType": "response",
@@ -79,7 +84,8 @@ Content-type: application/json
 }
 
 ```
-### Request
+### Example 2
+#### Request
 The following example shows how to get all the custom properties of a **fileStorageContainer**.
 # [HTTP](#tab/http)
 <!-- {
@@ -97,7 +103,9 @@ GET https://graph.microsoft.com/v1.0/storage/fileStorage/containers/b!ISJs1WRro0
 
 ---
 
-### Response
+---
+
+#### Response
 The following example shows the response.
 <!-- {
   "blockType": "response",

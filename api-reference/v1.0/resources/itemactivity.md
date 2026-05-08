@@ -5,6 +5,7 @@ description: The itemActivity object provides information about an activity that
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: resourcePageType
+ms.date: 03/06/2024
 ---
 # itemActivity resource type
 
@@ -18,6 +19,12 @@ The actions that took place within an itemActivity are detailed in the [itemActi
 >**Note:** **itemActivity** is currently only available on SharePoint and OneDrive for Business.
 
 [itemActionSet]: itemactionset.md#properties
+
+## Methods
+
+| Method | Return type | Description |
+|:-------|:------------|:------------|
+| [List activities](../api/itemactivity-list.md) | [itemActivity](itemactivity.md) collection | List the recent [activities](../resources/itemactivity.md) that took place on a [drive](../resources/drive.md), [list](../resources/list.md), item, or within an item hierarchy. |
 
 ## Properties
 

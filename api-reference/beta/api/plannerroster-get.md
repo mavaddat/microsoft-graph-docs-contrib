@@ -5,6 +5,7 @@ author: "tarkansevilmis"
 ms.localizationpriority: medium
 ms.subservice: "planner"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get plannerRoster
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /planner/rosters/{plannerRosterId}
 ```
 
@@ -61,16 +62,12 @@ If successful, this method returns a `200 OK` response code and a [plannerRoster
   "name": "get_plannerroster"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/planner/rosters/6519868f-868f-6519-8f86-19658f861965
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-plannerroster-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-plannerroster-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -107,7 +104,7 @@ GET https://graph.microsoft.com/beta/planner/rosters/6519868f-868f-6519-8f86-196
   "@odata.type": "microsoft.graph.plannerRoster"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

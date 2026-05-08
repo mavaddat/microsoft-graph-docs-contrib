@@ -5,6 +5,7 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # applePushNotificationCertificate resource type
@@ -33,7 +34,7 @@ Apple push notification certificate.
 |certificateUploadStatus|String|The certificate upload status.|
 |certificateUploadFailureReason|String|The reason the certificate upload failed.|
 |certificateSerialNumber|String|Certificate serial number. This property is read-only.|
-|certificate|String|Not yet documented|
+|certificate|String||
 
 ## Relationships
 None

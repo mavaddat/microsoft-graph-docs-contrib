@@ -6,13 +6,14 @@ author: "lujiangfeng666"
 ms.subservice: "entra-sign-in"
 doc_type: "resourcePageType"
 toc.title: "Activity-based timeout policy"
+ms.date: 07/22/2024
 ---
 
 # activityBasedTimeoutPolicy resource type
 
 Namespace: microsoft.graph
 
-Represents a policy that can control the idle timeout for web sessions for applications that support activity-based timeout functionality. Applications enforce automatic sign out after a period of inactivity. This type of policy can only be applied at the organization level (by setting the **isOrganizationDefault** property to `true`).
+Represents a policy that can control the idle timeout for web sessions for [applications that support activity-based timeout functionality](/microsoft-365/admin/manage/idle-session-timeout-web-apps). Applications enforce automatic sign out after a period of inactivity. This type of policy can only be applied at the organization level (by setting the **isOrganizationDefault** property to `true`).
 
 Inherits from [stsPolicy](stsPolicy.md).
 
@@ -31,7 +32,6 @@ Inherits from [stsPolicy](stsPolicy.md).
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
 |definition|String collection| A string collection containing a JSON string that defines the rules and settings for this policy. See below for more details about the JSON schema for this property. Required.|
-|description|String| Description for this policy.|
 |displayName|String| Display name for this policy. Required.|
 |id|String| Unique identifier for this policy. Read-only.|
 |isOrganizationDefault|Boolean|If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.|

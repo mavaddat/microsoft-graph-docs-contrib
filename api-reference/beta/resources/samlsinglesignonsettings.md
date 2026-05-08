@@ -4,7 +4,8 @@ description: "Represents the SAML single sign-on settings."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "sureshja"
+author: "Jackson-Woods"
+ms.date: 03/21/2024
 ---
 
 # samlSingleSignOnSettings resource type
@@ -19,6 +20,9 @@ Represents a container for settings related to SAML single sign-on.
 |:---------------|:--------|:----------|
 |relayState|String| The relative URI the service provider would redirect to after completion of the single sign-on flow. |
 
+
+## Relationships
+None.
 
 ## JSON representation
 The following JSON representation shows the resource type.

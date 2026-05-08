@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: non-product-specific
 author: "SuryaLashmiS"
+ms.date: 04/05/2024
 ---
 
 # Get multiValueLegacyExtendedProperty
@@ -27,8 +28,11 @@ The following user resources are supported:
 - [contact](../resources/contact.md)
 - [contactFolder](../resources/contactfolder.md)
 - [event](../resources/event.md)
+- [mailboxFolder](../resources/mailboxfolder.md)
+- [mailboxItem](../resources/mailboxitem.md) 
 - [mailFolder](../resources/mailfolder.md)
 - [message](../resources/message.md)
+- [note](../resources/note.md)
 - [Outlook task](../resources/outlooktask.md)
 - [Outlook task folder](../resources/outlooktaskfolder.md)
 
@@ -55,8 +59,11 @@ Depending on the resource you're getting the extended property from and the perm
 | group [calendar](../resources/calendar.md) | Group.Read.All | Not supported | Not supported |
 | group [event](../resources/event.md) | Group.Read.All | Not supported | Not supported |
 | group [post](../resources/post.md) | Group.Read.All | Not supported | Group.Read.All |
+| [mailboxFolder](../resources/mailboxfolder.md) | MailboxFolder.Read | Not supported. | MailboxFolder.Read.All |
+| [mailboxItem](../resources/mailboxitem.md) | MailboxItem.Read | Not supported. | MailboxItem.Read.All |
 | [mailFolder](../resources/mailfolder.md) | Mail.Read | Mail.Read | Mail.Read |
 | [message](../resources/message.md) | Mail.Read | Mail.Read | Mail.Read |
+| [note](../resources/note.md) | ShortNotes.Read | ShortNotes.Read | ShortNotes.Read |
 | [Outlook task](../resources/outlooktask.md) | Tasks.Read | Tasks.Read | Not supported |
 | [Outlook task folder](../resources/outlooktaskfolder.md) | Tasks.Read | Tasks.Read | Not supported |
 
@@ -73,6 +80,8 @@ GET /me/messages/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_va
 GET /users/{id|userPrincipalName}/messages/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /me/mailFolders/{id}/messages/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get a **mailFolder** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -80,18 +89,24 @@ GET /me/mailFolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id
 GET /users/{id|userPrincipalName}/mailFolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
 
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
 Get an **event** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/events/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/events/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get a **calendar** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/calendars/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/calendars/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get a **contact** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -100,12 +115,43 @@ GET /users/{id|userPrincipalName}/contacts/{id}?$expand=multiValueExtendedProper
 GET /me/contactFolders/{id}/contacts/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/contactFolders/{id}/contacts/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get a **contactFolder** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
 GET /me/contactfolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/contactFolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **mailboxItem** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/items?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}/items/{mailboxItemId}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **mailboxFolder** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /admin/exchange/mailboxes/{mailboxId}/folders?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+GET /admin/exchange/mailboxes/{mailboxId}/folders/{mailboxFolderId}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
+
+Get a **note** instance:
+<!-- { "blockType": "ignored" } -->
+```http
+GET /me/notes/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+GET /users/{id|userPrincipalName}/notes/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
+```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Get an **outlookTask** instance:
 <!-- { "blockType": "ignored" } -->
@@ -117,6 +163,8 @@ GET /users/{id|userPrincipalName}/outlook/taskFolders/{id}/tasks/{id}?$expand=mu
 GET /me/outlook/taskGroups/{id}/taskFolders/{id}/tasks/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders/{id}/tasks/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 Get an **outlookTaskFolder** instance:
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -125,6 +173,8 @@ GET /users/{id|userPrincipalName}/outlook/taskFolders/{id}?$expand=multiValueExt
 GET /me/outlook/taskGroups/{id}/taskFolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 GET /users/{id|userPrincipalName}/outlook/taskGroups/{id}/taskFolders/{id}?$expand=multiValueExtendedProperties($filter=id eq '{id_value}')
 ```
+
+[!INCLUDE [me-apis-sign-in-note](../includes/me-apis-sign-in-note.md)]
 
 Get a group **event** instance:
 <!-- { "blockType": "ignored" } -->

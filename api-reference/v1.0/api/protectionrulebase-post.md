@@ -6,13 +6,14 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 10/08/2024
 ---
 
 # Create protectionRuleBase
 
 Namespace: microsoft.graph
 
-Create a new [protection rule](../resources/protectionrulebase.md) associated with a [protection policy](../resources/protectionpolicybase.md). You can use this method to create a [mailbox](../resources/mailboxprotectionrule.md), [driveProtectionRule](../resources/driveprotectionrule.md), or [siteIProtectionRule](../resources/siteprotectionrule.md).
+Create a new [protection rule](../resources/protectionrulebase.md) associated with a [protection policy](../resources/protectionpolicybase.md). You can use this method to create a [mailboxProtectionRule](../resources/mailboxprotectionrule.md), [driveProtectionRule](../resources/driveprotectionrule.md), or [siteProtectionRule](../resources/siteprotectionrule.md).
 
 An inclusion rule indicates that a protection policy should contain protection units that match the specified rule criteria. The initial status of a protection rule upon creation is `active`. After the rule is applied, the state is either `completed` or `completedWithErrors`.
 
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /solutions/backupRestore/sharePointProtectionPolicies/{sharePointProtectionPolicyId}/siteInclusionRules
 POST /solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicyId}/driveInclusionRules
 POST /solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicyId}/mailboxInclusionRules
@@ -91,7 +92,7 @@ The following example shows a request.
   "name": "sharepointprotectionpolicy_create_siteinclusionrules"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/solutions/backupRestore/sharePointProtectionPolicies/71633878-8321-4950-bfaf-ed285bdd1461/siteInclusionRules 
 Content-Type: application/json
 
@@ -115,7 +116,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.siteProtectionRule"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Location: https://graph.microsoft.com/v1.0/solutions/backupRestore/sharePointProtectionPolicies/71633878-8321-4950-bfaf-ed285bdd1461/siteInclusionRules('61633878-8321-4950-bfaf-ed285bdd1461')
 
@@ -160,7 +161,7 @@ The following example shows a request.
   "name": "onedriveforbusinessprotectionpolicy_create_driveinclusionrules"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/71633878-8321-4950-bfaf-ed285bdd1461/driveInclusionRules 
 Content-Type: application/json
 
@@ -184,7 +185,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.driveProtectionRule"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Location: https://graph.microsoft.com/v1.0/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/71633878-8321-4950-bfaf-ed285bdd1461/driveInclusionRules('61633878-8321-4950-bfaf-ed285bdd1461')
 
@@ -230,7 +231,7 @@ The following example shows a request.
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/solutions/backupRestore/exchangeProtectionPolicies/71633878-8321-4950-bfaf-ed285bdd1461/mailboxInclusionRules
 
 {
@@ -253,7 +254,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.mailboxProtectionRule"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Location: https://graph.microsoft.com/v1.0/solutions/backupRestore/exchangeProtectionPolicies/71633878-8321-4950-bfaf-ed285bdd1461/mailboxInclusionRules('61633878-8321-4950-bfaf-ed285bdd1461')
 

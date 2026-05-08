@@ -1,10 +1,11 @@
 ---
 title: "contentApproval resource type"
 description: "Represents content approval to be deployed according to a policy."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: windows-update-business
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 01/27/2026
 ---
 
 # contentApproval resource type

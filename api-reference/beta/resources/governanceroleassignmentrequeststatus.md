@@ -5,6 +5,8 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: entra-id-governance
 author: rkarim-ms
+ROBOTS: NOINDEX
+ms.date: 03/21/2024
 ---
 
 # governanceRoleAssignmentRequestStatus resource type
@@ -12,6 +14,8 @@ author: rkarim-ms
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [pim-v2ResourceRoles-deprecation](../../includes/pim-v2ResourceRoles-deprecation.md)]
 
 Represents the status of the [governanceRoleAssignmentRequest](../resources/governanceroleassignmentrequest.md).
 
@@ -22,6 +26,9 @@ Represents the status of the [governanceRoleAssignmentRequest](../resources/gove
 | status        | String                                          | The status of the role assignment request. The value can be `InProgress` or `Closed`.                                                                                                                                                                                                                                                                                                           |
 | subStatus     | String                                          | The sub status of the role assignment request. The values can be `Accepted`, `PendingEvaluation`, `Granted`, `Denied`, `PendingProvisioning`, `Provisioned`, `PendingRevocation`, `Revoked`, `Canceled`, `Failed`, `PendingApprovalProvisioning`, `PendingApproval`, `FailedAsResourceIsLocked`, `PendingAdminDecision`, `AdminApproved`, `AdminDenied`, `TimedOut`, and `ProvisioningStarted`. |
 | statusDetails | [keyValue](../resources/keyvalue.md) collection | The details of the status of the role assignment request. It represents the evaluation results of different rules.                                                                                                                                                                                                                                                                              |
+
+## Relationships
+None.
 
 ## JSON representation
 

@@ -6,6 +6,7 @@ author: "swetha-rai"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # authenticationContextClassReference resource type
@@ -14,7 +15,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a Microsoft Entra authentication context class reference. Authentication context class references are custom values that define a Conditional Access authentication requirement.
+Represents a Microsoft Entra authentication context class reference. Authentication context class references are custom values that define a Conditional Access authentication requirement. For more information, see [Developer guide to Conditional Access authentication context](/entra/identity-platform/developer-guide-conditional-access-authentication-context).
 
 ## Methods
 

@@ -5,6 +5,7 @@ author: "kevinbellinger"
 ms.localizationpriority: medium
 ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 06/26/2024
 ---
 
 # Update personAnnotation
@@ -27,7 +28,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /me/profile/notes/{id}
 PATCH /users/{id | userPrincipalName}/profile/notes/{id}
 ```
@@ -46,7 +47,7 @@ The following table shows the properties that are possible to update within an e
 
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). Possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
+|allowedAudiences|String|The audiences that are able to see the values contained within the entity. Inherited from [itemFacet](../resources/itemfacet.md). The possible values are: `me`, `family`, `contacts`, `groupMembers`, `organization`, `federatedOrganizations`, `everyone`, `unknownFutureValue`.|
 |detail|[itemBody](../resources/itembody.md)|Contains the detail of the note itself.|
 |displayName|String|Contains a friendly name for the note.|
 |inference|[inferenceData](../resources/inferencedata.md)|Contains inference detail if the entity is inferred by the creating or modifying application. Inherited from [itemFacet](../resources/itemfacet.md).|
@@ -64,7 +65,7 @@ If successful, this method returns a `200 OK` response code and an updated [pers
   "name": "update_personannotation"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/users/{userId}/profile/notes/{id}
 Content-Type: application/json
 
@@ -75,10 +76,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-personannotation-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-personannotation-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +112,7 @@ Content-Type: application/json
     "@odata.type": "microsoft.graph.personAnnotation"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

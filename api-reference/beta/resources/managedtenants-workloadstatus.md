@@ -5,6 +5,7 @@ author: "idwilliams"
 ms.localizationpriority: medium
 ms.subservice: "m365-lighthouse"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # workloadStatus resource type
@@ -21,7 +22,7 @@ Represent the status for a workload.
 |displayName|String|The display name for the workload. Required. Read-only.|
 |offboardedDateTime|DateTimeOffset|The date and time the workload was offboarded. Optional. Read-only.|
 |onboardedDateTime|DateTimeOffset|The date and time the workload was onboarded. Optional. Read-only.|
-|onboardingStatus|workloadOnboardingStatus|The onboarding status for the workload. Possible values are: `notOnboarded`, `onboarded`, `unknownFutureValue`. Optional. Read-only.|
+|onboardingStatus|workloadOnboardingStatus|The onboarding status for the workload. The possible values are: `notOnboarded`, `onboarded`, `unknownFutureValue`. Optional. Read-only.|
 
 ## Relationships
 None.

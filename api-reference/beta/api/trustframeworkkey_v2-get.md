@@ -5,6 +5,7 @@ author: "gysingh"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/17/2024
 ---
 
 # Get trustFrameworkKey_v2
@@ -24,13 +25,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "trustframeworkkey_v2_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/trustframeworkkey_v2-get-permissions.md)]
 
+[!INCLUDE [rbac-b2c-trustframework-keyset-apis](../includes/rbac-for-apis/rbac-b2c-trustframework-keyset-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /trustFramework/keySets/{trustFrameworkKeySetId}/keys_v2/{trustFrameworkKey_v2Id}
 ```
 
@@ -59,16 +62,12 @@ The following example shows a request.
   "name": "get_trustframeworkkey_v2"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/trustFramework/keySets/{trustFrameworkKeySetId}/keys_v2/{aTREvwojOB9ph3fr2r6eTf_5eD5fmQsfsapVMwYI3o}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-trustframeworkkey-v2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-trustframeworkkey-v2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -107,7 +106,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.trustFrameworkKey_v2"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

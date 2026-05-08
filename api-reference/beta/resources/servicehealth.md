@@ -5,6 +5,7 @@ author: "payiAzure"
 ms.localizationpriority: medium
 ms.subservice: "service-communications"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # serviceHealth resource type
@@ -25,7 +26,7 @@ Represents the health information of a service subscribed by a tenant.
 |:---|:---|:---|
 |id|String|The service ID.|
 |service|String|The service name. Use the [list healthOverviews](../api/serviceannouncement-list-healthoverviews.md) operation to get exact string names for services subscribed by the tenant.|
-|status|serviceHealthStatus|Show the overall service health status. Possible values are: `serviceOperational`, `investigating`, `restoringService`, `verifyingService`, `serviceRestored`, `postIncidentReviewPublished`, `serviceDegradation`, `serviceInterruption`, `extendedRecovery`, `falsePositive`, `investigationSuspended`, `resolved`, `mitigatedExternal`, `mitigated`, `resolvedExternal`, `confirmed`, `reported`, `unknownFutureValue`. For more information, see [serviceHealthStatus values](../resources/servicehealthissue.md#servicehealthstatus-values).|
+|status|serviceHealthStatus|Show the overall service health status. The possible values are: `serviceOperational`, `investigating`, `restoringService`, `verifyingService`, `serviceRestored`, `postIncidentReviewPublished`, `serviceDegradation`, `serviceInterruption`, `extendedRecovery`, `falsePositive`, `investigationSuspended`, `resolved`, `mitigatedExternal`, `mitigated`, `resolvedExternal`, `confirmed`, `reported`, `unknownFutureValue`. For more information, see [serviceHealthStatus values](../resources/servicehealthissue.md#servicehealthstatus-values).|
 
 ## Relationships
 |Relationship|Type|Description|

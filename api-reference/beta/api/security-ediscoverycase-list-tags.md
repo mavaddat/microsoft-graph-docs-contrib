@@ -5,6 +5,7 @@ author: "SeunginLyu"
 ms.localizationpriority: medium
 ms.subservice: "ediscovery"
 doc_type: "apiPageType"
+ms.date: 06/11/2024
 ---
 
 # List tags
@@ -21,14 +22,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "security_ediscoverycase_list_tags" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-ediscoverycase-list-tags-permissions.md)]
+[!INCLUDE [rbac-rbac-ediscovery-apis-read](../includes/rbac-for-apis/rbac-ediscovery-apis-read.md)]
 
 ## HTTP request
 
-<!-- {
-  "blockType": "ignored"
-}
--->
-``` http
+```http
 GET /security/cases/ediscoveryCases/{ediscoveryCaseId}/tags
 ```
 
@@ -46,24 +44,21 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ## Examples
 
 ### Request
-The following example shows a request.
+The following example shows a request that lists tags.
 
-# [HTTP](#tab/http)
+# [HTTP](#tab/http) 
 <!-- {
   "blockType": "request",
   "name": "list_ediscoveryreviewtag_and_properties"
 }
 -->
-``` http
+
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/security/cases/ediscoveryCases/58399dff-cebe-478f-b1af-d3227f1fd645/tags
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-ediscoveryreviewtag-and-properties-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-ediscoveryreviewtag-and-properties-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -101,7 +96,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.ediscoveryReviewTag"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

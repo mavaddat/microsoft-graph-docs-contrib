@@ -6,13 +6,12 @@ author: "swetha-rai"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/17/2024
 ---
 
 # List authenticationContextClassReferences
 
 Namespace: microsoft.graph
-
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Retrieve a list of [authenticationContextClassReference](../resources/authenticationcontextclassreference.md) objects.
 
@@ -24,6 +23,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "conditionalaccessroot_list_authenticationcontextclassreferences" } -->
 [!INCLUDE [permissions-table](../includes/permissions/conditionalaccessroot-list-authenticationcontextclassreferences-permissions.md)]
+
+[!INCLUDE [rbac-conditionalaccess-apis-read](../includes/rbac-for-apis/rbac-conditionalaccess-apis-read.md)]
 
 ## HTTP request
 
@@ -71,10 +72,6 @@ GET /identity/conditionalAccess/authenticationContextClassReferences
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-authenticationcontextclassreference-v1-e1-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-authenticationcontextclassreference-v1-e1-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/list-authenticationcontextclassreference-v1-e1-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -120,7 +117,7 @@ Content-type: application/json
 
 
 {
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#/conditionalAccess/authenticationContextClassReferences",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#/conditionalAccess/authenticationContextClassReferences",
   "value": [
     {
       "id": "c1",

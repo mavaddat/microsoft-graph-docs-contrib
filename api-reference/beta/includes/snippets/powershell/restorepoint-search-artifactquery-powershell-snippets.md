@@ -4,11 +4,11 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```powershell
 
-Import-Module Microsoft.Graph.Beta.Bookings
+Import-Module Microsoft.Graph.Beta.BackupRestore
 
 $params = @{
 	artifactQuery = @{
-		queryExpression = "((subject -contains ‘Finance’)  -or  (subject -contains ‘Legal’)) -and (sender -eq 'alex@contoso.com') -and (recipient -eq 'carol@contoso.com') -and hasAttachment -eq true"
+		queryExpression = "(Sender -like 'abc@contoso.com') -and (Subject -like '*Check email*' -or Subject -like ' Important') -and (HasAttachment -eq 'true')"
 		artifactType = "message"
 	}
 	protectionUnitIds = @(
@@ -16,10 +16,11 @@ $params = @{
 )
 protectionTimePeriod = @{
 	startDateTime = [System.DateTime]::Parse("2021-01-01T00:00:00Z")
+	endDateTime = [System.DateTime]::Parse("2021-01-30T00:00:00Z")
 }
 restorePointPreference = "oldest"
 }
 
-Search-MgBetaBackupRestorePoint -BodyParameter $params
+Search-MgBetaSolutionBackupRestorePoint -BodyParameter $params
 
 ```

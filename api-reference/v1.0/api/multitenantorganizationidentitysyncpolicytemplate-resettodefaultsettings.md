@@ -5,6 +5,7 @@ author: "rolyon"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 06/22/2024
 ---
 
 # multiTenantOrganizationIdentitySyncPolicyTemplate: resetToDefaultSettings
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /policies/crossTenantAccessPolicy/templates/multiTenantOrganizationIdentitySynchronization/resetToDefaultSettings
 ```
 
@@ -57,7 +58,7 @@ The following example resets the user synchronization settings of the template t
   "name": "multitenantorganizationidentitysyncpolicytemplatethis.resettodefaultsettings"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/policies/crossTenantAccessPolicy/templates/multiTenantOrganizationIdentitySynchronization/resetToDefaultSettings
 ```
 
@@ -68,7 +69,7 @@ POST https://graph.microsoft.com/v1.0/policies/crossTenantAccessPolicy/templates
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 

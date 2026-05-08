@@ -5,6 +5,7 @@ author: "soneff"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/16/2024
 ---
 
 # Get authenticationEventListener
@@ -12,7 +13,20 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Read the properties and relationships of an [authenticationEventListener](../resources/authenticationeventlistener.md) object. The **@odata.type** property in the response object indicates the type of the authenticationEventListener object.
+Read the properties and relationships of an [authenticationEventListener](../resources/authenticationeventlistener.md) object. The **@odata.type** property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
+
+- [onTokenIssuanceStartListener resource type](../resources/ontokenissuancestartlistener.md) resource type
+- [onInteractiveAuthFlowStartListener resource type](../resources/oninteractiveauthflowstartlistener.md) resource type
+- [onAuthenticationMethodLoadStartListener resource type](../resources/onauthenticationmethodloadstartlistener.md) resource type
+- [onAttributeCollectionListener resource type](../resources/onattributecollectionlistener.md) resource type
+- [onUserCreateStartListener resource type](../resources/onusercreatestartlistener.md) resource type
+- [onAttributeCollectionStartListener](../resources/onattributecollectionstartlistener.md) resource type
+- [onAttributeCollectionSubmitListener](../resources/onattributecollectionsubmitlistener.md) resource type
+- [onPhoneMethodLoadStartListener](../resources/onphonemethodloadstartlistener.md) resource type
+- [onEmailOtpSendListener](../resources/onemailotpsendlistener.md) resource type
+- [onPasswordSubmitListener](../resources/onpasswordsubmitlistener.md) resource type
+- [onFraudProtectionLoadStartListener](../resources/onfraudprotectionloadstartlistener.md) resource type
+- [onVerifiedIdClaimValidationListener](../resources/onverifiedidclaimvalidationlistener.md) resource type
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -22,13 +36,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "authenticationeventlistener_get" } -->
 [!INCLUDE [permissions-table](../includes/permissions/authenticationeventlistener-get-permissions.md)]
 
+[!INCLUDE [rbac-custom-auth-ext-apis-read](../includes/rbac-for-apis/rbac-custom-auth-ext-apis-read.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identity/authenticationEventListeners/{authenticationEventListenerId}
 ```
 
@@ -57,16 +73,12 @@ The following example shows a request.
   "name": "get_authenticationeventlistener"
 }
 -->
-``` http
-GET https://graph.microsoft.com/beta/identity/customAuthenticationExtensions/6fc5012e-7665-43d6-9708-4370863f4e6e
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/identity/authenticationEventListeners/6fc5012e-7665-43d6-9708-4370863f4e6e
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-authenticationeventlistener-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-authenticationeventlistener-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -104,34 +116,25 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.authenticationEventListener"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/customAuthenticationExtensions/$entity",
-    "@odata.type": "#microsoft.graph.onTokenIssuanceStartCustomExtension",
+    "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/authenticationEventListeners/$entity",
+    "@odata.type": "#microsoft.graph.onTokenIssuanceStartListener",
     "id": "6fc5012e-7665-43d6-9708-4370863f4e6e",
-    "displayName": "onTokenIssuanceStartCustomExtension",
-    "description": "Fetch additional claims from custom user store",
-    "clientConfiguration": null,
-    "behaviorOnError": null,
-    "authenticationConfiguration": {
-        "@odata.type": "#microsoft.graph.azureAdTokenAuthentication",
-        "resourceId": "api://authenticationeventsAPI.contoso.com/a13d0fc1-04ab-4ede-b215-63de0174cbb4"
-    },
-    "endpointConfiguration": {
-        "@odata.type": "#microsoft.graph.httpRequestEndpoint",
-        "targetUrl": "https://authenticationeventsAPI.contoso.com"
-    },
-    "claimsForTokenConfiguration": [
-        {
-            "claimIdInApiResponse": "DateOfBirth"
-        },
-        {
-            "claimIdInApiResponse": "CustomRoles"
+    "displayName": "Token Issuance listener policy",
+    "conditions": {
+        "applications": {
+            "includeApplications@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/authenticationEventListeners('6fc5012e-7665-43d6-9708-4370863f4e6e')/microsoft.graph.onTokenIssuanceStartListener/conditions/applications/includeApplications",
+            "includeApplications": [
+                {
+                    "appId": "00001111-aaaa-2222-bbbb-3333cccc4444"
+                }
+            ]
         }
-    ]
+    }
 }
 ```
 

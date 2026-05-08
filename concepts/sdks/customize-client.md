@@ -3,6 +3,8 @@ title: "Customize the Microsoft Graph SDK service client"
 description: "Provides instructions on how to change the default behavior of the Microsoft Graph SDK service client."
 ms.localizationpriority: medium
 author: DarrelMiller
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Customize the Microsoft Graph SDK service client

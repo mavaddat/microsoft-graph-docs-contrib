@@ -5,6 +5,7 @@ author: "javieralvarezchiang"
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 10/09/2024
 ---
 
 # driveItem: discardCheckout
@@ -19,18 +20,14 @@ Discard the check out of a [driveItem](../resources/driveitem.md). This action r
 The same user that performed the checkout must discard it. Another alternative is to use application permissions.
 
 
-[!INCLUDE [national-cloud-support](../../includes/global-china.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 
-<!-- {
-  "blockType": "permissions",
-  "name": "driveitem-discardcheckout-permissions"
-}
--->
+<!-- { "blockType": "permissions", "name": "driveitem_discardcheckout" } -->
 [!INCLUDE [permissions-table](../includes/permissions/driveitem-discardcheckout-permissions.md)]
 
 [!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-driveitem-permissions.md)]
@@ -38,14 +35,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP request
 
 ``` http
-POST /drive/root/discardCheckout
-POST /drives/{drivesId}/root/discardCheckout
-POST /shares/{sharesId}/root/discardCheckout
-POST /drive/items/{driveItemId}/discardCheckout
-POST /shares/{sharesId}/driveItem/discardCheckout
-POST /drive/bundles/{driveItemId}/discardCheckout
-POST /drive/special/{driveItemId}/discardCheckout
-POST /drive/following/{driveItemId}/discardCheckout
+POST /drives/{driveId}/items/{itemId}/discardCheckout
+POST /groups/{groupId}/drive/items/{itemId}/discardCheckout
+POST /me/drive/items/{item-id}/discardCheckout
+POST /sites/{siteId}/drive/items/{itemId}/discardCheckout
+POST /users/{userId}/drive/items/{itemId}/discardCheckout
 ```
 
 ## Request headers
@@ -61,6 +55,12 @@ Don't supply a request body for this method.
 ## Response
 
 If successful, this action returns a `204 No Content` response code.
+
+### Error responses
+
+The request returns `400 Bad Request` if the file isn't checked out. Requests made with delegated access return `423 Locked` if another user has the file checked out. Requests made with application access can discard any checkout. 
+
+For more information about how errors are returned, see [Error responses][error-response].
 
 ## Examples
 
@@ -79,10 +79,6 @@ POST https://graph.microsoft.com/beta/drives/{drive-id}/items/{item-id}/discardC
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/driveitemthisdiscardcheckout-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/driveitemthisdiscardcheckout-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -121,4 +117,4 @@ The following example shows the response.
 HTTP/1.1 204 No content
 ```
 
-
+[error-response]: /graph/errors

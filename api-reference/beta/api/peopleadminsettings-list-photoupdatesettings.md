@@ -5,6 +5,7 @@ author: "fondieki"
 ms.localizationpriority: medium
 ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 08/14/2024
 ---
 
 # List photoUpdateSettings
@@ -14,6 +15,8 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Get a list of the [photoUpdateSettings](../resources/photoupdatesettings.md) objects and their properties.
+
+[!INCLUDE [national-cloud-support](../../includes/global-china.md)]
 
 ## Permissions
 
@@ -28,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /admin/people/photoUpdateSettings
 ```
 
@@ -55,7 +58,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
 ### Request
 
 
-``` http
+```http
 GET /admin/people/photoUpdateSettings
 ```
 
@@ -63,7 +66,7 @@ GET /admin/people/photoUpdateSettings
 
 If successful, this method returns a 200 OK response code and an photoUpdateSettings object in the response body.
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

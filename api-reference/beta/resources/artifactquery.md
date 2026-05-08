@@ -5,6 +5,7 @@ author: "tushar20"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: resourcePageType
+ms.date: 07/27/2024
 ---
 
 # artifactQuery resource type
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Contains an expression that specifies the criteria for search.
+Contains an expression that specifies the criteria for search. For more information, see [Filtering mailbox artifacts with granular search queries](/graph/backup-restore-granular-search).
 
 ## Properties
 |Property|Type|Description|

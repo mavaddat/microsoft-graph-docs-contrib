@@ -5,6 +5,7 @@ author: "joerattazzi-microsoft"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get whoisRecord
@@ -36,7 +37,7 @@ To get the current **whoisRecord** for the specified **host**:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /security/threatIntelligence/hosts/{hostId}/whois
 ```
 
@@ -84,16 +85,12 @@ The following example shows a request.
   "sampleKeys": ["contoso.com"]
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/security/threatIntelligence/hosts/contoso.com/whois
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-whois-for-host-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-whois-for-host-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -136,7 +133,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.security.whoisRecord"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -281,10 +278,6 @@ GET https://graph.microsoft.com/v1.0/security/threatIntelligence/whoisRecords/Y2
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-whoisrecord-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-whoisrecord-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

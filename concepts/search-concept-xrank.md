@@ -4,6 +4,8 @@ description: "You can use the Microsoft Search API xrank expression in Microsoft
 author: "cxiang"
 ms.localizationpriority: medium
 ms.subservice: "search"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Use the Microsoft Search API to xrank search results

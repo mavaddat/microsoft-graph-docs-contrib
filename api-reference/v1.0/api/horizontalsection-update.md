@@ -5,12 +5,15 @@ author: sangle7
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: apiPageType
+ms.date: 06/10/2024
 ---
 # Update horizontalSection
 
 Namespace: microsoft.graph
 
 Update the properties of a [horizontalSection](../resources/horizontalSection.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 

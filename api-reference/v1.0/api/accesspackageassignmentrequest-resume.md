@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "vikama-microsoft"
 ms.subservice: "entra-id-governance"
 doc_type: "apiPageType"
+ms.date: 08/14/2024
 ---
 
 # accessPackageAssignmentRequest: resume
@@ -24,8 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "accesspackageassignmentrequest_resume" } -->
 [!INCLUDE [permissions-table](../includes/permissions/accesspackageassignmentrequest-resume-permissions.md)]
 
-> [!IMPORTANT]
-> App-only access can be authorized *without* granting the `EntitlementManagement.ReadWrite.All` application permission to the caller. Instead, assign the caller an [Entitlement Management role](/entra/id-governance/entitlement-management-delegate), where `Access package assignment manager` is the least privileged role supported for this operation. For more information on how to assign an Entitlement Management role, see [Create unifiedRoleAssignment](../api/rbacapplication-post-roleassignments.md#example-4-create-a-role-assignment-with-access-package-catalog-scope) or [Delegate access governance to access package managers in entitlement management](/entra/id-governance/entitlement-management-delegate-managers#as-a-catalog-owner-delegate-to-an-access-package-manager).
+[!INCLUDE [rbac-entitlement-access-package-assignment-manager-write](../includes/rbac-for-apis/rbac-entitlement-management-access-package-assignment-manager-apis-write.md)]
 
 ## HTTP request
 
@@ -94,10 +94,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/accesspackageassignmentrequestthisresume-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/accesspackageassignmentrequestthisresume-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/accesspackageassignmentrequestthisresume-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -163,6 +159,65 @@ Content-Type: application/json
 ```
 
 #### Response
+
+The following example shows the response.
+<!-- {
+  "blockType": "response",
+  "truncated": true
+}
+-->
+``` http
+HTTP/1.1 204 No Content
+```
+
+### Example 3: Resume an access package assignment request from a custom extension
+
+#### Request
+
+The following example shows a request of a call to resume an access package assignment request that's waiting for a callback from a custom extension to determine the approver of the access package assignment.
+
+<!-- {
+  "blockType": "request",
+  "name": "accesspackageassignmentrequestthis.resume.customextension"
+}
+-->
+``` http
+POST https://graph.microsoft.com/v1.0/identityGovernance/entitlementManagement/accessPackageAssignmentRequests/0e60f18c-b2a0-4887-9da8-da2e30a39d99/resume
+Content-Type: application/json
+
+{
+  "source": "Contoso.CustoEXT",
+  "type": "microsoft.graph.accessPackageCustomExtensionStage.assignmentRequestCreated",
+  "data": {
+    "@odata.type": "microsoft.graph.microsoft.graph.assignmentRequestApprovalStageCallbackData",
+    "approvalStage": {
+      "durationBeforeAutomaticDenial": "P2D",
+      "escalationApprovers": [],
+      "fallbackEscalationApprovers": [],
+      "fallbackPrimaryApprovers": [],
+      "isApproverJustificationRequired": false,
+      "isEscalationEnabled": false,
+      "primaryApprovers": [
+        {
+          "@@odata.type": "#microsoft.graph.singleUser",
+          "description": "Primary approver of access package assignment.",
+          "id": "",
+          "isBackup": false
+        }
+      ]
+    },
+    "customExtensionStageInstanceDetail": "A approval stage from Logic Apps",
+    "customExtensionStageInstanceId": "@{triggerBody()?['CustomExtensionStageInstanceId']}",
+    "stage": "assignmentRequestDeterminingApprovalRequirements"
+  },
+  "source": "LogicApps",
+  "type": "microsoft.graph.accessPackageCustomExtensionStage.assignmentRequestCreated"
+}
+
+```
+
+
+### Response
 
 The following example shows the response.
 <!-- {

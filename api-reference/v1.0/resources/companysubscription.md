@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "arp19690"
 ms.subservice: "entra-directory-management"
 doc_type: resourcePageType
+ms.date: 07/23/2024
 ---
 
 # companySubscription resource type
@@ -37,7 +38,7 @@ Inherits from [entity](entity.md).
 | serviceStatus          | [servicePlanInfo](serviceplaninfo.md) collection | The provisioning status of each service included in this subscription.                                                                                                                                                                                                                                               |
 | skuId                  | String                                           | The object ID of the SKU associated with this subscription.                                                                                                                                                                                                                                                                 |
 | skuPartNumber          | String                                           | The SKU associated with this subscription.                                                                                                                                                                                                                                                                                  |
-| status                 | String                                           | The status of this subscription. Possible values are: `Enabled`, `Deleted`, `Suspended`, `Warning`, `LockedOut`.                                                                                                                                                                                                            |
+| status                 | String                                           | The status of this subscription. The possible values are: `Enabled`, `Deleted`, `Suspended`, `Warning`, `LockedOut`.                                                                                                                                                                                                            |
 | totalLicenses          | Int32                                            | The number of licenses included in this subscription.                                                                                                                                                                                                                                                                          |
 
 ## Relationships

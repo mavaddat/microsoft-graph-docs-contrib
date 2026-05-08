@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "arvindmicrosoft"
 ms.subservice: "microsoft-bookings"
 doc_type: resourcePageType
+ms.date: 07/23/2024
 ---
 
 # bookingWorkHours resource type
@@ -18,7 +19,7 @@ Represents the set of working hours in a single day of the week, for a [bookingB
 ## Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|day|String| The day of the week represented by this instance. Possible values are: `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`.|
+|day|String| The day of the week represented by this instance. The possible values are: `sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`.|
 |timeSlots|[bookingWorkTimeSlot](bookingworktimeslot.md) collection|A list of start/end times during a day.|
 
 ## Relationships

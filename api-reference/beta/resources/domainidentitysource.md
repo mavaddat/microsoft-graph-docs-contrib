@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "markwahl-msft"
 ms.subservice: "entra-id-governance"
 doc_type: "resourcePageType"
+ms.date: 10/31/2024
 ---
 
 # domainIdentitySource resource type
@@ -15,14 +16,13 @@ Namespace: microsoft.graph
 
 Used in the identity sources of an [connectedOrganization](connectedOrganization.md). The `@odata.type` value `#microsoft.graph.domainIdentitySource` indicates that this type identifies a domain as an identity source for a connected organization.
 
-When [creating a new connectedOrganization](../api/entitlementmanagement-post-connectedorganizations.md), if the caller provides in the identitySources collection a domainIdentitySource and the domain corresponds to a registered domain of a Microsoft Entra tenant, then the resulting connectedOrganization that is created has an identitySources collection containing a single member of the [azureActiveDirectoryTenant](azureactivedirectorytenant.md) type.
 
 ## Properties
 
 | Property                     | Type                      | Description |
 | :--------------------------- | :------------------------ | :---------- |
-| displayName |String | The name of the identity source, typically also the domain name. Read only. |
-| domainName |String | The domain name. Read only. |
+| displayName |String | The name of the identity source, typically also the domain name. Read-only. |
+| domainName |String | The domain name. Read-only. |
 
 ## Relationships
 
@@ -30,7 +30,7 @@ None.
 
 ## JSON representation
 
-Here's a JSON representation of the type.
+The following JSON representation shows the resource type.
 
 <!-- {
   "blockType": "resource",

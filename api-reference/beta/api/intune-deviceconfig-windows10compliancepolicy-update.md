@@ -5,13 +5,14 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Update windows10CompliancePolicy
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -33,7 +34,7 @@ One of the following permissions is required to call this API. To learn more, in
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicyId}
 ```
 
@@ -93,6 +94,7 @@ The following table shows the properties that are required when you create the [
 |configurationManagerComplianceRequired|Boolean|Require to consider SCCM Compliance state into consideration for Intune Compliance State.|
 |tpmRequired|Boolean|Require Trusted Platform Module(TPM) to be present.|
 |deviceCompliancePolicyScript|[deviceCompliancePolicyScript](../resources/intune-deviceconfig-devicecompliancepolicyscript.md)||
+|wslDistributions|[wslDistributionConfiguration](../resources/intune-deviceconfig-wsldistributionconfiguration.md) collection||
 
 
 
@@ -103,10 +105,10 @@ If successful, this method returns a `200 OK` response code and an updated [wind
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicyId}
 Content-type: application/json
-Content-length: 2070
+Content-length: 2337
 
 {
   "@odata.type": "#microsoft.graph.windows10CompliancePolicy",
@@ -162,16 +164,24 @@ Content-length: 2070
     "@odata.type": "microsoft.graph.deviceCompliancePolicyScript",
     "deviceComplianceScriptId": "Device Compliance Script Id value",
     "rulesContent": "cnVsZXNDb250ZW50"
-  }
+  },
+  "wslDistributions": [
+    {
+      "@odata.type": "microsoft.graph.wslDistributionConfiguration",
+      "distribution": "Distribution value",
+      "minimumOSVersion": "Minimum OSVersion value",
+      "maximumOSVersion": "Maximum OSVersion value"
+    }
+  ]
 }
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
-Content-Length: 2242
+Content-Length: 2509
 
 {
   "@odata.type": "#microsoft.graph.windows10CompliancePolicy",
@@ -230,6 +240,14 @@ Content-Length: 2242
     "@odata.type": "microsoft.graph.deviceCompliancePolicyScript",
     "deviceComplianceScriptId": "Device Compliance Script Id value",
     "rulesContent": "cnVsZXNDb250ZW50"
-  }
+  },
+  "wslDistributions": [
+    {
+      "@odata.type": "microsoft.graph.wslDistributionConfiguration",
+      "distribution": "Distribution value",
+      "minimumOSVersion": "Minimum OSVersion value",
+      "maximumOSVersion": "Maximum OSVersion value"
+    }
+  ]
 }
 ```

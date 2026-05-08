@@ -5,6 +5,7 @@ author: "Moti-ba"
 ms.localizationpriority: medium
 ms.subservice: entra-id
 doc_type: resourcePageType
+ms.date: 08/01/2024
 ---
 
 # filteringPolicy resource type
@@ -13,7 +14,7 @@ Namespace: microsoft.graph.networkaccess
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Defines the specific traffic that is allowed or blocked through the Global Secure Access services for a filtering profile.
+Defines the specific traffic that is allowed or blocked through the Global Secure Access services for a [filtering profile](../resources/networkaccess-filteringprofile.md).
 
 Inherits from [microsoft.graph.networkaccess.policy](../resources/networkaccess-policy.md).
 

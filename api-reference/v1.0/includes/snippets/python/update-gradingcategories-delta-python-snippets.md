@@ -4,11 +4,10 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```python
 
+# Code snippets are only available for the latest version. Current version is 1.x
 from msgraph import GraphServiceClient
 from msgraph.generated.models.education_assignment_settings import EducationAssignmentSettings
-
-graph_client = GraphServiceClient(credentials, scopes)
-
+# To initialize your graph_client, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=python
 request_body = EducationAssignmentSettings(
 	additional_data = {
 			"grading_categories@delta" : [
@@ -17,7 +16,7 @@ request_body = EducationAssignmentSettings(
 						"display_name" : "Lab Updated",
 				},
 				{
-						"@odata_context" : "https://graph.microsoft.com/beta/$metadata#gradingCategories/$deletedEntity",
+						"@odata_context" : "https://graph.microsoft.com/v1.0/$metadata#gradingCategories/$deletedEntity",
 						"id" : "109e5d73-3ef7-42a5-88d8-7e30cdb85f06",
 						"reason" : "deleted",
 				},

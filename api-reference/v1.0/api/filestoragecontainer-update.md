@@ -6,6 +6,7 @@ author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 11/14/2024
 ---
 
 # Update fileStorageContainer
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Update the properties of a [fileStorageContainer](../resources/filestoragecontainer.md) object.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -52,28 +53,29 @@ If successful, this method returns a `200 OK` response code and an updated [file
 
 ### Request
 The following example shows a request.
+
 # [HTTP](#tab/http)
+
 <!-- {
   "blockType": "request",
   "name": "update_filestoragecontainer"
 }
 -->
 ``` http
-PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z
+PATCH https://graph.microsoft.com/v1.0/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z
 Content-Type: application/json
 
 {
   "displayName": "Updated Name",
-  "description": "Updated Description"
+  "description": "Updated Description",
+  "settings": {
+    "isOcrEnabled": false
+  }
 }
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-filestoragecontainer-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-filestoragecontainer-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -118,7 +120,12 @@ Content-type: application/json
   "description": "Updated Description",
   "containerTypeId": "91710488-5756-407f-9046-fbe5f0b4de73",
   "status": "active",
-  "createdDateTime": "2021-11-24T15:41:52.347Z"
+  "createdDateTime": "2021-11-24T15:41:52.347Z",
+  "settings": {
+    "isOcrEnabled": false,
+    "itemMajorVersionLimit": 50,
+    "isItemVersioningEnabled": true
+  }
 }
 ```
 

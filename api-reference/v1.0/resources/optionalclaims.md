@@ -4,7 +4,8 @@ description: "Declares the optional claims requested by an application."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "sureshja"
+author: "Jackson-Woods"
+ms.date: 04/03/2024
 ---
 
 # optionalClaims resource type

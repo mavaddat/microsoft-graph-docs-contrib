@@ -5,6 +5,8 @@ author: "sumithra-maran"
 ms.localizationpriority: medium
 ms.subservice: "exchange"
 doc_type: conceptualPageType
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Exchange Web Services (EWS) to Microsoft Graph API mappings

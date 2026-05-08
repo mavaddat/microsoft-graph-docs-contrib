@@ -4,7 +4,8 @@ description: "Specifies the sensitive properties of the app that are locked for 
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "madansr7"
+author: "Jackson-Woods"
+ms.date: 04/03/2024
 ---
 
 # servicePrincipalLockConfiguration resource type

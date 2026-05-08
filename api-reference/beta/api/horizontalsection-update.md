@@ -5,6 +5,7 @@ author: sangle7
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: apiPageType
+ms.date: 04/12/2024
 ---
 # Update horizontalSection
 
@@ -13,6 +14,8 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Update the properties of a [horizontalSection](../resources/horizontalSection.md) object.
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -55,7 +58,7 @@ The following example shows a request.
 
 <!-- { "blockType": "ignored" } -->
 
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/sites/a69edae4-9208-4f60-9aa3-cd0911ff0ce1/pages/7f7a2740-2d74-47ba-af0c-71ed3a3384ca/microsoft.graph.sitePage/canvasLayout/horizontalSections/1
 
 Content-Type: application/json

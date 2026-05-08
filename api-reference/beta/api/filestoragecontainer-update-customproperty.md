@@ -1,10 +1,11 @@
 ---
 title: "Update custom properties of a fileStorageContainer "
-description: "Update the custom properties of a fileStorageContainer"
+description: "Update the custom properties of a fileStorageContainer."
 author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 11/12/2024
 ---
 
 # Update the custom properties of a fileStorageContainer
@@ -17,7 +18,7 @@ Update one or multiple custom properties on a [fileStorageContainer](../resource
 
 Updating a custom property to a `null` value deletes the property from the container.
 
-The application calling this API must have read/write permissions to the **fileStorageContainer** for the respective container type.
+The application calling this API must have read and write permissions to the **fileStorageContainer** for the respective container type.
 
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
@@ -25,13 +26,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "filestoragecontainer_update_customproperty" } -->
 [!INCLUDE [permissions-table](../includes/permissions/filestoragecontainer-update-customproperty-permissions.md)]
 
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-permissions.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /storage/fileStorage/containers/{containerId}/customProperties
 ```
 
@@ -65,8 +68,8 @@ The following example updates the `value` property of the custom properties `cli
   "name": "update_filestoragecontainer_customproperty"
 }
 -->
-``` http
-PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/customProperties
+```http
+PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/customProperties
 Content-type: application/json
 
 {
@@ -93,7 +96,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.fileStorageContainerCustomPropertyDictionary"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 Ok
 
 {

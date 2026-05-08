@@ -4,13 +4,12 @@ description: "Automatically generated file. DO NOT MODIFY"
 
 ```python
 
+# Code snippets are only available for the latest version. Current version is 1.x
 from msgraph_beta import GraphServiceClient
 from msgraph_beta.generated.models.room_list import RoomList
 from msgraph_beta.generated.models.physical_address import PhysicalAddress
 from msgraph_beta.generated.models.outlook_geo_coordinates import OutlookGeoCoordinates
-
-graph_client = GraphServiceClient(credentials, scopes)
-
+# To initialize your graph_client, see https://learn.microsoft.com/en-us/graph/sdks/create-client?from=snippets&tabs=python
 request_body = RoomList(
 	odata_type = "microsoft.graph.roomList",
 	display_name = "Building 1",
@@ -20,7 +19,7 @@ request_body = RoomList(
 		city = "Buffalo",
 		state = "NY",
 		postal_code = "98052",
-		country_or_region = "USA",
+		country_or_region = "US",
 	),
 	geo_coordinates = OutlookGeoCoordinates(
 		altitude = None,

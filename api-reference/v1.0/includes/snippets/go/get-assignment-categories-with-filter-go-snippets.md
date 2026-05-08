@@ -5,23 +5,23 @@ description: "Automatically generated file. DO NOT MODIFY"
 ```go
 
 
-// Code snippets are only available for the latest major version. Current major version is $v0.*
+// Code snippets are only available for the latest major version. Current major version is $v1.*
 
 // Dependencies
 import (
 	  "context"
-	  msgraphsdk "github.com/microsoftgraph/msgraph-beta-sdk-go"
-	  grapheducation "github.com/microsoftgraph/msgraph-beta-sdk-go/education"
+	  msgraphsdk "github.com/microsoftgraph/msgraph-sdk-go"
+	  grapheducation "github.com/microsoftgraph/msgraph-sdk-go/education"
 	  //other-imports
 )
 
 
 requestFilter := "id eq '74b03ab5-5832-4f99-89f5-d52da13d93f7'"
 
-requestParameters := &grapheducation.EducationClasseItemAssignmentItemCategoriesRequestBuilderGetQueryParameters{
+requestParameters := &grapheducation.ClassesItemAssignmentsItemCategoriesRequestBuilderGetQueryParameters{
 	Filter: &requestFilter,
 }
-configuration := &grapheducation.EducationClasseItemAssignmentItemCategoriesRequestBuilderGetRequestConfiguration{
+configuration := &grapheducation.ClassesItemAssignmentsItemCategoriesRequestBuilderGetRequestConfiguration{
 	QueryParameters: requestParameters,
 }
 

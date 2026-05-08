@@ -1,10 +1,11 @@
 ---
 title: "List deleted items (directory objects) owned by a user"
 description: "Retrieves a list of recently deleted application or group objects that are owned by the specified user."
-author: "keylimesoda"
+author: "FaithOmbongi"
 ms.localizationpriority: medium
 ms.subservice: "entra-directory-management"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # List deleted items (directory objects) owned by a user

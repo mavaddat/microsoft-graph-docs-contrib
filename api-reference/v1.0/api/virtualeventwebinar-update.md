@@ -5,12 +5,15 @@ author: "frankpeng7"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 11/22/2024
 ---
 
 # Update virtualEventWebinar
 Namespace: microsoft.graph
 
 Update the properties of a [virtualEventWebinar](../resources/virtualeventwebinar.md) object.
+
+Only the **Organizer** and **Co-organizer** can make changes to a webinar event.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -31,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /solutions/virtualEvents/webinars/{id}
 ```
 
@@ -70,7 +73,7 @@ The following example shows a request.
   "name": "update_virtualeventwebinar"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/solutions/virtualEvents/webinars/a57082a9-7629-4f74-8da0-8d621aab4d2d@4aa05bcc-1cac-4a83-a9ae-0db84b88f4ba
 Content-Type: application/json
 
@@ -88,10 +91,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-virtualeventwebinar-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-virtualeventwebinar-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -132,7 +131,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.virtualEventWebinar"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -173,6 +172,12 @@ Content-Type: application/json
   ],
   "settings": {
     "isAttendeeEmailNotificationEnabled": false
-  }
+  },
+  "externalEventInformation": [
+    {
+      "applicationId" : "67a527ba-ef0e-4ba2-88b6-4fa5e9711757",
+      "externalEventId": "myExternalEventId"
+    }
+  ]
 }
 ```

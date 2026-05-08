@@ -5,6 +5,7 @@ author: sangle7
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: apiPageType
+ms.date: 04/12/2024
 ---
 
 # Create webPart
@@ -17,6 +18,8 @@ Create a new [webPart] at a specified position in the [sitePage].
 
 [sitePage]: ../resources/sitePage.md
 [webPart]: ../resources/webPart.md
+
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 

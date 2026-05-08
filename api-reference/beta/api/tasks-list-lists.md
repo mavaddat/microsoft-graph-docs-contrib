@@ -5,6 +5,7 @@ author: "devindrajit"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # List lists (deprecated)
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/tasks/lists
 GET /users/{userId|userPrincipalName}/tasks/lists
 ```
@@ -58,7 +59,7 @@ If successful, this method returns a `200 OK` response code and a collection of 
   "name": "list_basetasklist"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/tasks/lists
 ```
 
@@ -76,7 +77,7 @@ GET https://graph.microsoft.com/beta/me/tasks/lists
   "@odata.type": "Collection(microsoft.graph.baseTaskList)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

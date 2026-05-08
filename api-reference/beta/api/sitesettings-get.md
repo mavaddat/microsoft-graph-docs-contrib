@@ -5,6 +5,7 @@ author: "k-tsoi"
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # Get siteSettings
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /sites/{sitesId}/settings
 ```
 
@@ -64,7 +65,7 @@ The following example shows a request.
   "name": "get_sitesettings"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/sites/03164a2b-a288-486a-993e-c41454113e2a/settings
 ```
 
@@ -85,7 +86,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.siteSettings"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

@@ -1,14 +1,15 @@
 ---
-title: "governanceRoleAssignment resource type"
+title: "governanceRoleAssignment resource type (deprecated)"
 description: "Represents the assignment of a user or group to a role."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 04/03/2024
 ---
 
-# governanceRoleAssignment resource type
+# governanceRoleAssignment resource type (deprecated)
 
 Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]

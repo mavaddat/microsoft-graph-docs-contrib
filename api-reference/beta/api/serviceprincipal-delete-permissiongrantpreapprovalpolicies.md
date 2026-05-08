@@ -5,6 +5,7 @@ author: "yuhko-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 06/11/2024
 ---
 
 # Remove a permissionGrantPreApprovalPolicy from a servicePrincipal
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /servicePrincipals/{{ servicePrincipal id }}/permissionGrantPreApprovalPolicies/{{ policy id }}/$ref
 ```
 
@@ -55,7 +56,7 @@ If successful, this method returns a `204 No Content` response code.
   "name": "serviceprincipal_remove_permissionGrantPreApprovalPoliciesdelete"
 }
 -->
-``` http
+```http
 DELETE https://graph.microsoft.com/beta/servicePrincipals/37d4ba51-cc54-4762-9ff7-deb5c9438cc7/permissionGrantPreApprovalPolicies/71ba13dc-5947-4e59-bcc5-0ad5c339a853/$ref
 ```
 
@@ -69,6 +70,6 @@ DELETE https://graph.microsoft.com/beta/servicePrincipals/37d4ba51-cc54-4762-9ff
 <!-- {
   "blockType": "response"
 } -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

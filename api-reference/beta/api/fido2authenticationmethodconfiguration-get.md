@@ -1,11 +1,12 @@
 ---
 title: "Get fido2AuthenticationMethodConfiguration"
 description: "Read the properties and relationships of a fido2AuthenticationMethodConfiguration object."
-author: "calvinlui"
+author: "hanki71"
 ms.reviewer: intelligentaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: "apiPageType"
+ms.date: 04/05/2024
 ---
 
 # Get fido2AuthenticationMethodConfiguration
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/fido2
 ```
 
@@ -58,16 +59,12 @@ If successful, this method returns a `200 OK` response code and a [fido2Authenti
   "name": "get_fido2authenticationmethodconfiguration"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/fido2
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-fido2authenticationmethodconfiguration-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-fido2authenticationmethodconfiguration-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -106,7 +103,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.fido2AuthenticationMethodConfiguration"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-type: application/json
 
@@ -126,9 +123,26 @@ Content-type: application/json
         {
             "targetType": "group",
             "id": "all_users",
-            "isRegistrationRequired": false
+            "isRegistrationRequired": false,
+            "allowedPasskeyProfiles": [
+                "00000000-0000-0000-0000-000000000001"
+            ]
         }
     ],
-    "excludeTargets": []
+    "excludeTargets": [],
+    "passkeyProfiles": [
+        {
+            "id": "00000000-0000-0000-0000-000000000001",
+            "name": "Default passkey profile",
+            "passkeyTypes": "deviceBound,synced",
+            "attestationEnforcement": "disabled",
+            "keyRestrictions": {
+                "isEnforced": false,
+                "enforcementType": "allow",
+                "aaGuids": [
+                ]
+            }
+        }
+    ]
 }
 ```

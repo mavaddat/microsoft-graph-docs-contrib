@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 03/06/2024
 ---
 
 # microsoftTrainingAssignmentMapping resource type
@@ -19,7 +20,7 @@ Inherits from [trainingSetting](../resources/trainingsetting.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
-|assignedTo|trainingAssignedTo collection|A user collection that specifies to whom the training should be assigned. Possible values are: `none`, `allUsers`, `clickedPayload`, `compromised`, `reportedPhish`, `readButNotClicked`, `didNothing`, `unknownFutureValue`. |
+|assignedTo|trainingAssignedTo collection|A user collection that specifies to whom the training should be assigned. The possible values are: `none`, `allUsers`, `clickedPayload`, `compromised`, `reportedPhish`, `readButNotClicked`, `didNothing`, `unknownFutureValue`. |
 |settingType|trainingSettingType|Type of training setting. The possible values are: `microsoftCustom`, `microsoftManaged`, `noTraining`, `custom`, `unknownFutureValue`. Inherited from [trainingSetting](../resources/trainingsetting.md).|
 
 ## Relationships

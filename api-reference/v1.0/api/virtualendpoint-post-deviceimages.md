@@ -5,6 +5,7 @@ author: "ChyouChyou"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 09/27/2024
 ---
 
 # Create cloudPcDeviceImage
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Create a new [cloudPcDeviceImage](../resources/cloudpcdeviceimage.md) object. Upload a custom OS image that you can later provision on Cloud PCs.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
 ## Permissions
 
@@ -22,6 +23,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "virtualendpoint_post_deviceimages" } -->
 [!INCLUDE [permissions-table](../includes/permissions/virtualendpoint-post-deviceimages-permissions.md)]
 
+> **Note:** When using application-only authentication, you need to grant the `Subscriptions.Read` permission to Windows 365 in advance. For more information, see [Customer permissions](/windows-365/enterprise/customer-permissions).
+
 ## HTTP request
 
 <!-- {
@@ -29,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /deviceManagement/virtualEndpoint/deviceImages
 ```
 
@@ -69,7 +72,7 @@ The following example shows a request.
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/deviceManagement/virtualEndpoint/deviceImages
 Content-Type: application/json
 
@@ -82,10 +85,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-cloudpcdeviceimage-from-cloudpcdeviceimage-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-cloudpcdeviceimage-from-cloudpcdeviceimage-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -126,7 +125,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -142,6 +141,8 @@ Content-Type: application/json
   "status": "pending",
   "errorCode": null,
   "osStatus": null,
-  "expirationDate": null
+  "expirationDate": null,
+  "osVersionNumber": null,
+  "sizeInGB": 64
 }
 ```

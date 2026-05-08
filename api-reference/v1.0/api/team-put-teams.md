@@ -5,22 +5,22 @@ author: "MSFTRickyCastaneda"
 ms.localizationpriority: high
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 09/16/2024
 ---
 
 # Create team from group
 
 Namespace: microsoft.graph
 
-Create a new [team](../resources/team.md) under a [group](../resources/group.md).
+Create a new [team](../resources/team.md) under a [group](../resources/group.md). In order to create a team, the group must have at least one owner.
 
-In order to create a team, the group must have a least one owner.
+If the group was created less than 15 minutes ago, calls to create a team might fail with a `404 Not Found` error code because the group information didn't fully replicate.
 
-If the creation of the team call is delayed, you can retry the call up to three times before you have to wait for 15 minutes due to a propagation delay. If the group was created less than 15 minutes ago, the call might fail with a `404` error code due to replication delays.
+> [!TIP]
+> We recommend that you retry this API call up to three times, with a 10‑second delay between attempts. If the call still fails after three retries, wait at least 15 minutes after the group was created before you try again.
 
-If the group was created less than 15 minutes ago, it's possible for a call to create a team to fail with a 404 error code, due to ongoing replication delays.
-The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
-
-> **Note:** SharePoint provisioning doesn't occur in real time, it's a background process. The completion of the provisioning can't be determined.
+> [!NOTE]
+> SharePoint provisioning doesn't occur in real time, it's a background process. The completion of the provisioning can't be determined.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -31,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "team_put_teams" } -->
 [!INCLUDE [permissions-table](../includes/permissions/team-put-teams-permissions.md)]
 
-> **Note**: This API supports admin permissions. Global admins and Microsoft Teams service admins can access groups that they are not a member of.
+> **Note**: This API supports admin permissions. Microsoft Teams service admins can access groups that they are not a member of.
 
 ## HTTP request
 
@@ -89,10 +89,6 @@ Content-type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-team-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-team-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

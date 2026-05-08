@@ -1,10 +1,11 @@
 ---
 title: "Add custom properties to a fileStorageContainer"
-description: "Add custom properties to a fileStorageContainer"
+description: "Add custom properties to a fileStorageContainer."
 author: "tonchan-msft"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: apiPageType
+ms.date: 11/12/2024
 ---
 
 # Add custom properties to a fileStorageContainer
@@ -22,13 +23,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "filestoragecontainer_post_customproperty" } -->
 [!INCLUDE [permissions-table](../includes/permissions/filestoragecontainer-post-customproperty-permissions.md)]
 
+[!INCLUDE [app-permissions](../includes/sharepoint-embedded-app-permissions.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /storage/fileStorage/containers/{containerId}/customProperties
 ```
 
@@ -50,7 +53,7 @@ You can specify the following properties when you create a custom property.
 
 ## Response
 
-If successful, this method returns a `200 Created` response code.
+If successful, this method returns a `201 Created` response code.
 
 ## Examples
 
@@ -64,8 +67,8 @@ The following example shows how to create a custom property called `clientUnique
   "name": "post_filestoragecontainer_customproperty_1"
 }
 -->
-``` http
-PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/customProperties
+```http
+PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/customProperties
 Content-Type: application/json
 
 {
@@ -88,8 +91,8 @@ The following example shows the response. By default, the property isn't searcha
   "truncated": true
 }
 -->
-``` http
-HTTP/1.1 200 Created
+```http
+HTTP/1.1 201 Created
 ```
 ### Example 2: Create a custom searchable property
 
@@ -101,8 +104,8 @@ The following example shows how to create a searchable custom property called `c
   "name": "post_filestoragecontainer_customproperty_2"
 }
 -->
-``` http
-PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/{containerId}/customProperties
+```http
+PATCH https://graph.microsoft.com/beta/storage/fileStorage/containers/b!ISJs1WRro0y0EWgkUYcktDa0mE8zSlFEqFzqRn70Zwp1CEtDEBZgQICPkRbil_5Z/customProperties
 Content-Type: application/json
 
 {
@@ -126,8 +129,8 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
-HTTP/1.1 200 Created
+```http
+HTTP/1.1 201 Created
 ```
 
 

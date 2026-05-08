@@ -5,6 +5,7 @@ author: "yuechen7"
 ms.localizationpriority: medium
 ms.subservice: "project-rome"
 doc_type: apiPageType
+ms.date: 07/08/2024
 ---
 
 # Get cloudClipboardItem
@@ -33,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/cloudClipboard/items/{cloudClipboardItemId}
 ```
 
@@ -76,7 +77,7 @@ The following example shows a request.
   "name": "get_cloudclipboarditem"
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/beta/user/cloudClipboard/items/{cloudClipboardItemId}
 ```
 
@@ -89,7 +90,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.cloudClipboardItem"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

@@ -5,6 +5,7 @@ author: "TarkanSevilmis"
 ms.localizationpriority: high
 ms.subservice: "planner"
 doc_type: conceptualPageType
+ms.date: 03/06/2024
 ---
 
 # Use the Planner REST API
@@ -18,6 +19,9 @@ In Microsoft Planner, plans are always contained by another resource. The contai
 group members will be able to create, edit, resolve, and delete tasks in the plan, as well as changing some plan-level properties, such as the name of the plan or label names. Additionally, when the group is deleted, all the plans in the group are automatically deleted, or if a group is restored, all the plans will be automatically restored.
 
 The most common type of container is a Microsoft 365 group.
+
+>[!IMPORTANT]
+>Premium plans and tasks aren't available on the Planner API in Microsoft Graph. Only basic plans may be accessed using this API.
 
 ### Container type: Microsoft 365 groups
 

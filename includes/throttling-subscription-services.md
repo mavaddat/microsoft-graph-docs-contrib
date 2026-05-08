@@ -1,11 +1,10 @@
 ---
-author: "keylimesoda"
+author: "jessieli-ad"
 ms.localizationpriority: high
 ms.subservice: change-notifications
 ms.topic: include
 ---
 <!-- markdownlint-disable MD041 -->
-<!-- this file is auto-generated don't edit it manually! -->
 
 | Request type | Limit per app for all tenants | Limit per app per tenant |
 | ------------- | ----------------------------- | ----------------------------- |

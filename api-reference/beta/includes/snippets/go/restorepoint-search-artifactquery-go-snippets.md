@@ -18,7 +18,7 @@ import (
 
 requestBody := graphsolutions.NewSearchPostRequestBody()
 artifactQuery := graphmodels.NewArtifactQuery()
-queryExpression := "((subject -contains ‘Finance’)  -or  (subject -contains ‘Legal’)) -and (sender -eq 'alex@contoso.com') -and (recipient -eq 'carol@contoso.com') -and hasAttachment -eq true"
+queryExpression := "(Sender -like 'abc@contoso.com') -and (Subject -like '*Check email*' -or Subject -like ' Important') -and (HasAttachment -eq 'true')"
 artifactQuery.SetQueryExpression(&queryExpression) 
 artifactType := graphmodels.MESSAGE_RESTORABLEARTIFACT 
 artifactQuery.SetArtifactType(&artifactType) 
@@ -30,6 +30,8 @@ requestBody.SetProtectionUnitIds(protectionUnitIds)
 protectionTimePeriod := graphmodels.NewTimePeriod()
 startDateTime , err := time.Parse(time.RFC3339, "2021-01-01T00:00:00Z")
 protectionTimePeriod.SetStartDateTime(&startDateTime) 
+endDateTime , err := time.Parse(time.RFC3339, "2021-01-30T00:00:00Z")
+protectionTimePeriod.SetEndDateTime(&endDateTime) 
 requestBody.SetProtectionTimePeriod(protectionTimePeriod)
 restorePointPreference := graphmodels.OLDEST_RESTOREPOINTPREFERENCE 
 requestBody.SetRestorePointPreference(&restorePointPreference) 

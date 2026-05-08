@@ -5,6 +5,7 @@ author: mohitpcad
 ms.localizationpriority: medium
 ms.subservice: sharepoint
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # relation resource type
@@ -32,7 +33,7 @@ Inherits from [entity](../resources/entity.md).
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|The ID of the relation.|
-|relationship|String|The type of relation. Possible values are: `pin`, `reuse`.|
+|relationship|String|The type of relation. The possible values are: `pin`, `reuse`.|
 
 ## Relationships
 |Relationship|Type|Description|

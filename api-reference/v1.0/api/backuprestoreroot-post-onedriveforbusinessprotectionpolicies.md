@@ -6,6 +6,7 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 09/10/2024
 ---
 
 # Create oneDriveForBusinessProtectionPolicy
@@ -29,7 +30,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /solutions/backupRestore/oneDriveForBusinessProtectionPolicies
 ```
 
@@ -66,7 +67,7 @@ The following example shows a request.
   "name": "onedriveforbusinessprotectionpolicy_create"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/v1.0/solutions/backupRestore/oneDriveForBusinessProtectionPolicies
 
 {
@@ -89,10 +90,6 @@ POST https://graph.microsoft.com/v1.0/solutions/backupRestore/oneDriveForBusines
 [!INCLUDE [sample-code](../includes/snippets/csharp/onedriveforbusinessprotectionpolicy-create-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/onedriveforbusinessprotectionpolicy-create-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/onedriveforbusinessprotectionpolicy-create-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -107,6 +104,10 @@ POST https://graph.microsoft.com/v1.0/solutions/backupRestore/oneDriveForBusines
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/onedriveforbusinessprotectionpolicy-create-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/onedriveforbusinessprotectionpolicy-create-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -126,7 +127,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Location: https://graph.microsoft.com/v1.0/solutions/backupRestore/ProtectionPolicies/b218eb4a-ea72-42bd-8f0b-d0bbf794bec7
 

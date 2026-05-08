@@ -1,10 +1,11 @@
 ---
 title: "knownIssue resource type"
 description: "Represents a known issue related to a Windows product."
-author: "skandula"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: "windows-update-business"
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 01/27/2026
 ---
 
 # knownIssue resource type

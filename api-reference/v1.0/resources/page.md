@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "jewan-microsoft"
 ms.subservice: onenote
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # onenotePage resource type
@@ -63,7 +64,7 @@ The following JSON representation shows the resource type.
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
 |parentNotebook|[Notebook](notebook.md)|The notebook that contains the page.  Read-only.|
-|parentSection|[OnenoteSection](section.md)|The section that contains the page. Read-only.|
+|parentSection|[OnenoteSection](onenotesection.md)|The section that contains the page. Read-only.|
 
 ## Methods
 

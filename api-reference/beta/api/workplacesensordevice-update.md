@@ -5,6 +5,7 @@ author: "ms-amakumar"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType
+ms.date: 09/17/2024
 ---
 
 # Update workplaceSensorDevice
@@ -19,10 +20,12 @@ Update the properties of a workplace sensor device.
 ## Permissions
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
+> [!NOTE]
+> For an app with delegated permissions to write workplace devices, the signed-in user must be a member of the **TenantPlacesManagement** Exchange Online administrator role.
+
 <!-- { "blockType": "permissions", "name": "workplacesensordevice_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/workplacesensordevice-update-permissions.md)]
 
-For an app with delegated permissions to write workplace devices, the signed-in user must be a member of one of the following Microsoft Entra administrator roles: either Global Administrator or one of the Exchange Online management roles, specifically TenantPlacesManagement.
 
 ## HTTP request
 
@@ -30,7 +33,7 @@ For an app with delegated permissions to write workplace devices, the signed-in 
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /workplace/sensorDevices/{id}
 ```
 
@@ -77,7 +80,7 @@ The following example shows a request.
   "name": "update_workplacesensordevice_tags"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/workplace/sensorDevices/ade7078f-4bf5-4239-bfde-95a7c4225df7
 Content-Type: application/json
 
@@ -112,10 +115,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-workplacesensordevice-tags-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-workplacesensordevice-tags-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/update-workplacesensordevice-tags-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -146,7 +145,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.workplaceSensorDevice"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -197,7 +196,7 @@ The following example shows a request.
   "name": "update_workplacesensordevice_new_sensor"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/workplace/sensorDevices/ade7078f-4bf5-4239-bfde-95a7c4225df7
 Content-Type: application/json
 
@@ -234,10 +233,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-workplacesensordevice-new-sensor-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-workplacesensordevice-new-sensor-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/update-workplacesensordevice-new-sensor-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -268,7 +263,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.workplaceSensorDevice"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -324,7 +319,7 @@ The following example shows a request.
   "name": "update_workplacesensordevice_remove_sensor"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/workplace/sensorDevices/ade7078f-4bf5-4239-bfde-95a7c4225df7
 Content-Type: application/json
 
@@ -353,10 +348,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-workplacesensordevice-remove-sensor-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-workplacesensordevice-remove-sensor-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -389,7 +380,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.workplaceSensorDevice"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

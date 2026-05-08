@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "tommoser"
 ms.subservice: "security"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # addContentHeaderAction resource type (deprecated)
@@ -21,7 +22,7 @@ Represents an action that specifies the details on the content header to be adde
 
 | Property      | Type   | Description                                                   |
 | :------------ | :----- | :------------------------------------------------------------ |
-| alignment     | String | Possible values are: `left`, `right`, `center`.               |
+| alignment     | String | The possible values are: `left`, `right`, `center`.               |
 | fontColor     | String | Color of the font to use for the header.                      |
 | fontName      | String | Name of the font to use for the header.                       |
 | fontSize      | Int32  | Font size to use for the header.                              |

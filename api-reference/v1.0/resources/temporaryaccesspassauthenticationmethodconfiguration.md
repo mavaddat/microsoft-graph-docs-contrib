@@ -7,6 +7,7 @@ ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
 doc_type: resourcePageType
 toc.title: Temporary Access Pass
+ms.date: 07/22/2024
 ---
 
 # temporaryAccessPassAuthenticationMethodConfiguration resource type
@@ -33,7 +34,7 @@ Inherits from [authenticationMethodConfiguration](../resources/authenticationmet
 |isUsableOnce|Boolean    |If `true`, all the passes in the tenant will be restricted to one-time use. If `false`, passes in the tenant can be created to be either one-time use or reusable.|
 |maximumLifetimeInMinutes|Int|Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).|
 |minimumLifetimeInMinutes|Int|Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).|
-|state|authenticationMethodState|Whether the Temporary Access Pass method is enabled in the tenant. Possible values are: `enabled`, `disabled`. Inherited from [authenticationMethodConfiguration](authenticationmethodconfiguration.md). |
+|state|authenticationMethodState|Whether the Temporary Access Pass method is enabled in the tenant. The possible values are: `enabled`, `disabled`. Inherited from [authenticationMethodConfiguration](authenticationmethodconfiguration.md). |
 
 ## Relationships
 |Relationship|Type|Description|

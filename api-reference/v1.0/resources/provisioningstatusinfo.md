@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "ArvindHarinder1"
 ms.subservice: "entra-monitoring-health"
 doc_type: "resourcePageType"
+ms.date: 04/03/2024
 ---
 
 # provisioningStatusInfo resource type
@@ -19,7 +20,7 @@ Describes the status of the provisioning summary event.
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
 |errorInformation|[provisioningErrorInfo](provisioningErrorInfo.md)| If status isn't success/ skipped details for the error are contained in this.|
-|status|provisioningResult| Possible values are: `success`, `warning`, `failure`, `skipped`, `unknownFutureValue`.|
+|status|provisioningResult| The possible values are: `success`, `warning`, `failure`, `skipped`, `unknownFutureValue`.|
 
 ## JSON representation
 

@@ -1,10 +1,11 @@
 ---
 title: "lifecycleWorkflowsContainer resource type"
 description: "A container for the relationships that expose the Microsoft Entra ID Governance life cycle workflows API capabilities."
-author: "AlexFilipin"
+author: "KristinaSmith"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/24/2024
 ---
 
 # lifecycleWorkflowsContainer resource type

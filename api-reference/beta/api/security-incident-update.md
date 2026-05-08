@@ -24,13 +24,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "security_incident_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-incident-update-permissions.md)]
 
+[!INCLUDE [rbac-security-alerts-apis-write](../includes/rbac-for-apis/rbac-security-alerts-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /security/incidents/{incidentId}
 ```
 
@@ -46,16 +48,20 @@ PATCH /security/incidents/{incidentId}
 
 |Property|Type|Description|
 |:---|:---|:---|
-|assignedTo|String|Owner of the incident, or null if no owner is assigned. Free editable text.|
-|classification|microsoft.graph.security.alertClassification|The specification for the incident. Possible values are: `unknown`, `falsePositive`, `truePositive`, `informationalExpectedActivity`, `unknownFutureValue`.|
+|assignedTo|String|Owner of the incident, or `null` if no owner is assigned. Free editable text.|
+|classification|microsoft.graph.security.alertClassification|The specification for the incident. The possible values are: `unknown`, `falsePositive`, `truePositive`, `informationalExpectedActivity`, `unknownFutureValue`.|
 |customTags|String collection|Array of custom tags associated with an incident.|
-|determination|microsoft.graph.security.alertDetermination|Specifies the determination of the incident. Possible values are: `unknown`, `apt`, `malware`, `securityPersonnel`, `securityTesting`, `unwantedSoftware`, `other`, `multiStagedAttack`, `compromisedAccount`, `phishing`, `maliciousUserActivity`, `notMalicious`, `notEnoughDataToValidate`, `confirmedUserActivity`, `lineOfBusinessApplication`, `unknownFutureValue`.|
-|status|microsoft.graph.security.incidentStatus|The status of the incident. Possible values are: `active`, `resolved`, `redirected`, `unknownFutureValue`.|
+|description|String|Description of the incident.|
+|determination|microsoft.graph.security.alertDetermination|Specifies the determination of the incident. The possible values are: `unknown`, `apt`, `malware`, `securityPersonnel`, `securityTesting`, `unwantedSoftware`, `other`, `multiStagedAttack`, `compromisedAccount`, `phishing`, `maliciousUserActivity`, `notMalicious`, `notEnoughDataToValidate`, `confirmedUserActivity`, `lineOfBusinessApplication`, `unknownFutureValue`.|
+|displayName|String|The incident name.|
+|severity|microsoft.graph.security.alertSeverity|Indicates the possible impact on assets. The higher the severity, the bigger the impact. Typically, higher severity items require the most immediate attention. The possible values are: `unknown`, `informational`, `low`, `medium`, `high`, `unknownFutureValue`.|
+|resolvingComment|string|User input that explains the resolution of the incident and the classification choice. It contains free editable text.|
+|status|microsoft.graph.security.incidentStatus|The status of the incident. The possible values are: `active`, `resolved`, `redirected`, `unknownFutureValue`.|
 |summary|String|The overview of an attack. When applicable, the summary contains details of what occurred, impacted assets, and the type of attack.|
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and an updated [incident](../resources/security-incident.md) object in the response body.
+If successful, this method returns a `200 OK` response code and an updated [microsoft.graph.security.incident](../resources/security-incident.md) object in the response body.
 
 ## Examples
 
@@ -69,7 +75,7 @@ The following example shows a request.
   "name": "update_incident"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/security/incidents/2972395
 Content-Type: application/json
 
@@ -84,10 +90,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-incident-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-incident-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -125,7 +127,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -166,4 +168,3 @@ Content-Type: application/json
     "summary": "Defender Experts has identified some malicious activity. This incident has been raised for your awareness and should be investigated as normal."
 }
 ```
-

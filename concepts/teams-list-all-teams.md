@@ -4,6 +4,8 @@ description: "Use the Microsoft Teams API in Microsoft Graph to list all teams i
 author: "MSFTRickyCastaneda"
 ms.localizationpriority: high
 ms.subservice: "teams"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # List all teams in Microsoft Teams for an organization

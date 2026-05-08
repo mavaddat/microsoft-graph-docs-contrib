@@ -5,6 +5,7 @@ author: "yuhko-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-applications"
 doc_type: apiPageType
+ms.date: 06/11/2024
 ---
 
 # Assign a permissionGrantPreApprovalPolicy to a servicePrincipal
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /servicePrincipals/{id}/permissionGrantPreApprovalPolicies/$ref
 ```
 
@@ -54,7 +55,7 @@ If successful, this method returns a `204 No Content` response code.
   "name": "serviceprincipal_assign_permissionGrantPreApprovalPolicies"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/servicePrincipals/37d4ba51-cc54-4762-9ff7-deb5c9438cc7/permissionGrantPreApprovalPolicies/$ref
 Content-Type: application/json
 
@@ -73,6 +74,6 @@ Content-Type: application/json
 <!-- {
   "blockType": "response"
 } -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

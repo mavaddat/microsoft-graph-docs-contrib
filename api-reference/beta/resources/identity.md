@@ -5,6 +5,7 @@ description: "Represents an identity of an actor."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: onedrive
+ms.date: 07/23/2024
 ---
 # identity resource type
 
@@ -13,6 +14,8 @@ Namespace: microsoft.graph
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents an identity of an _actor_. For example, an actor can be a user, device, or application. Multiple Microsoft Graph APIs share this resource and the data they return varies depending on the API.
+
+In entitlement management scenarios, this resource is used to represent identities in contexts such as related people in access package suggestions.
 
 Base type of [userIdentity](useridentity.md).
 

@@ -6,6 +6,7 @@ author: "lisaychuang"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # signInFrequencySessionControl resource type
@@ -21,7 +22,7 @@ Session control to enforce sign-in frequency. Inherits from [conditionalAccessSe
 |authenticationType |signInFrequencyAuthenticationType  | The possible values are `primaryAndSecondaryAuthentication`, `secondaryAuthentication`, `unknownFutureValue`. This property isn't required when using **frequencyInterval** with the value of `timeBased`.|
 |frequencyInterval  |signInFrequencyInterval  | The possible values are `timeBased`, `everyTime`, `unknownFutureValue`. Sign-in frequency of `everyTime` is available for risky users, risky sign-ins, and Intune device enrollment. For more information, see [Require reauthentication every time](https://aka.ms/RequireReauthentication).|
 |isEnabled     |Boolean      | Specifies whether the session control is enabled. |
-|type          |signinFrequencyType| Possible values are: `days`, `hours`.|
+|type          |signinFrequencyType| The possible values are: `days`, `hours`.|
 |value         |Int32        | The number of `days` or `hours`.|
 
 

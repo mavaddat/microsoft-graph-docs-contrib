@@ -5,6 +5,7 @@ author: "mahage-msft"
 ms.localizationpriority: medium
 ms.subservice: "ediscovery"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # case resource type
@@ -12,6 +13,8 @@ doc_type: "resourcePageType"
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 In the context of eDiscovery, contains custodians, holds, collections, review sets, and exports. For details, see [Advanced eDiscovery](/microsoft-365/compliance/overview-ediscovery-20).
 

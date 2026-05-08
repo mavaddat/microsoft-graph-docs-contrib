@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "sadia353"
 ms.subservice: entra-users
 doc_type: apiPageType
+ms.date: 10/15/2024
 ---
 
 # List sponsors
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Get a user's sponsors. Sponsors are users and groups that are responsible for this guest's privileges in the tenant and for keeping the guest's information and access up to date.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 
@@ -23,6 +24,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 [!INCLUDE [permissions-table](../includes/permissions/user-list-sponsors-permissions.md)]
 
 [!INCLUDE [limited-info](../../includes/limited-info.md)]
+
+[!INCLUDE [rbac-user-sponsors-apis-read](../includes/rbac-for-apis/rbac-user-sponsors-apis-read.md)]
 
 ## HTTP request
 
@@ -62,16 +65,12 @@ The following example shows a request.
   "name": "get_sponsors"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users/025e5e3e-e5b7-4eb4-ba1f-4e5b0579f1a2/sponsors
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-sponsors-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-sponsors-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

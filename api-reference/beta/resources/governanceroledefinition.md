@@ -1,14 +1,15 @@
 ---
-title: "governanceRoleDefinition resource type"
+title: "governanceRoleDefinition resource type (deprecated)"
 description: "Represents the role definitions. For Azure resources, it can represent Azure RBAC roles, such as Owner, Reader, Contributor, etc."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 05/15/2024
 ---
 
-# governanceRoleDefinition resource type
+# governanceRoleDefinition resource type (deprecated)
 
 Namespace: microsoft.graph
 

@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "tommoser"
 ms.subservice: "security"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # labelingOptions resource type  (deprecated)
@@ -21,7 +22,7 @@ Represents the labeling options that can be provided to the evaluation APIs. **l
 
 | Property               | Type                                                | Description                                                                                                                   |
 | :--------------------- | :-------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| assignmentMethod       | String                                              | Possible values are: `standard`, `privileged`, `auto`.                                                                        |
+| assignmentMethod       | String                                              | The possible values are: `standard`, `privileged`, `auto`.                                                                        |
 | downgradeJustification | [downgradeJustification](downgradejustification.md) | The downgrade justification object that indicates if downgrade was justified and, if so, the reason.                          |
 | extendedProperties     | [keyValuePair](keyvaluepair.md) collection          | Extended properties will be parsed and returned in the standard MIP labeled metadata format as part of the label information. |
 | labelId                | Guid                                                | The GUID of the label that should be applied to the information.                                                              |

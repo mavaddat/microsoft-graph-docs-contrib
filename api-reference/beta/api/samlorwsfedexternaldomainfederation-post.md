@@ -5,6 +5,7 @@ author: "namkedia"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Create samlOrWsFedExternalDomainFederation
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /directory/federationConfigurations/microsoft.graph.samlOrWsFedExternalDomainFederation
 ```
 
@@ -73,7 +74,7 @@ If successful, this method returns a `201 Created` response code and a [samlOrWs
 }
 -->
 
-``` http
+```http
 POST https://graph.microsoft.com/beta/directory/federationConfigurations/microsoft.graph.samlOrWsFedExternalDomainFederation
 Content-Type: application/json
 
@@ -110,7 +111,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

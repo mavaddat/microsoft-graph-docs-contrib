@@ -5,6 +5,7 @@ author: "gmcnamara-microsoft"
 ms.localizationpriority: medium
 ms.subservice: entra-monitoring-health
 doc_type: apiPageType
+ms.date: 06/25/2024
 ---
 
 # reportRoot: getRelyingPartyDetailedSummary
@@ -27,13 +28,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 -->
 [!INCLUDE [permissions-table](../includes/permissions/reportroot-getrelyingpartydetailedsummary-permissions.md)]
 
+[!INCLUDE [rbac-usage-insights-apis](../includes/rbac-for-apis/rbac-usage-insights-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /reports/getRelyingPartyDetailedSummary(period='parameterValue')
 ```
 
@@ -74,16 +77,12 @@ The following example shows a request.
   "name": "reportrootthis.getrelyingpartydetailedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/reports/getRelyingPartyDetailedSummary(period='D7')
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/reportrootthisgetrelyingpartydetailedsummary-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/reportrootthisgetrelyingpartydetailedsummary-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -122,7 +121,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.relyingPartyDetailedSummary)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

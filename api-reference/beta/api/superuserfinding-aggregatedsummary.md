@@ -6,12 +6,15 @@ ms.reviewer: ciem_pm
 ms.localizationpriority: medium
 ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 06/26/2024
 ---
 
 # superUserFinding: aggregatedSummary
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 View the raw count of super users in the specified AWS, Azure, or GCP authorization systems in your multicloud environment.
 
@@ -28,7 +31,7 @@ Example of an AWS request
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/microsoft.graph.superUserFinding/aggregatedSummary(authorizationSystemIds=['awsAuthSystemId'])
 ```
 
@@ -37,7 +40,7 @@ Example of an Azure request
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/azure/findings/microsoft.graph.superUserFinding/aggregatedSummary(authorizationSystemIds=['azureAuthSystemId'])
 ```
 
@@ -46,7 +49,7 @@ Example of a GCP request
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/gcp/findings/microsoft.graph.superUserFinding/aggregatedSummary(authorizationSystemIds=['gcpAuthSystemId'])
 ```
 
@@ -80,7 +83,7 @@ The following example shows a request.
   "name": "superuserfindingthis.aggregatedsummary"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/azure/findings/microsoft.graph.superUserFinding/aggregatedSummary(authorizationSystemIds=['00f7dcae-97f9-492b-af2e-36eb35b613af'])
 ```
 
@@ -99,7 +102,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.permissionsAnalyticsAggregatedIdentitySummary"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -109,3 +112,4 @@ Content-Type: application/json
     "findingsCount": 13
 }
 ```
+

@@ -5,13 +5,12 @@ author: "kwekua"
 ms.localizationpriority: medium
 ms.subservice: "microsoft-bookings"
 doc_type: resourcePageType
+ms.date: 08/08/2024
 ---
 
 # staffAvailabilityItem resource type
 
 Namespace: microsoft.graph
-
- [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
 Represents the available and busy time slots of a Microsoft Bookings [staff member](bookingstaffmember.md).
 

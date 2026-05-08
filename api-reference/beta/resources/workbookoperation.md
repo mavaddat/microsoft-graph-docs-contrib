@@ -6,6 +6,7 @@ author: "grangeryy"
 ms.subservice: "excel"
 doc_type: "resourcePageType"
 toc.title: Operation
+ms.date: 07/17/2024
 ---
 
 # workbookOperation resource type
@@ -25,7 +26,7 @@ Represents the status of a long-running workbook operation.
 |error|[workbookOperationError](workbookoperationerror.md)| The error returned by the operation.|
 |id|String| The identifier for the operation. Read-only.|
 |resourceLocation|String| The resource URI for the result.|
-|status|String| The current status of the operation. Possible values are: `NotStarted`, `Running`, `Completed`, `Failed`.|
+|status|String| The current status of the operation. The possible values are: `NotStarted`, `Running`, `Completed`, `Failed`.|
 |statusCode| integer| Status code of the operation. | 
 
 ## Relationships

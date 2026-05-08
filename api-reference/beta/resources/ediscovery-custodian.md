@@ -5,6 +5,7 @@ author: "mahage-msft"
 ms.localizationpriority: medium
 ms.subservice: "ediscovery"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # custodian resource type
@@ -12,6 +13,8 @@ doc_type: resourcePageType
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 In the context of eDiscovery, represents a user and all of their digital assets, such as email and documents.
 
@@ -44,7 +47,7 @@ In the context of eDiscovery, represents a user and all of their digital assets,
 |id|String|The ID for the custodian in the specified case. Read-only.|
 |lastModifiedDateTime|DateTimeOffset|Date and time the custodian object was last modified|
 |releasedDateTime|DateTimeOffset|Date and time the custodian was released from the case.|
-|status|microsoft.graph.ediscovery.custodianStatus|Status of the custodian. Possible values are: `active`, `released`.|
+|status|microsoft.graph.ediscovery.custodianStatus|Status of the custodian. The possible values are: `active`, `released`.|
 
 ### custodianStatus values
 

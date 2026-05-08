@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "lumine2008"
 ms.subservice: "excel"
 doc_type: resourcePageType
+ms.date: 07/17/2024
 ---
 
 # workbook resource type
@@ -29,6 +30,7 @@ None.
 ## Relationships
 | Relationship | Type	|Description|
 |:---------------|:--------|:----------|
+|comments|[workbookComment](workbookcomment.md) collection|Represents a collection of comments in a workbook.|
 |names|[workbookNamedItem](workbooknameditem.md) collection |Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.|
 |tables|[workbookTable](workbooktable.md) collection |Represents a collection of tables associated with the workbook. Read-only.|
 |worksheets|[workbookWorksheet](workbookworksheet.md) collection |Represents a collection of worksheets associated with the workbook. Read-only.|

@@ -5,6 +5,7 @@ author: "iamgirishck"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: "resourcePageType"
+ms.date: 05/23/2024
 ---
 
 # calendarPermission resource type
@@ -35,7 +36,7 @@ Once a share recipient or delegate has been set up for a calendar, you can [upda
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|allowedRoles|[calendarRoleType](#calendarroletype-values) collection| List of allowed sharing or delegating permission levels for the calendar. Possible values are: `none`, `freeBusyRead`, `limitedRead`, `read`, `write`, `delegateWithoutPrivateEventAccess`, `delegateWithPrivateEventAccess`, `custom`.|
+|allowedRoles|[calendarRoleType](#calendarroletype-values) collection| List of allowed sharing or delegating permission levels for the calendar. The possible values are: `none`, `freeBusyRead`, `limitedRead`, `read`, `write`, `delegateWithoutPrivateEventAccess`, `delegateWithPrivateEventAccess`, `custom`.|
 |emailAddress|[emailAddress](emailaddress.md)| Represents a share recipient or delegate who has access to the calendar. For the "My Organization" share recipient, the **address** property is null. Read-only. |
 |id|String| The unique identifier of the user (share recipient or delegate) with whom the calendar has been shared. Read-only.|
 |isInsideOrganization|Boolean| True if the user in context (share recipient or delegate) is inside the same organization as the calendar owner.|

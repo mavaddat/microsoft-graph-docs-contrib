@@ -1,10 +1,11 @@
 ---
 title: "driverUpdateFilter resource type"
 description: "Represents a filter to determine which driver update content matches the rule on an ongoing basis."
-author: "ryan-k-williams"
+author: "andredm7"
 ms.localizationpriority: medium
-ms.subservice: windows-update-business
+ms.subservice: windows-autopatch
 doc_type: resourcePageType
+ms.date: 01/27/2026
 ---
 
 # driverUpdateFilter resource type

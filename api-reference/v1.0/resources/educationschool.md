@@ -6,6 +6,7 @@ ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: resourcePageType
 toc.title: School
+ms.date: 06/19/2024
 ---
 
 # educationSchool resource type
@@ -37,7 +38,7 @@ Inherits from [educationOrganization](../resources/educationorganization.md).
 | displayName          | String                                             | Display name of the school. Inherited from [educationOrganization](../resources/educationorganization.md).                                                            |
 | externalId           | String                                             | ID of school in syncing system.                                                                                                                                      |
 | externalPrincipalId  | String                                             | ID of principal in syncing system.                                                                                                                                   |
-| externalSource       | educationExternalSource                            | Source where this organization was created from. Inherited from [educationOrganization](../resources/educationorganization.md). Possible values are: `sis`, `manual`. |
+| externalSource       | educationExternalSource                            | Source where this organization was created from. Inherited from [educationOrganization](../resources/educationorganization.md). The possible values are: `sis`, `manual`. |
 | externalSourceDetail | String                                             | The name of the external source this resource was generated from.                                                                                                   |
 | highestGrade         | String                                             | Highest grade taught.                                                                                                                                                |
 | id                   | String                                             | Object identifier. Inherited from [entity](../resources/entity.md).                                                                                                   |

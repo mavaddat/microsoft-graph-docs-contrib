@@ -5,6 +5,8 @@ ms.localizationpriority: medium
 author: "cristobal-buenrostro"
 ms.subservice: "education"
 doc_type: conceptualPageType
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Status, transitions, and limitations for submissions in Microsoft Graph

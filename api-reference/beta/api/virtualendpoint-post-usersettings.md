@@ -1,10 +1,11 @@
 ---
 title: "Create cloudPcUserSetting"
-description: "Create a new cloudPcUserSetting ."
+description: "Create a new cloudPcUserSetting object."
 author: "AshleyYangSZ"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 12/04/2024
 ---
 
 # Create cloudPcUserSetting
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /deviceManagement/virtualEndpoint/userSettings
 ```
 
@@ -50,11 +51,13 @@ The following table lists the properties that are required when you create the [
 
 |Property|Type|Description|
 |:---|:---|:---|
+|crossRegionDisasterRecoverySetting |[cloudPcCrossRegionDisasterRecoverySetting](../resources/cloudpccrossregiondisasterrecoverysetting.md)|Indicates cross-region disaster recovery settings for the user's Cloud PC.|
 |displayName|String|The setting name as it appears in the UI. |
 |lastModifiedDateTime|DateTimeOffset|The last date and time the setting was modified. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. |
 |localAdminEnabled|Boolean|To turn on the local admin option, change this setting to `true`.  |
+|provisioningSourceType|[cloudPcProvisioningSourceType](../resources/cloudpcusersetting.md#cloudpcprovisioningsourcetype-values)|Indicates the provisioning source of the Cloud PC prepared for an end user. The possible values are: `image`, `snapshot`, `unknownFutureValue`. The default value is `image`. If this property isn't set or set to `null`, its functionality is the same as setting it to `image`.|
 |restorePointSetting|[cloudPcRestorePointSetting](../resources/cloudpcrestorepointsetting.md)|Defines how frequently a restore point is created (that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.|
-|selfServiceEnabled (deprecated)|Boolean|To turn on the self service option, change this setting to `true`. The **selfServiceEnabled** property is deprecated and will stop returning data on December 1, 2023.|
+|selfServiceEnabled (deprecated)|Boolean|To turn on the self service option, change this setting to `true`. The **selfServiceEnabled** property is deprecated and stopped returning data on December 1, 2023.|
 
 ## Response
 
@@ -72,7 +75,7 @@ The following example shows a request.
   "name": "create_cloudpcusersetting_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/userSettings
 Content-Type: application/json
 
@@ -81,6 +84,17 @@ Content-Type: application/json
   "displayName": "Example",
   "selfServiceEnabled": false,
   "localAdminEnabled": true,
+  "crossRegionDisasterRecoverySetting": {
+     "crossRegionDisasterRecoveryEnabled": false,
+     "maintainCrossRegionRestorePointEnabled": true,
+     "disasterRecoveryNetworkSetting": {
+        "regionName": "westus",
+        "regionGroup": "usEast"
+      },
+      "disasterRecoveryType": "premium",
+      "userInitiatedDisasterRecoveryAllowed": true
+  },
+  "provisioningSourceType": "image",
   "restorePointSetting": {
     "frequencyInHours": 16,
     "frequencyType": "sixteenHours",
@@ -91,10 +105,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-cloudpcusersetting-from--csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-cloudpcusersetting-from--cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -132,7 +142,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.cloudPcUserSetting"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -142,11 +152,22 @@ Content-Type: application/json
   "displayName": "Example",
   "selfServiceEnabled": false,
   "localAdminEnabled": true,
+  "crossRegionDisasterRecoverySetting": {
+     "crossRegionDisasterRecoveryEnabled": false,
+     "maintainCrossRegionRestorePointEnabled": true,
+     "disasterRecoveryNetworkSetting": {
+        "regionName": "westus",
+        "regionGroup": "usEast"
+      },
+      "disasterRecoveryType": "premium",
+      "userInitiatedDisasterRecoveryAllowed": true
+  },
   "restorePointSetting": {
     "frequencyInHours": 16,
     "frequencyType": "sixteenHours",
     "userRestoreEnabled": true
   },
+  "provisioningSourceType": "image",
   "lastModifiedDateTime": "2021-02-01T10:29:57Z"  
 }
 ```

@@ -5,6 +5,7 @@ author: "ms-amakumar"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # workplaceSensorDevice: ingestTelemetry
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /workplace/sensorDevices/ingestTelemetry
 ```
 
@@ -66,7 +67,7 @@ The following example shows a request.
   "name": "workplacesensordevicethis.ingesttelemetry.unique.sensor.type"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/workplace/sensorDevices/ingestTelemetry
 Content-Type: application/json
 
@@ -84,10 +85,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/workplacesensordevicethisingesttelemetryuniquesensortype-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/workplacesensordevicethisingesttelemetryuniquesensortype-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -119,7 +116,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 
@@ -135,7 +132,7 @@ The following example shows a request.
   "name": "workplacesensordevicethis.ingesttelemetry.same.sensor.type"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/workplace/sensorDevices/ingestTelemetry
 Content-Type: application/json
 
@@ -161,10 +158,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/workplacesensordevicethisingesttelemetrysamesensortype-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/workplacesensordevicethisingesttelemetrysamesensortype-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -196,7 +189,7 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```
 
@@ -212,7 +205,7 @@ The following example shows a request.
   "name": "workplacesensordevicethis.ingesttelemetry.multiple.devices"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/workplace/sensorDevices/ingestTelemetry
 Content-Type: application/json
 
@@ -236,10 +229,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/workplacesensordevicethisingesttelemetrymultipledevices-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/workplacesensordevicethisingesttelemetrymultipledevices-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -271,6 +260,6 @@ The following example shows the response.
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

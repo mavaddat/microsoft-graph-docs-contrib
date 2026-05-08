@@ -4,6 +4,8 @@ description: "Use the Microsoft 365 Backup Storage API in Microsoft Graph to int
 author: "tushar20"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Microsoft 365 Backup Storage API overview

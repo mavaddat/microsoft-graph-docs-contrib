@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # accountTargetContent resource type
@@ -21,7 +22,7 @@ Base type of [addressBookAccountTargetContent](../resources/addressbookaccountta
 
 |Property|Type|Description|
 |:---|:---|:---|
-|type|[accountTargetContentType](#accounttargetcontenttype-values)| The type of account target content. Possible values are: `unknown`,`includeAll`, `addressBook`,  `unknownFutureValue`.|
+|type|[accountTargetContentType](#accounttargetcontenttype-values)| The type of account target content. The possible values are: `unknown`,`includeAll`, `addressBook`,  `unknownFutureValue`.|
 
 ### accountTargetContentType values
 

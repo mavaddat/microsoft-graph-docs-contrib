@@ -3,9 +3,14 @@ title: "To Do component in Microsoft Graph Toolkit"
 description: "The To Do component enables the user to view, add, remove, complete, or edit todo tasks. It works with any tasks in Microsoft To Do."
 ms.localizationpriority: medium
 author: sebastienlevert
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # To Do component in Microsoft Graph Toolkit
+
+> [!CAUTION]
+> The Microsoft Graph Toolkit is deprecated. The retirement period begins September 1, 2025, with full retirement planned for August 28, 2026. Developers should migrate to using the Microsoft Graph SDKs or other supported Microsoft Graph tools for building web experiences. For more information, see the [deprecation announcement](https://devblogs.microsoft.com/microsoft365dev/microsoft-graph-toolkit-retirement/).
 
 The To Do component is used to enable the signed-in user to view, add, remove, complete, and/or edit tasks from Microsoft To Do using the To Do API in Microsoft Graph.
 

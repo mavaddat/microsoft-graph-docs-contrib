@@ -5,13 +5,14 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: security
 author: "preetikr"
+ms.date: 03/21/2024
 ---
 
 #  averageComparativeScore resource type
 
 Namespace: microsoft.graph
 
-Contains various scores based on different scopes - such as average by industry vertical or company size - and control category (Identity, Data, Device, Apps, Infrastructure).
+Contains tenant-level scores for [Microsoft Secure Score](../resources/securescore.md) based on scopes such as average by industry vertical and average by company seat size, and on control categories like identity, data, device, apps, and infrastructure.
 
 ## Properties
 | Property      | Type      | Description |
@@ -21,6 +22,9 @@ Contains various scores based on different scopes - such as average by industry 
 | deviceScore	| Double	| Average score within a specified basis. |
 | dataScore		| Double	| Average score within a specified basis. |
 | identityScore	| Double	| Average score within a specified basis. |
+
+## Relationships
+None.
 
 ## JSON representation
 

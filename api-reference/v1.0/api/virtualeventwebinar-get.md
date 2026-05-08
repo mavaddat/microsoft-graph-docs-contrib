@@ -5,12 +5,15 @@ author: "awang119"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 11/22/2024
 ---
 
 # Get virtualEventWebinar
 Namespace: microsoft.graph
 
 Read the properties and relationships of a [virtualEventWebinar](../resources/virtualeventwebinar.md) object.
+
+All roles can get the details of a webinar event.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -23,7 +26,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 > [!NOTE]
 >
-> To use application permissions for this API, tenant administrators must create an [application access policy](/graph/cloud-communication-online-meeting-application-access-policy) and assign it to a user. This allows the authorized application to access registrants' information from virtual events created by that specific user.
+> - To use application permissions for this API, tenant administrators must create an [application access policy](/graph/cloud-communication-online-meeting-application-access-policy) and assign it to a user. This allows the authorized application to access registrants' information from virtual events created by that specific user.
+> - The `VirtualEvent.Read.Chat` permission uses [resource-specific consent](/microsoftteams/platform/graph-api/rsc/resource-specific-consent).
 
 ## HTTP request
 
@@ -31,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /solutions/virtualEvents/webinars/{webinarId}
 ```
 
@@ -61,16 +65,12 @@ The following example shows a request.
   "name": "get_virtualeventwebinar"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/solutions/virtualEvents/webinars/88b245ac-b0b2-f1aa-e34a-c81c27abdac2@f9448ec4-804b-46af-b810-62085248da33
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-virtualeventwebinar-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-virtualeventwebinar-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -108,7 +108,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.virtualEventWebinar"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -147,7 +147,13 @@ Content-Type: application/json
     ],
     "settings": {
       "isAttendeeEmailNotificationEnabled": false
-    }
+    },
+    "externalEventInformation": [
+      {
+        "applicationId" : "67a527ba-ef0e-4ba2-88b6-4fa5e9711757",
+        "externalEventId": "myExternalEventId"
+      }
+    ]
   }
 }
 ```

@@ -4,6 +4,8 @@ description: "Use the data-absolute-enabled and style attributes to create absol
 author: "jewan-microsoft"
 ms.localizationpriority: medium
 ms.subservice: "onenote"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 

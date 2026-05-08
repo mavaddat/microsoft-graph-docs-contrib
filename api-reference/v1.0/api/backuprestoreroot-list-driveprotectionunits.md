@@ -1,11 +1,12 @@
 ---
 title: "List driveProtectionUnits"
-description: "Get a list of the drive protection units that are associated with a OneDrive for Business protection policy."
+description: "Get a list of the drive protection units that are associated with a OneDrive for work or school protection policy."
 author: "tushar20"
 ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 10/15/2024
 ---
 # List driveProtectionUnits
 
@@ -28,8 +29,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
-GET /solutions/backupRestore/driveProtectionUnits
+```http
+GET /solutions/backupRestore/protectionUnits/microsoft.graph.driveProtectionUnit
 GET /solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicyId}/driveProtectionUnits
 ```
 
@@ -49,6 +50,10 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 For a list of possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
 
+> [!NOTE]
+> The `displayName` and `email` properties are only available for the `Delegated` permission type.
+>
+
 ## Examples
 
 ### Example 1: List all the driveProtectionUnits in a tenant
@@ -65,16 +70,12 @@ The following example shows a request.
   "name": "list_all_driveprotectionunit"
 }
 -->
-``` http
-GET /solutions/backupRestore/driveProtectionUnits
+```msgraph-interactive
+GET /solutions/backupRestore/protectionUnits/microsoft.graph.driveProtectionUnit
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-all-driveprotectionunit-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-all-driveprotectionunit-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -93,6 +94,10 @@ GET /solutions/backupRestore/driveProtectionUnits
 [!INCLUDE [sample-code](../includes/snippets/php/list-all-driveprotectionunit-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/list-all-driveprotectionunit-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/list-all-driveprotectionunit-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -108,11 +113,11 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.driveProtectionUnit)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 
 {
-  "@odata.nextLink": "https://graph.microsoft.com/v1.0/solutions/backupRestore/driveProtectionUnits?$skiptoken=M2UyZDAwMDAwMDMxMzkzYTMyNjQ2MTM0NjMzMjM5NjYzNjY0MzczMDM0MzE2NTYzNjEzNzMwNjIzNjMzMzg2MjM0MzM2NDM0MzUzNDMzMzc0MDc0Njg3MjY1NjE2NDJlNzYzMjAxZThmYjY4M2Y3ODAxMDAwMDg4NjA5ODdhNzgwMTAwMDB8MTYxNjk2NDUwOTgzMg%3d%3d",
+  "@odata.nextLink": "https://graph.microsoft.com/v1.0/solutions/backupRestore/protectionUnits/microsoft.graph.driveProtectionUnit?$skiptoken=M2UyZDAwMDAwMDMxMzkzYTMyNjQ2MTM0NjMzMjM5NjYzNjY0MzczMDM0MzE2NTYzNjEzNzMwNjIzNjMzMzg2MjM0MzM2NDM0MzUzNDMzMzc0MDc0Njg3MjY1NjE2NDJlNzYzMjAxZThmYjY4M2Y3ODAxMDAwMDg4NjA5ODdhNzgwMTAwMDB8MTYxNjk2NDUwOTgzMg%3d%3d",
   "value": [
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -121,6 +126,7 @@ HTTP/1.1 200 OK
       "displayName": "Emily Braun", // Newly Added
       "email": "emilyb@contoso.com", // Newly Added
       "status": "unprotected",
+      "protectionSources": "none",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -145,7 +151,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -179,7 +186,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -189,6 +197,7 @@ HTTP/1.1 200 OK
       "displayName": "Shaun Wong", // Newly Added
       "email": "shaunw@contoso.com", // Newly Added
       "status": "unprotected",
+      "protectionSources": "none",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -213,7 +222,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -223,6 +233,7 @@ HTTP/1.1 200 OK
       "displayName": "Janet Green", // Newly Added
       "email": "janetg@contoso.com", // Newly Added
       "status": "protected",
+      "protectionSources": "manual, dynamicRule",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -247,7 +258,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -280,13 +292,14 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     }
   ]
 }
 ```
 
-### Example 2: List the driveProtectionUnits associated with a OneDrive for Business protection policy
+### Example 2: List the driveProtectionUnits associated with a OneDrive for work or school protection policy
 
 The following example shows how to list all the **driveProtectionUnits** associated with a **oneDriveForBusinessProtectionPolicy**.
 
@@ -300,16 +313,12 @@ The following example shows a request.
   "name": "list_driveprotectionunit"
 }
 -->
-``` http
+```msgraph-interactive
 GET /solutions/backupRestore/oneDriveForBusinessProtectionPolicies/845457dc-4bb2-4815-bef3-8628ebd1952e/driveProtectionUnits
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-driveprotectionunit-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-driveprotectionunit-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -328,6 +337,10 @@ GET /solutions/backupRestore/oneDriveForBusinessProtectionPolicies/845457dc-4bb2
 [!INCLUDE [sample-code](../includes/snippets/php/list-driveprotectionunit-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/list-driveprotectionunit-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/list-driveprotectionunit-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -343,7 +356,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.driveProtectionUnit)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 
 {
@@ -357,6 +370,7 @@ HTTP/1.1 200 OK
       "displayName": "Emily Braun", // Newly Added
       "email": "emilyb@contoso.com", // Newly Added
       "status": "protectRequested",
+      "protectionSources": "manual",
       "createdBy": {
         "application": {
           "id": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
@@ -381,7 +395,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -415,7 +430,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -449,7 +465,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -483,7 +500,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     },
     {
       "@odata.type": "#microsoft.graph.driveProtectionUnit",
@@ -517,7 +535,8 @@ HTTP/1.1 200 OK
         }
       },
       "lastModifiedDateTime": "2015-06-19T12:01:03.45Z",
-      "error": null
+      "error": null,
+      "offboardRequestedDateTime": "0001-01-01T00:00:00.0000000Z"
     }
   ]
 }

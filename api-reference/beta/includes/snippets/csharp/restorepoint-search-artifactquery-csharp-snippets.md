@@ -14,7 +14,7 @@ var requestBody = new SearchPostRequestBody
 {
 	ArtifactQuery = new ArtifactQuery
 	{
-		QueryExpression = "((subject -contains ‘Finance’)  -or  (subject -contains ‘Legal’)) -and (sender -eq 'alex@contoso.com') -and (recipient -eq 'carol@contoso.com') -and hasAttachment -eq true",
+		QueryExpression = "(Sender -like 'abc@contoso.com') -and (Subject -like '*Check email*' -or Subject -like ' Important') -and (HasAttachment -eq 'true')",
 		ArtifactType = RestorableArtifact.Message,
 	},
 	ProtectionUnitIds = new List<string>
@@ -24,6 +24,7 @@ var requestBody = new SearchPostRequestBody
 	ProtectionTimePeriod = new TimePeriod
 	{
 		StartDateTime = DateTimeOffset.Parse("2021-01-01T00:00:00Z"),
+		EndDateTime = DateTimeOffset.Parse("2021-01-30T00:00:00Z"),
 	},
 	RestorePointPreference = RestorePointPreference.Oldest,
 };

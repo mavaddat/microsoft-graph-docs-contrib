@@ -5,6 +5,7 @@ author: "markwahl-msft"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 # Update connectedOrganization
 
@@ -20,6 +21,8 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 <!-- { "blockType": "permissions", "name": "connectedorganization_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/connectedorganization-update-permissions.md)]
+
+[!INCLUDE [rbac-entitlement-identity-governance-write](../includes/rbac-for-apis/rbac-entitlement-identity-governance-admin-apis-write.md)]
 
 ## HTTP request
 
@@ -46,7 +49,7 @@ PATCH /identityGovernance/entitlementManagement/connectedOrganizations/{connecte
 |displayName|String|The connected organization name.  |
 |description|String|The connected organization description. |
 |identitySources|[identitySource](../resources/identitysource.md) collection|The identity sources in this connected organization, one of [azureActiveDirectoryTenant](../resources/azureactivedirectorytenant.md), [domainIdentitySource](../resources/domainidentitysource.md) or [externalDomainFederation](../resources/externaldomainfederation.md). Nullable.|
-|state|connectedOrganizationState|The state of a connected organization defines whether assignment policies with requestor scope type `AllConfiguredConnectedOrganizationSubjects` are applicable or not. Possible values are: `configured`, `proposed`.|
+|state|connectedOrganizationState|The state of a connected organization defines whether assignment policies with requestor scope type `AllConfiguredConnectedOrganizationSubjects` are applicable or not. The possible values are: `configured`, `proposed`.|
 
 
 
@@ -78,10 +81,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-connectedorganization-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-connectedorganization-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

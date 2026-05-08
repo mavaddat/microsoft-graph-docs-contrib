@@ -5,6 +5,7 @@ author: "stuartcl"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # trainingReminderNotification resource type
@@ -22,7 +23,7 @@ Inherits from [baseEndUserNotification](../resources/baseendusernotification.md)
 |Property|Type|Description|
 |:---|:---|:---|
 |defaultLanguage|String|Default language. Inherited from [baseEndUserNotification](../resources/baseendusernotification.md).|
-|deliveryFrequency|notificationDeliveryFrequency|Configurable frequency for the reminder email introduced during simulation creation. Possible values are: `unknown`, `weekly`, `biWeekly`, `unknownFutureValue`.|
+|deliveryFrequency|notificationDeliveryFrequency|Configurable frequency for the reminder email introduced during simulation creation. The possible values are: `unknown`, `weekly`, `biWeekly`, `unknownFutureValue`.|
 
 ## Relationships
 

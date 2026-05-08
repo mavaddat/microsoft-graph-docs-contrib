@@ -1,13 +1,14 @@
 ---
-title: "approvalStage complex type"
+title: "approvalStage resource type"
 description: "In entitlement management, used for the approvalStages property of approval settings in the requestApprovalSettings property of an access package assignment policy. Specifies the primary, fallback, and escalation approvers of each stage. In PIM, defines the settings of the approval stages in a unifiedRoleManagementPolicyApprovalRule object."
 ms.localizationpriority: medium
 author: "markwahl-msft"
 ms.subservice: "entra-id-governance"
 doc_type: "resourcePageType"
+ms.date: 10/04/2024
 ---
 
-# approvalStage complex type
+# approvalStage resource type
 
 Namespace: microsoft.graph
 
@@ -22,6 +23,7 @@ In PIM, defines the settings of the approval stages in a [unifiedRoleManagementP
 | Property                     | Type                      | Description |
 | :--------------------------- | :------------------------ | :---------- |
 | approvalStageTimeOutInDays |Int32 | The number of days that a request can be pending a response before it is automatically denied. |
+| approverInformationVisibility|[approverInformationVisibility](accesspackageapprovalstage.md#approverinformationvisibility-values) | Indicates whether approver information is visible to the requestor. The possible values are: `default`, `notVisible`, `visible`, `unknownFutureValue`. |
 | isApproverJustificationRequired |Boolean | Indicates whether the approver is required to provide a justification for approving a request. |
 | isEscalationEnabled |Boolean | If true, then one or more escalation approvers are configured in this approval stage. |
 | escalationTimeInMinutes |Int32 | If escalation is required, the time a request can be pending a response from a primary approver. |
@@ -48,6 +50,7 @@ The following JSON representation shows the resource type.
 
 {
     "approvalStageTimeOutInDays": 14,
+    "approverInformationVisibility": "String",
     "isApproverJustificationRequired": true,
     "isEscalationEnabled": true,
     "escalationTimeInMinutes": 11520,

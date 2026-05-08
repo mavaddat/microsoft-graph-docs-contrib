@@ -5,6 +5,7 @@ author: "sseth"
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: apiPageType
+ms.date: 04/09/2024
 ---
 
 # Create retentionLabel
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /security/labels/retentionLabels
 ```
 
@@ -75,7 +76,7 @@ Here's an example of a request.
   "name": "create_retentionlabel_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/security/labels/retentionLabels
 Content-Type: application/json
 Content-length: 555
@@ -117,10 +118,6 @@ Content-length: 555
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-retentionlabel-from--csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-retentionlabel-from--cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/create-retentionlabel-from--go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -135,6 +132,10 @@ Content-length: 555
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/create-retentionlabel-from--php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-retentionlabel-from--powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)
@@ -152,7 +153,7 @@ Here's an example of the response.
   "@odata.type": "microsoft.graph.security.retentionLabel"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

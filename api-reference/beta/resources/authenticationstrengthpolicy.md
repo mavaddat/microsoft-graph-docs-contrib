@@ -6,6 +6,7 @@ ms.reviewer: conditionalaccesspm
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # authenticationStrengthPolicy resource type
@@ -32,7 +33,7 @@ Inherits from [entity](../resources/entity.md).
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|allowedCombinations|authenticationMethodModes collection|A collection of authentication method modes that are required be used to satify this authentication strength.|
+|allowedCombinations|[authenticationMethodModes](../resources/authenticationmethodmodes.md) collection|A collection of authentication method modes that are required be used to satify this authentication strength.|
 |createdDateTime|DateTimeOffset|The datetime when this policy was created.|
 |description|String|The human-readable description of this policy.|
 |displayName|String|The human-readable display name of this policy. <br><br>Supports `$filter` (`eq`, `ne`, `not` , and `in`). |

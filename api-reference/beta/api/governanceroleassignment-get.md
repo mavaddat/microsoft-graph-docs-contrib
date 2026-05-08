@@ -1,14 +1,15 @@
 ---
-title: "Get governanceRoleAssignment"
+title: "Get governanceRoleAssignment (deprecated)"
 description: "Retrieve the properties and relationships of a governanceRoleAssignment."
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 08/13/2024
 ---
 
-# Get governanceRoleAssignment
+# Get governanceRoleAssignment (deprecated)
 
 Namespace: microsoft.graph
 

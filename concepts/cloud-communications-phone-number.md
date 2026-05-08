@@ -4,6 +4,8 @@ description: "Learn how to create a bot that is reachable through a phone number
 author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Manage phone numbers for bots

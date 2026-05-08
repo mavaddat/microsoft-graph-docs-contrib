@@ -1,10 +1,11 @@
 ---
 title: "taskReportSummary resource type"
 description: "A summary of task processing results for a specified time period. This summary allows the administrator to get a quick overview based on counts (successful, failed, unprocessed, and total tasks)."
-author: "AlexFilipin"
+author: "KristinaSmith"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # taskReportSummary resource type

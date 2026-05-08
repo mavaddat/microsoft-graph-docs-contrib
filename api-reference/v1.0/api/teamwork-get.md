@@ -5,6 +5,7 @@ author: "mea"
 ms.localizationpriority: high
 ms.subservice: "teams"
 doc_type: apiPageType
+ms.date: 04/16/2024
 ---
 
 # Get teamwork
@@ -64,10 +65,6 @@ GET https://graph.microsoft.com/v1.0/teamwork
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-teamworksettings-for-organization-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-teamworksettings-for-organization-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Go](#tab/go)
 [!INCLUDE [sample-code](../includes/snippets/go/get-teamworksettings-for-organization-go-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -111,7 +108,7 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#teamwork",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teamwork",
     "id": "teamwork",
     "isTeamsEnabled": true,
     "region": "Americas"

@@ -1,14 +1,15 @@
 ---
-title: "governanceRoleSetting resource type"
+title: "governanceRoleSetting resource type (deprecated)"
 description: "Represents a set of configurations on each role definition that needs to be evaluated against when role assignments are created or modified."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 04/03/2024
 ---
 
-# governanceRoleSetting resource type
+# governanceRoleSetting resource type (deprecated)
 
 Namespace: microsoft.graph
 

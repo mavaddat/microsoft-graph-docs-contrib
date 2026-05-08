@@ -5,6 +5,7 @@ author: "AllisonAm"
 ms.localizationpriority: medium
 ms.subservice: "entra-groups"
 doc_type: apiPageType
+ms.date: 06/21/2024
 ---
 
 # group: getPasswordSingleSignOnCredentials
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Get the list of password-based single sign-on credentials for a group. This API returns the encrypted passwords as null.
+Get the list of password-based single sign-on credentials for a [group](../resources/group.md). This API returns the encrypted passwords as null.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -30,7 +31,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /groups/{groupsId}/getPasswordSingleSignOnCredentials
 ```
 
@@ -59,16 +60,12 @@ The following example shows a request.
   "name": "groupthis.getpasswordsinglesignoncredentials"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/groups/314ac440-129f-4cb3-ad61-24ef4a7de1d9/getPasswordSingleSignOnCredentials
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/groupthisgetpasswordsinglesignoncredentials-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/groupthisgetpasswordsinglesignoncredentials-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -107,7 +104,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.passwordSingleSignOnCredentialSet)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

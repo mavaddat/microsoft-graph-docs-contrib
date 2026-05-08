@@ -5,6 +5,7 @@ author: "AlexFilipin"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # List acceptances
@@ -20,13 +21,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "agreement_list_acceptances" } -->
 [!INCLUDE [permissions-table](../includes/permissions/agreement-list-acceptances-permissions.md)]
 
+[!INCLUDE [rbac-tou-security-reader-apis](../includes/rbac-for-apis/rbac-tou-security-reader-apis.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/termsOfUse/agreements/{agreementsId}/acceptances
 ```
 
@@ -55,16 +58,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
   "name": "list_agreementacceptance"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/identityGovernance/termsOfUse/agreements/94410bbf-3d3e-4683-8149-f034e55c39dd/acceptances
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-agreementacceptance-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-agreementacceptance-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -97,7 +96,7 @@ GET https://graph.microsoft.com/v1.0/identityGovernance/termsOfUse/agreements/94
   "@odata.type": "Collection(microsoft.graph.agreementAcceptance)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

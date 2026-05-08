@@ -5,6 +5,7 @@ author: "SeunginLyu"
 ms.localizationpriority: medium
 ms.subservice: "ediscovery"
 doc_type: "apiPageType"
+ms.date: 06/25/2024
 ---
 
 # Update ediscoveryCase
@@ -22,13 +23,15 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "security_ediscoverycase_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/security-ediscoverycase-update-permissions.md)]
 
+[!INCLUDE [rbac-ediscovery-write](../includes/rbac-for-apis/rbac-ediscovery-apis-write.md)]
+
 ## HTTP request
 
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /security/cases/ediscoveryCases/{ediscoveryCaseId}
 ```
 
@@ -64,7 +67,7 @@ The following example shows a request.
   "name": "update_ediscoverycase"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/security/cases/ediscoveryCases/22aa2acd-7554-4330-9ba9-ce20014aaae4
 Content-Type: application/json
 
@@ -76,10 +79,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-ediscoverycase-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-ediscoverycase-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

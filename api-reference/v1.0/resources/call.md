@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: high
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 09/10/2024
 ---
 
 # call resource type
@@ -28,13 +29,15 @@ https://teams.microsoft.com/l/meetup-join/19:meeting_NTg0NmQ3NTctZDVkZC00YzRhLTh
 
 > [!NOTE]
 > The following known issues are associated with this resource:
-> - [Webhook message processing exception: System.Security.Cryptography.CryptographicException](https://developer.microsoft.com/en-us/graph/known-issues/?search=24752)
-> - [Support for multi-endpoint use case in delta roster notification mode is missing](https://developer.microsoft.com/en-us/graph/known-issues/?search=24894)
+> - [Webhook message processing exception: System.Security.Cryptography.CryptographicException](/graph/known-issues#communication-calling-sdk-webhook-message-processing-exception-systemsecuritycryptographycryptographicexception)
+> - [Support for multi-endpoint use case in delta roster notification mode is missing](/graph/known-issues#communication-calling-sdk-support-for-multi-endpoint-use-case-in-delta-roster-notification-mode-is-missing)
+> - [Inconsistent recorded participant number shown on teams client when bot grouping is enabled](/graph/known-issues#communications-calling-sdk-inconsistent-recorded-participant-number-shown-on-teams-client-when-bot-grouping-is-enabled)
 
 ## Methods
 
 | Method                                                                   | Return Type                                                         | Description                                                                     |
 |:-------------------------------------------------------------------------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------|
+| [Create](../api/application-post-calls.md)                                                | [call](call.md)                                                     | Create **call** enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting.                                         |
 | [Get](../api/call-get.md)                                                | [call](call.md)                                                     | Read properties of the **call** object.                                         |
 | [Delete/hang up](../api/call-delete.md)                                          | None                                                                | Delete or Hang-up an active **call**.                                           |
 | [Keep alive](../api/call-keepalive.md)                                    | None                                                                | Ensure that the call remains active.                                            |
@@ -81,10 +84,10 @@ https://teams.microsoft.com/l/meetup-join/19:meeting_NTg0NmQ3NTctZDVkZC00YzRhLTh
 | mediaState          | [callMediaState](callmediastate.md)                                                                    | Read-only. The call media state.                                                                                                                                                                    |
 | meetingInfo         | [organizerMeetingInfo](organizermeetinginfo.md), [tokenMeetingInfo](tokenmeetinginfo.md), or [joinMeetingIdMeetingInfo](joinmeetingidmeetinginfo.md) | The meeting information. Required information for meeting scenarios.                                                                                  |
 | myParticipantId     | String                                                                                                 | Read-only.                                                                                                                                                                                          |
-| requestedModalities | modality collection                                                                                    | The list of requested modalities. Possible values are: `unknown`, `audio`, `video`, `videoBasedScreenSharing`, `data`.                                                                              |
+| requestedModalities | modality collection                                                                                    | The list of requested modalities. The possible values are: `unknown`, `audio`, `video`, `videoBasedScreenSharing`, `data`.                                                                              |
 | resultInfo          | [resultInfo](resultinfo.md)                                                                            | The result information. For example, the result can hold termination reason. Read-only.                                                                                                                         |
 | source              | [participantInfo](participantinfo.md)                                                                  | The originator of the call.                                                                                                                                                                         |
-| state               | callState                                                                                              | The call state. Possible values are: `incoming`, `establishing`, `ringing`, `established`, `hold`, `transferring`, `transferAccepted`, `redirecting`, `terminating`, `terminated`. Read-only.       |
+| state               | callState                                                                                              | The call state. The possible values are: `incoming`, `establishing`, `ringing`, `established`, `hold`, `transferring`, `transferAccepted`, `redirecting`, `terminating`, `terminated`. Read-only.       |
 | subject             | String                                                                                                 | The subject of the conversation.                                                                                                                                                                    |
 | targets             | [invitationParticipantInfo](participantinfo.md) collection                                             | The targets of the call. Required information for creating peer to peer call.                                                                                                                       |
 |toneInfo             | [toneInfo](toneinfo.md)                                                                                | Read-only.                                                                                                                                                                                          |

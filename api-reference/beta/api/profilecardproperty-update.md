@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "rwaithera"
 ms.subservice: "people"
 doc_type: "apiPageType"
+ms.date: 02/25/2026
 ---
 
 # Update profileCardProperty
@@ -24,7 +25,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "profilecardproperty_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/profilecardproperty-update-permissions.md)]
 
->**Note:** Using delegated permissions for this operation requires the signed-in user to have a Tenant Administrator or Global Administrator role.
+[!INCLUDE [rbac-peopleadmin-apis-write](../includes/rbac-for-apis/rbac-peopleadmin-apis-write.md)]
 
 ## HTTP request
 
@@ -51,8 +52,9 @@ PATCH /admin/people/profileCardProperties/{id}
 
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
-|annotations|profileCardAnnotation collection| Any alternative or localized labels an administrator chose to specify.|
-|directoryPropertyName|String|The name of the directory property that is intended to surface on the profile card. |
+|annotations|[profileCardAnnotation](../resources/profilecardannotation.md) collection| Any alternative or localized labels an administrator chose to specify. Optional.|
+|directoryPropertyName|String|The name of the directory property that is intended to surface on the profile card. Optional. |
+|isVisible|Boolean|Indicates whether the given directory property should be shown on a user’s profile card. Optional.|
 
 ## Response
 
@@ -64,7 +66,6 @@ If successful, this method returns a `200 OK` response code and an updated [prof
 
 The following example adds a localized label `Kostnadssenter` for the locale `no`.
 
-# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "update_profilecardproperty",
@@ -90,40 +91,6 @@ Content-type: application/json; charset=utf-8
 }
 ```
 
-# [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/update-profilecardproperty-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-profilecardproperty-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/update-profilecardproperty-go-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/update-profilecardproperty-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/update-profilecardproperty-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/update-profilecardproperty-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/update-profilecardproperty-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/update-profilecardproperty-python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
 ### Response
 
 The following example shows the response.
@@ -142,6 +109,7 @@ Content-type: application/json; charset=utf-8
 
 {
   "directoryPropertyName": "CustomAttribute1",
+  "isVisible": true,
   "annotations": [
     {
       "displayName": "Cost Center",

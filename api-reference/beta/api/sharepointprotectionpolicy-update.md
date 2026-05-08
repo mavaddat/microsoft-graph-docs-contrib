@@ -6,6 +6,7 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 08/26/2024
 ---
 
 # Update sharePointProtectionPolicy
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PATCH /solutions/backupRestore/sharePointProtectionPolicies/{sharePointProtectionPolicyId}
 ```
 
@@ -71,7 +72,7 @@ The following example shows a request.
   "name": "sharepointprotectionpolicy_update"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/beta/solutions/backupRestore/sharePointProtectionPolicies/845457dc-4bb2-4815-bef3-8628ebd1952e
 Content-Type: application/json
 
@@ -116,10 +117,6 @@ Content-Type: application/json
 [!INCLUDE [sample-code](../includes/snippets/csharp/sharepointprotectionpolicy-update-csharp-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/sharepointprotectionpolicy-update-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Java](#tab/java)
 [!INCLUDE [sample-code](../includes/snippets/java/sharepointprotectionpolicy-update-java-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -151,7 +148,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.sharePointProtectionPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 
 {

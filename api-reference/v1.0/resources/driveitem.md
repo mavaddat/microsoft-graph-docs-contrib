@@ -5,6 +5,7 @@ description: Item is the main data model in the OneDrive API. Everything is an i
 ms.localizationpriority: high
 ms.subservice: "sharepoint"
 doc_type: resourcePageType
+ms.date: 06/28/2024
 ---
 # driveItem resource type
 
@@ -40,6 +41,7 @@ Items with the **folder** facet act as containers of items and therefore have a 
 | [Get item](../api/driveitem-get.md)                                          | [driveItem](../resources/driveitem.md) |Retrieve the metadata for a **driveItem** in a drive.|
 | [Get analytics][]                                                            | [itemAnalytics][] | Get analytics for this resource.|
 | [Get activities by interval][]                                               | [itemActivityStat][] | Get a collection of **itemActivityStats** within the specified time interval.|
+| [Get recent activities](../api/itemactivity-list.md)       | [itemActivity](../resources/itemactivity.md) collection | List the recent [activities](../resources/itemactivity.md) that took place on a [drive](../resources/drive.md), [list](../resources/list.md), item, or within an item hierarchy. |
 | [List children](../api/driveitem-list-children.md)                           | [driveItem](../resources/driveitem.md) collection | Return a collection of **driveItems** in the children relationship of a **driveItem**.|
 | [List versions](../api/driveitem-list-versions.md)                           | [driveItemVersion][] collection | Retrieve the versions of a file in the current user's drive.|
 | [Create folder](../api/driveitem-post-children.md)                             | [driveItem](../resources/driveitem.md) | Create a **driveItem** in the specified drive.|
@@ -48,6 +50,7 @@ Items with the **folder** facet act as containers of items and therefore have a 
 | [Download file](../api/driveitem-get-content.md)                          | download Url | Download content of a **driveItem**.|
 | [Download specific file format][download-format]                             | download Url | Download content of a **driveItem** with a specific format.|
 | [Delete item](../api/driveitem-delete.md)                                    | None | Delete a **driveItem**.|
+| [Restore item](../api/driveitem-restore.md)                                    | [driveItem](../resources/driveitem.md) | Restore a deleted [driveItem](../resources/driveitem.md) that is currently in the [recycle bin](../resources/recyclebin.md).|
 | [Permanently delete item](../api/driveitem-permanentdelete.md)                  | None | Permanently delete a **driveItem** by using its ID. |
 | [Move item](../api/driveitem-move.md)                                        | [driveItem](../resources/driveitem.md) | Move a **driveItem** to a new parent item.|
 | [Copy item](../api/driveitem-copy.md)                                        | details about how to [monitor the progress](/graph/long-running-actions-overview) of the copy | Create a copy of a **driveItem** (including any children).|
@@ -59,17 +62,20 @@ Items with the **folder** facet act as containers of items and therefore have a 
 | [Create sharing link](../api/driveitem-createlink.md)                        | sharing link | Create a link to share the **driveItem**.|
 | [Add permissions](../api/driveitem-invite.md)                                | [permission][] collection | Send a sharing invite to a user.|
 | [List permissions](../api/driveitem-list-permissions.md)                     | [permission][] collection | Retrieve the collection of permissions on an **driveItem**.|
+| [Create permission](../api/driveitem-post-permissions.md)                    | [permission][] | Create a new [permission](../resources/permission.md) object on a [driveItem](../resources/driveitem.md).|
 | [Delete permission](../api/permission-delete.md)                             | None | Remove the permission from the **driveItem**.|
 | [Get WebSocket channel][getWebSocket]                                        | [subscription][] | Receive near-real-time change notifications for a drive using socket.io.|
 | [Preview item][item-preview]                                                 | json object | Obtain short-lived embeddable URLs for an item in order to render a temporary preview.|
 | [Check in files](../api/driveitem-checkin.md)                                      | None| Check in a checked out **driveItem** resource, which makes the version of the document available to others. |
 | [Check out files](../api/driveitem-checkout.md)                                    | None| Check out a **driveItem** resource to prevent others from editing the document, and prevent your changes from being visible until the documented is [checked in](../api/driveitem-checkin.md). |
+| [Discard checkout](../api/driveitem-discardcheckout.md)                       | None| Discard a previously [checked out](../api/driveitem-checkout.md) **driveItem**.|
 | [Extract sensitivity labels](../api/driveitem-extractsensitivitylabels.md)   | [extractSensitivityLabelsResult](../resources/extractsensitivitylabelsresult.md) | Extract one or more sensitivity labels assigned to a drive item and update the metadata of a drive item with the latest details of the assigned label. |
 | [Assign sensitivity label](../api/driveitem-assignsensitivitylabel.md)       | String | Asynchronously assign a sensitivity label to a **driveItem**.|
 | [Get retention label](../api/driveitem-getretentionlabel.md)                 | [itemRetentionLabel](../resources/itemretentionlabel.md) | Get metadata information for a retention label applied on a **driveItem**. |
 | [Set retention label](../api/driveitem-setretentionlabel.md)                 | [itemRetentionLabel](../resources/itemretentionlabel.md) | Apply (set) a retention label on a **driveItem** (files and folders). |
 | [Remove retention label](../api/driveitem-removeretentionlabel.md)           | None | Remove a retention label from a **driveItem**. |
 | [Lock or unlock record](../api/driveitem-lockorunlockrecord.md)              | [itemRetentionLabel](../resources/itemretentionlabel.md) | Lock or unlock a retention label on a **driveItem** that classifies content as records. |
+|[Create upload session](../api/driveitem-createuploadsession.md)              |[uploadSession](../resources/uploadsession.md)|Create an upload session to allow your app to upload files up to the maximum file size.|
 
 ## Properties
 

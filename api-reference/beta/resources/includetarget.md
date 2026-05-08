@@ -5,6 +5,7 @@ author: "msft-poulomi"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 03/21/2024
 ---
 
 # includeTarget resource type
@@ -20,7 +21,7 @@ Defines the users and groups that are included in a set of changes.
 |Property|Type|Description|
 |:---|:---|:---|
 |id|String|The ID of the entity targeted.|
-|targetType|authenticationMethodTargetType|The kind of entity targeted. Possible values are: `user`, `group`.|
+|targetType|authenticationMethodTargetType|The kind of entity targeted. The possible values are: `user`, `group`.|
 
 ## Relationships
 

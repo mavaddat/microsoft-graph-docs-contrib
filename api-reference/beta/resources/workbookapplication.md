@@ -6,6 +6,7 @@ author: "lumine2008"
 ms.subservice: "excel"
 doc_type: resourcePageType
 toc.title: Application
+ms.date: 06/12/2024
 ---
 
 # workbookApplication resource type
@@ -27,7 +28,7 @@ Represents the Excel application that manages the workbook.
 ## Properties
 | Property	   | Type	|Description|
 |:---------------|:--------|:----------|
-|calculationMode|string|Returns the calculation mode used in the workbook. Possible values are: `Automatic`, `AutomaticExceptTables`, `Manual`.|
+|calculationMode|string|Returns the calculation mode used in the workbook. The possible values are: `Automatic`, `AutomaticExceptTables`, `Manual`.|
 
 ## Relationships
 None.

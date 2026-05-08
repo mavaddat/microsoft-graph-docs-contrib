@@ -5,6 +5,7 @@ author: "jsandoval-msft"
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: "cloud-communications"
+ms.date: 04/04/2024
 ---
 
 # presence: clearPresence
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 Clear the application's presence session for a user. If it is the user's only presence session, the user's presence will change to `Offline/Offline`.
 
-For details about presences sessions, see [presence: setPresence](presence-setpresence.md#presence-sessions).
+For details about presences sessions, see [presence: setPresence](/graph/cloud-communications-manage-presence-state#presence-sessions).
 
 [!INCLUDE [national-cloud-support](../../includes/global-us.md)]
 
@@ -26,7 +27,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 ## HTTP Request
 <!-- { "blockType": "ignored" } -->
 ```http
-POST /users/{userId}/presence/clearPresence
+POST /users/{id}/presence/clearPresence
 ```
 
 ## Request headers
@@ -76,10 +77,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/clear--presence-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/clear--presence-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

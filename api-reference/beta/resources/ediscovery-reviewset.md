@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mahage-msft"
 ms.subservice: "ediscovery"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # reviewSet resource type
@@ -12,6 +13,8 @@ doc_type: "resourcePageType"
 Namespace: microsoft.graph.ediscovery
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [ediscovery-deprecation](../includes/ediscovery-subnamespace-deprecation.md)]
 
 Represents static set of electronically stored information collected for use in a litigation, investigation, or regulatory request.
 

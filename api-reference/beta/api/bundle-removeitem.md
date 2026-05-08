@@ -5,6 +5,7 @@ description: "Remove item from a bundle of driveItems."
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Remove item from bundle
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Remove an item from a [bundle][].
 
-[!INCLUDE [national-cloud-support](../../includes/global-china.md)]
+[!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
 

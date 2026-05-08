@@ -6,12 +6,15 @@ ms.reviewer: ciem_pm
 ms.localizationpriority: medium
 ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # List permissionsCreepIndexDistributions
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Get a list of the [permissionsCreepIndexDistribution](../resources/permissionscreepindexdistribution.md) objects and their properties.
 
@@ -30,7 +33,7 @@ List the Permissions Creep Index distribution for identities and resources in AW
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/permissionsCreepIndexDistributions
 ```
 
@@ -39,7 +42,7 @@ List the Permissions Creep Index distribution for identities and resources in Az
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/azure/permissionsCreepIndexDistributions
 ```
 
@@ -48,7 +51,7 @@ List the Permissions Creep Index distribution for identities and resources in GC
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/gcp/permissionsCreepIndexDistributions
 ```
 
@@ -77,16 +80,12 @@ The following example shows a request.
   "name": "list_permissionscreepindexdistribution"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/identityGovernance/permissionsAnalytics/aws/permissionsCreepIndexDistributions
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-permissionscreepindexdistribution-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-permissionscreepindexdistribution-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -124,7 +123,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.permissionsCreepIndexDistribution)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -200,4 +199,5 @@ Content-Type: application/json
     ]
 }
 ```
+
 

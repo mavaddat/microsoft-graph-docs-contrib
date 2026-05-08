@@ -4,7 +4,8 @@ description: "Represents the SAML single sign-on settings."
 ms.localizationpriority: medium
 doc_type: resourcePageType
 ms.subservice: "entra-applications"
-author: "sureshja"
+author: "Jackson-Woods"
+ms.date: 04/03/2024
 ---
 
 # samlSingleSignOnSettings resource type

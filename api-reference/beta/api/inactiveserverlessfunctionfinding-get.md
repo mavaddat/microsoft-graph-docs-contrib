@@ -6,12 +6,15 @@ ms.reviewer: ciem_pm
 ms.localizationpriority: medium
 ms.subservice: entra-permissions-management
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get inactiveServerlessFunctionFinding
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [permissions-management-retirement-note](../../includes/permissions-management-retirement-note.md)]
 
 Read the properties and relationships of an [inactiveServerlessFunctionFinding](../resources/inactiveserverlessfunctionfinding.md) in your AWS, Azure, and GCP environments.
 
@@ -29,7 +32,7 @@ Get AWS inactive serverless functions:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/aws/findings/{id}/microsoft.graph.inactiveServerlessFunctionFinding
 ```
 
@@ -38,7 +41,7 @@ Get Azure inactive serverless functions:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/azure/findings/{id}/microsoft.graph.inactiveServerlessFunctionFinding
 ```
 
@@ -47,7 +50,7 @@ Get GCP inactive serverless functions:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/permissionsAnalytics/gcp/findings/{id}/microsoft.graph.inactiveServerlessFunctionFinding
 ```
 
@@ -136,4 +139,5 @@ Content-type: application/json
     }
 }
 ```
+
 

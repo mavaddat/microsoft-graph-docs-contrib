@@ -6,20 +6,21 @@ author: "swetha-rai"
 ms.reviewer: conditionalaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 09/13/2024
 ---
 
 # authenticationContextClassReference resource type
 
 Namespace: microsoft.graph
 
-Represents a Microsoft Entra authentication context class reference. Authentication context class references are custom values that define a Conditional Access authentication requirement.
+Represents a Microsoft Entra authentication context class reference. Authentication context class references are custom values that define a Conditional Access authentication requirement. For more information, see [Developer guide to Conditional Access authentication context](/entra/identity-platform/developer-guide-conditional-access-authentication-context).
 
 ## Methods
 
 | Method       | Return Type | Description |
 |:-------------|:------------|:------------|
 | [List](../api/conditionalaccessroot-list-authenticationcontextclassreferences.md) | [authenticationContextClassReference](authenticationContextClassReference.md) collection | Get all of the authenticationContextClassReference objects in the organization. |
-| [Create or update authenticationContextClassReference](../api/authenticationcontextclassreference-update.md)) | [authenticationContextClassReference](authenticationContextClassReference.md) | Create or update an authenticationContextClassReference object. |
+| [Create or update](../api/authenticationcontextclassreference-update.md)) | [authenticationContextClassReference](authenticationContextClassReference.md) | Create or update an authenticationContextClassReference object. |
 | [Get](../api/authenticationcontextclassreference-get.md) | [authenticationContextClassReference](authenticationContextClassReference.md) | Read properties and relationships of a authenticationContextClassReference object. |
 | [Delete](../api/authenticationcontextclassreference-delete.md) | [authenticationContextClassReference](authenticationContextClassReference.md) | Delete an authenticationContextClassReference object. |
 

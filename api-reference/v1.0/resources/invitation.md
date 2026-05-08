@@ -1,17 +1,18 @@
 ---
 title: "invitation resource type"
-description: "Represents an invitation that is used to add external users to an organization as part of Microsoft Entra business-to-business (Microsoft Entra B2B) collaboration."
+description: "Represents an invitation that is used to add external users to an organization as part of B2B collaboration in Microsoft Entra External ID."
 ms.localizationpriority: high
 author: "ppolkadots"
-ms.subservice: "entra-sign-in"
+ms.subservice: "entra-users"
 doc_type: resourcePageType
+ms.date: 06/05/2024
 ---
 
 # invitation resource type
 
 Namespace: microsoft.graph
 
-Represents an invitation that is used to add external users to an organization as part of Microsoft Entra business-to-business (Microsoft Entra B2B) collaboration.
+Represents an invitation that is used to add external users to an organization as part of business-to-business (B2B) collaboration in Microsoft Entra External ID.
 
 The invitation process uses the following flow:
 
@@ -40,7 +41,7 @@ Creating an invitation returns a redemption URL in the response (*inviteRedeemUr
 |inviteRedeemUrl|String|The URL the user can use to redeem their invitation. Read-only.|
 |resetRedemption|Boolean|Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. When `true`, the **invitedUser**/**id** relationship is required. For more information about using this property, see [Reset redemption status for a guest user](/entra/external-id/reset-redemption-status).|
 |sendInvitationMessage|Boolean|Indicates whether an email should be sent to the user being invited. The default is `false`.|
-|status|String|The status of the invitation. Possible values are: `PendingAcceptance`, `Completed`, `InProgress`, and `Error`.|
+|status|String|The status of the invitation. The possible values are: `PendingAcceptance`, `Completed`, `InProgress`, and `Error`.|
 
 ## Relationships
 | Relationship | Type    |Description|

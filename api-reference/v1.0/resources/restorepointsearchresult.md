@@ -6,6 +6,7 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: resourcePageType
+ms.date: 08/06/2024
 ---
 
 # restorePointSearchResult resource type
@@ -17,7 +18,7 @@ Contains a list of [restorePoint](../resources/restorepoint.md) objects associat
 ## Properties
 |Property|Type|Description|
 |:---|:---|:---|
-|artifactHitCount|int| Total number of artifacts restored.|
+|artifactHitCount|Int32| Total number of mailbox items that can be restored for a granular restore session.|
 
 ## Relationships
 
@@ -36,6 +37,6 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.restorePointSearchResult",
-  "artifactHitCount": "Int"
+  "artifactHitCount": "Int32"
 }
 ```

@@ -5,6 +5,7 @@ author: "kyracatwork"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
 doc_type: resourcePageType
+ms.date: 03/06/2024
 ---
 
 # retentionLabelSettings resource type
@@ -19,12 +20,15 @@ Groups all the compliance retention restrictions on the item into a single struc
 
 | Property                      | Type                          | Description                                                                                                                                                                                                                                                |
 | :---------------------------- | :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behaviorDuringRetentionPeriod | microsoft.graph.security.behaviorDuringRetentionPeriod | Describes the item behavior during retention period. Possible values are: `doNotRetain`, `retain`, `retainAsRecord`, `retainAsRegulatoryRecord`, `unknownFutureValue`. Read-only. |
+| behaviorDuringRetentionPeriod | microsoft.graph.security.behaviorDuringRetentionPeriod | Describes the item behavior during retention period. The possible values are: `doNotRetain`, `retain`, `retainAsRecord`, `retainAsRegulatoryRecord`, `unknownFutureValue`. Read-only. |
 | isContentUpdateAllowed        | Boolean                          | Specifies whether updates to document content are allowed. Read-only.                                                                                                                                                                                |
 | isDeleteAllowed               | Boolean                          | Specifies whether the document deletion is allowed. Read-only.                                                                                                                                                                                      |
 | isLabelUpdateAllowed          | Boolean                          | Specifies whether you're allowed to change the retention label on the document. Read-only.                                                                                                                                                                   |
 | isMetadataUpdateAllowed       | Boolean                          | Specifies whether updates to the item metadata (for example, the **Title** field) are blocked. Read-only.                                                                                                                                                                |
 | isRecordLocked                | Boolean                          | Specifies whether the item is locked. Read-write.                                                                                                                                                                                                   |
+
+## Relationships
+None.
 
 ## JSON representation
 

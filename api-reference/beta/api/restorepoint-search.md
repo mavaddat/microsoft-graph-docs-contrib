@@ -1,11 +1,12 @@
 ---
 title: "restorePoint: search"
-description: "Search restore points for protection units."
+description: "Search for the restorePoint objects associated with a protectionUnit."
 author: "tushar20"
 ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 11/07/2024
 ---
 
 # restorePoint: search
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /solutions/backupRestore/restorePoints/search
 ```
 
@@ -50,7 +51,7 @@ In the request body, supply a JSON representation of the following parameters.
 |:---|:---|:---|
 |artifactQuery|[artifactQuery](../resources/artifactquery.md)|Contains an expression that specifies the criteria for search. Optional.|
 |protectionUnitIds|String collection|The ID of the protection units. Required.|
-|protectionTimePeriod|[timePeriod](../resources/timeperiod.md)|The start and end date time of the protection period.  Required.|
+|protectionTimePeriod|[timePeriod](../resources/timeperiod.md)|The start and end date time of the protection period. Required.|
 |restorePointPreference|[restorePointPreference](../api/restorepoint-search.md#restorepointpreference-values)|Indicates which restore point to return. The possible values are `oldest`, `latest`. Optional.|
 |tags|[restorePointTags](../resources/restorepoint.md#restorepointtags-values)|The type of the restore point. The possible values are `None`, `FastRestore`, `UnknownFutureValue`. Optional.|
 
@@ -66,8 +67,9 @@ In the request body, supply a JSON representation of the following parameters.
 If successful, this action returns a `200 OK` response code and a [restorePointSearchResponse](../resources/restorepointsearchresponse.md) object in the response body.
 
 > [!NOTE]
-> - Calls return a maximum of five restore points.
-> - You can include a maximum of 20 protection units in one request and the response won't be paginated.
+> - Calls return one restore point per protection unit.
+> - You can include a maximum of 20 protection units in a single request, and the response isn't paginated.
+> - When you provide an expression for the **artifactQuery** property, you must provide only one protection unit ID in the **protectionUnitIds** property.
 
 For a list of possible error responses, see [Backup Storage API error responses](/graph/backup-storage-error-codes).
 
@@ -84,7 +86,7 @@ The following example shows a request.
   "name": "restorepoint_search"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/solutions/backupRestore/restorePoints/search
 Content-Type: application/json
 
@@ -101,10 +103,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/restorepoint-search-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/restorepoint-search-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -143,7 +141,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.restorePointSearchResponse"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -213,18 +211,19 @@ The following example shows a request.
   "name": "restorepoint_search_artifactquery"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/solutions/backupRestore/restorePoints/search
 Content-Type: application/json
 
 {
   "artifactQuery": {
-    "queryExpression": "((subject -contains ‘Finance’)  -or  (subject -contains ‘Legal’)) -and (sender -eq 'alex@contoso.com') -and (recipient -eq 'carol@contoso.com') -and hasAttachment -eq true",
+    "queryExpression": "(Sender -like 'abc@contoso.com') -and (Subject -like '*Check email*' -or Subject -like ' Important') -and (HasAttachment -eq 'true')",
     "artifactType": "message"
   },
   "protectionUnitIds": ["23014d8c-71fe-4d00-a01a-31850bc5b42a"],
   "protectionTimePeriod": {
-    "startDateTime": "2021-01-01T00:00:00Z"
+    "startDateTime": "2021-01-01T00:00:00Z",
+    "endDateTime": "2021-01-30T00:00:00Z"
   },
   "restorePointPreference": "oldest"
 }
@@ -232,10 +231,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/restorepoint-search-artifactquery-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/restorepoint-search-artifactquery-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -274,7 +269,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.restorePointSearchResponse"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

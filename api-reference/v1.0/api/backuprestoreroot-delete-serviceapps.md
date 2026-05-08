@@ -6,6 +6,7 @@ ms.reviewer: "manikantsinghms"
 ms.localizationpriority: medium
 ms.subservice: "m365-backup-storage"
 doc_type: apiPageType
+ms.date: 09/10/2024
 ---
 
 # Delete serviceApp
@@ -13,6 +14,9 @@ doc_type: apiPageType
 Namespace: microsoft.graph
 
 Delete a [serviceApp](../resources/serviceapp.md).
+
+[!NOTE]
+When this API is called via Microsoft Graph PowerShell, it returns a `403 Forbidden` response code.
 
 [!INCLUDE [national-cloud-support](../../includes/global-only.md)]
 
@@ -29,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 DELETE /solutions/backupRestore/serviceApps/{serviceAppId}
 ```
 
@@ -59,16 +63,12 @@ The following example shows a request.
   "name": "delete_serviceapp"
 }
 -->
-``` http
+```http
 DELETE https://graph.microsoft.com/v1.0/solutions/backupRestore/serviceApps/{71633878-8321-4950-bfaf-ed285bdd1461}
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/delete-serviceapp-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/delete-serviceapp-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -87,6 +87,10 @@ DELETE https://graph.microsoft.com/v1.0/solutions/backupRestore/serviceApps/{716
 [!INCLUDE [sample-code](../includes/snippets/php/delete-serviceapp-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/delete-serviceapp-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/delete-serviceapp-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -100,7 +104,7 @@ The following example shows the response.
   "blockType": "response"
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 Content-Location: https://graph.microsoft.com/v1.0/solutions/backupRestore/serviceApps/71633878-8321-4950-bfaf-ed285bdd1461
 ```

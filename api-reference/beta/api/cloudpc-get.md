@@ -5,6 +5,7 @@ author: "AshleyYangSZ"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 07/30/2024
 ---
 
 # Get cloudPC
@@ -33,20 +34,20 @@ Choose the permission or permissions marked as least privileged for this API. Us
 
 To get the [cloudPC](../resources/cloudpc.md) of the specified user (who is the signed-in user) in the organization using delegated permission:
 
-``` http
+```http
 GET /me/cloudPCs/{id}
 GET /users/{userId}/cloudPCs/{id}
 ```
 
 To get the specified [cloudPC](../resources/cloudpc.md) in the organization, using either delegated permission (the signed-in user should be the administrator) or application permission:
 
-``` http
+```http
 GET /deviceManagement/virtualEndpoint/cloudPCs/{id}
 ```
 
 ## Optional query parameters
 
-This method supports the `$select` OData query parameter to help customize the response. For general information, see [OData query parameters](/graph/query-parameters).
+This method supports the `$select` [OData query parameter](/graph/query-parameters) to help customize the response.
 
 ## Request headers
 
@@ -78,16 +79,12 @@ The following example shows a request.
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/9ec90ff8-fd63-4fb9-ab5a-aa4fdcc43ec9
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpc-default-properties-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpc-default-properties-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -128,7 +125,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -169,6 +166,8 @@ Content-Type: application/json
 
 ### Example 2: Get the selected properties of a Cloud PC
 
+The following example shows how to get selected properties of a [cloudPC](../resources/cloudpc.md) object using the `$select` OData query parameter.
+
 #### Request
 
 The following example shows a request.
@@ -180,16 +179,12 @@ The following example shows a request.
 }
 -->
 
-``` http
-GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/40cee9d2-03fb-4066-8d35-dbdf2875c33f?$select=id,displayName,imageDisplayName,lastModifiedDateTime,lastRemoteActionResult,lastLoginResult,connectivityResult,allotmentDisplayName,deviceRegionName
+```msgraph-interactive
+GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/40cee9d2-03fb-4066-8d35-dbdf2875c33f?$select=id,displayName,imageDisplayName,lastModifiedDateTime,lastRemoteActionResult,lastLoginResult,connectivityResult,allotmentDisplayName,deviceRegionName,productType,provisionedDateTime,sharedDeviceDetail,groupDetail,userDetail
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpc-selected-properties-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpc-selected-properties-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -230,7 +225,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -265,7 +260,21 @@ Content-Type: application/json
       ]
     },
     "allotmentDisplayName": null,
-    "deviceRegionName": "eastus2"
+    "deviceRegionName": "eastus2",
+    "productType": null,
+    "provisionedDateTime": "2025-04-23T10:29:57Z",
+    "sharedDeviceDetail": {
+      "assignedToUserPrincipalName": "john.doe@contoso.onmicrosoft.com",
+      "sessionStartDateTime": "2025-09-08T10:10:00Z"
+    },
+    "groupDetail": {
+        "groupId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+        "groupDisplayName": "Contoso Cloud PC Users"
+    },
+    "userDetail": {
+        "userId": "e798de27-1806-4433-9ac3-4db7a985a12b",
+        "userDisplayName": "Peter Mitchell"
+    }
 }
 ```
 
@@ -283,16 +292,12 @@ The following example shows a request.
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/me/cloudPCs/36bd4942-0ca8-11ed-861d-0242ac120002
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/user-get-cloudpc-default-properties-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/user-get-cloudpc-default-properties-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -333,7 +338,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -371,98 +376,3 @@ Content-Type: application/json
     "diskEncryptionState": "notAvailable"
 }
 ```
-
-### Example 4: List Cloud PCs filtered by disaster recovery capability type
-
-The following example shows how to list Cloud PCs filtered by disaster recovery capability type and select specific parameters.
-
-#### Request
-
-The following example shows a request.
-
-# [HTTP](#tab/http)
-<!-- {
-  "blockType": "request",
-  "name": "get_cloudpc_disasterrecoverycapability"
-}
--->
-``` http
-GET https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs?$select=id,displayName,disasterRecoveryCapability&$filter=disasterRecoveryCapability/capabilityType eq 'failover'
-```
-
-# [C#](#tab/csharp)
-[!INCLUDE [sample-code](../includes/snippets/csharp/get-cloudpc-disasterrecoverycapability-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-cloudpc-disasterrecoverycapability-cli-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Go](#tab/go)
-[!INCLUDE [sample-code](../includes/snippets/go/get-cloudpc-disasterrecoverycapability-go-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Java](#tab/java)
-[!INCLUDE [sample-code](../includes/snippets/java/get-cloudpc-disasterrecoverycapability-java-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [JavaScript](#tab/javascript)
-[!INCLUDE [sample-code](../includes/snippets/javascript/get-cloudpc-disasterrecoverycapability-javascript-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PHP](#tab/php)
-[!INCLUDE [sample-code](../includes/snippets/php/get-cloudpc-disasterrecoverycapability-php-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/get-cloudpc-disasterrecoverycapability-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [Python](#tab/python)
-[!INCLUDE [sample-code](../includes/snippets/python/get-cloudpc-disasterrecoverycapability-python-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
----
-
-#### Response
-
-The following example shows the response.
-
-<!-- {
-  "blockType": "response",
-  "truncated": true,
-  "name": "get_cloudpc_disasterrecoverycapability",
-  "@odata.type": "microsoft.graph.cloudPC"
-}
--->
-
-``` http
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/virtualEndpoint/cloudPCs(id,displayName,disasterRecoveryCapability)",
-  "value": [
-    {
-      "id": "662009bc-7732-4f6f-8726-25883518b33e",
-      "displayName": "Demo-0",
-      "disasterRecoveryCapability": {
-        "primaryRegion": "eastus",
-        "secondaryRegion": "westus",
-        "capabilityType": "failover"
-      }
-    },
-    {
-      "id": "ac74ae8b-85f7-4272-88cc-5419267403ed",
-      "displayName": "Demo-1",
-      "disasterRecoveryCapability": {
-        "primaryRegion": "eastus",
-        "secondaryRegion": "westus",
-        "capabilityType": "failover"
-      }
-    }
-  ]
-}
-```
-
-

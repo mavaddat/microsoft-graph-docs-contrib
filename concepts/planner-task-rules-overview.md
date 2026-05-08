@@ -4,6 +4,8 @@ description: "Rules allow customization of what can and can't be done on tasks, 
 author: "TarkanSevilmis"
 ms.localizationpriority: medium
 ms.subservice: "business-scenarios"
+ms.date: 11/07/2024
+ms.topic: concept-article
 ---
 
 # Configuring task rules in Planner (preview)
@@ -205,7 +207,7 @@ The **approvalAttachment** property is configured with [fieldRules](/graph/api/r
 
 ### forms
 
-The **forms** property is configured with [fieldRules](/graph/api/resources/plannerfieldrules), providing default values and overrides for specific conditions. Possible values are:
+The **forms** property is configured with [fieldRules](/graph/api/resources/plannerfieldrules), providing default values and overrides for specific conditions. The possible values are:
 
 * `block`: Forms can't be changed.
 * `addResponse`: Responses can be added to the form.

@@ -5,6 +5,7 @@ author: "deepakbaghel99"
 ms.localizationpriority: high
 ms.subservice: "outlook"
 doc_type: apiPageType
+ms.date: 09/18/2024
 ---
 
 # calendar: permanentDelete
@@ -17,7 +18,7 @@ Permanently delete a calendar folder and the events that it contains and remove 
 
 >**Note:** Folders aren't placed in the Purges folder when they are permanently deleted. Permanently deleted folders are removed from the mailbox.
 
-[!INCLUDE [national-cloud-support](../../includes/global-only.md)]
+[!INCLUDE [national-cloud-support](../../includes/global-china.md)]
 
 ## Permissions
 
@@ -33,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-POST /users/{usersId}/calendar/permanentDelete
+POST /users/{usersId}/calendars/permanentDelete
 POST /groups/{groupsId}/calendar/permanentDelete
 ```
 
@@ -56,15 +57,21 @@ If successful, this action returns a `204 No Content` response code.
 ### Request
 
 The following example shows a request.
+# [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
   "name": "calendarthis.permanentdelete"
 }
 -->
 ``` http
-POST https://graph.microsoft.com/beta/users/{usersId}/calendar/permanentDelete
+POST https://graph.microsoft.com/beta/users/{usersId}/calendars/permanentDelete
 ```
 
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/calendarthispermanentdelete-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
 
 ### Response
 

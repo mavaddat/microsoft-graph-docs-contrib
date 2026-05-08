@@ -5,13 +5,14 @@ author: "jaiprakashmb"
 ms.localizationpriority: medium
 ms.subservice: "intune"
 doc_type: apiPageType
+ms.date: 08/01/2024
 ---
 
 # Create vppToken
 
 Namespace: microsoft.graph
 
-> **Important:** Microsoft Graph APIs under the /beta version are subject to change; production use is not supported.
+> **Important:** Microsoft supports Intune /beta APIs, but they are subject to more frequent change. Microsoft recommends using version v1.0 when possible. Check an API's availability in version v1.0 using the Version selector.
 
 > **Note:** The Microsoft Graph API for Intune requires an [active Intune license](https://go.microsoft.com/fwlink/?linkid=839381) for the tenant.
 
@@ -24,16 +25,16 @@ One of the following permissions is required to call this API. To learn more, in
 
 |Permission type|Permissions (from least to most privileged)|
 |:---|:---|
-|Delegated (work or school account)|DeviceManagementServiceConfig.ReadWrite.All, DeviceManagementConfiguration.ReadWrite.All|
+|Delegated (work or school account)|DeviceManagementApps.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All|
 |Delegated (personal Microsoft account)|Not supported.|
-|Application|DeviceManagementServiceConfig.ReadWrite.All, DeviceManagementConfiguration.ReadWrite.All|
+|Application|DeviceManagementApps.ReadWrite.All, DeviceManagementServiceConfig.ReadWrite.All|
 
 ## HTTP Request
 <!-- {
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /deviceAppManagement/vppTokens
 ```
 
@@ -68,6 +69,7 @@ The following table shows the properties that are required when you create the v
 |locationName|String|Token location returned from Apple VPP.|
 |claimTokenManagementFromExternalMdm|Boolean|Admin consent to allow claiming token management from external MDM.|
 |roleScopeTagIds|String collection|Role Scope Tags IDs assigned to this entity.|
+|lastAppCount|Int32|The number of apps under the Apple Volume Purchase Program Token since the last token sync.|
 
 
 
@@ -78,10 +80,10 @@ If successful, this method returns a `201 Created` response code and a [vppToken
 
 ### Request
 Here is an example of the request.
-``` http
+```http
 POST https://graph.microsoft.com/beta/deviceAppManagement/vppTokens
 Content-type: application/json
-Content-length: 1002
+Content-length: 1025
 
 {
   "@odata.type": "#microsoft.graph.vppToken",
@@ -110,16 +112,17 @@ Content-length: 1002
   "claimTokenManagementFromExternalMdm": true,
   "roleScopeTagIds": [
     "Role Scope Tag Ids value"
-  ]
+  ],
+  "lastAppCount": 12
 }
 ```
 
 ### Response
 Here is an example of the response. Note: The response object shown here may be truncated for brevity. All of the properties will be returned from an actual call.
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
-Content-Length: 1115
+Content-Length: 1138
 
 {
   "@odata.type": "#microsoft.graph.vppToken",
@@ -150,6 +153,7 @@ Content-Length: 1115
   "claimTokenManagementFromExternalMdm": true,
   "roleScopeTagIds": [
     "Role Scope Tag Ids value"
-  ]
+  ],
+  "lastAppCount": 12
 }
 ```

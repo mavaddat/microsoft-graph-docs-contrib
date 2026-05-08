@@ -5,6 +5,7 @@ author: "liguojing929"
 ms.localizationpriority: medium
 ms.subservice: "cloud-pc"
 doc_type: apiPageType
+ms.date: 06/04/2024
 ---
 
 # cloudPC: createSnapshot
@@ -31,7 +32,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 
-``` http
+```http
 POST /deviceManagement/virtualEndpoint/cloudPCs/{id}/createSnapshot
 ```
 
@@ -43,7 +44,14 @@ POST /deviceManagement/virtualEndpoint/cloudPCs/{id}/createSnapshot
 
 ## Request body
 
-Don't supply a request body for this method.
+In the request body, supply a JSON representation of the parameters.
+
+The following table shows the parameter that you can use with this action.
+
+|Parameter|Type|Description|
+|:---|:---|:---|
+|storageAccountId|String| The storage account which receives the restore point (snapshot).|
+|accessTier|String|The access tier of the blob file that the snapshot is copied to. Possible values are `hot`, `cool`, `cold`, `archive`, and `unknownFutureValue`. The default value is `hot`.|
 
 ## Response
 
@@ -61,16 +69,12 @@ The following example shows a request.
   "name": "cloudpc_createSnapshot"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/b0a9cde2-e170-4dd9-97c3-ad1d3328a711/createSnapshot
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/cloudpc-createsnapshot-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/cloudpc-createsnapshot-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -89,10 +93,6 @@ POST https://graph.microsoft.com/beta/deviceManagement/virtualEndpoint/cloudPCs/
 [!INCLUDE [sample-code](../includes/snippets/php/cloudpc-createsnapshot-php-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
-# [PowerShell](#tab/powershell)
-[!INCLUDE [sample-code](../includes/snippets/powershell/cloudpc-createsnapshot-powershell-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 # [Python](#tab/python)
 [!INCLUDE [sample-code](../includes/snippets/python/cloudpc-createsnapshot-python-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
@@ -109,6 +109,6 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 204 No Content
 ```

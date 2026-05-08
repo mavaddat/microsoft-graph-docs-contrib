@@ -5,6 +5,7 @@ author: "malabikaroy"
 ms.localizationpriority: medium
 ms.subservice: "viva-learning"
 doc_type: apiPageType
+ms.date: 04/05/2024
 ---
 
 # Get learningCourseActivity
@@ -30,7 +31,7 @@ To get a specific learning course activity based on its ID (primary key):
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /employeeExperience/learningCourseActivities/{Id}
 ```
 
@@ -39,7 +40,7 @@ To get a specific learning course activity based on its **externalCourseActivity
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /employeeExperience/learningProviders/{registrationId}/learningCourseActivities(externalCourseActivityId={externalCourseActivityId})
 ```
 
@@ -48,7 +49,7 @@ To get the details of a learning course activity for a user:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET users/{user-id}/employeeExperience/learningCourseActivities/{id}
 ```
 
@@ -57,7 +58,7 @@ To get the details of a learning course activity for the signed-in user:
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET me/employeeExperience/learningCourseActivities/{id}
 ```
 
@@ -93,16 +94,12 @@ The following examples shows a request to get an learning course activity using 
   "name": "get_learning_courseactivity_details_id"
 }-->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/employeeExperience/learningCourseActivities/8ba2228a-e020-11ec-9d64-0242ac120003
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-learning-courseactivity-details-id-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-learning-courseactivity-details-id-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -136,7 +133,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.learningAssignment"
 }-->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -176,16 +173,12 @@ The following example shows a request to get the details of a learning course ac
   "name": "get_learning_courseactivity_details_externalId"
 }-->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/employeeExperience/learningProviders/01e8f81b-3060-4dec-acf0-0389665a0a38/learningCourseActivities(externalCourseActivityId=12a2228a-e020-11ec-9d64-0242ac120002)
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-learning-courseactivity-details-externalid-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-learning-courseactivity-details-externalid-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -219,7 +212,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.learningAssignment"
 }-->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -260,16 +253,12 @@ The following example shows a request to get the details of a learning course ac
   "name": "get_learning_courseactivity_details"
 }-->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/users/7ba2228a-e020-11ec-9d64-0242ac120002/employeeExperience/learningCourseActivities/8ba2228a-e020-11ec-9d64-0242ac120003
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-learning-courseactivity-details-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-learning-courseactivity-details-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -304,7 +293,7 @@ The following example shows the response.
 }-->
 
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

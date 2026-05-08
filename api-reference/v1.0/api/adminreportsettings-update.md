@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "ganggao"
 ms.subservice: "reports"
 doc_type: apiPageType
+ms.date: 09/10/2024
 ---
 
 # Update adminReportSettings
@@ -62,7 +63,7 @@ The following example shows a request.
   "name": "update_adminreportsettings"
 }
 -->
-``` http
+```http
 PATCH https://graph.microsoft.com/v1.0/admin/reportSettings
 Content-Type: application/json
 Content-length: 37
@@ -74,10 +75,6 @@ Content-length: 37
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/update-adminreportsettings-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/update-adminreportsettings-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -94,6 +91,10 @@ Content-length: 37
 
 # [PHP](#tab/php)
 [!INCLUDE [sample-code](../includes/snippets/php/update-adminreportsettings-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/update-adminreportsettings-powershell-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Python](#tab/python)

@@ -5,6 +5,7 @@ author: "kevinbellinger"
 ms.localizationpriority: medium
 ms.subservice: "people"
 doc_type: apiPageType
+ms.date: 06/11/2024
 ---
 
 # Get personResponsibility
@@ -25,7 +26,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /me/responsibilities/{id}
 GET /users/{id | userPrincipalName}/responsibilities/{id}
 ```
@@ -56,7 +57,7 @@ If successful, this method returns a `200 OK` response code and a [personRespons
   "name": "get_personresponsibility"
 }
 -->
-``` http
+```http
 GET https://graph.microsoft.com/beta/me/responsibilities/0fb4c1e3-c1e3-0fb4-e3c1-b40fe3c1b40f
 ```
 
@@ -68,7 +69,7 @@ GET https://graph.microsoft.com/beta/me/responsibilities/0fb4c1e3-c1e3-0fb4-e3c1
   "@odata.type": "microsoft.graph.personResponsibility"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

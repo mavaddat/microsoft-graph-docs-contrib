@@ -5,6 +5,7 @@ author: "RamjotSingh"
 ms.localizationpriority: medium
 ms.subservice: "teams"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # callRecordingEventMessageDetail resource type
@@ -25,10 +26,13 @@ Inherits from [eventMessageDetail](../resources/eventmessagedetail.md).
 |callId|String|Unique identifier of the call.|
 |callRecordingDisplayName|String|Display name for the call recording.|
 |callRecordingDuration|Duration|Duration of the call recording.|
-|callRecordingStatus|callRecordingStatus|Status of the call recording. Possible values are: `success`, `failure`, `initial`, `chunkFinished`, `unknownFutureValue`.|
+|callRecordingStatus|callRecordingStatus|Status of the call recording. The possible values are: `success`, `failure`, `initial`, `chunkFinished`, `unknownFutureValue`.|
 |callRecordingUrl|String|Call recording URL.|
 |initiator|[identitySet](../resources/identityset.md)|Initiator of the event.|
 |meetingOrganizer|[identitySet](../resources/identityset.md)|Organizer of the meeting.|
+
+## Relationships
+None.
 
 ## JSON representation
 The following JSON representation shows the resource type.

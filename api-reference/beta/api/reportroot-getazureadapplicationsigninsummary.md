@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "egreenberg14"
 ms.subservice: "entra-monitoring-health"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # reportRoot: getAzureADApplicationSignInSummary
@@ -23,9 +24,11 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "reportroot_getazureadapplicationsigninsummary" } -->
 [!INCLUDE [permissions-table](../includes/permissions/reportroot-getazureadapplicationsigninsummary-permissions.md)]
 
+[!INCLUDE [rbac-usage-insights-apis](../includes/rbac-for-apis/rbac-usage-insights-apis.md)]
+
 ## HTTP request
 <!-- { "blockType": "ignored" } -->
-``` http
+```http
 GET reports/getAzureADApplicationSignInSummary(period='{period}')
 ```
 
@@ -62,10 +65,6 @@ GET https://graph.microsoft.com/beta/reports/getAzureADApplicationSignInSummary(
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-applicationsigninsummary-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-applicationsigninsummary-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

@@ -5,6 +5,7 @@ author: "jyothig123"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # accessReviewInstanceDecisionItemServicePrincipalResource resource type
@@ -22,6 +23,8 @@ Inherits from [accessReviewInstanceDecisionItemResource](accessreviewinstancedec
 |Property|Type|Description|
 |:---|:---|:---|
 | appId | String | The globally unique identifier of the application to which access is granted. |
+| appRoleDisplayName | String | The display name of the app role. |
+| appRoleId | String| The identifier of the app role. |
 | displayName | String | Display name of the resource. Inherited from [accessReviewInstanceDecisionItemResource](accessreviewinstancedecisionItemresource.md).|
 | id | String | Identifier of the decision item resource. Inherited from [accessReviewInstanceDecisionItemResource](accessreviewinstancedecisionItemresource.md). |
 | type | String | Type of resource. Type is always `ServicePrincipal`. Inherited from [accessReviewInstanceDecisionItemResource](accessreviewinstancedecisionItemresource.md). |
@@ -45,6 +48,8 @@ The following JSON representation shows the resource type.
   "id": "String (identifier)",
   "displayName": "String",
   "type": "String",
-  "appId": "String"
+  "appId": "String",
+  "appRoleId": "String",
+  "appRoleDisplayName": "String"
 }
 ```

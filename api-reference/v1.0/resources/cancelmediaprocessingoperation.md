@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # CancelMediaProcessingOperation resource type
@@ -21,7 +22,7 @@ Describes the response format of the cancel media processing operation.
 | clientContext | String                      | The client context.                                                             |
 | id            | String                      | The server operation ID. Read-only.                                             |
 | resultInfo    | [resultInfo](resultinfo.md) | The result information.  Read-only.                                             |
-| status        | String                      | Possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only. |
+| status        | String                      | The possible values are: `notStarted`, `running`, `completed`, `failed`. Read-only. |
 
 ## Relationships
 None.

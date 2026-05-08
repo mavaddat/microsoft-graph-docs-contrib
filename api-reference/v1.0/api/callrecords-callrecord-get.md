@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mcm223"
 ms.subservice: "cloud-communications"
 doc_type: "apiPageType"
+ms.date: 06/12/2024
 ---
 
 # Get callRecord
@@ -14,7 +15,7 @@ Namespace: microsoft.graph.callRecords
 Retrieve the properties and relationships of a [callRecord](../resources/callrecords-callrecord.md) object.
 
 You can get the **id** of a **callRecord** in two ways:
-* Subscribe to [change notifications](/graph/api/resources/webhooks?view=graph-rest-1.0&preserve-view=true) to the `/communications/callRecords` endpoint.
+* Subscribe to [change notifications](/graph/api/resources/change-notifications-api-overview) to the `/communications/callRecords` endpoint.
 * Use the **callChainId** property of a [call](../resources/call.md). The call record is available only after the associated call is completed.
 
 > [!WARNING]
@@ -90,10 +91,6 @@ GET https://graph.microsoft.com/v1.0/communications/callRecords/e523d2ed-2966-4b
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-callrecord-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-callrecord-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -184,10 +181,6 @@ GET https://graph.microsoft.com/v1.0/communications/callRecords/e523d2ed-2966-4b
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-callrecord-expanded-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-callrecord-expanded-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -355,10 +348,6 @@ GET https://graph.microsoft.com/v1.0/communications/callRecords/e523d2ed-2966-4b
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-callrecord-expanded-participants-v2-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-callrecord-expanded-participants-v2-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

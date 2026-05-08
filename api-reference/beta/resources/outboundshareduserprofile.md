@@ -6,6 +6,7 @@ ms.reviewer: mapamu, iamut
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 05/23/2024
 ---
 
 # outboundSharedUserProfile resource type
@@ -52,7 +53,7 @@ The following JSON representation shows the resource type.
 
 ``` json
 {
-  "@odata.type": "#microsoft.graph.inboundSharedUserProfile",
+  "@odata.type": "#microsoft.graph.outboundSharedUserProfile",
   "userId": "String"
 }
 ```

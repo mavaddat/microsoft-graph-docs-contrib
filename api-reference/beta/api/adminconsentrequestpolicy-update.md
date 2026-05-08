@@ -5,6 +5,7 @@ author: "eringreenlee"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 11/06/2024
 ---
 
 # Update adminConsentRequestPolicy
@@ -20,7 +21,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "adminconsentrequestpolicy_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/adminconsentrequestpolicy-update-permissions.md)]
 
-For delegated scenarios, the calling user needs to belong to at least the *Application Administrator* or *Cloud Application Administrator* [Microsoft Entra roles](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json).
+[!INCLUDE [rbac-adminconsentrequestpolicy-apis-update](../includes/rbac-for-apis/rbac-adminconsentrequestpolicy-apis-update.md)]
 
 ## HTTP request
 
@@ -28,7 +29,7 @@ For delegated scenarios, the calling user needs to belong to at least the *Appli
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 PUT /policies/adminConsentRequestPolicy 
 ```
 
@@ -67,7 +68,7 @@ If successful, this method returns a `204 No content` response code.
   "name": "update_adminconsentrequestpolicy"
 }
 -->
-``` http
+```http
 PUT https://graph.microsoft.com/beta/policies/adminConsentRequestPolicy 
 Content-Type: application/json
 
@@ -101,7 +102,7 @@ Content-Type: application/json
   "truncated": true
 }
 -->
-``` http
+```http
 HTTP/1.1 204 No Content
 Content-Type: text/plain
 ```

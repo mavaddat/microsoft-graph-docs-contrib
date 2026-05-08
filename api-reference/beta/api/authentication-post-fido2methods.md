@@ -6,6 +6,7 @@ author: "tilarso"
 ms.reviewer: intelligentaccesspm
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 08/14/2024
 ---
 
 # Create fido2AuthenticationMethod
@@ -23,7 +24,7 @@ Create a new [fido2AuthenticationMethod](../resources/fido2authenticationmethod.
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "authentication_post_fido2methods" } -->
+<!-- { "blockType": "ignored"  } // Note: Removing this line will result in the permissions autogeneration tool overwriting the table. -->
 [!INCLUDE [permissions-table](../includes/permissions/authentication-post-fido2methods-permissions.md)]
 
 ## HTTP request
@@ -32,7 +33,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /users/{id}/authentication/fido2methods 
 ```
 
@@ -74,7 +75,7 @@ The following example shows a request.
   "name": "create_fido2authenticationmethod_from_"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/users/{id}/authentication/fido2Methods
 Content-Type: application/json
 
@@ -107,7 +108,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.fido2AuthenticationMethod"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 

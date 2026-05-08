@@ -1,10 +1,11 @@
 ---
 title: "Update crossTenantIdentitySyncPolicyPartner"
-description: "Update the user synchronization policy of a partner-specific configuration."
+description: "Update the user and group synchronization policy of a partner-specific configuration."
 author: "rolyon"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 10/17/2024
 ---
 
 # Update crossTenantIdentitySyncPolicyPartner
@@ -13,7 +14,7 @@ Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Update the user synchronization policy of a partner-specific configuration.
+Update the user and group synchronization policy of a partner-specific configuration.
 
 ## Permissions
 
@@ -22,9 +23,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 <!-- { "blockType": "permissions", "name": "crosstenantidentitysyncpolicypartner_update" } -->
 [!INCLUDE [permissions-table](../includes/permissions/crosstenantidentitysyncpolicypartner-update-permissions.md)]
 
-The signed-in user must also be assigned the following minimum [directory role](/entra/identity/role-based-access-control/permissions-reference?toc=%2Fgraph%2Ftoc.json):
-
-* Security Administrator
+[!INCLUDE [rbac-xtap-apis-write](../includes/rbac-for-apis/rbac-xtap-apis-write.md)]
 
 ## HTTP request
 
@@ -49,7 +48,8 @@ PATCH /policies/crossTenantAccessPolicy/partners/{id}/identitySynchronization
 
 |Property|Type|Description|
 |:---|:---|:---|
-|displayName|String|Display name for the cross-tenant user synchronization policy. Generally, this should be the tenant name of the partner Microsoft Entra organization. Optional.|
+|displayName|String|Display name for the cross-tenant user and group synchronization policy. Generally, this should be the tenant name of the partner Microsoft Entra organization. Optional.|
+|groupSyncInbound|[crossTenantGroupSyncInbound](../resources/crosstenantgroupsyncinbound.md)|Determines whether groups can be synchronized from the partner tenant. `false` causes any current group synchronization from the source tenant to the target tenant to stop. This property has no impact on existing groups that have already been synchronized.|
 |userSyncInbound|[crossTenantUserSyncInbound](../resources/crosstenantusersyncinbound.md)|Determines whether users can be synchronized from the partner tenant. `false` causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.|
 
 ## Response
@@ -73,6 +73,9 @@ PATCH https://graph.microsoft.com/beta/policies/crossTenantAccessPolicy/partners
 Content-Type: application/json
 
 {
+  "groupSyncInbound": {
+    "isSyncAllowed": true
+  },
   "userSyncInbound": {
     "isSyncAllowed": true
   }

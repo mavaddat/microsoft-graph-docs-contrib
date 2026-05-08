@@ -5,6 +5,9 @@ ms.localizationpriority: medium
 author: "cristobal-buenrostro"
 ms.subservice: "education"
 doc_type: conceptualPageType
+ms.date: 11/07/2024
+ms.custom: sfi-image-nochange, sfi-ga-nochange
+ms.topic: how-to
 ---
 
 # Set up School Data Sync

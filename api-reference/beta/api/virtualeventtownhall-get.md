@@ -5,6 +5,7 @@ author: "frankpeng7"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: apiPageType
+ms.date: 10/18/2024
 ---
 
 # Get virtualEventTownhall
@@ -21,8 +22,8 @@ Read the properties and relationships of a [virtualEventTownhall](../resources/v
 
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
-<!-- { "blockType": "permissions", "name": "virtualeventwebinar_get" } -->
-[!INCLUDE [permissions-table](../includes/permissions/virtualevent-get-permissions.md)]
+<!-- { "blockType": "permissions", "name": "virtualeventtownhall_get" } -->
+[!INCLUDE [permissions-table](../includes/permissions/virtualeventtownhall-get-permissions.md)]
 
 > [!NOTE]
 >
@@ -34,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /solutions/virtualEvents/townhalls/{id}
 ```
 
@@ -67,16 +68,12 @@ The following example shows a request.
   "name": "get_virtualeventtownhall"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/solutions/virtualEvents/townhalls/fc6e8c15-2fd7-1dd5-caa0-87056e6a12be
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-virtualeventtownhall-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-virtualeventtownhall-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +112,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.virtualEventTownhall"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 
@@ -166,6 +163,12 @@ Content-Type: application/json
   "settings": {
     "isAttendeeEmailNotificationEnabled": false
   },
-  "isInviteOnly": false
+  "isInviteOnly": false,
+  "externalEventInformation": [
+    {
+      "applicationId" : "1b7ba4d1-c377-4b2f-ad0e-a3fc50bc987b",
+      "externalEventId": "myExternalEventId"
+    }
+  ]
 }
 ```

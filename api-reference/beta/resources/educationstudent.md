@@ -5,6 +5,7 @@ author: "mmast-msft"
 ms.localizationpriority: medium
 ms.subservice: "education"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # educationStudent resource type
@@ -24,10 +25,13 @@ Additional information added to an [educationUser](educationuser.md) that is pre
 | :------------- | :-------------- | :---------------------------------------------- |
 | birthDate      | Date            | Birth date of the student.                      |
 | externalId     | String          | ID of the student in the source system.         |
-| gender         | educationGender | Possible values are: `female`, `male`, `other`. |
+| gender         | educationGender | The possible values are: `female`, `male`, `other`. |
 | grade          | String          | Current grade level of the student.             |
 | graduationYear | String          | Year the student is graduating from the school. |
 | studentNumber  | String          | Student Number.                                 |
+
+## Relationships
+None.
 
 ## JSON representation
 

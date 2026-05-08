@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "markwahl-msft"
 ms.subservice: "entra-id-governance"
 doc_type: "apiPageType"
+ms.date: 04/04/2024
 ---
 
 # Update approvalStep
@@ -23,19 +24,25 @@ The following tables show the least privileged permission or permissions require
 
 ### Permissions required for calling this API for entitlement management
 
-<!-- { "blockType": "permissions", "name": "approvalstep_update" } -->
+<!-- { 
+  "blockType": "permissions", 
+  "name": "approvalstep_update", 
+  "requestUrls": ["PATCH /identityGovernance/entitlementManagement/accessPackageAssignmentApprovals/{id}/steps/{id}"]
+ } -->
 [!INCLUDE [permissions-table](../includes/permissions/approvalstep-update-permissions.md)]
+
+[!INCLUDE [rbac-entitlement-end-user-apis-write](../includes/rbac-for-apis/rbac-entitlement-management-end-user-apis-write.md)]
 
 <a name='for-pim-for-azure-ad-roles'></a>
 
 ### For PIM for Microsoft Entra roles
 
-<!-- { "blockType": "permissions", "name": "approvalstep_update_2" } -->
+<!-- { "blockType": "permissions", "name": "approvalstep_update_2", "requestUrls": ["PATCH /roleManagement/directory/roleAssignmentApprovals/{id}/steps/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/approvalstep-update-2-permissions.md)]
 
-### Permissions required for calling this API for PIM for groups
+### Permissions required for calling this API for PIM for Groups
 
-<!-- { "blockType": "permissions", "name": "approvalstep_update_3" } -->
+<!-- { "blockType": "permissions", "name": "approvalstep_update_3", "requestUrls": ["PATCH /identityGovernance/privilegedAccess/group/assignmentApprovals/{id}/steps/{id}"] } -->
 [!INCLUDE [permissions-table](../includes/permissions/approvalstep-update-3-permissions.md)]
 
 ## HTTP request
@@ -54,7 +61,7 @@ To update an approval decision in PIM for Microsoft Entra roles:
 PATCH /roleManagement/directory/roleAssignmentApprovals/{id}/steps/{id}
 ```
 
-To update an approval decision in PIM for groups:
+To update an approval decision in PIM for Groups:
 
 <!-- { "blockType": "ignored" } -->
 ```http
@@ -73,7 +80,7 @@ The following table shows the properties that are required for this method.
 
 | Property       | Type    |Description|
 |:---------------|:--------|:----------|
-| reviewResult | String | Decision of the approver. Possible values are: `Approve`, `Deny`.|
+| reviewResult | String | Decision of the approver. The possible values are: `Approve`, `Deny`.|
 | justification | String | Justification related to the approver's decision. |
 
 
@@ -99,10 +106,6 @@ PATCH https://graph.microsoft.com/beta/identityGovernance/entitlementManagement/
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/patch-approvalstep-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/patch-approvalstep-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)

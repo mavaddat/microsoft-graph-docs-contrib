@@ -1,10 +1,11 @@
 ---
 title: "Get federatedTokenValidationPolicy"
 description: "Read the properties and relationships of a federatedTokenValidationPolicy object."
-author: "rahul-nagraj"
+author: "vimrang"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 04/18/2024
 ---
 
 # Get federatedTokenValidationPolicy
@@ -34,7 +35,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /policies/federatedTokenValidationPolicy
 ```
 
@@ -63,16 +64,12 @@ The following example shows a request.
   "name": "get_federatedtokenvalidationpolicy"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/beta/policies/federatedTokenValidationPolicy
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/get-federatedtokenvalidationpolicy-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/get-federatedtokenvalidationpolicy-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,7 +107,7 @@ The following example shows the response
   "@odata.type": "microsoft.graph.federatedTokenValidationPolicy"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

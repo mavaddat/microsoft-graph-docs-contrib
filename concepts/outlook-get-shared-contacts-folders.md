@@ -4,6 +4,8 @@ description: "In Outlook, customers can share contact folders and provide access
 author: "angelgolfer-ms"
 ms.localizationpriority: medium
 ms.subservice: "outlook"
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Get Outlook contacts in a shared folder

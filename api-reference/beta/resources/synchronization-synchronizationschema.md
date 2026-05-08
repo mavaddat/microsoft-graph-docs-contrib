@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 doc_type: resourcePageType
 author: "ArvindHarinder1"
 ms.subservice: "entra-applications"
+ms.date: 07/05/2024
 ---
 
 # synchronizationSchema resource type
@@ -15,7 +16,7 @@ Namespace: microsoft.graph
 
 Defines what objects are synchronized and how they are synchronized. The synchronization schema contains most of the setup information for a particular synchronization job. Typically, you customize some of the [attribute mappings](synchronization-attributemapping.md), or add a [scoping filter](synchronization-filter.md) to synchronize only objects that satisfy a certain condition.
 
-The following sections describe the high-level components of the synchronization schema.
+The following sections describe the high-level components of the synchronization schema. For more information, see [Understand the Microsoft Entra schema](/entra/identity/hybrid/cloud-sync/concept-attributes) and [Attribute mapping - Active Directory to Microsoft Entra ID](/entra/identity/hybrid/cloud-sync/how-to-attribute-mapping).
 
 ## Directory definitions
 

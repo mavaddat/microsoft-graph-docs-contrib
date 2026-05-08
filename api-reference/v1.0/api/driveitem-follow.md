@@ -5,6 +5,7 @@ title: Follow drive item
 ms.localizationpriority: medium
 ms.subservice: "sharepoint"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 # Follow drive item
 
@@ -51,6 +52,8 @@ This method returns a [DriveItem](../resources/driveitem.md) for the item being 
 
 ## Example
 
+### Request
+
 This example follows an item identified by `{item-id}`.
 
 
@@ -63,10 +66,6 @@ POST https://graph.microsoft.com/v1.0/me/drive/items/{item-id}/follow
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/follow-item-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/follow-item-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -106,6 +105,8 @@ POST https://graph.microsoft.com/v1.0/me/drive/items/{item-id}/follow
   ]
 }
 -->
+
+### Response
 
 <!-- { "blockType": "response", "@odata.type": "microsoft.graph.driveItem", "truncated": true } -->
 

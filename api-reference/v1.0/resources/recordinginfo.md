@@ -5,6 +5,7 @@ author: "ananmishr"
 ms.localizationpriority: medium
 ms.subservice: "cloud-communications"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # recordingInfo resource type
@@ -18,7 +19,7 @@ Represents recording information for a participant.
 | Property        | Type    | Description|
 |:----------------|:--------|:----------|
 | initiator     | [identitySet](identitySet.md) | The identities of the recording initiator. |
-| recordingStatus | String | Possible values are: `unknown`, `notRecording`, `recording`, or `failed`. |
+| recordingStatus | String | The possible values are: `unknown`, `notRecording`, `recording`, or `failed`. |
 
 ## JSON representation
 

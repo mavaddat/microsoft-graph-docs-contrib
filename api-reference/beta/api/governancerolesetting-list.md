@@ -1,14 +1,15 @@
 ---
-title: "List governanceRoleSettings"
+title: "List governanceRoleSettings (deprecated)"
 description: "Retrieve a collection of governanceRoleSettings on a resource."
 ms.localizationpriority: medium
 doc_type: apiPageType
 ms.subservice: "entra-id-governance"
 author: "rkarim-ms"
 ROBOTS: NOINDEX
+ms.date: 08/13/2024
 ---
 
-# List governanceRoleSettings
+# List governanceRoleSettings (deprecated)
 
 Namespace: microsoft.graph
 

@@ -5,9 +5,11 @@ author: "soneff"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: apiPageType
+ms.date: 01/09/2024
 ---
 
 # Create customAuthenticationExtension
+
 Namespace: microsoft.graph
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
@@ -17,6 +19,9 @@ Create a new [customAuthenticationExtension](../resources/customauthenticationex
 - [onTokenIssuanceStartCustomExtension](../resources/ontokenissuancestartcustomextension.md) resource type.
 - [onAttributeCollectionStartCustomExtension](../resources/onattributecollectionstartcustomextension.md) resource type.
 - [onAttributeCollectionSubmitCustomExtension](../resources/onattributecollectionsubmitcustomextension.md) resource type.
+- [onOtpSendCustomExtension](../resources/onOtpSendCustomExtension.md) resource type.
+- [onPasswordSubmitCustomExtension](../resources/onpasswordsubmitcustomextension.md) resource type.
+- [onVerifiedIdClaimValidationCustomExtension](../resources/onverifiedidclaimvalidationcustomextension.md) resource type.
 
 > [!NOTE]
 >
@@ -25,10 +30,13 @@ Create a new [customAuthenticationExtension](../resources/customauthenticationex
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
 ## Permissions
+
 Choose the permission or permissions marked as least privileged for this API. Use a higher privileged permission or permissions [only if your app requires it](/graph/permissions-overview#best-practices-for-using-microsoft-graph-permissions). For details about delegated and application permissions, see [Permission types](/graph/permissions-overview#permission-types). To learn more about these permissions, see the [permissions reference](/graph/permissions-reference).
 
 <!-- { "blockType": "permissions", "name": "identitycontainer_post_customauthenticationextensions" } -->
 [!INCLUDE [permissions-table](../includes/permissions/identitycontainer-post-customauthenticationextensions-permissions.md)]
+
+[!INCLUDE [rbac-custom-auth-ext-apis-write](../includes/rbac-for-apis/rbac-custom-auth-ext-apis-write.md)]
 
 ## HTTP request
 
@@ -36,28 +44,32 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 POST /identity/customAuthenticationExtensions
 ```
 
 ## Request headers
+
 |Name|Description|
 |:---|:---|
 |Authorization|Bearer {token}. Required. Learn more about [authentication and authorization](/graph/auth/auth-concepts).|
 |Content-Type|application/json. Required.|
 
 ## Request body
+
 In the request body, supply a JSON representation of the [customAuthenticationExtension](../resources/customauthenticationextension.md) object.
 
 You can specify the following properties when creating a **customAuthenticationExtension**. You must specify the **@odata.type** property with a value of the customAuthenticationExtension object type that you want to create. For example, to create an **onTokenIssuanceStartCustomExtension** object, set **@odata.type** to `#microsoft.graph.onTokenIssuanceStartCustomExtension`.
 
 |Property|Type|Description|
 |:---|:---|:---|
-|authenticationConfiguration|[customExtensionAuthenticationConfiguration](../resources/customextensionauthenticationconfiguration.md)|The authentication configuration for this custom extension. Optional.|
+|authenticationConfiguration|[customExtensionAuthenticationConfiguration](../resources/customextensionauthenticationconfiguration.md)|The authentication configuration for this custom extension. Required.|
+|behaviorOnError|[customExtensionBehaviorOnError](../resources/customextensionbehavioronerror.md)|Let to configure behavior if the call to custom authentication extension returns error. Optional.|
 |clientConfiguration|[customExtensionClientConfiguration](../resources/customextensionclientconfiguration.md)|The connection settings for the custom extension. Optional.|
-|description|String|Description for the custom extension. Optional.|
-|displayName|String|Display name for the custom extension. Optional.|
-|endpointConfiguration|[customExtensionEndpointConfiguration](../resources/customextensionendpointconfiguration.md)|Configuration for the API endpoint that the custom extension will call. Optional.|
+|description|String|Description for the custom extension. Inherited from [customCalloutExtension](../resources/customcalloutextension.md). Optional.|
+|displayName|String|Display name for the custom extension. Inherited from [customCalloutExtension](../resources/customcalloutextension.md). Optional.|
+|endpointConfiguration|[customExtensionEndpointConfiguration](../resources/customextensionendpointconfiguration.md)|Configuration for the API endpoint that the custom extension will call. Inherited from [customCalloutExtension](../resources/customcalloutextension.md). Optional.|
+
 
 
 ## Response
@@ -78,7 +90,7 @@ The following example shows a request.
   "name": "create_customauthenticationextension_onTokenIssuanceStartCustomExtension"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/customAuthenticationExtensions
 Content-Type: application/json
 Content-length: 468
@@ -112,10 +124,6 @@ Content-length: 468
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-customauthenticationextension-ontokenissuancestartcustomextension-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-customauthenticationextension-ontokenissuancestartcustomextension-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -153,7 +161,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.customAuthenticationExtension"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -200,7 +208,7 @@ The following example shows a request.
   "name": "create_customauthenticationextension_onAttributeCollectionStartCustomExtension"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/customAuthenticationExtensions
 Content-Type: application/json
 
@@ -225,10 +233,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-customauthenticationextension-onattributecollectionstartcustomextension-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-customauthenticationextension-onattributecollectionstartcustomextension-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -267,7 +271,7 @@ The following example shows the response.
 }
 -->
 
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -304,7 +308,7 @@ The following example shows a request.
   "name": "create_customauthenticationextension_onAttributeCollectionSubmitCustomExtension"
 }
 -->
-``` http
+```http
 POST https://graph.microsoft.com/beta/identity/customAuthenticationExtensions
 Content-Type: application/json
 
@@ -329,10 +333,6 @@ Content-Type: application/json
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/create-customauthenticationextension-onattributecollectionsubmitcustomextension-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/create-customauthenticationextension-onattributecollectionsubmitcustomextension-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -371,7 +371,7 @@ The following example shows the response.
   "@odata.type": "microsoft.graph.customAuthenticationExtension"
 }
 -->
-``` http
+```http
 HTTP/1.1 201 Created
 Content-Type: application/json
 
@@ -393,5 +393,214 @@ Content-Type: application/json
         "timeoutInMilliseconds": 2000,
         "maximumRetries": 1
     }
+}
+```
+### Example 4: Create an onOtpSendCustomExtension object
+
+#### Request
+
+The following example shows a request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_customauthenticationextension_onOtpSendCustomExtension"
+}
+-->
+```http
+POST https://graph.microsoft.com/beta/identity/customAuthenticationExtensions
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.onOtpSendCustomExtension",
+  "authenticationConfiguration": {
+    "@odata.type": "#microsoft.graph.azureAdTokenAuthentication",
+    "resourceId": "api://onotpsendcustomextension.b2c.expert/fb96de85-2abe-4b02-b45f-64ba122c509e"
+  },
+  "clientConfiguration": {
+    "timeoutInMilliseconds": 2000,
+    "maximumRetries": 1
+  },
+  "description": "Use an external Email provider to send OTP Codes.",
+  "displayName": "onEmailOtpSendCustomExtension",
+  "endpointConfiguration": {
+    "@odata.type": "#microsoft.graph.httpRequestEndpoint",
+    "targetUrl": "https://onotpsendcustomextension.b2c.expert/api/OnOTPCodeSendToTeamsDemo"
+  },
+  "behaviorOnError": {
+    "@odata.type": "microsoft.graph.customExtensionBehaviorOnError"
+  }
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-customauthenticationextension-onotpsendcustomextension-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-customauthenticationextension-onotpsendcustomextension-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-customauthenticationextension-onotpsendcustomextension-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-customauthenticationextension-onotpsendcustomextension-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-customauthenticationextension-onotpsendcustomextension-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-customauthenticationextension-onotpsendcustomextension-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-customauthenticationextension-onotpsendcustomextension-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.customAuthenticationExtension"
+}
+-->
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.onOtpSendCustomExtension",
+  "authenticationConfiguration": {
+    "@odata.type": "#microsoft.graph.azureAdTokenAuthentication",
+    "resourceId": "api://onotpsendcustomextension.b2c.expert/fb96de85-2abe-4b02-b45f-64ba122c509e"
+  },
+  "clientConfiguration": {
+    "timeoutInMilliseconds": 2000,
+    "maximumRetries": 1
+  },
+  "description": "Use an external Email provider to send OTP Codes.",
+  "displayName": "onEmailOtpSendCustomExtension",
+  "endpointConfiguration": {
+    "@odata.type": "#microsoft.graph.httpRequestEndpoint",
+    "targetUrl": "https://onotpsendcustomextension.b2c.expert/api/OnOTPCodeSendToTeamsDemo"
+  },
+  "behaviorOnError": {
+    "@odata.type": "microsoft.graph.customExtensionBehaviorOnError"
+  }
+}
+```
+
+### Example 5: Create an onVerifiedIdClaimValidationCustomExtension object
+
+#### Request
+
+The following example shows a request.
+
+# [HTTP](#tab/http)
+<!-- {
+  "blockType": "request",
+  "name": "create_customauthenticationextension_onVerifiedIdClaimValidationCustomExtension"
+}
+-->
+```http
+POST https://graph.microsoft.com/beta/identity/customAuthenticationExtensions
+Content-Type: application/json
+
+{
+  "@odata.type": "#microsoft.graph.onVerifiedIdClaimValidationCustomExtension",
+  "displayName": "Verified ID Claim Validation",
+  "description": "Validate claims from a Verified ID presentation",
+  "endpointConfiguration": {
+    "@odata.type": "#microsoft.graph.httpRequestEndpoint",
+    "targetUrl": "https://contoso.azurewebsites.net/api/verifiedIdClaimValidation"
+  },
+  "authenticationConfiguration": {
+    "@odata.type": "#microsoft.graph.azureAdTokenAuthentication",
+    "resourceId": "api://contoso.azurewebsites.net/verifiedIdClaimValidation"
+  },
+  "clientConfiguration": {
+    "timeoutInMilliseconds": 2000,
+    "maximumRetries": 1
+  },
+  "behaviorOnError": {
+    "@odata.type": "#microsoft.graph.customExtensionBehaviorOnError"
+  }
+}
+```
+
+# [C#](#tab/csharp)
+[!INCLUDE [sample-code](../includes/snippets/csharp/create-customauthenticationextension-onverifiedidclaimvalidationcustomextension-csharp-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Go](#tab/go)
+[!INCLUDE [sample-code](../includes/snippets/go/create-customauthenticationextension-onverifiedidclaimvalidationcustomextension-go-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Java](#tab/java)
+[!INCLUDE [sample-code](../includes/snippets/java/create-customauthenticationextension-onverifiedidclaimvalidationcustomextension-java-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [JavaScript](#tab/javascript)
+[!INCLUDE [sample-code](../includes/snippets/javascript/create-customauthenticationextension-onverifiedidclaimvalidationcustomextension-javascript-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PHP](#tab/php)
+[!INCLUDE [sample-code](../includes/snippets/php/create-customauthenticationextension-onverifiedidclaimvalidationcustomextension-php-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [PowerShell](#tab/powershell)
+[!INCLUDE [sample-code](../includes/snippets/powershell/create-customauthenticationextension-onverifiedidclaimvalidationcustomextension-powershell-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+# [Python](#tab/python)
+[!INCLUDE [sample-code](../includes/snippets/python/create-customauthenticationextension-onverifiedidclaimvalidationcustomextension-python-snippets.md)]
+[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
+
+---
+
+#### Response
+
+The following example shows the response.
+>**Note:** The response object shown here might be shortened for readability.
+<!-- {
+  "blockType": "response",
+  "truncated": true,
+  "@odata.type": "microsoft.graph.customAuthenticationExtension"
+}
+-->
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "@odata.context": "https://graph.microsoft.com/beta/$metadata#identity/customAuthenticationExtensions/$entity",
+  "@odata.type": "#microsoft.graph.onVerifiedIdClaimValidationCustomExtension",
+  "id": "6a0a3429-be77-0aed-951e-1c8aed62bf8a",
+  "displayName": "Verified ID Claim Validation",
+  "description": "Validate claims from a Verified ID presentation",
+  "endpointConfiguration": {
+    "@odata.type": "#microsoft.graph.httpRequestEndpoint",
+    "targetUrl": "https://contoso.azurewebsites.net/api/verifiedIdClaimValidation"
+  },
+  "authenticationConfiguration": {
+    "@odata.type": "#microsoft.graph.azureAdTokenAuthentication",
+    "resourceId": "api://contoso.azurewebsites.net/verifiedIdClaimValidation"
+  },
+  "clientConfiguration": {
+    "timeoutInMilliseconds": 2000,
+    "maximumRetries": 1
+  },
+  "behaviorOnError": {
+    "@odata.type": "#microsoft.graph.customExtensionBehaviorOnError"
+  }
 }
 ```

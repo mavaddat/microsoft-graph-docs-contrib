@@ -1,17 +1,21 @@
 ---
-title: "securityVendorInformation resource type"
+title: "securityVendorInformation resource type (deprecated)"
 description: " > **Important:** APIs under the /beta version in Microsoft Graph are in preview and are subject to change. Use of these APIs in production applications isn't supported."
 ms.localizationpriority: medium
 author: "preetikr"
 ms.subservice: "security"
 doc_type: resourcePageType
+ms.date: 03/21/2024
+ROBOTS: NOINDEX
 ---
 
-# securityVendorInformation resource type
+# securityVendorInformation resource type (deprecated)
 
 Namespace: microsoft.graph
 
  [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
+
+[!INCLUDE [security-alerts-v1-deprecation](../includes/security-alerts-v1-deprecation.md)]
 
 Contains details about the security product/service vendor, provider, and subprovider (for example, vendor=Microsoft; provider=Windows Defender ATP; subProvider=AppLocker).
 
@@ -23,6 +27,9 @@ Contains details about the security product/service vendor, provider, and subpro
 |providerVersion|String|Version of the provider or subprovider, if it exists, that generated the alert. **Required**|
 |subProvider|String|Specific subprovider (under aggregating provider); for example, WindowsDefenderATP.SmartScreen.|
 |vendor |String|Name of the alert vendor (for example, Microsoft, Dell, FireEye). **Required**|
+
+## Relationships
+None.
 
 ## JSON representation
 

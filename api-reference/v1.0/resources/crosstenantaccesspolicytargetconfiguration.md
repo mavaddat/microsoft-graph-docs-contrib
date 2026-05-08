@@ -5,6 +5,7 @@ author: "jkdouglas"
 ms.localizationpriority: medium
 ms.subservice: "entra-sign-in"
 doc_type: resourcePageType
+ms.date: 07/22/2024
 ---
 
 # crossTenantAccessPolicyTargetConfiguration resource type
@@ -12,6 +13,12 @@ doc_type: resourcePageType
 Namespace: microsoft.graph
 
 Defines the target of a cross-tenant access policy setting configuration.
+
+This resource is used by the following properties:
+
+- **users** property of [crossTenantAccessPolicyM365CollaborationInboundSetting](../resources/crosstenantaccesspolicym365collaborationinboundsetting.md)
+- **usersAndGroups** property of [crossTenantAccessPolicyM365CollaborationOutboundSetting](../resources/crosstenantaccesspolicym365collaborationoutboundsetting.md)
+- **applications** property of [crossTenantAccessPolicyAppServiceConnectSetting](../resources/crosstenantaccesspolicyappserviceconnectsetting.md)
 
 ## Properties
 

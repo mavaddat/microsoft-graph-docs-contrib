@@ -5,6 +5,8 @@ author: "RamjotSingh"
 ms.localizationpriority: high
 ms.subservice: "teams"
 ms.custom: scenarios:getting-started
+ms.date: 11/07/2024
+ms.topic: how-to
 ---
 
 # Get system messages for Microsoft Teams

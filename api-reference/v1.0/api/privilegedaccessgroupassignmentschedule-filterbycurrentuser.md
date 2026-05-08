@@ -1,16 +1,17 @@
 ---
 title: "privilegedAccessGroupAssignmentSchedule: filterByCurrentUser"
-description: "In PIM for groups, retrieve the schedules for membership or ownership assignments for the calling principal to groups that are governed by PIM."
+description: "In PIM for Groups, retrieve the schedules for membership or ownership assignments for the calling principal to groups that are governed by PIM."
 author: "ilyalushnikov"
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 04/04/2024
 ---
 
 # privilegedAccessGroupAssignmentSchedule: filterByCurrentUser
 Namespace: microsoft.graph
 
-In PIM for groups, retrieve the schedules for membership or ownership assignments for the calling principal to groups that are governed by PIM.
+In PIM for Groups, retrieve the schedules for membership or ownership assignments for the calling principal to groups that are governed by PIM.
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
@@ -28,7 +29,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
   "blockType": "ignored"
 }
 -->
-``` http
+```http
 GET /identityGovernance/privilegedAccess/group/assignmentSchedules/filterByCurrentUser(on='parameterValue')
 ```
 
@@ -63,16 +64,12 @@ The following example shows a request.
   "name": "privilegedaccessgroupassignmentschedulethis.filterbycurrentuser"
 }
 -->
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/identityGovernance/privilegedAccess/group/assignmentSchedules/filterByCurrentUser(on='principal')
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/privilegedaccessgroupassignmentschedulethisfilterbycurrentuser-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/privilegedaccessgroupassignmentschedulethisfilterbycurrentuser-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -110,7 +107,7 @@ The following example shows the response.
   "@odata.type": "Collection(microsoft.graph.privilegedAccessGroupAssignmentSchedule)"
 }
 -->
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

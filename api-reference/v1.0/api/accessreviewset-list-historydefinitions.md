@@ -5,6 +5,7 @@ author: isabelleatmsft
 ms.localizationpriority: medium
 ms.subservice: "entra-id-governance"
 doc_type: apiPageType
+ms.date: 05/20/2024
 ---
 
 # List historyDefinitions
@@ -31,7 +32,7 @@ If the signed-in user doesn't have at least the Global Reader directory role mem
 }
 -->
 
-``` http
+```http
 GET /identityGovernance/accessReviews/historyDefinitions
 ```
 
@@ -66,16 +67,12 @@ If successful, this method returns a `200 OK` response code and a collection of 
 }
 -->
 
-``` http
+```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/identityGovernance/accessReviews/historyDefinitions
 ```
 
 # [C#](#tab/csharp)
 [!INCLUDE [sample-code](../includes/snippets/csharp/list-accessreviewhistorydefinition-csharp-snippets.md)]
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
-# [CLI](#tab/cli)
-[!INCLUDE [sample-code](../includes/snippets/cli/list-accessreviewhistorydefinition-cli-snippets.md)]
 [!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 # [Go](#tab/go)
@@ -115,7 +112,7 @@ GET https://graph.microsoft.com/v1.0/identityGovernance/accessReviews/historyDef
 }
 -->
 
-``` http
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json
 

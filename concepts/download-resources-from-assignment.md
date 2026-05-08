@@ -5,6 +5,8 @@ ms.localizationpriority: medium
 author: "AshwaniBansal1"
 ms.subservice: "education"
 doc_type: conceptualPageType
+ms.date: 11/07/2024
+ms.topic: article
 ---
 
 # Download all resources from a set of assignments

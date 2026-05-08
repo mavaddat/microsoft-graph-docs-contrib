@@ -5,6 +5,7 @@ ms.localizationpriority: medium
 author: "mcm223"
 ms.subservice: "cloud-communications"
 doc_type: "resourcePageType"
+ms.date: 07/22/2024
 ---
 
 # failureInfo resource type
@@ -18,7 +19,7 @@ Represents information about why a call or portion of a call failed.
 | Property     | Type        | Description |
 |:-------------|:------------|:------------|
 |reason|String|Classification of why a call or portion of a call failed.|
-|stage|microsoft.graph.callRecords.failureStage|The stage when the failure occurred. Possible values are: `unknown`, `callSetup`, `midcall`, `unknownFutureValue`.|
+|stage|microsoft.graph.callRecords.failureStage|The stage when the failure occurred. The possible values are: `unknown`, `callSetup`, `midcall`, `unknownFutureValue`.|
 
 ## JSON representation
 
