@@ -53,6 +53,14 @@
           "ChangeType": "Addition",
           "Description": "Added the **identityGovernance** property to the [user](https://learn.microsoft.com/en-us/graph/api/resources/user?view=graph-rest-beta) resource.",
           "Target": "user"
+        },
+        {
+          "Id": "33537a5f-f7d5-4f51-b0ef-0c0fe4b92709",
+          "ApiChange": "Member",
+          "ChangedApiName": "allDirectoryAgentIdentities",
+          "ChangeType": "Addition",
+          "Description": "Add the `allDirectoryAgentIdentities` member to the **allowedTargetScope** enumeration.",
+          "Target": "allowedTargetScope"
         }
       ],
       "Id": "1f219972-a2f2-4a20-a77a-95f7c3456a11",
