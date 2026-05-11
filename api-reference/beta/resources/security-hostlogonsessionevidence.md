@@ -1,6 +1,6 @@
 ---
 title: "hostLogonSessionEvidence resource type"
-description: "Represents a logon session to a host by an account"
+description: "Represents a sign-in session to a host by an account."
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.subservice: "security"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.security
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a logon session to a host by an account.
+Represents a sign-in session to a host by an account.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:-----------------|:------------------------------------------------------------------------|:--------------------------------------------------------------------------|
-|account|[microsoft.graph.security.userEvidence](./security-userevidence.md)|The Account that is associated with the logon session ID.|
+|account|[microsoft.graph.security.userEvidence](./security-userevidence.md)|The account that is associated with the sign-in session ID.|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
 |detailedRoles|String collection|Detailed description of the entity role or roles in an alert. Values are free-form. Inherited from [alertEvidence](security-alertevidence.md).|
 |endUtcDateTime|DateTimeOffset|The session end time, if known. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`.|
