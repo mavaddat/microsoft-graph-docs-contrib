@@ -33,8 +33,8 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |roles|[microsoft.graph.security.evidenceRole](security-alertevidence.md#evidencerole-values) collection|The role or roles that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role **Attacker**. Inherited from [alertEvidence](security-alertevidence.md).|
 |signatureHash|String|The SAS signature hash, which is a unique identifier for each SAS.|
 |signedWith|String|The storage key that was used to generate the SAS.|
-|startDateTime|DateTimeOffset|The SAS activation time. This property can be null.|
-|storageResource|[microsoft.graph.security.azureResourceEvidence](security-azureresourceevidence.md)|The link to the storage resource that this SAS belongs to.|
+|startDateTime|DateTimeOffset|The SAS activation time. This property can be `null`.|
+|storageResource|[microsoft.graph.security.azureResourceEvidence](security-azureresourceevidence.md)|A link to the storage resource for this SAS.|
 |tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices and high-value assets. Inherited from [alertEvidence](security-alertevidence.md).|
 |verdict|[microsoft.graph.security.evidenceVerdict](security-alertevidence.md#evidenceverdict-values)|The decision reached by automated investigation. The possible values are: `unknown`, `suspicious`, `malicious`, `noThreatsFound`, `unknownFutureValue`. Inherited from [alertEvidence](security-alertevidence.md).|
 

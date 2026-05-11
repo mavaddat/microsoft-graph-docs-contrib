@@ -36,7 +36,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |signatureHash|String|The SAS signature hash, which is the unique identifier for the SAS.|
 |signedWith|String|The storage key used to generate the SAS.|
 |startDateTime|DateTimeOffset|The SAS activation time. This property can be null.|
-|storageResource|[microsoft.graph.security.azureResourceEvidence](security-azureresourceevidence.md)|A link to this SAS's storage resource.|
+|storageResource|[microsoft.graph.security.azureResourceEvidence](security-azureresourceevidence.md)|A link to the storage resource for this SAS.|
 |tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices and high-value assets. Inherited from [alertEvidence](security-alertevidence.md).|
 |verdict|[microsoft.graph.security.evidenceVerdict](security-alertevidence.md#evidenceverdict-values)|The decision reached by automated investigation. The possible values are: `unknown`, `suspicious`, `malicious`, `noThreatsFound`, `unknownFutureValue`. Inherited from [alertEvidence](security-alertevidence.md).|
 

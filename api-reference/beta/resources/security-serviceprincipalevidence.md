@@ -1,6 +1,6 @@
 ---
 title: "servicePrincipalEvidence resource type"
-description: "Represents a ServicePrincipal reported in a security detection alert."
+description: "Represents a service principal reported in a security detection alert."
 author: "Lirlev48"
 ms.localizationpriority: medium
 ms.subservice: "security"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.security
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a ServicePrincipal that is reported in the security detection alert.
+Represents a service principal reported in a security detection alert.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:-------|:---|:----------|
-|appId|String|The unique identifier for the associated application (its appId property).|
+|appId|String|The unique identifier for the associated application, represented by its **appId** property.|
 |appOwnerTenantId|String|Contains the tenant ID where the application is registered.|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
 |detailedRoles|String collection|Detailed description of the entity role or roles in an alert. Values are free-form. Inherited from [alertEvidence](security-alertevidence.md).|
@@ -33,7 +33,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |servicePrincipalObjectId|String|The unique identifier for the service principal.|
 |servicePrincipalType|[microsoft.graph.security.servicePrincipalType](#serviceprincipaltype-values)|Type of the service principal. Possible values are: `unknown`, `application`, `managedIdentity`, `legacy`, `unknownFutureValue`.|
 |tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices and high-value assets. Inherited from [alertEvidence](security-alertevidence.md).|
-|tenantId|String|The Microsoft Entra tenant ID of Service Principal.|
+|tenantId|String|The Microsoft Entra tenant ID of service principal.|
 |verdict|[microsoft.graph.security.evidenceVerdict](security-alertevidence.md#evidenceverdict-values)|The decision reached by automated investigation. The possible values are: `unknown`, `suspicious`, `malicious`, `noThreatsFound`, `unknownFutureValue`. Inherited from [alertEvidence](security-alertevidence.md).|
 
 ### servicePrincipalType values

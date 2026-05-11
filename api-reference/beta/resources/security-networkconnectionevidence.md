@@ -23,15 +23,15 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |Property|Type|Description|
 |:-------|:-----|:--------|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
-|destinationAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|An entity of type 'ip' that is the destination for this connection.|
-|destinationPort|Int32|The destination port number, for example, 80.|
+|destinationAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|An entity of type IP that is the destination for this connection.|
+|destinationPort|Int32|The destination port number, for example, `80`.|
 |detailedRoles|String collection|Detailed description of the entity role or roles in an alert. Values are free-form. Inherited from [alertEvidence](security-alertevidence.md).|
-|protocol|[microsoft.graph.security.protocolType](#protocoltype-values)|The protocol type. Possible values are 'tcp', 'udp', 'unknownFutureValue'.|
+|protocol|[microsoft.graph.security.protocolType](#protocoltype-values)|The protocol type. Possible values are `tcp`, `udp`, `unknownFutureValue`.|
 |remediationStatus|[microsoft.graph.security.evidenceRemediationStatus](security-alertevidence.md#evidenceremediationstatus-values)|Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`, `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`. Inherited from [alertEvidence](security-alertevidence.md).|
 |remediationStatusDetails|String|Details about the remediation status. Inherited from [alertEvidence](security-alertevidence.md).|
 |roles|[microsoft.graph.security.evidenceRole](security-alertevidence.md#evidencerole-values) collection|The role or roles that an evidence entity represents in an alert, for example, an IP address that is associated with an attacker has the evidence role **Attacker**. Inherited from [alertEvidence](security-alertevidence.md).|
-|sourceAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|An entity of type 'ip' that is the source for this connection.|
-|sourcePort|Int32|The source port number, for example, 80.|
+|sourceAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|An entity of type IP that is the source for this connection.|
+|sourcePort|Int32|The source port number, for example, `80`.|
 |tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices and high-value assets. Inherited from [alertEvidence](security-alertevidence.md).|
 |verdict|[microsoft.graph.security.evidenceVerdict](security-alertevidence.md#evidenceverdict-values)|The decision reached by automated investigation. The possible values are: `unknown`, `suspicious`, `malicious`, `noThreatsFound`, `unknownFutureValue`. Inherited from [alertEvidence](security-alertevidence.md).|
 
