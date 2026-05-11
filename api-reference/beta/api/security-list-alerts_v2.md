@@ -72,7 +72,9 @@ If successful, this method returns a `200 OK` response code and a collection of 
 
 ## Examples
 
-### Request
+### Example 1: Get all alerts
+Get a list of [alert](../resources/security-alert.md) objects.
+#### Request
 
 The following example shows a request.
 
@@ -116,9 +118,9 @@ GET https://graph.microsoft.com/beta/security/alerts_v2
 
 ---
 
-### Response
+#### Response
 
-The following example shows a response.
+The following example shows the response.
 
 >**Note:** The response object shown here might be shortened for readability.
 
