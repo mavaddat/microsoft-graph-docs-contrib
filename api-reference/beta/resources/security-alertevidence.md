@@ -151,16 +151,6 @@ This resource is the base type for the following evidence types:
 |udp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
-### servicePrincipalType values
-
-|Member|Description|
-|:-----|:----------|
-|unknown|The service principal type is unknown.|
-|application|The local representation or application instance of a global application object in a single tenant or directory.|
-|managedIdentity|The service principal is used to represent a managed identity.|
-|legacy|The service principal is a legacy app, which represents either an app created before app registrations were introduced or an app created through legacy experiences.|
-|unknownFutureValue|Evolvable enumeration value. Don't use.|
-
 ### ioTDeviceImportanceType values
 
 |Member|Description|

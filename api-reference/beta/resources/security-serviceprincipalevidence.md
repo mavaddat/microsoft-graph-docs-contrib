@@ -40,10 +40,10 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Member|Description|
 |:-----|:----------|
-|unknown|The service principal type isn't known.|
+|unknown|The service principal type is unknown.|
 |application|The local representation or application instance of a global application object in a single tenant or directory.|
-|managedIdentity|The service principal is a managed identity.|
-|legacy|The service principal is a legacy app, which is either an app created before app registrations were introduced or an app created through legacy experiences.|
+|managedIdentity|The service principal is used to represent a managed identity.|
+|legacy|The service principal is a legacy app, which represents either an app created before app registrations were introduced or an app created through legacy experiences.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ## Relationships
