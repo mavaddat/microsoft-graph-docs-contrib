@@ -71,20 +71,7 @@ Looking for the API reference for this service?
 - [Outlook mail API in Microsoft Graph beta](/graph/api/resources/mail-api-overview?view=graph-rest-beta&preserve-view=true)
 
 
-## Next steps
+## Next step
 
 - Select and try Outlook mail sample queries in [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer/?request=me%2Fmessages&version=v1.0). Choose **Show more samples** in the column on the left. Use the menu to turn on **Outlook Mail**.
-- Learn about:
-
-  - [Creating and sending messages](outlook-create-send-messages.md)
-  - Ways to [organize messages](outlook-organize-messages.md)
-  - [Getting the MIME content of a message](outlook-get-mime-message.md)
-  - [Attaching large files to Outlook messages or events](outlook-large-attachments.md)
-  - [Getting shared messages](outlook-share-messages-folders.md)
-  - How to [send mail from another user](outlook-send-mail-from-other-user.md)
-  - [Getting immutable identifiers for Outlook resources](outlook-immutable-id.md)
-  - [Sending emails with MIME contents](outlook-send-mime-message.md)
-
-- Find out more about [using the mail API](/graph/api/resources/mail-api-overview) and its [use cases](/graph/api/resources/mail-api-overview#common-use-cases) in Microsoft Graph v1.0.
-
 
