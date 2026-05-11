@@ -65,8 +65,6 @@ The following example shows a request.
 GET https://graph.microsoft.com/v1.0/solutions/backupRestore/sharePointBrowseSessions/{sharePointBrowseSessionId}
 ```
 
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 ### Response
 
 The following example shows the response.
