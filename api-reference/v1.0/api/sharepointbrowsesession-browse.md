@@ -106,7 +106,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 2: Browse a specify resource
+### Example 2: Browse a specific resource
 
 #### Request
 
@@ -126,8 +126,6 @@ Content-Type: application/json
 }
 
 ```
-
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 #### Response
 

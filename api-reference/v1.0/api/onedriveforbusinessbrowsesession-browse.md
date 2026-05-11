@@ -113,7 +113,7 @@ Content-Type: application/json
 }
 ```
 
-### Example 2: Browse a specify resource
+### Example 2: Browse a specific resource
 
 #### Request
 
@@ -131,8 +131,6 @@ POST https://graph.microsoft.com/v1.0/solutions/backupRestore/oneDriveForBusines
     "browseResourceType": "site"
 }
 ```
-
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 #### Response
 
