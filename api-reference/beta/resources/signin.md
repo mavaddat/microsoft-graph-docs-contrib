@@ -241,6 +241,9 @@ The following JSON representation shows the resource type.
   },
   "tokenIssuerName": "String",
   "tokenIssuerType": "String",
+  "tokenProtectionStatusDetails": {
+    "@odata.type": "microsoft.graph.tokenProtectionStatusDetails"
+  },
   "userAgent": "String",
   "userDisplayName": "String",
   "userId": "String",
