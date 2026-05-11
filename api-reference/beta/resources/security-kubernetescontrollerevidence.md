@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:---|:---|:---|
-|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
+|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
 |name|String|The controller name.|
 |namespace|[microsoft.graph.security.kubernetesNamespaceEvidence](./security-kubernetesnamespaceevidence.md)|The service account namespace.|
 |labels|[microsoft.graph.security.dictionary](./security-dictionary.md)|The labels for the Kubernetes pod.|

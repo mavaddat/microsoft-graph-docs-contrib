@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:-------|:---|:----------|
-|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
+|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
 |detailedRoles|String collection|Detailed description of the entity role or roles in an alert. Values are free-form. Inherited from [alertEvidence](security-alertevidence.md).|
 |networkMessageId|String|The network message ID of the email to which submission belongs.|
 |recipient|String|The recipient of the mail.|
@@ -33,7 +33,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |sender|String|The sender of the mail.|
 |senderIp|String|The sender's IP.|
 |subject|String|The subject of the submission mail.|
-|submissionDateTime|DateTimeOffset|The reported date and time for this submission.|
+|submissionDateTime|DateTimeOffset|The reported date and time for this submission. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`.|
 |submissionId|String|The submission ID.|
 |submitter|String|The submitter's email address.|
 |tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices and high-value assets. Inherited from [alertEvidence](security-alertevidence.md).|

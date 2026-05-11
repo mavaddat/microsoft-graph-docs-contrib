@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:-------|:-----|:--------|
-|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
+|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
 |destinationAddress|[microsoft.graph.security.ipEvidence](./security-ipevidence.md)|An entity of type IP that is the destination for this connection.|
 |destinationPort|Int32|The destination port number, for example, `80`.|
 |detailedRoles|String collection|Detailed description of the entity role or roles in an alert. Values are free-form. Inherited from [alertEvidence](security-alertevidence.md).|
