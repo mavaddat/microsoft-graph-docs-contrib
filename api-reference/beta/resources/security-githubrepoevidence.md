@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:----------|:-------|:----------------------------------------------------------------------------|
-|baseUrl|String|The base URL of the repository's web page.|
+|baseUrl|String|The base URL of the web page for the repository.|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
 |detailedRoles|String collection|Detailed description of the entity role or roles in an alert. Values are free-form. Inherited from [alertEvidence](security-alertevidence.md).|
 |login|String|The login (name) of the repository.|
