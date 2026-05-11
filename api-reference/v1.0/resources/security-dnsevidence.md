@@ -1,6 +1,6 @@
 ---
 title: "dnsEvidence resource type"
-description: "A DNS that is reported in the alert as evidence."
+description: "Represents a DNS that is reported in the alert as evidence."
 author: "OfirBelenky"
 ms.localizationpriority: medium
 ms.subservice: "security"
@@ -12,7 +12,7 @@ ms.date: 05/07/2026
 
 Namespace: microsoft.graph.security
 
-A DNS that is reported in the alert as evidence.
+Represents a DNS that is reported in the alert as evidence.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 

@@ -20,7 +20,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
 |Property|Type|Description|
 |:-------|:---|:----------|
-|allowedIpAddresses|String|All IP addresses accessible with this SAS. The default value is "Allows all IP addresses".|
+|allowedIpAddresses|String|All IP addresses accessible with this SAS. The default value is `Allows all IP addresses`.|
 |allowedResourceTypes|String collection|All resource types accessible with this SAS.|
 |allowedServices|String collection|All services accessible with this SAS.|
 |createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024 is `2024-01-01T00:00:00Z`. Inherited from [alertEvidence](security-alertevidence.md).|
