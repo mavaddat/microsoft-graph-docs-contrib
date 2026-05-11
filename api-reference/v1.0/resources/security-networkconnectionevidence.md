@@ -46,13 +46,14 @@ None.
 
 ## JSON representation
 
+The following JSON representation shows the resource type.
+
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.networkConnectionEvidence",
   "baseType": "microsoft.graph.security.alertEvidence"
 } -->
 
-The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.security.networkConnectionEvidence",
