@@ -78,8 +78,6 @@ The following example shows a request.
 POST https://graph.microsoft.com/v1.0/solutions/backupRestore/sharePointBrowseSessions/m_RtZ8BiiUXOK69cuN6gwubfm9_yeVlDg8s6hci01_cVOAE/browse
 ```
 
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
-
 #### Response
 
 The following example shows the response.

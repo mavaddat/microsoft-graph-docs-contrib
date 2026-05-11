@@ -78,12 +78,11 @@ The following example shows a request.
 -->
 ``` http
 POST https://graph.microsoft.com/v1.0/solutions/backupRestore/oneDriveForBusinessBrowseSessions/K74iLNw55YTzbgnba0zxZROipFxnManccFpzecIrjuaypwA/browse
+Content-Type: application/json
 
 {}
 
 ```
-
-[!INCLUDE [sdk-documentation](../includes/snippets/snippets-sdk-documentation-link.md)]
 
 #### Response
 

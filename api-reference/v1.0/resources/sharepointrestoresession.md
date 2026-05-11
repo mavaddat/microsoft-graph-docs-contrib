@@ -58,9 +58,9 @@ Inherits from [restoreSessionBase](../resources/restoresessionbase.md).
 
 |Relationship|Type|Description|
 |:---|:---|:---|
+|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection|A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.|
 |siteRestoreArtifacts|[siteRestoreArtifact](../resources/siterestoreartifact.md) collection|A collection of restore points and destination details that can be used to restore SharePoint sites.|
 |siteRestoreArtifactsBulkAdditionRequests|[siteRestoreArtifactsBulkAdditionRequest](../resources/siterestoreartifactsbulkadditionrequest.md) collection|A collection of SharePoint site URLs and destination details that can be used to restore SharePoint sites.|
-|granularSiteRestoreArtifacts|[granularSiteRestoreArtifact](../resources/granularsiterestoreartifact.md) collection|A collection of browse session ID and item key details that can be used to restore SharePoint files and folders.|
 
 ## JSON representation
 
