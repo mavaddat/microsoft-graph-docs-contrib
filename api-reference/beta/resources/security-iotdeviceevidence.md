@@ -1,6 +1,6 @@
 ---
 title: "ioTDeviceEvidence resource type"
-description: "Represents a IoT device that is reported as part of the security detection alert."
+description: "Represents an IoT device that is reported as part of a security detection alert."
 author: "hareldamti"
 ms.localizationpriority: medium
 ms.subservice: "security"
@@ -14,7 +14,7 @@ Namespace: microsoft.graph.security
 
 [!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
 
-Represents a IoT device that is reported as part of the security detection alert.
+Represents an IoT device that is reported as part of a security detection alert.
 
 Inherits from [alertEvidence](./security-alertevidence.md).
 
