@@ -25,7 +25,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |detailedRoles|String collection|Detailed description of the entity role or roles in an alert. Values are free-form. Inherited from [alertEvidence](security-alertevidence.md).|
 |login|String|The login (name) of the repository.|
 |owner|String|The login of the owner of the repository.|
-|ownerType|String|The type of owner of the repository (for example "User" or "Organization").|
+|ownerType|String|The type of owner of the repository, for example, `User` or `Organization`.|
 |remediationStatus|[microsoft.graph.security.evidenceRemediationStatus](security-alertevidence.md#evidenceremediationstatus-values)|Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`, `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`. Inherited from [alertEvidence](security-alertevidence.md).|
 |remediationStatusDetails|String|Details about the remediation status. Inherited from [alertEvidence](security-alertevidence.md).|
 |repoId|String|The unique and immutable ID of the GitHub repository.|
@@ -40,6 +40,7 @@ None.
 ## JSON representation
 
 The following JSON representation shows the resource type.
+
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.gitHubRepoEvidence",

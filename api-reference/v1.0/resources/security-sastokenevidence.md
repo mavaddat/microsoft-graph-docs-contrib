@@ -45,6 +45,7 @@ None.
 ## JSON representation
 
 The following JSON representation shows the resource type.
+
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.sasTokenEvidence",

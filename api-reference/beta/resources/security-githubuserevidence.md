@@ -33,7 +33,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |tags|String collection|Array of custom tags associated with an evidence instance, for example, to denote a group of devices and high-value assets. Inherited from [alertEvidence](security-alertevidence.md).|
 |userId|String|The unique and immutable ID of the user account.|
 |verdict|[microsoft.graph.security.evidenceVerdict](security-alertevidence.md#evidenceverdict-values)|The decision reached by automated investigation. The possible values are: `unknown`, `suspicious`, `malicious`, `noThreatsFound`, `unknownFutureValue`. Inherited from [alertEvidence](security-alertevidence.md).|
-|webUrl|String|The URL of the user's profile web page, for example "https://github.com/my-login".|
+|webUrl|String|The URL of the user's profile web page, for example, `https://github.com/my-login`.|
 
 ## Relationships
 
@@ -42,6 +42,7 @@ None.
 ## JSON representation
 
 The following JSON representation shows the resource type.
+
 <!-- {
   "blockType": "resource",
   "@odata.type": "microsoft.graph.security.gitHubUserEvidence",
