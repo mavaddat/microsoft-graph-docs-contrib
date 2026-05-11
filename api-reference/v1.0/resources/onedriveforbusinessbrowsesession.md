@@ -29,12 +29,12 @@ Inherits from [browseSessionBase](../resources/browsesessionbase.md).
 |:---|:---|:---|
 |backupSizeInBytes|String|The size of the backup in bytes.|
 |createdDateTime|DateTimeOffset|The time of the creation of the browse session.|
+|directoryObjectId|String|Id of the backed-up OneDrive.|
 |error|[publicError](../resources/publicerror.md)|Contains the error details if the browse session creation fails.|
 |expirationDateTime|DateTimeOffset|The time after which the browse session is deleted automatically.|
-|id|String|The unique identifier of the browse session. Inherited from [entity](../resources/entity.md). Inherits from [entity](../resources/entity.md)|
+|id|String|The unique identifier of the browse session. Inherits from [entity](../resources/entity.md).|
 |restorePointDateTime|DateTimeOffset|The date time of the restore point on which browse session is created.|
 |status|browseSessionStatus|The status of the browse session. The possible values are: `creating`, `created`, `failed`, `unknownFutureValue`.|
-|directoryObjectId|String|Id of the backed-up OneDrive.|
 
 ## Relationships
 None.
