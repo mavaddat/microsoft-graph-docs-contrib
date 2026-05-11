@@ -156,9 +156,9 @@ This resource is the base type for the following evidence types:
 |Member|Description|
 |:-------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |unknown|The service principal type is unknown.|
-|application|This service principal represents the local representation, or application instance, of a global application object in a single tenant or directory.|
-|managedIdentity|This service principal is used to represent a managed identity.|
-|legacy|This service principal represents a legacy app, which is an app created before app registrations were introduced or an app created through legacy experiences.|
+|application|The local representation or application instance of a global application object in a single tenant or directory.|
+|managedIdentity|The service principal is used to represent a managed identity.|
+|legacy|The service principal is a legacy app, which represents either an app created before app registrations were introduced or an app created through legacy experiences.|
 |unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ### ioTDeviceImportanceType values
