@@ -23,7 +23,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |args|String collection|The list of arguments.|
 |command|String collection|The list of commands.|
 |containerId|String|The container ID.|
-|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
+|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
 |image|[microsoft.graph.security.containerImageEvidence](./security-containerimageevidence.md)|The image used to run the container.|
 |isPrivileged|Boolean|The privileged status.|
 |name|String|The container name.|

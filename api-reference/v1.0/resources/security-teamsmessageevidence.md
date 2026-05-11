@@ -22,7 +22,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |:---|:---|:---|
 |  campaignId  | String  | The identifier of the campaign that this Teams message is part of. |
 |  channelId   | String  | The channel ID associated with this Teams message. |
-|  createdDateTime | DateTimeOffset | The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
+|  createdDateTime | DateTimeOffset | The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
 |  deliveryAction   | microsoft.graph.security.teamsMessageDeliveryAction | The delivery action of this Teams message. The possible values are: `unknown`, `deliveredAsSpam`, `delivered`, `blocked`, `replaced`, `unknownFutureValue`.   |
 |  deliveryLocation | microsoft.graph.security.teamsDeliveryLocation | The delivery location of this Teams message. The possible values are: `unknown`, `teams`, `quarantine`, `failed`, `unknownFutureValue`. |
 |  detailedRoles | String collection | The detailed description of the entity roles in an alert. Values are free-form. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
@@ -30,12 +30,12 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 |  groupId     | String  | The identifier of the team or group that this message is part of.   |
 |  isExternal  | Boolean | Indicates whether the message is owned by the organization that reported the security detection alert. |
 |  isOwned     | Boolean | Indicates whether the message is owned by your organization.  |
-|  lastModifiedDateTime  | DateTimeOffset | Date and time when the message was last edited. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. |
+|  lastModifiedDateTime  | DateTimeOffset | Date and time when the message was last edited. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. |
 |  messageDirection | microsoft.graph.security.antispamTeamsDirection | The direction of the Teams message. The possible values are: `unknown`, `inbound`, `outbound`, `intraorg`, `unknownFutureValue`. |
 |  messageId   | String  | Message identifier unique within the thread. |
 |  owningTenantId   | String  | Tenant ID (GUID) of the owner of the message.  |
 |  parentMessageId  | String  | Identifier of the message to which the current message is a reply; otherwise, it's the same as the **messageId**.  |
-|  receivedDateTime | DateTimeOffset | The received date of this message. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.  |
+|  receivedDateTime | DateTimeOffset | The received date of this message. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`.  |
 |  recipients  | String collection | The recipients of this Teams message.    |
 |  remediationStatus | [microsoft.graph.security.evidenceRemediationStatus](../resources/security-alertevidence.md#evidenceremediationstatus-values)  | Status of the remediation action taken. The possible values are: `none`, `remediated`, `prevented`, `blocked`, `notFound`, `unknownFutureValue`, `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`. Use the `Prefer: include-unknown-enum-members` request header to get the following values from this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): `active`, `pendingApproval`, `declined`, `unremediated`, `running`, `partiallyRemediated`. Inherited from [alertEvidence](../resources/security-alertevidence.md). |
 |  remediationStatusDetails | String  | Details about the remediation status. Inherited from [alertEvidence](../resources/security-alertevidence.md). |

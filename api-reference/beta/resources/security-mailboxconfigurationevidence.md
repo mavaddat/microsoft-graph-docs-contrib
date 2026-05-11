@@ -21,7 +21,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md), which rep
 |:---|:---|:---|
 |configurationType|microsoft.graph.security.mailboxConfigurationType|The type of mailbox configuration. The possible values are: `mailForwardingRule`, `owaSettings`, `ewsSettings`, `mailDelegation`, `userInboxRule`, `unknownFutureValue`.|
 |configurationId|String|The unique identifier of the mailbox configuration.|
-|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md).|
+|createdDateTime|DateTimeOffset|The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [alertEvidence](../resources/security-alertevidence.md).|
 |detailedRoles|String collection|Detailed roles of the evidence in the alert. Inherited from [alertEvidence](../resources/security-alertevidence.md).|
 |displayName|String|The display name of the mailbox.|
 |externalDirectoryObjectId|Guid|The external directory object identifier of the mailbox.|

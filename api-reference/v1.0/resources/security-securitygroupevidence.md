@@ -20,7 +20,7 @@ Inherits from [alertEvidence](../resources/security-alertevidence.md).
 | Property                  | Type   | Description															     |
 |:--------------------------|:-------|:--------------------------------------------------------------------------|
 | activeDirectoryObjectGuid | Guid   | The unique group identifier assigned by the on-premises Active Directory. |
-| createdDateTime           | DateTimeOffset | The date and time when the evidence was created and added to the alert. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. |
+| createdDateTime           | DateTimeOffset | The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. |
 | detailedRoles             | String collection | Detailed description of the entity role/s in an alert. Values are free-form.|
 | displayName               | String | The name of the security group.											 |
 | distinguishedName         | String | The distinguished name of the security group.							 |
