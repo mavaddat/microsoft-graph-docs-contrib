@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 04/28/2026
+ms.date: 05/08/2026
 ms.topic: whats-new
 ---
 
@@ -33,6 +33,9 @@ Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy
 
 - Added the [onVerifiedIdClaimValidationCustomExtension](/graph/api/resources/onverifiedidclaimvalidationcustomextension) and [onVerifiedIdClaimValidationListener](/graph/api/resources/onverifiedidclaimvalidationlistener) resource types and associated methods to support custom logic for claim validation from Verified ID credential presentations during authentication flows through Microsoft Entra custom authentication extensions in External ID.
 - Added claim validation and match-confidence capabilities to [Verified ID profiles](/graph/api/resources/verifiedidprofile), enabling stronger claim verification and more flexible matching.
+- Enhanced the [x509CertificateAuthenticationMethodConfiguration](/graph/api/resources/x509certificateauthenticationmethodconfiguration) resource type with the following capabilities for certificate-based authentication (CBA):
+    - Scoping CBA to specific certificate authorities and restrict which groups of users can authenticate using certificates from those CAs.
+    - Controlling whether issuer hints are sent to the client to filter the certificates shown in the certificate picker.
 
 ### Mailbox import and export
 
@@ -41,6 +44,10 @@ Use the mailbox import and export APIs in Microsoft Graph to build solutions tha
 ### Security
 
 Promoted 11 new alert evidence types to v1.0, including [dnsEvidence](/graph/api/resources/security-dnsevidence), [fileHashEvidence](/graph/api/resources/security-filehashevidence), [gitHubOrganizationEvidence](/graph/api/resources/security-githuborganizationevidence), [gitHubRepoEvidence](/graph/api/resources/security-githubrepoevidence), [gitHubUserEvidence](/graph/api/resources/security-githubuserevidence), [hostLogonSessionEvidence](/graph/api/resources/security-hostlogonsessionevidence), [malwareEvidence](/graph/api/resources/security-malwareevidence), [networkConnectionEvidence](/graph/api/resources/security-networkconnectionevidence), [sasTokenEvidence](/graph/api/resources/security-sastokenevidence), [servicePrincipalEvidence](/graph/api/resources/security-serviceprincipalevidence), and [submissionMailEvidence](/graph/api/resources/security-submissionmailevidence). These resources extend the [alertEvidence](/graph/api/resources/security-alertevidence) base type to provide detailed context about various artifacts involved in security alerts.
+
+### Teamwork and communications | Shifts
+
+Supports additional theme colors in the [scheduleEntityTheme](/graph/api/resources/enums) enumeration for the **theme** property on [openShiftItem](/graph/api/resources/openshiftitem), [shiftItem](/graph/api/resources/shiftitem), [shiftActivity](/graph/api/resources/shiftactivity), and [timeOffItem](/graph/api/resources/timeoffitem).
 
 ## May 2026: New in preview only
 
@@ -51,7 +58,11 @@ Promoted 11 new alert evidence types to v1.0, including [dnsEvidence](/graph/api
 
 ### People and workplace intelligence | People admin settings
 
-Use the **isVisible** property on [profileCardProperty](/graph/api/resources/profilecardproperty?view=graph-rest-beta&preserve-view=true) to indicate whether the given directory property should be shown on a user’s profile card.
+Use the **isVisible** property on [profileCardProperty](/graph/api/resources/profilecardproperty?view=graph-rest-beta&preserve-view=true) to indicate whether the given directory property should be shown on a user's profile card.
+
+### Teamwork and communications | Apps
+
+Use the **scopeInfo** property on [teamsAppInstallation](/graph/api/resources/teamsappinstallation?view=graph-rest-beta&preserve-view=true) to get the details of the scope in which the app is installed.
 
 ## April 2026: New and generally available
 
@@ -100,6 +111,7 @@ Manage Teams apps at the channel level within a team using the following APIs:
   - [List channels](/graph/api/channel-list)
   - [List incomingChannels](/graph/api/team-list-incomingchannels)
   - [List allChannels](/graph/api/team-list-allchannels)
+
 
 ## April 2026: New in preview only
 
