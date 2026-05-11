@@ -143,23 +143,7 @@ This resource is the base type for the following evidence types:
 |noThreatsFound|No threat was detected - the evidence is benign.|
 |unknownFutureValue|Evolvable enumeration sentinel value. Don't use.|
 
-### protocolType values
 
-|Member|Description|
-|:-------------------|:-------------------------------------------------------------------------------------------|
-|tcp|Reliable, connection-oriented data transfer, essential for web browsing and file transfer.|
-|udp|Fast, connectionless data transmission, used for tasks like streaming and gaming.|
-|unknownFutureValue|Evolvable enumeration value. Don't use.|
-
-### ioTDeviceImportanceType values
-
-|Member|Description|
-|:-------------------|:----------------------------------------|
-|unknown|The importance is unknown. Default value.|
-|low|The importance is low.|
-|normal|The importance is normal.|
-|high|The importance is high.|
-|unknownFutureValue|Evolvable enumeration value. Don't use.|
 
 ## Relationships
 
