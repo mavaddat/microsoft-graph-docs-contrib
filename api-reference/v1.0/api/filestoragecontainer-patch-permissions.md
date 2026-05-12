@@ -56,7 +56,7 @@ In the request body, supply a JSON object with the following properties.
 
 Each entry in the value collection represents one operation on a [permission](../resources/permission.md). The presence of the id property determines how the entry is interpreted: include the id of an existing permission to update that permission, or omit id to create a new permission.
 
-Each entry supports the following properties and annotations.
+Each entry supports the following properties and annotations:
 
 |Name|Type|Description|
 |:---|:---|:---|
@@ -73,7 +73,7 @@ Update items must not include any other properties besides id and roles; roles i
 
 If successful, this method returns a `200 OK` response code and a collection of [permission](../resources/permission.md) objects in the response body. Successfully processed permissions include the **permission** object. Failed items include a `@Core.DataModificationException` annotation with error details.
 
-This API might also return the following error response codes for the entire request.
+This API might also return the following error response codes for the entire request:
 
 |HTTP code|Description|
 |:---|:---|
