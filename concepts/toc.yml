@@ -849,8 +849,6 @@ items:
       href: security-authorization.md
     - name: Data security and governance
       href: security-datasecurityandgovernance-overview.md
-    - name: Understand enforcement result status
-      href: security-enforcement-result-status.md
     - name: Integrated solutions
       href: security-integration.md
     - name: Information Protection
