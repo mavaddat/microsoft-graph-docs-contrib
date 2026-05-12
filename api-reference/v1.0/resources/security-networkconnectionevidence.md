@@ -12,7 +12,7 @@ ms.date: 05/07/2026
 
 Namespace: microsoft.graph.security
 
-Represents network connection entity.
+Represents a network connection entity.
 
 Inherits from [alertEvidence](../resources/security-alertevidence.md).
 
