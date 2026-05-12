@@ -79,7 +79,7 @@ Use the **scopeInfo** property on [teamsAppInstallation](/graph/api/resources/te
 - Use the **height** and **width** parameters to [download a file in another format](/graph/api/driveitem-get-content-format) when `format=jpg`.
 - Use the [List activities](/graph/api/itemactivity-list) API to retrieve recent activities that took place on a [drive](/graph/api/resources/drive), [list](/graph/api/resources/list), item, or within an item hierarchy.
 - Added support for [sharePointGroup](/graph/api/resources/sharepointgroup) and its [members](/graph/api/resources/sharepointgroupmember) in a SharePoint Embedded container, enabling apps to work with SharePoint permission groups and manage their members.
-
+- Use the [Create or update permissions in bulk](/graph/api/filestoragecontainer-patch-permissions) API to use delta patch to create or update up to 10 [permission](/graph/api/resources/permission) objects on a [fileStorageContainer](/graph/api/resources/filestoragecontainer) in a single request.
 
 ### Identity and access | Governance
 
@@ -140,6 +140,7 @@ Added the **deprecationDate** property to the [applicationTemplate](/graph/api/r
 
 - Use the **height** and **width** query parameters on the [driveItem content conversion API](/graph/api/driveitem-get-content-format?view=graph-rest-beta&preserve-view=true) to download a file in another format when `format=jpg`.
 - Use the **itemCount** property on the [list](/graph/api/resources/list?view=graph-rest-beta&preserve-view=true) resource to quickly access the total number of items in a SharePoint list without retrieving all items or making additional queries.
+- Use the [Create or update permissions in bulk](/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-beta&preserve-view=true) API to use delta patch to create or update up to 10 [permission](/graph/api/resources/permission?view=graph-rest-beta&preserve-view=true) objects on a [fileStorageContainer](/graph/api/resources/filestoragecontainer?view=graph-rest-beta&preserve-view=true) in a single request.
 
 ### Identity and access | Directory management
 
