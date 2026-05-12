@@ -4,6 +4,7 @@ description: "Represents the status of token protection for a request in sign-in
 author: "paulgarn"
 ms.localizationpriority: medium
 ms.subservice: "entra-monitoring-health"
+ms.date: 05/11/2026
 doc_type: resourcePageType
 ---
 
