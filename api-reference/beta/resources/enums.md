@@ -13,6 +13,16 @@ ms.custom: sfi-ropc-nochange
 
 Namespace: microsoft.graph
 
+### meetingEngagementType values
+
+|Member|
+|:---|
+|reaction|
+|hand|
+|camera|
+|microphone|
+|unknownFutureValue|
+
 ### notifyMembers values
 
 |Member|
@@ -2290,6 +2300,29 @@ Namespace: microsoft.graph
 | darkPink |
 | darkYellow |
 | unknownFutureValue |
+| darkRed |
+| cranberry |
+| darkOrange |
+| bronze |
+| peach |
+| gold |
+| lime |
+| forest |
+| lightGreen |
+| jade |
+| lightTeal |
+| darkTeal |
+| steel |
+| skyBlue |
+| blueGray |
+| lavender |
+| lilac |
+| plum |
+| magenta |
+| darkBrown |
+| beige |
+| charcoal |
+| silver |
 
 ### timeOffReasonIconType values
 
@@ -3740,14 +3773,6 @@ Possible values for user account types (group membership), per Windows definitio
 | publication |
 | unknownFutureValue |
 
-### teamsAppInstallationScope values
-
-| Member    | Value | Description                                                                                                                 |
-| --------- | ----- | --------------------------------------------------------------------------------------------------------------------------- |
-| team      | 0     | Indicates that the Teams app can be installed within a team and is authorized to access that team's data.                   |
-| groupChat | 1     | Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.       |
-| personal  | 2     | Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data. |
-
 ### assignmentScheduleFilterByCurrentUserOptions values
 
 | Member |
@@ -3877,6 +3902,16 @@ Possible values for user account types (group membership), per Windows definitio
 | Member |
 | ------------------ |
 | principal |
+| unknownFutureValue |
+
+### roleType values
+
+| Member |
+| ------ |
+| active |
+| eligible |
+| application |
+| delegated |
 | unknownFutureValue |
 
 ### cloudPcAuditActivityOperationType values
@@ -5090,6 +5125,14 @@ Possible values for user account types (group membership), per Windows definitio
 | suffix |
 | contains |
 | unknownFutureValue |
+
+### matchConfidenceLevel values 
+
+|Member|
+|:---|
+|exact|
+|relaxed|
+|unknownFutureValue|
 
 ### matchOn values
 
