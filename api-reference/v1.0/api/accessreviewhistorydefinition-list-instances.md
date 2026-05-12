@@ -111,7 +111,7 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-    "@odata.context": "https://graph.microsoft.com/beta/$metadata#accessReviewInstances",
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#accessReviewInstances",
     "@odata.count": 1,
     "value": [
         {
