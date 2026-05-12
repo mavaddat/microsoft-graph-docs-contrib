@@ -20,7 +20,7 @@ Update the properties of a [group](../resources/group.md) object.
 >
 > To mitigate this behavior:
 > - **Retry with exponential backoff** — wait a few seconds and retry the request. The delay is typically brief.
-> - For more information, see [Designing for Eventual Consistency for Microsoft Entra](https://learn.microsoft.com/entra/architecture/guide-id-secure-development-best-practices#designing-for-eventual-consistency).
+> - For more information, see [Designing for Eventual Consistency for Microsoft Entra](https://devblogs.microsoft.com/identity/designing-for-eventual-consistency-for-microsoft-entra/).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 

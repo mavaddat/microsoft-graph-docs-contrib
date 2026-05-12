@@ -22,7 +22,7 @@ Add a member to a security or Microsoft 365 [group](../resources/group.md). When
 >
 > To mitigate this behavior:
 > - **Retry with exponential backoff** — wait a few seconds and retry the request. The delay is typically brief.
-> - For more information, see [Designing for Eventual Consistency for Microsoft Entra](https://learn.microsoft.com/entra/architecture/guide-id-secure-development-best-practices#designing-for-eventual-consistency).
+> - For more information, see [Designing for Eventual Consistency for Microsoft Entra](https://devblogs.microsoft.com/identity/designing-for-eventual-consistency-for-microsoft-entra/).
 
 [!INCLUDE [groups-allowed-member-types](../../../concepts/includes/groups-allowed-member-types.md)]
 
