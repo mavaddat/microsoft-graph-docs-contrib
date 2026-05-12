@@ -85,8 +85,8 @@ If successful, this method returns a `204 No Content` response code—except a `
 
 ### Errors
 
-| Error code | Error message | Description |
-|------------|---------------|-------------|
+| Status code | Error message | Description |
+|-------------|---------------|-------------|
 | `400 Bad Request` | `Request_BadRequest` — "The source resource object or one of the objects being referenced do not exist." | The group was recently created and hasn't fully replicated across all directory replicas. This error is specific to link-write operations (adding members via `members@odata.bind`). Retry the request after a brief delay. |
 
 ## Example
