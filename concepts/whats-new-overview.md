@@ -41,9 +41,24 @@ Use the [deviceRegistrationPolicy](/graph/api/resources/deviceregistrationpolicy
 
 Use the mailbox import and export APIs in Microsoft Graph to build solutions that integrate with mailbox resources for data import and export scenarios. For more information, see [Overview of the mailbox import and export APIs in Microsoft Graph](/graph/mailbox-import-export-concept-overview).
 
+### Security | Alerts and incidents
+
+Use the following new resources that extend the [alertEvidence](/graph/api/resources/security-alertevidence) base type to provide detailed context about various artifacts involved in security alerts:
+- [dnsEvidence](/graph/api/resources/security-dnsevidence)
+- [fileHashEvidence](/graph/api/resources/security-filehashevidence)
+- [gitHubOrganizationEvidence](/graph/api/resources/security-githuborganizationevidence)
+- [gitHubRepoEvidence](/graph/api/resources/security-githubrepoevidence)
+- [gitHubUserEvidence](/graph/api/resources/security-githubuserevidence)
+- [hostLogonSessionEvidence](/graph/api/resources/security-hostlogonsessionevidence)
+- [malwareEvidence](/graph/api/resources/security-malwareevidence)
+- [networkConnectionEvidence](/graph/api/resources/security-networkconnectionevidence)
+- [sasTokenEvidence](/graph/api/resources/security-sastokenevidence)
+- [servicePrincipalEvidence](/graph/api/resources/security-serviceprincipalevidence)
+- [submissionMailEvidence](/graph/api/resources/security-submissionmailevidence)
+
 ### Teamwork and communications | Shifts
 
-- Supports additional theme colors in the [scheduleEntityTheme](/graph/api/resources/enums) enumeration for the **theme** property on [openShiftItem](/graph/api/resources/openshiftitem), [shiftItem](/graph/api/resources/shiftitem), [shiftActivity](/graph/api/resources/shiftactivity), and [timeOffItem](/graph/api/resources/timeoffitem).
+Supports additional theme colors in the [scheduleEntityTheme](/graph/api/resources/enums) enumeration for the **theme** property on [openShiftItem](/graph/api/resources/openshiftitem), [shiftItem](/graph/api/resources/shiftitem), [shiftActivity](/graph/api/resources/shiftactivity), and [timeOffItem](/graph/api/resources/timeoffitem).
 
 ## May 2026: New in preview only
 
@@ -55,6 +70,21 @@ Use the mailbox import and export APIs in Microsoft Graph to build solutions tha
 ### People and workplace intelligence | People admin settings
 
 Use the **isVisible** property on [profileCardProperty](/graph/api/resources/profilecardproperty?view=graph-rest-beta&preserve-view=true) to indicate whether the given directory property should be shown on a user's profile card.
+
+### Security | Alerts and incidents
+
+Use the following new resources that extend the [alertEvidence](/graph/api/resources/security-alertevidence?view=graph-rest-beta&preserve-view=true) base type to provide detailed context about various artifacts involved in security alerts:
+- [dnsEvidence](/graph/api/resources/security-dnsevidence?view=graph-rest-beta&preserve-view=true)
+- [fileHashEvidence](/graph/api/resources/security-filehashevidence?view=graph-rest-beta&preserve-view=true)
+- [gitHubOrganizationEvidence](/graph/api/resources/security-githuborganizationevidence?view=graph-rest-beta&preserve-view=true)
+- [gitHubRepoEvidence](/graph/api/resources/security-githubrepoevidence?view=graph-rest-beta&preserve-view=true)
+- [gitHubUserEvidence](/graph/api/resources/security-githubuserevidence?view=graph-rest-beta&preserve-view=true)
+- [hostLogonSessionEvidence](/graph/api/resources/security-hostlogonsessionevidence?view=graph-rest-beta&preserve-view=true)
+- [malwareEvidence](/graph/api/resources/security-malwareevidence?view=graph-rest-beta&preserve-view=true)
+- [networkConnectionEvidence](/graph/api/resources/security-networkconnectionevidence?view=graph-rest-beta&preserve-view=true)
+- [sasTokenEvidence](/graph/api/resources/security-sastokenevidence?view=graph-rest-beta&preserve-view=true)
+- [servicePrincipalEvidence](/graph/api/resources/security-serviceprincipalevidence?view=graph-rest-beta&preserve-view=true)
+- [submissionMailEvidence](/graph/api/resources/security-submissionmailevidence?view=graph-rest-beta&preserve-view=true)
 
 ### Teamwork and communications | Apps
 
