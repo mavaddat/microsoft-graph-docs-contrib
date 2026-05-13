@@ -21,7 +21,7 @@ Add a member to a security or Microsoft 365 [group](../resources/group.md). When
 > This request might have replication delays for groups that were recently created. When a group is created, it can take a short time for the object to fully replicate across Microsoft Entra ID directory replicas. During this window, requests to add members to the group might return a `400 Bad Request` error with the message: *"The source resource object or one of the objects being referenced do not exist."*
 >
 > To mitigate this behavior:
-> - **Retry with exponential backoff** — wait a few seconds and retry the request. The delay is typically brief.
+> - **Retry after a brief delay** — wait a few seconds and retry the request. The delay is typically brief.
 > - For more information, see [Designing for Eventual Consistency for Microsoft Entra](https://devblogs.microsoft.com/identity/designing-for-eventual-consistency-for-microsoft-entra/).
 
 [!INCLUDE [groups-allowed-member-types](../../../concepts/includes/groups-allowed-member-types.md)]
