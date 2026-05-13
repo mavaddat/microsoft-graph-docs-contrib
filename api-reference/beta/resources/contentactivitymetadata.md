@@ -2,7 +2,7 @@
 title: "contentActivityMetadata resource type"
 description: "Represents metadata for a content entry that records the outcome of enforcement after a DLP policy match."
 author: "zhengnlu"
-ms.date: 5/13/2026
+ms.date: 05/13/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
@@ -22,8 +22,8 @@ Inherits from [processContentMetadataBase](../resources/processcontentmetadataba
 
 | Property         | Type                                                                                                     | Description                                                                                                           |
 | :--------------- | :------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
-| content          | [contentBase](../resources/contentbase.md)  | Represents the actual content, either as text ([textContent](../resources/textcontent.md)) or binary data ([binaryContent](../resources/binarycontent.md)). Optional if metadata alone is sufficient for policy evaluation. **Don't use to [Create contentActivity](../api/activitiescontainer-post-contentactivities.md).** Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
-| contentCategory  | contentCategory | The type of content. The possible values are: `none`, `ai`, `unknownFutureValue`. The default value is `ai`, which refers to AI-generated content. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
+| content          | [contentBase](../resources/contentbase.md)  | Represents the actual content, either as text ([textContent](../resources/textcontent.md)) or binary data ([binaryContent](../resources/binarycontent.md)). Optional if metadata alone is sufficient for policy evaluation. **Do not use for [Create contentActivity](../api/activitiescontainer-post-contentactivities.md).** Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
+| contentCategory  | microsoft.graph.contentCategory | The type of content. The possible values are: `none`, `ai`, `unknownFutureValue`. The default value is `ai`, which refers to AI-generated content. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | correlationId    | String                                                                         | An identifier used to group multiple related content entries; for example, different parts of the same file upload or messages in a conversation. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | createdDateTime  | DateTimeOffset                                                                 | The date and time when the original content was created; for example, file creation time or message sent time. Required. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is `2014-01-01T00:00:00Z`. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | enforcementResultStatus          | enforcementResultStatus                                                                         | Indicates the enforcement outcome reported by the enforcement plane after a DLP policy match. The possible values are: `success`, `missingOrInvalidConfiguration`, `userOverride`, `agentFailure`, `enforcementTimeout`, `oSOverride`, `processNonExistent`, `other`.                                     |
@@ -32,7 +32,7 @@ Inherits from [processContentMetadataBase](../resources/processcontentmetadataba
 | length           | Int64                                                                          | The length of the original content in bytes. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md). |
 | modifiedDateTime | DateTimeOffset                                                                 | Date and time when the original content was last modified. For ephemeral content, such as messages, this property might be the same as **createdDateTime**. Required. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
 | name             | String                                                                         | A descriptive name for the content; for example, file name, web page title, or chat message. Required. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).|
-| recordType       | [microsoft.graph.security.auditLogRecordType](../resources/security-auditlogrecordtype.md)                                    | The type of operation indicated by the record, currently it's reserved to indicate the `ComplianceDLPEnforcement`. |
+| recordType       | [microsoft.graph.security.auditLogRecordType](../resources/security-auditlogrecordtype.md)                                    | The type of operation indicated by the record. Currently reserved to indicate `ComplianceDLPEnforcement`. |
 | sequenceNumber   | Int64                                                                          | A sequence number that indicates the order in which content was generated or should be processed. Required when **correlationId** is used. Inherited from [processContentMetadataBase](../resources/processcontentmetadatabase.md).            |
 
 ## Relationships

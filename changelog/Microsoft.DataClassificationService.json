@@ -7,7 +7,7 @@
           "ApiChange": "Resource",
           "ChangedApiName": "contentActivityMetadata",
           "ChangeType": "Addition",
-          "Description": "Added the [contentActivityMetadata](https://learn.microsoft.com/en-us/graph/api/resources/contentActivityMetadata?view=graph-rest-beta) resource type.",
+          "Description": "Added the [contentActivityMetadata](https://learn.microsoft.com/graph/api/resources/contentactivitymetadata?view=graph-rest-beta) resource type.",
           "Target": "contentActivityMetadata"
         },
         {
