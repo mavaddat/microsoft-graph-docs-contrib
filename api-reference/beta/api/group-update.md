@@ -22,7 +22,8 @@ Update the properties of a [group](../resources/group.md) object.
 >
 > To mitigate this behavior:
 > - **Retry after a brief delay** — wait a few seconds and retry the request. The delay is typically brief.
-> - For more information, see [Designing for Eventual Consistency for Microsoft Entra](https://devblogs.microsoft.com/identity/designing-for-eventual-consistency-for-microsoft-entra/).
+>
+> For more information, see [Designing for Eventual Consistency for Microsoft Entra](https://devblogs.microsoft.com/identity/designing-for-eventual-consistency-for-microsoft-entra/).
 
 [!INCLUDE [national-cloud-support](../../includes/all-clouds.md)]
 
