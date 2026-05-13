@@ -108,6 +108,9 @@ Use the **scopeInfo** property on [teamsAppInstallation](/graph/api/resources/te
 
 - Added the [approvedClientApp](/graph/api/resources/approvedclientapp) resource type for managing approved client applications for [remote desktop access](/graph/api/resources/remotedesktopsecurityconfiguration).
 - Added the **managerApplications** property to the [application](/graph/api/resources/application) and [agentIdentityBlueprint](/graph/api/resources/agentidentityblueprint) resources to enable Microsoft first-party applications to be designated as managers of agent blueprints.
+- Made the following changes to [application management policies](/graph/api/resources/applicationauthenticationmethodpolicy):
+  - Added [identifier URI restrictions](/graph/api/resources/identifieruriconfiguration) to allow tenant administrators to enforce [secure settings of application ID URIs](/entra/identity-platform/identifier-uri-restrictions).
+  - Added [excluded actors](/graph/api/resources/appmanagementpolicyactorexemptions) feature to all restrictions to allow tenant administrators to specify set of users and service principals, who are allowed to modify properties that would be otherwise restricted by the policy.
 
 ### Backup storage
 

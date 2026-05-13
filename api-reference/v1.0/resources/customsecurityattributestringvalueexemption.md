@@ -12,8 +12,6 @@ ms.date: 11/17/2024
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
 Configuration object to configure a custom security attribute exemption for a restriction on application management policies.
 
 Inherits from [customSecurityAttributeExemption](../resources/customsecurityattributeexemption.md).

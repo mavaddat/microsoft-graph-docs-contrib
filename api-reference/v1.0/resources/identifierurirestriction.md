@@ -12,9 +12,7 @@ ms.date: 11/17/2024
 
 Namespace: microsoft.graph
 
-[!INCLUDE [beta-disclaimer](../../includes/beta-disclaimer.md)]
-
-Configuration object to configure a restriction for identifier URIs on application objects.
+Configuration object to configure a restriction for [identifier URIs on application objects](../resources/identifieruriconfiguration.md).
 
 ## Properties
 | Property                                    | Type                            | Description                 |
@@ -39,14 +37,14 @@ The following JSON representation shows the resource type.
 ``` json
 {
   "@odata.type": "#microsoft.graph.identifierUriRestriction",
-  "state": "String",
-  "isStateSetByMicrosoft": "Boolean",
-  "restrictForAppsCreatedAfterDateTime": "String (DateTime)",
-  "excludeAppsReceivingV2Tokens": "Boolean",
-  "excludeSaml": "Boolean",
   "excludeActors": {
       "@odata.type": "microsoft.graph.appManagementPolicyActorExemptions"
-    }
+  },
+  "excludeAppsReceivingV2Tokens": "Boolean",
+  "excludeSaml": "Boolean",
+  "isStateSetByMicrosoft": "Boolean",
+  "restrictForAppsCreatedAfterDateTime": "String (DateTime)",
+  "state": "String"
 }
 ```
 
