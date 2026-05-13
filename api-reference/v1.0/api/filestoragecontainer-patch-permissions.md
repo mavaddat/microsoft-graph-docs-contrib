@@ -1,5 +1,5 @@
 ---
-title: "Create or update permissions in bulk"
+title: "Create or update permissions"
 description: "Use delta patch to create or update up to 10 permissions on a fileStorageContainer in a single request."
 author: "RushwantKoppolu"
 ms.localizationpriority: medium
@@ -8,7 +8,7 @@ doc_type: apiPageType
 ms.date: 05/11/2026
 ---
 
-# Create or update permissions in bulk
+# Create or update permissions
 
 Namespace: microsoft.graph
 
@@ -51,27 +51,27 @@ In the request body, supply a JSON object with the following properties.
 
 |Name|Type|Description|
 |:---|:---|:---|
-|@context|String|OData annotation identifying the payload type. Must be set to `#$delta` to signal a delta patch operation. Required.|
+|@context|String|OData annotation that identifies the payload type. Must be set to `#$delta` to signal a delta patch operation. Required.|
 |value|[permission](../resources/permission.md) collection|A collection of up to 10 **permission** objects to process. Required.|
 
-Each entry in the value collection represents one operation on a [permission](../resources/permission.md). The presence of the id property determines how the entry is interpreted: include the id of an existing permission to update that permission, or omit id to create a new permission.
+Each entry in the **value** collection represents one operation on a [permission](../resources/permission.md). The presence of the **id** property determines how the entry is interpreted. Include the ID of an existing permission to update it, or omit the ID to create a new permission.
 
 Each entry supports the following properties and annotations:
 
 |Name|Type|Description|
 |:---|:---|:---|
-|id|String|The id of the existing permission to update. When id is present, the item is treated as an update. When id is omitted, the item is treated as a create. Optional.|
-|grantedToV2|[sharePointIdentitySet](../resources/sharepointidentityset.md)|For user type permissions, the details of the user for this permission. Required for create items. Don't specify on update items.|
-|roles|String collection|The type of permission to grant. The possible values are: `reader`, `writer`, `manager`, `owner`. Required for both create and update items.|
-|@microsoft.graph.conflictBehavior|String|An annotation parameter that controls behavior when the target identity is already a member of the container with a different role. Possible values are `fail` (default) and `replace`. Applies only to create items. Optional.|
+|id|String|The ID of the existing permission. When the ID is present, the item is treated as an update. When the ID is omitted, the item is treated as a create operation. Optional.|
+|grantedToV2|[sharePointIdentitySet](../resources/sharepointidentityset.md)|For user-type permissions, specify the details of the user for this permission. Required for create operations. Don't specify for update operations.|
+|roles|String collection|The type of permission to grant. The possible values are: `reader`, `writer`, `manager`, `owner`. Required for both create and update operations.|
+|@microsoft.graph.conflictBehavior|String|An annotation parameter that controls behavior when the target identity is already a member of the container with a different role. Possible values are: `fail`, `replace`. The default value is `fail`. Applies only to create operations. Optional.|
 
-The `@microsoft.graph.conflictBehavior` annotation is per-item. The default value `fail` makes the item fail with a per-item `409 Conflict`; `replace` replaces the identity's existing role with the role specified in the item, and the item succeeds. Any other value causes the item to fail with a per-item `400 Bad Request`.
+The **@microsoft.graph.conflictBehavior** annotation is per item. The default value `fail` causes the item to fail with a per-item `409 Conflict` response code. The value `replace` replaces the existing role for the identity with the role specified in the item, and the item succeeds. Any other value causes the item to fail with a per-item `400 Bad Request` response code.
 
-Update items must not include any other properties besides id and roles; roles is required. Items that violate either rule fail with a per-item `400 Bad Request`.
+Update items must not include properties other than ID and roles. The **roles** property is required. Items that violate either rule fail with a per-item `400 Bad Request` response code.
 
 ## Response
 
-If successful, this method returns a `200 OK` response code and a collection of [permission](../resources/permission.md) objects in the response body. Successfully processed permissions include the **permission** object. Failed items include a `@Core.DataModificationException` annotation with error details.
+If successful, this method returns a `200 OK` response code and a collection of [permission](../resources/permission.md) objects in the response body. Permissions that are processed successfully include a **permission** object. Failed items include a **@Core.DataModificationException** annotation with error details.
 
 This API might also return the following error response codes for the entire request:
 
@@ -87,7 +87,7 @@ This API might also return the following error response codes for the entire req
 
 ### Request
 
-The following example shows a single delta patch request that mixes create and update items in one call. Items without an id are creates; items with an id are updates. Items that fail are reported inline with a `@Core.DataModificationException` annotation, while the rest of the items still succeed.
+The following example shows a single delta patch request that mixes create and update items in one call. Items without an ID are treated as create operations; items with an ID are treated as update operations. Items that fail are reported inline with a **@Core.DataModificationException** annotation. The remaining items still succeed.
 
 <!-- {
   "blockType": "request",

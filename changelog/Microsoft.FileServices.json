@@ -7,7 +7,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "PATCH",
           "ChangeType": "Addition",
-          "Description": "Added support for using delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-beta) objects on a [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) in a single request. See [Create or update permissions in bulk](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-beta).",
+          "Description": "Added the [delta patch](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-beta) operation to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) resource. Use delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-beta) objects on a **fileStorageContainer** in a single request.",
           "Target": "fileStorageContainer"
         }
       ],
@@ -25,7 +25,7 @@
           "ApiChange": "Method",
           "ChangedApiName": "PATCH",
           "ChangeType": "Addition",
-          "Description": "Added support for using delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-1.0) objects on a [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) in a single request. See [Create or update permissions in bulk](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-1.0).",
+          "Description": "Added the [delta patch](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-1.0) operation to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource. Use delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-1.0) objects on a **fileStorageContainer** in a single request.",
           "Target": "fileStorageContainer"
         }
       ],
