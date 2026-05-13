@@ -27,7 +27,7 @@ For details about previous updates to Microsoft Graph, see [Microsoft Graph what
 
 ### Files
 
-Use the [Create or update permissions in bulk](/graph/api/filestoragecontainer-patch-permissions) API to create or update up to 10 [permission](/graph/api/resources/permission) objects on a [fileStorageContainer](/graph/api/resources/filestoragecontainer) in a single request.
+Use the [Upsert permissions](/graph/api/filestoragecontainer-patch-permissions) API to create or update up to 10 [permission](/graph/api/resources/permission) objects on a [fileStorageContainer](/graph/api/resources/filestoragecontainer) in a single request.
 
 ### Groups
 
@@ -72,7 +72,7 @@ Supports additional theme colors in the [scheduleEntityTheme](/graph/api/resourc
 
 ### Files
 
-Use the [Create or update permissions in bulk](/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-beta&preserve-view=true) API to create or update up to 10 [permission](/graph/api/resources/permission?view=graph-rest-beta&preserve-view=true) objects on a [fileStorageContainer](/graph/api/resources/filestoragecontainer?view=graph-rest-beta&preserve-view=true) in a single request.
+Use the [Upsert permissions](/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-beta&preserve-view=true) API to create or update up to 10 [permission](/graph/api/resources/permission?view=graph-rest-beta&preserve-view=true) objects on a [fileStorageContainer](/graph/api/resources/filestoragecontainer?view=graph-rest-beta&preserve-view=true) in a single request.
 
 ### Identity and access | Identity and sign-in
 
