@@ -2,7 +2,7 @@
 title: "contentActivityMetadata resource type"
 description: "Represents metadata for a content entry that records the outcome of enforcement after a DLP policy match."
 author: "zhengnlu"
-ms.date: 12/20/2025
+ms.date: 5/13/2026
 ms.localizationpriority: medium
 ms.subservice: "security"
 doc_type: resourcePageType
