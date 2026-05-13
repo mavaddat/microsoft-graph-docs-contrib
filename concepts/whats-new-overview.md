@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 05/08/2026
+ms.date: 05/12/2026
 ms.topic: whats-new
 ---
 
@@ -87,6 +87,10 @@ Use the [Upsert permissions](/graph/api/filestoragecontainer-patch-permissions?v
 ### People and workplace intelligence | People admin settings
 
 Use the **isVisible** property on [profileCardProperty](/graph/api/resources/profilecardproperty?view=graph-rest-beta&preserve-view=true) to indicate whether the given directory property should be shown on a user's profile card.
+
+### Security | Data security and compliance
+
+Added the [contentActivityMetadata](/graph/api/resources/contentactivitymetadata?view=graph-rest-beta&preserve-view=true) resource to represent and track Data Loss Prevention (DLP) enforcement result metadata for content entries, including identifiers, timestamps, and policy statuses.
 
 ### Security | Alerts and incidents
 
