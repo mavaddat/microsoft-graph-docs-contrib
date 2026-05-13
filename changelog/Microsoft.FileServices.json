@@ -5,9 +5,9 @@
         {
           "Id": "12338e2d-f18e-4c08-a135-5a434b15526c",
           "ApiChange": "Method",
-          "ChangedApiName": "PATCH",
+          "ChangedApiName": "fileStorageContainer",
           "ChangeType": "Addition",
-          "Description": "Added the [delta patch](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-beta) operation to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) resource. Use delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-beta) objects on a **fileStorageContainer** in a single request.",
+          "Description": "Added the [Upsert permissions](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-beta) operation to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-beta) resource. Use delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-beta) objects on a **fileStorageContainer** in a single request.",
           "Target": "fileStorageContainer"
         }
       ],
@@ -23,9 +23,9 @@
         {
           "Id": "3313a309-b653-4f92-8062-f0bbc0c34c70",
           "ApiChange": "Method",
-          "ChangedApiName": "PATCH",
+          "ChangedApiName": "fileStorageContainer",
           "ChangeType": "Addition",
-          "Description": "Added the [delta patch](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-1.0) operation to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource. Use delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-1.0) objects on a **fileStorageContainer** in a single request.",
+          "Description": "Added the [Upsert permissions](https://learn.microsoft.com/en-us/graph/api/filestoragecontainer-patch-permissions?view=graph-rest-1.0) operation to the [fileStorageContainer](https://learn.microsoft.com/en-us/graph/api/resources/filestoragecontainer?view=graph-rest-1.0) resource. Use delta patch to create or update up to 10 [permission](https://learn.microsoft.com/en-us/graph/api/resources/permission?view=graph-rest-1.0) objects on a **fileStorageContainer** in a single request.",
           "Target": "fileStorageContainer"
         }
       ],
