@@ -1,6 +1,6 @@
 ---
 title: "Create or update permissions"
-description: "Use delta patch to create or update up to 10 permissions on a fileStorageContainer in a single request."
+description: "Perform delta patch to create or update up to 10 permissions on a fileStorageContainer in a single request."
 author: "RushwantKoppolu"
 ms.localizationpriority: medium
 ms.subservice: "onedrive"
@@ -12,7 +12,7 @@ ms.date: 05/11/2026
 
 Namespace: microsoft.graph
 
-Use delta patch to create or update up to 10 [permission](../resources/permission.md) objects on a [fileStorageContainer](../resources/filestoragecontainer.md) in a single request. Delta patch allows the caller to perform multiple operations (create, update) on multiple permissions with a single request.
+Perform delta patch to create or update up to 10 [permission](../resources/permission.md) objects on a [fileStorageContainer](../resources/filestoragecontainer.md) in a single request. Delta patch allows the caller to perform multiple operations (create, update) on multiple permissions with a single request.
 
 > [!IMPORTANT]
 > Permissions added to a [fileStorageContainer](../resources/filestoragecontainer.md) apply to all its [driveItem](../resources/driveitem.md) objects, regardless of any unique or restrictive permissions applied to those items.
