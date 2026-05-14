@@ -26,7 +26,7 @@ This article describes the key differences between the two APIs, provides a fiel
 Before you start your migration, complete the following tasks:
 
 - Identify all integrations, scripts, connectors, and downstream processes that call `/security/alerts`.
-- If you use Microsoft Sentinel, verify whether your workspace is connected to the Microsoft Defender portal. Sentinel-generated alerts aren't available through the v2 API until you complete that onboarding. In the interim, use the [Sentinel REST API](/rest/api/azureloganalytics/) to retrieve Sentinel alerts. Standalone Sentinel alerts aren't supported in the v2 API, and the Sentinel REST API will be retired in the future.
+- If you use Microsoft Sentinel, verify whether your workspace is connected to the Microsoft Defender portal. Sentinel-generated alerts aren't available through the v2 API until you complete that onboarding. In the interim, use the [Sentinel REST API](/rest/api/loganalytics/) to retrieve Sentinel alerts. Standalone Sentinel alerts aren't supported in the v2 API, and the Sentinel REST API will be retired in the future.
 - Review the [known differences and limitations](#known-differences-and-limitations) to identify any supplemental data sources your workflows may require.
 
 ## Why migrate?
@@ -103,9 +103,9 @@ Before you change any code, identify all integrations, scripts, connectors, and 
 
 If you use Microsoft Sentinel, connect your workspace to the Microsoft Defender portal and confirm that relevant detections are promoted into incidents. Without this integration, Sentinel-generated alerts don't appear in the v2 API.
 
-While you prepare for onboarding, use the [Sentinel REST API](/rest/api/azureloganalytics/) to retrieve Sentinel alerts. Be aware that standalone Sentinel alerts aren't supported in the new API model, and the Sentinel REST API will be retired in the future. Prioritize Defender portal onboarding ahead of the August 31, 2026 deadline.
+While you prepare for onboarding, use the [Sentinel REST API](/rest/api/loganalytics/) to retrieve Sentinel alerts. Be aware that standalone Sentinel alerts aren't supported in the new API model, and the Sentinel REST API will be retired in the future. Prioritize Defender portal onboarding ahead of the August 31, 2026 deadline.
 
-For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops/microsoft-sentinel-onboard) and [Transition your Microsoft Sentinel environment to the Defender portal](/unified-secops/sentinel-transition).
+For more information, see [Connect Microsoft Sentinel to the Microsoft Defender portal](/unified-secops/microsoft-sentinel-onboard) and [Transition your Microsoft Sentinel environment to the Defender portal](/azure/sentinel/move-to-defender).
 
 ### Step 3: Update API endpoints and permissions
 
@@ -176,7 +176,7 @@ Use an API testing tool like [Graph Explorer](https://aka.ms/ge) to validate you
 
 ## Known differences and limitations
 
-- **Microsoft Sentinel coverage**: Sentinel-generated alerts aren't returned by the v2 API unless your Sentinel workspace is connected to the Microsoft Defender portal. In the interim, use the [Sentinel REST API](/rest/api/azureloganalytics/) to retrieve these alerts.
+- **Microsoft Sentinel coverage**: Sentinel-generated alerts aren't returned by the v2 API unless your Sentinel workspace is connected to the Microsoft Defender portal. In the interim, use the [Sentinel REST API](/rest/api/loganalytics/) to retrieve these alerts.
 - **Standalone alerts**: Alerts that exist outside of the Microsoft 365 Defender incident model—including standalone detections not promoted to an incident—aren't returned by the v2 API.
 - **Tuned alerts**: Alerts suppressed by alert-tuning rules aren't returned through the `alerts_v2` endpoint.
 - **Low-signal Exchange Online events**: Certain low-signal Exchange Online events, such as mailbox rule creation and message delays, aren't included in `alerts_v2`. Retrieve these through audit logs or other relevant data sources.
