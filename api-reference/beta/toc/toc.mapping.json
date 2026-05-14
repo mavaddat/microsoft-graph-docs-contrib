@@ -1262,6 +1262,7 @@
             {
               "name": "Mobility management policy",
               "resources": [
+                "mobilityManagementPolicy",
                 "mobileAppManagementPolicy",
                 "mobileDeviceManagementPolicy"
               ]

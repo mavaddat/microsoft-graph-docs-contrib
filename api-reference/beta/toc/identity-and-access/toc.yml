@@ -386,6 +386,8 @@ items:
       href: ../../api/uxsetting-update.md
   - name: Mobility management policy
     items:
+    - name: Mobility management policy
+      href: ../../resources/mobilitymanagementpolicy.md
     - name: Mobile app management policy
       items:
       - name: Mobile app management policy
