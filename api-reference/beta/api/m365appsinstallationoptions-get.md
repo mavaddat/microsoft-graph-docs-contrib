@@ -55,7 +55,7 @@ If successful, this method returns a `200 OK` response code and a [m365AppsInsta
 ## Examples
 
 ### Request
-The following example shows a request.
+The following example shows the request.
 # [HTTP](#tab/http)
 <!-- {
   "blockType": "request",
