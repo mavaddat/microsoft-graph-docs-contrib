@@ -3,7 +3,7 @@ title: "What's new in Microsoft Graph"
 description: "Find out what's new in Microsoft Graph APIs, SDKs, documentation, and other resources."
 author: "lauragra"
 ms.localizationpriority: high
-ms.date: 05/12/2026
+ms.date: 05/14/2026
 ms.topic: whats-new
 ---
 
@@ -56,18 +56,8 @@ Use the mailbox import and export APIs in Microsoft Graph to build solutions tha
 
 ### Security | Alerts and incidents
 
-Use the following new resources that extend the [alertEvidence](/graph/api/resources/security-alertevidence) base type to provide detailed context about various artifacts involved in security alerts:
-- [dnsEvidence](/graph/api/resources/security-dnsevidence)
-- [fileHashEvidence](/graph/api/resources/security-filehashevidence)
-- [gitHubOrganizationEvidence](/graph/api/resources/security-githuborganizationevidence)
-- [gitHubRepoEvidence](/graph/api/resources/security-githubrepoevidence)
-- [gitHubUserEvidence](/graph/api/resources/security-githubuserevidence)
-- [hostLogonSessionEvidence](/graph/api/resources/security-hostlogonsessionevidence)
-- [malwareEvidence](/graph/api/resources/security-malwareevidence)
-- [networkConnectionEvidence](/graph/api/resources/security-networkconnectionevidence)
-- [sasTokenEvidence](/graph/api/resources/security-sastokenevidence)
-- [servicePrincipalEvidence](/graph/api/resources/security-serviceprincipalevidence)
-- [submissionMailEvidence](/graph/api/resources/security-submissionmailevidence)
+- Added the migration guide [Migrate from legacy alerts to the alerts and incidents API](/graph/api/resources/alertsv1-alertsv2-migration) to help you transition your apps from the deprecated Microsoft Graph security alerts v1 API to the new alerts and incidents API.
+- Extended the [alertEvidence](/graph/api/resources/security-alertevidence) base type with additional derived types to provide detailed context about various artifacts involved in [security alerts](/graph/api/resources/security-alert).
 
 ### Teamwork and communications | Shifts
 
