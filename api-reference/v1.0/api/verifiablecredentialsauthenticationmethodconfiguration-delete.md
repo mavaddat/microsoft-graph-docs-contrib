@@ -34,7 +34,7 @@ Choose the permission or permissions marked as least privileged for this API. Us
 }
 -->
 ``` http
-DELETE /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/VerifiableCredentials/{id}
+DELETE /policies/authenticationMethodsPolicy/authenticationMethodConfigurations/VerifiableCredentials
 ```
 
 ## Request headers

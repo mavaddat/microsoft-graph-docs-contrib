@@ -85,33 +85,31 @@ HTTP/1.1 200 OK
 Content-Type: application/json
 
 {
-  "value": {
-    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#authenticationMethodConfigurations/$entity",
-    "@odata.type": "#microsoft.graph.verifiableCredentialsAuthenticationMethodConfiguration",
-    "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET policies/authenticationMethodsPolicy/authenticationMethodConfigurations('<key>')?$select=excludeTargets,state",
-    "id": "VerifiableCredentials",
-    "state": "enabled",
-    "excludeTargets": [
-        {
-            "id": "10051f25-53a8-4f81-8a0b-9fc22887e640",
-            "targetType": "group"
-        },
-        {
-            "id": "e2c2244f-66cc-4d5b-9042-686f9fa42986",
-            "targetType": "group"
-        }
-    ],
-    "includeTargets": [
-        {
-            "targetType": "group",
-            "id": "3160256b-e74c-426e-9a65-b68a71c7f054",
-            "isRegistrationRequired": false,
-            "verifiedIdProfiles": [
-                "9dda0ae1-e007-4a1d-81ec-2cf4b1274610"
-            ]
-        }
-    ]
-  }
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#authenticationMethodConfigurations/$entity",
+  "@odata.type": "#microsoft.graph.verifiableCredentialsAuthenticationMethodConfiguration",
+  "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET policies/authenticationMethodsPolicy/authenticationMethodConfigurations('<key>')?$select=excludeTargets,state",
+  "id": "VerifiableCredentials",
+  "state": "enabled",
+  "excludeTargets": [
+      {
+          "id": "10051f25-53a8-4f81-8a0b-9fc22887e640",
+          "targetType": "group"
+      },
+      {
+          "id": "e2c2244f-66cc-4d5b-9042-686f9fa42986",
+          "targetType": "group"
+      }
+  ],
+  "includeTargets": [
+      {
+          "targetType": "group",
+          "id": "3160256b-e74c-426e-9a65-b68a71c7f054",
+          "isRegistrationRequired": false,
+          "verifiedIdProfiles": [
+              "9dda0ae1-e007-4a1d-81ec-2cf4b1274610"
+          ]
+      }
+  ]
 }
 ```
 
