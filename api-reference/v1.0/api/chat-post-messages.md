@@ -210,7 +210,7 @@ The following example shows the response.
 } -->
 
 ```http
-HTTP/1.1 200 OK
+HTTP/1.1 201 Created
 
 {
     "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#chats('19%3A4b6bed8d24574f6a9e436813cb2617d8%40thread.tacv2')/messages/$entity",

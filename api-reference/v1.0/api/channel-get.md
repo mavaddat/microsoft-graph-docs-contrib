@@ -243,18 +243,18 @@ HTTP/1.1 200 OK
 Content-type: application/json
 
 {
-  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('8bb12236-b929-42e0-94a0-1c417466ebf8')/channels/$entity",
-  "id": "19:d468258bc90f4a358361b5d73b89d39b@thread.skype",
-  "displayName": "TestChannelModeration",
-  "description": "Test channel moderation.",
+  "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#teams('893075dd-2487-4122-925f-022c42e20265')/channels/$entity",
+  "id": "19:561fbdbbfca848a484f0a6f00ce9dbbd@thread.tacv2",
+  "displayName": "Migration Channel",
+  "description": "Channel created in migration mode.",
   "isFavoriteByDefault": null,
   "email": "",
-  "webUrl": "https://teams.microsoft.com/l/channel/19%3Ad468258bc90f4a358361b5d73b89d39b%40thread.skype/General?groupId=8bb12236-b929-42e0-94a0-1c417466ebf8&tenantId=139d16b4-7223-43ad-b9a8-674ba63c7924",
+  "webUrl": "https://teams.microsoft.com/l/channel/19%3A561fbdbbfca848a484f0a6f00ce9dbbd%40thread.tacv2/Migration%20Channel?groupId=893075dd-2487-4122-925f-022c42e20265&tenantId=139d16b4-7223-43ad-b9a8-674ba63c7924",
   "membershipType": "private",
   "isArchived": false,
   "createdDateTime": "2020-05-27T19:22:25.692Z",
   "migrationMode": "inProgress",
-  "originalCreatedDateTime": "2020-05-28T10:00:00+00:00"
+  "originalCreatedDateTime": "2020-05-28T10:00:00Z"
 }
 ```
 

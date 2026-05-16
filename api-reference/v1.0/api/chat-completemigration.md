@@ -118,7 +118,7 @@ HTTP/1.1 400 Bad Request
 <!--
 {
   "type": "#page.annotation",
-  "description": "completeMigration_ channel",
+  "description": "completeMigration chat",
   "keywords": "",
   "section": "documentation",
   "tocPath": "",

@@ -5,7 +5,7 @@ ms.localizationpriority: medium
 author: "RamjotSingh"
 ms.subservice: "teams"
 doc_type: apiPageType
-ms.date: 04/05/2024
+ms.date: 03/18/2026
 ---
 
 # channel: completeMigration

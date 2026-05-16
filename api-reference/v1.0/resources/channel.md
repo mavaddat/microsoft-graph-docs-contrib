@@ -155,9 +155,9 @@ The following JSON representation shows the resource type.
   "isFavoriteByDefault": "Boolean",
   "layoutType": "String",
   "membershipType": "String",
-  "webUrl": "String",
   "migrationMode": "String",
-  "originalCreatedDateTime": "String (timestamp)"
+  "originalCreatedDateTime": "String (timestamp)",
+  "webUrl": "String"
 }
 ```
 

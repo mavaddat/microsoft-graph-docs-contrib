@@ -126,7 +126,7 @@ HTTP/1.1 400 Bad Request
 <!--
 {
   "type": "#page.annotation",
-  "description": "startMigration_ chat",
+  "description": "startMigration chat",
   "keywords": "",
   "section": "documentation",
   "tocPath": "",
@@ -138,7 +138,7 @@ HTTP/1.1 400 Bad Request
 ## Related content
 
 - [chat: completeMigration](chat-completemigration.md)
-- [Import a message](chat-post-messages.md#example-2-import-a-message)
+- [Import a message](chat-post-messages.md)
 - [Get message import status](chatmessage-get.md)
 - [channel: completeMigration](channel-completemigration.md)
 - [channel: startMigration](channel-startmigration.md)
